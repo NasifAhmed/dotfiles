@@ -1,0 +1,93 @@
+colors:
+  #Default colors 
+  primary: 
+    background: "#000000"
+    foreground: "#afc2c2"
+    
+
+  #Normal colors
+  noraml: 
+    black: "#3B4252"
+    red: "#BF616A"
+    green: "#A3BE8C"
+    yellow: "#EBCB8B"
+    blue: "#81A1C1"
+    magenta: "#B48EAD"
+    cyan: "#88C0D0"
+    white: "#abb2bf"
+
+
+  #Bright Colors
+  bright:
+    black: "#000000"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#d19a66"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#ECEFF4"
+
+background_opacity: 1.0
+
+
+font:
+  normal:
+    family: "JetBrains Mono"
+    style: Regular
+  bold:
+    family: "JetBrains Mono"
+    style: Bold
+  italic:
+    family: "Jetbrains Mono"
+    style: Italic
+  bold_italic:
+    family: "JetBrains Mono"
+    style: Bold Italic
+
+
+#Point size
+  size: 13
+
+
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+
+
+window:
+  padding:
+    x: 30
+    y: 30
+
+
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 10
+
+
+# If 'true', bold text is a drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+slection:
+  semantic_excape_chars: ',|`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+  
+
+
+live_config_reload: true
+
+
+
+
