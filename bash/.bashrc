@@ -498,6 +498,7 @@ alias ll='ls -al --color=auto'
 alias windows='cd /run/media/nasif'
 alias corona='curl https://corona-stats.online?source=2'
 alias coronabd='curl https://corona-stats.online/bangladesh?source=2' 
+alias dot='cd ~/dotfiles && git status'
 
 
 
