@@ -375,8 +375,8 @@ client.background       #ffffff
 #############################
 
 # Set inner/outer gaps
-gaps inner 5
-gaps outer 0 
+gaps inner 10
+gaps outer 4 
 hide_edge_borders smart_no_gaps
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

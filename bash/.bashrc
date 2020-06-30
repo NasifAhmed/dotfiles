@@ -257,7 +257,7 @@ bash_prompt() {
 	#PROMT_FORMAT=$RED_BOLD
 
 	## CONFIGURATION: CYAN-BLUE
-	if [ "$HOSTNAME" = nasif-ms7b84 ]; then
+	if [ "$HOSTNAME" = archPC ]; then
 		FONT_COLOR_1=$BLACK; BACKGROUND_1=$L_CYAN; TEXTEFFECT_1=$BOLD
 		FONT_COLOR_2=$BLACK; BACKGROUND_2=$L_BLUE; TEXTEFFECT_2=$BOLD
 		FONT_COLOR_3=$BLACK; BACKGROUND_3=$WHITE; TEXTEFFECT_3=$BOLD
@@ -382,7 +382,7 @@ bash_prompt() {
 	## BASH PROMT                                                             ##
 	## Generate promt and remove format from the rest                         ##
 	############################################################################
-	PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_INPUT}"
+	PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_PWD}${SEPARATOR_3}${PROMT_INPUT}"
 
 	
 
@@ -414,77 +414,6 @@ unset bash_prompt
 
 
 ################################################################################
-##  From previous bashrc                                                      ##
-################################################################################
-
-[[ $- != *i* ]] && return
- 
-colors() {
-    local fgc bgc vals seq0
- 
-    printf "Color escapes are %s\n" '\e[${value};...;${value}m'
-    printf "Values 30..37 are \e[33mforeground colors\e[m\n"
-    printf "Values 40..47 are \e[43mbackground colors\e[m\n"
-    printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
-
-    # foreground colors
-    for fgc in {30..37}; do
-        # background colors
-        for bgc in {40..47}; do
-           fgc=${fgc#37} # white
-            bgc=${bgc#40} # black
-
-            vals="${fgc:+$fgc;}${bgc}"
-            vals=${vals%%;}
-
-            seq0="${vals:+\e[${vals}m}"
-            printf "  %-9s" "${seq0:-(default)}"
-            printf " ${seq0}TEXT\e[m"
-            printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
-        done
-        echo; echo
-    done
-}
-
-[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
-
-use_color=true
-
-[[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
-[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
-[[ -z ${match_lhs}    ]] \
-    && type -P dircolors >/dev/null \
-    && match_lhs=$(dircolors --print-database)
-[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
-
-if ${use_color} ; then
-    # Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
-    if type -P dircolors >/dev/null ; then
-        if [[ -f ~/.dir_colors ]] ; then
-            eval $(dircolors -b ~/.dir_colors)
-        elif [[ -f /etc/DIR_COLORS ]] ; then
-            eval $(dircolors -b /etc/DIR_COLORS)
-        fi
-    fi
-
-    alias ls='ls --color=auto'
-    alias grep='grep --colour=auto'
-    alias egrep='egrep --colour=auto'
-    alias fgrep='fgrep --colour=auto'
-
-else
-    if [[ ${EUID} == 0 ]] ; then
-        # show root@ when we don't have colors
-        PS1='\u@\h \W \$ '
-    else
-        PS1='\u@\h \w \$ '
-    fi
-fi
-
-
-
-
-################################################################################
 ##  alias                                                                     ##
 ################################################################################
 
@@ -501,6 +430,35 @@ alias coronabd='curl https://corona-stats.online/bangladesh?source=2'
 alias dot='cd ~/dotfiles && git status'
 
 
+################################################################################
+##  Coloring                                                                ####
+################################################################################
+
+
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias ls='ls --color=auto'
+
+
+export LESS=-R
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
 
 
 ################################################################################

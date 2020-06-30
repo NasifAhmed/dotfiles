@@ -421,11 +421,11 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = #00897b
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = #00897b
 label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
+label-separator-foreground = #A9ABB0
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
