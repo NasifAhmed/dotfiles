@@ -1,11 +1,21 @@
+#         _     
+#     _______| |__  
+#    |_  / __| '_ \ 
+#     / /\__ \ | | |
+#    /___|___/_| |_|
+#               
+#
+
 ################################################################################
 ##  ZSH Auto Configs                                                          ##
 ################################################################################
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=500
-SAVEHIST=10000000
+HISTSIZE=999999999
+SAVEHIST=999999999
+setopt INC_APPEND_HISTORY 
+setopt HIST_EXPIRE_DUPS_FIRST
 setopt autocd beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -73,7 +83,8 @@ alias windows='cd /run/media/nasif'
 alias corona='curl https://corona-stats.online?source=2'
 alias coronabd='curl https://corona-stats.online/bangladesh?source=2' 
 alias dot='cd ~/dotfiles && git status'
-
+alias vpnusa='sudo protonvpn c US-FREE#1'
+alias vpn='sudo protonvpn c -f'
 
 
 ################################################################################
