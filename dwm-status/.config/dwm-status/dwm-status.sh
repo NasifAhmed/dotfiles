@@ -1,0 +1,56 @@
+#!/usr/local/bin/bash
+#/*
+# * ----------------------------------------------------------------------------
+# * "THE BEER-WARE LICENSE" (Revision 42):
+# * <plasmoduck@gmail.com> wrote this file.  As long as you retain this notice you
+# * can do whatever you want with this stuff. If we meet some day, and you think
+# * this stuff is worth it, you can buy me a beer in return.   Plasmoduck
+# * ----------------------------------------------------------------------------
+# */
+
+#playing () {
+#         mpc -h /usr/home/cjg/.mpd/socket | awk 'NR==1 {song = $0} NR==2 {if ($1 == "[playing]") p=1; len=$(NF-1); sub(/.*\//, "", len)} END {printf("%s (%s) %s\n", p?"":"", len, song)}'
+#     }
+
+# covid19 () {
+#        curl https://corona-stats.online/bangladesh\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
+#    }
+
+memory (){
+        free -h | awk '/Mem:/ {print $7}'
+    }
+
+drive (){
+        df -h | grep '/$' | awk '{print $5}'
+    }
+
+cpu_temp (){
+        sensors | awk '/Tctl:/ {print $2}'
+    }
+
+volume (){
+        pamixer --get-volume
+    }
+
+print_date (){
+        date "+%b %d (%a), %I:%M:%S %p"
+    }
+
+#weather() {
+#         LOCATION=Dhaka
+#
+#         printf "%s" "$SEP1"
+#         if [ "$IDENTIFIER" = "unicode" ]; then
+#            printf "%s" "$(curl -s wttr.in/$LOCATION?format=1)"
+#         else
+#            printf "%s" "$(curl -s wttr.in/$LOCATION?format=1 | grep -o "[0-9].*")"
+#         fi
+#         printf "%s\n" "$SEP2"
+#    }
+
+                                                         
+while true
+do
+    xsetroot -name "  $(memory)    $(drive)    $(cpu_temp)    $(volume)%    $(print_date)"
+    sleep 1s
+done
