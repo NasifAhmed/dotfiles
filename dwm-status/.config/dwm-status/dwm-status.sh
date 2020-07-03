@@ -16,6 +16,33 @@
 #        curl https://corona-stats.online/bangladesh\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
 #    }
 
+dwm_spotify () {
+    if ps -C spotify > /dev/null; then
+        ARTIST=$(playerctl -p spotify metadata artist)
+        TRACK=$(playerctl -p spotify metadata title)
+        DURATION=$(playerctl -p spotify metadata mpris:length | sed 's/.\{6\}$//')
+        STATUS=$(playerctl -p spotify status)
+
+        if [ "$IDENTIFIER" = "unicode" ]; then
+            if [ "$STATUS" = "Playing" ]; then
+                STATUS="▶"
+            else
+                STATUS="⏸"
+            fi
+        else
+            if [ "$STATUS" = "Playing" ]; then
+                STATUS="PLA"
+            else
+                STATUS="PAU"
+            fi
+        fi
+
+        printf "%s%s %s - %s " "$SEP1" "$STATUS" "$ARTIST" "$TRACK"
+        printf "%0d:%02d" $((DURATION%3600/60)) $((DURATION%60))
+        printf "%s\n" "$SEP2"
+    fi
+}
+
 memory (){
         free -h | awk '/Mem:/ {print $7}'
     }
@@ -51,6 +78,6 @@ print_date (){
                                                          
 while true
 do
-    xsetroot -name "  $(memory)    $(drive)    $(cpu_temp)    $(volume)%    $(print_date)"
+    xsetroot -name "$(dwm_spotify)   $(memory)    $(drive)    $(cpu_temp)    $(volume)%    $(print_date)"
     sleep 1s
 done

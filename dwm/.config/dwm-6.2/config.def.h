@@ -65,6 +65,12 @@ static const char *browser[]  = { "brave", NULL };
 static const char *mutecmd[] = { "pamixer", "-t" };
 static const char *volupcmd[] ={ "pamixer", "-i", "5" };
 static const char *voldowncmd[] = { "pamixer", "-d", "5" };
+static const char *screenshot[] = { "i3-scrot" };
+static const char *screenshot_select[] = { "i3-scrot", "--select" };
+static const char *spotify_toggle[] = { "playerctl", "-p", "spotify", "play-pause" };
+static const char *spotify_next[] = { "playerctl", "-p", "spotify", "next" };
+static const char *spotify_prev[] = { "playerctl", "-p", "spotify", "previous" };
+static const char *spotify_stop[] = { "playerctl", "-p", "spotify", "stop" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,6 +101,12 @@ static Key keys[] = {
     { 0,                            XF86XK_AudioMute, spawn,   {.v = mutecmd } },
     { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
     { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
+    { 0,                            XF86XK_AudioPlay, spawn, {.v = spotify_toggle } },
+    { 0,                            XF86XK_AudioStop, spawn, {.v = spotify_stop } },
+    { 0,                            XF86XK_AudioNext, spawn, {.v = spotify_next } },
+    { 0,                            XF86XK_AudioPrev, spawn, {.v = spotify_prev } },
+    { 0,                            XK_Print, spawn, {.v = screenshot } },
+    { MODKEY|ShiftMask,             XK_Print, spawn, {.v = screenshot_select } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
