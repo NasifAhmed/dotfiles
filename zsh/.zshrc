@@ -127,7 +127,7 @@ bindkey '^[[B' history-substring-search-down
 ################################################################################
 
 neofetch
-echo "$(date '+%D %T' | toilet -f term -F border --gay)"
+# echo "$(date '+%D %T' | toilet -f term -F border --gay)"
 
 
 ### EOF ###
