@@ -12,9 +12,9 @@
 #         mpc -h /usr/home/cjg/.mpd/socket | awk 'NR==1 {song = $0} NR==2 {if ($1 == "[playing]") p=1; len=$(NF-1); sub(/.*\//, "", len)} END {printf("%s (%s) %s\n", p?"":"", len, song)}'
 #     }
 
-# covid19 () {
-#        curl https://corona-stats.online/bangladesh\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
-#    }
+ covid19 () {
+        curl https://corona-stats.online/bangladesh\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
+    }
 
 dwm_spotify () {
     if ps -C spotify > /dev/null; then
@@ -47,9 +47,9 @@ memory (){
         free -h | awk '/Mem:/ {print $7}'
     }
 
-drive (){
-        df -h | grep '/$' | awk '{print $5}'
-    }
+# drive (){
+#         df -h | grep '/$' | awk '{print $5}'
+#     }
 
 cpu_temp (){
         sensors | awk '/Tctl:/ {print $2}'
