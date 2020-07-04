@@ -65,6 +65,7 @@ static const char *browser[]  = { "brave", NULL };
 static const char *mutecmd[] = { "pamixer", "-t" };
 static const char *volupcmd[] ={ "pamixer", "-i", "5" };
 static const char *voldowncmd[] = { "pamixer", "-d", "5" };
+static const char *lock[] = { "slock", NULL};
 static const char *screenshot[] = { "i3-scrot" };
 static const char *screenshot_select[] = { "i3-scrot", "--select" };
 static const char *spotify_toggle[] = { "playerctl", "-p", "spotify", "play-pause" };
@@ -77,6 +78,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = browser } },
+	{ MODKEY,                       XK_F9,     spawn,          {.v = lock } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

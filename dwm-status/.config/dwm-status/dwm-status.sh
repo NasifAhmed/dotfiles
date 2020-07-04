@@ -12,9 +12,9 @@
 #         mpc -h /usr/home/cjg/.mpd/socket | awk 'NR==1 {song = $0} NR==2 {if ($1 == "[playing]") p=1; len=$(NF-1); sub(/.*\//, "", len)} END {printf("%s (%s) %s\n", p?"":"", len, song)}'
 #     }
 
- covid19 () {
-        curl https://corona-stats.online/bangladesh\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
-    }
+covid19 () {
+       curl https://corona-stats.online/bangladesh\?format\=json | python3 -c 'import sys,json;data=json.load(sys.stdin)["data"][0];print("", data["cases"],"","", "", data["deaths"])'
+   }
 
 dwm_spotify () {
     if ps -C spotify > /dev/null; then
@@ -78,6 +78,6 @@ print_date (){
                                                          
 while true
 do
-    xsetroot -name "$(dwm_spotify)   $(memory)    $(drive)    $(cpu_temp)    $(volume)%    $(print_date)"
+    xsetroot -name "| $(dwm_spotify) |  $(memory)    $(cpu_temp) |  $(volume)% |  $(print_date)"
     sleep 1s
 done
