@@ -6,18 +6,23 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=9" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "JetBrians Mono:size=9", "FontAwesome:size=9" };
+static const char dmenufont[]       = "JetBrains Mono:size=10";
 static const char col_gray1[]       = "#000000";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_gray5[]       = "#222222";
-static const char col_lightblue[]       = "#039be5";
+static const char col_gray2[]       = "#3c3836";
+static const char col_gray3[]       = "#d5c4a1";
+static const char col_gray4[]       = "#fbf1c7";
+static const char col_gray5[]       = "#282828";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray5,  col_lightblue  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_gray4, col_gray5,  col_gray4  },
+	[SchemeStatus]  = { col_gray4, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { col_gray4, col_gray5,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]  = { col_gray4, col_gray1,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+
 };
 
 /* tagging */
@@ -32,10 +37,11 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
 	{ "Pavucontrol",  NULL,   NULL,       0,            1,           1,           -1 },
+	{ "Alacritty",  NULL,   "pulsemixer",       0,            1,           1,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -66,6 +72,8 @@ static const char *mutecmd[] = { "pamixer", "-t" };
 static const char *volupcmd[] ={ "pamixer", "-i", "5" };
 static const char *voldowncmd[] = { "pamixer", "-d", "5" };
 static const char *lock[] = { "slock", NULL};
+static const char *filemanager[] = { "alacritty", "-e", "ranger" };
+static const char *volumemixer[] = { "alacritty", "-e", "pulsemixer" };
 static const char *screenshot[] = { "i3-scrot" };
 static const char *screenshot_select[] = { "i3-scrot", "--select" };
 static const char *spotify_toggle[] = { "playerctl", "-p", "spotify", "play-pause" };
@@ -78,6 +86,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = browser } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = filemanager } },
+	{ MODKEY,                       XK_F4,     spawn,          {.v = volumemixer } },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = lock } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

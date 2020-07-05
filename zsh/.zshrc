@@ -85,6 +85,7 @@ alias coronabd='curl https://corona-stats.online/bangladesh?source=2'
 alias dot='cd ~/dotfiles && git status'
 alias vpnusa='sudo protonvpn c US-FREE#1'
 alias vpn='sudo protonvpn c -f'
+alias suck='rm -rf config.h & sudo make clean install'
 
 
 ################################################################################

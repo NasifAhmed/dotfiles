@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ap/vim-css-color'
 Plug 'itchyny/lightline.vim'
+Plug 'NasifAhmed/lightline-gruvbox.vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'  
@@ -43,6 +44,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0 
 
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif 

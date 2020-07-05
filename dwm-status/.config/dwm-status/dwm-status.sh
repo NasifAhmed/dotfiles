@@ -23,18 +23,10 @@ dwm_spotify () {
         DURATION=$(playerctl -p spotify metadata mpris:length | sed 's/.\{6\}$//')
         STATUS=$(playerctl -p spotify status)
 
-        if [ "$IDENTIFIER" = "unicode" ]; then
-            if [ "$STATUS" = "Playing" ]; then
-                STATUS="▶"
-            else
-                STATUS="⏸"
-            fi
+        if [ "$STATUS" = "Playing" ]; then
+            STATUS="|  "
         else
-            if [ "$STATUS" = "Playing" ]; then
-                STATUS="PLA"
-            else
-                STATUS="PAU"
-            fi
+            STATUS="|  "
         fi
 
         printf "%s%s %s - %s " "$SEP1" "$STATUS" "$ARTIST" "$TRACK"
@@ -44,7 +36,7 @@ dwm_spotify () {
 }
 
 memory (){
-        free -h | awk '/Mem:/ {print $7}'
+        free -h | awk '/Mem:/ NR>1 {printf $3} NR>1 {print $6 $7}' | sed 's/i/+/1' | sed 's/i/\ ~ /1' | sed 's/i//1'
     }
 
 # drive (){
@@ -52,7 +44,7 @@ memory (){
 #     }
 
 cpu_temp (){
-        sensors | awk '/Tctl:/ {print $2}'
+        sensors | awk '/Tctl:/ {print $2}' | sed 's/+//g'
     }
 
 volume (){
@@ -60,7 +52,7 @@ volume (){
     }
 
 print_date (){
-        date "+%b %d (%a), %I:%M:%S %p"
+        date "+%a - %d/%m/%y - %I:%M:%S %p"
     }
 
 #weather() {
@@ -78,6 +70,6 @@ print_date (){
                                                          
 while true
 do
-    xsetroot -name "| $(dwm_spotify) |  $(memory) -  $(cpu_temp) |  $(volume)% |  $(print_date)"
+    xsetroot -name "   $(dwm_spotify)  |    $(memory)   |    $(cpu_temp)   |    $(volume)%   |    $(print_date)  "
     sleep 1s
 done
