@@ -4,8 +4,8 @@ static const char *group = "users";
 
 static const char *colorname[NUMCOLS] = {
 	[INIT] =   "black",     /* after initialization */
-	[INPUT] =  "#005577",   /* during input */
-	[FAILED] = "#CC3333",   /* wrong password */
+	[INPUT] =  "#076678",   /* during input */
+	[FAILED] = "#cc241d",   /* wrong password */
 };
 
 /* treat a cleared input like a wrong password (color) */

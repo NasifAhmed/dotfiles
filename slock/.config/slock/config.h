@@ -4,15 +4,15 @@ static const char *group = "users";
 
 static const char *colorname[NUMCOLS] = {
 	[INIT] =   "black",     /* after initialization */
-	[INPUT] =  "#005577",   /* during input */
-	[FAILED] = "#CC3333",   /* wrong password */
+	[INPUT] =  "#076678",   /* during input */
+	[FAILED] = "#cc241d",   /* wrong password */
 };
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
 /* time in seconds to cancel lock with mouse movement */
-static const int timetocancel = 10;
+static const int timetocancel = 4;
 
 /* default message */
 static const char * message = "L E S S   I S   M O R E";
