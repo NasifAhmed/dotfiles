@@ -127,7 +127,8 @@ bindkey '^[[B' history-substring-search-down
 ##  Startup Commands                                                          ##
 ################################################################################
 
-neofetch
+neofetch --backend chafa --size 21% --source ~/dotfiles/Pictures/linux_PNG12.png
+
 # echo "$(date '+%D %T' | toilet -f term -F border --gay)"
 
 
