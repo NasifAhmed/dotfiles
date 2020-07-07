@@ -36,7 +36,7 @@ dwm_spotify () {
 }
 
 memory (){
-        free -h | awk '/Mem:/ NR>1 {printf $3} NR>1 {print $6 $7}' | sed 's/i/+/1' | sed 's/i/\ ~ /1' | sed 's/i//1'
+        free -h | awk '/Mem:/ NR>1 {printf $3} NR>1 {print $7}' | sed 's/i/ ~ /1' | sed 's/i//1'
     }
 
 # drive (){
