@@ -53,7 +53,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let mapleader=" "
 
-nnoremap <leader>t :below terminal<CR>
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>l :tabnext<CR>
+nnoremap <leader>h :tabprevious<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-s> :FZF<CR>
 noremap <Up> :resize +1 <CR>
