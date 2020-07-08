@@ -70,6 +70,6 @@ print_date (){
                                                          
 while true
 do
-    xsetroot -name "   $(dwm_spotify)  |    $(memory)   |    $(cpu_temp)   |    $(volume)%   |    $(print_date)  "
+    xsetroot -name "    $(dwm_spotify)       $(memory)        $(cpu_temp)        $(volume)%        $(print_date)  "
     sleep 1s
 done
