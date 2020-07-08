@@ -128,7 +128,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-    { 0,                            XF86XK_AudioMute, spawn,   SHCMD("pamixer -t") },
+    { 0,                            XF86XK_AudioMute, spawn,   SHCMD("pamixer -t & pkill -RTMIN+10 dwmblocks") },
     { 0,                            XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 5 & pkill -RTMIN+10 dwmblocks") },
     { 0,                            XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5 & pkill -RTMIN+10 dwmblocks") },
     { 0,                            XF86XK_AudioPlay, spawn, {.v = spotify_toggle } },

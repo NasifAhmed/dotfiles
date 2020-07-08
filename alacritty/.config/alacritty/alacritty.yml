@@ -39,7 +39,7 @@ window:
     y: 25
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -138,6 +138,7 @@ font:
 
   # Point size
   size: 12
+
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -286,6 +287,11 @@ colors:
     cyan:    '#8ec07c'
     white:   '#ebdbb2'
 
+  cursor:
+    text: '#000000'
+    cursor: '#ffffff'
+
+
 
 
 
@@ -340,7 +346,7 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Block
+  style: Underline
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
