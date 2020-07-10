@@ -13,7 +13,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 30;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "monospace:size=9:antialias=true:autohint=true", "FontAwesome:size=9:antialias=true" };
-static const char dmenufont[]       = "monospace:size=9:antialias=true:autohint=true";
+static const char dmenufont[]       = "monospace:size=18:antialias=true:autohint=true";
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#3c3836";
 static const char col_gray3[]       = "#d5c4a1";
