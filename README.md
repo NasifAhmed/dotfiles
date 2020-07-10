@@ -17,6 +17,11 @@
 * **Compositor** : Picom 
 
 
+### Goals :
+
+Creating a minimal and light-weight GNU/Linux setup for studying and coding without any distraction. 
+
+
 ### Preview : 
 
 ![alt text](https://github.com/NasifAhmed/dotfiles/blob/master/Pictures/rice.png)
