@@ -12,7 +12,7 @@
 * **Window Manager** : dwm 
 * **Launcher** : d-menu
 * **Locker** : slock
-* **Status** : dwm-status (Self Manged)
+* **Status** : dwm-blocks 
 * **Terminal** : Alacritty 
 * **Compositor** : Picom 
 
