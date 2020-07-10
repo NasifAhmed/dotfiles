@@ -17,19 +17,17 @@ SAVEHIST=999999999
 setopt INC_APPEND_HISTORY 
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt autocd beep
-bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/nasif/.zshrc'
 
+# Basic auto tab complete and slection
 autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 compinit
+_comp_options+=(globdots) # Include hidden files in tab complete
 # End of lines added by compinstall
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 
 ################################################################################
@@ -88,18 +86,6 @@ alias vpn='sudo protonvpn c -f'
 alias suck='rm -rf config.h & sudo make clean install'
 
 
-################################################################################
-##  PowerLevel10k                                                             ##
-################################################################################
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
 
 ################################################################################
 ##  Plugins                                                                   ##
@@ -110,6 +96,15 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/autojump/autojump.zsh 
 
+
+# spaceship prompt setup
+autoload -U promptinit; promptinit
+prompt spaceship
+
+
+# spaceship prompt config
+SPACESHIP_DIR_TRUNC=0
+SPACESHIP_VI_MODE_SHOW=false
 
 
 ################################################################################
@@ -126,7 +121,10 @@ bindkey '^[[B' history-substring-search-down
 ################################################################################
 ##  Startup Commands                                                          ##
 ################################################################################
-sh ~/.scripts/unix
+
+pfetch
+
+# sh ~/.scripts/unix
 
 # neofetch --backend chafa --size 21% --source ~/dotfiles/Pictures/linux_PNG12.png
 
