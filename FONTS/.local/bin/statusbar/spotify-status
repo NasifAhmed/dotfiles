@@ -8,9 +8,9 @@ if ps -C spotify > /dev/null; then
     STATUS=$(playerctl -p spotify status)
 
     if [ "$STATUS" = "Playing" ]; then
-        STATUS="PL"
+        STATUS=""
     else
-        STATUS="PA"
+        STATUS=""
     fi
 
     printf "%s%s %s - %s " "$SEP1" "$STATUS" "$ARTIST" "$TRACK"

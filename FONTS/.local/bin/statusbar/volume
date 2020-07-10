@@ -1,15 +1,16 @@
 #!/bin/bash 
 
 vol="$(pamixer --get-volume)"
+mute="$(pamixer --get-volume-human)"
 
 if [ "$vol" -gt "70" ]; then
-	icon="🔊"
+	icon=""
 elif [ "$vol" -lt "30" ]; then
-	icon="🔈"
-elif [ "$vol" -lt "muted" ]; then
+	icon=""
+elif [ "$mute" == "muted" ]; then
 	icon=""
 else
-	icon="🔉"
+	icon=""
 fi
 
 echo "$icon ${vol}% "
