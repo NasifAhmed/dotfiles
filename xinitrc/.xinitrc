@@ -10,7 +10,7 @@ dunst &
 picom &
 dwmblocks &
 
-feh --bg-scale ~/Wallpapers/night.png &
+feh --bg-scale ~/dotfiles/Pictures/Wallpapers/1590495698676.jpg
 
 sh ~/.scripts/startup.sh &
 
