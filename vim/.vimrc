@@ -19,6 +19,10 @@ set hlsearch
 set laststatus=2  
 set noshowmode
 
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+
 let g:rainbow_active = 1
 
 call plug#begin('~/.vim/plugged')
