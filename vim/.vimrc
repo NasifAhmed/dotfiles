@@ -6,6 +6,8 @@ set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
+set textwidth=120
 set smartindent
 set number relativenumber
 set nu rnu
@@ -18,15 +20,18 @@ set incsearch
 set hlsearch
 set laststatus=2  
 set noshowmode
+set ruler
+set wildmenu
+set lazyredraw
+set showmatch
+nnoremap // :noh<return>
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 
 let g:rainbow_active = 1
-
-call plug#begin('~/.vim/plugged')
-
+call plug#begin('~/.vim/plugged') 
 Plug 'ap/vim-css-color'
 Plug 'itchyny/lightline.vim'
 Plug 'NasifAhmed/lightline-gruvbox.vim'
@@ -56,7 +61,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
 let mapleader=" "
-
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>l :tabnext<CR>
 nnoremap <leader>h :tabprevious<CR>
