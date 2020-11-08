@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+
 #         _     
 #     _______| |__  
 #    |_  / __| '_ \ 
@@ -11,33 +18,6 @@
 ################################################################################
 ##  ZSH Auto Configs                                                          ##
 ################################################################################
-
-
-
-
-## Options section
-setopt correct                                                  # Auto correct mistakes
-setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
-setopt nocaseglob                                               # Case insensitive globbing
-setopt rcexpandparam                                            # Array expension with parameters
-setopt nocheckjobs                                              # Don't warn about running processes when exiting
-setopt numericglobsort                                          # Sort filenames numerically when it makes sense
-setopt nobeep                                                   # No beep
-setopt appendhistory                                            # Immediately append history instead of overwriting
-setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
-setopt autocd                                                   # if only directory path is entered, cd there.
-
-
-
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path 
-# Speed up completions
-zstyle ':completion:*' accept-exact '*(N)'
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
-
-
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -78,7 +58,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-export EDITOR=nvim 
 
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
@@ -114,30 +93,37 @@ alias dot='cd ~/dotfiles && git status'
 alias vpnusa='sudo protonvpn c US-FREE#1'
 alias vpn='sudo protonvpn c -f'
 alias suck='rm -rf config.h & sudo make clean install'
-alias gitu='git add . && git commit && git push'
-alias vim='nvim'
+
 
 
 ################################################################################
 ##  Plugins                                                                   ##
 ################################################################################
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 #source /usr/share/autojump/autojump.zsh 
+
+
+# spaceship prompt setup
+autoload -U promptinit; promptinit
+prompt spaceship
+
+
+# spaceship prompt config
+SPACESHIP_DIR_TRUNC=0
+SPACESHIP_VI_MODE_SHOW=false
 
 
 ################################################################################
 ##  Keybinds                                                                  ##
 ################################################################################
 
-# bind UP and DOWN arrow keys to history substring search
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey '^[[A' history-substring-search-up			
-bindkey '^[[B' history-substring-search-down
+#bindkey '^[[A' history-substring-search-up
+#bindkey '^[[B' history-substring-search-down
+#bindkey '^[[A' history-substring-search-up
+#bindkey '^[[B' history-substring-search-down
 
 
 
@@ -145,10 +131,7 @@ bindkey '^[[B' history-substring-search-down
 ##  Startup Commands                                                          ##
 ################################################################################
 
-pfetch  
-echo -n "\v"
-fortune
-echo -n "\v\v\v"
+pfetch
 
 # sh ~/.scripts/unix
 
@@ -165,16 +148,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-
-
-
-
-
-
-# Offer to install missing package if command is not found
-if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
-    source /usr/share/zsh/functions/command-not-found.zsh
-    export PKGFILE_PROMPT_INSTALL_MISSING=1
-fi
