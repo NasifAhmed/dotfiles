@@ -116,6 +116,7 @@ alias vpn='sudo protonvpn c -f'
 alias suck='rm -rf config.h & sudo make clean install'
 alias gitu='git add . && git commit && git push'
 alias vim='nvim'
+alias study='cd ~/study'
 
 
 ################################################################################
