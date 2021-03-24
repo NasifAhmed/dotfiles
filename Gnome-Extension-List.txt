@@ -1,0 +1,15 @@
+#01 AlternateTab - https://extensions.gnome.org/extension/15/alternatetab/
+#02 Azan Islamic Prayer Times - https://extensions.gnome.org/extension/1344/azan/
+#03 Dynamic Panel Transparency - https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/
+#04 GSConnect - https://extensions.gnome.org/extension/1319/gsconnect/
+#05 Internet Speed Meter - https://extensions.gnome.org/extension/2980/internet-speed-meter/
+#06 Just Perfection - https://extensions.gnome.org/extension/3843/just-perfection/
+#07 KStatusNotifierItem | AppIndicator Support - https://extensions.gnome.org/extension/615/appindicator-support/
+#08 Launch new instance - https://extensions.gnome.org/extension/600/launch-new-instance/
+#09 Lock Keys - https://extensions.gnome.org/extension/36/lock-keys/
+#10 Pomodoro - https://extensions.gnome.org/extension/53/pomodoro/
+#11 Screenshot Window Sizer - https://extensions.gnome.org/extension/881/screenshot-window-sizer/
+#12 Scrovol - https://extensions.gnome.org/extension/1519/scrovol/
+#13 User Themes - https://extensions.gnome.org/extension/19/user-themes/
+#14 Vitals - https://extensions.gnome.org/extension/1460/vitals/
+#15 Weather In The Clock - https://extensions.gnome.org/extension/1380/weather-in-the-clock/
