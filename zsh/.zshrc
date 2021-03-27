@@ -118,6 +118,13 @@ alias gitu='git add . && git commit && git push'
 alias vim='nvim'
 alias study='cd ~/study'
 
+edit() {
+    nvim "$(find -type f | fzf)"
+}
+
+fcd() {
+    cd "$(find -type d | fzf)"
+}
 
 ################################################################################
 ##  Plugins                                                                   ##
