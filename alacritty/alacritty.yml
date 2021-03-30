@@ -64,7 +64,7 @@ window:
   startup_mode: Maximized
 
   # Window title
-  #title: Terminal
+  title: Terminal
 
   # Window class (Linux/BSD only):
   #class:
