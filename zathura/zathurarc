@@ -4,3 +4,4 @@ set window-height 2000
 set window-width 2000
 map d scroll half-down
 map u scroll half-up
+map <C-p> print
