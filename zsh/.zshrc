@@ -188,7 +188,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # Offer to install missing package if command is not found
-if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
-    source /usr/share/zsh/functions/command-not-found.zsh
-    export PKGFILE_PROMPT_INSTALL_MISSING=1
-fi
+#if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
+#    source /usr/share/zsh/functions/command-not-found.zsh
+#    export PKGFILE_PROMPT_INSTALL_MISSING=1
+#fi
