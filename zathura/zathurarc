@@ -1,5 +1,6 @@
 set page-padding 1
 set recolor true
+set recolor-lightcolor \#101421
 set window-height 2000
 set window-width 2000
 map d scroll half-down
