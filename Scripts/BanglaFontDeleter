@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+fc-list :lang=bn | while read line; do
+    extract=$(echo $line | sed 's/:.*//')
+    rm -rfv $extract
+done
+
+fc-cache -f -v
