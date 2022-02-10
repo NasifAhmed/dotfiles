@@ -121,6 +121,7 @@ alias suck='rm -rf config.h & sudo make clean install'
 alias gitu='git add . && git commit && git push'
 alias vim='nvim'
 alias study='cd ~/study'
+alias clean='yay -Yc && sudo pacman -Scc && rm -rf .cache/* && sudo pacman -Rns $(pacman -Qdtq)'
 
 edit() {
     nvim "$(find -type f | fzf)"
