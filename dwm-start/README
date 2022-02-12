@@ -1,0 +1,4 @@
+Add this bash script to /usr/local/bin/dwm-start
+And copy this "dwm.desktop" file to /usr/share/xsessions/
+
+
