@@ -40,6 +40,8 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'leafgarland/typescript-vim'  
 Plug 'scrooloose/syntastic'
+Plug 'junegunn/goyo.vim'
+Plug 'psliwka/vim-smoothie'
 
 call plug#end()
 

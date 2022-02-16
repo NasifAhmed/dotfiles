@@ -83,6 +83,7 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export EDITOR=nvim 
 
+
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
@@ -120,7 +121,7 @@ alias vpn='sudo protonvpn c -f'
 alias suck='rm -rf config.h & sudo make clean install'
 alias gitu='git add . && git commit && git push'
 alias vim='nvim'
-alias study='cd ~/study'
+alias study='nautilus ~/study&google-chrome-stable "https://calendar.google.com/calendar/u/1/r"&exit'
 alias clean='yay -Yc && sudo pacman -Scc && rm -rf .cache/* && sudo pacman -Rns $(pacman -Qdtq)'
 
 edit() {
