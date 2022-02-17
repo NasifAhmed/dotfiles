@@ -70,14 +70,14 @@ weather() {
                                                          
 while true
 do
-    xsetroot -name "     $(memory)        $(cpu_temp)        $(volume)%        $(print_date)  "
+    xsetroot -name "    RAM $(memory)       CPU $(cpu_temp)       VOL $(volume)%        $(print_date)  "
     sleep 1s
 done &
 
 
 # Add all the startup programs after this
 sleep 1 
-picom&
+picom -bc --vsync&
 nitrogen --set-centered /home/nasif/Pictures/brush-strokes-d.jpg&
 
 exec /usr/local/bin/dwm
