@@ -159,7 +159,7 @@ bindkey '^[[B' history-substring-search-down
 ##  Startup Commands                                                          ##
 ################################################################################
 
-pfetch  
+neofetch  
 # echo -n "\v"
 
 # sh ~/.scripts/unix

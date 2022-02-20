@@ -13,7 +13,7 @@
 #TERM: alacritty
 window:
   # Window opacity
-  opacity: 0.97
+  opacity: 0.98
 
   # Window dimensions (changes require restart)
   #
@@ -60,7 +60,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+  startup_mode: Maximized
 
   # Window title
   title: Terminal
