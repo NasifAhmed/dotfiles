@@ -31,8 +31,6 @@ from libqtile.utils import guess_terminal
 
 # Importing colors.py file
 from colors import gruvbox
-# Importing unicodes.py file
-from unicodes import left_half_circle, right_half_circle
 
 
 @hook.subscribe.startup
@@ -147,7 +145,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='JetBrains Mono',
+    font='JetBrainsMono NF',
     fontsize=15,
     padding=3,
     foreground=gruvbox['bg'],
@@ -175,57 +173,7 @@ screens = [
                 Spacer(
                     length=5,
                 ),
-
-                Spacer(
-                    length=1,
-                    background=gruvbox['fg'],
-                ),
-                Spacer(
-                    length=5,
-                    background=gruvbox['dark-blue'],
-                ),
-                CurrentLayout(
-                    background=gruvbox['dark-blue'],
-                ),
-                Spacer(
-                    length=5,
-                    background=gruvbox['dark-blue'],
-                ),
-
-                Spacer( length=1,
-                    background=gruvbox['fg'],
-                ),
-
-                Spacer(
-                    length=5,
-                    background=gruvbox['dark-cyan'],
-                ),
-                Clock(
-                    background=gruvbox['dark-cyan'],
-                    format=' %Y-%m-%d %a'),
-                Spacer(
-                    length=5,
-                    background=gruvbox['dark-cyan'],
-                ),
-                Spacer(
-                    length=1,
-                    background=gruvbox['fg'],
-                ),
-                Spacer(
-                    length=5,
-                    background=gruvbox['cyan'],
-                ),
-                Clock(
-                    background=gruvbox['cyan'],
-                    format='%I:%M %p'),
-                Spacer(
-                    length=5,
-                    background=gruvbox['cyan'],
-                ),
-                Spacer(
-                    length=1,
-                    background=gruvbox['fg'],
-                ),
+                
 
                 Spacer(length=10),
 
@@ -261,6 +209,7 @@ screens = [
                     background=gruvbox['fg'],
                 ),
 
+                # Volume
                 Spacer(
                     length=1,
                     background=gruvbox['fg'],
@@ -276,7 +225,70 @@ screens = [
                     length=5,
                     background=gruvbox['green']
                 ),
+                Spacer(
+                    length=1,
+                    background=gruvbox['fg'],
+                ),
+                #----------------------------
 
+
+                # Date and Time
+                Spacer(
+                    length=1,
+                    background=gruvbox['fg'],
+                ),
+                Spacer(
+                    length=5,
+                    background=gruvbox['cyan'],
+                ),
+                Clock(
+                    background=gruvbox['cyan'],
+                    format='%I:%M %p'),
+                Spacer(
+                    length=5,
+                    background=gruvbox['cyan'],
+                ),
+                Spacer(
+                    length=1,
+                    background=gruvbox['fg'],
+                ),
+                Spacer(
+                    length=5,
+                    background=gruvbox['dark-cyan'],
+                ),
+                Clock(
+                    background=gruvbox['dark-cyan'],
+                    format=' %Y-%m-%d %a'),
+                Spacer(
+                    length=5,
+                    background=gruvbox['dark-cyan'],
+                ),
+                Spacer(
+                    length=1,
+                    background=gruvbox['fg'],
+                ),
+                #----------------------------------
+
+                # CurrentLayout
+                Spacer(
+                    length=1,
+                    background=gruvbox['fg'],
+                ),
+                Spacer(
+                    length=5,
+                    background=gruvbox['dark-blue'],
+                ),
+                CurrentLayout(
+                    background=gruvbox['dark-blue'],
+                ),
+                Spacer(
+                    length=5,
+                    background=gruvbox['dark-blue'],
+                ),
+                Spacer( length=1,
+                    background=gruvbox['fg'],
+                ),
+                #---------------
             ],
             background=gruvbox['bg'],
             size=26,

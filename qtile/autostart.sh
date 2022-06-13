@@ -1,0 +1,3 @@
+picom&
+qbittorrent&
+nitrogen --restore&

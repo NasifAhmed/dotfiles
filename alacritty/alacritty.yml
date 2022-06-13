@@ -60,7 +60,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Maximized
+  # startup_mode: Maximized
 
   # Window title
   title: Terminal
@@ -267,6 +267,48 @@ colors:
     magenta: '#d3869b'
     cyan:    '#8ec07c'
     white:   '#ebdbb2'
+
+
+
+
+
+
+
+## Colors (Muted Green)
+#colors:
+#  # Default colors
+#  primary:
+#    # hard contrast: background = '#1d2021'
+#    background: '#111317'
+#    # soft contrast: background = '#32302f'
+#    foreground: '#ebdbb2'
+#
+#  # Normal colors
+#  normal:
+#    black:   '#121318'
+#    red:     '#6c866b'
+#    green:   '#959c74'
+#    yellow:  '#c4af79'
+#    blue:    '#74977e'
+#    magenta: '#abab81'
+#    cyan:    '#c1b482'
+#    white:   '#d3d5bc'
+#
+#  # Bright colors
+#  bright:
+#    black:   '#949684'
+#    red:     '#6c866b'
+#    green:   '#959c74'
+#    yellow:  '#c4af79'
+#    blue:    '#74977e'
+#    magenta: '#abab81'
+#    cyan:    '#c1b482'
+#    white:   '#d3d5bc'
+
+
+
+
+
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
