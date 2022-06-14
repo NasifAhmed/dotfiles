@@ -1,5 +1,7 @@
 from email import message_from_string
 import os
+import re
+import socket
 import subprocess
 
 from libqtile import hook
@@ -8,7 +10,7 @@ from libqtile import hook
 
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout
+from libqtile import bar, layout, widget
 
 # import widgets and bar
 from libqtile.widget.groupbox import GroupBox
@@ -33,10 +35,11 @@ from libqtile.utils import guess_terminal
 from colors import gruvbox
 
 
-@hook.subscribe.startup
-def autostart():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.run([home])
+@hook.subscribe.startup_once
+def start_once():
+    home = os.path.expanduser('~')
+    subprocess.call([home + '/.config/qtile/autostart.sh'])
+
 
 
 
@@ -177,9 +180,14 @@ screens = [
 
                 Spacer(length=10),
 
-                Prompt(foreground=gruvbox['fg']),
+                Prompt(
+                    foreground=gruvbox['fg'],
+                ),
 
-                WindowName(foreground=gruvbox['fg']),
+                WindowName(
+                    foreground=gruvbox['fg'],
+                    padding=350
+                ),
                 Spacer(length=100),
 
                 Systray(
@@ -232,6 +240,7 @@ screens = [
                 #----------------------------
 
 
+
                 # Date and Time
                 Spacer(
                     length=1,
@@ -270,24 +279,24 @@ screens = [
                 #----------------------------------
 
                 # CurrentLayout
-                Spacer(
-                    length=1,
-                    background=gruvbox['fg'],
-                ),
-                Spacer(
-                    length=5,
-                    background=gruvbox['dark-blue'],
-                ),
-                CurrentLayout(
-                    background=gruvbox['dark-blue'],
-                ),
-                Spacer(
-                    length=5,
-                    background=gruvbox['dark-blue'],
-                ),
-                Spacer( length=1,
-                    background=gruvbox['fg'],
-                ),
+                #Spacer(
+                #    length=1,
+                #    background=gruvbox['fg'],
+                #),
+                #Spacer(
+                #    length=5,
+                #    background=gruvbox['dark-blue'],
+                #),
+                #CurrentLayout(
+                #    background=gruvbox['dark-blue'],
+                #),
+                #Spacer(
+                #    length=5,
+                #    background=gruvbox['dark-blue'],
+                #),
+                #Spacer( length=1,
+                #    background=gruvbox['fg'],
+                #),
                 #---------------
             ],
             background=gruvbox['bg'],

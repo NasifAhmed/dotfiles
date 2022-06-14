@@ -78,6 +78,7 @@ done &
 # Add all the startup programs after this
 sleep 1 
 picom -bc --vsync&
-nitrogen --set-centered /home/nasif/Pictures/brush-strokes-d.jpg&
+nitrogen --restore&
+qbittorrent&
 
 exec /usr/local/bin/dwm

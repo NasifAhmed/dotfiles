@@ -1,3 +1,5 @@
-picom&
-qbittorrent&
-nitrogen --restore&
+#!/usr/bin/env bash
+
+picom &
+qbittorrent &
+nitrogen --restore &
