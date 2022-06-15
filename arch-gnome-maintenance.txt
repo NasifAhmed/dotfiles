@@ -1,0 +1,149 @@
+4 - GNOME Specific Stuff :-
+
+4.1 - Touchégg (Touchpad Gestures on Xorg) :
+
+    yay -S touchegg touche
+    sudo systemctl enable --now touchegg.service
+    sudo systemctl start touchegg.service
+    Install this Extension : X11 Gestures
+
+You'll be able to use Wayland like Touchpad Gestures on Xorg and configure them from Touche app.
+
+SOURCE :
+
+    https://github.com/JoseExposito/touchegg
+    https://aur.archlinux.org/packages/touchegg/
+    https://aur.archlinux.org/packages/touche/
+
+---------------------------------------------------------------------
+
+4.2 - Uniform Theming of QT Apps on Gnome :
+
+4.2.1 - If you use Adwaita theme :-
+
+    yay -S adwaitaqt6 qgnomeplatform
+    sudo nano /etc/environment
+    Change QT_QPA_PLATFORMTHEME=gnome #Default is qt5ct
+
+SOURCE :
+
+    https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications
+    https://aur.archlinux.org/packages/adwaita-qt6/
+    https://aur.archlinux.org/packages/qgnomeplatform/
+
+OR
+
+4.2.2 - If you use Custom themes :-
+
+    sudo pacman -S --needed kvantum
+    sudo nano /etc/environment
+    Uncomment QT_STYLE_OVERRIDE=kvantum
+
+Environment Variables take affect after reboot.
+
+---------------------------------------------------------------------
+
+4.3 - Symlink between Themes and Icons folders to Root (Root apps can use Custom Themes) :
+
+DISCLAIMER : I've not personally tested this and I'm not currently running GNOME, so I can't confirm if this will work or not. So make a snapshot before doing this, if something goes wrong then restore the snapshot. OR you can skip this if your root apps automatically uses custom themes.
+
+    sudo ln -s -t /root /usr/share/themes
+    sudo mv /root/themes /root/.themes
+    sudo ln -s -t /root /usr/share/icons/
+    sudo mv /root/icons /root/.icons
+
+---------------------------------------------------------------------
+
+4.4 - Gnome Shell Integration Native Host Connector Issue (Needed for both Firefox & Chromium Browsers) :
+
+    yay -S chrome-gnome-shell
+
+SOURCE :
+
+    https://wiki.gnome.org/Projects/GnomeShellIntegrationForChrome/Installation
+    https://aur.archlinux.org/packages/chrome-gnome-shell/
+
+Now install some extensions, some useful ones are :
+
+    https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+    https://extensions.gnome.org/extension/8/places-status-indicator/
+    https://extensions.gnome.org/extension/4135/espresso/
+    https://extensions.gnome.org/extension/307/dash-to-dock/
+    https://extensions.gnome.org/extension/19/user-themes/
+    https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
+    https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/
+    https://extensions.gnome.org/extension/615/appindicator-support/
+    https://extensions.gnome.org/extension/3193/blur-my-shell/
+    https://extensions.gnome.org/extension/4269/alphabetical-app-grid/
+
+---------------------------------------------------------------------
+
+4.5 - Allow older Gnome Extensions to work in Gnome 40 & above :
+
+    gsettings set org.gnome.shell disable-extension-version-validation "true"
+
+---------------------------------------------------------------------
+
+4.6 - Places Indicator Extension Issue (VSCode/Codium, MP3 Tag Editors are triggered when you open something with Places Indicator Extension) :
+
+    gio mime inode/directory #Check current default program
+    gio mime inode/directory org.gnome.Nautilus.desktop #Set Nautilus as the default program
+
+---------------------------------------------------------------------
+
+4.9 - Hide Apps from App Grid :
+
+    You can use menulibre to edit desktop entry files and icons with a GUI.
+    sudo pacman -S menulibre
+    SOURCE : https://github.com/bluesabre/menulibre
+
+OR
+
+    First of all copy all the .desktop files from /usr/share/applications/ to ~/.local/share/applications/ to avoid your changes being overwritten on system upgrades, you can do this via Nautilus (Gnome Files App).
+    Open the .desktop file in GEdit or any text editor of the app that you want to hide from ~/.local/share/applications/.
+    Add the NoDisplay=true line at the end of .desktop file and Save the file, Example is below :
+
+​
+
+[Desktop Entry]
+Categories=GNOME;System;
+Exec=/usr/bin/avahi-discover
+Icon=network-wired
+Name=Avahi Zeroconf Browser
+NoDisplay=true
+
+SOURCE : https://wiki.archlinux.org/title/Desktop_entries#Hide_desktop_entries
+
+---------------------------------------------------------------------
+
+4.10 - Custom Icons of Apps :
+
+    Open the .desktop file of the App that you want to change from ~/.local/share/applications/.
+    Go to the Icon= line and change the location of the icon.
+
+Example :
+
+    btrfs-assistant.desktop > Icon=gnome-dev-floppy #You can directly type the icon name for most of the apps
+    nvidia-settings.desktop > Icon=/usr/share/icons/Papirus-Dark/128x128/apps/nvidia.svg #If in some app some location is given then you've to provide the location of the new icon file.
+
+---------------------------------------------------------------------
+
+4.11 - Disable Wayland (If you're an Nvidia user or if you still prefer Xorg) :
+
+    sudo nano /etc/gdm/custom.conf
+    Uncomment WaylandEnable=false
+
+----------------------------------------------------------------------------------------------
+
+​
+5 - Manual System Maintenance :-
+
+You won't need these because EndeavourOS has tools which automate these tasks, but knowing about all these is a good thing.
+
+    Remove all unwanted dependencies : yay -Yc
+    Remove uninstalled packages cache : sudo pacman -Sc
+    Remove whole package directory : sudo pacman -Scc
+    Remove /cache directory in /home : rm -rf .cache/*
+    Remove Orphans (Equivalent to apt autoremove and dnf autoremove) : sudo pacman -Rns $(pacman -Qdtq)
+
+----------------------------------------------------------------------------------------------
