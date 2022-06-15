@@ -77,7 +77,7 @@ done &
 
 # Add all the startup programs after this
 sleep 1 
-picom -bc --vsync&
+# picom -bc --vsync&
 nitrogen --restore&
 qbittorrent&
 
