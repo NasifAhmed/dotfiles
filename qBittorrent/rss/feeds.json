@@ -1,0 +1,10 @@
+{
+    "TBD Exclusives": {
+        "uid": "{eb94af24-ccd8-451b-b3b9-c1f3c47be1eb}",
+        "url": "https://www.torrentbd.com/feed.php?v=2&filter=exclsv&user=fa602feb1768ffd056b5&passkey=cb97576d3ba41f9f12bc60709e9bb66e"
+    },
+    "TBD TV Episodes": {
+        "uid": "{7b3e48d6-10be-4bae-9bf8-de21a204a8c3}",
+        "url": "https://www.torrentbd.com/feed.php?v=2&cat=5,61&filter=fl&user=fa602feb1768ffd056b5&passkey=cb97576d3ba41f9f12bc60709e9bb66e"
+    }
+}
