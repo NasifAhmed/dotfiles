@@ -203,3 +203,15 @@ eval "$(starship init zsh)"
 # unset __conda_setup
 # <<< conda initialize <<<
 
+#neofetch
+#screenfetch
+#colorscript random
+#cpufetch
+#sysinfo-retro
+#sysinfo
+#ufetch-arco
+#ufetch
+#hfetch
+#fetch
+#paleofetch
+#alsi
