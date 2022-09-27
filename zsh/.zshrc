@@ -15,7 +15,7 @@
 
 
 # Enable vi mode
-bindkey -v
+# bindkey -v
 
 
 ## Options section
