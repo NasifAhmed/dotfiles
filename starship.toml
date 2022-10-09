@@ -1,6 +1,6 @@
 add_newline = true
 
-format ="$hostname$username$all$character"
+format ="$username$hostname$all$character"
 
 
 # Replace the "❯" symbol in the prompt with "➜"
@@ -10,16 +10,16 @@ error_symbol = "[  ✗](bold red)"
 vicmd_symbol = " [ ✔](bold white) "
 
 [username]
-style_user = "bold purple"
+style_user = "bold blue"
 style_root = "bold red"
 show_always = true
-format = "[$user\\]]($style)[➜](bold white) "
+format = "[\\[$user]($style)[@](bold blue)"
 disabled = false
 
 
 [hostname]
 ssh_only = false
-format = "[\\[$hostname]($style)[@](bold blue)"
+format = "[$hostname\\]]($style)[➜](bold white) "
 trim_at = "-"
 style = "bold blue"
 disabled = false
