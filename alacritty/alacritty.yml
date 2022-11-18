@@ -61,10 +61,8 @@ window:
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
   # startup_mode: Maximized
-
   # Window title
   title: Terminal
-
   # Window class (Linux/BSD only):
   #class:
   # Application instance name
@@ -96,7 +94,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -107,7 +105,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -118,7 +116,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -129,13 +127,13 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 13
+  size: 12
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -237,10 +235,6 @@ draw_bold_text_with_bright_colors: true
 #   `- { index: 16, color: '#ff00ff' }`
 #
 #indexed_colors: []
-
-
-
-
 ## Colors (Muted Green)
 #colors:
 #  # Default colors
@@ -271,12 +265,6 @@ draw_bold_text_with_bright_colors: true
 #    magenta: '#abab81'
 #    cyan:    '#c1b482'
 #    white:   '#d3d5bc'
-
-
-
-
-
-
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
@@ -539,34 +527,31 @@ mouse:
   #log_level: Warn
   # Print all received window events.
   #print_events: false
-theme: Gruvbox-Dark
+theme: Ashes.dark
 colors:
-  # COLORSCHEME: gruvlight.yaml
-  # Default colors
+  name: Ashes (dark)
+  author: Chris Kempson
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '0xfbf1c7'
-    # soft contrast: background = '0xf2e5bc'
-    foreground: '0x3c3836'
-
-  # Normal colors
+    background: "#1c2023"
+    foreground: "#c7ccd1"
+  cursor:
+    text: "#1c2023"
+    cursor: "#c7ccd1"
   normal:
-    black: '0xfbf1c7'
-    red: '0xcc241d'
-    green: '0x98971a'
-    yellow: '0xd79921'
-    blue: '0x458588'
-    magenta: '0xb16286'
-    cyan: '0x689d6a'
-    white: '0x7c6f64'
-
-  # Bright colors
+    black: "#1c2023"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#c7ccd1"
   bright:
-    black: '0x928374'
-    red: '0x9d0006'
-    green: '0x79740e'
-    yellow: '0xb57614'
-    blue: '0x076678'
-    magenta: '0x8f3f71'
-    cyan: '0x427b58'
-    white: '0x3c3836'
+    black: "#747c84"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#f3f4f5"
