@@ -181,8 +181,15 @@ pfetch
 ##  Starship Initialization                                                   ##
 ################################################################################
 
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 
+################################################################################
+##  Pure Prmpt Initialization                                                   ##
+################################################################################
+
+fpath+=($HOME/.zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
 
 
 ### EOF ###
@@ -190,10 +197,10 @@ eval "$(starship init zsh)"
 
 
 # Offer to install missing package if command is not found
-#if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
-#    source /usr/share/zsh/functions/command-not-found.zsh
-#    export PKGFILE_PROMPT_INSTALL_MISSING=1
-#fi
+if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
+    source /usr/share/zsh/functions/command-not-found.zsh
+    export PKGFILE_PROMPT_INSTALL_MISSING=1
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
