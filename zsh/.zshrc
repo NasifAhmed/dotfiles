@@ -137,14 +137,14 @@ fcd() {
 ################################################################################
 
 # For Arch installation with AUR
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # For fedora installation
-# source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh 
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
 
 
 
@@ -166,9 +166,9 @@ bindkey '^[[B' history-substring-search-down
 ##  Startup Commands                                                          ##
 ################################################################################
 
-#pfetch  
-neofetch  
-echo -n "\v"
+pfetch  
+#neofetch  
+#echo -n "\v"
 
 # sh ~/.scripts/unix
 
@@ -188,9 +188,10 @@ echo -n "\v"
 ##  Pure Prmpt Initialization                                                   ##
 ################################################################################
 
+
 fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
-prompt pure
+prompt fade
 
 
 ### EOF ###
