@@ -8,16 +8,9 @@ export PATH=$PATH:/home/nasif/.local/bin
 ##  alias                                                                     ##
 ################################################################################
 
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-alias i3config='vim ~/.config/i3/config'
 alias ll='ls -al --color=auto'
-alias windows='cd /run/media/nasif'
-alias corona='curl https://corona-stats.online?source=2'
-alias coronabd='curl https://corona-stats.online/bangladesh?source=2' 
 alias dot='cd ~/dotfiles && git status'
 
 
@@ -58,6 +51,5 @@ man() {
 
 pfetch
 
-eval "$(starship init bash)"
 
 ### EOF ###
