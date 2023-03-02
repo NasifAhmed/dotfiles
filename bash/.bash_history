@@ -1,0 +1,1 @@
+/home/reralt/dotfiles/bash/.bash_history
