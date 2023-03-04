@@ -1,20 +1,25 @@
 --[[
-
 ================================================================================
-Nasif's Neovim Setup
+                     _   _                 _           
+                    | \ | | ___  _____   _(_)_ __ ___  
+                    |  \| |/ _ \/ _ \ \ / / | '_ ` _ \ 
+                    | |\  |  __/ (_) \ V /| | | | | | |
+                    |_| \_|\___|\___/ \_/ |_|_| |_| |_|
+                                                       
 ================================================================================
 
-This is my neovim setup. Goal is to create a personalized minimal neovim setup 
-as I keep getting used to neovim. I started from scratch and some tweaks and 
-tips here and and there from youtube, reddit, /g/ and many other places. Added 
-them all here.
+This is my final neovim setup. Goal is to create a personalized minimal neovim 
+setup as I keep getting used to neovim as my main editor.
 
 This mainly started from the Primeagen's video titled "0 to LSP". But found that
 all very over-whelming. Still I followed along and got to pretty decent setup.
 But didn't understand half of what I did or what to do if something breaks. So 
-Deleted everything and started from sratch again.
-Then took some stuff from the mentioned video and another kickstart.nvim project
-by one of neovim's maintainters. This project is super cool.
+deleted everything and started from sratch again.
+Then took some stuff from the mentioned video and other kickstart.nvim project 
+and from random youtube videos/forum posts/articles.
+Will keep adding stuff.
+
+- Ahmed , February 2023
 
 --]]
 
@@ -233,4 +238,3 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep,
     { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, 
     { desc = '[S]earch [D]iagnostics' })
-
