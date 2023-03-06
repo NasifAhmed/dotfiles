@@ -4968,3 +4968,150 @@ sudo systemctl start syncthing@reralt.service
 edit
 eidt
 edit
+dnf search vscode
+dnf search code
+dnf search visual
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+EOF
+
+sudo dnf check-update
+sudo dnf install code
+fc-list | grep "JetBrains"
+ls
+ll
+got
+dot
+git add alacritty/alacritty.yml bash/.bash_history bash/.bashrc 
+git commit * -m "..."
+git push
+sudo dnf install meson ninja
+sudo dnf install meson
+cd ~/Downloads/
+mkdit tmp
+cd tmp
+mkdir tmp
+cd tmp/
+ls
+git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git
+cd gnome-backgrounds-macos/
+chmod +x download-backgrounds.sh 
+./download-backgrounds.sh 
+ll
+cd build/
+ll
+cd getopts_long/
+ll
+cd ../../
+./download-backgrounds.sh
+cd build/
+git clone https://github.com/UrsaDK/getopts_long.git
+ll
+cd ..
+ll
+./download-backgrounds.sh 
+ meson setup build
+ ninja -C build
+ninja -C build
+cd build/
+ll
+ninja build
+ninja
+ll backgrounds/
+cd 
+cd -
+ls
+cd
+cd -
+cd ..
+gclient runhooks
+cd build/
+cat build.ninja 
+rpm -qi ninja
+dnf -a
+dnf -q
+rpm -qi ninja-build
+ninja-build 
+cd 
+cd -
+cd ..
+ninja-build -C build
+cd build/
+ll
+rm -rf getopts_long
+ls
+cd..
+cd ..
+ninja-build -C build
+cd build/
+rm *
+rm -rfv meson*
+ll
+cd ..
+meson setup build
+ninja-build -C build
+exit
+sudo dnf install systemd-swap
+sudo systemctl enable systemd-swap.service
+sudo nvim /etc/systemd/swap.conf.d/myswap.conf
+mkdir /etc/systemd/swap.conf.d/
+sudo mkdir -p /etc/systemd/swap.conf.d/
+cd /etc/systemd/swap.conf.d/
+sudo nvim myswap.conf
+free -h
+sudo systemctl status systemd-swap.service
+sudo systemctl disable systemd-swap.service
+free -h
+sudo nvim /etc/default/grub
+sudo update-grub
+sudo nvim /etc/default/grub
+sudo dnf install update-grub
+sudo update-grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo dnf install grub
+dnf search grub
+rpm -q --scripts grub
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+sudo dnf install yt-dlp
+sudo dnf install aria2
+node
+sudo dnf install neofetch
+neofetch 
+ll
+edit
+source .bashrc 
+dot
+edit
+cd
+source .bashrc 
+edit
+source .bashrc 
+eidt
+edit
+source .bashrc 
+dot
+edit
+source ~/.bashrc 
+su
+cd ~/Sync/
+ll
+cd localDotfiles/
+ll
+cd bash/
+ll
+cd ..
+ll
+cp -rfv ~/dotfiles/bash .
+ll
+dot
+history
+:q
+ssh reralt@192.168.1.8
+ssh -p 6789 u0_a257@192.168.1.10
+exit
