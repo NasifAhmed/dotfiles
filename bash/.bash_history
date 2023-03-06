@@ -5115,3 +5115,151 @@ history
 ssh reralt@192.168.1.8
 ssh -p 6789 u0_a257@192.168.1.10
 exit
+dot
+git add bash/.bash_history bash/.bashrc 
+git commit bash/.bashrc -m "prompt tweaks"
+git commit bash/.bash_history
+git push
+edit
+echo $SHELL
+alacritty -h
+ls
+edit
+gnome-characters -h
+gnome-characters --help-all
+sudo dnf install librewolf
+dbus-send --session --dest=org.gnome.ScreenSaver --type=method_call --print-reply --reply-timeout=20000 /org/gnome/ScreenSaver org.gnome.ScreenSaver.SetActive boolean:true
+gnome-screensaver-command -l
+xdg-screensaver lock
+xdg-screensaver -h
+xdg-screensaver --help
+xdg-screensaver status
+xdg-screensaver manual
+xdg-screensaver --manual
+figlet -f smisome1 "Hello World" -t | lolcat
+figlet -f poison "Hello World" -t | lolcat
+figlet -f Poison "Hello World" -t | lolcat
+figlet -f poison "Hello World" -t | lolcat
+figlet -f smisome1 "Hello World" -t | lolcat
+figlet -f Isometric1 "Hello World" -t | lolcat
+figlet -f sblood "Hello World" -t | lolcat
+figlet -f maxiwi "Hello World" -t | lolcat
+figlet -f Blocks "Hello World" -t | lolcat
+figlet -f larry3d "Hello World" -t | lolcat
+figlet -f katakana "Hello World" -t | lolcat
+figlet -f Katakana "Hello World" -t | lolcat
+figlet -f Jazmine "Hello World" -t | lolcat
+figlet -f 3d "Hello World" -t | lolcat
+figlet -f 3-D "Hello World" -t | lolcat
+figlet -f 3d_diagonal "Hello World" -t | lolcat
+figlet -f 3d-ASCII "Hello World" -t | lolcat
+figlet -f 3D-ASCII "Hello World" -t | lolcat
+edit
+figlet -f Graffiti "Hello World" -t | lolcat
+figlet -f Fraktur "Hello World" -t | lolcat
+figlet -f Elite "Hello World" -t | lolcat
+figlet -f Doom "Hello World" -t | lolcat
+figlet -f Doh "Hello World" -t | lolcat
+figlet -f Bloody "Hello World" -t | lolcat
+figlet -f ANSIShadow "Hello World" -t | lolcat
+figlet -c -f Bloody "Hello World" -t | lolcat
+toilet -h
+sudo dnf install toilet
+toilet -h
+toilet --filet list
+toilet --filter list
+toilet -F crop "hellow"
+toilet -F border "hellow"
+toilet -F metal "hellow"
+toilet -F rainbow "hellow"
+toilet --gay "hellow"
+toilet -f ASCIIShadow --gay "hellow"
+toilet -f ANSIShadow --gay "hellow"
+toilet -f 3d --gay "hellow"
+toilet -f 3d --gay "hellow" | lolcat
+toilet -f 3d "hellow" | lolcat
+edit
+source .bashrc 
+edit
+source .bashrc 
+pfetch
+edit
+pfetch
+source .bashrc 
+cd .mozilla/firefox/7c6iigj2.BetterFox/
+ls
+nvim user.js
+cp user.js ~/Documents/
+sudo dnf install figlet lolcat
+figlet 3d "Ahmed" -t | lolcat
+figlet -f 3d "Ahmed" -t | lolcat
+cd ~
+mkdir -p .config/figlet/fonts
+cd .config/figlet/fonts
+wget https://raw.githubusercontent.com/xero/figlet-fonts/master/3d.flf
+ls
+cd ..
+ls
+cd ..
+rm -rf figlet
+cd ..
+cd Downloads/tmp/
+git clone
+git clone https://github.com/xero/figlet-fonts.git
+cd /usr/share/figlet/
+ls
+cd /usr/share/figlet/
+ls
+sudo cp -rv ~/Downloads/tmp/figlet-fonts/* .
+showfigfonts 
+showfigfonts | less
+showfigfonts
+ls
+ll
+ssh reralt@192.168.1.8
+edit
+wttr.in/dhaka?0
+curl wttr.in/dhaka?0
+curl wttr.in/dhaka
+source .bashrc 
+edit
+free -h
+sudo dnf install tldr
+tldr free
+free --help
+free -h
+free -ht
+cat /proc/meminfo | grep "MemFree\|SwapFree"
+free -h | awk '{print NR==1?$3:$1$4}'
+free --mega | awk '{print NR==1?$3:$1$4}'
+free --mebi | awk '{print NR==1?$3:$1$4}'
+free hw | awk '{print NR==1?$3:$1$4}'
+free -hw | awk '{print NR==1?$3:$1$4}'
+free -h | awk '{print NR==1?$3:$1$4}'
+</proc/meminfo awk '$1~"^(Mem|Swap)Free:" {$2=$2*1024/1000000; $3="MB"; print}' | column -t
+free --mega | awk '{print NR==1?$3:$4}'
+free --mega | awk '
+  NR==1 {$0="dUm "$0}
+  {print $1" "$4}
+' | column -t | sed 's/^dUm/   /'
+free --mega | awk '
+  NR==1 {$0="dUm "$0}
+  {print $1" "$4}
+' | column -t | sed 's/^dUm/   /'
+free -h | awk '
+  NR==1 {$0="dUm "$0}
+  {print $1" "$4}
+' | column -t | sed 's/^dUm/   /'
+free --mega | awk '{print NR==1?$3:$4}'
+free -h | awk '{print NR==1?$3:$1$4}'
+uptime -p
+date
+date -h
+date --help
+tldr date
+date -d @1473305798
+date --rfc-3339=s
+date -u +%Y-%m-%dT%H:%M:%S%Z
+date +%c
+edit
+ls

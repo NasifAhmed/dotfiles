@@ -72,7 +72,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  gtk_theme_variant: dark
+  #gtk_theme_variant: dark
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -96,7 +96,7 @@ font:
     family: JetBrainsMono Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
-    style: SemiBold
+    style: Regular
 
   # Bold font face
   bold:
@@ -526,31 +526,31 @@ mouse:
   #log_level: Warn
   # Print all received window events.
   #print_events: false
-theme: Default.dark
+theme: Ayu-Dark
 colors:
-  name: Default (dark)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#151515"
-    foreground: "#d0d0d0"
-  cursor:
-    text: "#151515"
-    cursor: "#d0d0d0"
+    background: '#0A0E14'
+    foreground: '#B3B1AD'
+
+  # Normal colors
   normal:
-    black: "#151515"
-    red: "#ac4142"
-    green: "#90a959"
-    yellow: "#f4bf75"
-    blue: "#6a9fb5"
-    magenta: "#aa759f"
-    cyan: "#75b5aa"
-    white: "#d0d0d0"
+    black: '#01060E'
+    red: '#EA6C73'
+    green: '#91B362'
+    yellow: '#F9AF4F'
+    blue: '#53BDFA'
+    magenta: '#FAE994'
+    cyan: '#90E1C6'
+    white: '#C7C7C7'
+
+  # Bright colors
   bright:
-    black: "#505050"
-    red: "#ac4142"
-    green: "#90a959"
-    yellow: "#f4bf75"
-    blue: "#6a9fb5"
-    magenta: "#aa759f"
-    cyan: "#75b5aa"
-    white: "#f5f5f5"
+    black: '#686868'
+    red: '#F07178'
+    green: '#C2D94C'
+    yellow: '#FFB454'
+    blue: '#59C2FF'
+    magenta: '#FFEE99'
+    cyan: '#95E6CB'
+    white: '#FFFFFF'
