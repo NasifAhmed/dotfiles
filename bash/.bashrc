@@ -8,7 +8,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo "[${BRANCH}${STAT}]"
+		echo "[${BRANCH}${STAT}] "
 	else
 		echo ""
 	fi
@@ -49,7 +49,7 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="[\[\e[32m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] \w \[\e[33m\]\`parse_git_branch\`\[\e[m\]]\\$ "
+export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] \w \[\e[33m\]\`parse_git_branch\`\[\e[m\]\\$ "
 
 export PATH=$PATH:/home/nasif/.local/bin
 
