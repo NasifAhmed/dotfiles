@@ -4849,3 +4849,122 @@ ll
 history
 source .bashrc 
 history
+sudo dnf install geary
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate sound-and-video
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+cd /usr/share/themes
+cd ~/Do
+cd ~/Downloads/
+mkdir test
+cd test/
+cd ..
+tar –xvzf adw-gtk3v4-3.tar.xz
+cd /usr/share/themes
+cp -rv ~/Downloads/test/adw-gtk3v4-3/* .
+sudo cp -rv ~/Downloads/test/adw-gtk3v4-3/* .
+ls -alh
+cd ~
+ls
+git config --global user.name "Nasif Ahmed"
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global color.ui auto
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+ls ~/.ssh/id_ed25519.pub
+ssh-keygen -t ed25519 -C <youremail>
+ssh-keygen -t ed25519 -C nasif2ahmed@gmail.com
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git@github.com:NasifAhmed/dotfiles.git
+git clone git@github.com:NasifAhmed/dotfiles.git
+cat .bashrc 
+python
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+/usr/bin/python3 -m pip install pynvim
+sudo dnf install python3-pip
+/usr/bin/python3 -m pip install pynvim
+sudo dnf install nodejs
+sudo dnf install fd-find
+npm install -g neovim
+sudo npm install -g neovim
+npm install -g npm@9.6.0
+sudo npm install -g npm@9.6.0
+npm fund
+sudo npm fund
+sudo dnf install neovim
+nvim
+ls -l
+ls -la
+rm -rf .bashrc .bash_history 
+ln -sfv ~/dotfiles/bash/.bashrc .
+ln -sfv ~/dotfiles/bash/.bash_history .
+cd Downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+sudo make install
+pfetch
+cd ~
+source .basrc
+source .bashrc
+nvim .bashrc 
+cd .config/
+history
+cat ~/.bash_
+cat ~/.bash_history 
+cat ~/.bash_history  | wc -l
+ln -sfv ~/dotfiles/nvim .
+ls -al
+nvim
+sudo dnf search cc1plus
+sudo dnf install g++ ripgrep
+nvim
+sudo dnf install fd
+:nvim
+nvim
+cd ~/Downloads/
+ls
+cp -rv JetBrainsMono /usr/share/fonts/
+sudo cp -rv JetBrainsMono /usr/share/fonts/
+fc-cache -fv
+ls
+nvim
+edit
+sudo dnf install fzf
+ls
+nvim
+edit
+exit
+gnome-terminal -h
+gnome-terminal -help-window-options
+gnome-terminal -help-all
+gnome-terminal --help-all
+gnome-terminal --active
+gnome-terminal
+gnome-terminal --window
+man gnome-terminal
+sudo dnf install google-chrome
+sudo dnf search google-chrome
+sudo dnf install google-chrome-stable
+sudo dnf install alacritty
+ln -sfv ~/dotfiles/alacritty ~/.config/
+ls
+man alacritty
+ls
+npm i -g alacritty-themes
+sudo npm i -g alacritty-themes
+alacritty-themes 
+ls
+neofetch
+edit
+edit
+sudo dnf search syncthing
+sudo dnf install syncthing
+sudo systemctl enable syncthing@username.service
+sudo systemctl enable syncthing@reralt.service
+sudo systemctl start syncthing@reralt.service
+edit
+eidt
+edit

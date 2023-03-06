@@ -60,6 +60,8 @@ export PATH=$PATH:/home/nasif/.local/bin
 
 HISTSIZE= 
 HISTFILESIZE=
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
 ################################################################################
 ##  alias                                                                     ##
