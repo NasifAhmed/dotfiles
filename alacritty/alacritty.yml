@@ -526,16 +526,15 @@ mouse:
   #log_level: Warn
   # Print all received window events.
   #print_events: false
-theme: Default.dark
 colors:
-  name: Default (dark)
+  name: Default (light)
   author: Chris Kempson
   primary:
-    background: "#151515"
-    foreground: "#d0d0d0"
+    background: "#f5f5f5"
+    foreground: "#303030"
   cursor:
-    text: "#151515"
-    cursor: "#d0d0d0"
+    text: "#f5f5f5"
+    cursor: "#303030"
   normal:
     black: "#151515"
     red: "#ac4142"
@@ -554,3 +553,4 @@ colors:
     magenta: "#aa759f"
     cyan: "#75b5aa"
     white: "#f5f5f5"
+theme: Default.light

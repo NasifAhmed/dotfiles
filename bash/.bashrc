@@ -63,7 +63,9 @@ function parse_git_dirty {
 
 export PS1="\[\e[32m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] \w \[\e[33m\]\`parse_git_branch\`\[\e[m\]\\$ "
 
-export PATH=$PATH:/home/nasif/.local/bin
+export PATH=$PATH:/$HOME/.local/bin/
+SUDO_EDITOR=/usr/bin/nvim
+export SUDO_EDITOR
 
 
 ################################################################################
@@ -85,6 +87,8 @@ alias ll='ls -al --color=auto'
 alias dot='cd ~/dotfiles && git status'
 alias jump='cd $(find ~ -type d | fzf)'
 alias edit='nvim $(find ~ -type f | fzf)'
+alias define='dict $(cat /usr/share/dict/words | fzf) | less'
+alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less'
 
 
 ################################################################################
@@ -123,7 +127,7 @@ man() {
 ################################################################################
 
 #pfetch
-figlet -f 3d "FEDBOX" -t | lolcat
+figlet -f 3d ${HOSTNAME^^} -t | lolcat
 echo -e "\n"
 date +%c
 echo -e "\n"

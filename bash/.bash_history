@@ -5263,3 +5263,600 @@ date -u +%Y-%m-%dT%H:%M:%S%Z
 date +%c
 edit
 ls
+locate
+locate test
+locate ls
+tldr locate
+sudo updatedv
+sudo updatedb
+locate lab.py
+locate .bashrc
+locate .bashrc | fzf
+locate dragon
+locate yt-dlp.exe
+sudo dnf install dash
+dash
+whatis dash
+dot
+ll
+ll FONTS/
+rm -rf FONTS/
+ll Ventoy/
+tree Ventoy/
+mkdir UserJS
+cd UserJS/
+cp -v ~/.mozilla/firefox/2xx1yf3x.BetterFox/user.js .
+ll
+cd ..
+ll
+git status
+git add UserJS/ 
+git commit UserJS/ -m "Add firefox userjs made from BetterFox"
+git add *
+git status
+git commit -m "...."
+git status
+git add FONNTS/*
+git add FONTS/*
+git status
+git commit FONTS/* -m "Delete old FONTS folder"
+git status
+git push
+ls
+ll
+nvim
+edit
+nvim
+edit
+jump
+cd Documents/
+lls
+ll
+cd Practice/
+ll
+nvim .
+edit
+nvim
+edit
+dot
+git restore
+git restore nvim/
+git status
+nvim
+edit
+man tmux
+tmux list-sessions
+nvim /usr/share/tmux
+sudo dnf remove tmux
+exit
+sudo dnf install tumux zathura
+sudo dnf install tmux zathura
+tmux
+tmu
+tmux
+sudo dnf install tmux
+tmux
+exit
+exit
+edit
+exit
+nvim tmux.conf 
+exit
+cd .config/
+ls
+dot
+cd -
+mkdir tmux
+cd tmux/
+nvim tmux.conf
+tmux
+sudo dnf install libgda libgda-sqlite
+alacritty-themes -h
+alacritty-themes
+ls
+alacritty-themes Default.dark
+alacritty-themes 
+alacritty-themes Gruvbox-Dark
+alacritty-themes Gruvbox-Light
+alacritty-themes 
+ll
+nvim
+edit
+ls
+init
+edit
+define
+alacritty -e define
+alacritty -e cmatrix
+alacritty -e dict $(cat /etc/words/words_alpha.txt | fzf) | less
+alacritty -e "dict $(cat /etc/words/words_alpha.txt | fzf) | less"
+alacritty -h
+cd /usr/bin/
+ls
+cat zstd
+ll
+cd /usr/local/bin/
+ls
+nvim diction
+sudo nvim diction
+chmod +x diction
+sudo chmod +x diction
+diction 
+cd /usr/bin/dict
+nvim
+sudo nvim
+diction 
+echo "test" | fzf
+echo "test" > fzf
+rm fzf 
+curl cheat.sh/python/:list
+curl cheat.sh/python/:list | fzf
+curl cheat.sh/$(curl cheat.sh/python/:list | fzf)
+echo $(curl cheat.sh/python/:list | fzf)
+man curl
+echo $(curl -s cheat.sh/python/:list | fzf)
+curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf)
+curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf) | less
+curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf)
+echo $(curl -s cheat.sh/python/:list | fzf)
+curl cheat.sh/$(curl -s cheat.sh/python/:list | fzf)
+echo $(curl -s cheat.sh/python/:list | fzf)
+curl -s cheat.sh/1_Inheritance
+curl -s cheat.sh/1_Inheritance 79
+cheat.sh/python/1_Inheritance 79
+curl cheat.sh/python/1_Inheritance 79
+curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf) | less
+curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less
+edit
+source .bashrc 
+cheat
+ping -t 1.1.1.1
+ping  1.1.1.1
+mkdir ~/Sync/Scripts
+sudo cp -v /usr/local/bin/diction ~/Sync/Scripts/
+cp ~/Downloads/words_alpha.txt ~/Sync/Scripts/
+jump
+ls
+nvim diction
+chown diction 
+chown 
+nvim diction
+rm diction 
+ls
+nvim diction
+chmod +x diction 
+./diction 
+cd
+sudo dnf install mpv
+mkdir ~/.config/mpv
+rm ~/.config/mpv
+rmdir ~/.config/mpv
+ln -sv ~/dotfiles/mpv ~/.config/
+cd .config/
+ll
+edit
+nvim
+neovim -h
+nvim -h
+nvim
+edit
+nvim
+alacritty-themes 
+alacritty-themes
+dat
+date
+dat + 15
+date +15
+date -d
+date -d "$HOUR + $1"
+date -d "$HOUR + $2"
+date -d "$DATE+$2"
+date -d"@$i"
+date -d"@$i"echo $(date %y%m%d -d "$(date) - 1 day")
+echo $(date %y%m%d -d "$(date) - 1 day")
+echo $(date +%m-%d-%Y -d "$DATE + $i day")
+echo $(date +%m-%d-%Y -d "$DATE + $1 day")
+echo $(date +%m-%d-%Y -d "$DATE + $2 day")
+for i in {0..8}; do    NEXT_DATE=$(date +%m-%d-%Y -d "$DATE + $i day");    echo "$NEXT_DATE"; done
+echo $(date +%m-%d-%Y -d "$DATE + 1 day")
+echo $(date +%m-%d-%Y -d "$DATE + 2 day")
+echo $(date +%m-%d-%Y -d "$DATE + 3 day")
+cmatrix
+sudo dnf install cmatrix
+cmatrix
+curl cheat.sh/python/list
+curl cheat.sh/python/init
+curl cheat.sh/python/:learn
+curl cheat.sh/python/:learn | less
+curl cheat.sh/python/dictionary | less
+curl cheat.sh/python/if | less
+curl cheat.sh/python/if+else | less
+curl cheat.sh/:intro
+curl cheat.sh/:intro | less
+curl cheat.sh/:list | less
+curl cheat.sh/python/:list | less
+curl cheat.sh/python/:list
+curl cheat.sh/python/1line
+curl cheat.sh/python/1line | less
+alacritty-themes 
+dict
+sudo dnf install dict
+dnf search dict
+sudo dnf install dictd
+dict constituents
+dict constituent
+dict -h
+tldr dict
+dict -mv constitents
+dict -mv constituents
+dict -mv constituent
+dict -v constituent
+dict -v constituent | less
+dict -d wordnet constituent | less
+dict -l
+dict -D
+dict -d wn constituent
+dict -d english constituent
+tldr dict
+dict -d english -v constituent
+cd Downloads/
+wget https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
+ll /
+ls /usr/
+ls /usr/src/
+ls /usr/etc/
+ls /etc/
+mkdir /etc/words
+sudo mkdir /etc/words
+sudo cp words_alpha.txt /etc/words/
+fzf /etc/words/words_alpha.txt 
+cat /etc/words/words_alpha.txt | fzf
+dict -d english $(cat /etc/words/words_alpha.txt | fzf)
+dict -d english $(cat /etc/words/words_alpha.txt | fzf) | less
+edit
+cd
+source .bashrc 
+define
+edit
+source .bashrc 
+edit
+source .bashrc 
+define
+cd /usr/share/dict/
+ls
+cat words
+dict -d english $(cat /usr/share/dict/words | fzf) | less
+edit
+rm -rf /etc/words
+sudo rm -rf /etc/words
+cd
+source .bashrc 
+defeine
+define
+dict -D
+edit
+source .bashrc 
+define
+edit
+whatis blanket
+find
+find | fzf
+./.var/app/com.rafaelmardojai.Blanket
+cd ./.var/app/com.rafaelmardojai.Blanket
+ls
+cd
+locate blanket
+locate 
+fzf
+locate blanket | fzf 
+flatpak -h
+flatpak list
+flatpak run Blanket
+flatpak run 'Blanket'
+flatpak run com.rafaelmardojai.Blanket
+cd Documents/
+ls
+cd Study/
+cd CSE42
+cd CSE420
+ls
+mkdir Videos
+cd Videos/
+yt-dlp "https://www.youtube.com/watch?v=uPnpkWwO9hE&list=PLW1OMpQZxu7xMh7nuDQYQ2mDcqY2hzBWk"
+ls
+sudo dnf install platform-tools
+dns search platfom-tools
+dnf search platfom-tools
+sudo dnf install android-tools
+adb
+adb devices
+adb reboot bootloader
+sh /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/flash-all.sh
+sudo sh /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/flash-all.sh
+cd /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/flash-all.sh
+cd /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/
+sudo ./flash-all.sh 
+cd
+sudo fastboot -w
+sudo fastboot flash boot /home/reralt/Downloads/Flash/boot.img
+adb sideload /home/reralt/Downloads/Flash/lineage-20.0-20230302-nightly-taimen-signed.zip
+adb sideload /home/reralt/Downloads/Flash/NikGapps-basic-arm64-13-20230301-signed.zip
+chea
+cheat
+adb reboot recovery
+cd /mnt/HDD/FLASH/Magisk
+ls
+adb sideload Magisk-v25.2.zip
+adb reboot recovery
+adb devices
+adb kill-server
+adb devices
+cd
+adb devices
+sudo adb devices
+sudo dnf install plug-dev
+sudo dnf install plugdev
+adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-MarkupGoogle-20230301-signed.zip 
+adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleSounds-20230301-signed.zip 
+tmux
+cd Downloads/FL
+cd Downloads/Flash/
+ls
+ll
+nvim list.txt
+tldr aria2c
+aria2c --input-file=list.txt
+cd Downloads/
+mkdir Flash
+cd Flash/
+aria2c "https://mirrorbits.lineageos.org/full/taimen/20230302/lineage-20.0-20230302-nightly-taimen-signed.zip"
+ls
+lsmod |grep nouveau
+dnf history
+dnf remove xorg-x11-drv-nvidia\*
+sudo dnf remove xorg-x11-drv-nvidia\*
+cheat
+dnf -h
+sudo dnf clean
+sudo dnf autoremove
+sudo reboot
+lsmod |grep nouveau
+sudo dnf reinstall xser-xorg-video-noveau
+sudo dnf reinstall xserver-xorg-video-noveau
+sudo rm /etc/modprobe.d/blacklist.conf
+sudo nvim /etc/default/grub
+grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+dnf install xorg-x11-drv-nouveau
+sudo dnf install xorg-x11-drv-nouveau
+sudo dnf reinstall xorg-x11-drv-nouveau
+sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nvidia.img
+sudo dracut /boot/initramfs-$(uname -r).img $(uname -r)
+sudo reboot
+lsmod |grep nouveau
+lsmod
+sudo dnf remove nvidia* xorg-x11-drv-nvidia*
+rpm -qa | grep vulkan | sort
+rpm -qa | grep mesa | sort
+sudo nvim /etc/default/grub
+lspci -k | grep -A 2 -E "(VGA|3D)"
+cd Downloads/
+ls
+chmod +x NVIDIA-Linux-x86_64-465.31.run
+sudo ./NVIDIA-Linux-x86_64-465.31.run 
+sudo killall x
+sudo killall x-org
+sudo dnf update -y
+killall alacritty
+cd Downloads/
+ls
+chmod +x NVIDIA-Linux-x86_64-470.161.03.run 
+./NVIDIA-Linux-x86_64-470.161.03.run 
+sudo ./NVIDIA-Linux-x86_64-470.161.03.run 
+sudo dnf update -y
+sudo dnf install xorg-x11-drv-nvidia-470xx akmod-nvidia-470xx
+sudo reboot
+nvidia-settings -q GPUPowerSource -t
+nvidia-settings -q gpucoretemp
+nvidia-settings -q gpucoretemp -t
+nvidia-smi
+sudo dnf install nvidia-smi
+ls
+cd Downloads/
+ls
+cd tmp/
+ll
+cd gnome-backgrounds-macos/
+ll
+git rebase
+git reset
+git reset --hard origin/master
+git status
+sudo dnf install glib2
+cd build/
+ls
+rm -rf build.ninja getopts_long compile_commands.json meson*
+ll
+cd backgrounds/
+ll
+cd ..
+rm -rf gnome-backgrounds-macos
+git clone https://aur.archlinux.org/gnome-backgrounds-macos.git
+cd gnome-backgrounds-macos/
+ll
+nvim .SRCINFO 
+nvim PKGBUILD 
+cd ..
+rm gnome-backgrounds-macos
+rm -rf gnome-backgrounds-macos
+ls
+git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git
+cd gnome-backgrounds-macos/
+ls
+./download-backgrounds.sh 
+cd build/
+git clone https://github.com/UrsaDK/getopts_long.git
+ll
+cd ..
+./download-backgrounds.sh 
+arch-meson gnome-backgrounds-macos build
+meson setup build
+ninja -C build
+meson -C build
+ meson compile -C build
+sudo dnf search samurai
+sudo dnf install samurai
+samurai -C build
+ninja -C build
+cd build/
+ll
+nvim build.ninja 
+cd
+nvim test
+nvim .ventoyignore
+free 0h
+free -h
+adb devices
+cd /home/reralt/Downloads/ventoy-1.0.89-linux/ventoy-1.0.89
+ll
+./Ventoy2Disk.sh 
+./VentoyWeb.sh 
+sudo ./VentoyWeb.sh 
+alacritty-themes 
+edit
+alacritty-themes 
+alacritty-themes
+alacritty-themes Default.dark
+ls
+ll
+pfetch
+neofetch
+edit
+jump
+cd
+dnf search warp
+cd Downloads/
+sudo dnf install cloudflare_warp_2023_1_133_1_x86_64_e16441d71c.rpm
+warp-cli -h
+warp-cli connect
+warp-cli account
+
+warp-cli help register
+warp-cli settings
+warp-cli register 5DC1cZ76-4CVI6o37-gc72GX53
+warp-cli register
+warp-cli -h
+warp-cli set-license
+warp-cli status
+warp-cli disconnect
+warp-cli status
+warp-cli set-license 6GX20Ra4-ndh732B6-g26QFY84
+warp-cli connect
+warp-cli status
+warp-status
+warp-cli -h
+warp-stats
+warp-cli status
+warp-cli disconnect
+du
+du .con
+cd ..
+du .config/
+du -a Videos/
+whatis du
+tldr du
+du -ah Videos/
+tldr du
+sort
+tldr sort
+du -ah Videos/ | sort --reverse
+du -ah Videos/ | sort --reverse --numeric-sort
+tldr cut
+cut -h
+cut --help
+du -ah Videos/ | sort --reverse --numeric-sort
+du -ah Videos/ | cut -f2
+du -ah Videos/ | cut -f1
+du -ah Videos/ | cut -f2 | tr '\n' ':'
+du -ah Videos/ | cut -f2 | tr '\n' ':' | sed 's/:*$//'
+tldr sed
+tldr awk
+tldr tee
+du -ah Videos/ | cut -f2 | tr '\n' ':' | sed 's/:*$//' | tee
+du -ah Videos/ | cut -f2 | tr '\n' ':' | $1 | tee
+du -ah Videos/ | cut -f2 | tr '\n' ':' | $2 | tee
+man grep
+cheat
+warp-cli status
+:q
+ls
+ll
+jump
+lsof
+whatis lsorf
+whatis lsof
+lsof | fzf
+free -h
+cd Dow
+cd Downloads/
+aria2c https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8
+aria2c "https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8"
+aria2c --split=5 "https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8"
+aria2c -h
+tldr aria2c
+distrobox enter debian
+distrobox list
+ls
+whoami
+uname -r
+sudo apt update
+exit
+neofetch
+vi
+nano
+sudo apt install neovim
+shutdown
+exit
+sudo apt install figlet lolcat neofetch
+bash
+exit
+cd Downloads/
+aria2c --split=5 "https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8"
+sudo dnf install distrobox
+whatis docker
+sudo dnf install docker
+tldr distrobox
+man distrobox
+podman logs -f ArchTest
+uname -r
+neofetch
+distrobox create --image debian
+distrobox enter debian
+date
+uname -r
+nvim .bashrc 
+sudo apt install ~/Downloads/freedownloadmanager.deb 
+apt install ~/Downloads/freedownloadmanager.deb 
+exit
+apt install ~/Downloads/freedownloadmanager.deb
+exit
+distrobox create --image archlinux --name ArchTest
+distrobox enter ArchTest
+cd Downloads/
+apt install freedownloadmanager.deb
+sudo apt install freedownloadmanager.deb
+sudo dpkg -i freedownloadmanager.deb 
+sudo apt install xdg-utils ffmpeg
+exit
+sudo apt --fix-broken install
+cd Downloads/
+sudo dpkg -i freedownloadmanager.deb 
+distrobox-generate-entry
+dpkg -l
+freedownloadmanager
+dpkg -l
+distrobox-export freedownloadmanager
+distrobox-export --help
+distrobox-export -V -a freedownloadmanager
+distrobox-export -V -a freedownloadmanager --delete
+exit
