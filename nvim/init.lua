@@ -170,6 +170,29 @@ require('lazy').setup({
     -- Detect tabstop and shiftwidth automatically
     { 'tpope/vim-sleuth' },
 
+    { -- Theme inspired by Atom
+        'navarasu/onedark.nvim',
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme 'onedark'
+        end,
+    },
+
+    { -- Set lualine as statusline
+        'nvim-lualine/lualine.nvim',
+        -- See `:help lualine.txt`
+        opts = {
+            options = {
+                theme = 'onedark',
+                component_separators = '|',
+                section_separators = '',
+            },
+        },
+    },
+
+    { 'vimpostor/vim-lumen' },
+
+
 })
 
 -------------------------------------------------------------------------------
