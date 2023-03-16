@@ -80,8 +80,6 @@ vim.opt.breakindent = true
 -- Save undo history
 vim.opt.undofile = true
 
--- Set colorscheme from default ones
-vim.cmd.colorscheme('habamax')
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -183,7 +181,7 @@ require('lazy').setup({
         -- See `:help lualine.txt`
         opts = {
             options = {
-                theme = 'onedark',
+                theme = 'solarized',
                 component_separators = '|',
                 section_separators = '',
             },
@@ -191,6 +189,14 @@ require('lazy').setup({
     },
 
     { 'vimpostor/vim-lumen' },
+
+    { "catppuccin/nvim", name = "catppuccin" },
+
+    { 'Mofiqul/dracula.nvim' },
+    
+    { 'EdenEast/nightfox.nvim' },
+     
+    { 'ishan9299/nvim-solarized-lua' },
 
 
 })
@@ -229,6 +235,8 @@ require('nvim-treesitter.configs').setup {
     highlight = { enable = true },
     indent = { enable = true, disable = { 'python' } },
 }
+
+vim.cmd.colorscheme "solarized"
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------

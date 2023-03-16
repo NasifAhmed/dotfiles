@@ -1,7 +1,11 @@
 {
+  "catppuccin": { "branch": "main", "commit": "90c4d1c6e1f8dd2cff9962b36a70b1e681947621" },
+  "dracula.nvim": { "branch": "main", "commit": "798274ba3c454a9aa3cd71f95a86ea55cbbbb142" },
   "indent-blankline.nvim": { "branch": "master", "commit": "018bd04d80c9a73d399c1061fa0c3b14a7614399" },
   "lazy.nvim": { "branch": "main", "commit": "e89acede13f46a5db229133cf0c87aee74938c56" },
   "lualine.nvim": { "branch": "master", "commit": "e99d733e0213ceb8f548ae6551b04ae32e590c80" },
+  "nightfox.nvim": { "branch": "main", "commit": "3f647a560306306cb35854d639b39717f5390175" },
+  "nvim-solarized-lua": { "branch": "master", "commit": "7bd46fa036bde6b4483fb7403b0a7b0754faeeaa" },
   "nvim-treesitter": { "branch": "master", "commit": "94f9a569736fea4c4128216800612a733e59b083" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "f5f13206ec33e55b16c8e1a9dec301e8bead4835" },
   "onedark.nvim": { "branch": "master", "commit": "4497678c6b1847b663c4b23000d55f28a2f846ce" },
