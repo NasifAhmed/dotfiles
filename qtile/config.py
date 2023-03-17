@@ -44,7 +44,7 @@ def start_once():
 
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "kgx"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -148,8 +148,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='JetBrainsMono NF',
-    fontsize=15,
+    font='JetBrainsMono Nerd Font',
+    style='Bold'
+    fontsize=12,
     padding=3,
     foreground=gruvbox['bg'],
 )

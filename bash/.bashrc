@@ -87,7 +87,7 @@ alias ll='ls -al --color=auto'
 alias dot='cd ~/dotfiles && git status'
 alias jump='cd $(find ~ -type d | fzf)'
 alias edit='nvim $(find ~ -type f | fzf)'
-alias define='dict $(cat /usr/share/dict/words | fzf) | less'
+alias define='dict $(cat /usr/share/cracklib/cracklib-small | fzf) | less'
 alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less'
 
 

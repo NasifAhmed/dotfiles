@@ -6139,3 +6139,140 @@ neovim
 eidt
 edit
 node
+ls .mozilla/firefox/9xnjp7mx.Betterfox/
+ln -sfv ~/dotfiles/UserJS/user.js .mozilla/firefox/9xnjp7mx.Betterfox/
+paru -S neofetch
+neofetch
+nvim .bashrc 
+.bashr
+.bashrc
+ls -alh
+rm .bashrc .bash_history
+ls -alh
+ln -sfv ~/dotfiles/bash/.bashrc .
+ln -sfv ~/dotfiles/bash/.bash_history .
+nvim .bashrc 
+paru -S figlet lolcat
+paru figlet
+source .bashrc 
+pfetch
+neofetch
+free -h
+swapon --show
+paru -S systemd-swap
+sudo systemctl enable systemd-swap.service
+sudoedit /etc/systemd/swap.conf.d/myswap.conf
+mkdir /etc/systemd/swap.conf.d
+sudo mkdir /etc/systemd/swap.conf.d
+sudoedit /etc/systemd/swap.conf.d/myswap.conf
+sudo systemctl disable systemd-swap.service
+paru -Rcns systemd-swap
+dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
+sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
+ls -alh /
+chmod 0600 /swapfile
+sudo !
+sudo sudo !
+sudo chmod 0600 /swapfile
+mkswap -U clear /swapfile
+sudo mkswap -U clear /swapfile
+swapon /swapfile
+sudo swapon /swapfile
+sudoedit /etc/fstab
+swapon --show
+free -h
+sysctl vm.swappiness
+xprop 
+paru -Ps
+paru -Q
+paru -Q | grep "Console"
+console
+kgx
+kgx -h
+kgx --help-gapplication
+paru obsidian
+nvim
+ln -sfv ~/dotfiles/nvim ~/.config/
+nvim
+edit
+edit
+dict
+fzf
+eidt
+edit
+paru dict
+paru dictd
+define
+dict
+dictd hello
+dict -h
+dict "hello"
+edit
+whereis dictd
+cd /usr/share/dict/
+ls
+cat cracklib-small 
+file cracklib-small 
+edit
+edit
+source ~/.bashrc
+define
+kgx -e "define"
+cheat
+cd ~
+paru -S syncthing
+sudo systemctl enable syncthing@username.service
+sudo systemctl disable syncthing@username.service
+sudo systemctl disable syncthing@reralt.service
+sudo systemctl enable syncthing@reralt.service
+sudo systemctl start syncthing@reralt.service
+id -u
+id -g
+reboot
+reboot
+flatpak remote-ls flathub | grep org.gtk.Gtk3theme
+flatpak install org.gtk.Gtk3theme.Adwaita-dark
+flatpak remote-add kdeapps https://distribute.kde.org/kdeapps.flatpakrepo
+flatpak install kdeapps org.kde.KStyle.Adwaita//5.9
+flatpak install kdeapps org.kde.KStyle.Adwaita//5.9
+flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform//5.9
+flatpak install kdeapps org.kde.KStyle.Adwaita
+flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform
+flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform/
+paru -S adwaita-qt
+paru adwaita-qt
+ls -alh
+paru kavuntam
+paru kvuntam
+paru kvantum
+paru -Rcns kvantum
+cd /etc/profile.d/
+ls
+nvim ~/.xsession
+reboot
+paru
+paru vscode
+cd .config/
+ll
+cd qtile
+ls
+nvim autostart.sh 
+fc-list | grep "JetBrains"
+paru picom
+paru -S qtile
+ln -sfv ~/dotfiles/qtile ~/.config/
+cd .config/qtile
+ls
+nvim config.py 
+python -m py_compile ~/.config/qtile/config.py
+python -m py_compile ~/.config/qtile/config.py
+nvim .config/qtile/config.py 
+nvim .config/qtile/config.py 
+edit
+man paru.conf 
+cd .config/
+ls
+cd paru/
+ls
+nvim paru.conf 
+nvim
