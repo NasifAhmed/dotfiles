@@ -6276,3 +6276,534 @@ cd paru/
 ls
 nvim paru.conf 
 nvim
+sudo make clean install
+ls .config/
+rm .config/dolphinrc 
+rm -r .config/kde.org 
+rm -r .config/Thunar/
+rm -r .config/Thunar
+rm -r .config/xfce4
+ls .config/
+man cp
+mkdir -p .config/picom
+cp -rv /etc/xdg/picom.conf ~/.config/picom/
+nvim ~/.config/picom/picom.conf 
+yay xclip
+yay feh
+yay dunstify
+dunstify hello
+dunstify Muted
+dunstify -h
+dunstify --help
+dunstify -h string:x-dunst-stack-tag:test Test -A 'tested,default'
+dunstify -h string:x-dunst-stack-tag:test Testing
+dunstify -h string:x-dunst-stack-tag:test Test -A 'tested,default'
+dunstify -h string:x-dunst-stack-tag:test Testing
+dunstify -h string:x-dunst-stack-tag:test Test -A 'tested,default'
+dunstify -h string:x-dunst-stack-tag:test Test
+dunstify -h string:x-dunst-stack-tag:test Testing
+dunstify -t 600 -h string:x-dunst-stack-tag:vol $(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+dunstify -t 600 -h string:x-dunst-stack-tag:vol $(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+cd Desktop/
+cd dwm/
+ls
+nvim config.h 
+sudo make clean install
+
+dunstify -hb string:x-dunst-stack-tag:test Testing
+dunstify -hC string:x-dunst-stack-tag:test Testing
+dunstify -r test -b Hello
+dunstify -r 13 -b Hello
+dunstify -C 13
+dunstify -r 13 -b Hello
+dunstify -C 13
+dunstify -u --help
+dunstify -u 
+dunstify -u -h
+dunstify -u Test
+dunstify -r 13 -b Hello
+dunstify -r 13 -t -1 -b Hello
+man dunstify
+man dunst
+man notify-send
+man notify-send
+dunstify -w -r 13 -b Hello
+dunstify --help
+notify-send -w -r 13 Hello
+notify-send -w -r 13 Hello&
+notify-send -u critical "Header" "Body text"
+notify-send -r 13 -u critical "Header" "Body text"
+notify-send -C 13
+notify-send -h
+notify-send --help
+notify-send -r 13 -u low "Header" "Body text"
+dunstify -r 13 -u low "Header" "Body text"
+dunstify -r 13 -u critical "Header" "Body text"
+dunstify -C 13
+cd Desktop/dwm/
+nvim config.h 
+sudo make clean install
+nvim config.h 
+sudo make clean install
+nvim config.h 
+sudo make clean install
+free -h
+yay archlinux-wallpaper
+feh
+feh -h
+tldr feh
+feh --bg-center usr/share/backgrounds/archlinux/archbtw.png
+feh --bg-center /usr/share/backgrounds/archlinux/archbtw.png
+feh --bg-fill /usr/share/backgrounds/archlinux/archbtw.png
+feh --bg-fill /usr/share/backgrounds/archlinux/archlinux.stw 
+feh --bg-fill /usr/share/backgrounds/archlinux/simple.png 
+feh -h
+tldr feh
+man feh
+nvim .xinitrc 
+yay -h
+yay -h | grep 
+yay -s
+yay -ps
+yay -Ps
+yay arch-wallpaper
+yay archlinux-wallpaper
+yay arch-wallpaper
+yay archlinux-wallpaper
+man yay
+yay -S --editmenu archlinux-wallpaper
+man yay
+yay --editmenu archlinux-wallpaper
+whreis
+whatis
+whatis archlinux-wallpaper
+localt archlinux-wallpaper
+locate archlinux-wallpaper
+yay locate
+plocate archlinux-wallpaper
+plocate -h
+plocate archlinux-wallpaper
+plocate "archlinux-wallpaper"
+sudo updatedb
+plocate "archlinux-wallpaper"
+dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
+sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
+chmod 0600 /swapfile
+sudo chmod 0600 /swapfile
+mkswap -U clear /swapfile
+sudo mkswap -U clear /swapfile
+swapon /swapfile
+sudo swapon /swapfile
+sudo nvim /etc/fstab
+free -h
+yay calculator
+ssh-keygen -t ed25519 -C "nasif2ahmed@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+ssh -T github.com
+ssh -T git@github.com
+wireplumber 
+neofetch
+cd Downloads/
+cd tmp/
+git clone git:git.suckless.org/dwm
+yay ssh
+git clone git:git.suckless.org/dwm
+git clone https://git.suckless.org/dwm
+git clone https://git.suckless.org/dmenu
+cd ~
+ls -alh
+nvim .xinitrc
+startx
+sudo nvim /etc/X11/xinit/xinitrc
+startx
+sudo nvim /etc/X11/xinit/xinitrc
+cd Downloads/
+ls
+cd tmp/
+ls
+cd dwm/
+make
+make install
+sudo make install
+startx
+cd ..
+cd dmenu/
+yay -S alacritty
+make
+sudo make install
+startx
+startx
+startx
+cd ~
+cd Desk
+cd Desktop/
+startx
+startx
+cd ~
+nvim .xinitrc 
+startx
+startx
+startx
+startx
+startx
+startx
+reboot
+yay lxappearance
+yay --needed -S gtk3
+yay --needed -S breeze-kde4
+yay thunar
+nvim .config/picom/picom.conf 
+nvim .config/picom/picom.conf 
+wireplumber 
+yay pavucontro
+wpctl status
+yay amixer
+pamixer 
+yay --needed -S breeze-kde4
+yay -Rcns breeze-kde4
+yay clean
+yay thunar
+yay gthumb
+yay thunar
+killall thunar
+thunar -q
+yay nautilus
+yay nemo
+yay nemo
+cd dotfiles/
+ls
+cd ..
+rm -rf dotfiles/
+git clone https://git.suckless.org/dmenu
+ls
+git clone git@github.com:NasifAhmed/dotfiles.git
+nvim ~/.config/gtk-3.0/settings.ini
+nvim ~/.config/gtk-3.0/settings.ini
+ls -alh
+plocate settings.ini
+sudo nvim /usr/share/gtk-3.0/settings.ini 
+plocate gtk-4
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+git clone git@github.com:NasifAhmed/dotfiles.git
+yay tumbler
+yay ffmpegthumbnailer
+yay thumbler
+nvim Desktop/dwm/config.h 
+nvim Desktop/dwm/config.h 
+cd Desktop/dwm/
+ls
+mkdir patches
+ls
+cd patches/
+ls
+sudo make clean install
+cd ..
+dot ~/dotfiles/
+ls
+cd ~/dotfiles/
+ls
+cd dwm
+ls
+cd patches/
+ls
+cd..
+cd ~/Desktop/dwm/
+ls
+git init -b main
+ls
+ls -alh
+rm .git
+rm -rf .git
+git init -b main
+git status
+git add . && git commit -m "initial commit"
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.email "Nasif Ahmed"
+git add . && git commit -m "initial commit"
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.email "Nasif Ahmed"
+git add . && git commit -m "initial commit"
+rm -rf .git
+git init -b main
+git add . && git commit -m "initial commit"
+git config --local -e
+yay vi
+yay vim
+git config --local -e
+yay -S vi
+git config --local -e
+git add . && git commit -m "initial commit"
+git config --global -e  
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.name "Nasif Ahmed"
+git add . && git commit -m "initial commit"
+gh repo create --public --push
+yay gh
+cat LICENSE 
+rm LICENSE 
+git status
+git add . && git commit -m "initial commit"
+git remote add origin git@github.com:NasifAhmed/dwm.git
+git remote -v
+git push origin main
+git pull
+git status
+ls 
+git pull origin main
+git fetch
+git status
+git push origin main
+git push --help
+git pull origin
+git pull origin main
+git config pull.ff only
+git pull origin main
+git config pull.rebase false
+git pull origin main
+git config pull.ff only false
+git pull origin main
+nvim ~/.gitconfig 
+git branch --all
+git fetch 
+git merge
+git merge --help
+man git
+git fetch origin remotes/origin/main
+git fetch origin main
+git fetch origin origin/main
+git fetch origin
+git merge /remotes/origin/main
+git branc --all
+git branch --all
+git merge main
+git switch origin/main
+git log
+ git remote -v
+git push origin main
+git pull
+git pull origin main
+git branch --set-upstream-to=origin/main main
+git pull origin main
+git pull origin main --rebase
+git status
+cat LICENSE 
+cat .gitignore 
+ls
+git status
+git pull origin main --rebase --skip
+git pull origin main --rebase --skip
+git pull origin main --rebase
+git add . && git commit -m "initial commit"
+git branch -a
+git pull origin main --rebase
+git rebase --continue
+git status
+git add LICENSE 
+git status
+git rm LICENSE 
+git status
+git ls
+ls
+git add .
+git status
+git commit -m "Initall Commit"
+git rebase --continue
+ls
+git status
+git brach -a
+git bravch -a
+git branch -a
+git push origin main
+git branch -v
+git branch -a
+git branch systray-patch
+git checkout systray-patch
+git brach -a
+git branch -a
+git status
+cd patches/
+curl
+wget
+yay wget
+wget https://dwm.suckless.org/patches/systray/dwm-systray-6.4.diff
+ls
+cd ..
+git apply ./patches/dwm-systray-6.4.diff 
+git apply ./patches/dwm-systray-6.4.diff .
+ls
+cat patches/dwm-systray-6.4.diff 
+cat patches/dwm-systray-6.4.diff | less
+sudo make clean install
+patch < ./patches/dwm-systray-6.4.diff 
+git status
+rm config.h 
+sudo make clean install
+git status
+git add . & git commit -m "Apply systray patch"
+killall git
+git add . & git commit -m "Apply systray patch"
+git status
+git push
+git push --set-upstream origin systray-patch
+git status
+git push
+nvim Desktop/dwm/config.h 
+cd Desktop/
+cd dwm/
+ls
+git status
+git log
+git checkout 4ef233a6cc7f9339849fa17a3a76b789440623fd
+git checkout main
+git log
+nvim config.h
+git push origin --delete systray-patch
+git branch -d systray-patch
+git branch -D systray-patch
+git brach -a
+git branch -a
+git fetch origin
+git checkout 1-no-system-tray
+git brach -a
+git branch -a
+nvim config.h
+nvim config.h
+sudo make clean intall
+sudo make clean install
+ls
+mkdir patches
+git add patches/
+git commmit -m "Add patches directory"
+git push
+git status
+cd path
+cd patches/
+wget https://dwm.suckless.org/patches/systray/dwm-systray-6.4.diff
+cd ..
+patch < ./patches/dwm-systray-6.4.diff 
+sudo make clean install
+ls
+git status
+git rebase
+git stash
+git rebase
+ls
+patch -p1 < ./patches/dwm-systray-6.4.diff 
+sudo make clean install
+git checkout main
+sudo make clean install
+cd ..
+rm -rf dwm
+git clone git@github.com:NasifAhmed/dwm.git
+cd dwm/
+git branch -a
+sudo make clean install
+git checkout 1-no-system-tray
+ls
+sudo make clean install
+ls
+mkdir patches
+cd patches/
+wget https://dwm.suckless.org/patches/systray/dwm-systray-6.4.diff
+cd ..
+patch -p1 < ./patches/dwm-systray-6.4.diff 
+sudo make clean install
+git stash
+ls
+git rebase
+ls
+sudo make clean install
+cd patches/
+ls
+rm dwm-systray-6.4.diff 
+wget https://dwm.suckless.org/patches/systray/dwm-systray-6.3.diff
+cd ..
+patch < ./patches/dwm-systray-6.3.diff 
+git stash
+cd patches/
+ls
+cd ..
+git rebase
+cd patches/
+ls
+cd ..
+git status
+git stash
+ls
+cd patches/
+ls
+rm dwm-systray-6.3.diff 
+ls
+wget https://dwm.suckless.org/patches/systray/dwm-systray-6.4.diff
+cd ..
+sudo make clean install
+patch < ./patches/dwm-systray-6.4.diff 
+sudo make clean install
+rm config.h
+sudo make clean install
+cd Desktop/
+rm -rf dwm
+git clone git@github.com:NasifAhmed/dwm.git
+cd dwm/
+git status
+git branch -a
+git checkout 1-no-system-tray
+git branch -a
+ls
+mkdir patches
+cd patches/
+ls
+wget https://dwm.suckless.org/patches/systray/dwm-systray-6.4.diff
+cd ..
+patch 0h
+patch -
+patch -h
+patch --help
+tldr patch
+patch < ./patches/dwm-systray-6.4.diff 
+diff config.h config.def.h 
+nvim config.h 
+cd patches/
+nvim dwm-systray-6.4.diff 
+cd Desktop/dwm/
+nvim config.h
+sudo make clean install
+git status
+git add . & git commit -m "Apply systray patch"
+killall git
+git add . & git commit -m "Apply systray patch"
+git status
+git push
+git status
+git branch -a
+yay qbittorrent
+ls -alh
+touch test
+touch test2
+echo "hello" > test2
+echo "First" > test2
+echo "hello" > test2
+echo "First" > test
+cat test
+cat test2
+test2 >> test
+test << test2
+test << cat test2
+cat test
+cat test2
+cat test test2
+cat test
+cat test2 >> test
+cat test
+cat .bash_history >> ~/dotfiles/bash/.bash_history
+rm .bashrc .bash_history 
+ln -sfv ~/dotfiles/bash/.bashrc .
+ln -sfv ~/dotfiles/bash/.bash_history .
+yay -S figlet lolcat
+yay figlet
+yay jetbrains
+source .bashrc 
+ln -sfv ~/dotfiles/alacritty ~/.config/
+neofetch
+yay alacritty-themes
+alacritty-themes 
