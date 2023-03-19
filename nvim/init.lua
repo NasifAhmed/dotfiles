@@ -181,7 +181,7 @@ require('lazy').setup({
         -- See `:help lualine.txt`
         opts = {
             options = {
-                theme = 'solarized',
+                theme = 'onedark',
                 component_separators = '|',
                 section_separators = '',
             },
@@ -236,7 +236,6 @@ require('nvim-treesitter.configs').setup {
     indent = { enable = true, disable = { 'python' } },
 }
 
-vim.cmd.colorscheme "solarized"
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------

@@ -1,6395 +1,3 @@
-xinput --list --short
-sudo pacman -S imwheel
-mkdir scripts
-chmod +x mouse.sh
-sudo pacman -S gnome-startup-
-sudo pacman -Ss gnome-startup-
-sudo pacman -Ss gnome
-yay gnome-startup
-cd .config/autostart
-cp slack.desktop test.desktop
-rm test.desktop
-cp libinput-gestures.desktop test.desktop
-vim test.desktop
-imwheel&
-sudo pacman -S cmatrix
-pip install numpy
-sudo pacman -S deluge
-deluge&
-sudo pacman -Rs deluge
-killall deluge
-free -h
-yay ytop
-killall imwheel
-sudo pacman -S gotop
-yay gotop
-gotop&
-man mpvc
-mpv https://youtu.be/0Z4QWyk-6hM
-sudo pacman -S code
-sudo pacman -Rs code
-sudo pacman -S visual-studio-code-bin
-git commit -am "update"
-cd Spring2021
-cd CSE
-cd Lab01
-_code BFS.py Level2.py
-python -u "/home/reralt/study/Spring2021/CSE422/Lab01/tempCodeRunnerFile.py"
-vim Level2.py
-python -u "/home/reralt/study/Spring2021/CSE422/Lab01/Level2.py"
-git diff
-diff
-python Level2.py
-cd .config/nvim
-vim init.vim
-vim Level2.py > Level3.py
-rm Level3.py 
-cp Level2.py Level3.py
-vim Level3.py
-rm Level3.py
-vim Level3.txt
-mv Level3.txt level3.txt
-\
-n -u "/home/reralt/study/Spring2021/CSE422/Lab01/Level3.py"
-python -u "/home/reralt/study/Spring2021/CSE422/Lab01/Level3.py"
-git add Level3.py level3.txt
-git commit -am "Done with lab01"
-mkdir .themes
-yay spotify
-sudo pacman -S spotify
-vim ~/.config/nvim/init.vim
-sudo pacman -S youtube-dl
-youtube-dl -v https://www.youtube.com/watch?v=l07s8vlKgb0
-youtube-dl
-youtube-dl -v URL https://www.youtube.com/watch?v=l07s8vlKgb0
-vim ~/.zshrc
-youtube-dl https://www.youtube.com/watch?v=l07s8vlKgb0
-bash
-youtube-dl -v "https://www.youtube.com/watch?v=l07s8vlKgb0
-youtube-dl -v "https://www.youtube.com/watch?v=l07s8vlKgb0"
-sudo cp ~/Downloads/SutonnyMJ\ Regular/SutonnyMJ\ Regular.ttf /usr/share/fonts
-rm /usr/share/fonts/Siyamrupali.ttf
-sudo rm /usr/share/fonts/Siyamrupali.ttf
-mv SutonnyMJ\ Regular.ttf SutonnyMJRegular.ttf
-sudo mv SutonnyMJ\ Regular.ttf SutonnyMJRegular.ttf
-sudo rm SutonnyMJRegular.ttf
-sudo cp ~/Downloads/kalpurush.ttf /usr/share/fonts
-cd Do
-mv -rf SutonnyMJ\ Regular SutonnyMJ
-mvdir -rf SutonnyMJ\ Regular SutonnyMJ
-mv SutonnyMJ\ Regular SutonnyMJ
-cd SutonnyMJ
-mv SutonnyMJ\ Regular.ttf SutonnyMJ.ttf
-sudo cp SutonnyMJ.ttf /usr/share/fonts
-sudo rm kalpurush.ttf
-sudo rm SutonnyMJ.ttf
-cd ~/Do
-cd ~/Downloads
-sudo cp Siyamrupali.ttf /usr/share/fonts
-fc-list :lang=bn
-pacman-updates
-sudo pacman -Ss pacman-updates
-yay gtk-them-arc-git
-yay gtk-theme-arc-git
-yay arc
-sudo pacman -Ss arc-gtk-theme
-sudo pacman -S arc-gtk-theme
-yay arc-darkest
-pacman -Ss pacman-mirrors
-sudo pacman -S pacman-mirrors
-sudo pacman-mirrors --fasttrack
-sudo pacman -S trip
-sudo pacman -S tri,
-sudo pacman -S trim
-pacman -Ss trimp
-pacman -Ss trim
-pacman -Ss fstrim
-sudo systemctl enable fstrip.timer
-sudo systemctl enable fstrim.timer
-cat proc/sys/vm/swappiness
-cat /proc/sys/vm/swappiness
-sudo systemctl --failed
-yay blockify
-cd study
-cd Spring2021/
-cd CSE422
-mkdir Lab03
-cd Lab03
-k\
-n -u "/home/reralt/study/Spring2021/CSE422/Lab03/problem.py"
-python -u "/home/reralt/study/Spring2021/CSE422/Lab03/problem.py"
-sudo pacman -S cowsay lolcat
-cowsay Hello TBD | locat
-cowsay Hello TBD | lolcat
-cowsay Hello TBD
-sudo pacman -S toilet
-toilet HELLO
-toilet HELLO | lolcat
-pfetch
-toilet HELLO TBD | lolcat
-sudo pacman -S tty-clock
-pacman -Ss tty-clock
-yay tty-clock
-tty-clock
-tty-clock -c
-sudo pacman -S gtk-engine-murrine sassc
-sudo pacman -S gnome-themes-extra
-mkdir OrchisTheme
-cd OrchisTheme
-git clone https://github.com/vinceliuice/Orchis-theme
-cd Orchis-theme
-./install.sh -t all
-sudo pacman -S gtk-engine-pixbuf
-sudo pacman -S gtk-engines-pixbuf
-sudo pacman -S gtk2-engines-pixbuf
-yay adapta
-yay roboto
-sudo pacman -S numix-gtk-theme
-yay numix
-yay qogirt
-yay qogir
-sudo pacman -S gnome-shell-extension-appindicator
-vim ~/.config/alacritty/alacritty.yml
-t
-git add &
-git commit -am "changes"
-sudo pacman -S tmux
-sudo pacman -S obs
-pacman -Ss obs
-sudo pacman -S obs-studio
-lsd --tree
-lsd
-vim test
-youtube-dl -v "https://drive.google.com/file/d/1TbicAbCswPrbLP6yHIyI0k4WXrszvE11/view"
-cd .cofig
-cd ..\
-cd
-cd videos
-cd CSE\ ML\ LAB
-youtube-dl -v "https://www.youtube.com/watch?v=i3CVm8fOBvQ&t=40s"
-youtube-dl -v "https://www.youtube.com/watch?v=fcx3-VJM788"
-yay ubuntu mono
-sudo vim startup.sh
-lls
-llsa
-cat mouse.sh
-sudo cp ~/scripts/mouse.sh .
-cat mouse.s
-vim mouse.sh
-reboot --help
-sudo vim /etc/profile.d/mouse.sh
-./mouse.sh
-sudo rm mouse.sh
-cd /etc/profile.d
-yay librewolf
-shutdown --help
-shutdown -P
-yay -S librewolf-bin
-cd Dow
-mkdir librewolf
-git clone https://aur.archlinux.org/librewolf-bin.git
-git clone https://aur.archlinux.org/librewolf-bin.git         
-git clone https://aur.archlinux.org/librewolf-bin.git librewolf
-cd librewolf
-rm -rf librewolf
-cd librewolf-bin
-makepkg -si
-yay -S librewolf
-killall sosumi
-sudo pacman -S kvm qemu
-pacman -Ss kvm
-sudo pacman -S qemu-kvm
-pacman -Ss qemu
-sudo pacman -S qemu
-lsmod | grep kvm
-qemu-img resize macos.qcow2 -40G
-qemu-img resize macos.qcow2 --shrink
-qemu-img resize macos.qcow2 --shrink 40G
-qemu-img resize macos.qcow2 --size
-nano launch
-sudo nautilus
-sudo snap unintsll sosumi
-snap help
-sudo snap remove sosumi
-man snap
-qemu-img resize macos.qcow2 --shrink 50G
-qemu-img resize macos.qcow2 --shrink 20G
-qemu-img resize macos.qcow2 --help
-sudo snap install sosumi
-j+
-CD
-cd snap
-cd sosumi
-cd coo
-qemu-img resize macos.qcow2 --shrink 25G
-vim launch
-cd firmware
-cd 15
-cd common
-sosumi
-mkdir Treehouse_Algo_Course
-cd Treehouse_Algo_Course
-sudo snap remove --purge sosumi
-youtube-dl -f best https://www.youtube.com/watch?v=8hly31xKli0&t=245s
-youtube-dl --help
-youtube-dl -f best "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -ft 137+bestaudio "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -ft bestvideo+bestaudio "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -ft '136,bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -f ("bestvideo[width>=1920]"/bestvideo)+bestaudio/best "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f ("bestvideo[width>=1920]"/bestvideo)+bestaudio/best "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f '("bestvideo[width>=1920]"/bestvideo)+bestaudio/best' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f '("bestvideo[width>=1920]")+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f '136+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -F "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -f '137+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -F "https://www.youtube.com/watch?v=xNN7iTA57jM"
-youtube-dl -f bestaudio --extract-audio --embed-thumbnail --add-metadata "https://www.youtube.com/watch?v=xNN7iTA57jM"
-sudo pacman -S AtomicParsley
-cd ~/Music
-youtube-dl -f bestaudio --extract-audio --embed-thumbnail --add-metadata "https://www.youtube.com/watch?v=iO-mUnSjMKM"
-youtube-dl -f bestaudio --extract-audio --add-metadata "https://www.youtube.com/watch?v=_X4RV9A3CxM"
-sudo pacman -S cmus
-cmus ~/Music
-cmus --help
-cmus
-sudo pacman -S rythmbox
-yay rythmbo
-yay rythmbox
-sudo pacman -S rhythmbox
-reboot now
-sudo pacman -Syu\
-sudo pacman -Syu
-mkdir "Algorithms Course - Graph Theory Tutorial from a Google Engineer"
-cd Algorithms\ Course\ -\ Graph\ Theory\ Tutorial\ from\ a\ Google\ Engineer
-youtube-dl -f '22+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-rm Algorithms\ and\ Data\ Structures\ -\ Full\ Course\ for\ Beginners\ from\ Treehouse-8hly31xKli0.mp4
-youtube-dl -F "https://www.youtube.com/watch?v=09_LlHjoEiY"
-youtube-dl -f '22+bestaudio' "https://www.youtube.com/watch?v=09_LlHjoEiY"
-youtube-dl -F "https://www.youtube.com/watch?v=RBSGKlAvoiM&list=PLWKjhJtqVAbn5emQ3RRG8gEBqkhf_5vxD&index=2"
-youtube-dl -F "https://youtu.be/RBSGKlAvoiM"
-mkdir "Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer"
-gotpo
-vim Gnome-Extension-List
-vim Gnome-Extension-List.txt
-git commit -am "added a gnome extension list"
-sudo pacman -S krita 
-cd ~/Videos
-cd Data\ Structures\ Easy\ to\ Advanced\ Course\ -\ Full\ Tutorial\ from\ a\ Google\ Engineer
-rm Data\ Structures\ Easy\ to\ Advanced\ Course\ -\ Full\ Tutorial\ from\ a\ Google\ Engineer-RBSGKlAvoiM.f22.mp4.part
-youtube-dl -f '22+bestaudio' "https://youtu.be/RBSGKlAvoiM"
- killall brave
-killall nautilus
-fzf | mpv
-mpv --help
-mpv --list-options
-sudo pacman -S ytfzf
-ranger
-find -type f
-find -type f | fzf 
-find -type f | fzf  | vim
-cd "$(find -type d | fzf)"
-zshrc
-xdg-open Algorithms\ and\ Data\ Structures\ -\ Full\ Course\ for\ Beginners\ from\ Treehouse-8hly31xKli0.mp4
-vim | path
-vim path
-path
-vim $(fzf)
-fzf -h
-fzf -e
-ytfzf --help
-ytfzf -fDH
-ytfzf -fD
-ytfzf -f 
-ytfzf -H
-vim neo_noirs.txt
-ytfzf 4k 60 fps
-cp -r /usr/share/doc/mpv/ ~/.config/mpv/
-rm -rf mpv
-cp -r /usr/share/doc/mpv/ ~/.config/
-cp -r /usr/share/doc/mpv/ ~/.config/mpv
-cd mpv
-cp mpv.conf ..
-vim mpv.conf
-vim input.conf
-sudo pacman -S qtile
-man mpv
-mpv https://www.youtube.com/watch?v=YAsxztU189k
-mpv "https://www.youtube.com/watch?v=YAsxztU189k"
-mpv "https://www.youtube.com/watch?v=6A8rwX2J2HA"
-mpv "https://www.youtube.com/watch?v=1lj8dXhtUR4"
-mpv "https://www.youtube.com/watch?v=IV07SEVXyRg"
-ytfzf quartile deviation
-tree
-fcd
-python inputtest.py
-pip install tkinter
-python --versoin
-python -u "/home/reralt/Documents/inputtest.py"
-cat neo_noirs.txt
-mpv "https://www.youtube.com/watch?v=g4TC6m1BlJM"
-reboot
-study
-git commit -am "some zsh aliases"
-shutdown now
-git commit -am ""
-git commit -am " "
-source .zshrc
-p
-sudo pacman -Syu
-python --version
-date
-vim shellList.txt
-cd ~/.config/autostart
-cd -
-ls -r
-ls -R
-ls -t
-ls -a
-ls -h
-touch test
-file test
-file inputtest.py
-file shellList.txt
-man file
-pushd ~/Documents
-cat shellList.txt neo_noirs.txt
-cat shellList.txt
-less inputtest.py
-history | less
-man history
-edit
-cd 
-find type -f 
-find -type f ~
-find -type f /home/reralt
-find -type f "/home/reralt"
-cat .zhistory
-cat .zhistory | less
-cat .histfile | less
-cat .histfile | word
-sudo pacman -S word
-vim .zshrc
-mv .histfile ~/dotfiles/zsh
-cat .histfile
-git commit -am "..."
-ped
-git clone https://github.com/NasifAhmed/dotfiles
-rm .zshrc 
-ln -s ~/dotfiles/zsh/.zshrc .
-ln -s ~/dotfiles/zsh/.histfile .
-chsh -s $(which zsh)
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-sudo cp -rf ~/Downloads/JetBrainsMono-2.225 /usr/share/fonts/
-cd /usr/share/fotns
-fc-cache
-cd
-source .zshrc 
-pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay pfetch
-grep `whoami` /etc/passwd
-cat /etc/shells
-chsh -s /usr/bin/zsh nasif
-cd Downloads/
-mkdir temp
-cd temp
-git clone https://github.com/ibnYusrat/my-linux-setup/tree/master/powerline-fonts
-git clone https://github.com/ibnYusrat/my-linux-setup/
-yay -S --noconfirm zsh-theme-powerlevel10k-git
-git clone https://github.com/nasifahmed/dotfile
-git clone https://github.com/nasifahmed/dotfiles
-cd zsh
-ln -s ~/dotfiles/zsh/.zshrc ~/
-ln -s ~/dotfiles/zsh/.histfile ~/
-ls -al
-cat $0
-yay zsh
-fc-list | grep "meso"
-fc-list | grep "Meslo"
-cd dotfiles/
-nvim ~/.zshrc
-p10k configure
-fc-list | grep "Jetbrains"
-yay lsd
-yay chrome
-yay google-chrome
-sudo pacman -S zathura
-sudo pacman -S gnome-extensions
-sudo pacman -S extensions
-yay gnome
-yay gnome-extensions
-yay extensions
-yay gnome-shell
-sudo pacman -S V
-sudo pacman -S gnome-shell-extensions
-yay chrome-gnome
-yay -S pamac-all
-yay -S adwaitaqt6 qgnomeplatform
-yay -S qgnomeplatform
-yay adwaitaqt6
-sudo nano /etc/environment
-sudo ln -s -t /root /usr/share/themes
-sudo mv /root/themes /root/.themes
-sudo ln -s -t /root /usr/share/icons/
-sudo mv /root/icons /root/.icons
-sudo pacman -S flameshot
-flameshot&
-gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot '[]'
-sudo pacman -Rns $(pacman -Qdtq)
-yay -Yc
-sudo pacman -S nvidia-installer-dkms
-nvidia-installer-check --force
-nvidia-installer-dkms
-sudo nvidia-installer-dkms
-sudo pacman -Rcn pfetch
-yay -h
-yay -Rcn pfetch-btw
- yay -Rcsn nvidia-dkms nvidia-utils nvidia-settings
-nvidia-installer-check 
-systemctl reboot -iv
-yay evolution
-yay gnome-calender
-yay gnome-calendar
-yay geary
-yay gnome-photos
-yay gnome-eye
-yay gnome-
-yay gnome- | less
-yay eye of gnome
-yay gnome-clocks
-yay gnome-boxes
-yay gnome-evince
-yay evince
-yay visual studio
-sudo pacman -S neofetch
-echo $XDG_SESSION_TYPE
-cd Documents
-git clone https://github.com/nasifahmed/study
-zathura CS422-Computer-Architecture-ComputerOrganizationAndDesign5thEdition2014.pdf
-gnome-screensaver-command -l
-xdg-screensaver lock
-systemctl -h
-shutdown
-shutdown -c
-nvim .z
-git config --global user.email "nasif2ahmed@gmail.com"
-git config --global user.name "Nasif Ahmed"
-git commit -am "removed powerlevel10k from zsh and changed font for alacritty"
-ping 1.1.1.1
-sudo pacman -Sc
-yay starship
-touch ~/.config/starship.toml
-1
-nvim ~/.config/starship.toml
-git add *
-git commit -am "added spaceship prompt"
-yay kazem
-yay kazam
-yay -Rcs kazam
-bitwarden-desktop -h
-bitwarden-desktop yay meet
-yay meet
-yay google meet
-yay vtop
-yay -Rcs gnome-shell-extension-openweather-git
-yay qbittorrent
-yay mpv
-yay vivaldi
-yay btop
-corona
-yay ufetch
-cpufetch
-rufetch
-uwufetch
-yay zathura
-ln -sv ~/dotfiles/zathura ~/.config
-ln -sv ~/dotfiles/nvim ~/.config
-cd zathura
-pushd ~
-curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \\
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim zathurarc
-man zathura
-git add zathurarc
-git commit -am "modified zathrua config for no status bar on start"
-yay gparted
-yay -S gnome-shell-extension-openweather-git
-yay libgweather
-yay gnome-weather
-find Locations.xml
-fzf
-yay grub-customizer
-sudo ./install.sh
-python install.py
-sudo python install.py
-cd ~/.config/nvim/ini
-cd ~/.config/nvim/
-nvim
-nvim init.vim
-\:
-nvim starship.toml
-nvim /example/non/default/path/starship.toml\
-\
- \
-\
- \
-   
-what
-whatis mpv
-\:q
-cd alacritty
-zsh -h
-vim
-vi
-co Desktop
-d
-history
-h
-cd ~/.config/qtile/
-cd dedsec-compact
-test
-nvim .config/starship.toml
-nvim ~/.config/alacritty/alacritty.yml
-a
-lt
-cd /usr/share/fonts
-yay toilet
-date '+%T'
-date '+%TT'
-date '+%I'
-date '+%H'
-date '+%HHH'
-date '+%h'
-date '+%H:%M'
-date '+%I:%M'
-man date
-date '+%I:%Mi %p'
-date '+%I:%M %p'
-mv -iv ~/.config/starship.toml ~/dotfiles/ && ln -svi ~/dotfiles/starship.toml ~/.config
-git add starship.toml
-git add zsh/.zshrc
-git commit starship.toml -m "Added startship prompt"
-git commit zsh/.zshrc -m "Misc changes"
-yay cmatrix
-eos-welcome
-sudo pacman -S gnome-system-monitor
-yay -Rcs brave-bin
-yay ytfzf
-bottom
-yay bottom
-btm
-pkill 18418
-killall 18418
-killall -h
-killall -n 18418
-ytfzf
-ytfzf linux
-ytfzf -h
-ytfzf -tD linux
-yay ueberzug
-ytfzf -t linux
-mpv http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A6%20%20S%20%20%E2%80%94%20%20Z/The%20Mandalorian%20%28TV%20Series%202019%E2%80%93%20%29%201080p/Season%2001/The.Mandalorian.S01E04.1080p.WEBRip.x265.HEVC.10bit.5.1.MSubs-PSA.mkv
-btop -h
-btop 
-alacritty -h
-alacritty help
-nvim alacritty.
-alacritty -o startup_mode: Maximized
-alacritty -o startup_mode=Maximized
-alacritty -o startup_mode=Fullscreen
-alacritty -o window.startup_mode=Fullscreen
-alacritty -o window.startup_mode=maximized -e btop
-alacritty -o window.startup_mode=maximized -e btop -t btop
-alacritty -t "Btop" -o window.startup_mode=maximized -e btop
-nvidia-installer-dkms -h
-nvidia-installer-dkms -n
-sudo nvidia-installer-dkms -n
-lshw -c video
-lspci | grep -i --color 'vga\|3d\|2d'
-nvidia-smi 
-nvtop
-yay -Rsn nvidia-390xx-dkms nvidia-390xx-settings nvidia-390xx-utils
-yay -Rsn nvidia-390xx-dkms nvidia-390xx-settings nvidia-390xx-utils nvtop
-sudo mkinitcpio -p linux
-sudo mkinitcpio -p linux-lts
-yay nouveau-fw
-yay xf86-video-nouveau
-nvidia-installer-dkms --force
-sudo nvidia-installer-dkms --force
-nvidia-installer-check
-yay -Rsn nvidia-dkms nvidia-utils nvidia-settings
-yay -Rsn nvidia-dkms nvidia-utils nvidia-settings lib32-nvidia-utils
-yay -S nvidia-390xx-dkms nvidia-390xx-utils nvidia-390xx-settings
-nvidia mdprobe 
-sudo nano /etc/mkinitcpio.conf
-lspci -v
-chmod +x NVIDIA-Linux-x86_64-430.40.run
-./NVIDIA-Linux-x86_64-430.40.run
-cat /var/log/nvidia-installer.log
-sudo ./NVIDIA-Linux-x86_64-430.40.run
-sudo pacman -S plasma-desktop
-sudo pacman -Rsc plasma-desktop
-git clone https://github.com/endeavouros-team/EndeavourOS-packages-lists.git
-cd EndeavourOS-packages-lists
-yay i3
-sudo pacman -S --needed - < i3
-dmenu -h
-dmenu&
-killall dmenu
-cd dotfiles
-nvim config.
-whatis picom
-picom&
-killall picom
-sudo nano /etc/default/grub
-yay -Yc && sudo pacman -Scc && rm -rf .cache/* && sudo pacman -Rns $(pacman -Qdtq)
-git add * && git commit am "Added alias to clean pacman build files and cache"
-git add * && git commit -am "Added alias to clean pacman build files and cache"
-clean
-yay brave
-nvim script
-chmod +x script
-./script
-yay cbonsai
-cbonsai
-cbonsai -h
-cbonsai -li
-cbonsai -li -M 20
-cbonsai -li -L 20
-cbonsai -liv
-yay gnome-extr
-yay gnome-extra
-sudo pacman -S gnome-extra
-yay -Rs nouveau-fw
-yay -Rsc brave-bin
-sudo pacman -S lutris
-sudo pacman -Rsc lutris
-cd Downloads/temp
-git clone https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/tree/main/backgrounds
-wget https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/tree/main/backgrounds
-git clone https://gitlab.gnome.org/GNOME/gnome-backgrounds
-yay speedo
-speedometer
-speedometer -rx
-speedometer -r -f
-speedometer -r -f "/run/media/nasif/01D6435BA6EB4610/Seed/Half-Life 2 3in1"
-speedometer -h
-speedometer -r
-speedometer -rc
-sudo speedometer -rc
-yay -Rsc speedometer
-ping reddit.com
-nitrogen --set-auto/home/nasif/Downloads/temp/gnome-backgrounds/backgrounds/brush-strokes-d.jpg  
-nitrogen --set-auto /home/nasif/Downloads/temp/gnome-backgrounds/backgrounds/brush-strokes-d.jpg  
-nvim ~/.config/i3/config
-code
-nitrogen -h
-nitrogen --set-centered /home/nasif/Downloads/temp/gnome-backgrounds/backgrounds/brush-strokes-d.jpg  
-sudo pacman -S pavucontrol
-cp -rfiv ~/dotfiles/i3/.config/i3/config ~/.config/i3/
-ln -svi ~/dotfiles/i3/.config/ ~/.config/i3
-cp .config/* .
-cp -rvi .config/* .
-diff i3-scrot.conf .config/i3-scrot.conf
-cp -rvi i3/* .
-rm -rf i3
-cp -rvi ~/.config/i3 ~/Desktop/ $$ ln -svi ~/dotfiles/i3 ~/.config/
-cp -rvi ~/.config/i3 ~/Desktop/ $$ rm -rvi ~/.config/i3 $$ ln -svi ~/dotfiles/i3 ~/.config/
-cp -rvi ~/.config/i3 ~/Downloads/ $$ rm -rvi ~/.config/i3 $$ ln -svi ~/dotfiles/i3 ~/.config/
-nautilus&
-ln -vi ~/dotfiles/i3 ~/.config/
-ln -svi ~/dotfiles/i3 ~/.config/
-ln -svi ~/dotfiles/polybar ~/.config/
-yay polybar
-polybar
-cd .config/
-cd .config/i3
-mpv http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A6%20%20M%20%20%E2%80%94%20%20R/Reno%20911%21%20%28TV%20Series%202003%E2%80%93%20%29%20480p/Season%2001/Reno.911%21.S01E06.480p.DVDRip.x264-NME.mkv
-yay plasman 
-yay plasma
-lla patches
-startx
-dwm&
-logout
-nvim config.def.h
-touch dwm.desktop
-sudo touch dwm.desktop
-i3.desktop > dwm.desktop
-sudo i3.desktop i>> dwm.desktop
-sudo i3.desktop >> dwm.desktop
-sudo echo $(cat i3.desktop) >> dwm.desktop
-sudo echo $(cat i3.desktop) >> sudo dwm.desktop
-nvim dwm.desktop
-cat i3.desktop
-su
-nvim i3.desktop
-cat dwm.desktop
-cat sudo
-sudo rm suido 
-sudo rm sudo 
-dwm
-cp -irv * ~/dotfiles/dwm/
-gnome-photos dwm.png
-yay -Rsc demenu
-yay -Rsc dmenu
-cd dmenu
-dmenu
-nvim dwm.c
-nvim dwm
-nvim dwm.o
-cat README
-diff config.h config.def.h
-whatis pulsemixer
-yay pulsemixer
-cd slock
-cp -irv * ~/dotfiles/slock/
-suck
-cd patches
-yay gnome-volume-control-applet 
-whatis stalonetray
-cd i3
-ls
-cd polybar
-nvim config
-cd scripts
-nvim launch.sh
-chmod +x dwm-status.sh
-nvim dwm-status.sh
-yay xsetroot
-./dwm-status.sh
-nvim README
-mv dwm-status.sh dwm-start.sh
-nitrogen --set-centered /home/nasif/Pictures/brush-strokes-d.jpg 
-cd /usr/share/xsessions
-sudo nvim dwm.desktop
-mkdir dwm-start
-cd dwm-status
-cp -irv * ~/dotfiles/dwm-start
-rm -rf dwm-status
-sudo ln -svi dwm-start.sh /usr/local/bin/
-cd dwm\
-cd dwm
-nvim dwm-start.sh
-rm /usr/local/bin/dwm-start.sh
-sudo rm /usr/local/bin/dwm-start.sh
-cp -irv dwm-start.sh /usr/local/bin/
-sudo cp -irv dwm-start.sh /usr/local/bin/
-chmod +x dwm-start.sh
-sudo chmod +x dwm-start.sh
-cd ~
-sudo nvim dwm-start.sh
-dwm-start.sh
-nvim config.h
-whatis pamixer
-yay pamixer
-sudo make clean install
-nvim dunstrc
-dunst -h
-whatis dunst
-cd .config
-where dunst
-cp ~/dotfiles/dunst/.config/dunst/dunstrc ~/dotfiles/dunst
-cd dunst
-rm -rf .config
- ..
-ln -s dunst ~/.config
-cd ~/.config
-rm dunst
-ln -sv ~/dotfiles/dunst ~/.config/
-dunst
-man dunst
-notify-send 'Hello world!'
-cd /usr/local/bin
-rm -rf ~/dotfiles/dwm-start/dwm-start.sh
-cp dwm-start.sh ~/dotfiles/dwm-start
-cd dwm-start
-sudo rm dwm-start.sh
-ln -sv ~/dotfiles/dwm-start/dwm-start.sh /usr/local/bin/
-sudo ln -sv ~/dotfiles/dwm-start/dwm-start.sh /usr/local/bin/
-cd dwm
-fc-list | grep "Jet"
-yay fontawesome
-yay discord
-yay gnome-shell-pomodoro
-sudo -Syyu
-sudo pacman -Syyu
-neofetch --ascii_distro arch
-yay anaconda
-chmod +x Anaconda3-2021.11-Linux-x86_64.sh
-sudo ./Anaconda3-2021.11-Linux-x86_64.sh
-./Anaconda3-2021.11-Linux-x86_64.sh
-anaconda 
-anaconda -h
-whoami
-pwd
-killall anaconda
-nvim .zshrc
-source ~/.zshrc 
-anaconda init
-anaconda search ipykernal
-conda config --append channels conda-forge
-conda install ipykernal
-conda config --show channels
-conda config --append channels bioconda
-conda install ipykernel	
-j
-echo $0
-nvim reverse_wordle.py
-conda set auto_activate_base false
-conda config set auto_activate_base false
-conda config --set auto_activate_base false
-conda 
-cd Documents/study/Spring2022/CSE422/LAB/LAB01
-wget https://docs.google.com/document/d/1ZLTJbbR1baadqPxsYifV1dtp06fXTqQIX_lA_mLh1xE/edit?usp=sharing
-wget "https://docs.google.com/document/d/1ZLTJbbR1baadqPxsYifV1dtp06fXTqQIX_lA_mLh1xE/edit?usp=sharing"
-yay libreoffice
-yay crystaldiskmark
-free
-uname -a
-uname -ar
-yay ungoogled-chromium
-git config --global init.defaultBranch main
-git config --global color.ui auto
-ls ~/.ssh/id_ed25519.pub
-sudo ls ~/.ssh/id_ed25519.pub
-ssh-keygen -t ed25519 -C nasif2ahmed@gmail.com
-dot 
-git status
-git add * && git commit -am "Configured DWM for endevouros february 2022 and some folder rearrange"
-dot
-git push
-cat ~/.ssh/id_ed25519.pub
-ssh -T git@github.com
-touch test.html
-nvim test.html
-mpv https://drive.google.com/file/d/1uEAPiFd_DvR6vukIhmyQpjMqudFidroU/view
-yay droidcam
-yay v42loopback
-sudo pacman -S adb v4l2loopback-dkms
-yay v4l2loopback
-sudo pacman -Syu linux-latest-headers linux-lts-headers
-yay linux-latest-headers
-yay linux headers
-yay linux515-headers
-mhwd-kernel -li
-yay mhwd-kernel
-sudo pacman -S android-tools
-sudo modprobe v4l2loopback
-killall google-chrome
-killall chrome
-mkdir chrome
-nautilus .
-cd .config/alacritty/
-nvim alacritty.yml
-cd html-boilerplate
-google-chrome-stable -h
-google-chrome-stable --incongnito index.html
-yay dillo
-yay fragments
-yay blanket
-yay -Rcs fragments blanket
-flatpak -h
-flatpak install cozy
-flatpak install fragments
-flatpak install blanket
-flatpak install tangram kooha commit metadat
-yay gnome-circle
-yay openrgb
-flatpak install Solanum
-yay -Rcs openrgb
-code .
-yay noto-fonts-emoji
-yay obs
-yay obs virtual camera
-killall firefox
-cd Documents/ODIN
-git clone git@github.com:NasifAhmed/odin-recipes.git
-cd odin-recipes
-killall firefox\
-killall firefox
-killall firefox\
-python
-source /home/nasif/anaconda3/bin/activate
-conda activate base
- /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38485 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45761 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43987 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 36219 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46375 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37891 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33647 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 42283 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33959 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41707 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 44605 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 42187 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43381 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33465 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45399 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35307 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35161 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35139 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37609 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 34785 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46081 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46019 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35937 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37747 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41467 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33713 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 44093 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41293 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45537 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43175 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39085 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37133 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43259 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 34823 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35131 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37987 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46701 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45473 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45163 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38815 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40663 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
-exit
-systemctl reboot -i
-yay
-vtop
-btop
-yay cpu usage
-yay cpu monitor
-yay cputop
-yay ctop
-gotop
-cd Downloads
-mv linux-5.16.9.tar.xz ~/Desktop/Kernal-Test
-cd ~/Desktop/Kernal-Test
-mv Kernal-Test linux-5.16.9.tar.xz
-tar xfv linux-5.16.9.tar.xz 
-ll
-cp /boot/config-$(uname -r) .config 
-pushd /boot/
-cd grub
-cd efi
-pushd /usr/src/
-cd linux
-sudo cp -iv .config ~/Desktop/linux-5.16.9/
-popd
-not bad
-cd Desktop
-cd /src
-cd /src/
-where src
-cd ~/Desktop
-cp /usr/src/linux/.config .
-rm .config
-neofetch
-nproc
-uname -r
-tar xvf linux-5.16.9.tar.xz
-14 second to uncompress the kernel file ............
-lets copy the main config file from my kernel .................
-cd linux-5.16.9
-sudo cp /usr/src/linux/.config .
-clear
-sudo make -j 12
-cd ..
-rm linux-5.16.9
-rm -rfvi linux-5.16.9
-rm -rfvi linux-5.16.9 -y
-rm -rfv linux-5.16.9
-rmdir linux-5.16.9
-rmdir -rf linux-5.16.9
-rm -rf linux-5.16.9
-sudo rm -rf linux-5.16.9
-yay kdenlive
-killall kooha
-yay gimp
-cmatrix
-cd Videos
-yay ytp-dl
-yt-dlp https://www.youtube.com/watch?v=OJhWtBBJw10
-yt-dlp
-yt-dlp -h
-yay youtube-dl
-youtube-dl https://www.youtube.com/watch?v=OJhWtBBJw10
-youtube-dl -h
-yt-dlp "https://www.youtube.com/watch?v=OJhWtBBJw10"
-cd Documents/WORDLE
-python reverse_wordle.py
-cd .mozilla/firefox
-cd mw137n0h.default-release
-cd chrome
-lla
-code . && exit
-dot
-history
-lla
-cd ~
-lla
-code .histfile
-exit
-lla
-cat .histfile| word
-cat .histfile| wc
-cat .histfile| lc
-yay line count
-killall firefox
-gotop
-yay
-yay noisetorch
-yay -S zsh-syntax-highlighting sh-autosuggestions zsh-history-substring-search
-yay -S sh-autosuggestions
-yay -S zsh-autosuggestions
-exit
-chsh -s /usr/bin/zsh nasif
-which zsh
-chsh -l
-chsh -s /bin/zsh nasif
-chsh -s /usr/bin/zsh nasif
-yay
-firefox -h
-firefox --private-window 
-kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.krunner,/App,,toggleDisplay"\
-kwin_x11 --replace
-cmatrix
-yay cmatrix
-cmatrix
-yay discord
-yay droidcam
-yay keepsolid
-yay vpn unlimited
-yay kalendar
-sudo pacman -S --needed kamoso krename kcalc kcharselect plasma-browser-integration ffmpegthumbs kdegraphics-thumbnailers kdeplasma-addons plasma-firewall bluedevil libappindicator-gtk3 libappindicator-gtk2 noto-fonts-emoji xdg-desktop-portal xdg-desktop-portal-kde gnome-settings-daemon gsettings-qt plasma-systemmonitor plasma-wayland-session\
-\
-sudo nano /etc/environment
-sudo pacman -S --needed xdg-desktop-portal xdg-desktop-portal-kde
-sudo nano /etc/environment
-sudo pacman -R ffmpegthumbnailer
-sudo pacman -S --needed ffmpegthumbs kdegraphics-thumbnailers
-rm ~/.config/Trolltech.conf
-kbuildsycoca5 --noincremental
-rm -rf ~/.cache/*
-yay
-yay clearvpn
-yay -S kwrite 
-killall firefox
-yay
-sudo pacman -Syyu
-yay kmail
-yay hspell
-yay kde gmail
-yay -Rcs kmail kmailapplet 
-yay -Rcs kmailtransport 
-cmatrix
-yay korganizer
-yay -Rcs korganizer
-yay korganizer
-yay PIM
-yay nvtop
-nvtop
-yay kalendar
-yay
-yay powercord
-yay -Rcs kmail kmailtransport
-yay
-fc-list | grep "Jet"
-cd .config/alacritty/
-nvim  alacritty.yml
-exit
-rm -rf powerlevel10k
-yay startship
-yay zsh-syntax-highlighting
-yay zsh-autosuggestions
-yay                                                              [---------------------------------------------------------------------------] 100%\
-:: Processing package changes...
-yay zsh-history-substring-search
-yay starship
-ln -sf ~/dotfiles/starship.toml ~/.config
-cd .config
-cat ~/.histfile
-line ~/.histfile
-rm -rf alacritty
-ln -sf ~/dotfiles/alacritty ~/.config/
-rm -rf nvim
-ln -sf ~/dotfiles/nvim ~/.config/
-yay
-yay vscode
-sudo pacman -S gnome-backgrounds
-which libadweita
-which Libadwaita
-which libadwaita
-yay Libadwaita
-yay -Rcs code
-yay -Ycc
-yay vscode
-yay gnome-weather
-yay gnome-calendar
-yay gnome-
-yay gnome-clocks
-yay gnome-music
-yay blanket
-yay spotify
-yay -S spotify
-yay google-chrome
-yay python
-sudo pacman -S python
-python --version
-pip
-yay pip
-yay jdk
-yay java
-yay oracle java
-yay mpv
-java -version
-dot
-yay lsd
-ll
-lla
-cd mpv
-lla
-yay neovim
-code .
-lla
-cd ~/.config
-mkdir mpv
-code mpv.conf
-cd mpv
-lla
-cd ..
-mv -v mpv.conf ./mpv
-lla
-cd mpv
-lla
-code mpv.conf
-dot
-cd mpv
-lla
-rm -rf *
-cp -irv ~/.config/mpv/mpv.conf .
-lla
-cd ~/.config
-rm -rf mpv
-ln -sf ~/dotfiles/mpv ~/.config/
-lla
-git add * && git commit -am "New MPV config"
-dot
-git add * && git commit -am "New MPV config"
-git config --global user.name "Nasif Ahmed"
-git config --global user.email "nasif2ahmed@gmail.com"
-git add * && git commit -am "New MPV config"
-git push
-pip install subliminal
-echo PATH
-echo $PATH
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-echo $PATH
-mkdir ~/.config/mpv/scripts
-cd ~/Downloads
-mkdir temp
-cd temp
-git clone https://github.com/davidde/mpv-autosub
-cd mpv-autosub
-lla
-cp -irv autosub.lua ~/.config/mpv/scripts
-cd ~/.config/mpv
-cd scripts
-lla
-mpv "https://youtu.be/RvuMgVJvrig"
-yay youtube-dl
-mpv "https://youtu.be/RvuMgVJvrig"\ 
-mpv "https://youtu.be/RvuMgVJvrig"
-yay google-chrome
-cd .config/mpv
-code .
-mkdir shaders
-cd shaders
-nvim deband-pre.glsl
-yay youtube-dl
-cd Downloads
-lla
-mkdir Tutorials
-cd Tutorials
-yt-dlp "https://www.youtube.com/watch?v=VPvVD8t02U8&t=198s"
-shutdown -c
-shutdown now
-yay qbittorrent
-yay
-yay discord
-yay pamac
-yay -Rcs firewall
-yay -Rcs firewalld
-yay gthump
-yay gthumb
-bash
-yt-dlp -h
-cd Music
-yt-dlp -F "https://youtu.be/RUu_RtRxsTY"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/RUu_RtRxsTY"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/NVaqc8eQ2YQ"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/q_ZZj392i-I"
-yt-dlp -F "https://youtu.be/q_ZZj392i-I""
-yt-dlp -F "https://youtu.be/q_ZZj392i-I"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/XmBji07OtwA"
-yay rythmbox
-sudo pacman -S rhythmbox
-yt-dlp -f 248 --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp --list-formats "https://youtu.be/q_ZZj392i-I"
-yt-dlp -f "248" --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp -f 22 --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp -f 248 --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yay spotdl
-spotdl "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-spotdl "https://open.spotify.com/playlist/4ETs8rEsXcUPytKBHPPBbe"
-yay redis
-spotdl "https://open.spotify.com/playlist/4ETs8rEsXcUPytKBHPPBbe"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=k3WkJq478To"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=XmBji07OtwA"
-lla
-sudo pacman -S imwheel
-mkdir scripts
-chmod +x mouse.sh
-sudo pacman -S gnome-startup-
-sudo pacman -Ss gnome-startup-
-sudo pacman -Ss gnome
-yay gnome-startup
-cd .config/autostart
-cp slack.desktop test.desktop
-rm test.desktop
-cp libinput-gestures.desktop test.desktop
-vim test.desktop
-imwheel&
-sudo pacman -S cmatrix
-pip install numpy
-sudo pacman -S deluge
-deluge&
-sudo pacman -Rs deluge
-killall deluge
-killall imwheel
-sudo pacman -S gotop
-gotop&
-man mpvc
-mpv https://youtu.be/0Z4QWyk-6hM
-sudo pacman -S code
-sudo pacman -Rs code
-sudo pacman -S visual-studio-code-bin
-git commit -am "update"
-cd Spring2021
-cd CSE
-cd Lab01
-_code BFS.py Level2.py
-python -u "/home/reralt/study/Spring2021/CSE422/Lab01/tempCodeRunnerFile.py"
-vim Level2.py
-python -u "/home/reralt/study/Spring2021/CSE422/Lab01/Level2.py"
-git diff
-diff
-python Level2.py
-cd .config/nvim
-vim init.vim
-vim Level2.py > Level3.py
-rm Level3.py 
-cp Level2.py Level3.py
-vim Level3.py
-rm Level3.py
-vim Level3.txt
-mv Level3.txt level3.txt
-\
-n -u "/home/reralt/study/Spring2021/CSE422/Lab01/Level3.py"
-python -u "/home/reralt/study/Spring2021/CSE422/Lab01/Level3.py"
-git add Level3.py level3.txt
-git commit -am "Done with lab01"
-mkdir .themes
-sudo pacman -S spotify
-vim ~/.config/nvim/init.vim
-sudo pacman -S youtube-dl
-youtube-dl -v https://www.youtube.com/watch?v=l07s8vlKgb0
-youtube-dl
-youtube-dl -v URL https://www.youtube.com/watch?v=l07s8vlKgb0
-vim ~/.zshrc
-youtube-dl https://www.youtube.com/watch?v=l07s8vlKgb0
-youtube-dl -v "https://www.youtube.com/watch?v=l07s8vlKgb0
-youtube-dl -v "https://www.youtube.com/watch?v=l07s8vlKgb0"
-sudo cp ~/Downloads/SutonnyMJ\ Regular/SutonnyMJ\ Regular.ttf /usr/share/fonts
-rm /usr/share/fonts/Siyamrupali.ttf
-sudo rm /usr/share/fonts/Siyamrupali.ttf
-mv SutonnyMJ\ Regular.ttf SutonnyMJRegular.ttf
-sudo mv SutonnyMJ\ Regular.ttf SutonnyMJRegular.ttf
-sudo rm SutonnyMJRegular.ttf
-sudo cp ~/Downloads/kalpurush.ttf /usr/share/fonts
-cd Do
-mv -rf SutonnyMJ\ Regular SutonnyMJ
-mvdir -rf SutonnyMJ\ Regular SutonnyMJ
-mv SutonnyMJ\ Regular SutonnyMJ
-cd SutonnyMJ
-mv SutonnyMJ\ Regular.ttf SutonnyMJ.ttf
-sudo cp SutonnyMJ.ttf /usr/share/fonts
-sudo rm kalpurush.ttf
-sudo rm SutonnyMJ.ttf
-cd ~/Do
-sudo cp Siyamrupali.ttf /usr/share/fonts
-fc-list :lang=bn
-pacman-updates
-sudo pacman -Ss pacman-updates
-yay gtk-them-arc-git
-yay gtk-theme-arc-git
-yay arc
-sudo pacman -Ss arc-gtk-theme
-sudo pacman -S arc-gtk-theme
-yay arc-darkest
-pacman -Ss pacman-mirrors
-sudo pacman -S pacman-mirrors
-sudo pacman-mirrors --fasttrack
-sudo pacman -S trip
-sudo pacman -S tri,
-sudo pacman -S trim
-pacman -Ss trimp
-pacman -Ss trim
-pacman -Ss fstrim
-sudo systemctl enable fstrip.timer
-sudo systemctl enable fstrim.timer
-cat proc/sys/vm/swappiness
-cat /proc/sys/vm/swappiness
-sudo systemctl --failed
-yay blockify
-cd Spring2021/
-cd CSE422
-mkdir Lab03
-cd Lab03
-k\
-n -u "/home/reralt/study/Spring2021/CSE422/Lab03/problem.py"
-python -u "/home/reralt/study/Spring2021/CSE422/Lab03/problem.py"
-sudo pacman -S cowsay lolcat
-cowsay Hello TBD | locat
-cowsay Hello TBD | lolcat
-cowsay Hello TBD
-sudo pacman -S toilet
-toilet HELLO
-toilet HELLO | lolcat
-pfetch
-toilet HELLO TBD | lolcat
-sudo pacman -S tty-clock
-pacman -Ss tty-clock
-yay tty-clock
-tty-clock
-tty-clock -c
-sudo pacman -S gtk-engine-murrine sassc
-sudo pacman -S gnome-themes-extra
-mkdir OrchisTheme
-cd OrchisTheme
-git clone https://github.com/vinceliuice/Orchis-theme
-cd Orchis-theme
-./install.sh -t all
-sudo pacman -S gtk-engine-pixbuf
-sudo pacman -S gtk-engines-pixbuf
-sudo pacman -S gtk2-engines-pixbuf
-yay adapta
-yay roboto
-sudo pacman -S numix-gtk-theme
-yay numix
-yay qogirt
-yay qogir
-sudo pacman -S gnome-shell-extension-appindicator
-vim ~/.config/alacritty/alacritty.yml
-t
-git add &
-git commit -am "changes"
-sudo pacman -S tmux
-sudo pacman -S obs
-pacman -Ss obs
-sudo pacman -S obs-studio
-lsd --tree
-lsd
-vim test
-youtube-dl -v "https://drive.google.com/file/d/1TbicAbCswPrbLP6yHIyI0k4WXrszvE11/view"
-cd .cofig
-cd ..\
-cd
-cd videos
-cd CSE\ ML\ LAB
-youtube-dl -v "https://www.youtube.com/watch?v=i3CVm8fOBvQ&t=40s"
-youtube-dl -v "https://www.youtube.com/watch?v=fcx3-VJM788"
-yay ubuntu mono
-sudo vim startup.sh
-lls
-llsa
-cat mouse.sh
-sudo cp ~/scripts/mouse.sh .
-cat mouse.s
-vim mouse.sh
-reboot --help
-sudo vim /etc/profile.d/mouse.sh
-./mouse.sh
-sudo rm mouse.sh
-cd /etc/profile.d
-yay librewolf
-shutdown --help
-shutdown -P
-yay -S librewolf-bin
-cd Dow
-mkdir librewolf
-git clone https://aur.archlinux.org/librewolf-bin.git
-git clone https://aur.archlinux.org/librewolf-bin.git         
-git clone https://aur.archlinux.org/librewolf-bin.git librewolf
-cd librewolf
-rm -rf librewolf
-cd librewolf-bin
-makepkg -si
-yay -S librewolf
-killall sosumi
-sudo pacman -S kvm qemu
-pacman -Ss kvm
-sudo pacman -S qemu-kvm
-pacman -Ss qemu
-sudo pacman -S qemu
-lsmod | grep kvm
-qemu-img resize macos.qcow2 -40G
-qemu-img resize macos.qcow2 --shrink
-qemu-img resize macos.qcow2 --shrink 40G
-qemu-img resize macos.qcow2 --size
-nano launch
-sudo nautilus
-sudo snap unintsll sosumi
-snap help
-sudo snap remove sosumi
-man snap
-qemu-img resize macos.qcow2 --shrink 50G
-qemu-img resize macos.qcow2 --shrink 20G
-qemu-img resize macos.qcow2 --help
-sudo snap install sosumi
-j+
-CD
-cd snap
-cd sosumi
-cd coo
-qemu-img resize macos.qcow2 --shrink 25G
-vim launch
-cd firmware
-cd 15
-cd common
-sosumi
-mkdir Treehouse_Algo_Course
-cd Treehouse_Algo_Course
-sudo snap remove --purge sosumi
-youtube-dl -f best https://www.youtube.com/watch?v=8hly31xKli0&t=245s
-youtube-dl --help
-youtube-dl -f best "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -ft 137+bestaudio "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -ft bestvideo+bestaudio "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -ft '136,bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -f ("bestvideo[width>=1920]"/bestvideo)+bestaudio/best "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f ("bestvideo[width>=1920]"/bestvideo)+bestaudio/best "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f '("bestvideo[width>=1920]"/bestvideo)+bestaudio/best' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f '("bestvideo[width>=1920]")+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -f '136+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -F "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl --add-metadata -f '137+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-youtube-dl -F "https://www.youtube.com/watch?v=xNN7iTA57jM"
-youtube-dl -f bestaudio --extract-audio --embed-thumbnail --add-metadata "https://www.youtube.com/watch?v=xNN7iTA57jM"
-sudo pacman -S AtomicParsley
-cd ~/Music
-youtube-dl -f bestaudio --extract-audio --embed-thumbnail --add-metadata "https://www.youtube.com/watch?v=iO-mUnSjMKM"
-youtube-dl -f bestaudio --extract-audio --add-metadata "https://www.youtube.com/watch?v=_X4RV9A3CxM"
-sudo pacman -S cmus
-cmus ~/Music
-cmus --help
-cmus
-sudo pacman -S rythmbox
-yay rythmbo
-reboot now
-sudo pacman -Syu\
-sudo pacman -Syu
-mkdir "Algorithms Course - Graph Theory Tutorial from a Google Engineer"
-cd Algorithms\ Course\ -\ Graph\ Theory\ Tutorial\ from\ a\ Google\ Engineer
-youtube-dl -f '22+bestaudio' "https://www.youtube.com/watch?v=8hly31xKli0&t=245s"
-rm Algorithms\ and\ Data\ Structures\ -\ Full\ Course\ for\ Beginners\ from\ Treehouse-8hly31xKli0.mp4
-youtube-dl -F "https://www.youtube.com/watch?v=09_LlHjoEiY"
-youtube-dl -f '22+bestaudio' "https://www.youtube.com/watch?v=09_LlHjoEiY"
-youtube-dl -F "https://www.youtube.com/watch?v=RBSGKlAvoiM&list=PLWKjhJtqVAbn5emQ3RRG8gEBqkhf_5vxD&index=2"
-youtube-dl -F "https://youtu.be/RBSGKlAvoiM"
-mkdir "Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer"
-gotpo
-vim Gnome-Extension-List
-vim Gnome-Extension-List.txt
-git commit -am "added a gnome extension list"
-sudo pacman -S krita 
-cd ~/Videos
-cd Data\ Structures\ Easy\ to\ Advanced\ Course\ -\ Full\ Tutorial\ from\ a\ Google\ Engineer
-rm Data\ Structures\ Easy\ to\ Advanced\ Course\ -\ Full\ Tutorial\ from\ a\ Google\ Engineer-RBSGKlAvoiM.f22.mp4.part
-youtube-dl -f '22+bestaudio' "https://youtu.be/RBSGKlAvoiM"
- killall brave
-killall nautilus
-fzf | mpv
-mpv --help
-mpv --list-options
-sudo pacman -S ytfzf
-ranger
-find -type f
-find -type f | fzf 
-find -type f | fzf  | vim
-cd "$(find -type d | fzf)"
-zshrc
-xdg-open Algorithms\ and\ Data\ Structures\ -\ Full\ Course\ for\ Beginners\ from\ Treehouse-8hly31xKli0.mp4
-vim | path
-vim path
-path
-vim $(fzf)
-fzf -h
-fzf -e
-ytfzf --help
-ytfzf -fDH
-ytfzf -fD
-ytfzf -f 
-ytfzf -H
-vim neo_noirs.txt
-ytfzf 4k 60 fps
-cp -r /usr/share/doc/mpv/ ~/.config/mpv/
-cp -r /usr/share/doc/mpv/ ~/.config/
-cp -r /usr/share/doc/mpv/ ~/.config/mpv
-cp mpv.conf ..
-vim mpv.conf
-vim input.conf
-sudo pacman -S qtile
-man mpv
-mpv https://www.youtube.com/watch?v=YAsxztU189k
-mpv "https://www.youtube.com/watch?v=YAsxztU189k"
-mpv "https://www.youtube.com/watch?v=6A8rwX2J2HA"
-mpv "https://www.youtube.com/watch?v=1lj8dXhtUR4"
-mpv "https://www.youtube.com/watch?v=IV07SEVXyRg"
-ytfzf quartile deviation
-tree
-fcd
-python inputtest.py
-pip install tkinter
-python --versoin
-python -u "/home/reralt/Documents/inputtest.py"
-cat neo_noirs.txt
-mpv "https://www.youtube.com/watch?v=g4TC6m1BlJM"
-reboot
-git commit -am "some zsh aliases"
-git commit -am ""
-git commit -am " "
-source .zshrc
-p
-sudo pacman -Syu
-date
-vim shellList.txt
-cd ~/.config/autostart
-cd -
-ls -r
-ls -R
-ls -t
-ls -a
-ls -h
-touch test
-file test
-file inputtest.py
-file shellList.txt
-man file
-pushd ~/Documents
-cat shellList.txt neo_noirs.txt
-cat shellList.txt
-less inputtest.py
-history | less
-man history
-edit
-cd 
-find type -f 
-find -type f ~
-find -type f /home/reralt
-find -type f "/home/reralt"
-cat .zhistory
-cat .zhistory | less
-cat .histfile | less
-cat .histfile | word
-sudo pacman -S word
-vim .zshrc
-mv .histfile ~/dotfiles/zsh
-cat .histfile
-git commit -am "..."
-ped
-git clone https://github.com/NasifAhmed/dotfiles
-rm .zshrc 
-ln -s ~/dotfiles/zsh/.zshrc .
-ln -s ~/dotfiles/zsh/.histfile .
-chsh -s $(which zsh)
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-sudo cp -rf ~/Downloads/JetBrainsMono-2.225 /usr/share/fonts/
-cd /usr/share/fotns
-fc-cache
-cd
-source .zshrc 
-pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay pfetch
-grep `whoami` /etc/passwd
-cat /etc/shells
-git clone https://github.com/ibnYusrat/my-linux-setup/tree/master/powerline-fonts
-git clone https://github.com/ibnYusrat/my-linux-setup/
-yay -S --noconfirm zsh-theme-powerlevel10k-git
-git clone https://github.com/nasifahmed/dotfile
-git clone https://github.com/nasifahmed/dotfiles
-cd zsh
-ln -s ~/dotfiles/zsh/.zshrc ~/
-ln -s ~/dotfiles/zsh/.histfile ~/
-ls -al
-cat $0
-yay zsh
-fc-list | grep "meso"
-fc-list | grep "Meslo"
-cd dotfiles/
-nvim ~/.zshrc
-p10k configure
-fc-list | grep "Jetbrains"
-yay chrome
-sudo pacman -S zathura
-sudo pacman -S gnome-extensions
-sudo pacman -S extensions
-yay gnome
-yay gnome-extensions
-yay extensions
-yay gnome-shell
-sudo pacman -S V
-sudo pacman -S gnome-shell-extensions
-yay chrome-gnome
-yay -S pamac-all
-yay -S adwaitaqt6 qgnomeplatform
-yay -S qgnomeplatform
-yay adwaitaqt6
-sudo ln -s -t /root /usr/share/themes
-sudo mv /root/themes /root/.themes
-sudo ln -s -t /root /usr/share/icons/
-sudo mv /root/icons /root/.icons
-sudo pacman -S flameshot
-flameshot&
-gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot '[]'
-sudo pacman -Rns $(pacman -Qdtq)
-yay -Yc
-sudo pacman -S nvidia-installer-dkms
-nvidia-installer-check --force
-nvidia-installer-dkms
-sudo nvidia-installer-dkms
-sudo pacman -Rcn pfetch
-yay -h
-yay -Rcn pfetch-btw
- yay -Rcsn nvidia-dkms nvidia-utils nvidia-settings
-nvidia-installer-check 
-systemctl reboot -iv
-yay evolution
-yay gnome-calender
-yay geary
-yay gnome-photos
-yay gnome-eye
-yay gnome- | less
-yay eye of gnome
-yay gnome-boxes
-yay gnome-evince
-yay visual studio
-sudo pacman -S neofetch
-echo $XDG_SESSION_TYPE
-git clone https://github.com/nasifahmed/study
-zathura CS422-Computer-Architecture-ComputerOrganizationAndDesign5thEdition2014.pdf
-gnome-screensaver-command -l
-xdg-screensaver lock
-systemctl -h
-shutdown
-nvim .z
-git commit -am "removed powerlevel10k from zsh and changed font for alacritty"
-ping 1.1.1.1
-sudo pacman -Sc
-touch ~/.config/starship.toml
-1
-nvim ~/.config/starship.toml
-git add *
-git commit -am "added spaceship prompt"
-yay kazem
-yay kazam
-yay -Rcs kazam
-bitwarden-desktop -h
-bitwarden-desktop yay meet
-yay meet
-yay google meet
-yay vtop
-yay -Rcs gnome-shell-extension-openweather-git
-yay vivaldi
-corona
-yay ufetch
-cpufetch
-rufetch
-uwufetch
-yay zathura
-ln -sv ~/dotfiles/zathura ~/.config
-ln -sv ~/dotfiles/nvim ~/.config
-cd zathura
-pushd ~
-curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \\
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim zathurarc
-man zathura
-git add zathurarc
-git commit -am "modified zathrua config for no status bar on start"
-yay gparted
-yay -S gnome-shell-extension-openweather-git
-yay libgweather
-find Locations.xml
-fzf
-yay grub-customizer
-sudo ./install.sh
-python install.py
-sudo python install.py
-cd ~/.config/nvim/ini
-cd ~/.config/nvim/
-nvim
-nvim init.vim
-\:
-nvim starship.toml
-nvim /example/non/default/path/starship.toml\
-\
- \
-\
- \
-   
-what
-whatis mpv
-\:q
-cd alacritty
-zsh -h
-vim
-vi
-co Desktop
-d
-h
-cd ~/.config/qtile/
-cd dedsec-compact
-test
-nvim .config/starship.toml
-nvim ~/.config/alacritty/alacritty.yml
-a
-lt
-cd /usr/share/fonts
-yay toilet
-date '+%T'
-date '+%TT'
-date '+%I'
-date '+%H'
-date '+%HHH'
-date '+%h'
-date '+%H:%M'
-date '+%I:%M'
-man date
-date '+%I:%Mi %p'
-date '+%I:%M %p'
-mv -iv ~/.config/starship.toml ~/dotfiles/ && ln -svi ~/dotfiles/starship.toml ~/.config
-git add starship.toml
-git add zsh/.zshrc
-git commit starship.toml -m "Added startship prompt"
-git commit zsh/.zshrc -m "Misc changes"
-eos-welcome
-sudo pacman -S gnome-system-monitor
-yay -Rcs brave-bin
-yay ytfzf
-bottom
-yay bottom
-btm
-pkill 18418
-killall 18418
-killall -h
-killall -n 18418
-ytfzf
-ytfzf linux
-ytfzf -h
-ytfzf -tD linux
-yay ueberzug
-ytfzf -t linux
-mpv http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A6%20%20S%20%20%E2%80%94%20%20Z/The%20Mandalorian%20%28TV%20Series%202019%E2%80%93%20%29%201080p/Season%2001/The.Mandalorian.S01E04.1080p.WEBRip.x265.HEVC.10bit.5.1.MSubs-PSA.mkv
-btop -h
-btop 
-alacritty help
-nvim alacritty.
-alacritty -o startup_mode: Maximized
-alacritty -o startup_mode=Maximized
-alacritty -o startup_mode=Fullscreen
-alacritty -o window.startup_mode=Fullscreen
-alacritty -o window.startup_mode=maximized -e btop
-alacritty -o window.startup_mode=maximized -e btop -t btop
-alacritty -t "Btop" -o window.startup_mode=maximized -e btop
-nvidia-installer-dkms -h
-nvidia-installer-dkms -n
-sudo nvidia-installer-dkms -n
-lshw -c video
-lspci | grep -i --color 'vga\|3d\|2d'
-nvidia-smi 
-yay -Rsn nvidia-390xx-dkms nvidia-390xx-settings nvidia-390xx-utils
-yay -Rsn nvidia-390xx-dkms nvidia-390xx-settings nvidia-390xx-utils nvtop
-sudo mkinitcpio -p linux
-sudo mkinitcpio -p linux-lts
-yay nouveau-fw
-yay xf86-video-nouveau
-nvidia-installer-dkms --force
-sudo nvidia-installer-dkms --force
-nvidia-installer-check
-yay -Rsn nvidia-dkms nvidia-utils nvidia-settings
-yay -Rsn nvidia-dkms nvidia-utils nvidia-settings lib32-nvidia-utils
-yay -S nvidia-390xx-dkms nvidia-390xx-utils nvidia-390xx-settings
-nvidia mdprobe 
-sudo nano /etc/mkinitcpio.conf
-lspci -v
-chmod +x NVIDIA-Linux-x86_64-430.40.run
-./NVIDIA-Linux-x86_64-430.40.run
-cat /var/log/nvidia-installer.log
-sudo ./NVIDIA-Linux-x86_64-430.40.run
-sudo pacman -S plasma-desktop
-sudo pacman -Rsc plasma-desktop
-git clone https://github.com/endeavouros-team/EndeavourOS-packages-lists.git
-cd EndeavourOS-packages-lists
-sudo pacman -S --needed - < i3
-dmenu -h
-dmenu&
-killall dmenu
-cd dotfiles
-nvim config.
-whatis picom
-picom&
-killall picom
-sudo nano /etc/default/grub
-yay -Yc && sudo pacman -Scc && rm -rf .cache/* && sudo pacman -Rns $(pacman -Qdtq)
-git add * && git commit am "Added alias to clean pacman build files and cache"
-git add * && git commit -am "Added alias to clean pacman build files and cache"
-clean
-nvim script
-chmod +x script
-./script
-yay cbonsai
-cbonsai
-cbonsai -h
-cbonsai -li
-cbonsai -li -M 20
-cbonsai -li -L 20
-cbonsai -liv
-yay gnome-extr
-yay gnome-extra
-sudo pacman -S gnome-extra
-yay -Rs nouveau-fw
-yay -Rsc brave-bin
-sudo pacman -S lutris
-sudo pacman -Rsc lutris
-cd Downloads/temp
-git clone https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/tree/main/backgrounds
-wget https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/tree/main/backgrounds
-git clone https://gitlab.gnome.org/GNOME/gnome-backgrounds
-yay speedo
-speedometer
-speedometer -rx
-speedometer -r -f
-speedometer -r -f "/run/media/nasif/01D6435BA6EB4610/Seed/Half-Life 2 3in1"
-speedometer -h
-speedometer -r
-speedometer -rc
-sudo speedometer -rc
-yay -Rsc speedometer
-ping reddit.com
-nitrogen --set-auto/home/nasif/Downloads/temp/gnome-backgrounds/backgrounds/brush-strokes-d.jpg  
-nitrogen --set-auto /home/nasif/Downloads/temp/gnome-backgrounds/backgrounds/brush-strokes-d.jpg  
-nvim ~/.config/i3/config
-code
-nitrogen -h
-nitrogen --set-centered /home/nasif/Downloads/temp/gnome-backgrounds/backgrounds/brush-strokes-d.jpg  
-sudo pacman -S pavucontrol
-cp -rfiv ~/dotfiles/i3/.config/i3/config ~/.config/i3/
-ln -svi ~/dotfiles/i3/.config/ ~/.config/i3
-cp .config/* .
-cp -rvi .config/* .
-diff i3-scrot.conf .config/i3-scrot.conf
-cp -rvi i3/* .
-rm -rf i3
-cp -rvi ~/.config/i3 ~/Desktop/ $$ ln -svi ~/dotfiles/i3 ~/.config/
-cp -rvi ~/.config/i3 ~/Desktop/ $$ rm -rvi ~/.config/i3 $$ ln -svi ~/dotfiles/i3 ~/.config/
-cp -rvi ~/.config/i3 ~/Downloads/ $$ rm -rvi ~/.config/i3 $$ ln -svi ~/dotfiles/i3 ~/.config/
-nautilus&
-ln -vi ~/dotfiles/i3 ~/.config/
-ln -svi ~/dotfiles/i3 ~/.config/
-ln -svi ~/dotfiles/polybar ~/.config/
-yay polybar
-polybar
-cd .config/
-cd .config/i3
-mpv http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A6%20%20M%20%20%E2%80%94%20%20R/Reno%20911%21%20%28TV%20Series%202003%E2%80%93%20%29%20480p/Season%2001/Reno.911%21.S01E06.480p.DVDRip.x264-NME.mkv
-yay plasman 
-yay plasma
-lla patches
-startx
-dwm&
-nvim config.def.h
-touch dwm.desktop
-sudo touch dwm.desktop
-i3.desktop > dwm.desktop
-sudo i3.desktop i>> dwm.desktop
-sudo i3.desktop >> dwm.desktop
-sudo echo $(cat i3.desktop) >> dwm.desktop
-sudo echo $(cat i3.desktop) >> sudo dwm.desktop
-nvim dwm.desktop
-cat i3.desktop
-su
-nvim i3.desktop
-cat dwm.desktop
-cat sudo
-sudo rm suido 
-sudo rm sudo 
-dwm
-cp -irv * ~/dotfiles/dwm/
-gnome-photos dwm.png
-yay -Rsc demenu
-yay -Rsc dmenu
-cd dmenu
-dmenu
-nvim dwm.c
-nvim dwm
-nvim dwm.o
-cat README
-diff config.h config.def.h
-whatis pulsemixer
-yay pulsemixer
-cd slock
-cp -irv * ~/dotfiles/slock/
-suck
-cd patches
-yay gnome-volume-control-applet 
-whatis stalonetray
-cd i3
-cd polybar
-nvim config
-nvim launch.sh
-chmod +x dwm-status.sh
-nvim dwm-status.sh
-yay xsetroot
-./dwm-status.sh
-nvim README
-mv dwm-status.sh dwm-start.sh
-nitrogen --set-centered /home/nasif/Pictures/brush-strokes-d.jpg 
-cd /usr/share/xsessions
-sudo nvim dwm.desktop
-mkdir dwm-start
-cd dwm-status
-cp -irv * ~/dotfiles/dwm-start
-rm -rf dwm-status
-sudo ln -svi dwm-start.sh /usr/local/bin/
-cd dwm\
-cd dwm
-nvim dwm-start.sh
-rm /usr/local/bin/dwm-start.sh
-sudo rm /usr/local/bin/dwm-start.sh
-cp -irv dwm-start.sh /usr/local/bin/
-sudo cp -irv dwm-start.sh /usr/local/bin/
-chmod +x dwm-start.sh
-sudo chmod +x dwm-start.sh
-sudo nvim dwm-start.sh
-dwm-start.sh
-nvim config.h
-whatis pamixer
-yay pamixer
-sudo make clean install
-nvim dunstrc
-dunst -h
-whatis dunst
-where dunst
-cp ~/dotfiles/dunst/.config/dunst/dunstrc ~/dotfiles/dunst
-cd dunst
-rm -rf .config
- ..
-ln -s dunst ~/.config
-rm dunst
-ln -sv ~/dotfiles/dunst ~/.config/
-dunst
-man dunst
-notify-send 'Hello world!'
-rm -rf ~/dotfiles/dwm-start/dwm-start.sh
-cp dwm-start.sh ~/dotfiles/dwm-start
-cd dwm-start
-sudo rm dwm-start.sh
-ln -sv ~/dotfiles/dwm-start/dwm-start.sh /usr/local/bin/
-sudo ln -sv ~/dotfiles/dwm-start/dwm-start.sh /usr/local/bin/
-cd dwm
-yay fontawesome
-yay gnome-shell-pomodoro
-sudo -Syyu
-neofetch --ascii_distro arch
-yay anaconda
-chmod +x Anaconda3-2021.11-Linux-x86_64.sh
-sudo ./Anaconda3-2021.11-Linux-x86_64.sh
-./Anaconda3-2021.11-Linux-x86_64.sh
-anaconda 
-anaconda -h
-whoami
-pwd
-killall anaconda
-nvim .zshrc
-source ~/.zshrc 
-anaconda init
-anaconda search ipykernal
-conda config --append channels conda-forge
-conda install ipykernal
-conda config --show channels
-conda config --append channels bioconda
-conda install ipykernel	
-j
-echo $0
-nvim reverse_wordle.py
-conda set auto_activate_base false
-conda config set auto_activate_base false
-conda config --set auto_activate_base false
-conda 
-cd Documents/study/Spring2022/CSE422/LAB/LAB01
-wget https://docs.google.com/document/d/1ZLTJbbR1baadqPxsYifV1dtp06fXTqQIX_lA_mLh1xE/edit?usp=sharing
-wget "https://docs.google.com/document/d/1ZLTJbbR1baadqPxsYifV1dtp06fXTqQIX_lA_mLh1xE/edit?usp=sharing"
-yay libreoffice
-yay crystaldiskmark
-free
-uname -a
-uname -ar
-git config --global init.defaultBranch main
-git config --global color.ui auto
-ls ~/.ssh/id_ed25519.pub
-sudo ls ~/.ssh/id_ed25519.pub
-ssh-keygen -t ed25519 -C nasif2ahmed@gmail.com
-dot 
-git add * && git commit -am "Configured DWM for endevouros february 2022 and some folder rearrange"
-cat ~/.ssh/id_ed25519.pub
-ssh -T git@github.com
-touch test.html
-nvim test.html
-mpv https://drive.google.com/file/d/1uEAPiFd_DvR6vukIhmyQpjMqudFidroU/view
-yay v42loopback
-sudo pacman -S adb v4l2loopback-dkms
-yay v4l2loopback
-sudo pacman -Syu linux-latest-headers linux-lts-headers
-yay linux-latest-headers
-yay linux headers
-yay linux515-headers
-mhwd-kernel -li
-yay mhwd-kernel
-sudo pacman -S android-tools
-sudo modprobe v4l2loopback
-killall google-chrome
-killall chrome
-mkdir chrome
-nautilus .
-cd html-boilerplate
-google-chrome-stable -h
-google-chrome-stable --incongnito index.html
-yay dillo
-yay fragments
-yay -Rcs fragments blanket
-flatpak -h
-flatpak install cozy
-flatpak install fragments
-flatpak install blanket
-flatpak install tangram kooha commit metadat
-yay gnome-circle
-yay openrgb
-flatpak install Solanum
-yay -Rcs openrgb
-yay noto-fonts-emoji
-yay obs
-yay obs virtual camera
-cd Documents/ODIN
-git clone git@github.com:NasifAhmed/odin-recipes.git
-cd odin-recipes
-killall firefox\
-killall firefox
-killall firefox\
-source /home/nasif/anaconda3/bin/activate
-conda activate base
- /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38485 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45761 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43987 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 36219 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46375 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37891 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33647 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 42283 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33959 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41707 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 44605 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 42187 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43381 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33465 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45399 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35307 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35161 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35139 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37609 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 34785 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46081 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46019 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35937 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37747 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41467 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33713 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 44093 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41293 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45537 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43175 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39085 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37133 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43259 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 34823 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35131 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37987 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46701 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45473 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45163 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38815 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
- cd /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01 ; /usr/bin/env /home/nasif/anaconda3/bin/python /home/nasif/.vscode/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40663 -- /home/nasif/Documents/study/Spring2022/CSE422/LAB/LAB01/lab01.py 
-vtop
-btop
-yay cpu usage
-yay cpu monitor
-yay cputop
-yay ctop
-mv linux-5.16.9.tar.xz ~/Desktop/Kernal-Test
-cd ~/Desktop/Kernal-Test
-mv Kernal-Test linux-5.16.9.tar.xz
-tar xfv linux-5.16.9.tar.xz 
-cp /boot/config-$(uname -r) .config 
-pushd /boot/
-cd grub
-cd efi
-pushd /usr/src/
-cd linux
-sudo cp -iv .config ~/Desktop/linux-5.16.9/
-popd
-not bad
-cd Desktop
-cd /src
-cd /src/
-where src
-cd ~/Desktop
-cp /usr/src/linux/.config .
-rm .config
-nproc
-uname -r
-tar xvf linux-5.16.9.tar.xz
-14 second to uncompress the kernel file ............
-lets copy the main config file from my kernel .................
-cd linux-5.16.9
-sudo cp /usr/src/linux/.config .
-clear
-sudo make -j 12
-rm linux-5.16.9
-rm -rfvi linux-5.16.9
-rm -rfvi linux-5.16.9 -y
-rm -rfv linux-5.16.9
-rmdir linux-5.16.9
-rmdir -rf linux-5.16.9
-rm -rf linux-5.16.9
-sudo rm -rf linux-5.16.9
-yay kdenlive
-killall kooha
-yay gimp
-cd Videos
-yay ytp-dl
-yt-dlp https://www.youtube.com/watch?v=OJhWtBBJw10
-yt-dlp
-youtube-dl https://www.youtube.com/watch?v=OJhWtBBJw10
-youtube-dl -h
-yt-dlp "https://www.youtube.com/watch?v=OJhWtBBJw10"
-cd Documents/WORDLE
-python reverse_wordle.py
-cd .mozilla/firefox
-cd mw137n0h.default-release
-cd chrome
-code . && exit
-history
-code .histfile
-cat .histfile| word
-cat .histfile| wc
-cat .histfile| lc
-yay line count
-yay noisetorch
-yay -S zsh-syntax-highlighting sh-autosuggestions zsh-history-substring-search
-yay -S sh-autosuggestions
-yay -S zsh-autosuggestions
-which zsh
-chsh -l
-chsh -s /bin/zsh nasif
-chsh -s /usr/bin/zsh nasif
-firefox -h
-firefox --private-window 
-kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.krunner,/App,,toggleDisplay"\
-kwin_x11 --replace
-yay cmatrix
-yay droidcam
-yay keepsolid
-yay vpn unlimited
-sudo pacman -S --needed kamoso krename kcalc kcharselect plasma-browser-integration ffmpegthumbs kdegraphics-thumbnailers kdeplasma-addons plasma-firewall bluedevil libappindicator-gtk3 libappindicator-gtk2 noto-fonts-emoji xdg-desktop-portal xdg-desktop-portal-kde gnome-settings-daemon gsettings-qt plasma-systemmonitor plasma-wayland-session\
-\
-sudo pacman -S --needed xdg-desktop-portal xdg-desktop-portal-kde
-sudo nano /etc/environment
-sudo pacman -R ffmpegthumbnailer
-sudo pacman -S --needed ffmpegthumbs kdegraphics-thumbnailers
-rm ~/.config/Trolltech.conf
-kbuildsycoca5 --noincremental
-rm -rf ~/.cache/*
-yay clearvpn
-yay -S kwrite 
-killall firefox
-sudo pacman -Syyu
-yay kmail
-yay hspell
-yay kde gmail
-yay -Rcs kmail kmailapplet 
-yay -Rcs kmailtransport 
-cmatrix
-yay -Rcs korganizer
-yay korganizer
-yay PIM
-yay nvtop
-nvtop
-yay kalendar
-yay powercord
-yay -Rcs kmail kmailtransport
-nvim  alacritty.yml
-rm -rf powerlevel10k
-yay startship
-yay zsh-syntax-highlighting
-yay zsh-autosuggestions
-yay                                                              [---------------------------------------------------------------------------] 100%\
-:: Processing package changes...
-yay zsh-history-substring-search
-yay starship
-ln -sf ~/dotfiles/starship.toml ~/.config
-cat ~/.histfile
-line ~/.histfile
-rm -rf alacritty
-ln -sf ~/dotfiles/alacritty ~/.config/
-rm -rf nvim
-ln -sf ~/dotfiles/nvim ~/.config/
-sudo pacman -S gnome-backgrounds
-which libadweita
-which Libadwaita
-which libadwaita
-yay Libadwaita
-yay -Rcs code
-yay -Ycc
-yay gnome-weather
-yay gnome-calendar
-yay gnome-
-yay gnome-clocks
-yay gnome-music
-yay blanket
-yay spotify
-yay -S spotify
-yay python
-sudo pacman -S python
-python --version
-pip
-yay pip
-yay jdk
-yay java
-yay oracle java
-yay mpv
-java -version
-yay lsd
-ll
-yay neovim
-mkdir mpv
-mv -v mpv.conf ./mpv
-code mpv.conf
-cd mpv
-rm -rf *
-cp -irv ~/.config/mpv/mpv.conf .
-cd ~/.config
-rm -rf mpv
-ln -sf ~/dotfiles/mpv ~/.config/
-git config --global user.name "Nasif Ahmed"
-git config --global user.email "nasif2ahmed@gmail.com"
-git add * && git commit -am "New MPV config"
-pip install subliminal
-echo PATH
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-mkdir ~/.config/mpv/scripts
-cd ~/Downloads
-mkdir temp
-git clone https://github.com/davidde/mpv-autosub
-cd mpv-autosub
-cp -irv autosub.lua ~/.config/mpv/scripts
-cd ~/.config/mpv
-cd scripts
-mpv "https://youtu.be/RvuMgVJvrig"\ 
-mpv "https://youtu.be/RvuMgVJvrig"
-yay google-chrome
-mkdir shaders
-cd shaders
-nvim deband-pre.glsl
-yay youtube-dl
-mkdir Tutorials
-cd Tutorials
-yt-dlp "https://www.youtube.com/watch?v=VPvVD8t02U8&t=198s"
-shutdown -c
-shutdown now
-yay qbittorrent
-yay discord
-yay pamac
-yay -Rcs firewall
-yay -Rcs firewalld
-yay gthump
-yay gthumb
-bash
-yt-dlp -h
-yt-dlp -F "https://youtu.be/RUu_RtRxsTY"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/RUu_RtRxsTY"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/NVaqc8eQ2YQ"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/q_ZZj392i-I"
-yt-dlp -F "https://youtu.be/q_ZZj392i-I""
-yt-dlp -F "https://youtu.be/q_ZZj392i-I"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://youtu.be/XmBji07OtwA"
-yay rythmbox
-sudo pacman -S rhythmbox
-yt-dlp --list-formats "https://youtu.be/q_ZZj392i-I"
-yt-dlp -f "248" --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp -f 22 --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp -f 248 --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-spotdl "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yay redis
-spotdl "https://open.spotify.com/playlist/4ETs8rEsXcUPytKBHPPBbe"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=o2gGD4ewTNA&t=590s"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=k3WkJq478To"
-yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=XmBji07OtwA"
-yay -Rcs snapd-glib
-help read
-ssh bandit.labs.overthewire.org:2220
-ssh bandit.labs.overthewire.org
-man ssh
-ssh -h
-ssh bandit0@bandit.labs.overthewire.org,
-ssh bandit0@bandit.labs.overthewire.org
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-ssh bandit1@bandit.labs.overthewire.org -p 2220
-du
-man du
-du -h
-ssh bandit2@bandit.labs.overthewire.org -p 2220
-ssh bandit3@bandit.labs.overthewire.org -p 2220
-ssh bandit4@bandit.labs.overthewire.org -p 2220
-ssh bandit5@bandit.labs.overthewire.org -p 2220
-man xarg
-ls || file
-file < ls
-man xargs
-ssh bandit6@bandit.labs.overthewire.org -p 2220
-man grep
-man find
-yt-dlp "https://pornone.com/australian/arianny-koda-interview/277346881/"
-git clone git@github.com:NasifAhmed/life.git
-yt-dlp "https://pornez.net/video557557/kagney-linn-karter-spin-suck-and-fuck-1-2012/"
-yay evince
-mpv "http://fs.ebox.live/Animated%20and%20Anime-Series/Made%20in%20Abyss/Season%201/[DB]Made%20in%20Abyss_-_01_(Dual%20Audio_10bit_BD1080p_x265).mkv"
-mpv "http://fs.ebox.live/Animated%20and%20Anime-Series/Made%20in%20Abyss/Season%201/[DB]Made%20in%20Abyss_-_02_(Dual%20Audio_10bit_BD1080p_x265).mkv"
-cd Downloads/KEK
-cd Downloads/
-mkdir KEK
-cd KEK
-yt-dlp "https://pornez.net/video566747/prvs-21-06-04-amy-the-best-fuck-of-his-long-life/"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E04.Bullet.Points.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E05.Shotgun.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E07.Problem.Dog.Minute.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E08.Hermanos.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E09.Bug.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E10.Salud.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E11.Crawl.Space.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E12.End.Times.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2004/Breaking.Bad.S04E13.Face.Off.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2005/Breaking.Bad.S05E01.Live.Free.or.Die.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-git clone git@github.com:NasifAhmed/study.git
-cd study
-ls
-mkdir Summer2022
-cd Summer2022
-mkdir CSE331
-cd CSE331
-git log
-git st
-git add * && git commit -am "New Semester"
-yay spotdl
-cd Music
-mkdir spotDL
-cd spotDL
-pip install redis
-spotdl "https://open.spotify.com/playlist/2YHlC3YUOsS97wKQPRiRqU"
-spotdl "https://open.spotify.com/playlist/2irfXB7Mav16lvTi3pP8H3"
-spotdl "https://open.spotify.com/playlist/2irfXB7Mav16lvTi3pP8H3
-spotdl https://open.spotify.com/playlist/2irfXB7Mav16lvTi3pP8H3
-spotdl 'the weeknd'
-spotdl 'blinding lights'
-yay zspotify
-pip install ffmpy
-zspotify -h
-zspotify https://open.spotify.com/playlist/2irfXB7Mav16lvTi3pP8H3
-code .gitignore
-python
-yay flix-cli
-git clone https://github.com/demonkingswarn/flix-cli
-cat requirements.txt
-pip httpx pycryptodomex regex
-pip install httpx pycryptodomex regex
-vim $PATH
-echo $PATH
-cat flix-cli.py
-study
-cd Documents/study
-git status
-git add * && git commit -am "added cse330 and mat215"
-git push
-cd Downloads
-cd temp
-cd flix-cli
-./flix-cli.py
-yay ungoogled-chromium
-top
-yay bashtom
-yay btop
-yay bashtop
-bashtop
-yay ytop
-yay gotop
-cd Documents
-mkdir contest
-cd contest
-gcc test.cpp -o test
-cd Documents/contest
-gcc test.cpp
-g++ test.cpp
-./a.out
-rm -rfv test a.out
-g++ test.cpp -o test
-./test
-mpv "http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2005/Breaking.Bad.S05E02.Madrigal.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv"
-systemctl reboot -i
-free -h
-gotop
-ytop
-yay awesomewm
-yay awesome
-cd /etc/xdg/awesome/
-cp -irv rc.lua ~/.config
-mkdir awesome
-mv -v rc.lua awesome
-cd autostart
-nvim rc.lua
-code rc.lua
-cp -irv /usr/share/awesome/themes/zenburn/theme.lua ~/.config/awesome
-yay xcopy
-yay copy
-yay xclip
-xclip
-xclip -h
-mpv xclip -o
-mpv
-alacritty -h
-alacritty -e mpv "$(xclip -o)"
-mpv $(xclip -o)
-mpv "$(xclip -o)"
-http://172.16.50.12/SAM-FTP-1/TV-WEB-Series/TV%20Series%20%E2%99%A5%20%20A%20%20%E2%80%94%20%20L/Breaking%20Bad%20%28TV%20Series%202008%E2%80%932013%29%201080p/Season%2005/Breaking.Bad.S05E02.Madrigal.1080p.BluRay.10bit.HEVC.6CH-MkvCage.ws.mkv
-xclip -o
-alacritty -e mpv "$(xclip -o)"&
-mpv "$(xclip -o)"&
-xclip -o > mpv
-xclip -o | mpv
-mpv | xclip -o
-yay brave
-qbittorrent -h
-man qbittorrent
-mv -irv ~/.config/awesome ~/dotfiles
-mv -iv ~/.config/awesome ~/dotfiles
-dot
-vim rc.lua
-rm -rfv awesome
-mv -iv ~/.config/awesome ~/dotfiles/
-cd awesome
-cd ..
-ln -sf ~/dotfiles/awesome ~/.config/
-cd ~/.config/
-cd /etc/X11/xorg.conf.d/
-sudo code 50-mouse-acceleration.conf
-sudo vim 50-mouse-acceleration.conf
-code 50-mouse-acceleration.conf
-sudo vim
-sudo nvim
-xinput --list --short
-xinput --list-props 12
-sudo nvim 50-mouse-acceleration.conf
-xinput --set-prop 12 'libinput Accel Profile Enabled' 0
-xinput --set-prop 13 'libinput Accel Profile Enabled' 0
-xinput --list-props 13
-xinput --list
-cat 50-mouse-acceleration.conf
-cat 00-keyboard.conf
-man libinput
-/var/log
-less Xorg.0.log
-ln -sfv ~/dotfiles/qtile ~/.config/
-cd .config
-cd qtile
-pip install dbus-next
-killall dbus-next
-yay install picom
-yay -S picom i3lock-fancy polkit-gnome lxappearance
-nitrogen --set-centered /home/nasif/Pictures/Wallpaper/1652283849054.jpg
-yay -Rcs nitrogen
-sh -c "$(curl -sL https://nextdns.io/install)"
-yay -S nextdns
-yay -Rcs isual-studio-code-bin
-yay -Rcs visual-studio-code-bin
-yay -S vscodium vscodium-features
-yay -Rcs vscodium-bin vscodium-features
-cd .config/mpv
-nvim mpv.conf
-yay
-yay vscode
-mv rc.lua rc.lua.old
-cp -irv /etc/xdg/awesome/rc.lua ~/dotfiles/awesome
-code ~/.config/qtile/
-fc-list | grep "Jet"
-fc-list | grep "JetBrains Mono"
-yay qtile
-logout
-cd .config/awesome
-code .
-cd .config/alacritty
-yay i3
-yay -Rcs qtile
-pip install qtile
-pip uninstall qtile
-yay -S qtile
-yay -S libdbus
-qtile -h
-qtile shell
-qtile top
-export PATH=$PATH:/home/nasif/.local/bin
-cp -irv ~/.local/bin/android-platfrom-tools /usr/local/bin/
-sudo cp -irv ~/.local/bin/android-platfrom-tools /usr/local/bin/
-export $PATH
-cd /usr/local/bin
-chmod +x adb fastboot
-sudo chmod +x adb fastboot
-adb 
-adb
-./adb
-./adb 
-cd android-platfrom-tools
-./adb devices
-cd Documents/Flash
-cp -iv Magisk-v25.0.apk Magisk-v25.0.zip
-./adb reboot recovery
-./adb flash ../Magisk-v25.0.zip
-./adb reboot system
-./adb reboot bootloader
-./fastboot 
-./fastboot devices
-fastboot
-sudo ./fastboot reboot recovery
-sudo ./fastboot devices
-sudo ./fastboot flash boot ../lineage-19.1-20220609-recovery-taimen.img 
-./adb sideload ../lineage-19.1-20220609-nightly-taimen-signed.zip
-./adb sideload ../MindTheGapps-12.1.0-arm64-20220605_112439.zip
-./adb sideload ../Magisk-v25.0.zip
-cd ~
-man ls
-cd .config/alacritty/
-code alacritty.yml
-neofetch
-code config.py
-which nitrogen
-yay -S nitrogen
-touch autostart.sh
-cd .config/qtile
-chmod +x autostart.sh
-lla
-./autostart.sh
-cd .local/share/qtile
-cat qtile.log
-exit
-cat qtile.log
-cd .local/share/qtile
-cat qtile.log
-cd .local/share/qtile
-cat qtile.log
-nitrogen --restore
-cd .local/share/qtile
-cat qtile.log
-yay volumeicon
-volumeicon&
-volumeicon -h
-volumeicon -help-all
-volumeicon --help-all
-yay nm-applet
-killall picom
-cd .local/share/qtile
-cat qtile.log
-pip psutil
-pip install psutil
-gotop
-amixer -c 0 sset Master 1- unmute
-amixer -
-amixer -h
-amixer -c 0 sset Master 1- unmute
-amixer -c 0
-amixer -c 0 sset Master 1- unmute
-amixer -c 0 sset 1- unmute
-amixer +1
-man amixer
-amixer scontrols
-amixer -c 0 sset Master 1+ unmute
-yay whatsapp
-cd Documents/Flash
-cd android-platfrom-tools
-./adb reboot bootloader
-sudo ./fastboot flash boot ../PixelExperience_Plus_taimen-12.1-20220516-1928-OFFICIAL.img
-./adb sideload ../productpartition-pixel2xl.zip
-./adb sideload ../PixelExperience_Plus_taimen-12.1-20220516-1928-OFFICIAL.zip
-./adb sideload ../Magisk-v25.0.zip
-yay telegram
-where pacman.d
-cd /etc/pacman.d/
-lla
-cat mirrorlist
-yay ffmpeg
-sudo pacman -Syyu
-yay ffmpeg
-yay -S telegram-desktop
-cd ~
-lla
-yay
-yay libreoffice
-free -h
-gotop
-yay
-yay -Rcs gotop-bin
-yay
-dot
-cd dwm
-lla
-cd ..
-pwd
-cd ..
-ln -sfv ~/dotfiles/dwm ~/.config
-cd ~/.config
-lla
-cd dwm
-lla
-ls patches
-make clean install
-sudo make clean install
-cd /usr/share/xsessions
-lls
-ls -ahlD
-cp -irv qtile.desktop dwm.desktop
-sudo cp -irv qtile.desktop dwm.desktop
-lla
-code dwm.desktop
-sudo vim dwm.desktop
-sudo nvim dwm.desktop
-cd /usr/share/xsessions
-nvim dwm.desktop
-sudo nvim dwm.desktop
-cd ~/.config/dwm
-lla
-dot
-lla
-ln -sfv ~/dotfiles/dmenu ~/.config/
-cd ~/.config/dmenu
-lla
-cd dmenu
-lla
-vim config.
-vim config.h
-ls patches
-sudo make clean install
-dot
-cd dwmblocks
-lla
-cat luke.smith
-cd dwmblocks
-lla
-cat blocks.h
-ln -sfv ~/dotfiles/dwmblocks ~/.config/
-cd ~/.config/dwmblocks
-lla
-cd dwmblocks
-sudo make clean install
-dwmblocks&
-killall dwmblocks
-dot
-lla
-cd dwm-start
-lla
-cat README
-cd bin
-lla
-cd ..
-lla
-cat dwm-start.sh
-ln -sfv ~/dotfiles/dwm-start/dwm-start.sh ~/usr/local/bin/
-cd bin
-pwd
-lla
-cat stest
-lla
-cat android-platfrom-tools
-lla
-ls android-platfrom-tools
-cd ..
-cat README
-cd /usr/local/bin
-lla
-sudo ln -sfv ~/dotfiles/dwm-start/dwm-start.sh /usr/local/bin/
-lla
-chmod +x dwm-start.sh
-cd /usr/share/xsessions
-lla
-nvim dwm.desktop
-sudo nvim dwm.desktop
-dot 
-cd dwm-start
-cat dwm-start.sh
-nvim dwm-start.sh
-cd ~/.config/dwm
-lla
-cd ./patches
-cd ..
-lla
-git apply ./patches/dwm-systray-6.3.diff
-killall qbttorrent
-dot
-cd dwm-start
-nvim dwm-start.sh
-volumeicon
-dot
-cd dwm-start
-nvim dwm-start.sh
-dot
-cd dwm-start
-nvim dwm-start.sh
-xsetroot
-yay xsetroot
-yay pamixer
-dot 
-cd ~/.config/dwm
-nvim config.
-nvim config.h
-sudo make clean install
-nvim config.h
-sudo make clean install
-dot
-cd dwm
-lla
-cd patches
-cat dwm-systray-6.3.diff
-cd ..
-patch ./patches/dwm-systray-6.3.diff
-gotop
-yay ytop
-killall picom
-patch < ./patches/dwm-systray-6.3.diff
-git status
-git add patches/dwm-systray-6.3.diff
-git commit config.h ../qtile/autostart.sh ../qtile/config.py ../dwm-start/dwm-start.sh
-git push
-lla
-git status
-git checkout
-git status
-git restore .
-git restore
-git status
-dot
-git restore .
-git status
-cd ~/.config/dwm
-cd patches
-nvim dwm-systray-6.3.diff
-cd ~/.config/dwm
-nvim config.def.h
-cd ~/.config/dwm
-code .
-cd ~/.config/dwm
-sudo make clean install
-git status
-git restore .
-git status
-git commit patches/dwm-systray-6.3.diff -m "add dwm-systray patch file"
-git push
-qbittorrent
-lla
-sudo make clean install
-killall picom
-notify-send "hello"
-yay dunst
-notify-send "hello"
-notify-send -h
-notify-send --help
-notify-send -t 10 --help
-notify-send -t 10 "hello"
-notify-send -t 200 "hello"
-notify-send -t 500 "hello"
-notify-send -t 1000 "hello"
-notify-send -t 800 "hello"
-cd ~/.config/dwm
-nvim config.h
-ls & notify-send -t 800 "hello"
-pamixer -h
-pamixer --get-volume-human
-notify-send -t 800 ms $(pamixer --get-volume-human)
-notify-send -t 800 Volume: $(pamixer --get-volume-human)
-notify-send -t 800 $(pamixer --get-volume-human)
-notify-send
-notify-send -h
-dunst -h
-notify-send -?
-notify-send --help
-sudo make clean install
-cd ~/.config/dwm
-nvim config.
-nvim config.h
-pamixer --allow-boost -d 5 & pkill -RTMIN+10 dwmblocks & notify-send -t 800 $(pamixer --get-volume-human)
-sudo make clean install
-yay
-killall picom
-cd /usr/local/bin
-lla
-nvim dwm-start.sh
-sudo nvim dwm-start.sh
-cd ~/.config/dwm
-lla
-nvim config.h
-xprop
-sudo make clean install
-cd ~/.config/dwm
-nvim config.h
-xprop
-sudo make clean install
-cd ~/.config/dwm
-nvim config.h
-sudo make clean install
-dto
-dot
-cd qtile
-lla
-code .
-yay gnome-themes-extra
-yay sassc
-cd Downloads
-lla
-cd temp
-lla
-git clone https://github.com/vinceliuice/Orchis-theme.git
-cd Orchis-theme
-lla
-./install.sh -h
-./install.sh -l
-./install.sh -l --tweaks solid black
-yay
-yay kvantum
-yay -S adwaitaqt6 qgnomeplatform
-yay adwaitaqt
-yay adwaitaqt6
-yay adwaitai-qt6
-yay adwaita-qt6
-yay adwaita-qt5
-yay adwaita-qt4
-sudo nvim /etc/environment
-yay -Rcs kvantum
-sudo nvim /etc/environment
-sudo ln -s -t /root /usr/share/themes
-sudo mv /root/themes /root/.themes
-sudo ln -s -t /root /usr/share/icons/
-sudo mv /root/icons /root/.icons
-yay -Yc
-sudo pacman -Sc
-sudo pacman -Scc
-rm -rf .cache/*
-sudo pacman -Rns $(pacman -Qdtq)
-dot
-code .
-git status
-dot
-git status
-git add arch-gnome-maintenance.txt
-git commit arch-gnome-maintenance.txt -m "add gnome maintenance copy paste from r/endevouros"
-git commit dwm-start/dwm-start.sh -m "remove picom at startup"
-git commit qtile/autostart.sh -m "remove picom at startup"
-git commit * -m "new dwm build"
-git status
-git restore .
-git status
-git remove dwm/config.def.h.rej
-git rm dwm/config.def.h.rej
-git status
-git push
-git clean -nXf
-git clean -Xf
-git status
-git clean -ndXf
-git clean -n dwm/config.def.h.rej dwm/dwm.c.rej
-git clean -ni dwm/config.def.h.rej dwm/dwm.c.rej
-git clean -i dwm/config.def.h.rej dwm/dwm.c.rej
-git status
-cd zsh
-lla
-cd ~/.config
-cd ~
-lla
-cat ~/dotfiles/zsh/.histfile ~/.histfile > ~/dotfiles/zsh/.histfileNEW
-cd ~/.config
-cd ~
-lla
-less .histfile
-wc -l .histfile
-history
-dot
-git status
-git add zsh/.histfile
-git commit * -m "retore zsh history file tracking in github"
-yay -S starship
-dot
-history
-lla
-yay -S lsd
-lla
-yay -S qbittorrent
-ln -sfv ~/dotfiles/qBittorrent ~/.config
-git status
-git add qBittorrent/
-git status
-git add zsh/.histfile
-lla
-git status
-git add zsh/.histfile
-cd ~/.config
-lla
-cd autostart
-lla
-dot
-git add qBittorrent/rss/feeds.json
-git status
-cat qBittorrent/lockfile
-cat qBittorrent/rss/storage.lock
-file qBittorrent/rss/storage.lock
-vim 
-vi
-dot
-vi .gitignore
-git status
-git add *
-git status
-git add *
-git status
-git commit * -m "...."
-git config --global user.email "nasif2ahmed@gmail.com"
-git config --global user.name "Nasif Ahmed"
-git commit * -m "...."
-git add ../.gitignore
-git status
-yay -S neovim
-yay -S google-chrome
-yay -S google-chrome-bin
-yay google-chrome
-yay telegram
-git status
-cd ..
-git status
-git commit * -m "...."
-yay kde calander
-yay okular
-yay kate
-yay kwrite
-yay kde-utilities
-yay kget
-yay kalendar
-yay kde-pim
-yay kalendar
-yay kde-pim
-yay
-cd Documents
-git clone git@github.com:NasifAhmed/study.git
-free -h
-glances
-yay mpv
-yay -S neofetch
-neofetch
-yay
-yay -S visual-studio-code-bin
-glances
-yay btop
-yay kde system monitor
-yay plasma system monitor
-yay
-reboot
-yay chrome
-yay
-dot
-git commit * -m "...."
-git config --global user.name "Nasif Ahmed"
-git config --global user.email "nasif2ahmed@gmail.com"
-git commit * -m "...."
-git push
-git status
-git add *
-git commit * -m "...."
-yay startship
-yay starship
-ln -sfv ~/dotfiles/qBittorrent ~/.config/
-ln -sfv ~/dotfiles/mpv ~/.config/
-ln -sfv ~/dotfiles/alacritty ~/.config/
-cd .config/
-lla
-yay lsd
-lla
-ln -sfv ~/dotfiles/starship.toml ~/.config
-font-list
-fc-list
-sudo cp -irv ~/Downloads/JetBrainsMono /usr/share/fonts/
-fc-cache -fv
-cd .config/alacritty
-lla
-vim alacritty.yml
-cd Documents
-cd .config
-lla
-cd alacritty
-vim alacritty.yml
-yay
-vim alacritty.yml
-cd Documents
-vim manjaro-zsh-prompt
-cd ~
-vim .zshrc
-cd Documents
-vim manjaro-zsh-prompt
-yay zsh
-cd /usr/share/zsh/plugins
-lla
-vim manjaro-zsh-prompt
-cd ..
-cd ~
-vim .zshrc
-yay google-chrome
-cd .config/alacritty
-vim alacritty.yml
-cd Documents
-cd .config/alacritty
-cd ..
-cd .config/alacritty
-vim alacritty.yml
-dot
-yay vscode
-yay vscodium
-dot
-git add *
-git commit * -m "...."
-git config --global user.email "nasif2ahmed@gmail.com"
-git config --global user.name "Nasif Ahmed"
-git commit * -m "...."
-git push
-yay -Rcns vscodium-bin
-yay vscode
-cd ~
-cd Downloads
-mkdir temp
-cd temp
-git clone https://github.com/zihaaad/win10-fonts.git
-sudo cp -r win10-fonts /usr/share/fonts/
-sudo chmod 644 /usr/share/fonts/win10-fonts
-fc-cache
-sudo chmod 644 /usr/share/fonts/win10-fonts
-fc-cache
-sudo chmod 666 /usr/share/fonts/win10-fonts
-fc-cache
-lla win10-fonts
-rm -rfv /usr/share/fonts/win10-fonts
-sudo rm -rfv /usr/share/fonts/win10-fonts
-lla
-cd win10-fonts
-lla
-sudo cp -r win10-fonts /usr/share/fonts/
-lla
-cd WindowsFonts
-lla
-cd ..
-sudo cp -r WindowsFonts /usr/share/fonts/
-fc-cache -fv
-lla
-cd WindowsFonts
-lla
-cd ..
-lla
-git clone https://github.com/zihaaad/bangla-fonts-fix-linux.git
-sudo cp -irv bangla-fonts-fix-linux/50-custom-bangla.conf <p dir="auto">put "50-custom-bangla.conf" file into ".config/fontconfig/conf.d/" directory. [create if directory doesn't exist]</p>
-pushd ~/.config
-lla
-mkdir fontconfig/conf.d
-mkdir fontconfig
-cd fontconfig
-mkdir conf.d
-popd
-cp -rv bangla-fonts-fix-linux/50-custom-bangla.conf ~/.config/fontconfig/conf.d/
-fc-cache
-fc-cache -fv
-LANG=bd_BD fc-match
-cd .config/alacritty
-nvim alacritty.yml
-cd .config/alacritty/
-nvim alacritty.yml
-sudo nano /etc/gdm/custom.conf
-nvim alacritty.yml
-cd .config/alacritty/
-nvim alacritty.yml
-yay -Rcns gnome-weather
-yay gnome-weather
-sudo dd if=/dev/zero of=/swapfile bs=1M count=3072 status=progress
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile\
-sudo bash -c "echo /swapfile none swap defaults 0 0 >> /etc/fstab"
-yay nvidia-installer
-nvidia-installer-check
-nvidia-installer-dkms --force
-sudo nvidia-installer-dkms --force
-yay -Rsnc nvidia-dkms nvidia-utils nvidia-settings
-yay -S nvidia-470xx-dkms nvidia-470xx-utils nvidia-470xx-settings
-yay btop
-btop
-glances
-yay ytop
-yay gotop
-gotop
-yay
-yay geary
-vim /etc/pacman.d/mirrorlist
-sudo vim /etc/pacman.d/mirrorlist
-nvim /etc/pacman.d/mirrorlist
-sudo nvim /etc/pacman.d/mirrorlist
-yay
-yay bitwarden
-yay telegram
-neofetch
-yay i3
-yay xclip
-yay i3
-yay polybar
-yay nitrogen
-yay dunst
-yay picom
-dot
-cd i3
-lla
-yay lsd
-lla
-vim config
-ln -sfv ~/dotfiles/i3 ~/.config
-cd ..
-lla
-ln -sfv ~/dotfiles/polybar ~/.config
-lla Scripts
-polybar&
-yay lxappearance
-cd .config/i3
-lla
-vim config
-yay rofi
-ln -sfv ~/dotfiles/rofi ~/.config
-cd .config/i3
-vim config
-cd ..
-cd polybar
-lla
-cat launch.sh
-lla scripts
-vim config
-yay fontawesome
-yay fontawesome 5
-yay i3exit
-blurlock
-i3exit -h
-i3exit logout
-yay -Rcns i3-gaps i3-scrot i3
-yay -Rcns i3-gaps i3-scrot i3lock i3exit i3-volume nitrogen polybar picom rofi dunst
-cd .config
-lla
-rm -rfv rofi i3 polybar
-yay
-dot
-cd Scripts
-lla
-vim BanglaFontDeleter
-cd .scripts
-lla
-cat unix
-vim startup.sh
-telegram-desktop -h
-telegram-desktop --help
-vim unix
-ventoy
-yay ventoy
-vim ventoy.json
-cd /run/media/ahmed/Ventoy/ventoy
-lla
-vim ventoy.json
-yay ventoyplugson
-lsblk
-sudo sh VentoyPlugson.sh /dev/sdb
-cd Downloads/ventoy-1.0.77-linux/ventoy-1.0.77
-lla
-sudo sh VentoyPlugson.sh /dev/sdb
-yay gimp
-yay gnome boxes
-free -h
-wget bit.ly/get-arcolinux-keys && chmod +x ./get-arcolinux-keys && sudo ./get-arcolinux-keys
-wget https://raw.githubusercontent.com/erikdubois/arcolinux-nemesis/master/arch/get-the-keys-and-repos.sh && chmod +x ./get-arcolinux-keys && sudo ./get-arcolinux-keys
-lla
-mv get-the-keys-and-repos.sh ~/Downloads
-cd ~/Downloads
-lla
-chmod +x get-the-keys-and-repos.sh
-./get-the-keys-and-repos.sh
-sudo pacman -Syu archlinux-tweak-tool-git
-vim /etc/pacman.d/mirrorlist
-nvidia-inst --legacyrepo
-vim /etc/pacman.conf
-sudo vim /etc/pacman.conf
-sudo nvim /etc/pacman.conf
-yay
-exit
-cd Downloads
-mkdir temp
-cd temp
-git clone https://aur.archlinux.org/gnome-browser-connector.git
-cd gnome-browser-connector
-makepkg -si
-timedatectl set-local-rtc 1 --adjust-system-clock
-cd .config/qBittorrent
-lla
-yay lsd
-lla
-cd ..
-lla
-free -h
-reboot
-lla .config
-yay gnome-weather
-yay -S gnome
-yay -S gnome-clock
-yay gnome-clock
-yay gnome-text
-killall brave
-yay google-chrome
-yay warp
-warp-cli register
-sudo systemctl start warp-svc.service
-sudo systemctl enable --now warp-svc.service
-warp-cli register
-warp-cli connect
-warp-cli disconnect
-yay java
-yay jdk
-yay visual studio
-warp-cli status
-yay google-chrome
-yay
-warp-cli connect
-warp-cli disconnect
-yay aria2
-aria2c -h
-mkdir Desktop
-cd Desktop
-lla
-aria2c https://drive.google.com/file/d/1pZs34SC6mm-0nYAcesP97ao3HBdXFi5E/view?usp=sharing
-aria2c "https://drive.google.com/file/d/1pZs34SC6mm-0nYAcesP97ao3HBdXFi5E/view?usp=sharing"
-cd ~
-lla
-cd .local
-lla
-mkdir bin
-yay platform ools
-yay "platform tools"
-adb devices
-adb reboot
-adb reboot bootloader
-cd Desktop
-fastboot flash boot evolution_recovery.img
-adb sideload productpartition-pixel2xl.zip
-adb sideload evolution_taimen-ota-sq3a.220705.004-08282250-unofficial-unsigned.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-yay
-adb reboot recovery
-adb kill-server
-adb reboot recovery
-yay
-man ssh
-ssh bandit6@bandit.labs.overthewire.org -p 2220
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-ssh bandit1@bandit.labs.overthewire.org -p 2220
-ssh bandit2@bandit.labs.overthewire.org -p 2220
-ssh bandit3@bandit.labs.overthewire.org -p 2220
-ssh bandit4@bandit.labs.overthewire.org -p 2220
-ssh bandit5@bandit.labs.overthewire.org -p 2220
-ssh bandit6@bandit.labs.overthewire.org -p 2220
-man fidnh
-find
-man find
-ssh bandit7@bandit.labs.overthewire.org -p 2220
-	man sort
-ls
-sort
-	man sort
-cd Documents
-cd ..
-cd Desktop
-mkdir FLASH
-mv * -rv ./FLASH
-mv * -v ./FLASH
-ls
-cd FLASH
-ls
-cd ..
-mkdir test
-cd test
-yay neovim
-nvim text.txt
-sort text.txt
-sort --help
-man uniq
-uniq text.txt
-uniq --help
-uniq -c text.txt
-uniq -d text.txt
-uniq -u text.txt
-uniq -d text.txt
-man strings
-strings text.txt
-cp text.txt text2.txt
-;s
-ls
-nvim text2.txt
-uniq -d text2.txt
-cat text2.txt
-sort text2
-sort text2.txt
-man sort
-strings text2.txt
-man strings
-strings -n 8 text2.txt
-strings -n 9 text2.txt
-man base64
-base64 text.txt yowhat.txt
-base64 text.txt
-cat text.txt
-ls
-man base64
-base64 -d QgpHCkgKUgpXCk8KWQpUCkEKSApVClcK
-man base64
-base64 -d "QgpHCkgKUgpXCk8KWQpUCkEKSApVClcK"
-base64 text.txt > yowhat.txt
-ls
-cat yowhat.txt
-base64 -d yowhat.txt
-man grep
-ssh bandit8@bandit.labs.overthewire.org -p 2220
-wc text.txt
-wc text2.txt
-man uniq
-ssh bandit9@bandit.labs.overthewire.org -p 2220
-ssh bandit10@bandit.labs.overthewire.org -p 2220
-ssh bandit11@bandit.labs.overthewire.org -p 2220
-man tr
-tr --help
-ls
-cat text.txt | tr
-ls
-tr --help
-tr 
-tr "help" 
-tr "help" "hello"
-tr -d "help" "hello"
-tr "help" "hello"
-man tr
-tr "help" "h"
-tr -d "help" "h"
-tr -d "help"
-man tr
-tr -c 
-tr -c "hello"
-tr -c "hello" "nellow"
-man tr
-man tar
-gzip
-man gzip
-man bzip2
-man xxd
-xxd -h
-man tr
-ssh bandit12@bandit.labs.overthewire.org -p 2220
-ssh u0_a388@192.168.1.4 -p 8022
-ssh u0_a388@192.168.1.4
-ssh u0_a388@192.168.1.4.local
-ssh u0_a388@192.168.1.4
-ssh 127.0.0.1
-yay openssh-server
-yay openssh
-ssh localhost
-sudo ufw allow 22
-sudo netstat -anp | grep sshd
-ping localhost
-ipconfig
-ifconfig
-yay ipconfig
-yay net-ttols
-yay net-tools
-ipconfig
-ifconfig
-sudo service ssh status
-sudo lsof -i -n -P | grep LISTEN
-yay tmux
-tmux --help
-tmux
-exit
-tmux -2
-exit
-tmux
-ssh bandit11@bandit.labs.overthewire.org -p 2220
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-yay xcopy
-xclip
-yay xclip
-xclip --help
-man xclip
-xclip -o
-xclip -i ls
-xclip -i hello
-xclip -i "hello"
-xclip
-xclip -o < echo "test"
-xclip -o test
-xclip -o
-ssh bandit1@bandit.labs.overthewire.org -p 2220
-ssh bandit2@bandit.labs.overthewire.org -p 2220
-ssh bandit3@bandit.labs.overthewire.org -p 2220
-ssh bandit4@bandit.labs.overthewire.org -p 2220
-ssh bandit5@bandit.labs.overthewire.org -p 2220
-ssh bandit6@bandit.labs.overthewire.org -p 2220
-ssh bandit7@bandit.labs.overthewire.org -p 2220
-ssh bandit8@bandit.labs.overthewire.org -p 2220
-ssh bandit9@bandit.labs.overthewire.org -p 2220
-ssh bandit10@bandit.labs.overthewire.org -p 2220
-ssh bandit11@bandit.labs.overthewire.org -p 2220
-ssh bandit12@bandit.labs.overthewire.org -p 2220
-man hd
-man hexdump
-ssh bandit13@bandit.labs.overthewire.org -p 2220
-cd .ssh
-lla
-cat known_hosts
-cd ..
-lla
-cd Desktop
-lls
-lla
-echo "wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw" > pass.txt
-cat pass.txt
-warp-cli connect
-warp-cli disconnect
-warp-cli connect
-yay bashtop
-yay botop
-yay btop
-btop
-yay joplin
-yay
-reboot
-warp-cli status
-warp-cli disconnect
-tmux
-exit
-exit
-shutdown now
-tmux
-find password
-find pass
-find pass ~
-cd Desktop
-lla
-cat pass.txt
-ssh bandit13@bandit.labs.overthewire.org -p 2220
-man ssh
-man telnet
-man nc
-man tmux
-cd ..
-cd .ssh
-lla
-man ssh
-cd ~
-cd Desktop
-nvim test
-nvim pass.txt
-ssh bandit14@bandit.labs.overthewire.org -p 2220
-man ssh
-nvim pass.txt
-ssh bandit15@bandit.labs.overthewire.org -p 2220
-exit
-exit
-brave https://eloquentjavascript.net/
-brave --help
-brave -h
-man brave
-brave
-brave -n
-brave -new-session
-yay kdenlive
-yay firefox
-mpv https://www.youtube.com/watch?v=2Rz9LEmqswk
-mpv "https://www.youtube.com/watch?v=2Rz9LEmqswk"
-xclip -o
-mpv < xclip -o
-xclip -o > mpv
-mpv "$(xclip -o)"&
-alacritty -e mpv "$(xclip -o)"&
-mpv --help
-cd media
-cd /media
-lla
-cd Seed
-mpv Jujutsu.Kaisen.0.The.Movie.2021.1080p.BluRay.DDP5.1.x264-Kitsune.mkv
-mpv DAHMER.S01.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-TBD
-mpv --help
-mpv --list-options
-mpv "$(xclip -o)"
-yay
-node
-file /var/log/pacman.log
-less /var/log/pacman.log
-less /var/log.messages
-getenforce
-yay getenforce
-yay selinux
-sestatus
-ls /etc
-lla /etc
-lla /etc/kernel
-lla /etc/kernel/install.d
-exit
-shred --help
-warp-cli status
-warp-cli connect
-warp-cli disconnect
-warp-cli connect
-warp-cli disconnect
-bash
-man base64
-bash
-warp-cli status
-cd Desktop
-cd dump
-nvim all
-base64 -d all > result
-cat result
-less result
-nvim test
-nvim result
-warp-cli status
-nvim test
-less result
-echo "aHR0cHM6Ly9hbm9uZmlsZXMuY29tL1MybzdLZjhkeTIvQmV0dGllX0JvbmRhZ2VfT25seUZhbnNfbXA0Cmh0dHBzOi8vYW5vbmZpbGVzLmNvbS9xOGtlSzI4N3kzL0JldHRpZV9Cb25kYWdlX09ubHlGYW5zLTFfbXA0Cmh0dHBzOi8vYW5vbmZpbGVzLmNvbS84YnA5Szc4NHk3L0JldHRpZV9Cb25kYWdlX09ubHlGYW5zLTJfbXA0Cmh0dHBzOi8vYW5vbmZpbGVzLmNvbS9jZHFmSzU4OXlmL0JldHRpZV9Cb25kYWdlX09ubHlGYW5zLTNfbXA0\
-" >> all
-base64 -d all > result
-less result
-warp-cli connect
-less result
-cd Downloads
-lla
-cd temp
-lla
-cd ..
-cd Desk
-python wp-plus.py
-warp-cli account
-warp-cli disconnect
-yay
-nvim .zshrc
-source .zshrc
-nvim .zshrc
-source .zshrc
-cd Desktop
-lla
-cat pass.txt
-node
-cd Desktop
-lla
-mkdir work
-cd work
-nvim test.js
-node test.js
-fc-list | grep "JetBrains Mono"
-nvim test.js
-test
-bash
-man shuf
-shuf 
-shuf "hell:
-shuf "hell"
-cd De
-cd Desktop
-lla
-cd test
-lla
-shuf text.txt
-cat text.txt
-ls
-ls | shuf -n 1
-ls | shuf -n 2
-warp-cli status
-ssh ssh-nasifahmed.alwaysdata.net
-ssh nasifahmed@ssh-nasifahmed.alwaysdata.net
-warp-cli status
-yay obsidian
-yay joplin
-yay onenote
-yay microsoft onenote
-yay -Rcsn joplin-cli
-yay -Rcsn joplin
-yay -Rcsn joplin-desktop
-cd Desktop
-lla
-cd work
-nvim test.js
-node test.js
-nvim test.js
-node test.js
-nvim test.js
-node test.js
-nvim test.js
-node test.js
-nvim test.js
-node 
-nvim test.java
-javac test.java
-nvim test.java
-javac test.java
-java test
-nvim test.java
-yay
-yay java
-yay jdk
-yay zulu
-java
-java --version
-yay zulu
-yay -Rcns zulu-17-bin
-cd Downloads
-lla
-tar -xzvf zulu17.36.19-ca-jdk17.0.4.1-linux_i686.tar.gz
-yay revanced
-revanced-builder
-exit
-yay -h
-yay -Q java
-yay -Q jdk
-yay -Rcns jdk
-revanced-builder
-exit
-yay -Rcns jdk17-openjdk jdk-openjdk
-yay -Rcns  revanced-builder
-yay revanced-builder
-revanced-builder
-adb devices
-dot
-git add *
-git commit * -m "...."
-git config --global user.name "Nasif Ahmed"
-git config --global user.email "nasif2ahmed@gmail.com"
-git commit * -m "...."
-git push
-yay
-reboot
-cd Downloads
-lla
-cd ..
-cd Desktop
-cd FLASH
-lla
-aria2c "https://doc-14-9s-docs.googleusercontent.com/docs/securesc/fcprra93r0dag7lq461mdlddk14tr81j/kcorjq5q9oa0buv67d0lmq0rq58fi43b/1664252175000/01215486586660703547/05748731943488309314/189rb1aIn2xkbkAWScr6YdDLOPtbUR_Kr?e=download&ax=ALW9-sCSztKUjn03MQonAOYfOphKuLYEpuW35LTuN1LZesSrUU1UO9VuoxysheQvMwX1JZOadZJkey69_qhTbpMLf7tbj3yHV5ATyKCQ_qNBlRS0O0p_H03MgKukZDpBHc2qtDlhOJcAfLL69lKsNZnRBrJ4yAo6L94En4REqlm8h1mIWT06pOIHPTTQe_UCP5mKb7gqR6GDNvOFkGDin_g0J9iN6hX_SCaDDk0owKmgdf7qyMtsonwNt7-RT_nGjgpj6eQ76M3BXV2q4qvtMRl1dtlYx1ZWQyGXHwDgs8RKQW_WE3l7tb-pneA2gbXoPDLuoV5ziJ8cucnOQsdHPw-p__Vq7g1UidfSE3nVOQIlVhylgfvfeOiUEQMBk9EH_3DIVoFnEGzAiQCyXvWRAhx9HaHJCgVIQbqKhaEVZp9G3Rb4Nf-WWaQWK7zXX6u0JOPgjHEqvVQu5HmYSYViFnZIueC0_qgN4pSH3WnFxPQdESW2UtZTCP3LBqk2BEoj6j6ivUPXJ_XO9re7pLJDbWgB8sm4QqxYFYdYSgQ9-6Irz7f9U3163BxQsCbm9FGs_85e9TnjrMAuE7WlKWFW9u8aZ7zGLPldNASY20F39T6b6FbhbCVRdhQXc5Sgl1Vzuwu0Uw6o-ZbdEF3nYUreiTJX8HzhS7oXborot_33Yn3mUjXxh-jNRwz1iqSy7jT5h2G6ZqP13FYeX5Um4t8iMiWZ_WKAQwqAfk2-qvrJjgKVNTYyk5c&uuid=58733325-d87c-480c-bfd6-f71d9622957f&authuser=0&nonce=uo5toohcoemco&user=05748731943488309314&hash=3b01hvbpq3kjgf7m2h3653l0qveiec1f"
-aria2c "https://drive.google.com/open?id=189rb1aIn2xkbkAWScr6YdDLOPtbUR_Kr&authuser=0"
-lla
-rm -rfv view view.1
-adb reboot bootloader
-cd Desktop
-cd FLASH
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-adb sideload productpartition-pixel2xl.zip
-adb sideload ~/Downloads/dotOS-v6.0-taimen-GAPPS-20220919.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-adb reboot bootloader
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-cd Desktop/FLASH
-adb sideload Arrow-v12.1-taimen-OFFICIAL-20220923-GAPPS.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-adb reboot bootloader
-fastboot flash boot lineage-19.1-20220922-recovery-taimen.img
-adb sideload lineage-19.1-20220922-nightly-taimen-signed.zip
-adb sideload NikGapps-basic-arm64-12.1-20220908-signed.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-adb reboot bootloader
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-fastboot reboot recovery
-adb sideload productpartition-pixel2xl.zip
-adb sideload evolution_taimen-ota-sq3a.220705.004-08282250-unofficial-unsigned.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-du 
-cd Desktop
-lla
-cd work
-lla
-nvim test.js
-node test.js
-lla
-nvim test.js
-ln -sfv ~/dotfiles/nvim ~/.config
-neovim
-nvim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim
-nvim ~/.config/nvim/init.vim
-nvim
-nvim 
-nvim ex1.js
-node
-node ex1.js
-nvim ex1.js
-node ex1.js
-node
-revanced-builder
-yay
-cd Downloads
-revanced-builder
-cd Downloads
-lla
-node revanced-builder-linux
-revanced-builder-linux
-yay
-cd Downloads
-node revanced-builder-linux
-node
-shutdown now
-warp-cli connect
-warp-cli disconnect
-yay
-yay yt-dlp
-cd Desktop
-mkdir Edit
-cd Edit
-yt-dlp "https://youtu.be/2oMW5pL9Z4w"
-la
-lla
-rm -rf *
-yt-dlp -f "yt-dlp "https://youtu.be/2oMW5pL9Z4w"
-yt-dlp -f "https://youtu.be/2oMW5pL9Z4w"
-yt-dlp -f
-yt-dlp -h
-yt-dlp -F "https://youtu.be/2oMW5pL9Z4w"
-yt-dlp -f 248+251 "https://youtu.be/2oMW5pL9Z4w"
-yay obs
-killall obs-studio
-bashtop
-btop
-warp-cli connect
-bash
-cd Downloads
-cd ..
-cd Music
-yt-dlp -F "https://youtu.be/gTN2LZVJ_-Q"
-yt-dlp -f 251 "https://youtu.be/gTN2LZVJ_-Q"
-yay spotdl
-warp-cli disconnect
-yay spotdl
-yay pip
-pip install spotdl
-which spotdl
-echo $PATH
-export PATH="$HOME/.local/bin:$PATH"
-echo $PATH
-spotdl 
-spotdl 'mohg'
-spotdl Mohg, Lord of Blood
-spotdl blinding lights
-spotdl https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07?si=476c0eebf68d4585
-spotdl "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07?si=476c0eebf68d4585"
-spotdl download "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07?si=476c0eebf68d4585"
-pip -h
-pip uninstall spotdl
-pip install spotdl
-spotdl web
-pip uninstall spotdl
-yay
-yay -Rcns  revanced-builder
-yay zulu
-yay java
-yay jdk
-warp-cli connect
-warp-cli disconnect
-systemd-resolve --flush-caches
-mpv "http://172.16.50.7/SAM-FTP-2/English%20Movies/%282011%29/Detachment%20%282011%29%20720p/Detachment.2011.720p.BRRip.950MB.MkvCage.WS.mkv"
-ssh nasif@homelab
-ssh nasif@192.168.1.8
-ping reddit.com
-ssh nasif@192.168.1.8
-yay syncthing
-systemctl status syncthing@reralt
-systemctl start syncthing@reralt
-systemctl status syncthing@reralt
-systemctl start syncthing@reralt
-ssh nasif@192.168.1.8
-mpv "http://192.168.1.8:8096/Items/00b4be8b70f8f0910cf7898bb3cb3f89/Download?api_key=e0d693e543fe4348998d0538e952e52e"
-ssh nasif@192.168.1.8
-yay mpv shim
-mpv shim
-jellyfin-mpv-shim
-jellyfin-mpv-shim&
-jellyfin-mpv-shim
-systemctl status syncthing@reralt
-systemctl enable syncthing@reralt
-systemctl start syncthing@reralt
-adb reboot bootloader
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-cd Desktop/FLASH
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-fastboot reboot recovery
-adb sideload Arrow-v13.0-taimen-UNOFFICIAL-20221001-GAPPS.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-pwd
-history
-yay -S alacritty
-ln -sfv ~/dotfiles/alacritty ~/.config/
-fc-list | grep "JetBrains Mono"
-fc-list | grep "JetBrains Mono Regular"
-nvim .config/alacritty/alacritty.yml
-fc-list | grep "JetBrains Mono Bold"
-yay alacritty-theme
-alacritty-themes
-ls
-yay neofetch
-neofetch
-cmatrix
-nvim .config/alacritty/alacritty.yml
-cmatrix
-alacritty-themes
-ls
-neofetch
-nvim .config/alacritty/alacritty.yml
-htop
-yay htop
-htop
-ssh reralt@192.168.1.8
-exit
-cd Desktop/FLASH
-cd Desktop
-ls
-pwd
-gnome-terminal
-gnome-terminal -h
-gnome-terminal --help-all
-gnome-terminal --tab\
-prompt -h
-prompt -l
-prompt -c
-prompt adam1
-prompt adam2
-prompt bart
-prompt bigfade
-prompt clint
-prompt default
-prompt elite2
-prompt elite
-prompt fade
-prompt bigfade
-prompt fire
-prompt off
-prompt oliver
-prompt pws
-prompt redhat
-prompt restore
-prompt suse
-prompt walters
-prompt zefram
-prompt pure
-prompt fade
-nvim .zshrc
-cd ~
-nvim .zshrc
-source .zshrc
-nvim .zshrc
-source .zshrc
-compaudit
-nvim .zshrc
-source .zshrc
-nvim .zshrc
-exit
-exit
-tmux -2
-exit
-tmux
-ssh bandit11@bandit.labs.overthewire.org -p 2220
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-yay xcopy
-xclip
-yay xclip
-xclip --help
-man xclip
-xclip -o
-xclip -i ls
-xclip -i hello
-xclip -i "hello"
-xclip
-xclip -o < echo "test"
-xclip -o test
-xclip -o
-ssh bandit1@bandit.labs.overthewire.org -p 2220
-ssh bandit2@bandit.labs.overthewire.org -p 2220
-ssh bandit3@bandit.labs.overthewire.org -p 2220
-ssh bandit4@bandit.labs.overthewire.org -p 2220
-ssh bandit5@bandit.labs.overthewire.org -p 2220
-ssh bandit6@bandit.labs.overthewire.org -p 2220
-ssh bandit7@bandit.labs.overthewire.org -p 2220
-ssh bandit8@bandit.labs.overthewire.org -p 2220
-ssh bandit9@bandit.labs.overthewire.org -p 2220
-ssh bandit10@bandit.labs.overthewire.org -p 2220
-ssh bandit11@bandit.labs.overthewire.org -p 2220
-ssh bandit12@bandit.labs.overthewire.org -p 2220
-man hd
-man hexdump
-ssh bandit13@bandit.labs.overthewire.org -p 2220
-cd .ssh
-lla
-cat known_hosts
-cd ..
-lla
-cd Desktop
-lls
-lla
-echo "wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw" > pass.txt
-cat pass.txt
-warp-cli connect
-warp-cli disconnect
-warp-cli connect
-yay bashtop
-yay botop
-yay btop
-btop
-yay joplin
-yay
-reboot
-warp-cli status
-warp-cli disconnect
-tmux
-exit
-exit
-shutdown now
-tmux
-find password
-find pass
-find pass ~
-cd Desktop
-lla
-cat pass.txt
-ssh bandit13@bandit.labs.overthewire.org -p 2220
-man ssh
-man telnet
-man nc
-man tmux
-cd ..
-cd .ssh
-lla
-man ssh
-cd ~
-cd Desktop
-nvim test
-nvim pass.txt
-ssh bandit14@bandit.labs.overthewire.org -p 2220
-man ssh
-nvim pass.txt
-ssh bandit15@bandit.labs.overthewire.org -p 2220
-exit
-exit
-brave https://eloquentjavascript.net/
-brave --help
-brave -h
-man brave
-brave
-brave -n
-brave -new-session
-yay kdenlive
-yay firefox
-mpv https://www.youtube.com/watch?v=2Rz9LEmqswk
-mpv "https://www.youtube.com/watch?v=2Rz9LEmqswk"
-xclip -o
-mpv < xclip -o
-xclip -o > mpv
-mpv "$(xclip -o)"&
-alacritty -e mpv "$(xclip -o)"&
-mpv --help
-cd media
-cd /media
-lla
-cd Seed
-mpv Jujutsu.Kaisen.0.The.Movie.2021.1080p.BluRay.DDP5.1.x264-Kitsune.mkv
-mpv DAHMER.S01.1080p.NF.WEB-DL.DDP5.1.Atmos.H.264-TBD
-mpv --help
-mpv --list-options
-mpv "$(xclip -o)"
-yay
-node
-file /var/log/pacman.log
-less /var/log/pacman.log
-less /var/log.messages
-getenforce
-yay getenforce
-yay selinux
-sestatus
-ls /etc
-lla /etc
-lla /etc/kernel
-lla /etc/kernel/install.d
-exit
-shred --help
-warp-cli status
-warp-cli connect
-warp-cli disconnect
-warp-cli connect
-warp-cli disconnect
-bash
-man base64
-bash
-warp-cli status
-cd Desktop
-cd dump
-nvim all
-base64 -d all > result
-cat result
-less result
-nvim test
-nvim result
-warp-cli status
-nvim test
-less result
-echo "aHR0cHM6Ly9hbm9uZmlsZXMuY29tL1MybzdLZjhkeTIvQmV0dGllX0JvbmRhZ2VfT25seUZhbnNfbXA0Cmh0dHBzOi8vYW5vbmZpbGVzLmNvbS9xOGtlSzI4N3kzL0JldHRpZV9Cb25kYWdlX09ubHlGYW5zLTFfbXA0Cmh0dHBzOi8vYW5vbmZpbGVzLmNvbS84YnA5Szc4NHk3L0JldHRpZV9Cb25kYWdlX09ubHlGYW5zLTJfbXA0Cmh0dHBzOi8vYW5vbmZpbGVzLmNvbS9jZHFmSzU4OXlmL0JldHRpZV9Cb25kYWdlX09ubHlGYW5zLTNfbXA0\
-" >> all
-base64 -d all > result
-less result
-warp-cli connect
-less result
-cd Downloads
-lla
-cd temp
-lla
-cd ..
-cd Desk
-python wp-plus.py
-warp-cli account
-warp-cli disconnect
-yay
-nvim .zshrc
-source .zshrc
-nvim .zshrc
-source .zshrc
-cd Desktop
-lla
-cat pass.txt
-node
-cd Desktop
-lla
-mkdir work
-cd work
-nvim test.js
-node test.js
-fc-list | grep "JetBrains Mono"
-nvim test.js
-test
-bash
-man shuf
-shuf 
-shuf "hell:
-shuf "hell"
-cd De
-cd Desktop
-lla
-cd test
-lla
-shuf text.txt
-cat text.txt
-ls
-ls | shuf -n 1
-ls | shuf -n 2
-warp-cli status
-ssh ssh-nasifahmed.alwaysdata.net
-ssh nasifahmed@ssh-nasifahmed.alwaysdata.net
-warp-cli status
-yay obsidian
-yay joplin
-yay onenote
-yay microsoft onenote
-yay -Rcsn joplin-cli
-yay -Rcsn joplin
-yay -Rcsn joplin-desktop
-cd Desktop
-lla
-cd work
-nvim test.js
-node test.js
-nvim test.js
-node test.js
-nvim test.js
-node test.js
-nvim test.js
-node test.js
-nvim test.js
-node 
-nvim test.java
-javac test.java
-nvim test.java
-javac test.java
-java test
-nvim test.java
-yay
-yay java
-yay jdk
-yay zulu
-java
-java --version
-yay zulu
-yay -Rcns zulu-17-bin
-cd Downloads
-lla
-tar -xzvf zulu17.36.19-ca-jdk17.0.4.1-linux_i686.tar.gz
-yay revanced
-revanced-builder
-exit
-yay -h
-yay -Q java
-yay -Q jdk
-yay -Rcns jdk
-revanced-builder
-exit
-yay -Rcns jdk17-openjdk jdk-openjdk
-yay -Rcns  revanced-builder
-yay revanced-builder
-revanced-builder
-adb devices
-dot
-git add *
-git commit * -m "...."
-git config --global user.name "Nasif Ahmed"
-git config --global user.email "nasif2ahmed@gmail.com"
-git commit * -m "...."
-git push
-yay
-reboot
-cd Downloads
-lla
-cd ..
-cd Desktop
-cd FLASH
-lla
-aria2c "https://doc-14-9s-docs.googleusercontent.com/docs/securesc/fcprra93r0dag7lq461mdlddk14tr81j/kcorjq5q9oa0buv67d0lmq0rq58fi43b/1664252175000/01215486586660703547/05748731943488309314/189rb1aIn2xkbkAWScr6YdDLOPtbUR_Kr?e=download&ax=ALW9-sCSztKUjn03MQonAOYfOphKuLYEpuW35LTuN1LZesSrUU1UO9VuoxysheQvMwX1JZOadZJkey69_qhTbpMLf7tbj3yHV5ATyKCQ_qNBlRS0O0p_H03MgKukZDpBHc2qtDlhOJcAfLL69lKsNZnRBrJ4yAo6L94En4REqlm8h1mIWT06pOIHPTTQe_UCP5mKb7gqR6GDNvOFkGDin_g0J9iN6hX_SCaDDk0owKmgdf7qyMtsonwNt7-RT_nGjgpj6eQ76M3BXV2q4qvtMRl1dtlYx1ZWQyGXHwDgs8RKQW_WE3l7tb-pneA2gbXoPDLuoV5ziJ8cucnOQsdHPw-p__Vq7g1UidfSE3nVOQIlVhylgfvfeOiUEQMBk9EH_3DIVoFnEGzAiQCyXvWRAhx9HaHJCgVIQbqKhaEVZp9G3Rb4Nf-WWaQWK7zXX6u0JOPgjHEqvVQu5HmYSYViFnZIueC0_qgN4pSH3WnFxPQdESW2UtZTCP3LBqk2BEoj6j6ivUPXJ_XO9re7pLJDbWgB8sm4QqxYFYdYSgQ9-6Irz7f9U3163BxQsCbm9FGs_85e9TnjrMAuE7WlKWFW9u8aZ7zGLPldNASY20F39T6b6FbhbCVRdhQXc5Sgl1Vzuwu0Uw6o-ZbdEF3nYUreiTJX8HzhS7oXborot_33Yn3mUjXxh-jNRwz1iqSy7jT5h2G6ZqP13FYeX5Um4t8iMiWZ_WKAQwqAfk2-qvrJjgKVNTYyk5c&uuid=58733325-d87c-480c-bfd6-f71d9622957f&authuser=0&nonce=uo5toohcoemco&user=05748731943488309314&hash=3b01hvbpq3kjgf7m2h3653l0qveiec1f"
-aria2c "https://drive.google.com/open?id=189rb1aIn2xkbkAWScr6YdDLOPtbUR_Kr&authuser=0"
-lla
-rm -rfv view view.1
-adb reboot bootloader
-cd Desktop
-cd FLASH
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-adb sideload productpartition-pixel2xl.zip
-adb sideload ~/Downloads/dotOS-v6.0-taimen-GAPPS-20220919.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-adb reboot bootloader
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-cd Desktop/FLASH
-adb sideload Arrow-v12.1-taimen-OFFICIAL-20220923-GAPPS.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-adb reboot bootloader
-fastboot flash boot lineage-19.1-20220922-recovery-taimen.img
-adb sideload lineage-19.1-20220922-nightly-taimen-signed.zip
-adb sideload NikGapps-basic-arm64-12.1-20220908-signed.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-adb reboot bootloader
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-fastboot reboot recovery
-adb sideload productpartition-pixel2xl.zip
-adb sideload evolution_taimen-ota-sq3a.220705.004-08282250-unofficial-unsigned.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-du 
-cd Desktop
-lla
-cd work
-lla
-nvim test.js
-node test.js
-lla
-nvim test.js
-ln -sfv ~/dotfiles/nvim ~/.config
-neovim
-nvim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim
-nvim ~/.config/nvim/init.vim
-nvim
-nvim 
-nvim ex1.js
-node
-node ex1.js
-nvim ex1.js
-node ex1.js
-node
-revanced-builder
-yay
-cd Downloads
-revanced-builder
-cd Downloads
-lla
-node revanced-builder-linux
-revanced-builder-linux
-yay
-cd Downloads
-node revanced-builder-linux
-node
-shutdown now
-warp-cli connect
-warp-cli disconnect
-yay
-yay yt-dlp
-cd Desktop
-mkdir Edit
-cd Edit
-yt-dlp "https://youtu.be/2oMW5pL9Z4w"
-la
-lla
-rm -rf *
-yt-dlp -f "yt-dlp "https://youtu.be/2oMW5pL9Z4w"
-yt-dlp -f "https://youtu.be/2oMW5pL9Z4w"
-yt-dlp -f
-yt-dlp -h
-yt-dlp -F "https://youtu.be/2oMW5pL9Z4w"
-yt-dlp -f 248+251 "https://youtu.be/2oMW5pL9Z4w"
-yay obs
-killall obs-studio
-bashtop
-btop
-warp-cli connect
-bash
-cd Downloads
-cd ..
-cd Music
-yt-dlp -F "https://youtu.be/gTN2LZVJ_-Q"
-yt-dlp -f 251 "https://youtu.be/gTN2LZVJ_-Q"
-yay spotdl
-warp-cli disconnect
-yay spotdl
-yay pip
-pip install spotdl
-which spotdl
-echo $PATH
-export PATH="$HOME/.local/bin:$PATH"
-echo $PATH
-spotdl 
-spotdl 'mohg'
-spotdl Mohg, Lord of Blood
-spotdl blinding lights
-spotdl https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07?si=476c0eebf68d4585
-spotdl "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07?si=476c0eebf68d4585"
-spotdl download "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07?si=476c0eebf68d4585"
-pip -h
-pip uninstall spotdl
-pip install spotdl
-spotdl web
-pip uninstall spotdl
-yay
-yay -Rcns  revanced-builder
-yay zulu
-yay java
-yay jdk
-warp-cli connect
-warp-cli disconnect
-systemd-resolve --flush-caches
-mpv "http://172.16.50.7/SAM-FTP-2/English%20Movies/%282011%29/Detachment%20%282011%29%20720p/Detachment.2011.720p.BRRip.950MB.MkvCage.WS.mkv"
-ssh nasif@homelab
-ssh nasif@192.168.1.8
-ping reddit.com
-ssh nasif@192.168.1.8
-yay syncthing
-systemctl status syncthing@reralt
-systemctl start syncthing@reralt
-systemctl status syncthing@reralt
-systemctl start syncthing@reralt
-ssh nasif@192.168.1.8
-mpv "http://192.168.1.8:8096/Items/00b4be8b70f8f0910cf7898bb3cb3f89/Download?api_key=e0d693e543fe4348998d0538e952e52e"
-ssh nasif@192.168.1.8
-yay mpv shim
-mpv shim
-jellyfin-mpv-shim
-jellyfin-mpv-shim&
-jellyfin-mpv-shim
-systemctl status syncthing@reralt
-systemctl enable syncthing@reralt
-systemctl start syncthing@reralt
-adb reboot bootloader
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-cd Desktop/FLASH
-fastboot flash boot twrp-3.6.2_9-0-taimen.img
-fastboot reboot recovery
-adb sideload Arrow-v13.0-taimen-UNOFFICIAL-20221001-GAPPS.zip
-adb sideload Magisk-v25.2\ \(copy\).zip
-pwd
-history
-yay -S alacritty
-ln -sfv ~/dotfiles/alacritty ~/.config/
-fc-list | grep "JetBrains Mono"
-fc-list | grep "JetBrains Mono Regular"
-nvim .config/alacritty/alacritty.yml
-fc-list | grep "JetBrains Mono Bold"
-yay alacritty-theme
-alacritty-themes
-ls
-yay neofetch
-neofetch
-cmatrix
-nvim .config/alacritty/alacritty.yml
-cmatrix
-alacritty-themes
-ls
-neofetch
-nvim .config/alacritty/alacritty.yml
-htop
-yay htop
-htop
-ssh reralt@192.168.1.8
-exit
-cd Desktop/FLASH
-cd Desktop
-ls
-pwd
-gnome-terminal
-gnome-terminal -h
-gnome-terminal --help-all
-gnome-terminal --tab\
-prompt -h
-prompt -l
-prompt -c
-prompt adam1
-prompt adam2
-prompt bart
-prompt bigfade
-prompt clint
-prompt default
-prompt elite2
-prompt elite
-prompt fade
-prompt bigfade
-prompt fire
-prompt off
-prompt oliver
-prompt pws
-prompt redhat
-prompt restore
-prompt suse
-prompt walters
-prompt zefram
-prompt pure
-prompt fade
-nvim .zshrc
-cd ~
-nvim .zshrc
-source .zshrc
-nvim .zshrc
-source .zshrc
-compaudit
-nvim .zshrc
-source .zshrc
-nvim .zshrc
-exit
-ls
-ls
-history
-ls -alh
-ls
-history
-clear
-source .bashrc 
-cd Downloads/
-cd temp/
-cd yay/
-cd ~
-nvim .bashrc 
-source .bashrc 
-ls
-cd Downloads/temp/yay/
-pamac install alacritty
-pamac uninstall alacritty
-pamac remove alacritty
-pamac
-pamac clean
-ls
-ln -sfv ~/dotfiles/alacritty ~/.config/
-ls
-cp -rv ~/Downloads/JetBrainsMono /usr/share/fonts/
-sudo cp -rv ~/Downloads/JetBrainsMono /usr/share/fonts/
-fc-cache -fv
-ls
-neofetch
-pfetch
-pamac install mpv
-reboot
-pamac install geary
-pamac remove geary
-pfetch
-neofetch
-pamac search code
-yay code
-pamac install code
-pamac search helix
-pamac install helix
-helix
-helix
-helix
-helix
-nvim
-yay code
-yay code | less
-ls
-exit
-/bin/python -m pip install -U black
-nvim tutor
-nvim tutor
-rm tutor 
-yay code | less
-yay vscode
-fc-list | grep "JetBrains Mono"
-fc-list | grep "JetBrains Mono"&&"Regular"
-fc-list | grep "JetBrains Mono""Regular"
-fc-list | grep "JetBrains Mono*Regular"
-fc-list | grep "JetBrains Mono&Regular"
-fc-list | grep "JetBrains Mono&&Regular"
-fc-list | grep "JetBrains" | grep "Regular"
-fc-list | grep "JetBrains" | grep "Regular" | grep "Semi"
-fc-list | grep "JetBrains" | grep "Regular" | grep "SemiBold"
-pamac search java
-pamac install jdk17
-pamac search jdk
-vimtutor
-nvim
-nvim tutor
-nvim
-nvim
-cd Desktop/
-nvim VimTutor.txt 
-nvim
-nvim tutor 
-nvim Tutor
-nvim 
-kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.krunner,/App,,toggleDisplay"
-kwin_x11 --replace
-kwin_x11 --replace&
-pamac search bismutch
-pamac search bismuth
-yay bismuth
-ls
-cmatrix
-pamac install cmatrix
-cmatrix
-nvim
-neofetch
-cmatrix
-exit
-ll
-nvim .config/alacritty/alacritty.yml
-ll
-pfetch
-pamac install mpv
-cd Desktop/
-cmatrix
-nvim .bashrc 
-source .bashrc 
-edit
-jump
-ls
-eit
-edit
-edit
-source .bashrc 
-jump
-ls
-edit
-mkdir .config/nvim
-rm -rf .config/nvim
-ln -sfv ~/dotfiles/nvim ~/.config/
-nvim
-cd Desktop/
-ls
-cd LAB/
-ls
-ll
-nvim lab.py 
-nvim ~/.config/nvim
-cd ~/.config/nvim
-ls
-nvim init.lua 
-nvim
-nvim init.lua 
-fzf
-yay fzf
-nvim fzf
-nvim $(fzf)
-cd ~
-nvim $(fzf)
-fzf /
-fzf -h
-fzf
-fzf -x
-man fzf
-find / | fzf
-find ~ | fzf
-cd $(find ~ | fzf)
-cd $(find ~ | fzf)
-find -h
-tldr
-yay tldr
-tldr find
-find ~ -type f | fzf
-ll | fzf
-jump
-jump
-cat lab.py | fzf
-xlip
-xclip
-xcip -h
-tldr xclip
-jump
-man find
-find -type f | fzf
-find -type f | fzf | xclip
-find -type f | fzf
-echo $(find -type f | fzf)
-echo $(find -type f | fzf) | xclip
-edit
-tldr yay
-yay -Ps
-yay -a
-curl cheat.sh/yay
-man yay
-yay -s
-yay -sa
-yay -Psa
-yldr pacman
-tldr pacman
-yay -Qa
-pamcan -Qqm
-pacman -Qqm
-yay -Qqm
-man pacman
-yay -Qqm
-yay -Qm
-yay -Psm
-yay -Ps
-find -type d | fzf
-find -type d / | fzf
-find / -type d | fzf
-sudo find / -type d | fzf
-sudo nvim /etc/pacman.conf
-killall sudo
-sudo nvim /etc/pacman.conf
-source /etc/pacman.conf 
-yay
-sudo nvim /etc/pacman.conf
-yay
-yay -S btop
-yay top
-yay logseq
-yay -S flatpak
-pamac install flatpak
-flatpak search logseq
-flatpak -h
-flatpak list
-flatpak search vlc
-flatpak search logseq
-flatpak search logseq
-flatpak info com.logseq.Logseq
-flatpak installed com.logseq.Logseq
-flatpak install com.logseq.Logseq
-cd Downloads/
-ls
-chmod a+x standard-notes-3.150.10-linux-x86_64.AppImage
-./standard-notes-3.150.10-linux-x86_64.AppImage 
-yay appimagelauncher
-ll
-jump
-ll
-yay geary
-yay "gnome online accounts"
-pamac remove geary
-history | wc -l
-history
-ll
-nvim .bashrc 
-source .bashrc 
-yay discord
-flatpak install discord
-flatpak list
-reboot
-botp
-btop
-pamac install systemd-swap
-sudo systemctl enable systemd-swap.service
-nvim /etc/systemd/swap.conf.d/myswap.conf
-mkdir /etc/systemd/swap.conf.d/myswap.conf
-mkdir /etc/systemd/swap.conf.d/
-sudo mkdir /etc/systemd/swap.conf.d/
-mkdir /etc/systemd/swap.conf.d/myswap.conf
-sudo mkdir /etc/systemd/swap.conf.d/myswap.conf
-nvim /etc/systemd/swap.conf.d/myswap.conf
-nvim /etc/systemd/swap.conf.d/myswap.conf
-rm /etc/systemd/swap.conf.d/myswap.conf
-nvim /etc/systemd/swap.conf.d/myswap.conf
-rm -rf /etc/systemd/swap.conf.d/myswap.conf
-sudo rm -rf /etc/systemd/swap.conf.d/myswap.conf
-nvim /etc/systemd/swap.conf.d/myswap.conf
-sudo nvim /etc/systemd/swap.conf.d/myswap.conf
-free -h
-yay
-cmatrix
-edit
-edit
-edit
-edit
-edit
-edit 
-edit
-edit
-edit
-edit
-eidt
-eidt
-edit
-edit
-edit
-edit
-edit
-neovim
-yay alacritty
-alacritty-themes 
-neofetch
-pfetch
-edit
-source .bashrc 
-ls
-edit
-alacritty-themes 
-ls
-neofetch
-dot
-cmatrix
-ls
-edit
-edit
-edit
-alacritty-themes
-alacritty-themes
-ls
-neofetch
-alacritty-themes 
-neofetch
-camatrix
-cmatrix 
-edit
-alacritty-themes 
-dot
-git status
-git add alacritty/alacritty.yml nvim/init.lua 
-git commit nvim/init.lua -m "Added colorscheme chage" 
-alacritty-themes 
-git config --global user.name "Nasif Ahmed"
-git config --global user.email "nasif2ahmed@gmail.com"
-git commit nvim/init.lua -m "Add colorscheme and cursorline change" 
-git commit alacritty/alacritty.yml -m "Final change with ayu dark colorscheme"
-git push
-nvim .
-yay zathura
-yay "doom emacs"
-exit
-curl "https://github.com/nvim-lua/kickstart.nvim/raw/master/init.lua" > nvim
-nvim nvim
-ll
-rm nvim
-curl "https://github.com/nvim-lua/kickstart.nvim/raw/master/init.lua" | less
-ll
-wget "https://github.com/nvim-lua/kickstart.nvim/raw/master/init.lua"
-nvim init.lua 
-rm init.lua 
-edit
-nvim
-edit
-edit
-edit
-edit
-eidt
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit 
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-nvim
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-edit
-yay emacs
-emacs -nw
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-~/.config/emacs/bin/doom install
-emacs
-doom sync
-killall emacs
-find doom
-ll
-cd .emacs.d/
-ls
-cd ..
-find ~
-find ~ | fzf
-rm -rf .emacs.d ~/.config/doom ~/.config/emacs
-pamac remove emacs
-yay -Ps
-yay -Qq
-yay -Qe
-yay -Qm
-edit
-edit
-edit
-alacritty-themes 
-edit
-edit
-ls
-alacritty-themes 
-ls
-ll
-neofetch
-edit
-history
-dot
-git add nvim/init.lua 
-git commit nvim/init.lua -m 
-git commit nvim/init.lua -m "Add some plugins with lazy.nvim (no more default minimal)"
-git push
-yay gcc
-ll
-cd ~
-ll
-dot
-cd bash/
-ls
-ll
-rm .bashrc .bash_history 
-cp ~/.bashrc ~/.bash_history .
-ll
-nvim .bash_history 
-nvim .bash_history 
-ll
-cd ~
-rm -rf .bashrc .bash_history 
-ll
-ln -sfv ~/dotfiles/bash/.bashrc 
-ln -sfv ~/dotfiles/bash/.bash_history 
-ll
-history
-source .bashrc 
-history
-sudo dnf install geary
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
-sudo dnf groupupdate sound-and-video
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
-cd /usr/share/themes
-cd ~/Do
-cd ~/Downloads/
-mkdir test
-cd test/
-cd ..
-tar –xvzf adw-gtk3v4-3.tar.xz
-cd /usr/share/themes
-cp -rv ~/Downloads/test/adw-gtk3v4-3/* .
-sudo cp -rv ~/Downloads/test/adw-gtk3v4-3/* .
-ls -alh
-cd ~
-ls
-git config --global user.name "Nasif Ahmed"
-git config --global user.email "nasif2ahmed@gmail.com"
-git config --global color.ui auto
-echo .DS_Store >> ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-ls ~/.ssh/id_ed25519.pub
-ssh-keygen -t ed25519 -C <youremail>
-ssh-keygen -t ed25519 -C nasif2ahmed@gmail.com
-cat ~/.ssh/id_ed25519.pub
-ssh -T git@github.com
-git@github.com:NasifAhmed/dotfiles.git
-git clone git@github.com:NasifAhmed/dotfiles.git
-cat .bashrc 
-python
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-/usr/bin/python3 -m pip install pynvim
-sudo dnf install python3-pip
-/usr/bin/python3 -m pip install pynvim
-sudo dnf install nodejs
-sudo dnf install fd-find
-npm install -g neovim
-sudo npm install -g neovim
-npm install -g npm@9.6.0
-sudo npm install -g npm@9.6.0
-npm fund
-sudo npm fund
-sudo dnf install neovim
-nvim
-ls -l
-ls -la
-rm -rf .bashrc .bash_history 
-ln -sfv ~/dotfiles/bash/.bashrc .
-ln -sfv ~/dotfiles/bash/.bash_history .
-cd Downloads/
-git clone https://github.com/dylanaraps/pfetch.git
-cd pfetch/
-sudo make install
-pfetch
-cd ~
-source .basrc
-source .bashrc
-nvim .bashrc 
-cd .config/
-history
-cat ~/.bash_
-cat ~/.bash_history 
-cat ~/.bash_history  | wc -l
-ln -sfv ~/dotfiles/nvim .
-ls -al
-nvim
-sudo dnf search cc1plus
-sudo dnf install g++ ripgrep
-nvim
-sudo dnf install fd
-:nvim
-nvim
-cd ~/Downloads/
-ls
-cp -rv JetBrainsMono /usr/share/fonts/
-sudo cp -rv JetBrainsMono /usr/share/fonts/
-fc-cache -fv
-ls
-nvim
-edit
-sudo dnf install fzf
-ls
-nvim
-edit
-exit
-gnome-terminal -h
-gnome-terminal -help-window-options
-gnome-terminal -help-all
-gnome-terminal --help-all
-gnome-terminal --active
-gnome-terminal
-gnome-terminal --window
-man gnome-terminal
-sudo dnf install google-chrome
-sudo dnf search google-chrome
-sudo dnf install google-chrome-stable
-sudo dnf install alacritty
-ln -sfv ~/dotfiles/alacritty ~/.config/
-ls
-man alacritty
-ls
-npm i -g alacritty-themes
-sudo npm i -g alacritty-themes
-alacritty-themes 
-ls
-neofetch
-edit
-edit
-sudo dnf search syncthing
-sudo dnf install syncthing
-sudo systemctl enable syncthing@username.service
-sudo systemctl enable syncthing@reralt.service
-sudo systemctl start syncthing@reralt.service
-edit
-eidt
-edit
-dnf search vscode
-dnf search code
-dnf search visual
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
-[code]
-name=Visual Studio Code
-baseurl=https://packages.microsoft.com/yumrepos/vscode
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-EOF
-
-sudo dnf check-update
-sudo dnf install code
-fc-list | grep "JetBrains"
-ls
-ll
-got
-dot
-git add alacritty/alacritty.yml bash/.bash_history bash/.bashrc 
-git commit * -m "..."
-git push
-sudo dnf install meson ninja
-sudo dnf install meson
-cd ~/Downloads/
-mkdit tmp
-cd tmp
-mkdir tmp
-cd tmp/
-ls
-git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git
-cd gnome-backgrounds-macos/
-chmod +x download-backgrounds.sh 
-./download-backgrounds.sh 
-ll
-cd build/
-ll
-cd getopts_long/
-ll
-cd ../../
-./download-backgrounds.sh
-cd build/
-git clone https://github.com/UrsaDK/getopts_long.git
-ll
-cd ..
-ll
-./download-backgrounds.sh 
- meson setup build
- ninja -C build
-ninja -C build
-cd build/
-ll
-ninja build
-ninja
-ll backgrounds/
-cd 
-cd -
-ls
-cd
-cd -
-cd ..
-gclient runhooks
-cd build/
-cat build.ninja 
-rpm -qi ninja
-dnf -a
-dnf -q
-rpm -qi ninja-build
-ninja-build 
-cd 
-cd -
-cd ..
-ninja-build -C build
-cd build/
-ll
-rm -rf getopts_long
-ls
-cd..
-cd ..
-ninja-build -C build
-cd build/
-rm *
-rm -rfv meson*
-ll
-cd ..
-meson setup build
-ninja-build -C build
-exit
-sudo dnf install systemd-swap
-sudo systemctl enable systemd-swap.service
-sudo nvim /etc/systemd/swap.conf.d/myswap.conf
-mkdir /etc/systemd/swap.conf.d/
-sudo mkdir -p /etc/systemd/swap.conf.d/
-cd /etc/systemd/swap.conf.d/
-sudo nvim myswap.conf
-free -h
-sudo systemctl status systemd-swap.service
-sudo systemctl disable systemd-swap.service
-free -h
-sudo nvim /etc/default/grub
-sudo update-grub
-sudo nvim /etc/default/grub
-sudo dnf install update-grub
-sudo update-grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-sudo dnf install grub
-dnf search grub
-rpm -q --scripts grub
-sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-sudo dnf install yt-dlp
-sudo dnf install aria2
-node
-sudo dnf install neofetch
-neofetch 
-ll
-edit
-source .bashrc 
-dot
-edit
-cd
-source .bashrc 
-edit
-source .bashrc 
-eidt
-edit
-source .bashrc 
-dot
-edit
-source ~/.bashrc 
-su
-cd ~/Sync/
-ll
-cd localDotfiles/
-ll
-cd bash/
-ll
-cd ..
-ll
-cp -rfv ~/dotfiles/bash .
-ll
-dot
-history
-:q
-ssh reralt@192.168.1.8
-ssh -p 6789 u0_a257@192.168.1.10
-exit
-dot
-git add bash/.bash_history bash/.bashrc 
-git commit bash/.bashrc -m "prompt tweaks"
-git commit bash/.bash_history
-git push
-edit
-echo $SHELL
-alacritty -h
-ls
-edit
-gnome-characters -h
-gnome-characters --help-all
-sudo dnf install librewolf
-dbus-send --session --dest=org.gnome.ScreenSaver --type=method_call --print-reply --reply-timeout=20000 /org/gnome/ScreenSaver org.gnome.ScreenSaver.SetActive boolean:true
-gnome-screensaver-command -l
-xdg-screensaver lock
-xdg-screensaver -h
-xdg-screensaver --help
-xdg-screensaver status
-xdg-screensaver manual
-xdg-screensaver --manual
-figlet -f smisome1 "Hello World" -t | lolcat
-figlet -f poison "Hello World" -t | lolcat
-figlet -f Poison "Hello World" -t | lolcat
-figlet -f poison "Hello World" -t | lolcat
-figlet -f smisome1 "Hello World" -t | lolcat
-figlet -f Isometric1 "Hello World" -t | lolcat
-figlet -f sblood "Hello World" -t | lolcat
-figlet -f maxiwi "Hello World" -t | lolcat
-figlet -f Blocks "Hello World" -t | lolcat
-figlet -f larry3d "Hello World" -t | lolcat
-figlet -f katakana "Hello World" -t | lolcat
-figlet -f Katakana "Hello World" -t | lolcat
-figlet -f Jazmine "Hello World" -t | lolcat
-figlet -f 3d "Hello World" -t | lolcat
-figlet -f 3-D "Hello World" -t | lolcat
-figlet -f 3d_diagonal "Hello World" -t | lolcat
-figlet -f 3d-ASCII "Hello World" -t | lolcat
-figlet -f 3D-ASCII "Hello World" -t | lolcat
-edit
-figlet -f Graffiti "Hello World" -t | lolcat
-figlet -f Fraktur "Hello World" -t | lolcat
-figlet -f Elite "Hello World" -t | lolcat
-figlet -f Doom "Hello World" -t | lolcat
-figlet -f Doh "Hello World" -t | lolcat
-figlet -f Bloody "Hello World" -t | lolcat
-figlet -f ANSIShadow "Hello World" -t | lolcat
-figlet -c -f Bloody "Hello World" -t | lolcat
-toilet -h
-sudo dnf install toilet
-toilet -h
-toilet --filet list
-toilet --filter list
-toilet -F crop "hellow"
-toilet -F border "hellow"
-toilet -F metal "hellow"
-toilet -F rainbow "hellow"
-toilet --gay "hellow"
-toilet -f ASCIIShadow --gay "hellow"
-toilet -f ANSIShadow --gay "hellow"
-toilet -f 3d --gay "hellow"
-toilet -f 3d --gay "hellow" | lolcat
-toilet -f 3d "hellow" | lolcat
-edit
-source .bashrc 
-edit
-source .bashrc 
-pfetch
-edit
-pfetch
-source .bashrc 
-cd .mozilla/firefox/7c6iigj2.BetterFox/
-ls
-nvim user.js
-cp user.js ~/Documents/
-sudo dnf install figlet lolcat
-figlet 3d "Ahmed" -t | lolcat
-figlet -f 3d "Ahmed" -t | lolcat
-cd ~
-mkdir -p .config/figlet/fonts
-cd .config/figlet/fonts
-wget https://raw.githubusercontent.com/xero/figlet-fonts/master/3d.flf
-ls
-cd ..
-ls
-cd ..
-rm -rf figlet
-cd ..
-cd Downloads/tmp/
-git clone
-git clone https://github.com/xero/figlet-fonts.git
-cd /usr/share/figlet/
-ls
-cd /usr/share/figlet/
-ls
-sudo cp -rv ~/Downloads/tmp/figlet-fonts/* .
-showfigfonts 
-showfigfonts | less
-showfigfonts
-ls
-ll
-ssh reralt@192.168.1.8
-edit
-wttr.in/dhaka?0
-curl wttr.in/dhaka?0
-curl wttr.in/dhaka
-source .bashrc 
-edit
-free -h
-sudo dnf install tldr
-tldr free
-free --help
-free -h
-free -ht
-cat /proc/meminfo | grep "MemFree\|SwapFree"
-free -h | awk '{print NR==1?$3:$1$4}'
-free --mega | awk '{print NR==1?$3:$1$4}'
-free --mebi | awk '{print NR==1?$3:$1$4}'
-free hw | awk '{print NR==1?$3:$1$4}'
-free -hw | awk '{print NR==1?$3:$1$4}'
-free -h | awk '{print NR==1?$3:$1$4}'
-</proc/meminfo awk '$1~"^(Mem|Swap)Free:" {$2=$2*1024/1000000; $3="MB"; print}' | column -t
-free --mega | awk '{print NR==1?$3:$4}'
-free --mega | awk '
-  NR==1 {$0="dUm "$0}
-  {print $1" "$4}
-' | column -t | sed 's/^dUm/   /'
-free --mega | awk '
-  NR==1 {$0="dUm "$0}
-  {print $1" "$4}
-' | column -t | sed 's/^dUm/   /'
-free -h | awk '
-  NR==1 {$0="dUm "$0}
-  {print $1" "$4}
-' | column -t | sed 's/^dUm/   /'
-free --mega | awk '{print NR==1?$3:$4}'
-free -h | awk '{print NR==1?$3:$1$4}'
-uptime -p
-date
-date -h
-date --help
-tldr date
-date -d @1473305798
-date --rfc-3339=s
-date -u +%Y-%m-%dT%H:%M:%S%Z
-date +%c
-edit
-ls
-locate
-locate test
-locate ls
-tldr locate
-sudo updatedv
-sudo updatedb
-locate lab.py
-locate .bashrc
-locate .bashrc | fzf
-locate dragon
-locate yt-dlp.exe
-sudo dnf install dash
-dash
-whatis dash
-dot
-ll
-ll FONTS/
-rm -rf FONTS/
-ll Ventoy/
-tree Ventoy/
-mkdir UserJS
-cd UserJS/
-cp -v ~/.mozilla/firefox/2xx1yf3x.BetterFox/user.js .
-ll
-cd ..
-ll
-git status
-git add UserJS/ 
-git commit UserJS/ -m "Add firefox userjs made from BetterFox"
-git add *
-git status
-git commit -m "...."
-git status
-git add FONNTS/*
-git add FONTS/*
-git status
-git commit FONTS/* -m "Delete old FONTS folder"
-git status
-git push
-ls
-ll
-nvim
-edit
-nvim
-edit
-jump
-cd Documents/
-lls
-ll
-cd Practice/
-ll
-nvim .
-edit
-nvim
-edit
-dot
-git restore
-git restore nvim/
-git status
-nvim
-edit
-man tmux
-tmux list-sessions
-nvim /usr/share/tmux
-sudo dnf remove tmux
-exit
-sudo dnf install tumux zathura
-sudo dnf install tmux zathura
-tmux
-tmu
-tmux
-sudo dnf install tmux
-tmux
-exit
-exit
-edit
-exit
-nvim tmux.conf 
-exit
-cd .config/
-ls
-dot
-cd -
-mkdir tmux
-cd tmux/
-nvim tmux.conf
-tmux
-sudo dnf install libgda libgda-sqlite
-alacritty-themes -h
-alacritty-themes
-ls
-alacritty-themes Default.dark
-alacritty-themes 
-alacritty-themes Gruvbox-Dark
-alacritty-themes Gruvbox-Light
-alacritty-themes 
-ll
-nvim
-edit
-ls
-init
-edit
-define
-alacritty -e define
-alacritty -e cmatrix
-alacritty -e dict $(cat /etc/words/words_alpha.txt | fzf) | less
-alacritty -e "dict $(cat /etc/words/words_alpha.txt | fzf) | less"
-alacritty -h
-cd /usr/bin/
-ls
-cat zstd
-ll
-cd /usr/local/bin/
-ls
-nvim diction
-sudo nvim diction
-chmod +x diction
-sudo chmod +x diction
-diction 
-cd /usr/bin/dict
-nvim
-sudo nvim
-diction 
-echo "test" | fzf
-echo "test" > fzf
-rm fzf 
-curl cheat.sh/python/:list
-curl cheat.sh/python/:list | fzf
-curl cheat.sh/$(curl cheat.sh/python/:list | fzf)
-echo $(curl cheat.sh/python/:list | fzf)
-man curl
-echo $(curl -s cheat.sh/python/:list | fzf)
-curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf)
-curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf) | less
-curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf)
-echo $(curl -s cheat.sh/python/:list | fzf)
-curl cheat.sh/$(curl -s cheat.sh/python/:list | fzf)
-echo $(curl -s cheat.sh/python/:list | fzf)
-curl -s cheat.sh/1_Inheritance
-curl -s cheat.sh/1_Inheritance 79
-cheat.sh/python/1_Inheritance 79
-curl cheat.sh/python/1_Inheritance 79
-curl -s cheat.sh/$(curl -s cheat.sh/python/:list | fzf) | less
-curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less
-edit
-source .bashrc 
-cheat
-ping -t 1.1.1.1
-ping  1.1.1.1
-mkdir ~/Sync/Scripts
-sudo cp -v /usr/local/bin/diction ~/Sync/Scripts/
-cp ~/Downloads/words_alpha.txt ~/Sync/Scripts/
-jump
-ls
-nvim diction
-chown diction 
-chown 
-nvim diction
-rm diction 
-ls
-nvim diction
-chmod +x diction 
-./diction 
-cd
-sudo dnf install mpv
-mkdir ~/.config/mpv
-rm ~/.config/mpv
-rmdir ~/.config/mpv
-ln -sv ~/dotfiles/mpv ~/.config/
-cd .config/
-ll
-edit
-nvim
-neovim -h
-nvim -h
-nvim
-edit
-nvim
-alacritty-themes 
-alacritty-themes
-dat
-date
-dat + 15
-date +15
-date -d
-date -d "$HOUR + $1"
-date -d "$HOUR + $2"
-date -d "$DATE+$2"
-date -d"@$i"
-date -d"@$i"echo $(date %y%m%d -d "$(date) - 1 day")
-echo $(date %y%m%d -d "$(date) - 1 day")
-echo $(date +%m-%d-%Y -d "$DATE + $i day")
-echo $(date +%m-%d-%Y -d "$DATE + $1 day")
-echo $(date +%m-%d-%Y -d "$DATE + $2 day")
-for i in {0..8}; do    NEXT_DATE=$(date +%m-%d-%Y -d "$DATE + $i day");    echo "$NEXT_DATE"; done
-echo $(date +%m-%d-%Y -d "$DATE + 1 day")
-echo $(date +%m-%d-%Y -d "$DATE + 2 day")
-echo $(date +%m-%d-%Y -d "$DATE + 3 day")
-cmatrix
-sudo dnf install cmatrix
-cmatrix
-curl cheat.sh/python/list
-curl cheat.sh/python/init
-curl cheat.sh/python/:learn
-curl cheat.sh/python/:learn | less
-curl cheat.sh/python/dictionary | less
-curl cheat.sh/python/if | less
-curl cheat.sh/python/if+else | less
-curl cheat.sh/:intro
-curl cheat.sh/:intro | less
-curl cheat.sh/:list | less
-curl cheat.sh/python/:list | less
-curl cheat.sh/python/:list
-curl cheat.sh/python/1line
-curl cheat.sh/python/1line | less
-alacritty-themes 
-dict
-sudo dnf install dict
-dnf search dict
-sudo dnf install dictd
-dict constituents
-dict constituent
-dict -h
-tldr dict
-dict -mv constitents
-dict -mv constituents
-dict -mv constituent
-dict -v constituent
-dict -v constituent | less
-dict -d wordnet constituent | less
-dict -l
-dict -D
-dict -d wn constituent
-dict -d english constituent
-tldr dict
-dict -d english -v constituent
-cd Downloads/
-wget https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
-ll /
-ls /usr/
-ls /usr/src/
-ls /usr/etc/
-ls /etc/
-mkdir /etc/words
-sudo mkdir /etc/words
-sudo cp words_alpha.txt /etc/words/
-fzf /etc/words/words_alpha.txt 
-cat /etc/words/words_alpha.txt | fzf
-dict -d english $(cat /etc/words/words_alpha.txt | fzf)
-dict -d english $(cat /etc/words/words_alpha.txt | fzf) | less
-edit
-cd
-source .bashrc 
-define
-edit
-source .bashrc 
-edit
-source .bashrc 
-define
-cd /usr/share/dict/
-ls
-cat words
-dict -d english $(cat /usr/share/dict/words | fzf) | less
-edit
-rm -rf /etc/words
-sudo rm -rf /etc/words
-cd
-source .bashrc 
-defeine
-define
-dict -D
-edit
-source .bashrc 
-define
-edit
-whatis blanket
-find
-find | fzf
-./.var/app/com.rafaelmardojai.Blanket
-cd ./.var/app/com.rafaelmardojai.Blanket
-ls
-cd
-locate blanket
-locate 
-fzf
-locate blanket | fzf 
-flatpak -h
-flatpak list
-flatpak run Blanket
-flatpak run 'Blanket'
-flatpak run com.rafaelmardojai.Blanket
-cd Documents/
-ls
-cd Study/
-cd CSE42
-cd CSE420
-ls
-mkdir Videos
-cd Videos/
-yt-dlp "https://www.youtube.com/watch?v=uPnpkWwO9hE&list=PLW1OMpQZxu7xMh7nuDQYQ2mDcqY2hzBWk"
-ls
-sudo dnf install platform-tools
-dns search platfom-tools
-dnf search platfom-tools
-sudo dnf install android-tools
-adb
-adb devices
-adb reboot bootloader
-sh /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/flash-all.sh
-sudo sh /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/flash-all.sh
-cd /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/flash-all.sh
-cd /mnt/HDD/FLASH/Stock/taimen-rp1a.201005.004.a1-factory-2f5c4987/taimen-rp1a.201005.004.a1/
-sudo ./flash-all.sh 
-cd
-sudo fastboot -w
-sudo fastboot flash boot /home/reralt/Downloads/Flash/boot.img
-adb sideload /home/reralt/Downloads/Flash/lineage-20.0-20230302-nightly-taimen-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-basic-arm64-13-20230301-signed.zip
-chea
-cheat
-adb reboot recovery
-cd /mnt/HDD/FLASH/Magisk
-ls
-adb sideload Magisk-v25.2.zip
-adb reboot recovery
-adb devices
-adb kill-server
-adb devices
-cd
-adb devices
-sudo adb devices
-sudo dnf install plug-dev
-sudo dnf install plugdev
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-MarkupGoogle-20230301-signed.zip 
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleSounds-20230301-signed.zip 
-tmux
-cd Downloads/FL
-cd Downloads/Flash/
-ls
-ll
-nvim list.txt
-tldr aria2c
-aria2c --input-file=list.txt
-cd Downloads/
-mkdir Flash
-cd Flash/
-aria2c "https://mirrorbits.lineageos.org/full/taimen/20230302/lineage-20.0-20230302-nightly-taimen-signed.zip"
-ls
-lsmod |grep nouveau
-dnf history
-dnf remove xorg-x11-drv-nvidia\*
-sudo dnf remove xorg-x11-drv-nvidia\*
-cheat
-dnf -h
-sudo dnf clean
-sudo dnf autoremove
-sudo reboot
-lsmod |grep nouveau
-sudo dnf reinstall xser-xorg-video-noveau
-sudo dnf reinstall xserver-xorg-video-noveau
-sudo rm /etc/modprobe.d/blacklist.conf
-sudo nvim /etc/default/grub
-grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-dnf install xorg-x11-drv-nouveau
-sudo dnf install xorg-x11-drv-nouveau
-sudo dnf reinstall xorg-x11-drv-nouveau
-sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nvidia.img
-sudo dracut /boot/initramfs-$(uname -r).img $(uname -r)
-sudo reboot
-lsmod |grep nouveau
-lsmod
-sudo dnf remove nvidia* xorg-x11-drv-nvidia*
-rpm -qa | grep vulkan | sort
-rpm -qa | grep mesa | sort
-sudo nvim /etc/default/grub
-lspci -k | grep -A 2 -E "(VGA|3D)"
-cd Downloads/
-ls
-chmod +x NVIDIA-Linux-x86_64-465.31.run
-sudo ./NVIDIA-Linux-x86_64-465.31.run 
-sudo killall x
-sudo killall x-org
-sudo dnf update -y
-killall alacritty
-cd Downloads/
-ls
-chmod +x NVIDIA-Linux-x86_64-470.161.03.run 
-./NVIDIA-Linux-x86_64-470.161.03.run 
-sudo ./NVIDIA-Linux-x86_64-470.161.03.run 
-sudo dnf update -y
-sudo dnf install xorg-x11-drv-nvidia-470xx akmod-nvidia-470xx
-sudo reboot
-nvidia-settings -q GPUPowerSource -t
-nvidia-settings -q gpucoretemp
-nvidia-settings -q gpucoretemp -t
-nvidia-smi
-sudo dnf install nvidia-smi
-ls
-cd Downloads/
-ls
-cd tmp/
-ll
-cd gnome-backgrounds-macos/
-ll
-git rebase
-git reset
-git reset --hard origin/master
-git status
-sudo dnf install glib2
-cd build/
-ls
-rm -rf build.ninja getopts_long compile_commands.json meson*
-ll
-cd backgrounds/
-ll
-cd ..
-rm -rf gnome-backgrounds-macos
-git clone https://aur.archlinux.org/gnome-backgrounds-macos.git
-cd gnome-backgrounds-macos/
-ll
-nvim .SRCINFO 
-nvim PKGBUILD 
-cd ..
-rm gnome-backgrounds-macos
-rm -rf gnome-backgrounds-macos
-ls
-git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git
-cd gnome-backgrounds-macos/
-ls
-./download-backgrounds.sh 
-cd build/
-git clone https://github.com/UrsaDK/getopts_long.git
-ll
-cd ..
-./download-backgrounds.sh 
-arch-meson gnome-backgrounds-macos build
-meson setup build
-ninja -C build
-meson -C build
- meson compile -C build
-sudo dnf search samurai
-sudo dnf install samurai
-samurai -C build
-ninja -C build
-cd build/
-ll
-nvim build.ninja 
-cd
-nvim test
-nvim .ventoyignore
-free 0h
-free -h
-adb devices
-cd /home/reralt/Downloads/ventoy-1.0.89-linux/ventoy-1.0.89
-ll
-./Ventoy2Disk.sh 
-./VentoyWeb.sh 
-sudo ./VentoyWeb.sh 
-alacritty-themes 
-edit
-alacritty-themes 
-alacritty-themes
-alacritty-themes Default.dark
-ls
-ll
-pfetch
-neofetch
-edit
-jump
-cd
-dnf search warp
-cd Downloads/
-sudo dnf install cloudflare_warp_2023_1_133_1_x86_64_e16441d71c.rpm
-warp-cli -h
-warp-cli connect
-warp-cli account
-
-warp-cli help register
-warp-cli settings
-warp-cli register 5DC1cZ76-4CVI6o37-gc72GX53
-warp-cli register
-warp-cli -h
-warp-cli set-license
-warp-cli status
-warp-cli disconnect
-warp-cli status
-warp-cli set-license 6GX20Ra4-ndh732B6-g26QFY84
-warp-cli connect
-warp-cli status
-warp-status
-warp-cli -h
-warp-stats
-warp-cli status
-warp-cli disconnect
-du
-du .con
-cd ..
-du .config/
-du -a Videos/
-whatis du
-tldr du
-du -ah Videos/
-tldr du
-sort
-tldr sort
-du -ah Videos/ | sort --reverse
-du -ah Videos/ | sort --reverse --numeric-sort
-tldr cut
-cut -h
-cut --help
-du -ah Videos/ | sort --reverse --numeric-sort
-du -ah Videos/ | cut -f2
-du -ah Videos/ | cut -f1
-du -ah Videos/ | cut -f2 | tr '\n' ':'
-du -ah Videos/ | cut -f2 | tr '\n' ':' | sed 's/:*$//'
-tldr sed
-tldr awk
-tldr tee
-du -ah Videos/ | cut -f2 | tr '\n' ':' | sed 's/:*$//' | tee
-du -ah Videos/ | cut -f2 | tr '\n' ':' | $1 | tee
-du -ah Videos/ | cut -f2 | tr '\n' ':' | $2 | tee
-man grep
-cheat
-warp-cli status
-:q
-ls
-ll
-jump
-lsof
-whatis lsorf
-whatis lsof
-lsof | fzf
-free -h
-cd Dow
-cd Downloads/
-aria2c https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8
-aria2c "https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8"
-aria2c --split=5 "https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8"
-aria2c -h
-tldr aria2c
-distrobox enter debian
-distrobox list
-ls
-whoami
-uname -r
-sudo apt update
-exit
-neofetch
-vi
-nano
-sudo apt install neovim
-shutdown
-exit
-sudo apt install figlet lolcat neofetch
-bash
-exit
-cd Downloads/
-aria2c --split=5 "https://software.download.prss.microsoft.com/dbazure/Win11_22H2_EnglishInternational_x64v1.iso?t=80d5d40a-26f2-4def-b876-8ed833d4793e&e=1678506765&h=15ac7f255fb554a78a77ae4e8cff864b263eb7d67c3aa72abf7b88cf9f4effd8"
-sudo dnf install distrobox
-whatis docker
-sudo dnf install docker
-tldr distrobox
-man distrobox
-podman logs -f ArchTest
-uname -r
-neofetch
-distrobox create --image debian
-distrobox enter debian
-date
-uname -r
-nvim .bashrc 
-sudo apt install ~/Downloads/freedownloadmanager.deb 
-apt install ~/Downloads/freedownloadmanager.deb 
-exit
-apt install ~/Downloads/freedownloadmanager.deb
-exit
-distrobox create --image archlinux --name ArchTest
-distrobox enter ArchTest
-cd Downloads/
-apt install freedownloadmanager.deb
-sudo apt install freedownloadmanager.deb
-sudo dpkg -i freedownloadmanager.deb 
-sudo apt install xdg-utils ffmpeg
-exit
-sudo apt --fix-broken install
-cd Downloads/
-sudo dpkg -i freedownloadmanager.deb 
-distrobox-generate-entry
-dpkg -l
-freedownloadmanager
-dpkg -l
-distrobox-export freedownloadmanager
-distrobox-export --help
-distrobox-export -V -a freedownloadmanager
-distrobox-export -V -a freedownloadmanager --delete
-exit
-node
-cd Documents/
-mkdir Playgroud
-cd Playgroud/
-nvim test.js
-cd Documents/Playgroud/
-node test.js 
-dot
-figlet -f 3d $HOSTNAME -t | lolcat
-echo $HOSTNAME
-echo ${$HOSTNAME^^}
-echo${HOSTNAME^^}
-echo ${HOSTNAME^^}
-figlet -f 3d $HOSTNAME -t | lolcat
-whatis nvim
-whereis nvim
-distrobox enter debian
-distrobox-stop debian
-distrobox-rm ArchTest
-fastboot -w
-sudo fastboot -w
-nvim
-sudo ./flash-all.sh 
-distrobox-list
-distrbox-rm debian
-distrobox-rm debian
-podman stop debian
-podman stop debian --force
-podman stop --froce debian
-podman stop --force debian
-podman --force stop debian
-distrobox-rm debian
-distrobox-list
-distrobox-stop ArchTest
-distrobox-list
-distrobox create --image debian
-distrobox enter debian
-distrobox-generate-entry
-distrobox-generate-entry debian
-sudoedit
-sudoedit .bashrc 
-cd /etc/host.conf 
-nvim /etc/host.conf 
-sudoedit /etc/host.conf 
-sudo update-alternatives --config editor
-nvim .bashrc 
-source .bashrc 
-sudoedit /etc/host.conf 
-cat $EDITOR
-nvim .bashrc
-source .bashrc 
-nvim .bashrc 
-source .bashrc 
-sudoedit /etc/host.conf 
-dot
-diff nvim/init.lua 
-diff --help
-tldr git
-git -h
-git diff nvim/init.lua 
-git add nvim/init.lua 
-git commit nvim/init.lua -m "Add onedar colors, lualine, day/night theme switcher"
-git status
-cd ..
-dot
-nvim .gitignore 
-git status
-git diff alacritty/alacritty.yml
-git diff bash/.bashrc 
-eidt
-edit
-source ~/.bashrc 
-git status
-git add .gitignore
-git commit .gitignore -m "Ignore alacritty.yml.bak files generated by alacritty-themes"
-nvim .gitignore 
-git status
-nvim .gitignore 
-git *
-ls
-git status
-git add *
-git status
-git commit * -m "...."
-git status
-git add .gitignore 
-git status
-git commit -m "...."
-git push
-cd
-cd Downloads/ROM/
-ls
-ll
-sudo fastboot flash boot boot.img 
-adb sideload lineage-20.0-20230309-nightly-taimen-signed.zip
-cd ..
-adb sideload /home/reralt/Downloads/Flash/NikGapps-basic-arm64-13-20230301-signed.zip 
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-MarkupGoogle-20230301-signed.zip 
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleSounds-20230301-signed.zip 
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleSounds-20230301-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleFiles-20230309-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleClock-20230309-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleCalendar-20230309-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-Gmail-20230309-signed.zip
-adb sideload lineage-20.0-20230309-nightly-taimen-signed.zip
-adb sideload ./lineage-20.0-20230309-nightly-taimen-signed.zip
-adb sideload ROM/lineage-20.0-20230309-nightly-taimen-signed.zip
-fastboot -w
-sudo fastboot -w
-sudo fastboot flash boot ROM/boot.img 
-adb sideload ROM/lineage-20.0-20230309-nightly-taimen-signed.zip 
-adb sideload ROM/lineage-20.0-20230309-nightly-taimen-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-basic-arm64-13-20230301-signed.zip 
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-MarkupGoogle-20230301-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleSounds-20230301-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleClock-20230309-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleCalendar-20230309-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-Gmail-20230309-signed.zip
-adb sideload /home/reralt/Downloads/Flash/NikGapps-Addon-13-GoogleFiles-20230309-signed.zip
-adb sideload /mnt/HDD/FLASH/Magisk/Magisk-v25.2.zip
-cd
-btop
-exit
-alacritty-themes 
-exit
-edit
-alacritty-themes 
-edit
-nvim
-edit
-nvim
-alacritty-themes 
-ls
-nvim
-edit
-nvim
-edit
-nvim
-alacritty-themes dracula
-nvim
-:q
-nvim
-edit
-pfetch
-neofetch
-nvim
-edit
-alacritty-themes
-ls
-ll
-nvim
-alacritty-themes 
-alacritty-themes
-alacritty-themes Solarized-Dark
-edit
-tes
-cmatrix
-ls
-ll
-nvim
-btop
-ssh reralt@192.168.1.8
-watch ssh reralt@192.168.1.8
-sudo dnf install qbittorrent
-sudo mount -o remount,rw '/mnt/HDD/'
-ls
-ll
-ll /mnt/HDD/
-ll
-ll /mnt/HDD/
-man chown
-chown -vR /mnt/HDD/
-tldr chown
-chown -vR reralt /mnt/HDD/
-sudo chown -vR reralt /mnt/HDD/
-sudo dnf install ntfs-3g
-sudo mount -o remount,rw '/mnt/HDD/'
-sudo dmesg | tail
-dnf search ntfsfix
-ntfsfix 
-tldr ntfsfix
-ntfsfix /mnt/HDD/
-lsblk
-ntfsfix /dev/sda1
-sudo ntfsfix /dev/sda1
-locate fstab
-sudo nvim /etc/fstab 
-sudoedit nvim /etc/fstab 
-sudo nvim /etc/fstab 
-sudo reboot
-sudo dnf install ntfs-config
-id 0u
-id -u
-id -g
-sudo nvim /etc/fstab 
-lolcat
-sudo dnf remove cloudflare_warp_2023_1_133_1_x86_64_e16441d71c.rpm
-sudo dnf list
-tldr dnf
-dnf info warp-cli
-dnf list --installed
-dnf list --installed | warp
-dnf list --installed | grep "warp"
-sudo dnf remove cloudflare-warp.x86_64
-dnf list --installed | grep -v "warp"
-dnf list --installed | grep -i "warp"
-man grep
-nvim
-edit
-sudo dnf install dolphin
-sudo dnf install thunar
-free -h
-sudo dmesg | tail
-whatis dmesg
-tldr dmesg
-[200~dmesg | grep -i memory~
-dmesg | grep -i memory~
-dmesg
-dmesg tail
-dmesg | tail
-watch dmesg | tail
-dmesg | tail
-dmesg | tail | xargs watch
-tldr xargs
-dmesg | tail | xargs -I watch
-man xargs
-lsblk
-nvim zram0       252:0    0   7.7G  0 disk [SWAP]
-nvim /etc/systemd/zram-generator.conf
-zramctl
-free -h
-alacritty-themes 
-ls
-alacritty-themes 
-ll
-nvim
-pfetch
-neofetch
-ls
-qbittorrent
-cmatrix
-tldr cmatrix
-cmatrix -ar
-neofetch
-dnf search clock-tui
-dnf search clock
-dnf search tty-clock
-cd Downloads/tmp/
-git clone https://github.com/xorg62/tty-clock
-cd tty-clock/
-sudo dnf install ncurses ncurses-devel -y
-make
-chmod +x tty-clock
-sudo mv tty-clock /usr/local/bin/tty-clock
-tty-clock 
-watch ssh reralt@192.168.1.8
-ssh reralt@192.168.1.8
-dot
-cd zathura/
-ls
-nvim zathurarc 
-ln -sv ~/dotfiles/zathura ~/.config/
-cd ~/.config/
-ll
-dnf search zathura
-sudo dnf install zathura-plugins-all
-cd zathura/
-nvim zathurarc 
-exit
-nvim
-cd Downloads/
-yt-dlp https://youtu.be/kuBIotxb3AE
-ls
-:q
-exit
-neovim
-eidt
-edit
-node
-ls .mozilla/firefox/9xnjp7mx.Betterfox/
-ln -sfv ~/dotfiles/UserJS/user.js .mozilla/firefox/9xnjp7mx.Betterfox/
-paru -S neofetch
-neofetch
-nvim .bashrc 
-.bashr
-.bashrc
-ls -alh
-rm .bashrc .bash_history
-ls -alh
-ln -sfv ~/dotfiles/bash/.bashrc .
-ln -sfv ~/dotfiles/bash/.bash_history .
-nvim .bashrc 
-paru -S figlet lolcat
-paru figlet
-source .bashrc 
-pfetch
-neofetch
-free -h
-swapon --show
-paru -S systemd-swap
-sudo systemctl enable systemd-swap.service
-sudoedit /etc/systemd/swap.conf.d/myswap.conf
-mkdir /etc/systemd/swap.conf.d
-sudo mkdir /etc/systemd/swap.conf.d
-sudoedit /etc/systemd/swap.conf.d/myswap.conf
-sudo systemctl disable systemd-swap.service
-paru -Rcns systemd-swap
-dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
-sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
-ls -alh /
-chmod 0600 /swapfile
-sudo !
-sudo sudo !
-sudo chmod 0600 /swapfile
-mkswap -U clear /swapfile
-sudo mkswap -U clear /swapfile
-swapon /swapfile
-sudo swapon /swapfile
-sudoedit /etc/fstab
-swapon --show
-free -h
-sysctl vm.swappiness
-xprop 
-paru -Ps
-paru -Q
-paru -Q | grep "Console"
-console
-kgx
-kgx -h
-kgx --help-gapplication
-paru obsidian
-nvim
-ln -sfv ~/dotfiles/nvim ~/.config/
-nvim
-edit
-edit
-dict
-fzf
-eidt
-edit
-paru dict
-paru dictd
-define
-dict
-dictd hello
-dict -h
-dict "hello"
-edit
-whereis dictd
-cd /usr/share/dict/
-ls
-cat cracklib-small 
-file cracklib-small 
-edit
-edit
-source ~/.bashrc
-define
-kgx -e "define"
-cheat
-cd ~
-paru -S syncthing
-sudo systemctl enable syncthing@username.service
-sudo systemctl disable syncthing@username.service
-sudo systemctl disable syncthing@reralt.service
-sudo systemctl enable syncthing@reralt.service
-sudo systemctl start syncthing@reralt.service
-id -u
-id -g
-reboot
-reboot
-flatpak remote-ls flathub | grep org.gtk.Gtk3theme
-flatpak install org.gtk.Gtk3theme.Adwaita-dark
-flatpak remote-add kdeapps https://distribute.kde.org/kdeapps.flatpakrepo
-flatpak install kdeapps org.kde.KStyle.Adwaita//5.9
-flatpak install kdeapps org.kde.KStyle.Adwaita//5.9
-flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform//5.9
-flatpak install kdeapps org.kde.KStyle.Adwaita
-flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform
-flatpak install kdeapps org.kde.PlatformTheme.QGnomePlatform/
-paru -S adwaita-qt
-paru adwaita-qt
-ls -alh
-paru kavuntam
-paru kvuntam
-paru kvantum
-paru -Rcns kvantum
-cd /etc/profile.d/
-ls
-nvim ~/.xsession
-reboot
-paru
-paru vscode
-cd .config/
-ll
-cd qtile
-ls
-nvim autostart.sh 
-fc-list | grep "JetBrains"
-paru picom
-paru -S qtile
-ln -sfv ~/dotfiles/qtile ~/.config/
-cd .config/qtile
-ls
-nvim config.py 
-python -m py_compile ~/.config/qtile/config.py
-python -m py_compile ~/.config/qtile/config.py
-nvim .config/qtile/config.py 
-nvim .config/qtile/config.py 
-edit
-man paru.conf 
-cd .config/
-ls
-cd paru/
-ls
-nvim paru.conf 
-nvim
-sudo make clean install
-ls .config/
-rm .config/dolphinrc 
-rm -r .config/kde.org 
-rm -r .config/Thunar/
-rm -r .config/Thunar
-rm -r .config/xfce4
-ls .config/
-man cp
-mkdir -p .config/picom
-cp -rv /etc/xdg/picom.conf ~/.config/picom/
-nvim ~/.config/picom/picom.conf 
-yay xclip
-yay feh
-yay dunstify
-dunstify hello
-dunstify Muted
-dunstify -h
-dunstify --help
-dunstify -h string:x-dunst-stack-tag:test Test -A 'tested,default'
-dunstify -h string:x-dunst-stack-tag:test Testing
-dunstify -h string:x-dunst-stack-tag:test Test -A 'tested,default'
-dunstify -h string:x-dunst-stack-tag:test Testing
-dunstify -h string:x-dunst-stack-tag:test Test -A 'tested,default'
-dunstify -h string:x-dunst-stack-tag:test Test
-dunstify -h string:x-dunst-stack-tag:test Testing
-dunstify -t 600 -h string:x-dunst-stack-tag:vol $(wpctl get-volume @DEFAULT_AUDIO_SINK@)
-dunstify -t 600 -h string:x-dunst-stack-tag:vol $(wpctl get-volume @DEFAULT_AUDIO_SINK@)
-cd Desktop/
-cd dwm/
-ls
-nvim config.h 
-sudo make clean install
-
-dunstify -hb string:x-dunst-stack-tag:test Testing
-dunstify -hC string:x-dunst-stack-tag:test Testing
-dunstify -r test -b Hello
-dunstify -r 13 -b Hello
-dunstify -C 13
-dunstify -r 13 -b Hello
-dunstify -C 13
-dunstify -u --help
-dunstify -u 
-dunstify -u -h
-dunstify -u Test
-dunstify -r 13 -b Hello
-dunstify -r 13 -t -1 -b Hello
-man dunstify
-man dunst
-man notify-send
-man notify-send
-dunstify -w -r 13 -b Hello
-dunstify --help
-notify-send -w -r 13 Hello
-notify-send -w -r 13 Hello&
-notify-send -u critical "Header" "Body text"
-notify-send -r 13 -u critical "Header" "Body text"
-notify-send -C 13
-notify-send -h
-notify-send --help
-notify-send -r 13 -u low "Header" "Body text"
-dunstify -r 13 -u low "Header" "Body text"
-dunstify -r 13 -u critical "Header" "Body text"
-dunstify -C 13
-cd Desktop/dwm/
-nvim config.h 
-sudo make clean install
-nvim config.h 
-sudo make clean install
-nvim config.h 
-sudo make clean install
-free -h
-yay archlinux-wallpaper
-feh
-feh -h
-tldr feh
-feh --bg-center usr/share/backgrounds/archlinux/archbtw.png
-feh --bg-center /usr/share/backgrounds/archlinux/archbtw.png
-feh --bg-fill /usr/share/backgrounds/archlinux/archbtw.png
-feh --bg-fill /usr/share/backgrounds/archlinux/archlinux.stw 
-feh --bg-fill /usr/share/backgrounds/archlinux/simple.png 
-feh -h
-tldr feh
-man feh
-nvim .xinitrc 
-yay -h
-yay -h | grep 
-yay -s
-yay -ps
-yay -Ps
-yay arch-wallpaper
-yay archlinux-wallpaper
-yay arch-wallpaper
-yay archlinux-wallpaper
-man yay
-yay -S --editmenu archlinux-wallpaper
-man yay
-yay --editmenu archlinux-wallpaper
-whreis
-whatis
-whatis archlinux-wallpaper
-localt archlinux-wallpaper
-locate archlinux-wallpaper
-yay locate
-plocate archlinux-wallpaper
-plocate -h
-plocate archlinux-wallpaper
-plocate "archlinux-wallpaper"
-sudo updatedb
-plocate "archlinux-wallpaper"
-dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
-sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 status=progress
-chmod 0600 /swapfile
-sudo chmod 0600 /swapfile
 mkswap -U clear /swapfile
 sudo mkswap -U clear /swapfile
 swapon /swapfile
@@ -6807,3 +415,785 @@ ln -sfv ~/dotfiles/alacritty ~/.config/
 neofetch
 yay alacritty-themes
 alacritty-themes 
+dot
+ls
+cd ..
+cd .config/alacritty/alacritty.yml
+nvim .config/alacritty/alacritty.yml
+ls -alh
+cd .config/alacritty/
+ll
+nvim alacritty.yml.1679139228599.bak 
+cat circadian.yaml 
+ls
+nvim alacritty.yml
+neofetch
+nvim alacritty.yml
+nvim alacritty.yml
+ls
+rm alacritty.yml.*
+ls
+ls colors/
+cd ..
+dot
+git add . & git commit -m "...."
+killall git
+git add . & git commit -m "...."
+git status
+git commit -m "...."
+git push
+dot
+cd dwm
+ls
+cd patches/
+ls
+cd ~/Desktop/dwm/
+ls
+git checkout main
+cd pat
+ls
+git status
+git rebase
+nvim config.def.h 
+git branch -a
+git branch -a
+git pull origin main
+nvim config.def.h 
+git status
+git branch -a
+cd patches/
+wget https://dwm.suckless.org/patches/center/dwm-center-6.2.diff
+ls
+cd ..
+patch < ./patches/dwm-center-6.2.diff
+cd patches/
+nvim dwm-center-6.2.diff 
+cd Desktop/
+cd dwm/
+nvim config.h 
+nvim config.h 
+sudo make clean install
+xprop
+cd Desktop/
+cd dwm/
+ls
+nvim config.h 
+suro make clean install
+sudo make clean install
+xprop
+cat .xinitrc 
+nvim .xinitrc 
+yay -Rcns picom
+yay picom
+ls .config/picom/
+nvim .xinitrc 
+startx
+startx
+startx
+startx
+nvim Desktop/dwm/config.h 
+startx
+startx
+startx
+startx
+startx
+startx
+cd Desktop/
+cd dwm/
+ls
+git add . & git commit -m "Add centered patch"
+git status
+git commit -m "Add centered patch"
+git push
+shutdown now
+date
+time
+do
+dot
+cd slock/
+ls
+nvim config.h
+cd ~/Desktop/
+ls
+cd slock-1.5
+ls
+cd patches/
+nvim slock-dwmlogoandblurscreen-1.0.diff 
+ls
+ls
+cd ..
+cd ..
+ls
+cd slock-1.5
+cd patches/
+ls
+nvim slock-alternate-colors-20220921-35633d4.diff 
+nvim slock-colormessage-20200210-35633d4.diff 
+cd Desktop/slock-1.5
+ls
+nvim config.h 
+nvim config.h 
+sudo make clean install
+slock
+slock
+slock
+cd..
+cd ..
+ls
+rm -rf slock-1.5
+cd slock-1.5
+ls
+sudo make clean install
+cd ..
+cd slock-1.5
+ls
+nvim config.h 
+cd ..
+chown -R reralt slock-1.5
+sudo chown -R reralt slock-1.5
+cd slock-1.5
+nvim config.h
+nvim config.h
+nvim config.h
+sudo make clean install
+slock
+slock
+slock
+nvim config.h
+patch < ./patches/slock-colormessage-20200210-35633d4.diff 
+nvim config.h
+sudo make clean install
+nvim config.h
+sudo make clean install
+nvim config.h 
+sudo make clean install
+nvim config.h
+sudo make clean install
+nvim config.h
+sudo make clean install
+dot
+cd dmenu/
+ls
+cd dem
+cd dmenu/
+ls
+ls patches/
+sudo make clean install
+cd Desktop/
+wget https://dl.suckless.org/tools/slock-1.5.tar.gz
+tldr tar
+cd slock-1.5
+ls
+sudo make clean install
+nvim config.h 
+cd ..
+chown -R reralt slock-1.5
+sudo chown -R reralt slock-1.5
+cd slock-1.5
+ls
+nvim config.h 
+sudo make clean install
+slock
+slock
+nvim config.h 
+sudo make clean install
+slock
+mkdir patches
+cd patches/
+wget https://tools.suckless.org/slock/patches/dwmlogoandblurscreen/slock-dwmlogoandblurscreen-1.0.diff
+cd ..
+patch < ./patches/slock-dwmlogoandblurscreen-1.0.diff 
+mkdir patches
+ls
+cd ..
+ls
+cd slock-1.5
+ls
+mkdir patches
+cd patches/
+wget https://tools.suckless.org/slock/patches/alternate-colors/slock-alternate-colors-20220921-35633d4.diff
+cd ..
+patch < ./patches/slock-alternate-colors-20220921-35633d4.diff 
+cd patches/
+wget https://tools.suckless.org/slock/patches/colormessage/slock-colormessage-20200210-35633d4.diff
+slock -f
+slock -f
+xev
+dot
+cd slock/
+ls
+sudo make clean install
+slock
+nvim config.h
+sudo make clean install
+slcok
+slock
+slock -f
+nvim config.h
+sudo make clean install
+slock
+nvim config.h
+sudo make clean install
+slock
+nvim config.h
+sudo make clean install
+nvim config.h
+sudo make clean install
+slock
+cd ..
+cd dwm
+ls
+nvim config.h
+yay -S cowsay fortune
+yay forune
+yay fortune
+yay fortune
+slock -m "$(cowsay "$(fortune)" | lolcat -ft)"
+slock -f
+slock -m "$(cowsay "$(fortune)" | lolcat -ft)"
+slock -m "$(cowsay "$(fortune)" | lolcat -ft)"
+nvim .bashrc 
+slock -m "$(figlet -f 3d ${HOSTNAME^^} -t | lolcat -ft)"
+slock -m "$(figlet -f 3d test -t | lolcat -ft)"
+slock -m "$(figlet ${HOSTNAME^^} -t | lolcat -ft)"
+slock -m "$(figlet ${HOSTNAME^^} -t | lolcat -ft)"
+slock -m "$(figlet ${HOSTNAME^^} -t | lolcat -ft)"
+slock -m "$(figlet ${HOSTNAME^^} -t | lolcat -ft)"
+slock -m "$(figlet ${HOSTNAME^^} -t | lolcat -ft)\n$date"
+slock -m "$(figlet ${HOSTNAME^^} -t | lolcat -ft)\n$date"
+slock -m "L O C K E D$'\n'$date"
+slock -m "L O C K E D$'\n'$date"
+slock -m "L O C K E D$date"
+slock -m "$date"
+slock -m "$(printf "text colored \x1b[38;2;0;255;0m green\x1b[39m\n")"
+slock -m "$(printf "WHAT IS THIS\n NIGGA")"
+cd Desktop/dwm/
+ls
+nvim config.h
+dmenu_run -i -h 50 -l 8 -nb #000000 -nf #a89984 -sb #282828 -sf #fbf1c7
+dmenu_run -h 50 -l 8 -nb #000000 -nf #a89984 -sb #282828 -sf #fbf1c7
+dmenu_run -i -h 50 -l 8 -nb "#000000" -nf "#a89984" -sb "#282828" -sf "#fbf1c7"
+dmenu_run -iw -h 50 -l 8 -nb "#000000" -nf "#a89984" -sb "#282828" -sf "#fbf1c7"
+tldr dmenu_run
+dmenu_run 
+dmenu_run -w
+dmenu_run -w 23
+dmenu_run -h
+man dmenu
+dmenu_run -h 50 -l 8 -nb #000000 -nf #a89984 -sb #282828 -sf #fbf1c7
+dmenu_run -h 50 -l 8
+dmenu_run -l 8
+dmenu_run -iw -h 50 -l 8 -nb "#000000" -nf "#a89984" -sb "#282828 -sf #fbf1c7
+dmenu_run -i -h 50 -l 8 -nb #000000 -nf #a89984 -sb #282828 -sf #fbf1c7
+cd Downloads/
+ls
+cd tmp/
+cd dmenu/
+sudo make clean install
+slock
+killall dmenu
+dmenu
+demnu_run
+demenu_run
+dmenu_run
+cd ~/Desktop/dwm/
+ls
+sudo make clean install
+de Desktop/dwm/
+ls
+cd Desktop/dwm/
+git fetch origin
+git checkout no-gaps
+ls
+cd patches
+ls
+wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
+cd ..
+patch < ./patches/dwm-fullgaps-6.2.diff 
+cat dwm.c.rej 
+cd patches/
+nvim dwm-fullgaps-6.2.diff 
+cat dwm.c
+cd Desktop/dwm/
+nvim dwm.c
+sudo make clean install
+nvim config.h
+nvim config.h
+sudo make clean install
+nvim dwm.c
+sudo make clean isntall
+sudo make clean install
+nvim config.h
+sudo make clean install
+cd Desktop/dwm/
+nvim config.h
+sudo make clean install
+cd Desktop/dwm/
+nvim config.h
+sudo make clean install
+slstatus 
+dot
+plocate sltatus
+sudo updatedb
+plocate slstatus
+man sltatus
+man slstatus
+yay vscode
+dot
+cd dwm
+ls
+cd patches/
+ls
+cd ..
+nvim config.h
+cd ~
+cd Desk
+cd Desktop/
+ls
+cd dwm/
+nvim config.h
+wpctl get-volume @DEFAULT_AUDIO_SINK@
+cut
+cut --help
+tldr cut
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -n 1
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -f 1
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -f=1
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -f 3
+cheat
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -c 'V'
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -c V
+wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut
+wpctl get-volume @DEFAULT_AUDIO_SINK@
+cd Desktop/dwm/
+ls
+git status
+git .
+git add .
+git commit -m "Add fullgaps patch"
+git push
+git fetch
+git checkout main
+git fetch
+git pull
+git status
+cd ..
+ls
+git clone https://git.suckless.org/slstatus
+cd slstatus/
+ls
+rm -rf .git LICENSE 
+ls
+sudo make clean install
+nvim config.h 
+cd ..
+chown -R reralt slstatus
+sudo chown -R reralt slstatus
+cd slstatus/
+ln -sfv ~/dotfiles/nvim ~/.config/
+nvim
+edit
+yay -S fzf
+edit
+nvim
+nvim config.h
+sudo make clean install
+slstatus
+nvim config.h 
+sudo make clean install
+slstatus
+nvim config.h
+sudo make clean install
+slstatus
+nvim config.h
+sudo make clean install
+nvim config.h
+sudo make clean install
+slstatus 
+nvim config.h
+sudo make clean install
+slstatus 
+nvim slstatus
+nvim config.h
+sudo make clean install
+nvim config.h
+sudo make clean install
+slstatus 
+sudo make clean install
+nvim config.h
+sudo make clean install
+slstatus 
+slstatus
+nvim config.h
+sudo make clean install
+slstatus 
+cd ~
+nvim .xinitrc 
+ip
+ip -a
+ip link
+cd /dev/
+ls
+wpctl get-volume
+history
+nvim .xinitrc 
+startx
+startx
+startx
+startx
+startx
+startx
+startx
+shutdown now
+fc-list | grep "Jet"
+cd Desktop/
+cd dwm/
+gi status
+git status
+git diff
+nvim config.h
+sudo make clean install
+cd Desktop/dwm/
+nvim config.h
+sudo make clean install
+dot
+cd dwm
+ls
+nivm config.h
+nvim config.h
+cd Desktop/
+cd dwm/
+nvim config.h
+sudo make clean install
+dot
+cd dwm
+ls
+nvim config.h
+nvim
+dot
+cd dwmblocks/
+ls
+cd dwmblocks/
+ls
+nvim blocks.h 
+sensors
+killall slstatus
+sudo make clean install
+dwmblocks 
+ls
+cd dwmblocks
+ls
+file dwmblocks
+nvim README.md 
+cd
+cd Dw
+cd Downloads/
+ls
+cd tmp/
+git clone https://github.com/LukeSmithxyz/dwmblocks.git
+cd dwmblocks/
+ls
+sudo make clean install
+killall dwmblocks
+killall dwmblocks 
+kill dwmblocks 
+dwmblocks 
+cd ..
+git clone https://github.com/LukeSmithxyz/voidrice/tree/master/.local/bin/statusbar
+cd .
+cd ..
+cd ..
+cd .local/s
+cd .local/
+ls
+mkdir bin
+cd bin
+mkdir statusbar
+cd statusbar/
+ls
+cp ~/Downloads/statusbar/* .
+ls
+chown reralt *
+sudo chown reralt *
+chmod +x *
+$PATH
+source ~/.bashrc 
+./sb-clock 
+./sb-forecast 
+./sb-volume 
+yay noto-fonts-emoji
+./sb-volume 
+./sb-forecast 
+cd ~/.config/fontconfig/ && ls
+mkdir ~/.config/fontconfig/
+cd ~/.config/fontconfig/ && ls
+sudo touch fonts.conf
+sudo nvim fonts.conf 
+fc-cache -v
+fc-cache -fv
+cd -
+./sb-volume 
+dwmblocks
+edit
+source ~/.bashrc 
+$PATH
+dwmblocks 
+cd -
+ls
+nvim fonts.conf 
+htop
+yay -S htop
+htop
+cd Downloads/tmp/
+ls
+cd ..
+cd statusbar/
+ls
+cd ~/Desktop/dwm/
+nvim config.h
+sudo make clean install
+startx
+startx
+killall slstatus
+dwmblocks 
+cd .local/bin/statusbar/
+ls
+chmod +x sb-cpu 
+ls
+ls
+chmod +x sb-cpubars 
+cd
+nvim .xinitrc 
+cd ~/Desktop/dwm
+ls
+nvim config.h
+sudo make clean install
+reboot
+$LOCATION
+curl -sf wittr.in/dhaka
+curl  wittr.in/dhaka
+curl wittr.in/dhaka
+curl -sf wttr.in/dhaka
+cd .local/bin/
+cd statusbar/
+nvim sb-forecast 
+dwmblocks
+nvim sb-forecast 
+sb-forecast 
+nvim sb-forecast 
+sb-forecast 
+nvim sb-forecast 
+sb-forecast 
+nvim sb-forecast 
+$weatherdata
+cat $weatherdata
+nvim sb-forecast 
+cat $weatherdata
+nvim sb-forecast 
+nvim sb-forecast 
+curl -sf wttr.in/dhaka
+nvim sb-forecast 
+ls
+ls
+chmod +x sb-iplocate 
+ls
+./sb-iplocate 
+yay ifinstalled
+yay geoip
+ls
+geoip
+yay geoip
+geoiplookup
+rm sb-iplocate 
+yay tsp
+ls
+chmod +x *
+ls
+./sb-moonphase
+./sb-nettraf 
+./sb-tasks 
+yay -S spooler
+yay spooler
+yay spooler
+./sb-tasks 
+./sb-tasks
+./sb-tasks
+./sb-tasks
+./sb-tasks
+./sb-tasks
+./sb-tasks
+tsp -l
+tsp
+ls
+dwmblocks
+cd ~/Downloads/tmp/dwmblocks/
+ls
+nvim config.h 
+sudo make clean install
+dwmblocks
+nvim config.h 
+sudo make clean install
+dwmblocks
+sudo make clean install
+dwmblocks 
+nvim config.h 
+sudo make clean install
+killall dwmblocks
+nvim .xinitrc 
+cd ~/Desktop/slstatus/
+ls
+nvim config.h
+nvim
+cd ..
+cd dwm/
+ls
+git status
+git add .
+git commit -m "Change font and other tweaks"
+git push
+cd patches/
+ls
+cd ..
+git status
+patch < ./patches/dwm-noborderselflickerfix-2022042627-d93ff48803f0.diff 
+nvim dwm.c.rej 
+cd patches/
+nvim dwm-noborderselflickerfix-2022042627-d93ff48803f0.diff 
+cd Desktop/dwm/
+nvim dwm.c
+sudo make clean install
+slstatus
+cd ~/Desktop/slstatus/
+ls
+nvim config.h
+sudo make clean install
+slstatus 
+nvim config.h
+sudo make clean install
+slstatus
+yay google-chrome
+ls
+nvim config.
+nvim config.h
+sudo make clean install
+killall slstatus
+slstatus
+man date
+acceleration_speed 
+whatis acceleration_speed 
+sudo nvim /etc/X11/xorg.conf.d/50-mouse-acceleration.conf
+killx
+kill x
+yay xautolock
+xautolock -h
+nvim ~/.xinitrc 
+cd Desktop/
+cd dwm/
+ls
+nvim config.h
+sudo make clean instlal
+sudo make clean install
+nvim config.h
+sudo make clean install
+yay librewolf
+wget https://raw.githubusercontent.com/tazihad/bangla-fonts-fix-linux/main/50-custom-bangla.conf && mkdir -p ~/.config/fontconfig/conf.d && cp 50-custom-bangla.conf ~/.config/fontconfig/conf.d/
+cd .config/fontconfig/conf.d/
+ls
+cd ~/Downloads/
+ls
+cd tmp
+git clone https://github.com/tazihad/win10-fonts.git
+cd win10-fonts/
+ls
+ls -alh
+rm -rf .git
+ls
+cd ..
+sudo cp -rv win10-fonts /usr/share/fonts/
+fc-cache
+fc-cache -fv
+LANG=bd_BD fc-match
+startx
+startx
+cd ~/Desktop/
+ls
+cd slstatus/
+ls
+sudo make clean install
+startx
+startx
+startx
+nvim cd 
+cd ~
+nvim .xinitrc 
+startx
+startx
+cd Desktop/dwm/
+nvim config.h
+cd Desktop/slstatus/
+ls
+nvim config.h
+cd ..
+ls
+cd slock-1.5
+ls
+nvim config.h
+nvim config.h
+dot
+cd slock/
+ls
+nvim config.
+nvim config.h
+sudo make clean install
+yay xdg-desktop-portal
+yay flatpak
+reboot
+nvim .xinitrc 
+nvim
+nvim .xinitrc 
+vim
+nvim
+nvim
+nvim -h
+nvim --noplugin
+vim .xinitrc
+nvim --noplugin
+nvim
+nvim
+nvim
+flatpak search discord
+flatpak -h
+flatpak search discord
+nvim
+htop
+startx
+startx
+yay -Rcns xdg-desktop-portal
+reboot
+nvim
+cd .config/
+ls
+nvim mimeapps.list 
+xdg-mime default Nemo.desktop inode/directory
+nvim mimeapps.list 
+flatpak search discord
+yay flatpak
+cd Desktop/dwm/
+ls
+nvim config.h
+sudo make clean install
+cd Desktop/dw
+cd Desktop/dwm/
+ls
+cd patches/
+git fetch origin
+git checkout no-pertag
+git status
+wget https://dwm.suckless.org/patches/pertag/dwm-pertag-20200914-61bb8b2.diff
+cd ..
+patch < ./patches/dwm-pertag-20200914-61bb8b2.diff 
+cd patches/
+nvim dwm-pertag-20200914-61bb8b2.diff 
+node
+startx
+reboot

@@ -1,10 +1,10 @@
 /* user and group to drop privileges to */
-static const char *user  = "nasif";
+static const char *user  = "reralt";
 static const char *group = "users";
 
 static const char *colorname[NUMCOLS] = {
 	[INIT] =   "black",     /* after initialization */
-	[INPUT] =  "#076678",   /* during input */
+	[INPUT] =  "#1D4A05",   /* during input */
 	[FAILED] = "#cc241d",   /* wrong password */
 };
 
@@ -15,10 +15,10 @@ static const int failonclear = 1;
 static const int timetocancel = 4;
 
 /* default message */
-static const char * message = "L E S S   I S   M O R E";
+static const char * message = "L O C K E D";
 
 /* text color */
 static const char * text_color = "#ffffff";
 
 /* text size (must be a valid size) */
-static const char * font_name = "-xos4-terminus-medium-r-normal--28-280-72-72-c-140-iso10646-1";
+static const char * font_name = "6x13";
