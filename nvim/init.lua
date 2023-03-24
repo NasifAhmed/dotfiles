@@ -34,6 +34,8 @@ Will keep adding stuff.
 -------------------------------------------------------------------------------
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 --
@@ -188,6 +190,8 @@ require('lazy').setup({
         },
     },
 
+    { 'norcalli/nvim-colorizer.lua' },
+
     { 'vimpostor/vim-lumen' },
 
     { "catppuccin/nvim", name = "catppuccin" },
@@ -236,6 +240,13 @@ require('nvim-treesitter.configs').setup {
     indent = { enable = true, disable = { 'python' } },
 }
 
+require('onedark').setup {
+    style = 'warmer'
+}
+require('onedark').load()
+
+require'colorizer'.setup()
+
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -272,3 +283,33 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep,
     { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, 
     { desc = '[S]earch [D]iagnostics' })
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+--
+--
+--   Netrew setup
+--
+--
+-------------------------------------------------------------------------------
+
+-- netrw configs
+---- Open file under cursor same window down
+--nnoremap <leader>oj :wincmd f<CR>
+--map <leader>oj :wincmd f<CR>
+--
+---- Open file under cursor same window left
+--nnoremap <leader>ol :vertical wincmd f<CR>
+--map <leader>ol :vertical wincmd f<CR>
+--
+---- Open file under cursor new window
+--nnoremap <leader>o<leader> :wincmd gf<CR>
+--map <leader>o<leader> :wincmd gf<CR>
+--
+---- File Manager
+---- https://superuser.com/questions/31677/how-do-i-open-the-directory-of-the-current-open-file
+--map <leader>.j :Sex<CR>
+--map <leader>.h :Vex<CR>
+--map <leader>f. :30vs .<CR>
+--

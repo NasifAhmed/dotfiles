@@ -1197,3 +1197,231 @@ nvim dwm-pertag-20200914-61bb8b2.diff
 node
 startx
 reboot
+rm .bashrc .bash_history 
+ln -sfv ~/dotfiles/bash/.bashrc .
+ln -sfv ~/dotfiles/bash/.bash_history .
+yay figlet
+source .bashrc 
+yay -S lolcat
+source .bashrc 
+nvim .config/alacritty/alacritty.yml 
+nvim .config/alacritty/alacritty.yml 
+nvim .config/alacritty/alacritty.yml 
+ls
+nvim .config/alacritty/alacritty.yml 
+nvim .config/alacritty/alacritty.yml 
+ls
+ln -sfv ~/dotfiles/nvim ~/.config/
+nvim 
+yay vscode
+ls
+locate code
+sudo updatedb
+locate code
+locate code | grep "mime"
+locate code | less
+cd .config/
+nvim mimeapps.list 
+yay if
+xdg-mime query default inode/directory
+xdg-mime default nautilus.desktop inode/directory
+sudo nvim /usr/share/applications/code.desktop 
+sudo nvim /usr/share/applications/code-url-handler.desktop 
+xdg-mime query default inode/directory
+xdg-mime default nautilus.desktop inode/directory
+locate nautilus.desktop
+sudo nvim /usr/share/applications/nautilus.desktop
+sudo updatedb
+locate nautilus.desktop
+cd Doc
+cd ~/Documents/
+nvim codesolve.txt
+yay google-chrome
+yay messneger
+yay messenger
+curl ch.sh
+cheat
+nvim ~/.config/alacritty/alacritty.yml 
+nvim ~/.config/alacritty/alacritty.yml 
+youtube-dl --list-formats https://youtu.be/XEMZIAeBO-E
+youtube-dlp --list-formats https://youtu.be/XEMZIAeBO-E
+ytdlp --list-formats https://youtu.be/XEMZIAeBO-E
+yt-dlp --list-formats https://youtu.be/XEMZIAeBO-E
+mpv --ytdl-format=299 https://youtu.be/XEMZIAeBO-E
+mpv --ytdl-format=299+140 https://youtu.be/XEMZIAeBO-E
+man yt-dlp
+sudo pacman -Syu zram-generator
+sudo pacman -Syu zram-generator
+sudo nvim /usr/lib/systemd/zram-generator.conf
+sudo systemctl daemon-reload
+sudo systemctl start /dev/zram0
+free -h
+nvim ~/.config/alacritty/alacritty.yml 
+yay -S mpv
+ln -sfv ~/dotfiles/mpv/ ~/.config/
+mpv "https://youtu.be/XEMZIAeBO-E"
+yay ytdlp
+yay youtube-dl
+mpv "https://youtu.be/XEMZIAeBO-E"
+yay vaapi
+mpv "https://youtu.be/XEMZIAeBO-E"
+man mpv
+mpv "https://youtu.be/XEMZIAeBO-E"
+cd .config/mpv
+ls
+cd scripts/
+ls
+wget https://github.com/jgreco/mpv-youtube-quality/raw/master/youtube-quality.lua
+ls
+mpv "https://youtu.be/XEMZIAeBO-E"
+;s
+ls 
+rm youtube-quality.lua 
+man mpv
+yay ytfzf
+yay -S ueberzug
+ytfzf -t
+ytfzf -t
+python
+yay node npm
+yay -S nodejs npm
+yay -S iftop
+iftop 
+sudo iftop 
+history
+ssh ad.box
+exit
+sudo updatedb
+locate qbittorrent-nox@.service
+sudo systemctl enable qbittorrent-nox@.service
+sudo systemctl enable qbittorrent-nox
+sudo systemctl daemon-reload
+sudo systemctl start qbittorrent-nox@qbtuser
+sudo systemctl enable qbittorrent-nox@qbtuser
+sudo systemctl status qbittorrent-nox@qbtuser
+sudo systemctl start qbittorrent-nox@qbtuser
+sudo systemctl status qbittorrent-nox@qbtuser
+sudo adduser qbtuser
+yay -S adduser
+sudo adduser qbtuser
+sudo usermod -s /usr/sbin/nologin qbtuser
+sudo su qbtuser
+sudo su qbtuser
+sudo systemctl start qbittorrent-nox@qbtuser
+sudo systemctl status qbittorrent-nox@qbtuser
+yay nethogs
+nethogs 
+sudo nethogs 
+yay -S obisidian
+yay -S obsidian
+yay -S adwaitaqt6 qgnomeplatform
+yay adwaitaqt
+yay adwaitaqt6
+yay adwaitaqt
+yay adwaita
+sudo nvim /etc/environment
+yay qgnome
+sudo ln -s -t /root /usr/share/themes
+sudo mv /root/themes /root/.themes
+sudo ln -s -t /root /usr/share/icons/
+sudo mv /root/icons /root/.icons
+yay qbittorrent
+yay -S syncthing
+sudo adduser qbtuser
+yay adduser
+sudo usermod -s /usr/sbin/nologin qbtuser
+sudo adduser qbtuser
+yay -Rs adduser
+qbittorrent-nox 
+exit
+define
+yay dictd
+define
+yay roxterm
+yay roxterm
+yay roxterm
+vim
+nvim
+nvim
+jump
+ls
+cd colors/
+nvim onedark.yaml
+ls
+cd ..
+nvim alacritty.yml 
+nvim alacritty.yml 
+cd colors/
+ls
+cat catppuccin-mocha.yml 
+cat onedark.yaml 
+jump
+ls
+nvim alacritty.yml 
+cd colors/
+ls
+cd ..
+ls
+cd colors/
+ls
+mv onedark.yaml onedark.yml
+ls
+cd ..
+nvim alacritty.yml 
+ls
+nvi
+nvim
+jump
+ls
+nvim init.lua 
+nvim
+nvim
+nvim
+jump
+ls
+cd colors/
+cp onedark.yml onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim onedark-warmer.yml
+nvim
+yay -S xclip
+nvim onedark-warmer.yml
+jump
+ls
+ll
+rm nvim
+nvim
+nvim
+edit
+ln -sfv ~/dotfiles/nvim .
+ll
+nvim
+edit
+nvim
+nvim
+nvim
+nvim
+nvim
+jump
+ls
+cd colors/
+ls
+nvim onedark-warmer.yml 
+nvim onedark-warmer.yml 
+nvim onedark-warmer.yml 
+nvim onedark-warmer.yml 
+nvim onedark-warmer.yml 
+nvim 
+nvim test.txt
+mv test.txt test.js
+nvim test.js 
+edit
+nvim test.js 
+edit
+edit
