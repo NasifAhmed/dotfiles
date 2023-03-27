@@ -1425,3 +1425,85 @@ edit
 nvim test.js 
 edit
 edit
+yay brave
+yay brave
+yay -Rcns brave-bin
+yay -S brave-bin
+edit
+ls
+edit
+cd Documents/
+ls
+mkdir lab
+cd lab/
+nvim lab2.py
+edit
+edit
+yay python
+nvim lab3.py
+nvim
+nvim
+nvim lab3.py
+iftop 
+sudo iftop 
+sudo nethogs 
+python
+python3 -m pip install --user --upgrade pynvim
+yay pip
+yay python-pip
+python3 -m pip install --user --upgrade pynvim
+npm install -g neovim
+sudo npm install -g neovim
+npm install -g npm@9.6.2
+sudo npm install -g npm@9.6.2
+yay ripgrep
+nvim
+locate lab3
+edit
+python
+cd Documents/
+mkdir HTTPcourse
+cd HTTPcourse/
+ls
+git clone https://github.com/bootdotdev/fcc-learn-http-assets.git
+cd fcc-learn-http-assets/
+ls
+cd project/
+ls
+cd ..
+cd course/
+ls
+ls
+cd 1
+cd 1-why-http/
+ls
+ls
+cd exercises/
+ls
+cd 1-web-communication/
+ls
+cat code.js 
+ssh at.box
+ssh ad.box
+ay
+yay
+sudo systemctl enable syncthing@reralt.service
+sudo systemctl start syncthing@username.service
+sudo systemctl sttus syncthing@username.service
+sudo systemctl status syncthing@username.service
+sudo systemctl start syncthing@reralt.service
+sudo systemctl status syncthing@reralt.service
+ssh ad.box
+yay
+reboot
+yay -S caddy
+ls
+node code.js 
+node code.js 
+node code.js 
+node code.js 
+node code.js 
+node code.js 
+node code.js 
+node code.js 
+node code.js 

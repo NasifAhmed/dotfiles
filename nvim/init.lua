@@ -81,6 +81,7 @@ vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
+vim.opt.clipboard = "unnamedplus"
 
 
 -------------------------------------------------------------------------------
