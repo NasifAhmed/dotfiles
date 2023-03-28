@@ -81,6 +81,8 @@ vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
+
+-- Make the system clipboard the default copy/cut register
 vim.opt.clipboard = "unnamedplus"
 
 

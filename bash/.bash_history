@@ -1507,3 +1507,127 @@ node code.js
 node code.js 
 node code.js 
 node code.js 
+pacman -Qi alacritty
+pacman -Qk alacritty
+pacman -Qkl alacritty
+pacman -Qm
+pacman -Qm | wc -l
+pacman -Qn
+pacman -Qo /usr/share/java/
+pacman -Qt
+pacman -Qt | wc -l
+pacman -Qu | wc -l
+pacman -Sg gnome
+pacman -Sii xorg
+pacman -Sii neofetch
+pacman -Si neofetch
+pacman -Qkl alacritty
+pacman -Qk alacritty
+pacman -Qkl alacritty
+pacman -Qi alacritty
+pacman -T alacritty
+sudo pacman -Syup
+yay -Qc alacritty
+yay -Qc qemu-desktop
+yay -Q
+yay -Q | less
+yay -Qc linux
+ls
+cd ~/Documents/HTTPcourse/fcc-learn-http-assets/course/4-async/exercises/
+cd ..
+cd ..
+cd ..
+pwd
+cd ..
+ls
+cd fcc-learn-http-assets/
+code .
+yay
+mpv "https://www.twitch.tv/shroud"
+yay -S chromium
+free 0h
+free -h
+yay -Rcns chromium
+yay firefoxpwa
+yay firefoxpwa
+yay firefox-pwa
+yay -Rcns firefox-pwa
+yay -Qq | grep firefox
+yay -Rcns firefox-pwa-bin
+uptime
+neofetch
+edit
+neofetch
+edit
+source .bashrc 
+cd /usr/bin/
+pwd
+noefetch
+neofetch
+dot
+add .
+git add .
+git commit -m "..."
+git push
+edit
+dot
+jump 
+ls
+dot
+man dat
+man date
+nvim
+yay
+man yay
+yay -w
+man yay
+yay --news
+pary
+paru
+yay paru
+ls
+man paru
+paru -w
+ls
+neovim
+nvim
+edit
+man pacman
+yay -Q
+yay -Qq
+yay -Q
+man pacman
+yay -s
+yay -s test
+pacman -s test
+pacman -Ss test
+pacman -o /usr/bin/jasper 
+man pacman
+echo $0
+edit
+systemctl list
+systemctl -l
+sudo systemctl stop  qbittorrent-nox@qbtuser.service 
+sudo systemctl disable qbittorrent-nox@qbtuser.service 
+yay -Svp qbittorrent
+yay -Sv qbittorrent
+edit
+edit
+source ~/.bashrc 
+edit
+source ~/.bashrc 
+edit
+edit
+source ~/.bashrc 
+cd
+nvim .bashrc 
+source .bashrc 
+nvim .bashrc 
+source .bashrc 
+nvim .bashrc 
+nvim .bashrc 
+source .bashrc 
+cd Downloads/
+nvim .bashr
+cd
+nvim .bashrc 
