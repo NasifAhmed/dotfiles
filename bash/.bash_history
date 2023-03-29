@@ -1631,3 +1631,36 @@ cd Downloads/
 nvim .bashr
 cd
 nvim .bashrc 
+nvim .bashrc 
+source .bashrc 
+cd Downloads/
+cd
+nvim .bashrc 
+source .bashrc 
+nvim .bashrc 
+cd Documents/
+ls
+cd HTTPcourse/fcc-learn-http-assets/
+cd course/
+ls
+cd 4-async/
+ls
+cd exercises/
+ls
+cd 4a-why-promises/
+ls
+cd
+dot
+git add .
+git status
+git commit -m "...."
+git push
+cd
+nvim /etc/bash.bash
+nvim .bashrc
+source .bashrc
+ls
+man ls
+nvim .bashrc
+dot
+ls
