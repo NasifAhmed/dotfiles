@@ -1664,3 +1664,33 @@ man ls
 nvim .bashrc
 dot
 ls
+rm -rf dotfiles
+ls
+ls -alh
+git clone git@github.com:NasifAhmed/dotfiles.git
+jasd
+nvim
+ls
+locate lazy
+sudo updatedb
+locate lazy
+rm -rf .local/share/nvim/lazy
+locate lazy
+sudo updatedb
+locate lazy
+nvim
+yay ripgrep
+sudo nvim /usr/lib/systemd/zram-generator.conf
+sudo pacman -Syu zram-generator
+sudo systemctl daemon-reload
+sudo systemctl start /dev/zram0
+dracut
+sudo dracut
+ls
+free 0h
+free -h
+ls
+yay
+sudo nvim /etc/pacman.d/mirrorlist
+yay
+dot
