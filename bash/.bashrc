@@ -169,11 +169,11 @@ extract () {
 ##  Startup Commands                                                          ##
 ################################################################################
 
-#pfetch
-figlet -f 3d ${HOSTNAME^^} -t | lolcat
-echo -e "\n"
-date +%c
-echo -e "\n"
+pfetch
+#figlet -f 3d ${HOSTNAME^^} -t | lolcat
+#echo -e "\n"
+#date +%c
+#echo -e "\n"
 
 
 ### EOF ###

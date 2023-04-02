@@ -11,6 +11,20 @@
 --      ░░      ░░░ ░░░░░░░░   ░░░░░░░       ░░     ░░ ░░         ░░ 
 
 ================================================================================
+
+This is my final neovim setup. Goal is to create a personalized minimal neovim 
+setup as I keep getting used to neovim as my main editor.
+
+This mainly started from the Primeagen's video titled "0 to LSP". But found that
+all very over-whelming. Still I followed along and got to pretty decent setup.
+But didn't understand half of what I did or what to do if something breaks. So 
+deleted everything and started from sratch again.
+Then took some stuff from the mentioned video and other kickstart.nvim project 
+and from random youtube videos/forum posts/articles.
+Will keep adding stuff.
+
+- Ahmed , February 2023
+
 --]]
 
 -------------------------------------------------------------------------------
@@ -31,9 +45,8 @@ vim.g.netrw_liststyle = 3
 --
 -------------------------------------------------------------------------------
 
--- Line numbers
-vim.opt.number = true
 -- Relative line numbers
+vim.opt.number = true
 --vim.opt.relativenumber = true
 
 -- 4 space indent
@@ -52,10 +65,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
-
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
-
 
 -- Stop scrolling to the bottom. Always keep 8 line padding.
 vim.opt.scrolloff = 8
@@ -170,7 +179,6 @@ require('lazy').setup({
         config = function()
             vim.cmd.colorscheme 'onedark'
         end,
-	style = 'warmer',
     },
 
     { -- Set lualine as statusline
@@ -187,12 +195,17 @@ require('lazy').setup({
 
     { 'norcalli/nvim-colorizer.lua' },
 
-    { 'Yazeed1s/minimal.nvim' },
+    { 'vimpostor/vim-lumen' },
 
-    { -- Autocompletion
-        'hrsh7th/nvim-cmp',
-        dependencies = { 'hrsh7th/cmp-nvim-lsp' },
-    },
+    { "catppuccin/nvim", name = "catppuccin" },
+
+    { 'Mofiqul/dracula.nvim' },
+    
+    { 'EdenEast/nightfox.nvim' },
+     
+    { 'ishan9299/nvim-solarized-lua' },
+
+    { 'ms-jpq/coq_nvim' },
 
 
 })
@@ -227,18 +240,17 @@ pcall(require('telescope').load_extension, 'fzf')
 require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
     ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 
-        'typescript', 'help', 'vim', 'javascript' },
+        'typescript', 'help', 'vim' },
     highlight = { enable = true },
     indent = { enable = true, disable = { 'python' } },
 }
 
---require('onedark').setup {
---}
---require('onedark').load()
+require('onedark').setup {
+    style = 'warmer'
+}
+require('onedark').load()
 
 require'colorizer'.setup()
-
-vim.cmd[[colorscheme minimal]]
 
 
 -------------------------------------------------------------------------------
@@ -277,29 +289,32 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep,
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, 
     { desc = '[S]earch [D]iagnostics' })
 
-vim.keymap.set('n' ,'<leader>f', ':Exp<CR>' ,
-     {desc = 'Netrw file explorer' })
-vim.keymap.set('n' ,'<leader>o', ':tabnext<CR>' ,
-     {desc = 'Next tab' })
-vim.keymap.set('n' ,'<leader>i', ':tabnext<CR>' ,
-     {desc = 'Previous tab' })
-vim.keymap.set('n' ,'<leader>v', ':vsp<CR>' ,
-     {desc = 'Vertical Split' })
-vim.keymap.set('n' ,'<leader>h', ':sp<CR>' ,
-     {desc = 'Horizontal Split' })
-vim.keymap.set('n', '<C-h>', '<C-w>h<CR>' ,
-     {desc = 'Go to split on left' })
-vim.keymap.set('n', '<C-j>', '<C-w>j<CR>' ,
-     {desc = 'Go to split on up' })
-vim.keymap.set('n', '<C-k>', '<C-w>k<CR>' ,
-     {desc = 'Go to split on bottom' })
-vim.keymap.set('n', '<C-l>', '<C-w>l<CR>' ,
-     {desc = 'Go to split on right' })
-vim.keymap.set('n', '<C-up>', '<C-w>+<CR>' ,
-     {desc = 'Increase split height' })
-vim.keymap.set('n', '<C-down>', '<C-w>-<CR>' ,
-     {desc = 'Decrease split height' })
-vim.keymap.set('n', '<C-left>', '<C-w><<CR>' ,
-     {desc = 'Decease split width' })
-vim.keymap.set('n', '<C-right>', '<C-w>><CR>' ,
-     {desc = 'Increase split width' })
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+--
+--
+--   Netrew setup
+--
+--
+-------------------------------------------------------------------------------
+
+-- netrw configs
+---- Open file under cursor same window down
+--nnoremap <leader>oj :wincmd f<CR>
+--map <leader>oj :wincmd f<CR>
+--
+---- Open file under cursor same window left
+--nnoremap <leader>ol :vertical wincmd f<CR>
+--map <leader>ol :vertical wincmd f<CR>
+--
+---- Open file under cursor new window
+--nnoremap <leader>o<leader> :wincmd gf<CR>
+--map <leader>o<leader> :wincmd gf<CR>
+--
+---- File Manager
+---- https://superuser.com/questions/31677/how-do-i-open-the-directory-of-the-current-open-file
+--map <leader>.j :Sex<CR>
+--map <leader>.h :Vex<CR>
+--map <leader>f. :30vs .<CR>
+--

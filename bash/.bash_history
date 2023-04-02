@@ -1694,3 +1694,131 @@ yay
 sudo nvim /etc/pacman.d/mirrorlist
 yay
 dot
+git add bash
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.name "Nasif Ahmed"
+git commit -m "....."
+git push
+yay -S librewolf
+yay librewolf
+yay -S librewolf
+ssh 192.168.1.8
+yay -S librewolf
+sudo nvim /etc/pacman.d/gnupg/gpg.conf
+yay -S librewolf
+yay librewolf
+sudo rm -r /etc/pacman.d/gnupg
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+yay librewolf
+yay brave
+yay -S flatpak
+sudo nvim /etc/pacman.d/mirrorlist
+yay vscode
+cd
+ll
+nvim .bashrc 
+ssh 192.168.1.8
+yay python3-venv
+edit
+nvim
+yay logseq
+reboot
+yay
+sudo pacman -Sy archlinux-keyring
+sudo pacman -Syu
+/home/user/.gnupg
+ls
+cd .gnupg/
+ls
+nvim dirmngr.conf
+sudo pacman -Syu
+mv /etc/pacman.d/gnupg /root/pacman-key.bak
+sudo mv /etc/pacman.d/gnupg /root/pacman-key.bak
+pacman-key --init
+sudo pacman-key --init
+pacman-key populate
+pacman-key --populate
+sudo pacman-key --populate
+sudo pacman-key --populate archlinux endeavouros
+archlinux-keyring
+sudo pacman -Syy archlinux-keyring endeavouros-keyring 
+sudo pacman -Syyu
+yay librewolf
+ls
+cd
+ls
+nvim .bashrc 
+yay -S pfetch-git
+pfetch
+nvim
+neofetch
+nvim
+yay obsidian
+dot
+cd nvim/
+ls
+mkdir kickstart.old
+mv init.lua kickstart.old/
+ls
+nvim init.lua
+nvim
+yay -S xcli[
+yay -S xclip
+nvim
+yay -S qbittorrent
+ls /mnt/
+locate fstab
+sudo nvim /etc/fstab 
+id -u
+id -g
+reboot
+yay -S mpv
+sudo nvim /etc/pacman.d/mirrorlist
+yay -S mpv
+ln -sfv ~/dotfiles/mpv ~/.config/
+sudo nvim /etc/pacman.d/mirrorlist
+yay
+yay aria2
+cd Downloads/
+ls
+rm ubuntu-*
+aria2c https://mirrors.bupt.edu.cn/ubuntu-releases/22.04.2/ubuntu-22.04.2-live-server-amd64.iso
+ls
+ssh 192.168.1.8
+ls
+cd
+nvim /etc/pacman.d/mirrorlist
+yay
+killall firefox
+yay -S gimp
+nvim /etc/pacman.d/mirrorlist
+sudo nvim /etc/pacman.d/mirrorlist
+yay
+yay librewolf
+yay google-chrome
+yay
+ls
+pfetch 
+free -h
+ls
+ssh 192.168.1.8
+killall firefox
+yay todo.txt
+todo.sh -h
+todo.sh help
+todo.sh ls
+todo.sh help
+todo.sh shorthelp
+todo.sh a "Study for CHN101 Reading" @uni
+todo.sh -c ls
+ls .config/
+locate todo
+sudo updatedb
+locate todo
+cat .todo/todo.txt
+cat .todo/report.txt 
+nvim .todo/todo.txt
+yay -Rs todotxt 
+ls
+dot
