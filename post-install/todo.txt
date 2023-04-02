@@ -1,0 +1,6 @@
+Add this to fstab for auto mounting your HDD
+/dev/disk/by-uuid/536CC8E727F94394 /mnt/HDD auto nosuid,nodev,nofail,x-gvfs-show,umask=000,dmask=027,fmask=137,uid=1000,gid=1000 0 0
+
+Follow these guides for fedora post-install:
+https://mutschler.dev/linux/fedora-post-install/
+https://youtu.be/RrRpXs2pkzg
