@@ -1822,3 +1822,157 @@ nvim .todo/todo.txt
 yay -Rs todotxt 
 ls
 dot
+ls
+noefetch
+sudo nala install neofetch
+neofetch
+free 0h
+free -h
+neofetch
+ls
+sudo apt show neovim
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub
+rm -rf .ssh
+ssh-keygen -t ed25519 -C "nasif2ahmed@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git clone git@github.com:NasifAhmed/dotfiles.git
+git
+rm .bashrc 
+rm .bash_history 
+ln -sfv ~/dotfiles/bash/.bashrc .
+ln -sfv ~/dotfiles/bash/.bash_history .
+ls
+source .bashrc 
+sudo apt install pfetch
+cd Downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+ls
+sudo make install
+pfetch 
+cd ~
+source .basr
+ls
+ls -alh
+source .bashrc 
+dot
+cd ~
+nvim .bashrc 
+ls
+free -h
+cd Documents/
+ls
+sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0
+sudo nala install nvme-cli
+sudo watch -n 1 nvme smart-log /dev/nvme0n1p6
+lsblk
+sudo watch -n 1 nvme smart-log /dev/nvme0n1
+ls
+cd Downloads/
+ls
+chmod +x gpt4all-installer-linux.run 
+./gpt4all-installer-linux.run 
+mkdir GPT4All
+mv gpt4all-installer-linux.run GPT4All/
+cd GPT4All/
+ls
+./gpt4all-installer-linux.run 
+sudo nala install xinerama
+sudo nala install libxinerama
+sudo apt-get -y install libxcb-xinerama0
+./gpt4all-installer-linux.run 
+cd ~/Programs/
+ls
+cd GPT4All/
+ls
+cd bin
+./chat 
+cd ~
+sudo nala search 7z
+sudo nala insatll p7zip
+sudo nala install p7zip
+cd Documents/
+man 7z
+man 7zr
+7zr e ~/Downloads/Win11_22H2_English_x64v1.iso sources/install.wim
+ls
+7zr -e /media/ahmed/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim .
+7zr e /media/ahmed/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim .
+7zr e /media/ahmed/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim 1/Windows/{Fonts/"*".{ttf,ttc},System32/Licenses/neutral/"*"/"*"/license.rtf} -ofonts/
+ls -alh
+sudo nala install wimlib
+sudo nala install wimextract
+7zr e ~/Downloads/Win11_22H2_English_x64v1.iso sources/install.wim
+man 7zip
+man 7zipr
+man 7zr
+7zr l ~/Downloads/Win11_22H2_English_x64v1.iso sources/install.wim
+cd ~/Downloads/
+wget http://www.microsoft.com/typography/fonts/product.aspx?PID=164
+ls
+git clone https://github.com/tazihad/win10-fonts.git
+wget https://raw.githubusercontent.com/tazihad/bangla-fonts-fix-linux/main/50-custom-bangla.conf && mkdir -p ~/.config/fontconfig/conf.d && cp 50-custom-bangla.conf $_
+cd ~/.config/fontconfig/conf.d/
+less 50-custom-bangla.conf 
+cd ~/Downloads/
+ls
+cd win10-fonts/
+ls
+cd ..
+sudo cp -rv win10-fonts /usr/share/fonts/
+fc-cache -fv
+LANG=bd_BD fc-match
+ls
+cd ~
+ls
+history
+ls
+cd Workspace/
+ls
+cd Milestone\ 3/
+code .
+info ls
+help ls
+ls
+sudo nala install tumux
+sudo nala install tmux
+tumx
+tmux -h
+tmux help
+help tmux
+man tmux
+tmux 
+jkldjsafkdsjfaldksjdlasfkjdaslfkj:qq
+qq
+tumux
+tmux
+clear
+tmux
+sudo nala install alacritty
+ln -sfv ~/dotfiles/alacritty ~/.config/
+cd .config/alacritty
+ls
+nvim alacritty.yml 
+tmux
+ls
+s
+nvim alacritty.yml 
+cd colors/
+ls
+nvim github_dark_default.yml
+cd ..
+nvim alacritty.yml 
+ls
+cd ..
+ls
+cd alacritty
+ls
+cd colors/
+ls
+cd ..
+nvim alacritty.yml 
+sudo apt show neovim
+btop
+tmux
