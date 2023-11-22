@@ -1976,3 +1976,314 @@ nvim alacritty.yml
 sudo apt show neovim
 btop
 tmux
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code
+sudo apt install neovim
+nvim --version
+sudo apt uninstall neovim
+sudo apt remove  neovim
+cd Downloads/
+cd ..
+ls
+cd Downloads/
+ls
+ls /usr/
+ls /usr/bin/
+ls /usr/bin/code
+cd /usr/bin/code/
+ls -alh /usr/bin/
+cd /usr/share/
+ls
+cd code
+ls
+cd ..
+cd ~/Downloads/
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+ls
+cd nvim-linux64/
+ls
+cd ..
+sudo cp -rv nvim-linux64 /usr/share/
+cd /usr/share/nvim
+ls
+cd runtime/
+ls
+cd ..
+ls
+cd nvim-linux64/
+ls
+cd ..
+nvim
+cd nvim
+ls
+sudo rm -rv *
+ls
+cd ..
+cd nvim-linux64/
+ls
+sudo cp -rv * ../nvim/
+ls
+cd ..
+cd nvim
+ls
+sudo rm -rv ../nvim-linux64
+ls
+cd bin
+ls
+ln -sv /usr/share/nvim/bin/nvim /usr/bin/
+sudo ln -sv /usr/share/nvim/bin/nvim /usr/bin/
+nvim
+cd ~/Downloads/
+sudo cp -rv JetBrainsMono /usr/share/fonts/
+fc-cache -fv
+fc-list | grep "Jet"
+fc-list | grep "Jet" "Regular"
+fc-list | grep "Jet"
+sudo apt install alacritty
+ls
+cd ..
+git clone https://github.com/nasifahmed/dotfiles
+sudo apt install git
+git clone https://github.com/nasifahmed/dotfiles
+cd dotfiles/
+cd ..
+nvim .bashrc 
+sudo nvim .bashrc 
+source .bashrc 
+sudo nvim .bashrc 
+mv .bashrc_original
+mv .bashrc .bashrc_original
+ls
+ls -alk
+ls -alh
+rm .bash_history 
+ln -sv ~/dotfiles/bash/.bashrc .
+ln -sv ~/dotfiles/bash/.bash_history .
+cat .bashrc_original > .bashrc
+nvim .bashrc
+rm .bashrc
+cd -rv dotfiles
+rm -rv dotfiles
+git clone https://github.com/nasifahmed/dotfiles
+ls -alh
+rm .bash_history 
+ln -sv ~/dotfiles/bash/.bashrc 
+ln -sv ~/dotfiles/bash/.bash_history .
+ls -alh
+cat .bashrc_original >> .bashrc
+nvim .bashrc
+source .bashrc
+ls
+cd Downloads/
+ln -sv ~/dotfiles/alacritty ~/.config/
+ln -sv ~/dotfiles/nvim ~/.config/
+nvim
+sudo apt install ripgrep fd-find gcc
+cd ~/.config/
+sl
+ls
+cd alacritty
+ls
+nvim alacritty.yml 
+cd Downloads/
+ls
+nvim
+sudo update-alternatives --config x-terminal-emulator
+ls
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+nvim
+ls
+sudo make install
+sudo apt install make
+pfetch
+which pfetch
+cd Downloads/
+ls
+cd pfetch/
+ls
+pfetch
+./pfetch 
+sudo make clean install
+sudo make install
+pfetch
+ls
+cd Downloads/
+ls
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+free -h
+ls
+wget -O droidcam_latest.zip https://files.dev47apps.net/linux/droidcam_2.0.0.zip
+unzip droidcam_latest.zip -d droidcam
+ls
+cd droidcam && sudo ./install-client
+apt search v4l2loopback
+sudo apt install v4l2loopback-utils
+sudo dmesg | grep -i v4l2
+lsmod | grep v4l2
+sudo dmesg | grep -i v4l2
+lsmod | grep v4l2
+sudo ./install-client
+sudo ./install-video 
+sudo ./install-sound 
+apt search adb
+apt search "platfrom tools"
+apt search android
+apt search android-tools
+sudo apt install adb fastboot
+code .
+g++
+sudo apt install g++
+apt search nvm
+cd .
+cd ..
+ls
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+nvim 
+nvim ~/.bashrc
+source ~/.bashrc
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+nvim ~/.bashrc
+nvm --version
+nvom -h
+nvm -h
+sudo apt install tldr
+man ls
+less kdsfaj
+man ls
+tldr nvm
+nvm list
+nvom install -h
+nvm install -h
+nvm install node
+nvm list
+sudo corepack enable
+npm
+node
+sudo corepack enable
+corepack enable
+pnpm
+pnpm setup
+nvim .bashrc
+pnpm add -g typescript firebase-tools vercel
+source .bashrc
+pnpm add -g typescript firebase-tools vercel
+pnpm list
+pnpm list -g
+cd Documents/
+mkdir test
+cd test
+nvim test.ts
+npm tsx test.ts 
+pnpm tsx test.ts 
+tsc init
+tsc ---init
+tsc --init
+ls
+nvim tsconfig.json 
+pnpm tsx test.ts 
+pnpm create
+pnpm create .
+ls
+pnpm init
+ls
+pnpm add ts-node
+pnpm ts-node test.ts 
+pnpm add tsx
+pnpm tsx test.ts 
+tsx -h
+pnpm tsx -h
+cd Documents/test/
+pnpm tsx watch test.ts 
+pnpm ts-node -h
+apt search deno
+nvim test.ts 
+curl -fsSL https://deno.land/x/install/install.sh | sh
+sudo apt install curl
+curl -fsSL https://deno.land/x/install/install.sh | sh
+deno test.ts 
+source ~/.bashrc
+deno run test.ts 
+cd Documents/test/
+deno run test.ts 
+which deno
+curl -fsSL https://deno.land/x/install/install.sh | sh
+nvim ~/.bashrc
+source ~/.bashrc
+deno run test.ts 
+fc-list | grep "JetBrains"
+node
+cd Desktop/
+ls
+deno run challenge.ts 
+node
+deno run challenge.ts 
+deno run challenge.ts \
+deno run challenge.ts 
+pnpm ts-node challenge.ts 
+pnpm add -g tsx
+pnpm tsx challenge.ts 
+pnpm remove -g tsx
+pnpm add -g ts-node
+ts-node challenge.ts 
+reno run challenge.ts 
+deno run challenge.ts 
+swapon --show
+ls /swap.img 
+cd /
+ls -alh
+sudo swapoff /swap.img 
+sudo rm /swap.img 
+ls -alh
+sudo dd if=/dev/zero of=/swap.img bs=1M count=16384
+ls -alh
+sudo chmod 600 /swap.img 
+sudo mkswap /swap.img 
+sudo swapon /swap.img
+free -h
+reboot now
+sudo reboot now
+free -h
+top
+apt search gnome-usage
+sudo apt install nala
+sudo nala search gnome-usage
+sudo nala install gnome-usage
+sudo apt install flatpak
+sudo add-apt-repository ppa:flatpak/stable
+sudo apt update
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.mattjakeman.ExtensionManager
+flatpak run com.mattjakeman.ExtensionManager
+nala search app-store
+nala search snap-store
+sudo apt install gnome-software-plugin-flatpak
+discord
+dot
+git add .
+git commit -m "update for Gnome installation 22/11/2023"
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.name "Nasif Ahmed"
+git commit -m "update for Gnome installation 22/11/2023"
+git push
+git commit -m "update for Gnome installation 22/11/2023"
+git push
+cd ~
+ls .ssh
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+dot
+git push
+git status
+dot
+git status

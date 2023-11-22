@@ -70,13 +70,15 @@ export PATH=$PATH:/$HOME/.local/bin/statusbar
 export EDITOR=nvim
 export VISUAL=nvim
 
-# Don't put duplicate lines in the history and do not add lines that start with a space
-export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 ################################################################################
 ##  Tweaks                                                                    ##
 ################################################################################
 
+# Don't put duplicate lines in the history and do not add lines that start with a space
+export HISTCONTROL=erasedups:ignoredups:ignorespace
+
+# Unlimited history
 HISTSIZE= 
 HISTFILESIZE=
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -88,6 +90,32 @@ PROMPT_COMMAND='history -a'
 
 # Show auto-completion list automatically, without double tab
 if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 
 ################################################################################
 ##  alias                                                                     ##
@@ -108,37 +136,22 @@ alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less'
 ################################################################################
 
 
-# alias diff='diff --color=auto'
-# alias grep='grep --color=auto'
-# alias ip='ip -color=auto'
-# alias ls='ls --color=auto'
-# 
-# 
-# export LESS=-R
-# export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
-# export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
-# export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-# export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
-# export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-# export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-# export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
 
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
-export LS_COLORS='no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.xml=00;31:'
-#export GREP_OPTIONS='--color=auto' #deprecated
-alias grep="/usr/bin/grep $GREP_OPTIONS"
-unset GREP_OPTIONS
-
-# Color for manpages in less makes manpages a little easier to read
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Extracts any archive(s) (if unp isn't installed)
 extract () {
@@ -166,6 +179,26 @@ extract () {
 
 
 ################################################################################
+##  Webdev Stuff	                                                      ##
+################################################################################
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/ahmed/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Path to DENO installation
+export DENO_INSTALL="/home/ahmed/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+################################################################################
 ##  Startup Commands                                                          ##
 ################################################################################
 
@@ -174,7 +207,6 @@ pfetch
 #echo -e "\n"
 #date +%c
 #echo -e "\n"
-
 
 ### EOF ###
 
