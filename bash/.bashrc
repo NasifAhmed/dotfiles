@@ -125,10 +125,13 @@ alias np='nano -w PKGBUILD'
 alias more=less
 alias ll='ls -al --color=auto'
 alias dot='cd ~/dotfiles && git status'
-alias jump='cd $(find ~ -type d | fzf)'
-alias edit='nvim $(find ~ -type f | fzf)'
+alias jump='cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)'
+alias edit='file=$(find ~ -type d -name node_modules -prune -o -type f | fzf) && [ -n "$file" ] && nvim "$file"'
 alias define='dict $(cat /usr/share/cracklib/cracklib-small | fzf) | less'
 alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less'
+# For WSL vscode project opening
+alias open='directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"'
+alias win='cd /mnt/c/Users/ahmed/Desktop/'
 
 
 ################################################################################

@@ -2315,3 +2315,117 @@ dot
 git add . && git commit -m "..."
 git config --global user.email "nasif2ahmed@gamil.com"
 git config --global user.name "Nasif Ahmed"
+git add . && git commit -m "..."
+git push
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
+git push
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+git push
+cd ~
+mkdir code
+cd z:
+ls
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm
+source ~/.bashrc 
+nvm
+nvim .bashrc 
+nvm install node
+npm install -g pnpm
+ls
+cd code/
+mkdir test
+cd test/
+pnpm init .
+pnpm init
+ls
+rm package.json 
+cd ..
+ls
+jump
+sudo apt install fzf
+jump
+edit
+jump
+strings
+strings ~/.bashrc | fzf
+ls
+sudo apt install neofetch
+edit
+source ~/.bashrc 
+ls
+edit
+open
+source ~/.bashrc 
+open
+jump
+ls
+mkdir dev
+cd dev/
+ls
+powershell
+powershell.exe
+win
+edit
+source ~/.bashrc 
+win
+jump
+ls
+neofetch
+ls
+cd navigateui/
+ls
+cd NavigateUI/
+git status
+cd ..
+rm -rf NavigateUI/
+git clone https://github.com/mhlehri/NavigateUI.git
+ls
+cd NavigateUI/
+ls
+pnpm install
+ls
+pnpm dev
+open
+pnpm dev
+opne
+open
+ls
+open
+jump
+ls
+pnpm dev
+ls
+open
+ls
+sudo nala install nautilus
+nautilus
+sudo nala remove nautilus
+sudo nala install nemo
+nemo .
+explorer.exe .
+sudo nala install btop
+open
+man find
+edit
+cd $(find ~ -type d -name node_modules -prune -type d | fzf)
+cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)
+edit
+open
+jump
+source ~/.bashrc 
+jump
+open
+edit
+source ~/.bashrc 
+open
+edit
+directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"
+edit
+cheat
+define
+edit
+source ~/.bashrc 
+edit
+open
+dot
