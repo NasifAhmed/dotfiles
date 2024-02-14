@@ -2287,3 +2287,31 @@ git push
 git status
 dot
 git status
+ls
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+ls
+https://github.com/NasifAhmed/dotfiles.git
+git 
+git clone https://github.com/NasifAhmed/dotfiles.git
+ls
+cd ~
+ls
+ln -alh
+ls -alh
+rm .bashrc .bash_history && ln -sv ~/dotfiles/bash/.bashrc && ln -sv ~/dotfiles/bash/.bash_history 
+mkdir downloads
+cd downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+ls
+sudo apt install nala 
+ls
+sudo make install
+sudo nala install make
+sudo make install
+source ~/.bashrc 
+ls
+dot
+git add . && git commit -m "..."
+git config --global user.email "nasif2ahmed@gamil.com"
+git config --global user.name "Nasif Ahmed"
