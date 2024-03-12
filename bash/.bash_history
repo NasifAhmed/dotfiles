@@ -2429,3 +2429,591 @@ source ~/.bashrc
 edit
 open
 dot
+git clone https://github.com/NasifAhmed/dotfile
+git clone https://github.com/NasifAhmed/dotfiles
+rm -rf ~/.bashrc && ln -sv ~/dotfiles/bash/.bashrc .
+ln -sv ~/dotfiles/bash/.bash_history .
+mkdir downloads
+cd downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+sudo apt update && sudo apt upgrade -y
+ls
+cd pfetch/
+sudo apt install make -y
+sudo make install
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc 
+ls
+cd ..
+ls
+cd ~
+ls
+nvim
+cd downloads/
+wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
+nvm install node
+ls
+chmod +x nvim.appimage 
+./nvim.appimage 
+sudo apt install fuse -y
+ls
+sudo cp nvim.appimage /usr/local/bin/
+cd /usr/local/bin/
+ls
+mv nvim.appimage nvim
+sudo mv nvim.appimage nvim
+ls
+nvim
+jump
+sudo apt install fzf -y
+ls
+jump
+mkdir dev
+cd dev/
+ls
+git clone https://github.com/NasifAhmed/type-storm-server.git
+ls
+jump
+ls
+git chekcout development
+git checkout development
+git fetch --all
+git pull
+       jump
+ls
+code .
+pnpm i -D eslint prettier
+ls
+ls ~
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+exit
+ls 
+cd dev/
+cd type-storm-server/
+code .
+git config 
+git config --global user.name "Nasif Ahmed"
+git config --global user.email "nasif2ahmed@gmail.com"
+pnpm dev
+pnpm start
+pnpm install nodemon
+pnpm install -D nodemon
+pnpm dev
+pnpm i -D morgan
+pnpm dev
+curl http://localhost:5000/api/v1/users/average
+curl http://localhost:5000/api/v1/users/aver
+curl http://localhost:5000/api/v1/users/average
+jump
+code .
+ls
+pnpm dev
+git pull
+git fetch --all
+git pull
+git branch -v
+git pull
+git fetch
+git pull
+git log
+git status
+git pull origin/development
+git pull
+git pull --ff-only
+git status
+git log
+ls
+cd ..
+ls
+cd ..
+ls
+mkdir test
+cd test/
+ls
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+ls
+code .
+jump
+ls
+cd type-storm-server/
+ls
+pnpm install
+pnpm dev
+ls
+pnpm dev
+ls
+pnpm dev
+jump
+ls
+cd type-storm-server/
+ls
+cat .env 
+jump
+ls
+cd type-storm-server/
+pnpm dev
+jump
+ls
+git clone https://github.com/Team-Trinity/type-storm.git
+cd type-storm
+code .
+pnpm install
+cd ..
+ls
+rm -rf type*
+ls
+pnpm dev
+rm -rf type-storm
+cp ~/test/type-storm-server/ .
+cp -rf ~/test/type-storm-server/ .
+ls
+jump
+ls
+rm -rf type-storm-server/
+jump
+git clone https://github.com/NasifAhmed/type-storm.git
+cd type-storm
+ls
+code .
+pnpm install
+pnpm dev
+ls
+jump
+ls
+rm -rf type-storm-server/
+git clone https://github.com/NasifAhmed/type-storm-server.git
+ls
+                                                    cd dev/
+ls
+cd type-storm-server/
+ls
+code .
+jump 
+ls
+code .
+cd ..
+rm -rf type-storm-server/
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+code .
+pnpm install 
+pnpm i -g vercel
+vercel
+vercel --prod
+jump
+ls
+cd app/
+cd pro
+ls
+cd ..
+cd providers/
+nvim TypeStateProvider.tsx 
+ls
+jump
+ls
+git clone https://github.com/NasifAhmed/portfolio.git
+cd portfolio/
+ls
+code .
+pnpm install
+git add *
+git add .
+git commit -m "add resume"
+git push
+pnpm dev
+jump
+cd ..
+cd type-storm
+cd type-storm-s
+cd ..
+cd type-storm-server/
+ls
+git status
+nvim .gitignore 
+git fetch -all -p
+git fetch --all -p
+git pull
+cd ..
+rm -rf type-storm-server/
+ls
+git clone pnpm-lock.yaml
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+ls
+pnpm install
+nvim .gitignore 
+git add .
+git commit -m "add pnpm-lock.yaml to gitignore"
+git push
+code .
+jump
+ls
+jump
+ls
+git status
+cd ..
+rm -rf type-storm
+git clone https://github.com/NasifAhmed/type-storm.git
+cd type-storm
+ls
+pnpm install
+nvim .ev
+nvim .env
+code .
+pnpm install axios
+jump
+ls
+ll
+cd routes/
+nvim v1/
+nvim .
+cd ..
+ls
+jump
+code .
+pnpm dev
+jump
+ls
+jump
+ls
+code .
+pnpm dev
+code .
+git fetch --all
+git pull
+exit
+ls
+jump
+ls
+code .
+jump
+code .
+pnpm dev
+pnpm dev
+cd ~
+ls
+ll
+rm -rf .vscode-server/
+jump
+code .
+cd ~
+rm -rf .vscode-server/
+jump
+cd .
+cd ..
+ls
+code .
+jump
+ls
+                                                                     nvim
+ls
+cd .config/
+ls
+cd ~
+ll
+cd .config/
+ls
+ll
+cd ..
+ls
+nvim
+npm
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+sudo apt install ripgrep find-fd make unzip
+sudo apt install ripgrep fd-find make unzip
+ls
+nvim
+sudo apt install gcc g++
+nvim
+cd .config/nvim/
+ls
+nvim .
+jump
+ls
+cd muslim-daily-dashboard/
+ls
+pnpm dev
+ls
+nvim .
+jump
+pnpm dev
+ls
+pnp install
+pnpm install
+pnpm dev
+exit
+edit
+jump
+ls
+rm -rf muslim-daily-dashboard/
+ls
+rm -rf type-storm-server/
+git clone https://github.com/Team-Trinity/type-storm-server.git
+cd type-storm-server/
+ls
+nvim .
+nvim app.js 
+pnpm i -g typescript
+nvim app.js 
+npm i -g typescript
+nvim app.js 
+cd ..
+ls
+rm -rf type-storm
+rm -rf type-storm-server/
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+pnpm remove -g typescript
+npm remove -g typescript
+pnpm install
+nvim .
+git status
+nvim .gitignore 
+git status
+git add .gitignore 
+git commit -m "add pnpm lock file"
+git push
+git checkout rewrite-v2
+git checkout -b rewrite-v2
+ls
+nvim .
+code .,
+code .
+pnpm dev
+cd ..
+ls
+git clone https://github.com/NasifAhmed/type-storm.git
+cd type-storm
+pnpm install
+nvim .env
+nvim .
+ls
+code .
+pnpm dev
+sudo apt install nala
+sudo nala install tmux -y
+tmux
+tmux ls
+tmux attack
+tmux attach
+tmux
+tmux ls
+tmux attach
+tmux attch
+tmux attach
+ping -t 1.1.1.1
+ping google.com
+ping  1.1.1.1
+exit
+tmux attach
+exit
+exit
+exit
+exit
+exit
+ls
+ll
+ls
+tmux
+ls
+tmux attach
+jump
+ls
+cd portfolio/
+nvim
+jump
+nvim .
+nvim 
+nvim
+cd ..
+ls
+cd type-storm
+nvim
+git status
+git pull
+nvim
+git dif
+git diff providers/TypeStateProvider.tsx
+nvim 
+git status
+git diff providers/TypeStateProvider.tsx
+ls
+nvim
+tmux
+?uj:q
+tumux attach
+tmux attach
+jump
+ls
+pnpm dev
+jump
+nvim 
+tmux
+jump
+ls
+nvim ~/tmux.conf
+tmux source ~/tmux.conf 
+ls
+edit
+nvim tmux.conf 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+nvim
+tmux source ~/tmux.conf 
+nvim 
+tmux source ~/tmux.conf 
+nvim .
+tmux
+tmux source ~/tmux.conf 
+nvim tmux.conf 
+tmux
+tmux sourse ~/tmux.conf 
+tmux source ~/tmux.conf 
+cd .tmux/
+ls
+cd plugins/
+ls
+ll
+ll tpm/
+cd ..
+cd..
+cd ..
+tmux source ~/tmux.conf 
+mv tmux.conf .tmux.conf
+tmux source ~/.tmux.conf 
+nvim .tmux.conf 
+tmux 
+ls
+tmux --kill
+nvim .tmux
+nvim .tmux.conf 
+tmux
+tmux source ~/.tmux.conf 
+nvim .tmux.conf 
+tmux
+tmux source ~/.tmux.conf 
+nvim
+tmux
+nvim .tmux.conf 
+tmux kill-server
+nvim tmux.conf 
+tmux source ~/.tmux.conf 
+ls
+nvim
+cd dev/
+ls
+edit
+tmux 
+tmux source ~/.tmux.conf 
+tmux 
+tmux attach
+tmux kill-server
+jump
+cd ..
+jump
+ls
+mv -rf * -p ./old
+mkdir old
+rm -rf old/
+explorer.exe .
+ls
+mkdir old
+ls
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+cd ..
+ls
+cd ..
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+cd .config/nvim
+ls
+rm -rf .git
+nvim 
+ls
+exit
+nvim
+ls
+nvim .
+nvim
+nvi
+nvim
+jump
+nvim .
+mv ~/.config/nvim ~/.config/nvim.lazy
+mv ~/.local/share/nvim ~/.local/share/nvim.lazy
+mv ~/.local/share/nvim.bak ~/.local/share/nvim
+mv ~/.config/nvim.bak ~/.config/nvim
+nvim
+jump
+ls
+git clone https://github.com/NasifAhmed/muslim-dashboard.git
+cd muslim-dashboard/
+ls
+nvim .
+pnpm dev
+pnpm install
+pnpm dev
+pnpm add .
+git add .
+git commit -m "offset time to match Islamic Foundation time"
+git push
+git diff
+jump
+code .
+ls
+jump
+ls
+rm -rf *
+ls
+cd ..
+ls
+cd test
+ls
+cd ..
+ls
+cd dev
+ls
+:q
+tmux
+nvim
+nvim 
+nvim .
+nvim
+tmux source ~/.tmux.conf 
+neovim
+nvim
+dot
+git status
+mkdir tmux
+cd tmux
+mv ~/.tmux.conf .
+ls
+ll
+clear
+ll
+git add .
+git commit -m "add tmux config"
+git p ush
+git push
+s
+ls
+clear
+ln -sv ~/dotfiles/tmux/.tmux.conf ~/
+neovim
+nvim
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+lazygit
+jump
+ls
+cd dot
+dot
+clear
+lazygit
+cheat
+clear
+jump
+ls
+tmux
