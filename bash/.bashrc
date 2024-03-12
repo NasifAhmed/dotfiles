@@ -11,6 +11,22 @@
 #===============================================================================
 
 ################################################################################
+##  Start every session with tmux                                             ##
+################################################################################
+
+if command -v tmux &> /dev/null; then
+    if [ -z "$TMUX" ]; then
+        if tmux list-sessions >/dev/null 2>&1; then
+            tmux attach
+        else
+            tmux new-session -s default
+        fi
+    fi
+else
+    echo "Tmux is not installed. Please install Tmux to use this script."
+fi
+
+################################################################################
 ##  Generated from online bashrc generator                                    ##
 ################################################################################
 
@@ -206,6 +222,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 ################################################################################
 
 pfetch
+
 #figlet -f 3d ${HOSTNAME^^} -t | lolcat
 #echo -e "\n"
 #date +%c
