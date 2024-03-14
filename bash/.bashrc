@@ -16,11 +16,12 @@
 
 if command -v tmux &> /dev/null; then
     if [ -z "$TMUX" ]; then
-        if tmux list-sessions >/dev/null 2>&1; then
-            tmux attach
-        else
-            tmux new-session -s default
-        fi
+    tmux new -As default
+        # if tmux list-sessions >/dev/null 2>&1; then
+        #     tmux attach
+        # else
+        #     tmux new-session -s default
+        # fi
     fi
 else
     echo "Tmux is not installed. Please install Tmux to use this script."
