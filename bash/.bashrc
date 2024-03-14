@@ -80,8 +80,7 @@ function parse_git_dirty {
 
 export PS1="[\[\e[32m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\]] \w \[\e[33m\]\`parse_git_branch\`\[\e[m\]\n\[\e[32m\]❱❱❱\[\e[m\] "
 
-export PATH=$PATH:/$HOME/.local/bin/
-export PATH=$PATH:/$HOME/.local/bin/statusbar
+export PATH="$HOME/.local/bin:$PATH"
 
 # Set the default editor
 export EDITOR=nvim
@@ -241,4 +240,5 @@ pfetch
 #echo -e "\n"
 
 ### EOF ###
+
 
