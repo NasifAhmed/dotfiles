@@ -3017,3 +3017,496 @@ clear
 jump
 ls
 tmux
+nvim
+tmux attach
+tmus source ~/.tmux.conf 
+tmux source ~/.tmux.conf 
+tmux attach
+tmux kill-server
+nvim 
+tmux
+tmux kill-server
+nvim
+tmux
+dot
+nvim
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+nvim
+nvim 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux kill-server
+lazygit 
+edit
+source ~/.bashrc 
+clera
+clear
+exit
+bash
+exit
+exit
+tmux
+exit
+edit
+source ~/.bashrc 
+edit
+exit
+dit
+edit
+exit
+edit
+unset $TMUX
+edit
+lazygit
+tmu:w
+dot
+lazygit 
+dot
+clear
+jump
+ls
+nvim
+tmux source ~/.tmux.conf 
+tmux attach
+cd /mnt/c/Users/Default
+cd /mnt/c/Users/ahmed/Desktop/
+ls
+cd ~
+ls
+win
+cd ..
+cd ~
+win
+clear
+:q
+dot
+cd nvim/
+ls
+mkdir old && mv * old
+ll old
+cd ..
+mkdir old
+mv nvim/* old
+mv old nvim/
+cd nvim/
+ls
+cp ~/.config/nvim/* .
+ll
+rm LICENSE.md README.md init.lua lazy-lock.json 
+ls
+cp -rv ~/.config/nvim/* .
+ls
+rm lazy-lock.json 
+ls
+ll
+cd ..
+jump
+ls
+cd ..
+ls
+rm -rf nvim
+ll
+ln -sv ~/dotfiles/nvim .
+ll
+nvim
+dot
+clear
+jump
+git clone 
+git clone https://github.com/NasifAhmed/muslim-dashboard.git
+cd muslim-dashboard/
+lazygit 
+jump
+jum
+jump
+pnpm dev
+pnpm install
+nvim .
+clear
+clear
+pnpm dev
+lazygit 
+tmux attach
+sudo apt install zoxide
+z .config/
+zoxide
+zoxide .config/
+z .config/
+which z
+source ~/.bashrc 
+which zoxide
+clear
+edit
+tmux new -As default
+nvim
+source ~/.bashrc 
+unset $TMUX
+clear
+source ~/.bashrc 
+nvim
+source ~/.bashrc 
+sudo apt remove zoxide
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+nvim
+$PATH
+z .config
+nvim
+source ~/.bashrc 
+clear
+z .config
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+nvim
+source ~/.bashrc 
+z .config/
+$PATH
+nvim
+source ~/.bashrc 
+clear
+z .config/
+$PATH
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+z .config/
+which z
+exit
+ls
+z .config/
+sudo mv ~/.local/bin/zoxide /usr/local/bin/
+zoxide 
+z .config/
+sudo mv /usr/local/bin/zoxide ~/.local/bin/
+ls
+z .config
+zoxide .config
+echo $PATH
+cd .local/bin/
+ls
+cd zo
+zoxide -h
+edit
+source ~/.bashrc 
+clear
+z .config
+z ~/.config/
+z -
+z - 
+dit
+edit
+source ~/.bahrc
+source ~/.bashrc 
+edit
+clear
+fzf --bash
+fzf -h
+fzf --version
+mkdir ~/downloads
+cd ~/downloads/
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo apt remove fzf
+sudo apt autoremove
+clear
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+edit
+nvim ~/.bashrc 
+source ~/.bashrc 
+clear
+z ..
+edit
+builtin cd -- dev
+z -h
+z --h
+z --help
+man z
+man zoxide
+jump
+z ~/dev
+z muslim-dashboard/
+z ~
+z muslim
+clear
+tmux attach
+z dotfile
+z ~/dotfiles/
+ls
+cd nvim/
+ls
+tree odl
+tree old
+sudo apt install tree
+tree old
+cd old
+ls
+nvim
+ls
+mv old oldest
+nvim init.lua 
+nvim kickstart.old/
+diff init.lua kickstart.old/init.lua 
+diff init.lua kickstart.old/init.lua  | less
+nvim init.lua 
+nvim kickstart.old/init.lua 
+rm init.lua lazy-lock.json 
+ls
+cd ..
+ls
+nvim init.lua 
+mkdir kickstartv2
+mv init.lua kickstartv2/
+mv LICENSE.md kickstartv2/
+mv README.md kickstartv2/
+mv doc/ kickstartv2/
+mv lua/ kickstartv2/
+ls
+mv kickstartv2/ old/
+ls
+cd old/
+ls
+cd ..
+lazygit
+z ~
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+z nvim
+z ~/.config/nvim
+ls
+lazygit
+rm -rf ~/.config/nvim/.git
+ls
+mv * ~/dotfiles/nvim/
+ls
+cd ..
+z nvim
+ls
+tree old
+ll
+z .config
+ls
+rm -rf nvim
+ln -sv ~/dotfiles/nvim .
+ls
+ll
+nvim
+nvi
+z config
+ls
+mv nvim.lazy/lua/plugins/colorscheme.lua nvim/lua/plugins/
+mv nvim.lazy/lua/plugins/treesitter.lua nvim/lua/plugins/
+rm -rf nvim.lazy/
+nvim
+ll
+nvim
+explorer.exe
+explorer.exe .
+cd nvim
+ls
+ll
+cd lua/
+ls
+cd plugins/
+ls
+nvim example.lua 
+sudo apt install python3
+sudo apt update && sudo apt upgrade -y
+dot
+pip install ruff-lsp
+sudo install python3-pip
+sudo apt install python3-pip
+clear
+nvi
+nvim ~/.tmux.conf 
+source ~/.tmux.conf 
+tmux attach
+source ~/.tmux.conf 
+tmux attack
+tmux attach
+source ~/.tmux.conf 
+tmux attach
+source ~/.tmux.conf 
+tmux attach
+tmux kill-server
+nvim
+nvim
+exit
+pnpm install -g neovim
+nvim
+exit
+ls
+clear
+ls
+z mus
+ls
+python3 -m pip install --user --upgrade pynvim
+nvim .
+nvim
+exit
+nvim 
+nvim
+pip install ruff-lsp
+exit
+nvim
+nvim .
+nvim
+z nvim
+ls
+explorer.exe .
+nvim
+z mus
+ls
+nvim
+clear
+ls
+lazygit
+nvim .
+nvim 
+nvim
+z nvim
+ls
+nvim .prettierrc
+ls
+z muslim
+pnpm prettier init
+nvim package.json 
+pnpm install prettier
+pnpm prettier init
+pnpm prettier -h
+pnpm prettier --init
+pnpm prettier --init | less
+pnpm dlx prettier init
+nvim .prettierrc
+nvim .prettierrc 
+code .
+pnpm install -D prettier prettier-plugin-tailwindcss
+ll
+pnpm install
+prettier --write .
+pnpm prettier --write .
+tmux attach
+cat /etc/os-release 
+z config
+ls
+ll
+rm nvim
+ll
+nvim ~/.tmux.conf 
+tmux source ~/.tmux.conf 
+clear
+ls
+mkdir nvim
+cd nvim/
+nvim init.lua
+nvim .
+ls
+nvim init.lua
+nvim
+ls
+nvim init.lua 
+nvim
+ls
+nvim init.lua 
+cd lua/
+ls
+cd config/
+ls
+nvim init.lua 
+nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+nvim
+clear
+z plugins
+ls
+nvim colorscheme.lua
+nvim
+tmux attach
+cd ..
+z config
+nvim init.lua 
+nvim
+dot
+z nvim/
+ls
+nvim init.lua 
+ls
+mv kickstart.lua ../plugins/
+nvim init.lua 
+nvim
+z nvim
+nvim .
+nvim
+mkdir test
+z test/
+ls
+mkdir neovim
+cd neovim/
+git clone https://github.com/nvim-lua/kickstart.nvim.git .
+git clone https://github.com/nvim-lua/kickstart.nvim.git
+ls
+cd kickstart.nvim/
+rm -rf .git
+ls
+tree doc
+tree lua
+ls
+cd lua/
+ls
+cd config/
+ls
+nvim keymaps.lua 
+nvim init.lua 
+z config
+mv nvim nvim.bak
+mkdir nvim
+mv ~/test/neovim/kickstart.nvim/* ./nvim/
+cd nvim
+ls
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+clear
+nvim
+apt install python3.10-venv
+sudo apt install python3.10-venv
+sudo apt install gem
+sudo apt remove gem
+sudo apt autoremove
+sudo apt-get install ruby
+gem
+z mus
+nvim .
+nvim
+exit
+z nvim
+ls
+tree old
+rm LICENSE.md 
+rm README.md 
+rm -rf doc/
+rm init.lua 
+rm lazy-lock.json 
+mv ~/.config/nvim/* .
+ls
+tree lua/
+rm -rf lua/
+mv ~/.config/nvim/lua .
+ls
+z nvim
+ls
+cd ..
+rm -rf nvim
+ln -sv ~/dotfiles/nvim .
+ll
+nvi
+nvim
+nvim 
+dot
