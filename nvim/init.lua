@@ -212,6 +212,42 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- LazyGit
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "LazyGit" })
 
+-- Move lines line vscode
+vim.keymap.set("n", "<A-k>", ":m-2<CR>", { noremap = true, silent = true, desc = "Move line up one line" })
+vim.keymap.set("n", "<A-j>", ":m+<CR>", { noremap = true, silent = true, desc = "Move line down one line" })
+vim.keymap.set("n", "<A-l>", ">>", { noremap = true, desc = "Indent right" })
+vim.keymap.set("n", "<A-h>", "<<", { noremap = true, desc = "Indent left" })
+
+-- Split keymaps
+vim.keymap.set("n", "<Leader>-", ":split<CR>", { noremap = true, silent = true, desc = "Split horizontally" })
+vim.keymap.set("n", "<Leader>\\", ":vsplit<CR>", { noremap = true, silent = true, desc = "Split vertically" })
+
+-- Split resize keymaps
+vim.keymap.set(
+	"n",
+	"<C-Left>",
+	":vertical resize -2<CR>",
+	{ noremap = true, silent = true, desc = "Decrease vertical pane size" }
+)
+vim.keymap.set(
+	"n",
+	"<C-Down>",
+	":resize -2<CR>",
+	{ noremap = true, silent = true, desc = "Decerase horizontal pane size" }
+)
+vim.keymap.set(
+	"n",
+	"<C-Up>",
+	":resize +2<CR>",
+	{ noremap = true, silent = true, desc = "Increse horizontal pane size" }
+)
+vim.keymap.set(
+	"n",
+	"<C-Right>",
+	":vertical resize +2<CR>",
+	{ noremap = true, silent = true, desc = "Increase vertical pane size" }
+)
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
