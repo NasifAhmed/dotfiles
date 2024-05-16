@@ -3510,3 +3510,15 @@ nvi
 nvim
 nvim 
 dot
+ls
+cd ~
+mkdir .config
+rm -rf ~/.bashrc && ln -sf ~/dotfiles/bash/.bashrc .
+rm -rf ~/.bash_history && ln -sf ~/dotfiles/bash/.bash_history .
+source ~/.bashrc 
+sudo pacman -S zoxide
+source ~/.bashrc 
+clear
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+dot
+yay lazygit
