@@ -248,7 +248,7 @@ eval "$(zellij setup --generate-auto-start bash)"
 ##  Startup Commands                                                          ##
 ################################################################################
 
-pfetch
+#pfetch
 
 #figlet -f 3d ${HOSTNAME^^} -t | lolcat
 #echo -e "\n"

@@ -3522,3 +3522,13 @@ clear
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 dot
 yay lazygit
+rm -rf dotfiles/ && git@github.com:NasifAhmed/dotfiles.git
+rm -rf dotfiles/ && git clone git@github.com:NasifAhmed/dotfiles.git
+source ~/.bashrc
+nvim .bashrc
+alacritty migrate
+z ala
+ls
+nvim alacritty.toml 
+ls
+dot
