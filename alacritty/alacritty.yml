@@ -7,7 +7,8 @@ window:
     x: 10
     y: 10
   dynamic_padding: true
-  decorations: full
+  decorations: none
+  startup_mode: Maximized
 
 scrolling:
   history: 100000
@@ -28,7 +29,7 @@ font:
     style: Bold Italic
   size: 13
   offset:
-    x: -1
+    # x: -1
     y: 3
 draw_bold_text_with_bright_colors: true
 
@@ -36,7 +37,7 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: true
 
-window.dynamic_title: true
+#window.dynamic_title: true
 
 cursor:
   style: Block
