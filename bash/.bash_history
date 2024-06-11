@@ -3532,3 +3532,213 @@ ls
 nvim alacritty.toml 
 ls
 dot
+exit
+sudo dnf groupupdate 'core' 'multimedia' 'sound-and-video' --setopt='install_weak_deps=False' --exclude='PackageKit-gstreamer-plugin' --allowerasing && sync
+sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg
+sudo dnf install lame\* --exclude=lame-devel
+sudo dnf group upgrade --with-optional Multimedia
+    sudo dnf install ffmpeg ffmpeg-libs libva libva-utils
+sudo dnf config-manager --set-enabled fedora-cisco-openh264
+sudo dnf install -y openh264 gstreamer1-plugin-openh264 mozilla-openh264
+    hostnamectl set-hostname fedbox
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-browser
+ssh-keygen -t ed25519 -C "nasif2ahmed@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git clone git@github.com:NasifAhmed/dotfiles.git
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo nano .bashrc 
+mv .bashrc .bashrc.bak && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+sudo dnf install zoxide
+fc-cache
+wget https://raw.githubusercontent.com/tazihad/bangla-fonts-fix-linux/main/50-custom-bangla.conf && mkdir -p ~/.config/fontconfig/conf.d && cp 50-custom-bangla.conf $_
+fc-cache
+sudo dnf install alacritty neovim
+ln -av ~/dotfiles/alacritty ~/.config/
+ln -sv ~/dotfiles/alacritty ~/.config/
+sudo dnf instal zellij
+sudo dnf install zellij
+cd Downloads/
+chmod +x zellij 
+./zellij 
+sudo cp zellij /usr/local/bin/
+fzf
+source ~/.bashrc
+~/.fzf/install
+nvim .bashrc
+cd .fzf
+ls
+./install 
+ls
+./uninstall 
+fzf
+sudo dnf remove fzf
+cd .fzf/
+./install 
+fzf
+sudo dnf install adw-gtk3
+sudo dnf search adw-gtk3
+sudo dnf install adw-gtk3-theme
+ls
+cd .config/alacritty/
+nvim alacritty.toml 
+sudo dnf search fastfetch
+sudo dnf search pfetch
+sudo dnf install fastfetch nerdfetch
+sudo dnf install fastfetch 
+fastfetch 
+free -h
+sudo dnf install mvp
+sudo dnf install mpv
+sudo dnf search tela
+/home/ahmed/Downloads/Tela-icon-theme-2024-04-19/install.sh 
+fc-cache
+ls
+zellij -h
+exit
+zellij setup
+zellij edit
+exit
+zellij options
+exit
+zellij attch
+zellij -- attach
+zellij help
+zellij list-sessions
+zellij attach queit-crab
+mpv /home/ahmed/Documents/study/CSE449/fox.mp3 
+ls
+sudo dnf update
+curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+sudo dnf install librewolf
+killall geary
+free -h
+sudo dnf install neofetch
+neofetch
+exit
+neofetch
+ls
+neofetch
+free -h
+sudo dnf install ulauncher
+dnf search nautilus
+sudo dnf install nautilus-gsconnect
+ls
+sudo dnf install tldr
+tldr ls
+cheat
+curl cheat.sh
+curl cheat.sh/ls
+edit
+nvim .bashrc
+curl cheat.sh/help
+curl cheat.sh
+curl -s cheat.sh
+curl -s cheat.sh/:list
+cheat
+nvim .bashrc
+ls
+curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less
+curl -s cheat.sh/:list | fzf
+curl -s cheat.sh/ls : less
+curl -s cheat.sh/ls | less
+man less
+curl -s cheat.sh/ls | less -R
+nvim .bashrc
+nvim .bashrc
+cheat
+source ~/.bashrc
+cheat
+nvim .bashrc
+open
+dict
+sudo dnf install dict
+sudo dnf search dict
+cat /usr/share/dict
+cd /usr/share/dict
+ls
+cat linux.words 
+ls
+file words 
+cat /usr/share/dict/words | wc -l
+sudo dnf search dict
+sudo dnf search dictd
+sudo dnf install dictd
+z ~
+nvim .bashrc
+dict
+dict help
+dict --help
+dict -D
+dict --help
+define
+nvim .bashrc
+source ~/.bashrc
+define
+nvim .bashrc
+dict perform
+dict --help
+dict -f hello | less
+define
+nvim .bashrc
+source ~/.bashrc
+nvim .bashrc
+sudo dnf install figlet
+source ~/.bashrc
+dnf search figlet 
+nvim .bashrc
+man ls
+nvim .bashrc
+source ~/.bashrc
+less ls
+man lss
+man ls
+sudo dnf install most
+curl cheat.sh/ls | most
+nvim .bashrc
+source ~/.bashrc
+cheat ls
+cheat ls
+exit
+cheat
+nvim .bashrc
+source .bashrc
+man ls
+nvim .bashrc
+sudo dnf install zsh
+ln -sv ~/dotfiles/zsh ~/.config/
+zsh
+ll
+ls
+ln -sv ~/dotfiles/zsh/.zshrc ~/
+ln -sv ~/dotfiles/zsh/.histfile ~/
+cat ~/dotfiles/zsh/.zhistory 
+cat ~/dotfiles/zsh/.zhistory | wc -l
+cat ~/dotfiles/zsh/.histfile | wc -l
+zsh
+rm -rf .zshrc .histfile 
+dot 
+z ~
+nvim .bashrc
+man ls
+nvim .bashrc.bak 
+nvim .bashrc
+source ~/.bashrc
+man ls
+ls 
+cd .config 
+dot
+lazygit
+exit
+$PATH
+ls /usr/local/bin/
+lazygit
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit
+dot

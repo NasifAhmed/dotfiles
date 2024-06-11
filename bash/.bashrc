@@ -100,8 +100,6 @@ color_prompt=yes
 
 export PS1="[\[\e[32m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\]] \w \[\e[33m\]\`parse_git_branch\`\[\e[m\]\n\[\e[32m\]❱❱❱\[\e[m\] "
 
-export PATH="$HOME/.local/bin:$PATH"
-
 # Set the default editor
 export EDITOR=nvim
 export VISUAL=nvim
@@ -151,6 +149,59 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+colors() {
+	local fgc bgc vals seq0
+
+	printf "Color escapes are %s\n" '\e[${value};...;${value}m'
+	printf "Values 30..37 are \e[33mforeground colors\e[m\n"
+	printf "Values 40..47 are \e[43mbackground colors\e[m\n"
+	printf "Value  1 gives a  \e[1mbold-faced look\e[m\n\n"
+
+	# foreground colors
+	for fgc in {30..37}; do
+		# background colors
+		for bgc in {40..47}; do
+			fgc=${fgc#37} # white
+			bgc=${bgc#40} # black
+
+			vals="${fgc:+$fgc;}${bgc}"
+			vals=${vals%%;}
+
+			seq0="${vals:+\e[${vals}m}"
+			printf "  %-9s" "${seq0:-(default)}"
+			printf " ${seq0}TEXT\e[m"
+			printf " \e[${vals:+${vals+$vals;}}1mBOLD\e[m"
+		done
+		echo; echo
+	done
+}
+
+# Change the window title of X terminals
+case ${TERM} in
+	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+		;;
+	screen*)
+		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+		;;
+esac
+
+use_color=true
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+export SYSTEMD_PAGER=
+
 ################################################################################
 ##  alias                                                                     ##
 ################################################################################
@@ -158,11 +209,13 @@ shopt -s checkwinsize
 alias np='nano -w PKGBUILD'
 alias more=less
 alias ll='ls -al --color=auto'
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
 alias dot='cd ~/dotfiles && git status'
 alias jump='cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)'
 alias edit='file=$(find ~ -type d -name node_modules -prune -o -type f | fzf) && [ -n "$file" ] && nvim "$file"'
-alias define='dict $(cat /usr/share/cracklib/cracklib-small | fzf) | less'
-alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less'
+alias define='dict $(cat /usr/share/dict/words | fzf) | less'
+alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less -R'
 # For WSL vscode project opening
 alias open='directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"'
 alias win='cd /mnt/c/Users/ahmed/Desktop/'
@@ -238,8 +291,8 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 eval "$(zoxide init bash)"
 
 # fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(fzf --bash)"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # zellij
 eval "$(zellij setup --generate-auto-start bash)"
@@ -256,3 +309,4 @@ eval "$(zellij setup --generate-auto-start bash)"
 #echo -e "\n"
 
 ### EOF ###
+

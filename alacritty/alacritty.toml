@@ -9,7 +9,7 @@ style = "Block"
 unfocused_hollow = true
 
 [font]
-size = 15
+size = 14
 
 [font.bold]
 family = "JetBrainsMono NFM"
