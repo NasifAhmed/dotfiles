@@ -1,0 +1,2000 @@
+ls
+nvim init.lua
+nvim
+yay -S xcli[
+yay -S xclip
+nvim
+yay -S qbittorrent
+ls /mnt/
+locate fstab
+sudo nvim /etc/fstab 
+id -u
+id -g
+reboot
+yay -S mpv
+sudo nvim /etc/pacman.d/mirrorlist
+yay -S mpv
+ln -sfv ~/dotfiles/mpv ~/.config/
+sudo nvim /etc/pacman.d/mirrorlist
+yay
+yay aria2
+cd Downloads/
+ls
+rm ubuntu-*
+aria2c https://mirrors.bupt.edu.cn/ubuntu-releases/22.04.2/ubuntu-22.04.2-live-server-amd64.iso
+ls
+ssh 192.168.1.8
+ls
+cd
+nvim /etc/pacman.d/mirrorlist
+yay
+killall firefox
+yay -S gimp
+nvim /etc/pacman.d/mirrorlist
+sudo nvim /etc/pacman.d/mirrorlist
+yay
+yay librewolf
+yay google-chrome
+yay
+ls
+pfetch 
+free -h
+ls
+ssh 192.168.1.8
+killall firefox
+yay todo.txt
+todo.sh -h
+todo.sh help
+todo.sh ls
+todo.sh help
+todo.sh shorthelp
+todo.sh a "Study for CHN101 Reading" @uni
+todo.sh -c ls
+ls .config/
+locate todo
+sudo updatedb
+locate todo
+cat .todo/todo.txt
+cat .todo/report.txt 
+nvim .todo/todo.txt
+yay -Rs todotxt 
+ls
+dot
+ls
+noefetch
+sudo nala install neofetch
+neofetch
+free 0h
+free -h
+neofetch
+ls
+sudo apt show neovim
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub
+rm -rf .ssh
+ssh-keygen -t ed25519 -C "nasif2ahmed@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git clone git@github.com:NasifAhmed/dotfiles.git
+git
+rm .bashrc 
+rm .bash_history 
+ln -sfv ~/dotfiles/bash/.bashrc .
+ln -sfv ~/dotfiles/bash/.bash_history .
+ls
+source .bashrc 
+sudo apt install pfetch
+cd Downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+ls
+sudo make install
+pfetch 
+cd ~
+source .basr
+ls
+ls -alh
+source .bashrc 
+dot
+cd ~
+nvim .bashrc 
+ls
+free -h
+cd Documents/
+ls
+sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0
+sudo nala install nvme-cli
+sudo watch -n 1 nvme smart-log /dev/nvme0n1p6
+lsblk
+sudo watch -n 1 nvme smart-log /dev/nvme0n1
+ls
+cd Downloads/
+ls
+chmod +x gpt4all-installer-linux.run 
+./gpt4all-installer-linux.run 
+mkdir GPT4All
+mv gpt4all-installer-linux.run GPT4All/
+cd GPT4All/
+ls
+./gpt4all-installer-linux.run 
+sudo nala install xinerama
+sudo nala install libxinerama
+sudo apt-get -y install libxcb-xinerama0
+./gpt4all-installer-linux.run 
+cd ~/Programs/
+ls
+cd GPT4All/
+ls
+cd bin
+./chat 
+cd ~
+sudo nala search 7z
+sudo nala insatll p7zip
+sudo nala install p7zip
+cd Documents/
+man 7z
+man 7zr
+7zr e ~/Downloads/Win11_22H2_English_x64v1.iso sources/install.wim
+ls
+7zr -e /media/ahmed/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim .
+7zr e /media/ahmed/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim .
+7zr e /media/ahmed/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim 1/Windows/{Fonts/"*".{ttf,ttc},System32/Licenses/neutral/"*"/"*"/license.rtf} -ofonts/
+ls -alh
+sudo nala install wimlib
+sudo nala install wimextract
+7zr e ~/Downloads/Win11_22H2_English_x64v1.iso sources/install.wim
+man 7zip
+man 7zipr
+man 7zr
+7zr l ~/Downloads/Win11_22H2_English_x64v1.iso sources/install.wim
+cd ~/Downloads/
+wget http://www.microsoft.com/typography/fonts/product.aspx?PID=164
+ls
+git clone https://github.com/tazihad/win10-fonts.git
+wget https://raw.githubusercontent.com/tazihad/bangla-fonts-fix-linux/main/50-custom-bangla.conf && mkdir -p ~/.config/fontconfig/conf.d && cp 50-custom-bangla.conf $_
+cd ~/.config/fontconfig/conf.d/
+less 50-custom-bangla.conf 
+cd ~/Downloads/
+ls
+cd win10-fonts/
+ls
+cd ..
+sudo cp -rv win10-fonts /usr/share/fonts/
+fc-cache -fv
+LANG=bd_BD fc-match
+ls
+cd ~
+ls
+history
+ls
+cd Workspace/
+ls
+cd Milestone\ 3/
+code .
+info ls
+help ls
+ls
+sudo nala install tumux
+sudo nala install tmux
+tumx
+tmux -h
+tmux help
+help tmux
+man tmux
+tmux 
+jkldjsafkdsjfaldksjdlasfkjdaslfkj:qq
+qq
+tumux
+tmux
+clear
+tmux
+sudo nala install alacritty
+ln -sfv ~/dotfiles/alacritty ~/.config/
+cd .config/alacritty
+ls
+nvim alacritty.yml 
+tmux
+ls
+s
+nvim alacritty.yml 
+cd colors/
+ls
+nvim github_dark_default.yml
+cd ..
+nvim alacritty.yml 
+ls
+cd ..
+ls
+cd alacritty
+ls
+cd colors/
+ls
+cd ..
+nvim alacritty.yml 
+sudo apt show neovim
+btop
+tmux
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code
+sudo apt install neovim
+nvim --version
+sudo apt uninstall neovim
+sudo apt remove  neovim
+cd Downloads/
+cd ..
+ls
+cd Downloads/
+ls
+ls /usr/
+ls /usr/bin/
+ls /usr/bin/code
+cd /usr/bin/code/
+ls -alh /usr/bin/
+cd /usr/share/
+ls
+cd code
+ls
+cd ..
+cd ~/Downloads/
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+tar xzvf nvim-linux64.tar.gz
+ls
+cd nvim-linux64/
+ls
+cd ..
+sudo cp -rv nvim-linux64 /usr/share/
+cd /usr/share/nvim
+ls
+cd runtime/
+ls
+cd ..
+ls
+cd nvim-linux64/
+ls
+cd ..
+nvim
+cd nvim
+ls
+sudo rm -rv *
+ls
+cd ..
+cd nvim-linux64/
+ls
+sudo cp -rv * ../nvim/
+ls
+cd ..
+cd nvim
+ls
+sudo rm -rv ../nvim-linux64
+ls
+cd bin
+ls
+ln -sv /usr/share/nvim/bin/nvim /usr/bin/
+sudo ln -sv /usr/share/nvim/bin/nvim /usr/bin/
+nvim
+cd ~/Downloads/
+sudo cp -rv JetBrainsMono /usr/share/fonts/
+fc-cache -fv
+fc-list | grep "Jet"
+fc-list | grep "Jet" "Regular"
+fc-list | grep "Jet"
+sudo apt install alacritty
+ls
+cd ..
+git clone https://github.com/nasifahmed/dotfiles
+sudo apt install git
+git clone https://github.com/nasifahmed/dotfiles
+cd dotfiles/
+cd ..
+nvim .bashrc 
+sudo nvim .bashrc 
+source .bashrc 
+sudo nvim .bashrc 
+mv .bashrc_original
+mv .bashrc .bashrc_original
+ls
+ls -alk
+ls -alh
+rm .bash_history 
+ln -sv ~/dotfiles/bash/.bashrc .
+ln -sv ~/dotfiles/bash/.bash_history .
+cat .bashrc_original > .bashrc
+nvim .bashrc
+rm .bashrc
+cd -rv dotfiles
+rm -rv dotfiles
+git clone https://github.com/nasifahmed/dotfiles
+ls -alh
+rm .bash_history 
+ln -sv ~/dotfiles/bash/.bashrc 
+ln -sv ~/dotfiles/bash/.bash_history .
+ls -alh
+cat .bashrc_original >> .bashrc
+nvim .bashrc
+source .bashrc
+ls
+cd Downloads/
+ln -sv ~/dotfiles/alacritty ~/.config/
+ln -sv ~/dotfiles/nvim ~/.config/
+nvim
+sudo apt install ripgrep fd-find gcc
+cd ~/.config/
+sl
+ls
+cd alacritty
+ls
+nvim alacritty.yml 
+cd Downloads/
+ls
+nvim
+sudo update-alternatives --config x-terminal-emulator
+ls
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+nvim
+ls
+sudo make install
+sudo apt install make
+pfetch
+which pfetch
+cd Downloads/
+ls
+cd pfetch/
+ls
+pfetch
+./pfetch 
+sudo make clean install
+sudo make install
+pfetch
+ls
+cd Downloads/
+ls
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+free -h
+ls
+wget -O droidcam_latest.zip https://files.dev47apps.net/linux/droidcam_2.0.0.zip
+unzip droidcam_latest.zip -d droidcam
+ls
+cd droidcam && sudo ./install-client
+apt search v4l2loopback
+sudo apt install v4l2loopback-utils
+sudo dmesg | grep -i v4l2
+lsmod | grep v4l2
+sudo dmesg | grep -i v4l2
+lsmod | grep v4l2
+sudo ./install-client
+sudo ./install-video 
+sudo ./install-sound 
+apt search adb
+apt search "platfrom tools"
+apt search android
+apt search android-tools
+sudo apt install adb fastboot
+code .
+g++
+sudo apt install g++
+apt search nvm
+cd .
+cd ..
+ls
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+nvim 
+nvim ~/.bashrc
+source ~/.bashrc
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+nvim ~/.bashrc
+nvm --version
+nvom -h
+nvm -h
+sudo apt install tldr
+man ls
+less kdsfaj
+man ls
+tldr nvm
+nvm list
+nvom install -h
+nvm install -h
+nvm install node
+nvm list
+sudo corepack enable
+npm
+node
+sudo corepack enable
+corepack enable
+pnpm
+pnpm setup
+nvim .bashrc
+pnpm add -g typescript firebase-tools vercel
+source .bashrc
+pnpm add -g typescript firebase-tools vercel
+pnpm list
+pnpm list -g
+cd Documents/
+mkdir test
+cd test
+nvim test.ts
+npm tsx test.ts 
+pnpm tsx test.ts 
+tsc init
+tsc ---init
+tsc --init
+ls
+nvim tsconfig.json 
+pnpm tsx test.ts 
+pnpm create
+pnpm create .
+ls
+pnpm init
+ls
+pnpm add ts-node
+pnpm ts-node test.ts 
+pnpm add tsx
+pnpm tsx test.ts 
+tsx -h
+pnpm tsx -h
+cd Documents/test/
+pnpm tsx watch test.ts 
+pnpm ts-node -h
+apt search deno
+nvim test.ts 
+curl -fsSL https://deno.land/x/install/install.sh | sh
+sudo apt install curl
+curl -fsSL https://deno.land/x/install/install.sh | sh
+deno test.ts 
+source ~/.bashrc
+deno run test.ts 
+cd Documents/test/
+deno run test.ts 
+which deno
+curl -fsSL https://deno.land/x/install/install.sh | sh
+nvim ~/.bashrc
+source ~/.bashrc
+deno run test.ts 
+fc-list | grep "JetBrains"
+node
+cd Desktop/
+ls
+deno run challenge.ts 
+node
+deno run challenge.ts 
+deno run challenge.ts \
+deno run challenge.ts 
+pnpm ts-node challenge.ts 
+pnpm add -g tsx
+pnpm tsx challenge.ts 
+pnpm remove -g tsx
+pnpm add -g ts-node
+ts-node challenge.ts 
+reno run challenge.ts 
+deno run challenge.ts 
+swapon --show
+ls /swap.img 
+cd /
+ls -alh
+sudo swapoff /swap.img 
+sudo rm /swap.img 
+ls -alh
+sudo dd if=/dev/zero of=/swap.img bs=1M count=16384
+ls -alh
+sudo chmod 600 /swap.img 
+sudo mkswap /swap.img 
+sudo swapon /swap.img
+free -h
+reboot now
+sudo reboot now
+free -h
+top
+apt search gnome-usage
+sudo apt install nala
+sudo nala search gnome-usage
+sudo nala install gnome-usage
+sudo apt install flatpak
+sudo add-apt-repository ppa:flatpak/stable
+sudo apt update
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.mattjakeman.ExtensionManager
+flatpak run com.mattjakeman.ExtensionManager
+nala search app-store
+nala search snap-store
+sudo apt install gnome-software-plugin-flatpak
+discord
+dot
+git add .
+git commit -m "update for Gnome installation 22/11/2023"
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.name "Nasif Ahmed"
+git commit -m "update for Gnome installation 22/11/2023"
+git push
+git commit -m "update for Gnome installation 22/11/2023"
+git push
+cd ~
+ls .ssh
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+dot
+git push
+git status
+dot
+git status
+ls
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+ls
+https://github.com/NasifAhmed/dotfiles.git
+git 
+git clone https://github.com/NasifAhmed/dotfiles.git
+ls
+cd ~
+ls
+ln -alh
+ls -alh
+rm .bashrc .bash_history && ln -sv ~/dotfiles/bash/.bashrc && ln -sv ~/dotfiles/bash/.bash_history 
+mkdir downloads
+cd downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+ls
+sudo apt install nala 
+ls
+sudo make install
+sudo nala install make
+sudo make install
+source ~/.bashrc 
+ls
+dot
+git add . && git commit -m "..."
+git config --global user.email "nasif2ahmed@gamil.com"
+git config --global user.name "Nasif Ahmed"
+git add . && git commit -m "..."
+git push
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
+git push
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+git push
+cd ~
+mkdir code
+cd z:
+ls
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm
+source ~/.bashrc 
+nvm
+nvim .bashrc 
+nvm install node
+npm install -g pnpm
+ls
+cd code/
+mkdir test
+cd test/
+pnpm init .
+pnpm init
+ls
+rm package.json 
+cd ..
+ls
+jump
+sudo apt install fzf
+jump
+edit
+jump
+strings
+strings ~/.bashrc | fzf
+ls
+sudo apt install neofetch
+edit
+source ~/.bashrc 
+ls
+edit
+open
+source ~/.bashrc 
+open
+jump
+ls
+mkdir dev
+cd dev/
+ls
+powershell
+powershell.exe
+win
+edit
+source ~/.bashrc 
+win
+jump
+ls
+neofetch
+ls
+cd navigateui/
+ls
+cd NavigateUI/
+git status
+cd ..
+rm -rf NavigateUI/
+git clone https://github.com/mhlehri/NavigateUI.git
+ls
+cd NavigateUI/
+ls
+pnpm install
+ls
+pnpm dev
+open
+pnpm dev
+opne
+open
+ls
+open
+jump
+ls
+pnpm dev
+ls
+open
+ls
+sudo nala install nautilus
+nautilus
+sudo nala remove nautilus
+sudo nala install nemo
+nemo .
+explorer.exe .
+sudo nala install btop
+open
+man find
+edit
+cd $(find ~ -type d -name node_modules -prune -type d | fzf)
+cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)
+edit
+open
+jump
+source ~/.bashrc 
+jump
+open
+edit
+source ~/.bashrc 
+open
+edit
+directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"
+edit
+cheat
+define
+edit
+source ~/.bashrc 
+edit
+open
+dot
+git clone https://github.com/NasifAhmed/dotfile
+git clone https://github.com/NasifAhmed/dotfiles
+rm -rf ~/.bashrc && ln -sv ~/dotfiles/bash/.bashrc .
+ln -sv ~/dotfiles/bash/.bash_history .
+mkdir downloads
+cd downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+sudo apt update && sudo apt upgrade -y
+ls
+cd pfetch/
+sudo apt install make -y
+sudo make install
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc 
+ls
+cd ..
+ls
+cd ~
+ls
+nvim
+cd downloads/
+wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
+nvm install node
+ls
+chmod +x nvim.appimage 
+./nvim.appimage 
+sudo apt install fuse -y
+ls
+sudo cp nvim.appimage /usr/local/bin/
+cd /usr/local/bin/
+ls
+mv nvim.appimage nvim
+sudo mv nvim.appimage nvim
+ls
+nvim
+jump
+sudo apt install fzf -y
+ls
+jump
+mkdir dev
+cd dev/
+ls
+git clone https://github.com/NasifAhmed/type-storm-server.git
+ls
+jump
+ls
+git chekcout development
+git checkout development
+git fetch --all
+git pull
+       jump
+ls
+code .
+pnpm i -D eslint prettier
+ls
+ls ~
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+exit
+ls 
+cd dev/
+cd type-storm-server/
+code .
+git config 
+git config --global user.name "Nasif Ahmed"
+git config --global user.email "nasif2ahmed@gmail.com"
+pnpm dev
+pnpm start
+pnpm install nodemon
+pnpm install -D nodemon
+pnpm dev
+pnpm i -D morgan
+pnpm dev
+curl http://localhost:5000/api/v1/users/average
+curl http://localhost:5000/api/v1/users/aver
+curl http://localhost:5000/api/v1/users/average
+jump
+code .
+ls
+pnpm dev
+git pull
+git fetch --all
+git pull
+git branch -v
+git pull
+git fetch
+git pull
+git log
+git status
+git pull origin/development
+git pull
+git pull --ff-only
+git status
+git log
+ls
+cd ..
+ls
+cd ..
+ls
+mkdir test
+cd test/
+ls
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+ls
+code .
+jump
+ls
+cd type-storm-server/
+ls
+pnpm install
+pnpm dev
+ls
+pnpm dev
+ls
+pnpm dev
+jump
+ls
+cd type-storm-server/
+ls
+cat .env 
+jump
+ls
+cd type-storm-server/
+pnpm dev
+jump
+ls
+git clone https://github.com/Team-Trinity/type-storm.git
+cd type-storm
+code .
+pnpm install
+cd ..
+ls
+rm -rf type*
+ls
+pnpm dev
+rm -rf type-storm
+cp ~/test/type-storm-server/ .
+cp -rf ~/test/type-storm-server/ .
+ls
+jump
+ls
+rm -rf type-storm-server/
+jump
+git clone https://github.com/NasifAhmed/type-storm.git
+cd type-storm
+ls
+code .
+pnpm install
+pnpm dev
+ls
+jump
+ls
+rm -rf type-storm-server/
+git clone https://github.com/NasifAhmed/type-storm-server.git
+ls
+                                                    cd dev/
+ls
+cd type-storm-server/
+ls
+code .
+jump 
+ls
+code .
+cd ..
+rm -rf type-storm-server/
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+code .
+pnpm install 
+pnpm i -g vercel
+vercel
+vercel --prod
+jump
+ls
+cd app/
+cd pro
+ls
+cd ..
+cd providers/
+nvim TypeStateProvider.tsx 
+ls
+jump
+ls
+git clone https://github.com/NasifAhmed/portfolio.git
+cd portfolio/
+ls
+code .
+pnpm install
+git add *
+git add .
+git commit -m "add resume"
+git push
+pnpm dev
+jump
+cd ..
+cd type-storm
+cd type-storm-s
+cd ..
+cd type-storm-server/
+ls
+git status
+nvim .gitignore 
+git fetch -all -p
+git fetch --all -p
+git pull
+cd ..
+rm -rf type-storm-server/
+ls
+git clone pnpm-lock.yaml
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+ls
+pnpm install
+nvim .gitignore 
+git add .
+git commit -m "add pnpm-lock.yaml to gitignore"
+git push
+code .
+jump
+ls
+jump
+ls
+git status
+cd ..
+rm -rf type-storm
+git clone https://github.com/NasifAhmed/type-storm.git
+cd type-storm
+ls
+pnpm install
+nvim .ev
+nvim .env
+code .
+pnpm install axios
+jump
+ls
+ll
+cd routes/
+nvim v1/
+nvim .
+cd ..
+ls
+jump
+code .
+pnpm dev
+jump
+ls
+jump
+ls
+code .
+pnpm dev
+code .
+git fetch --all
+git pull
+exit
+ls
+jump
+ls
+code .
+jump
+code .
+pnpm dev
+pnpm dev
+cd ~
+ls
+ll
+rm -rf .vscode-server/
+jump
+code .
+cd ~
+rm -rf .vscode-server/
+jump
+cd .
+cd ..
+ls
+code .
+jump
+ls
+                                                                     nvim
+ls
+cd .config/
+ls
+cd ~
+ll
+cd .config/
+ls
+ll
+cd ..
+ls
+nvim
+npm
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+sudo apt install ripgrep find-fd make unzip
+sudo apt install ripgrep fd-find make unzip
+ls
+nvim
+sudo apt install gcc g++
+nvim
+cd .config/nvim/
+ls
+nvim .
+jump
+ls
+cd muslim-daily-dashboard/
+ls
+pnpm dev
+ls
+nvim .
+jump
+pnpm dev
+ls
+pnp install
+pnpm install
+pnpm dev
+exit
+edit
+jump
+ls
+rm -rf muslim-daily-dashboard/
+ls
+rm -rf type-storm-server/
+git clone https://github.com/Team-Trinity/type-storm-server.git
+cd type-storm-server/
+ls
+nvim .
+nvim app.js 
+pnpm i -g typescript
+nvim app.js 
+npm i -g typescript
+nvim app.js 
+cd ..
+ls
+rm -rf type-storm
+rm -rf type-storm-server/
+git clone https://github.com/NasifAhmed/type-storm-server.git
+cd type-storm-server/
+pnpm remove -g typescript
+npm remove -g typescript
+pnpm install
+nvim .
+git status
+nvim .gitignore 
+git status
+git add .gitignore 
+git commit -m "add pnpm lock file"
+git push
+git checkout rewrite-v2
+git checkout -b rewrite-v2
+ls
+nvim .
+code .,
+code .
+pnpm dev
+cd ..
+ls
+git clone https://github.com/NasifAhmed/type-storm.git
+cd type-storm
+pnpm install
+nvim .env
+nvim .
+ls
+code .
+pnpm dev
+sudo apt install nala
+sudo nala install tmux -y
+tmux
+tmux ls
+tmux attack
+tmux attach
+tmux
+tmux ls
+tmux attach
+tmux attch
+tmux attach
+ping -t 1.1.1.1
+ping google.com
+ping  1.1.1.1
+exit
+tmux attach
+exit
+exit
+exit
+exit
+exit
+ls
+ll
+ls
+tmux
+ls
+tmux attach
+jump
+ls
+cd portfolio/
+nvim
+jump
+nvim .
+nvim 
+nvim
+cd ..
+ls
+cd type-storm
+nvim
+git status
+git pull
+nvim
+git dif
+git diff providers/TypeStateProvider.tsx
+nvim 
+git status
+git diff providers/TypeStateProvider.tsx
+ls
+nvim
+tmux
+?uj:q
+tumux attach
+tmux attach
+jump
+ls
+pnpm dev
+jump
+nvim 
+tmux
+jump
+ls
+nvim ~/tmux.conf
+tmux source ~/tmux.conf 
+ls
+edit
+nvim tmux.conf 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+nvim
+tmux source ~/tmux.conf 
+nvim 
+tmux source ~/tmux.conf 
+nvim .
+tmux
+tmux source ~/tmux.conf 
+nvim tmux.conf 
+tmux
+tmux sourse ~/tmux.conf 
+tmux source ~/tmux.conf 
+cd .tmux/
+ls
+cd plugins/
+ls
+ll
+ll tpm/
+cd ..
+cd..
+cd ..
+tmux source ~/tmux.conf 
+mv tmux.conf .tmux.conf
+tmux source ~/.tmux.conf 
+nvim .tmux.conf 
+tmux 
+ls
+tmux --kill
+nvim .tmux
+nvim .tmux.conf 
+tmux
+tmux source ~/.tmux.conf 
+nvim .tmux.conf 
+tmux
+tmux source ~/.tmux.conf 
+nvim
+tmux
+nvim .tmux.conf 
+tmux kill-server
+nvim tmux.conf 
+tmux source ~/.tmux.conf 
+ls
+nvim
+cd dev/
+ls
+edit
+tmux 
+tmux source ~/.tmux.conf 
+tmux 
+tmux attach
+tmux kill-server
+jump
+cd ..
+jump
+ls
+mv -rf * -p ./old
+mkdir old
+rm -rf old/
+explorer.exe .
+ls
+mkdir old
+ls
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+cd ..
+ls
+cd ..
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+cd .config/nvim
+ls
+rm -rf .git
+nvim 
+ls
+exit
+nvim
+ls
+nvim .
+nvim
+nvi
+nvim
+jump
+nvim .
+mv ~/.config/nvim ~/.config/nvim.lazy
+mv ~/.local/share/nvim ~/.local/share/nvim.lazy
+mv ~/.local/share/nvim.bak ~/.local/share/nvim
+mv ~/.config/nvim.bak ~/.config/nvim
+nvim
+jump
+ls
+git clone https://github.com/NasifAhmed/muslim-dashboard.git
+cd muslim-dashboard/
+ls
+nvim .
+pnpm dev
+pnpm install
+pnpm dev
+pnpm add .
+git add .
+git commit -m "offset time to match Islamic Foundation time"
+git push
+git diff
+jump
+code .
+ls
+jump
+ls
+rm -rf *
+ls
+cd ..
+ls
+cd test
+ls
+cd ..
+ls
+cd dev
+ls
+:q
+tmux
+nvim
+nvim 
+nvim .
+nvim
+tmux source ~/.tmux.conf 
+neovim
+nvim
+dot
+git status
+mkdir tmux
+cd tmux
+mv ~/.tmux.conf .
+ls
+ll
+clear
+ll
+git add .
+git commit -m "add tmux config"
+git p ush
+git push
+s
+ls
+clear
+ln -sv ~/dotfiles/tmux/.tmux.conf ~/
+neovim
+nvim
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+lazygit
+jump
+ls
+cd dot
+dot
+clear
+lazygit
+cheat
+clear
+jump
+ls
+tmux
+nvim
+tmux attach
+tmus source ~/.tmux.conf 
+tmux source ~/.tmux.conf 
+tmux attach
+tmux kill-server
+nvim 
+tmux
+tmux kill-server
+nvim
+tmux
+dot
+nvim
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+nvim
+nvim 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux source ~/.tmux.conf 
+tmux attach
+tmux kill-server
+lazygit 
+edit
+source ~/.bashrc 
+clera
+clear
+exit
+bash
+exit
+exit
+tmux
+exit
+edit
+source ~/.bashrc 
+edit
+exit
+dit
+edit
+exit
+edit
+unset $TMUX
+edit
+lazygit
+tmu:w
+dot
+lazygit 
+dot
+clear
+jump
+ls
+nvim
+tmux source ~/.tmux.conf 
+tmux attach
+cd /mnt/c/Users/Default
+cd /mnt/c/Users/ahmed/Desktop/
+ls
+cd ~
+ls
+win
+cd ..
+cd ~
+win
+clear
+:q
+dot
+cd nvim/
+ls
+mkdir old && mv * old
+ll old
+cd ..
+mkdir old
+mv nvim/* old
+mv old nvim/
+cd nvim/
+ls
+cp ~/.config/nvim/* .
+ll
+rm LICENSE.md README.md init.lua lazy-lock.json 
+ls
+cp -rv ~/.config/nvim/* .
+ls
+rm lazy-lock.json 
+ls
+ll
+cd ..
+jump
+ls
+cd ..
+ls
+rm -rf nvim
+ll
+ln -sv ~/dotfiles/nvim .
+ll
+nvim
+dot
+clear
+jump
+git clone 
+git clone https://github.com/NasifAhmed/muslim-dashboard.git
+cd muslim-dashboard/
+lazygit 
+jump
+jum
+jump
+pnpm dev
+pnpm install
+nvim .
+clear
+clear
+pnpm dev
+lazygit 
+tmux attach
+sudo apt install zoxide
+z .config/
+zoxide
+zoxide .config/
+z .config/
+which z
+source ~/.bashrc 
+which zoxide
+clear
+edit
+tmux new -As default
+nvim
+source ~/.bashrc 
+unset $TMUX
+clear
+source ~/.bashrc 
+nvim
+source ~/.bashrc 
+sudo apt remove zoxide
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+nvim
+$PATH
+z .config
+nvim
+source ~/.bashrc 
+clear
+z .config
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+nvim
+source ~/.bashrc 
+z .config/
+$PATH
+nvim
+source ~/.bashrc 
+clear
+z .config/
+$PATH
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+z .config/
+which z
+exit
+ls
+z .config/
+sudo mv ~/.local/bin/zoxide /usr/local/bin/
+zoxide 
+z .config/
+sudo mv /usr/local/bin/zoxide ~/.local/bin/
+ls
+z .config
+zoxide .config
+echo $PATH
+cd .local/bin/
+ls
+cd zo
+zoxide -h
+edit
+source ~/.bashrc 
+clear
+z .config
+z ~/.config/
+z -
+z - 
+dit
+edit
+source ~/.bahrc
+source ~/.bashrc 
+edit
+clear
+fzf --bash
+fzf -h
+fzf --version
+mkdir ~/downloads
+cd ~/downloads/
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo apt remove fzf
+sudo apt autoremove
+clear
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+edit
+nvim ~/.bashrc 
+source ~/.bashrc 
+clear
+z ..
+edit
+builtin cd -- dev
+z -h
+z --h
+z --help
+man z
+man zoxide
+jump
+z ~/dev
+z muslim-dashboard/
+z ~
+z muslim
+clear
+tmux attach
+z dotfile
+z ~/dotfiles/
+ls
+cd nvim/
+ls
+tree odl
+tree old
+sudo apt install tree
+tree old
+cd old
+ls
+nvim
+ls
+mv old oldest
+nvim init.lua 
+nvim kickstart.old/
+diff init.lua kickstart.old/init.lua 
+diff init.lua kickstart.old/init.lua  | less
+nvim init.lua 
+nvim kickstart.old/init.lua 
+rm init.lua lazy-lock.json 
+ls
+cd ..
+ls
+nvim init.lua 
+mkdir kickstartv2
+mv init.lua kickstartv2/
+mv LICENSE.md kickstartv2/
+mv README.md kickstartv2/
+mv doc/ kickstartv2/
+mv lua/ kickstartv2/
+ls
+mv kickstartv2/ old/
+ls
+cd old/
+ls
+cd ..
+lazygit
+z ~
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+z nvim
+z ~/.config/nvim
+ls
+lazygit
+rm -rf ~/.config/nvim/.git
+ls
+mv * ~/dotfiles/nvim/
+ls
+cd ..
+z nvim
+ls
+tree old
+ll
+z .config
+ls
+rm -rf nvim
+ln -sv ~/dotfiles/nvim .
+ls
+ll
+nvim
+nvi
+z config
+ls
+mv nvim.lazy/lua/plugins/colorscheme.lua nvim/lua/plugins/
+mv nvim.lazy/lua/plugins/treesitter.lua nvim/lua/plugins/
+rm -rf nvim.lazy/
+nvim
+ll
+nvim
+explorer.exe
+explorer.exe .
+cd nvim
+ls
+ll
+cd lua/
+ls
+cd plugins/
+ls
+nvim example.lua 
+sudo apt install python3
+sudo apt update && sudo apt upgrade -y
+dot
+pip install ruff-lsp
+sudo install python3-pip
+sudo apt install python3-pip
+clear
+nvi
+nvim ~/.tmux.conf 
+source ~/.tmux.conf 
+tmux attach
+source ~/.tmux.conf 
+tmux attack
+tmux attach
+source ~/.tmux.conf 
+tmux attach
+source ~/.tmux.conf 
+tmux attach
+tmux kill-server
+nvim
+nvim
+exit
+pnpm install -g neovim
+nvim
+exit
+ls
+clear
+ls
+z mus
+ls
+python3 -m pip install --user --upgrade pynvim
+nvim .
+nvim
+exit
+nvim 
+nvim
+pip install ruff-lsp
+exit
+nvim
+nvim .
+nvim
+z nvim
+ls
+explorer.exe .
+nvim
+z mus
+ls
+nvim
+clear
+ls
+lazygit
+nvim .
+nvim 
+nvim
+z nvim
+ls
+nvim .prettierrc
+ls
+z muslim
+pnpm prettier init
+nvim package.json 
+pnpm install prettier
+pnpm prettier init
+pnpm prettier -h
+pnpm prettier --init
+pnpm prettier --init | less
+pnpm dlx prettier init
+nvim .prettierrc
+nvim .prettierrc 
+code .
+pnpm install -D prettier prettier-plugin-tailwindcss
+ll
+pnpm install
+prettier --write .
+pnpm prettier --write .
+tmux attach
+cat /etc/os-release 
+z config
+ls
+ll
+rm nvim
+ll
+nvim ~/.tmux.conf 
+tmux source ~/.tmux.conf 
+clear
+ls
+mkdir nvim
+cd nvim/
+nvim init.lua
+nvim .
+ls
+nvim init.lua
+nvim
+ls
+nvim init.lua 
+nvim
+ls
+nvim init.lua 
+cd lua/
+ls
+cd config/
+ls
+nvim init.lua 
+nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+nvim
+clear
+z plugins
+ls
+nvim colorscheme.lua
+nvim
+tmux attach
+cd ..
+z config
+nvim init.lua 
+nvim
+dot
+z nvim/
+ls
+nvim init.lua 
+ls
+mv kickstart.lua ../plugins/
+nvim init.lua 
+nvim
+z nvim
+nvim .
+nvim
+mkdir test
+z test/
+ls
+mkdir neovim
+cd neovim/
+git clone https://github.com/nvim-lua/kickstart.nvim.git .
+git clone https://github.com/nvim-lua/kickstart.nvim.git
+ls
+cd kickstart.nvim/
+rm -rf .git
+ls
+tree doc
+tree lua
+ls
+cd lua/
+ls
+cd config/
+ls
+nvim keymaps.lua 
+nvim init.lua 
+z config
+mv nvim nvim.bak
+mkdir nvim
+mv ~/test/neovim/kickstart.nvim/* ./nvim/
+cd nvim
+ls
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+clear
+nvim
+apt install python3.10-venv
+sudo apt install python3.10-venv
+sudo apt install gem
+sudo apt remove gem
+sudo apt autoremove
+sudo apt-get install ruby
+gem
+z mus
+nvim .
+nvim
+exit
+z nvim
+ls
+tree old
+rm LICENSE.md 
+rm README.md 
+rm -rf doc/
+rm init.lua 
+rm lazy-lock.json 
+mv ~/.config/nvim/* .
+ls
+tree lua/
+rm -rf lua/
+mv ~/.config/nvim/lua .
+ls
+z nvim
+ls
+cd ..
+rm -rf nvim
+ln -sv ~/dotfiles/nvim .
+ll
+nvi
+nvim
+nvim 
+dot
+ls
+cd ~
+mkdir .config
+rm -rf ~/.bashrc && ln -sf ~/dotfiles/bash/.bashrc .
+rm -rf ~/.bash_history && ln -sf ~/dotfiles/bash/.bash_history .
+source ~/.bashrc 
+sudo pacman -S zoxide
+source ~/.bashrc 
+clear
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+dot
+yay lazygit
+rm -rf dotfiles/ && git@github.com:NasifAhmed/dotfiles.git
+rm -rf dotfiles/ && git clone git@github.com:NasifAhmed/dotfiles.git
+source ~/.bashrc
+nvim .bashrc
+alacritty migrate
+z ala
+ls
+nvim alacritty.toml 
+ls
+dot
+exit
+sudo dnf groupupdate 'core' 'multimedia' 'sound-and-video' --setopt='install_weak_deps=False' --exclude='PackageKit-gstreamer-plugin' --allowerasing && sync
+sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg
+sudo dnf install lame\* --exclude=lame-devel
+sudo dnf group upgrade --with-optional Multimedia
+    sudo dnf install ffmpeg ffmpeg-libs libva libva-utils
+sudo dnf config-manager --set-enabled fedora-cisco-openh264
+sudo dnf install -y openh264 gstreamer1-plugin-openh264 mozilla-openh264
+    hostnamectl set-hostname fedbox
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-browser
+ssh-keygen -t ed25519 -C "nasif2ahmed@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git clone git@github.com:NasifAhmed/dotfiles.git
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo nano .bashrc 
+mv .bashrc .bashrc.bak && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+sudo dnf install zoxide
+fc-cache
+wget https://raw.githubusercontent.com/tazihad/bangla-fonts-fix-linux/main/50-custom-bangla.conf && mkdir -p ~/.config/fontconfig/conf.d && cp 50-custom-bangla.conf $_
+fc-cache
+sudo dnf install alacritty neovim
+ln -av ~/dotfiles/alacritty ~/.config/
+ln -sv ~/dotfiles/alacritty ~/.config/
+sudo dnf instal zellij
+sudo dnf install zellij
+cd Downloads/
+chmod +x zellij 
+./zellij 
+sudo cp zellij /usr/local/bin/
+fzf
+source ~/.bashrc
+~/.fzf/install
+nvim .bashrc
+cd .fzf
+ls
+./install 
+ls
+./uninstall 
+fzf
+sudo dnf remove fzf
+cd .fzf/
+./install 
+fzf
+sudo dnf install adw-gtk3
+sudo dnf search adw-gtk3
+sudo dnf install adw-gtk3-theme
+ls
+cd .config/alacritty/
+nvim alacritty.toml 
+sudo dnf search fastfetch
+sudo dnf search pfetch
+sudo dnf install fastfetch nerdfetch
+sudo dnf install fastfetch 
+fastfetch 
+free -h
+sudo dnf install mvp
+sudo dnf install mpv
+sudo dnf search tela
+/home/ahmed/Downloads/Tela-icon-theme-2024-04-19/install.sh 
+fc-cache
+ls
+zellij -h
+exit
+zellij setup
+zellij edit
+exit
+zellij options
+exit
+zellij attch
+zellij -- attach
+zellij help
+zellij list-sessions
+zellij attach queit-crab
+mpv /home/ahmed/Documents/study/CSE449/fox.mp3 
+ls
+sudo dnf update
+curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+sudo dnf install librewolf
+killall geary
+free -h
+sudo dnf install neofetch
+neofetch
+exit
+neofetch
+ls
+neofetch
+free -h
+sudo dnf install ulauncher
+dnf search nautilus
+sudo dnf install nautilus-gsconnect
+ls
+sudo dnf install tldr
+tldr ls
+cheat
+curl cheat.sh
+curl cheat.sh/ls
+edit
+nvim .bashrc
+curl cheat.sh/help
+curl cheat.sh
+curl -s cheat.sh
+curl -s cheat.sh/:list
+cheat
+nvim .bashrc
+ls
+curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less
+curl -s cheat.sh/:list | fzf
+curl -s cheat.sh/ls : less
+curl -s cheat.sh/ls | less
+man less
+curl -s cheat.sh/ls | less -R
+nvim .bashrc
+nvim .bashrc
+cheat
+source ~/.bashrc
+cheat
+nvim .bashrc
+open
+dict
+sudo dnf install dict
+sudo dnf search dict
+cat /usr/share/dict
+cd /usr/share/dict
+ls
+cat linux.words 
+ls
+file words 
+cat /usr/share/dict/words | wc -l
+sudo dnf search dict
+sudo dnf search dictd
+sudo dnf install dictd
+z ~
+nvim .bashrc
+dict
+dict help
+dict --help
+dict -D
+dict --help
+define
+nvim .bashrc
+source ~/.bashrc
+define
+nvim .bashrc
+dict perform
+dict --help
+dict -f hello | less
+define
+nvim .bashrc
+source ~/.bashrc
+nvim .bashrc
+sudo dnf install figlet
+source ~/.bashrc
+dnf search figlet 
+nvim .bashrc
+man ls
+nvim .bashrc
+source ~/.bashrc
+less ls
+man lss
+man ls
+sudo dnf install most
+curl cheat.sh/ls | most
+nvim .bashrc
+source ~/.bashrc
+cheat ls
+cheat ls
+exit
+cheat
+nvim .bashrc
+source .bashrc
+man ls
+nvim .bashrc
+sudo dnf install zsh
+ln -sv ~/dotfiles/zsh ~/.config/
+zsh
+ll
+ls
+ln -sv ~/dotfiles/zsh/.zshrc ~/
+ln -sv ~/dotfiles/zsh/.histfile ~/
+cat ~/dotfiles/zsh/.zhistory 
+cat ~/dotfiles/zsh/.zhistory | wc -l
+cat ~/dotfiles/zsh/.histfile | wc -l
+zsh
+rm -rf .zshrc .histfile 
+dot 
+z ~
+nvim .bashrc
+man ls
+nvim .bashrc.bak 
+nvim .bashrc
+source ~/.bashrc
+man ls
+ls 
+cd .config 
+dot
+lazygit
+exit
+$PATH
+ls /usr/local/bin/
+lazygit
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit
+dot
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git clone git@github.com:NasifAhmed/dotfiles.git
+sudo nala install git
+cd ~
+git clone git@github.com:NasifAhmed/dotfiles.git
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+mv .bashrc .bashrc.bak && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+sudo nala install zoxide
+source .bashrc
+fzf
+exit
+sudo nala install brave-browser 
+cd Documents/
+ls
+nano changes.txt
