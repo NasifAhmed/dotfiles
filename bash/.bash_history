@@ -500,3 +500,160 @@ gsettings set org.gnome.desktop.interface cursor-theme Yaru
 gsettings set org.gnome.desktop.interface cursor-theme Yaru
 sudo nala update 
 xkill
+sudo nala install syncthing
+sudo systemctl enable syncthing@ahmed.service
+sudo systemctl start syncthing@ahmed.service
+sudo systemctl status syncthing@ahmed.service
+ssh-keygen -t ed25519 -C "nasif2ahmed@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git
+git clone git@github.com:NasifAhmed/dotfiles.git
+sudo nala install libfuse2
+cd Downloads/
+sudo cp nvim /usr/local/bin/
+sudo cp zellij /usr/local/bin/
+nvi
+nvim
+git clone git@github.com:NasifAhmed/obsidian.git
+fc-cache
+cd pfetch/
+sudo make install
+cd ..
+wget https://raw.githubusercontent.com/tazihad/bangla-fonts-fix-linux/main/50-custom-bangla.conf && mkdir -p ~/.config/fontconfig/conf.d && cp 50-custom-bangla.conf $_
+fc-cache
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo nala install zoxide
+cd ~
+mv .bashrc .bashrc.bak && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+ls
+cd ~
+mv .bashrc .bashrc.bak && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.name "Nasif Ahmed"
+z ~/Downloads/
+ls
+cd obsidian/
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+rm lazygit*
+ll
+lazygit 
+clear
+sudo nala install mpv
+mpv /mnt/3E1C396F1C392377/Videos/Movies/The Nice Guys 2016 BluRay 1080p Hindi 2.0 English 5.1 AC3 x264 ESub - mkvCinemas.mkv 
+mpv "/mnt/3E1C396F1C392377/Videos/Movies/Mad.Max.Fury.Road.2015.1080p.Bluray.10.Bit.AAC.7.1.x265-ALiEN.mkv "
+mpv "/mnt/3E1C396F1C392377/Videos/Movies/The Nice Guys 2016 BluRay 1080p Hindi 2.0 English 5.1 AC3 x264 ESub - mkvCinemas.mkv" 
+exit
+excit
+exit
+lazygit 
+clear
+sudo nala install mpv
+mpv /mnt/3E1C396F1C392377/Videos/Movies/The Nice Guys 2016 BluRay 1080p Hindi 2.0 English 5.1 AC3 x264 ESub - mkvCinemas.mkv 
+mpv "/mnt/3E1C396F1C392377/Videos/Movies/Mad.Max.Fury.Road.2015.1080p.Bluray.10.Bit.AAC.7.1.x265-ALiEN.mkv "
+mpv "/mnt/3E1C396F1C392377/Videos/Movies/The Nice Guys 2016 BluRay 1080p Hindi 2.0 English 5.1 AC3 x264 ESub - mkvCinemas.mkv" 
+sudo nala update
+sudo nala upgrade
+pfetch 
+sudo nala install neofetch
+neofetch 
+sudo systemctl status syncthing@ahmed.service
+sudo nala install qbittorrent
+nvim .bashrc.bak 
+cd /mnt/3E1C396F1C392377/Videos/
+cd Shows/
+ll
+rm -rf .d07f37acb2ddc6865149965c2335b51c957c8b78.parts 
+rm -rf 'The Boys'
+z ..
+rm -rf Shows
+z conf
+z ~/.config/
+z alacritty
+ls
+nvim alacritty.toml 
+exit
+zellij list
+zellij list-session
+zellij ls
+zellij attach blossoming-cactus
+zellij attach 
+zellij attach cubic-piano
+zellij 
+zellij 
+sudo nala update
+ls
+zellij 
+sudo nala search gnome-shell-pomodoro
+sudo nala install gnome-shell-pomodoro
+z Documents/
+ls
+mkdir downloads
+cd downloads/
+sudo nala remove yt-dlp 
+sudo nala install python3-pip
+pip install yt-dlp
+yt-dlp https://youtu.be/yBw67Fb31Cs
+ping 1.1.1.1
+mv .profile .profile.bak
+sudo reboot
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+ssh -T git@github.com
+sudo nala update -y
+sudo dnf update -y
+sudo dnf install neovim
+sudo nvim V
+sudo nvim /etc/environment
+/sbin/lspci | grep -e VGA
+sudo dnf install xorg-x11-drv-nvidia-470xx akmod-nvidia-470xx
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+sudo dnf install xclip openssl
+sudo nvim /etc/systemd/resolved.conf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo nvim /etc/systemd/resolved.conf
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+sudo dnf install xclip openssl
+sudo nvim /etc/systemd/resolved.conf
+sudo nvim /etc/systemd/resolved.conf
+cd Downloads/
+l
+sudo cp zellij /usr/local/bin/
+ls
+ll
+cd ..
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo dnf install zoxide
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-browser
+sudo dnf install adw-gtk3
+sudo dnf search adw-gtk3
+sudo dnf search adw-gtk3-theme
+sudo dnf install adw-gtk3-theme
+rm -rf .ssh/
+ssh-keygen -t ed25519 -C "nasif2ahmed@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub | xclip 
+cat ~/.ssh/id_ed25519.pub | xclip -i 
+xclip -h
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+sudo dnf install syncthing
+sudo systemctl enable syncthing@ahmed.service
+sudo systemctl start syncthing@ahmed.service
+sudo dnf search appimage
+dnf search lazygit
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit
+dot
+lazygit 
