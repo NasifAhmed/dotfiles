@@ -657,3 +657,9 @@ sudo dnf copr enable atim/lazygit -y
 sudo dnf install lazygit
 dot
 lazygit 
+git add *
+git commit -m "refresh"
+git push
+git staus
+git status
+nvim .gitignore 
