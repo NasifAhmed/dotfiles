@@ -149,21 +149,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 
 # Change the window title of X terminals
 case ${TERM} in
@@ -200,7 +185,7 @@ fi
 export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
-export SYSTEMD_PAGER=
+#export SYSTEMD_PAGER=
 
 ################################################################################
 ##  alias                                                                     ##
@@ -210,7 +195,10 @@ alias np='nano -w PKGBUILD'
 alias more=less
 alias ll='ls -al --color=auto'
 alias ls='ls --color=auto'
+
 alias grep='grep --colour=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias dot='cd ~/dotfiles && git status'
 alias jump='cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)'
 alias edit='file=$(find ~ -type d -name node_modules -prune -o -type f | fzf) && [ -n "$file" ] && nvim "$file"'
@@ -225,16 +213,21 @@ alias win='cd /mnt/c/Users/ahmed/Desktop/'
 ################################################################################
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-	alias ls='ls --color=auto'
-	#alias dir='dir --color=auto'
-	#alias vdir='vdir --color=auto'
+#if [ -x /usr/bin/dircolors ]; then
+#	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#fi
 
-	alias grep='grep --color=auto'
-	alias fgrep='fgrep --color=auto'
-	alias egrep='egrep --color=auto'
-fi
+export LESS_TERMCAP_mb=$'\e[1;36m'
+export LESS_TERMCAP_md=$'\e[1;36m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+export PAGER="less"
+export MANPAGER="less -R"
+export TERM=xterm-256color
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -301,7 +294,7 @@ eval "$(zellij setup --generate-auto-start bash)"
 ##  Startup Commands                                                          ##
 ################################################################################
 
-pfetch
+#pfetch
 
 #figlet -f 3d ${HOSTNAME^^} -t | lolcat
 #echo -e "\n"

@@ -1,233 +1,128 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Shell integration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
-#         _     
-#     _______| |__  
-#    |_  / __| '_ \ 
-#     / /\__ \ | | |
-#    /___|___/_| |_|
-#               
-#
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 
-
-
-################################################################################
-##  ZSH Auto Configs                                                          ##
-################################################################################
-
-
-# Enable vi mode
-# bindkey -v
-
-
-## Options section
-setopt correct                                                  # Auto correct mistakes
-setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
-setopt nocaseglob                                               # Case insensitive globbing
-setopt rcexpandparam                                            # Array expension with parameters
-setopt nocheckjobs                                              # Don't warn about running processes when exiting
-setopt numericglobsort                                          # Sort filenames numerically when it makes sense
-setopt nobeep                                                   # No beep
-setopt appendhistory                                            # Immediately append history instead of overwriting
-setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
-setopt autocd                                                   # if only directory path is entered, cd there.
-
-
-
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path 
-# Speed up completions
-zstyle ':completion:*' accept-exact '*(N)'
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
-
-
-
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=999999999
-SAVEHIST=999999999
-setopt INC_APPEND_HISTORY 
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt autocd beep
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/nasif/.zshrc'
-
-# Basic auto tab complete and slection
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots) # Include hidden files in tab complete
-# End of lines added by compinstall
-
-
-################################################################################
-##  Coloring                                                                ####
-################################################################################
-
-
-alias diff='diff --color=auto'
-alias grep='grep --color=auto'
-alias ip='ip -color=auto'
-alias ls='ls --color=auto'
-
-
-export LESS=-R
-export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
-export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
-export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
-export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-export EDITOR=nvim 
-
-
-man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
-
-
-
-
-################################################################################
-##  alias                                                                     ##
-################################################################################
-
-alias l='lsd'
-alias la='lsd -a'
-alias ll='lsd -l'
-alias lla='lsd -la'
-alias lt='lsd --tree'
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
-alias i3config='vim ~/.config/i3/config'
-alias windows='cd /run/media/nasif'
-alias corona='curl https://corona-stats.online?source=2'
-alias coronabd='curl https://corona-stats.online/bangladesh?source=2' 
-alias dot='cd ~/dotfiles && git status'
-alias vpnusa='sudo protonvpn c US-FREE#1'
-alias vpn='sudo protonvpn c -f'
-alias suck='rm -rf config.h & sudo make clean install'
-alias gitu='git add . && git commit && git push'
-alias vim='nvim'
-alias study='nautilus ~/study&google-chrome-stable "https://calendar.google.com/calendar/u/1/r"&exit'
-alias clean='yay -Yc && sudo pacman -Scc && rm -rf .cache/* && sudo pacman -Rns $(pacman -Qdtq)'
-
-edit() {
-    nvim "$(find -type f | fzf)"
-}
-
-fcd() {
-    cd "$(find -type d | fzf)"
-}
-
-################################################################################
-##  Plugins                                                                   ##
-################################################################################
-
-# For Arch installation with AUR
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# For fedora installation
-source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   
-
-
-
-
-################################################################################
-##  Keybinds                                                                  ##
-################################################################################
-
-# bind UP and DOWN arrow keys to history substring search
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey '^[[A' history-substring-search-up			
-bindkey '^[[B' history-substring-search-down
-
-
-
-################################################################################
-##  Startup Commands                                                          ##
-################################################################################
-
-pfetch  
-#neofetch  
-#echo -n "\v"
-
-# sh ~/.scripts/unix
-
-# neofetch --backend chafa --size 21% --source ~/dotfiles/Pictures/linux_PNG12.png
-
-#echo "$(date '+Date:%D Time:%H:%M %p' | toilet -f term -F border --gay)"
-
-
-
-################################################################################
-##  Starship Initialization                                                   ##
-################################################################################
-
-#eval "$(starship init zsh)"
-
-################################################################################
-##  Pure Prmpt Initialization                                                   ##
-################################################################################
-
-
-fpath+=($HOME/.zsh/pure)
-autoload -U promptinit; promptinit
-prompt fade
-
-
-### EOF ###
-
-
-
-# Offer to install missing package if command is not found
-if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
-    source /usr/share/zsh/functions/command-not-found.zsh
-    export PKGFILE_PROMPT_INSTALL_MISSING=1
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/nasif/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/nasif/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/nasif/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/nasif/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# <<< conda initialize <<<
 
-#neofetch
-#screenfetch
-#colorscript random
-#cpufetch
-#sysinfo-retro
-#sysinfo
-#ufetch-arco
-#ufetch
-#hfetch
-#fetch
-#paleofetch
-#alsi
+
+# This setup is done by following this video :
+# https://youtu.be/ud7YxC33Z3w
+
+# Set the directory we want to store zinit and plugins
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+# Download Zinit, if it's not there yet
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+
+# Source/Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Add in Powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# Add in zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
+
+# Load completions when zsh starts
+autoload -U compinit && compinit
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Keybindings
+bindkey -e # Sets it to emacs mode
+# Here , Ctrl+f to accept suggestion or move forward in line
+# Ctrl+b to move backward in line
+# Ctrl+p and Ctrl+n to go back and forth in terminal commands. Like Up and Down arrow
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups # dups = duplicates
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# Alias
+alias np='nano -w PKGBUILD'
+alias more=less
+alias ll='ls -al --color'
+alias ls='ls --color'
+
+alias grep='grep --colour=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias dot='cd ~/dotfiles && git status'
+alias jump='cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)'
+alias edit='file=$(find ~ -type d -name node_modules -prune -o -type f | fzf) && [ -n "$file" ] && nvim "$file"'
+alias define='dict $(cat /usr/share/dict/words | fzf) | less'
+alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less -R'
+# For WSL vscode project opening
+alias open='directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"'
+alias win='cd /mnt/c/Users/ahmed/Desktop/'
+
+# Color
+export LESS_TERMCAP_mb=$'\e[1;36m'
+export LESS_TERMCAP_md=$'\e[1;36m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+export PAGER="less"
+export MANPAGER="less -R"
+
+#
+# Web deb stuff
+#
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/ahmed/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Path to DENO installation
+export DENO_INSTALL="/home/ahmed/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+
+# User PATH setup
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+
+# Completion styling
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
