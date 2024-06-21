@@ -1,4 +1,4 @@
-import = ["/home/ahmed/.config/alacritty/catppuccin-mocha.toml"]
+import = ["/home/ahmed/.config/alacritty/github_dark.toml"]
 live_config_reload = true
 
 [colors]
