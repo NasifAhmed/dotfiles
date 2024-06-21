@@ -65,8 +65,8 @@ setopt hist_find_no_dups
 # Alias
 alias np='nano -w PKGBUILD'
 alias more=less
-alias ll='ls -al --color'
-alias ls='ls --color'
+alias ll='ls -al'
+alias ls='ls'
 
 alias grep='grep --colour=auto'
 alias fgrep='fgrep --color=auto'
@@ -126,3 +126,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# For starship prompt
+# eval "$(starship init zsh)"
+
+fastfetch -c ~/dotfiles/fastfetch/test.jsonc
