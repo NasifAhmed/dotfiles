@@ -879,3 +879,358 @@ ls
 nvim alacritty.toml 
 ls
 zsh
+ls
+exit
+man ls
+ls
+dot
+which bash
+chsh
+nvim ~/.config/alacritty/
+ls
+ls --color
+man ls
+exit
+ls
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm
+exit
+ls --color
+man ls
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm
+nvm install node
+cd Downloads/
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+sudo dnf install -y gcc make git ripgrep fd-find unzip neovim
+nvim
+cd ~/.config/
+cd nvim/
+ls
+rm -rf .git
+nvim init.lua 
+nvim ~/.bashrc 
+exit
+nvim ~/.config/nvim/init.lua 
+exit
+l
+ls
+ll
+nvim .zshrc 
+exit
+nvim ~/.bashrc 
+exit
+ls
+sudo dnf history
+sudo dnf distro-sync 
+ls
+nvim ~/.config/alacritty/
+exit
+ls
+nvim ~/.config/alacritty/
+exit
+ls
+fastfetch 
+exit
+lsblk
+sudo nvim /etc/fstab 
+lsblk
+ntfsfix /dev/sdb
+ntfsfix /dev/sdb2
+sudo ntfsfix /dev/sdb
+chkdsk /dev/sdb
+dnf search chkdsk
+sudo fsck.ext4 /dev/sda
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install jellyfin
+sudo systemctl enable --now jellyfin
+sudo systemctl start jellyfin
+sudo systemctl status jellyfin
+sudo chown -R jellyfin:jellyfin /mnt/collection/main
+sudo chmod -R 755 /mnt/collection/main
+CD /mnt/collection/
+cd /mnt/collection/
+ll
+cd main/
+ll
+ionice 
+dnf search iotop
+sudo dnf install iotop -y
+iotop 
+sudo systemctl stop qbittorrent-nox@ahmed.service
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/Videos/Movies/ /mnt/collection/main/movies/
+journalctl -u jellyfin -f
+cd /mnt/
+ls
+cd collection/
+ls
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/Videos/Series/ /mnt/collection/main/shows/
+cd main/
+ll
+cd movies/
+ll
+cd ..
+ll
+sudo chown -R jellyfin:jellyfin /mnt/collection/main/movies/
+sudo chmod -R 755 /mnt/collection/main/movies/
+cd movies/
+ll
+sudo systemctl stop jellyfin
+sudo systemctl start jellyfin
+journalctl -u jellyfin -f
+df -h | grep /mnt/collection
+cd ..
+ll
+sudo setenforce 0
+sudo systemctl restart jellyfin
+journalctl -u jellyfin -f
+sudo sestatus
+sudo dnf install policycoreutils-python-utils
+sudo semanage fcontext -a -t media_t "/mnt/collection(/.*)?"
+sudo semanage fcontext -a -t public_content_rw_t "/mnt/collection(/.*)?"
+sudo restorecon -Rv /mnt/collection
+ls -Z /mnt
+sudo dnf install policycoreutils-python-utils
+sudo ausearch -c 'jellyfin' --raw | audit2allow -M jellyfin_custom
+sudo semodule -i jellyfin_custom.pp
+sudo ausearch -c 'jellyfin' --raw | audit2allow -M jellyfin_custom
+sudo setenforce 0
+sudo sestatus
+sudo setenforce 0
+sudo sestatus
+sudo systemctl restart jellyfin
+sudo systemctl status jellyfin
+sudo ausearch -c 'jellyfin' --raw | audit2allow -M jellyfin_custom
+sudo chown -R jellyfin:jellyfin /mnt/collection
+sudo chmod -R 755 /mnt/collection
+sudo ausearch -m avc -ts recent | grep jellyfin
+sudo systemctl restart jellyfin
+ls
+cd shows/
+ll
+mv HOD "House Of Dragon"
+sudo mv HOD "House Of Dragon"
+ll
+sudo nautilus
+sudo systemctl start qbittorrent-nox@ahmed.service
+sudo systemctl status qbittorrent-nox@ahmed.service
+sudo groupadd media
+sudo usermod -aG media jellyfin
+sudo usermod -aG media qbittorrent
+sudo usermod -aG media qbittorrent-nox
+sudo usermod -aG media ahmed
+getent passwd | cut -d: -f1
+cat /etc/group
+sudo chown -R :media /mnt/collection/
+sudo chmod -R 775 /mnt/collection/
+sudo iotop 
+sudo usermod -aG media ahmed
+getent passwd | cut -d: -f1
+cat /etc/group
+sudo chown -R :media /mnt/collection/
+sudo chmod -R 775 /mnt/collection/
+ll
+mkdir backup
+sudo mkdir backup
+ls
+cd back
+cd backup/
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/Backup /mnt/collection/backup/
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/FLASH/ /mnt/collection/backup/
+sudo rsync -rv /mnt/hdd/Pictures/ /mnt/collection/backup/
+sudo rsync -rv /mnt/hdd/Seed/ /mnt/collection/backup/
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/Tutorials/ /mnt/collection/main/tutorials/
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/Videos/Archive /mnt/collection/backup/Backup/
+iotop 
+sudo ~~
+sudo sudo ~~
+sudo iotop 
+nvim
+nvim .bashr
+nvim ~/.bashrc 
+ls
+ll
+fastfetch 
+nvim
+killall alacritty
+sudo dnf update
+sudo systemctl start qbittorrent-nox@ahmed.service
+sudo systemctl start qbittorrent-nox@ahmed.service
+sudo dnf install xkill-1.0.6-5.fc40.x86_64 
+xkill
+sudo dnf update
+sudo systemctl start qbittorrent-nox@ahmed.service
+dnf search smartctl
+dnf install gsmartcontrol-1.1.4-7.fc40.x86_64 
+dnf install gsmartcontrol
+sudo ~~
+sudo dnf install gsmartcontrol-1.1.4-7.fc40.x86_64 
+lsblk
+smartctl --all /dev/sdb
+sudo smartctl --all /dev/sdb
+sudo smartctl --all /dev/sdb | less
+cd .config/mpv/
+nvim mpv.conf 
+cd ~/Downloads/
+ls
+nvim trnmt1preset.json
+nvim trnmt1preset.json 
+nvim test.json
+nvim test.json 
+sudo dnf install iotop -y
+iotop 
+sudo find /mnt/collection/ -type d -exec chmod g+s {} +
+sudo semanage fcontext -a -t public_content_rw_t "/mnt/collection(/.*)?"
+sudo systemctl restart jellyfin
+sudo systemctl restart qbittorrent
+sudo systemctl restart qbittorrent-nox@ahmed.service 
+lsblk
+sudo umount /dev/sdb
+sudo umount /dev/sdb1
+sudo systemctl stop qbittorrent-nox@ahmed.service
+sudo umount /dev/sdb2
+sudo wipefs -a /dev/sdb
+cd Desktop/x/
+ls
+yt-dlp -a all.txt 
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/Tutorials/ /mnt/collection/main/tutorials/
+sudo rsync -rv --no-perms --no-owner --no-group /mnt/hdd/Videos/Archive /mnt/collection/backup/Backup/
+iotop 
+sudo ~~
+sudo sudo ~~
+sudo iotop 
+nvim .bashr
+nvim ~/.bashrc 
+cd ~
+dot
+cd ~/dow
+cd ~/Downloads/
+unzip 
+nvim
+extract SoulseekQt-2018-1-30-64bit-appimage.tgz 
+chmod +x SoulseekQt-2018-1-30-64bit.AppImage 
+./SoulseekQt-2018-1-30-64bit.AppImage 
+dnf search xcb
+sudo dnf install libxcb libxkbcommon
+ldd ./your_appimage_file.AppImage | grep "not found"
+QT_DEBUG_PLUGINS=1 ./SoulseekQt-2018-1-30-64bit.AppImage 
+dnf search soulseek
+sudo dnf install nicotine+
+waydroid 
+waydroid -h
+waydroid status 
+cd ~/Desktop/
+ls
+cd ..
+sudo chown -R :media ~/Desktop/x
+ll
+sudo chmod -R 775 ~/Desktop/x
+cd x
+python -m http.server 
+sudo dnf install cmatrix
+cmatrix
+cd .config/mpv/
+nvim mpv.
+nvim mpv.conf 
+ls
+ll
+exit
+ls
+npx create-next-app@latest
+npm i -g pnpm
+cd Documents/
+ll
+cd ..
+cd Desktop/
+ls
+mkdir webdev
+cd webdev/
+pnpm dlx create-next-app@latest
+code test-app/
+code test-app/
+ll
+tree
+ls
+pnpm dev
+code test-app/
+cd ..
+ls
+mkdir learn
+cd learn/
+mkdir nextjs
+cd nextjs/
+npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example"
+pnpm dlx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example"
+ll
+cd nextjs-dashboard/
+code .
+ll
+npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example"
+pnpm dlx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example"
+cd nextjs-dashboard/
+code .
+dnf search appimaged
+dnf copr -h
+dnf copr search test
+dnf copr search appimage
+dnf copr enable eyecantcu/AppImageLauncher
+sudo dnf install appimagelauncher
+sudo dnf search appimage
+sudo dnf copr enable eyecantcu/AppImageLauncher
+sudo dnf update
+dnf search appimage
+sudo dnf copr remove eyecantcu/AppImageLauncher
+cd Downloads/
+wget https://github.com/GopeedLab/gopeed/releases/download/v1.5.7/Gopeed-v1.5.7-linux-x86_64.AppImage
+ll
+chmod +x Gopeed-v1.5.7-linux-x86_64.AppImage 
+./Gopeed-v1.5.7-linux-x86_64.AppImage 
+pnpm i
+pnpm dev
+cd Downloads/ytarchive_linux_amd64/
+ls
+chmod +x ytarchive 
+cd ~/Videos/
+ll
+~/Downloads/ytarchive_linux_amd64/ytarchive https://www.youtube.com/watch?v=9PPfGwMZKuk
+ping 1.1.1.1
+sudo reboot
+la
+ls
+ll
+nvim
+exit
+ping 1.1.1.1
+ping 1.1.1.1
+nvim list.txt
+cd
+cd Downloads/
+curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+sudo dnf install librewolf
+ls
+ll
+rpm-ostree install librewolf
+java
+java --version
+nvim
+exit
+ping 1.1.1.1
+ls
+ll
+fastboot -w
+sudo fastboot -w
+fastboot flash boot boot.img 
+sudo fastboot flash boot boot.img 
+adb sideload lineage-20.0-20240208-nightly-taimen-signed.zip 
+adb sideload NikGapps-core-arm64-13-20240420-signed.zip 
+adb sideload NikGapps-Addon-13-DigitalWellbeing-20240420-signed.zip 
+adb sideload NikGapps-Addon-13-GoogleSounds-20240420-signed.zip 
+adb sideload NikGapps-Addon-13-GoogleClock-20240420-signed.zip 
+adb sideload NikGapps-Addon-13-MarkupGoogle-20240420-signed.zip 
+adb sideload Magisk-v27.0\ \(Copy\).zip 
+adb sideload Magisk-v27.0\ \(Copy\).zip 
+adb sideload NikGapps-Addon-13-GoogleMessages-20240420-signed.zip 
+ls
+neofetch 
+fastfetch 
+nvim

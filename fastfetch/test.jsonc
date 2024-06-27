@@ -17,11 +17,6 @@
         "break",
         "packages",
         "shell",
-        "cpu",
-        {
-            "type": "gpu",
-            "key": "GPU"
-        },
         "memory",
         "break",
         "colors"

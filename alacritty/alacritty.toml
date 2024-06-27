@@ -1,4 +1,4 @@
-import = ["/home/ahmed/.config/alacritty/github_dark.toml"]
+import = ["/home/ahmed/.config/alacritty/colors/minimal.toml"]
 live_config_reload = true
 
 [colors]
@@ -9,7 +9,7 @@ style = "Block"
 unfocused_hollow = true
 
 [font]
-size = 14
+size = 15
 
 [font.bold]
 family = "JetBrainsMono NFM"

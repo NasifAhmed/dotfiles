@@ -288,13 +288,15 @@ eval "$(fzf --bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # zellij
-eval "$(zellij setup --generate-auto-start bash)"
+# eval "$(zellij setup --generate-auto-start bash)"
 
 ################################################################################
 ##  Startup Commands                                                          ##
 ################################################################################
 
 #pfetch
+fastfetch -c ~/dotfiles/fastfetch/test.jsonc
+echo -e "\n"
 
 #figlet -f 3d ${HOSTNAME^^} -t | lolcat
 #echo -e "\n"
