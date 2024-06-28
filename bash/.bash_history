@@ -1234,3 +1234,21 @@ ls
 neofetch 
 fastfetch 
 nvim
+sudo pacman -Q git
+pacman -Ss paru
+pacman -Ss yay
+git config --global credential.helper /mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe
+git clone https://github.com/NasifAhmed/dotfiles.git
+cd 
+cp -rv /mnt/c/Users/ahmed/dotfiles .
+rm -rf .bashrc && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+sudo pacman -S fzf ripgrep zoxide zellij
+source .bashrc 
+ll
+ls
+sudo -S neofetch
+sudo pacman-S neofetch
+sudo pacman -S neofetch
+neofetch
+exit
