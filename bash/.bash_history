@@ -1252,3 +1252,254 @@ sudo pacman-S neofetch
 sudo pacman -S neofetch
 neofetch
 exit
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git clone git@github.com:NasifAhmed/dotfiles.git
+fzf
+sudo dnf install neovim zoxide zellij
+sudo dnf install neovim zoxide
+sudo dnf remove fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+mv .bashrc .bashrc.bak && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+source .bashrc
+ll
+sudo dnf remove nodejs
+cd Downloads/
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm 
+exit
+sudo dnf remove nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm 
+exit
+nvm
+nvm install node
+npm i -g pnpm
+man ls
+ln -sv ~/dotfiles/nvim ~/.config/
+nvim
+cd Downloads/
+curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+sudo dnf install librewolf
+git clone https://github.com/hl2guide/better-mpv-config.git
+cd ..
+cd better-mpv-config/
+ll
+mpv '/mnt/collection/main/movies/The.Fall.Guy.2024.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX.mkv' 
+sudo dnf groupupdate 'core' 'multimedia' 'sound-and-video' --setopt='install_weak_deps=False' --exclude='PackageKit-gstreamer-plugin' --allowerasing && sync
+sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing -y
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg -y
+sudo dnf group upgrade --with-optional Multimedia
+sudo dnf install ffmpeg ffmpeg-libs libva libva-utils
+sudo dnf update
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf groupupdate core
+sudo dnf swap 'ffmpeg-free' 'ffmpeg' --allowerasing
+sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg
+sudo dnf install lame\* --exclude=lame-devel
+ls
+sudo cp -rv Roboto /usr/share/fonts/
+fc-cache -fv
+nvim
+sudo dnf install lame\* --exclude=lame-devel
+ls
+sudo dnf group upgrade --with-optional Multimedia
+sudo dnf install ffmpeg ffmpeg-libs libva libva-utils
+dot
+cd nvim/
+cd ..
+cd mpv/
+ll
+nvim mpv.conf 
+rm -rf ~/.config/mpv
+cd
+ln -sv ~/dotfiles/mpv ~/.config/
+mpv '/mnt/collection/main/movies/The.Fall.Guy.2024.1080p.AMZN.WEB-DL.DDP5.1.Atmos.H.264-FLUX.mkv' 
+mpv '/mnt/collection/main/movies/Blade.Runner.2049.2017.1080p.BluRay.x265-RARBG/Blade.Runner.2049.2017.1080p.BluRay.x265-RARBG.mp4' 
+code .bashrc
+free -h
+sudo dnf update
+qbittorrent -h
+ll
+nvim ~/.config/alacritty/
+exit
+ll
+nvim ~/.bashrc 
+cd Downloads/zellij-x86_64-unknown-linux-musl/
+ll
+chmod +x zellij 
+sudo cp zellij /usr/local/bin/
+exi
+exit
+nvim ~/.bashrc 
+exit
+ln -sv /mnt/hdd/home/documents .
+rm documents
+ln -sv /mnt/hdd/home/documents ./Documents
+ll
+sudo rsync -rv ~/Downloads/ /mnt/hdd/home/downloads/
+rm -rf Downloads
+ln -sv /mnt/hdd/home/downloads ./Downloads
+sudo rsync -rv /home/ahmed/Pictures/ /mnt/hdd/home/photos/
+rm -rf Pictures
+ln -sv /mnt/hdd/home/photos ./Pictures
+sudo rsync -rv /home/ahmed/Videos/ /mnt/hdd/home/videos/
+rm -rf Videos/
+ln -sv /mnt/hdd/home/videos ./Videos
+ll
+rm -rf /mnt/hdd/home/documents
+sudo rm -rf /mnt/hdd/home/documents
+sudo dnf install android-tools-1:34.0.4-14.fc40.x86_64 
+ll
+sudo rsync -rv ./Documents/ /mnt/hdd/home/documents/
+rm -rf Documents 
+ll
+nvim .config/mpv/mpv.conf 
+cd /home/ahmed/Desktop/FLASH
+adb reboot bootloader
+fastboot oem unlock
+sudo fastboot oem unlock
+sudo fastboot flashing unlock
+sudo fastboot erase avb_custom_key
+sudo fastboot flash avb_custom_key avb_pkmd-device.bin
+ls
+sudo fastboot flash avb_custom_key avb_pkmd-taimen.bin
+sudo fastboot erase avb_custom_key
+sudo fastboot flash avb_custom_key avb_pkmd-taimen.bin
+sudo fastboot reboot bootloader
+sudo fastboot update divested-20.0-20240615-dos-taimen-fastboot.zip 
+sudo fastboot reboot recovery
+sudo fastboot flashing unlock
+sudo fastboot reboot bootloader
+sudo fastboot erase avb_custom_key
+sudo fastboot flash avb_custom_key avb_pkmd-taimen.bin
+sudo fastboot reboot bootloader
+sudo fastboot update divested-20.0-20240615-dos-taimen-fastboot.zip
+adb sideload divested-20.0-20240615-dos-taimen.zip
+adb reboot bootloader
+sudo fastboot flashing get_unlock_ability
+sudo fastboot flashing lock
+adb reboot recovery
+adb sideload Magisk-v27.0.zip 
+sudo fastboot flashing unlock
+adb reboot recovery
+adb kill-server
+adb reboot recovery
+adb sideload Magisk-v27.0.zip 
+cd divested-20.0-20240615-dos-taimen/
+../payload-dumper-go_1.2.2_linux_amd64/payload-dumper-go payload.bin 
+adb reboot bootloader
+sudo fastboot flash boot ../magisk_patched-27000_vBOHJ.img 
+fastboot flash vbmeta --disable-verity --disable-verification ./extracted_20240630_020529/vbmeta.img 
+sudo fastboot flash vbmeta --disable-verity --disable-verification ./extracted_20240630_020529/vbmeta.img 
+cd Desktop/FLASH/
+ll
+adb reboot bootloader
+sudo fastboot flashing unlock
+sudo fastboot erase avb_custom_key
+sudo fastboot flash avb_custom_key avb_pkmd-taimen.bin
+sudo fastboot update divested-20.0-20240615-dos-taimen-fastboot.zip
+sudo fastboot -w
+sudo fastboot erase avb_custom_key
+sudo fastboot flash avb_custom_key avb_pkmd-taimen.bin
+sudo fastboot reboot bootloader
+sudo fastboot update divested-20.0-20240615-dos-taimen-fastboot.zip
+adb sideload divested-20.0-20240615-dos-taimen.zip
+sudo fastboot oem lock
+sudo fastboot flashing lock
+adb devices
+adb kill-server
+adb devices
+cd taimen-rp1a.201005.004.a1-factory-2f5c4987/
+ll
+cd taimen-rp1a.201005.004.a1/
+ll
+./flash-all.sh 
+sudo ./flash-all.sh 
+sudo fastboot flashing unlock
+sudo ./flash-all.sh 
+fastboot flash bootloader bootloader-taimen-tmz30m.img
+sudo fastboot flash bootloader bootloader-taimen-tmz30m.img
+sudo fastboot reboot-bootloader
+sudo fastboot flash radio radio-taimen-g8998-00034-2006052136.img
+sudo fastboot reboot-bootloader
+sudo fastboot -w update image-taimen-rp1a.201005.004.a1.zip
+sudo ./flash-all.sh 
+adb kill-server
+lsusb
+sudo nvim /etc/udev/rules.d/51-android.rules
+sudo chmod a+r /etc/udev/rules.d/51-android.rules
+sudo systemctl restart udev
+dnf search udev
+rm /etc/udev/rules.d/51-android.rules 
+sudo rm /etc/udev/rules.d/51-android.rules 
+sudo udevadm control --reload
+sudo ln -s /usr/share/doc/android-tools/51-android.rules /etc/udev/rules.d/
+sudo udevadm control --reload
+fastboot devices
+sudo fastboot devices
+sudo groupadd plugdev
+sudo usermod -aG plugdev $USER
+sudo dnf install -y android-tools
+sudo ln -s /usr/share/doc/android-tools/51-android.rules /etc/udev/rules.d
+sudo nvim /etc/udev/rules.d/51-android.rules
+lsusb
+sudo nvim /etc/udev/rules.d/51-android.rules
+sudo chmod a+r /etc/udev/rules.d/51-android.rules
+sudo udevadm control --reload
+fastboot -l devices
+sudo usermod -aG plugdev ahmed
+fastboot -l devices
+sudo systemctl restart udev
+fastboot -l devices
+cd ..
+ll
+cd ..
+cd lineage/
+fastboot devices
+fastboot flash boot boot.img 
+adb -d sideload lineage-21.0-20240627-nightly-taimen-signed.zip 
+adb -d sideload MindTheGapps-14.0.0-arm64-20240612_135921.zip 
+adb -d sideload ../Magisk-v27.0.zip 
+fastboot -w
+fastboot flash boot A13/boot.img 
+fastboot -w
+fastboot flash boot A13/boot.img 
+adb -d sideload A13/lineage-20.0-20240208-nightly-taimen-signed.zip 
+adb -d sideload A13/MindTheGapps-13.0.0-arm64-20231025_200931.zip 
+adb -d sideload ../Magisk-v27.0.zip 
+sudo dnf install qemu -y
+egrep '^flags.*(vmx|svm)' /proc/cpuinfo 
+sudo dnf install @virtualization
+sudo dnf group install --with-optional virtualization
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+lsmod | grep kvm
+sudo usermod -a -G libvirt $(whoami)
+sudo chown -R ahmed:ahmed /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso 
+free -h
+cd Videos/
+/mnt/hdd/home/downloads/ytarchive_linux_amd64/ytarchive https://www.youtube.com/watch?v=mhTnYEUmYbk
+cd Downloads/
+ll
+chown -R ahmed:ahmed torrents/
+sudo chown -R ahmed:ahmed torrents/
+dnf search win
+dnf search windows
+dnf search woeusb
+sudo dnf install woeusb
+sudo dnf install WoeUSB
+woeusb 
+lsblk
+woesb --device /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso /dev/sdd
+sudo woeusb --device /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso /dev/sdd
+lsblk
+sudo woeusb --device /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso /dev/sdd
+woeusb --device /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso /dev/sdd
+sudo woeusb --device /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso /dev/sdd
+lxblk
+lsblk
+sudo woeusb --device /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso /dev/sdd
+dot
