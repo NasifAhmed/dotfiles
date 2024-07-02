@@ -1503,3 +1503,19 @@ lxblk
 lsblk
 sudo woeusb --device /mnt/collection/BCKUP/Win11\ 23H2\ English\ x64v2/Win11_23H2_English_x64v2.iso /dev/sdd
 dot
+sudo pacman zoxide fzf lazygit
+sudo pacman -S zoxide fzf lazygit
+git push
+git clone https://github.com/NasifAhmed/dotfiles.git
+nvim .bashrc 
+rm -rf .bashrc && ln -sv ~/dotfiles/bash/.bashrc .
+rm -rf .bash_history && ln -sv ~/dotfiles/bash/.bash_history .
+source .bashrc 
+ls
+cat .bash_history | wc -l
+cat .bash_history | fzf
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+cd ~
+ls -alh
+dot
+git status
