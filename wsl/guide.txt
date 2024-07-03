@@ -1,0 +1,1 @@
+Paste the .wslconfig file in user home directory

@@ -1519,3 +1519,16 @@ cd ~
 ls -alh
 dot
 git status
+ls -alh
+git status
+history 
+dot
+git add .
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global user.name "Nasif Ahmed"
+git commit -m "update"
+git push
+ls
+ll
+exit
+lsblk
