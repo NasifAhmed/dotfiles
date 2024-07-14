@@ -295,8 +295,8 @@ eval "$(fzf --bash)"
 ################################################################################
 
 #pfetch
-fastfetch -c ~/dotfiles/fastfetch/test.jsonc
-echo -e "\n"
+# fastfetch -c ~/dotfiles/fastfetch/test.jsonc
+# echo -e "\n"
 
 #figlet -f 3d ${HOSTNAME^^} -t | lolcat
 #echo -e "\n"
