@@ -1005,3 +1005,207 @@ nvim "Correction - 9. MAT215 ｜ See description for correction ｜ Complex or C
 free -h
 mpv "http://172.16.50.12/DHAKA-FLIX-12/TV-WEB-Series/TV%20Series%20%E2%99%A6%20%20S%20%20%E2%80%94%20%20Z/True%20Detective%20%28TV%20Series%202014%E2%80%932019%29%201080p%20%5BDual%20Audio%5D/Season%201/True%20Detective%20S01E01%20%201080p%20BluRay%20x265%20HEVC%20MSubs%20%5BDual%20Audio%5D%5BHindi%202.0%2BEnglish%205.1%5D%20-MsMod.mkv"
 mpv http://fs.ebox.live/TV-Series/English/True%20Detective/Season%201/True%20Detective.S01E01__720p.WEBrip__E-BOX.mkv
+ssh -T git@github.com
+git status
+git log
+cp ~/.config/nvim/init.lua .
+rm -rf dotfiles
+git clone git@github.com:NasifAhmed/dotfiles.git
+cp init.lua ./dotfiles/nvim/
+edit
+cd .config/nvim/
+cd ..
+ls
+ll
+dot
+git add .
+git commit -m "update"
+git push
+jump
+ls
+nvim linkedlist.go 
+ls
+powershell
+powershell.exe
+exit
+powershell.exe
+exit
+cd ~
+cd dev/
+nvim -u NONE
+ls
+ll
+nvim array.go 
+cd ~/dev/
+ls
+go run array.go 
+powershell.exe
+exit
+nvim .wezterm.lua 
+exit
+nvim
+exit
+nvim
+exit
+ls
+nvim
+ls
+nvim 
+exit
+powershell.exe
+nvim .wezterm.lua 
+nvim 
+sudo pacman -Syyu
+edit
+nvim
+cd ~
+cd dev/
+nvim array.go 
+nvim .
+nvim slicesExcercise.go
+nvim wordCount.go
+fastfetch 
+ls
+exit
+nvim
+nvim
+jump
+ls
+edit
+nvim 
+nvim /mnt/c/Users/ahmed/.wezterm.lua 
+o
+go run array.go 
+go run wordCount.go 
+exit
+cd dev/
+ls
+ll
+cp defer.go array.go
+nvim array.go 
+edit
+cd ~
+cd go/bin/
+./tour 
+cd ~/dev/
+go run array.go 
+exit
+cd dev/
+cp defer.go array.go
+nvim array.go 
+cd ~
+cd go/bin/
+./tour 
+cd ~/dev/
+go run array.go 
+fastfetch 
+ll
+edit
+source ~/.bashrc 
+ls
+./tour 
+cd ~/dev/
+go run array.go 
+source ~/.bashrc 
+ls
+ll
+edit
+nvim
+nvim .wezterm.lua 
+nvim 
+powershell.exe
+nvim .wezterm.lua 
+nvim 
+nvim .
+nvim slicesExcercise.go
+nvim wordCount.go
+jump
+nvim 
+o
+go run array.go 
+go run wordCount.go 
+cp defer.go array.go
+cd go/bin/
+./tour 
+cd ~/dev/
+go run array.go 
+sudo pacman -Syu
+sudo pacman -Su
+sudo pacman -Sy
+sudo pacman -S pacman-mirrors
+sudo pacman -S reflector
+sudo reflector --country Bangladesh --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --country Bangladesh --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --country Bangladesh,India,Singapore --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+nvim /etc/pacman.d/mirrorlist
+sudo pacman -Syyu
+wezterm -h
+wezterm.exe ls-fonts
+wezterm.exe -h
+wezterm.exe imgcat
+cd `
+nvim /mnt/c/Users/ahmed/.wezterm.lua 
+source ~/.bashrc 
+fast
+fastfetch 
+dot
+edit
+nvim
+cd ..
+l
+cd /mnt/c/Users/ahmed/
+ll
+cd ~
+cd dev/
+ls
+nvim array.go 
+exit
+edit
+nvim
+cd ~/go/bin/
+./tour&
+jump
+ls
+go run array.go 
+eixt
+exit
+nvim
+cd ~
+cd test/
+pip
+sudo pacman -Ss python-pi
+sudo pacman -Ss python-pip
+sudo pacman -S python-pop
+sudo pacman -S python-pip
+pip install openai
+pacman -S python-openai
+sudo pacman -S python-openai
+python openapitest.py 
+python openapitest.py > output.txt
+python openapitest.py >> output.txt
+python openapitest2.py >> output2.txt
+exit
+go run array.go 
+source ~/.bashrc 
+ll
+edit
+nvim
+sudo pacman -S python
+cd ~
+mkdir test
+cd test/
+nvim openapitest.py
+cat output.txt \
+nvim output.txt 
+> output.txt 
+cat output.txt 
+ls
+cp openapitest.py openapitest2.py
+nvim openapitest2.py 
+exit
+jump
+ls
+nvim openapitest2.py 
+nvim output2.txt 
+python openapitest.py >> output.txt 
+exit
