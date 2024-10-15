@@ -615,9 +615,9 @@ require("lazy").setup({
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- clangd = {},
-				-- gopls = {},
-				-- pyright = {},
+				clangd = {},
+				gopls = {},
+				pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
@@ -625,7 +625,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
-				-- ts_ls = {},
+				ts_ls = {},
 				--
 
 				lua_ls = {
@@ -823,6 +823,25 @@ require("lazy").setup({
 		end,
 	},
 
+	{
+		"nvimdev/dashboard-nvim",
+		event = "VimEnter",
+		opts = function(_, opts)
+			local logo = [[
+        ██████╗ ███████╗██╗   ██╗ █████╗ ███████╗██╗     ██╗███████╗███████╗
+        ██╔══██╗██╔════╝██║   ██║██╔══██╗██╔════╝██║     ██║██╔════╝██╔════╝
+        ██║  ██║█████╗  ██║   ██║███████║███████╗██║     ██║█████╗  █████╗  
+        ██║  ██║██╔══╝  ╚██╗ ██╔╝██╔══██║╚════██║██║     ██║██╔══╝  ██╔══╝  
+        ██████╔╝███████╗ ╚████╔╝ ██║  ██║███████║███████╗██║██║     ███████╗
+        ╚═════╝ ╚══════╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝     ╚══════╝
+                                                                            
+      ]]
+
+			logo = string.rep("\n", 8) .. logo .. "\n\n"
+			-- opts.config.header = vim.split(logo, "\n")
+		end,
+	},
+
 	{ -- You can easily change to a different colorscheme.
 		-- Change the name of the colorscheme plugin below, and then
 		-- change the command in the config to whatever the name of that colorscheme is.
@@ -889,7 +908,30 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+			ensure_installed = {
+				"bash",
+				"c",
+				"diff",
+				"html",
+				"lua",
+				"luadoc",
+				"markdown",
+				"vim",
+				"vimdoc",
+				"cpp",
+				"css",
+				"fish",
+				"gitignore",
+				"go",
+				"graphql",
+				"http",
+				"java",
+				"php",
+				"rust",
+				"scss",
+				"sql",
+				"svelte",
+			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
 			highlight = {

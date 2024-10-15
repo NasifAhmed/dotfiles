@@ -22,16 +22,21 @@ return {
 	color_scheme = "Tokyo Night",
 
 	-- Customize additional settings as needed
-	window_background_opacity = 0.99, -- Slight transparency
+	window_background_opacity = 0.97, -- Slight transparency
+
+	-- tab bar
+	-- tab_bar_at_bottom = true,
+	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
+	tab_and_split_indices_are_zero_based = true,
 
 	-- Cursor style and blinking
 	--- default_cursor_style = 'BlinkingBlock',
 
 	-- Padding around the terminal window
 	window_padding = {
-		left = 5,
-		right = 5,
+		left = 10,
+		right = 10,
 		top = 5,
 		bottom = 0,
 	},

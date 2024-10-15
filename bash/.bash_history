@@ -1209,3 +1209,63 @@ nvim openapitest2.py
 nvim output2.txt 
 python openapitest.py >> output.txt 
 exit
+jump
+nvim openapitest2.py 
+nvim output2.txt 
+python openapitest.py >> output.txt 
+sudo -Syyu
+sudo pacman -Syyu
+sudo pacman -S --needed git base-devel
+mkdir downloads
+cd downloads/
+git clone https://aur.archlinux.org/paru.git
+cd paru/
+makepkg -si
+paru
+fastfetch 
+cd ..
+cd !
+cd ~
+paru -Ss aqua
+paru -Ss aqua | less
+paru -S asciiquarium
+mkdir wezterm
+cd wezterm/
+cp /mnt/c/Users/ahmed/.wezterm.lua .
+ls
+ll
+dot
+git add .
+git commit -m "Misc. updates"
+git push
+paru -Ss "ascii fire" | less
+paru -Ss fire | less
+paru -Ss cmatrix
+paru -S cmatrix
+paru -S btop
+btop
+cmatrix 
+asciiquarium 
+clear
+nvim 
+nvim
+exit
+ls
+exit
+nvim
+exit
+asciiquarium 
+nvim
+exit
+jump
+go run array.go 
+go run array.go  | less
+exit
+exit
+exit
+nvim
+asciiquarium 
+ascii
+jump
+ls
+nvim worexit
