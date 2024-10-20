@@ -97,7 +97,7 @@ fedora_tweaks() {
     sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
     sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
     sudo dnf install -y lame\* --exclude=lame-devel
-    sudo dnf group upgrade -y --with-optional Multimedia
+    # sudo dnf group upgrade -y --with-optional Multimedia
 
     show_message "✅" "Fedora-specific tweaks completed."
 }
@@ -225,6 +225,7 @@ clone_dotfiles() {
 # Use Stow to symlink dotfiles
 setup_dotfiles() {
     local dotfiles_dir="$HOME/dotfiles"
+    local stow_dir="$dotfiles_dir/stow"
     local configs=("bash" "nvim")  # Add more config names as needed
 
     if [ ! -d "$dotfiles_dir" ]; then
@@ -232,7 +233,7 @@ setup_dotfiles() {
         return 1
     fi
 
-    cd "$dotfiles_dir"
+    cd "$stow_dir"
 
     rm -rf "$HOME/.bashrc"
     rm -rf "$HOME/.bash_history"
@@ -258,7 +259,7 @@ setup_dotfiles() {
             stow -v -t "$HOME" "$config"
             show_message "✅" "$config configuration stowed successfully."
         else
-            show_message "⚠️" "$config directory not found in dotfiles. Skipping..."
+            show_message "⚠️" "$config directory not found in dotfiles/stow. Skipping..."
         fi
     done
 
