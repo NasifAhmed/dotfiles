@@ -1490,3 +1490,64 @@ ls
 code .
 nvim
 exit
+fc-cache -fv
+fc-list | grep "Jet"
+ curl -sSL "github.com/NasifAhmed/dotfiles/raw/main/auto.sh" | bash
+yay ssh_askpass
+yay ssh-askpass
+sudo pacman -S ssh-askpass
+yay
+yay -S ssh-askpass
+yay ssh-askpass
+ curl -sSL "github.com/NasifAhmed/dotfiles/raw/main/auto.sh" | bash
+ curl -sSL "github.com/NasifAhmed/dotfiles/raw/main/auto.sh" | bash
+nano auto.sh
+chmod +x auto.sh 
+./auto.sh 
+source ~/.bashrc 
+ls
+yay wezterm
+yay nvidia-inst
+nvidia-inst
+yay -Syu nvidia-470xx-dkms nvidia-470xx-utils nvidia-470xx-settings
+sudo reboot now
+nano /etc/environment 
+sudo nano /etc/environment 
+nvim /run/media/ahmed/HDD/BACKUP/BCKUP/Nvidia 470 driver setup for GT710.md
+yay -S xclip
+sudo nvim /etc/environment 
+sudo reboot
+nvim /run/media/ahmed/HDD/BACKUP/BCKUP/Nvidia 470 driver setup for GT710.md
+cd .config/
+yay -S gnome-backgrounds
+nvim .bashr
+nautilus .
+nvim .wezterm.lua 
+ls
+yay -S fastfetch
+fastfetch 
+xdg-settings set default-terminal wezterm
+xdg-terminal-exec
+whereis wezterm
+gsettings set org.gnome.desktop.default-applications.terminal exec '/usr/bin/wezterm'
+nvim .wezterm.lua 
+exit
+xdg-terminal-exec
+whereis wezterm
+gsettings set org.gnome.desktop.default-applications.terminal exec '/usr/bin/wezterm'
+yay -S luarocks go python
+nvm install node
+npm
+yay clang
+nvim
+nvim .wezterm.lua 
+exit
+nvim .wezterm.lua 
+ls
+ls
+yay -S asciiaquarium
+sudo nvim /etc/systemd/resolved.conf 
+yay
+sudo reboot
+free -h
+fastfetch 
