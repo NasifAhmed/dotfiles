@@ -52,7 +52,7 @@ arch_tweaks() {
     if ! command_exists reflector; then
         sudo pacman -Syyu --noconfirm reflector
     fi
-    sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    # sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
     show_message "✅" "Arch-specific tweaks completed."
 }
@@ -371,4 +371,3 @@ trap 'show_message "❌" "An error occurred. Exiting..."; exit 1' ERR
 
 # Run the main function
 main
-source ~/.bashrc
