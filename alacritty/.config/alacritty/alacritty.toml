@@ -1,0 +1,57 @@
+import = ["/home/ahmed/.config/alacritty/colors/minimal.toml"]
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[font]
+size = 13
+
+[font.bold]
+family = "JetBrainsMono NFM"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono NFM"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono NFM"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono NFM"
+style = "SemiBold"
+
+[font.offset]
+y = 3
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Super|Shift"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 100000
+multiplier = 10
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+decorations = "none"
+dynamic_padding = true
+opacity = 1
+startup_mode = "Maximized"
+
+[window.padding]
+x = 10
+y = 10
