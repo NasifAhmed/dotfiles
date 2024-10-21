@@ -76,6 +76,15 @@ alias jump='cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)'
 alias edit='file=$(find ~ -type d -name node_modules -prune -o -type f | fzf) && [ -n "$file" ] && nvim "$file"'
 alias define='dict $(cat /usr/share/dict/words | fzf) | less'
 alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less -R'
+# This alias searches for file with fzf and plocate and opens in nautilus ( Made with ChatGPT )
+alias esearch='function _esearch() { \
+    local file; \
+    file=$(plocate -i "$1" | fzf); \
+    if [ -n "$file" ]; then \
+        nautilus "$(dirname "$file")"; \
+    fi; \
+}; _esearch'
+
 # For WSL vscode project opening
 alias open='directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"'
 alias win='cd /mnt/c/Users/ahmed/Desktop/'
