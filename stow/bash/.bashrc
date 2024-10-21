@@ -191,6 +191,50 @@ export PATH
 ##  alias                                                                     ##
 ################################################################################
 
+# Function to dynamically detect package manager and search using that with fzf
+fzf-search-packages() {
+    # Detect package manager
+    if command -v apt &> /dev/null; then
+        PM="apt"
+        SEARCH_CMD="apt-cache search"
+        INSTALL_CMD="sudo apt-get install"
+        INFO_CMD="apt-cache show"
+    elif command -v pacman &> /dev/null; then
+        PM="pacman"
+        SEARCH_CMD="pacman -Ss"
+        INSTALL_CMD="sudo pacman -S"
+        INFO_CMD="pacman -Si"
+    elif command -v dnf &> /dev/null; then
+        PM="dnf"
+        SEARCH_CMD="dnf search"
+        INSTALL_CMD="sudo dnf install"
+        INFO_CMD="dnf info"
+    elif command -v zypper &> /dev/null; then
+        PM="zypper"
+        SEARCH_CMD="zypper search"
+        INSTALL_CMD="sudo zypper install"
+        INFO_CMD="zypper info"
+    else
+        echo "No supported package manager found."
+        return 1
+    fi
+
+    read -p "Enter Package Name: " packagename
+    
+    if [[ $PM == "pacman" ]]; then
+        selectedPackage="$($SEARCH_CMD "$packagename" | sed -n 's/^\([^ ]*\) .*/\1/p' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
+    else
+        selectedPackage="$($SEARCH_CMD "$packagename" | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap' | awk '{print $1}')"
+    fi
+
+    if [[ -n "$selectedPackage" ]]; then
+        echo "Installing: $selectedPackage"
+        $INSTALL_CMD $selectedPackage
+    fi
+}
+
+alias pacs='fzf-search-packages'
+
 alias np='nano -w PKGBUILD'
 alias more=less
 alias ll='ls -al --color=auto'
@@ -227,7 +271,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export PAGER="less"
 export MANPAGER="less -R"
-export TERM=xterm-256color
+export TERM=wezterm
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1

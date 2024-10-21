@@ -16,13 +16,13 @@ return {
 	font_size = 13.0,
 
 	-- Use the Catppuccin color scheme
-	-- color_scheme = "Tokyo Night",
+	color_scheme = "Tokyo Night",
 	--
 	-- Sets the window decoration to very minimal
 	window_decorations = "NONE",
 
 	-- Customize additional settings as needed
-	window_background_opacity = 0.98, -- Slight transparency
+	-- window_background_opacity = 0.98, -- Slight transparency
 
 	-- tab bar
 	-- tab_bar_at_bottom = true,
@@ -35,9 +35,9 @@ return {
 
 	-- Padding around the terminal window
 	window_padding = {
-		left = 5,
-		right = 5,
-		top = 5,
-		bottom = 5,
+		left = 10,
+		right = 10,
+		top = 10,
+		bottom = 10,
 	},
 }
