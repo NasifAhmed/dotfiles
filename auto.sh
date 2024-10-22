@@ -231,12 +231,14 @@ verify_package_installation() {
 }
 
 configure_ssh_and_git() {
-    echo -e "${BLUE}Configuring SSH...${NC}"
+    echo -e "${BLUE}Configuring SSH and Git...${NC}"
     
     local ssh_dir="$HOME/.ssh"
     local key_file="$ssh_dir/id_ed25519"
-    local email="nasif2ahmed@gmail.com"
-    local name="Nasif Ahmed"
+
+    # Ask for email and name at the beginning
+    read -p "Enter your name for Git configuration: " name
+    read -p "Enter your email for Git configuration: " email
 
     # Check if SSH key already exists
     if [ -f "$key_file" ]; then
@@ -267,11 +269,8 @@ configure_ssh_and_git() {
         
         # Configure Git
         echo -e "${BLUE}Configuring Git...${NC}"
-        read -p "Enter your name for Git configuration: " git_name
-        read -p "Enter your email for Git configuration: " git_email
-        
-        git config --global user.name "$git_name"
-        git config --global user.email "$git_email"
+        git config --global user.name "$name"
+        git config --global user.email "$email"
         
         echo -e "${GREEN}✅ Git configured successfully.${NC}"
     else
