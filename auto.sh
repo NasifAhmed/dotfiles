@@ -1,17 +1,8 @@
 #!/bin/bash
 
-# Philosophy:
-# 1. Always return to the main menu after each task
-# 2. Show error and possible solution if there's an error
-# 3. Backup original files before making changes and restore if something goes wrong
-# 4. Check if a task is already done and skip if it is
-# 5. Show progress of tasks to the user
-# 6. Ask user to press Enter to return to the main menu
-# 7. Show task completion status (completed, skipped, or failed)
-# 8. The script should have beautiful colors and be easy to read
-# 9. The script code should be well commented and easy to understand
-# 10. The script codes should be divided into sections with clear purposes
-# 11. The functions should be organized and ordered in a logical manner
+# Made by Nasif Ahmed 2024
+# This script is designed to automate the installation of essential packages and configuration of my personal Linux systems.
+# WARNING : The script is heavily opniotaed and personal not for general use
 
 # Color definitions
 RED='\033[0;31m'
@@ -140,9 +131,23 @@ configure_dnf() {
     
     backup_file "/etc/dnf/dnf.conf"
     
+    # Add fastestmirror and max_parallel_downloads to dnf.conf
     if ! grep -q "fastestmirror=True" /etc/dnf/dnf.conf; then
         echo "fastestmirror=True" | sudo tee -a /etc/dnf/dnf.conf || handle_error "Failed to enable fastest mirror" "Check if you have write permissions to /etc/dnf/dnf.conf"
     fi
+    if ! grep -q "max_parallel_downloads=10" /etc/dnf/dnf.conf; then
+        echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf || handle_error "Failed to set max parallel downloads" "Check if you have write permissions to /etc/dnf/dnf.conf"
+    fi
+
+    # Enable RPM Fusion repositories
+    sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm || handle_error "Failed to install RPM Fusion Free" "Check your internet connection and try again"
+    sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm || handle_error "Failed to install RPM Fusion Non-Free" "Check your internet connection and try again"
+
+    # Install multimedia packages
+    sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel || handle_error "Failed to install gstreamer packages" "Check your internet connection and try again"
+    sudo dnf install -y lame\* --exclude=lame-devel || handle_error "Failed to install lame packages" "Check your internet connection and try again"
+
+    echo -e "${GREEN}✅ Fedora package manager configured successfully.${NC}"
 }
 
 update_system() {
