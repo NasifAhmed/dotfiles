@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Made by Nasif Ahmed 2024
 # This script is designed to automate the installation of essential packages and configuration of my personal Linux systems.
@@ -36,7 +36,6 @@ handle_error() {
     echo -e "${RED}❌ Error: $1${NC}"
     echo -e "${YELLOW}Possible solution: $2${NC}"
     read -p "Press Enter to return to the main menu..."
-    start_gui
 }
 
 # Package manager functions
@@ -624,37 +623,39 @@ restart_script() {
 
 # GUI function
 start_gui() {
-    clear
-    echo -e "${GREEN}🚀 Welcome to the Ahmed's Personal Linux Setup Script! 🐧${NC}"
-    echo -e "${BLUE}Please choose an option:${NC}"
-    echo "1. 📦 Install essential packages"
-    echo "2. 🔒 Configure Github with SSH Authintication"
-    echo "3. 📂 Clone dotfiles"
-    echo "4. ⚙️  Setup dotfiles"
-    echo "5. 🖋️  Install fonts"
-    echo "6. 📊 Install nvm"
-    echo "7. 🇧🇩 Install Bangla fonts"
-    echo "8. 🧹 Cleanup downloads"
-    echo "9. 🌟 Do everything"
-    echo "10. 🔄 Clean and Restart Script"
-    echo "11. 🚪 Exit"
-    
-    read -p "Enter your choice (1-11): " choice
-    
-    case $choice in
-        1) install_essential_packages ;;
-        2) configure_ssh_and_git ;;
-        3) clone_dotfiles ;;
-        4) setup_dotfiles ;;
-        5) install_fonts ;;
-        6) install_nvm ;;
-        7) install_bangla_fonts ;;
-        8) cleanup_downloads ;;
-        9) do_everything ;;
-        10) restart_script ;;
-        11) cleanup ;;
-        *) echo -e "${RED}Invalid option. Please try again.${NC}" && start_gui ;;
-    esac
+    while true; do
+        clear
+        echo -e "${GREEN}🚀 Welcome to the Ahmed's Personal Linux Setup Script! 🐧${NC}"
+        echo -e "${BLUE}Please choose an option:${NC}"
+        echo "1. 📦 Install essential packages"
+        echo "2. 🔒 Configure Github with SSH Authentication"
+        echo "3. 📂 Clone dotfiles"
+        echo "4. ⚙️  Setup dotfiles"
+        echo "5. 🖋️  Install fonts"
+        echo "6. 📊 Install nvm"
+        echo "7. 🇧🇩 Install Bangla fonts"
+        echo "8. 🧹 Cleanup downloads"
+        echo "9. 🌟 Do everything"
+        echo "10. 🔄 Clean and Restart Script"
+        echo "11. 🚪 Exit"
+        
+        read -p "Enter your choice (1-11): " choice
+        
+        case $choice in
+            1) install_essential_packages ;;
+            2) configure_ssh_and_git ;;
+            3) clone_dotfiles ;;
+            4) setup_dotfiles ;;
+            5) install_fonts ;;
+            6) install_nvm ;;
+            7) install_bangla_fonts ;;
+            8) cleanup_downloads ;;
+            9) do_everything ;;
+            10) restart_script; return ;;
+            11) cleanup; return ;;
+            *) echo -e "${RED}Invalid option. Please try again.${NC}"; sleep 2 ;;
+        esac
+    done
 }
 
 # Utility function for backing up files
