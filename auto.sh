@@ -625,7 +625,7 @@ restart_script() {
 # GUI function
 start_gui() {
     clear
-    echo -e "${GREEN}🚀 Welcome to the Linux Setup Script! 🐧${NC}"
+    echo -e "${GREEN}🚀 Welcome to the Ahmed's Personal Linux Setup Script! 🐧${NC}"
     echo -e "${BLUE}Please choose an option:${NC}"
     echo "1. 📦 Install essential packages"
     echo "2. 🔒 Configure Github with SSH Authintication"
