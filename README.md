@@ -6,7 +6,7 @@
 
 ## Things each option does : 
 1. Detects package manager tweaks some stuff and then installs these packages `git fzf wget make gcc unzip openssh-clients openssl stow ripgrep fd-find fontconfig tldr fastfetch`
-2. Sets up Github with SSH authintication. Its hardcoded for my email right now. Skip these if you are not me.
+2. Sets up Github with SSH authintication. 
 3. Clones this repo to ~/
 4. Sets up dotfiles for all packages. Uses [GNU/Stow](https://www.gnu.org/software/stow/stow.html) to symlink them. Sets up my personal `bash`, `zsh`, `neovim`, `wezterm` configs.
 5. Installs my needed of fonts. You can choose which font to install.
