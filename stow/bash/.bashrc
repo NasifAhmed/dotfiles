@@ -237,7 +237,7 @@ alias pacs='fzf-search-packages'
 
 alias np='nano -w PKGBUILD'
 alias more=less
-alias ll='ls -al --color=auto'
+alias ll='ls -al'
 alias ls='ls --color=auto'
 
 alias grep='grep --colour=auto'

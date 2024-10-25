@@ -1919,3 +1919,6 @@ nvtop
 sudo nvtop
 yay -S nvidia-utils
 mpv "/mnt/01DAD673C89AC420/movies/Apocalypse.Now.1979.Final.Cut.1080p.BluRay.10.Bit.AAC.5.1.x265-ALiEN.mkv"
+pacs
+bash pacs
+exit

@@ -85,18 +85,67 @@ alias esearch='function _esearch() { \
     fi; \
 }; _esearch'
 
+# Function to dynamically detect package manager and search using that with fzf
+fzf-search-packages() {
+    # Detect package manager
+    if command -v apt &> /dev/null; then
+        PM="apt"
+        SEARCH_CMD="apt-cache search"
+        INSTALL_CMD="sudo apt-get install"
+        INFO_CMD="apt-cache show"
+    elif command -v pacman &> /dev/null; then
+        PM="pacman"
+        SEARCH_CMD="pacman -Ss"
+        INSTALL_CMD="sudo pacman -S"
+        INFO_CMD="pacman -Si"
+    elif command -v dnf &> /dev/null; then
+        PM="dnf"
+        SEARCH_CMD="dnf search"
+        INSTALL_CMD="sudo dnf install"
+        INFO_CMD="dnf info"
+    elif command -v zypper &> /dev/null; then
+        PM="zypper"
+        SEARCH_CMD="zypper search"
+        INSTALL_CMD="sudo zypper install"
+        INFO_CMD="zypper info"
+    else
+        echo "No supported package manager found."
+        return 1
+    fi
+
+    # Prompt the user for input (compatible with zsh)
+    echo -n "Enter Package Name: "
+    read packagename
+    
+    if [[ $PM == "pacman" ]]; then
+        selectedPackage="$($SEARCH_CMD "$packagename" | sed -n 's/^\([^ ]*\) .*/\1/p' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
+    else
+        selectedPackage="$($SEARCH_CMD "$packagename" | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap' | awk '{print $1}')"
+    fi
+
+    # Handle case where no package was selected
+    if [[ -z "$selectedPackage" ]]; then
+        echo "No package selected. Exiting."
+        return 1
+    fi
+
+    echo "Installing: $selectedPackage"
+    $INSTALL_CMD "$selectedPackage"
+}
+
+alias pacs='fzf-search-packages'
 # For WSL vscode project opening
 alias open='directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"'
 alias win='cd /mnt/c/Users/ahmed/Desktop/'
 
 # Color
-export LESS_TERMCAP_mb=$'\e[1;36m'
-export LESS_TERMCAP_md=$'\e[1;36m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;31m'
+# export LESS_TERMCAP_mb=$'\e[1;36m'
+# export LESS_TERMCAP_md=$'\e[1;36m'
+# export LESS_TERMCAP_me=$'\e[0m'
+# export LESS_TERMCAP_se=$'\e[0m'
+# export LESS_TERMCAP_so=$'\e[01;33m'
+# export LESS_TERMCAP_ue=$'\e[0m'
+# export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export PAGER="less"
 export MANPAGER="less -R"
