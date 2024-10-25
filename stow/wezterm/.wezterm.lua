@@ -13,7 +13,7 @@ return {
 
 	-- Set the font
 	font = wezterm.font("JetBrainsMono Nerd Font"),
-	font_size = 13.0,
+	font_size = 15.0,
 
 	-- Use the Catppuccin color scheme
 	-- color_scheme = "Tokyo Night",
