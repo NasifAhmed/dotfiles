@@ -65,8 +65,9 @@ setopt hist_find_no_dups
 # Alias
 alias np='nano -w PKGBUILD'
 alias more=less
-alias ll='ls -al'
-alias ls='ls --color=auto'
+# Use eza or exa(non-arch) as better than ls 
+alias ll='eza -alh --group'
+alias ls='eza --group'
 
 alias grep='grep --colour=auto'
 alias fgrep='fgrep --color=auto'
@@ -84,6 +85,16 @@ alias esearch='function _esearch() { \
         nautilus "$(dirname "$file")"; \
     fi; \
 }; _esearch'
+
+# Quick cd using fzf
+fcd() {
+  cd "$(find -type d | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
+}
+
+# Find and edit using fzf
+fe() {
+  nvim "$(find -type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
+} 
 
 # Function to dynamically detect package manager and search using that with fzf
 fzf-search-packages() {

@@ -16,12 +16,12 @@ package_manager=""
 essential_packages=""
 
 # Package lists
-apt_packages="git fzf wget make gcc unzip openssh-client openssl stow ripgrep fd-find fontconfig tldr fastfetch"
-dnf_packages="git fzf wget make gcc unzip openssh-clients openssl stow ripgrep fd-find fontconfig tldr fastfetch"
-pacman_packages="git fzf wget make gcc unzip openssh openssl stow ripgrep fd fontconfig tldr fastfetch"
+apt_packages="git fzf wget make gcc unzip openssh-client openssl stow ripgrep fd-find fontconfig tldr fastfetch tree neovim"
+dnf_packages="git fzf wget make gcc unzip openssh-clients openssl stow ripgrep fd-find fontconfig tldr fastfetch tree neovim"
+pacman_packages="git fzf wget make gcc unzip openssh openssl stow ripgrep fd fontconfig tldr fastfetch tree neovim"
 
 # Commands to check if packages are installed
-package_commands="git fzf wget make gcc unzip ssh openssl stow rg fd fc-list tldr fastfetch"
+package_commands="git fzf wget make gcc unzip ssh openssl stow rg fd fc-list tldr fastfetch tree neovim"
 
 # Function declarations
 

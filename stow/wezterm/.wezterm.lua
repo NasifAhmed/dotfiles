@@ -11,9 +11,8 @@ return {
 	-- initial_rows = 24,
 	-- initial_cols = 80,
 
-	-- Set the font
-	font = wezterm.font("JetBrainsMono Nerd Font"),
-	font_size = 15.0,
+	-- Set the font font = wezterm.font("JetBrainsMono Nerd Font"),
+	font_size = 13.0,
 
 	-- Use the Catppuccin color scheme
 	-- color_scheme = "Tokyo Night",
@@ -23,7 +22,7 @@ return {
 	window_decorations = "NONE",
 
 	-- Customize additional settings as needed
-	-- window_background_opacity = 0.98, -- Slight transparency
+	window_background_opacity = 0.95, -- Slight transparency
 
 	-- tab bar
 	-- tab_bar_at_bottom = true,
@@ -41,4 +40,5 @@ return {
 		top = 10,
 		bottom = 10,
 	},
+	warn_about_missing_glyphs = false,
 }
