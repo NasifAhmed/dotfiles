@@ -1,48 +1,3 @@
-sudo usermod -aG docker $USER
-docker pull mongo
-sudo docker pull mongo
-mkdir -p ~/db
-docker run -d -p 27017:27017 -v ~/db:/data/db --name mongodb-container mongo
-sudo docker run -d -p 27017:27017 -v ~/db:/data/db --name mongodb-container mongo
-docker ps
-sudo docker ps
-curl localhost:27017
-free -h
-curl mongodb://localhost:27017/yourdbname
-curl mongodb://localhost:27017
-docker exec -it mongodb-container mongo
-sudo docker exec -it mongodb-container mongo
-winget search mongodb
-pnpm install mongoose
-pnpm install dotenv
-node seed.js 
-LS
-npm run dev
-pnpm init . 
-pnpm create . 
-npm init
-pnpm install
-pnpm install express
-pnpm run dev
-ls
-code package.json 
-pnpm install nodemon
-pnpm dev
-jum
-jump
-code .
-asciiquarium 
-ls
-ll
-fast
-fastf`
-fastfetch 
-fast
-fastfetch 
-nvim
-fastfetch 
-nvim
-sudo docker run -d -p 27017:27017 -v ~/db:/data/db --name mongodb-container mongo
 docker ls
 docker ps -a
 docker run mongodb-container
@@ -521,3 +476,111 @@ yay luajit
 yay neovim
 nvim
 zsh
+vi auto.sh
+chmod +x auto.sh 
+./auto.sh 
+yay -S yazi zsh
+yay -S jq p7zip zoxide chafa
+sh -c "$(curl -sL https://nextdns.io/install)"
+nextdns status
+yay -S wezterm
+chsh
+zsh
+yay brave
+yay brave
+free -h
+yay -S timeshift
+sudo systemctl enable --now cronie.service
+yay -S timeshift-autosnap
+sudo pacman -S grub-btrfs
+sudo systemctl edit --full grub-btrfsd
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo systemctl enable --now grub-btrfsd
+yay Jdownloader
+lsblk
+yay -S yazi zsh
+yay -S jq p7zip zoxide chafa
+chsh
+yay brave
+yay brave
+yay -S timeshift
+sudo systemctl enable --now cronie.service
+yay -S timeshift-autosnap
+sudo pacman -S grub-btrfs
+sudo systemctl edit --full grub-btrfsd
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo systemctl enable --now grub-btrfsd
+yay Jdownloader
+lsblk
+yay -S xclip
+sh -c "$(curl -sL https://nextdns.io/install)"
+nextdns status
+which python
+yay -S go luarocks luajit 
+nvm install node
+yay -S gnome-software flatpak
+free -h
+sudo pacman -S zram-generator
+sudo navim /etc/systemd/zram-generator.conf
+systemctl list-unit-files --type=service
+sudo systemctl enable --now zram-generator.service
+sudo systemctl start systemd-zram-setup@ahmed.service
+sudo systemctl enable systemd-zram-setup@ahmed.service
+yay -S zram-generator 
+sudo mkswap /dev/zram0
+sudo nvim /etc/systemd/zram-generator.conf
+sudo systemctl daemon-reload
+sudo systemctl start systemd-zram-setup@zram0.service
+systemctl status systemd-zram-setup@zram0.service
+swapon --show
+zgrep CONFIG_ZSWAP_DEFAULT_ON /proc/config.gz
+sudo nvim /etc/sysctl.d/99-vm-zram-parameters.conf
+zramctl
+sudo nvim /etc/sysctl.d/99-swappiness.conf
+sudo btrfs property set /swap/swapfile compression none
+yay -S gnome-backgrounds-macos gnome-backgrounds
+zsh
+yay -S zsh eza mpv
+yay -S wezterm
+free -h
+sudo systemctl edit --full grub-btrfsd
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo systemctl enable --now grub-btrfsd
+yay Jdownloader
+lsblk
+fc-list | grep "Nirmala"
+qbittorrent-nox 
+sudo systemctl start qbittorrent-nox
+sudo systemctl status nextdns
+nextdns status
+yay -S qbittorrent-nox
+sudo systemctl status qbittorrent-nox
+systemctl list-unit --type=service
+systemctl list-units --type=service
+systemctl list-unit-files --type=service
+sudo systemctl start qbittorrent-nox@.service
+sudo systemctl status qbittorrent-nox@.service
+sudo systemctl start qbittorrent-nox@main.service
+sudo systemctl enable qbittorrent-nox@main.service
+sudo systemctl status qbittorrent-nox@main.service
+sudo systemctl disable qbittorrent-nox@main.service
+sudo systemctl start qbittorrent-nox@ahmed.service
+sudo systemctl status qbittorrent-nox@ahmed.service
+sudo systemctl enable qbittorrent-nox@ahmed.service
+zsh
+nvim .zsh_history 
+zsh
+sudo systemctl enable qbittorrent-nox@ahmed.service
+zsh
+nvim .zsh_history 
+zsh
+systemctl status systemd-zram-setup@zram0.service
+ll /dev
+yay -S zram-generator
+sudo nvim /etc/systemd/zram-generator.conf
+sudo systemctl daemon-reload
+sudo systemctl start systemd-zram-setup@zram0.service
+sudo systemctl enable systemd-zram-setup@zram0.service
+sudo nvim /etc/sysctl.d/99-swappiness.conf
+sudo nvim /etc/sysctl.d/99-vm-zram-parameters.conf
+exit
