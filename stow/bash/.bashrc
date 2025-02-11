@@ -343,10 +343,11 @@ eval "$(fzf --bash)"
 #pfetch
 # fastfetch -c ~/dotfiles/fastfetch/test.jsonc
 # echo -e "\n"
-
 #figlet -f 3d ${HOSTNAME^^} -t | lolcat
-#echo -e "\n"
 #date +%c
+#date +%F
+
+#echo -e "\n"
 #echo -e "\n"
 afetch
 echo -e "\n"

@@ -55,4 +55,5 @@ copy-on-select = clipboard
 window-decoration = none
 font-size = 13
 window-inherit-font-size = false
+background-opacity = 0.98
 

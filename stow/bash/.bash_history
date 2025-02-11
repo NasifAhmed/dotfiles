@@ -761,3 +761,19 @@ stow -t ~/ bash
 rm -rf ~/.bashrc ~/.bash_history
 rm -rf ~/.bashrc ~/.bash_history && stow -t ~/ bash
 yazi
+dot
+history
+lazygit 
+yazi
+afetch 
+nvim .bashrc
+sudo dnf install lolcat figlet
+pacs 
+figlet -h
+nvim .bashrc
+nvim .bashrc
+date +%c
+date +%F
+man date
+nvim .bashrc
+nvim 
