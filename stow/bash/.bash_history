@@ -584,3 +584,169 @@ sudo systemctl enable systemd-zram-setup@zram0.service
 sudo nvim /etc/sysctl.d/99-swappiness.conf
 sudo nvim /etc/sysctl.d/99-vm-zram-parameters.conf
 exit
+nvim .bashrc 
+sudo dnf update
+sudo dnf install yazi
+sudo dnf install zellij
+cd Downloads/
+chmod +x auto.sh 
+./auto.sh 
+mv auto.sh  ~/
+cd ..
+./auto.sh 
+cd ~/dotfiles/
+chmod +x auto.sh 
+./auto.sh 
+cd ..
+source .bashrc
+sudo dnf install exa zoxide
+dnf --version
+ls
+ll
+exa 
+exa -alh
+nvim .bashrc
+clear
+exa -h
+exa --help
+exa --alh
+exa -alh
+exit
+ls
+ll
+nvim .bashrc
+exit
+exit
+exit
+nvim .bashrc
+ll
+cd .config/nvim/
+ls
+nvim init.lua 
+dnf show neovim
+dnf info neovim
+ll
+cd .config/nvim/
+nvim init.lua 
+ls
+clear
+clr
+nvim dotfiles/auto.sh 
+pacs
+cd dotfiles/
+cd ..
+nvim .bashrc
+source .bashrc
+pacs
+pacs ascii
+pacs 
+asciiquarium 
+nvim /etc/environment 
+nvim dotfiles/auto.sh 
+sudo dnf remove wezterm
+nvim dotfiles/auto.sh 
+asciiquarium 
+nvim .bash
+sourece .bashrc
+source .bashrc
+ls
+asciiquarium 
+pacs
+cd Downloads/
+ls
+chmod +x cursor-0.45.11x86_64.AppImage 
+./cursor-0.45.11x86_64.AppImage 
+nvim .config/ghostty/config 
+ls
+fastfetch 
+nvim .config/ghostty/config 
+ghostty +show-config --default --docs
+ghostty +show-config --default --docs | less
+ghostty +show-config --default --docs
+ghostty +show-config --default --docs | less
+ll
+history
+nvim .bashrc
+ghostty +list-themes 
+ls
+fastfetch 
+nvim .config/ghostty/config 
+ls
+lll
+ll
+pacs
+pacs 
+ghostty +show-config --default --docs | less
+history
+nvim .bashrc
+fastfetch 
+lll
+ll
+code .bashrc
+./dotfiles/auto.sh 
+ghostty +list-themes 
+nvim .config/ghostty/config 
+pacs
+free -h
+cd Downloads/
+unzip yazi-x86_64-unknown-linux-gnu.zip 
+cd yazi-x86_64-unknown-linux-gnu/
+chmod +x ya
+chmod +x yazi 
+./yazi 
+ls completions/
+cat completions/yazi.bash 
+ls
+sudo cp yazi ~/.local/bin/
+source ~/.bashrc
+yazi 
+yazi /
+yazi -h
+man yazi
+cheat
+tldr yazi
+pacs
+exit
+yazi
+sudo yazi
+yazi
+zellij 
+ls
+mkdir ~/.config/zellij
+edit
+cd ~/.config/zellij/
+ls
+ll
+nvim config.kdl
+zellij -h
+zellij list-sessions
+zellij -h
+zellij setup
+ghostty -e yazi
+yazi
+asciiquarium 
+fastfetch 
+yazi
+ghostty -h
+ghostty --help
+ghostty +show-face 
+ghostty +show-face --string "hello"
+exit
+fastfetch 
+pac
+pacs
+afetch 
+yazi
+nvim
+pacs 
+sudo dnf update
+sudo dnf install nvtop
+nvtop 
+cd dotfiles/
+cd stow/
+ls
+nvim ../auto.sh 
+stow ghostty/
+stow -t ~/ ghostty
+stow -t ~/ mpv
+stow -t ~/ zellij

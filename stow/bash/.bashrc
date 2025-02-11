@@ -220,9 +220,10 @@ fzf-search-packages() {
     fi
 
     read -p "Enter Package Name: " packagename
-    
     if [[ $PM == "pacman" ]]; then
         selectedPackage="$($SEARCH_CMD "$packagename" | sed -n 's/^\([^ ]*\) .*/\1/p' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
+    elif [[ $PM == "dnf" ]]; then
+        selectedPackage="$($SEARCH_CMD "$packagename" | sed 's/\..*: .*//g' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
     else
         selectedPackage="$($SEARCH_CMD "$packagename" | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap' | awk '{print $1}')"
     fi
@@ -237,8 +238,9 @@ alias pacs='fzf-search-packages'
 
 alias np='nano -w PKGBUILD'
 alias more=less
-alias ll='ls -al'
-alias ls='ls --color=auto'
+alias ll='exa -alh'
+alias ls='exa'
+alias cd='z'
 
 alias grep='grep --colour=auto'
 alias fgrep='fgrep --color=auto'
@@ -271,7 +273,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export PAGER="less"
 export MANPAGER="less -R"
-export TERM=wezterm
+export TERM=ghostty
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -346,7 +348,8 @@ eval "$(fzf --bash)"
 #echo -e "\n"
 #date +%c
 #echo -e "\n"
+afetch
+echo -e "\n"
 
 ### EOF ###
 
-. "/home/ahmed/.deno/env"
