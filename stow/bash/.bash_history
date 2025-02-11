@@ -750,3 +750,14 @@ stow ghostty/
 stow -t ~/ ghostty
 stow -t ~/ mpv
 stow -t ~/ zellij
+yazi
+nvim ~/.config/ghostty/config 
+ls
+nvim .bashrc.bak 
+cd dotfiles/
+cd stow/
+stow ~/ bash
+stow -t ~/ bash
+rm -rf ~/.bashrc ~/.bash_history
+rm -rf ~/.bashrc ~/.bash_history && stow -t ~/ bash
+yazi
