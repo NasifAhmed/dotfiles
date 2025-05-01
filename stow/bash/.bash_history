@@ -777,3 +777,249 @@ date +%F
 man date
 nvim .bashrc
 nvim 
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman -Sy archlinux-keyring
+sudo pacman -Su
+nano
+sudo nano /etc/pacman.d/mirrorlist
+sudo pacman -Su
+sudo pacman -Syyu neovim fzf zoxide exa yazi
+sudo pacman -Syyu jq 7zip ffmpeg fd ripgrep poppler imagemagick chafa
+sudo pacman -S stow
+sudo pacman -S git
+git config --global user.name "Nasif Ahmed"
+git config --global user.email "nasif2ahmed@gmail.com"
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
+git clone www.github.com/NasifAhmed/dotfiles
+git clone https://github.com/NasifAhmed/dotfiles
+cd dotfiles/
+ls
+nvim ~/.bashrc 
+./auto.sh 
+ls
+exit
+ls
+ls
+ls -alh
+dot
+cd dotfiles/
+ls
+./auto.sh 
+exit
+./auto.sh 
+sudo pacman -S --needed git base-devel
+mkdir downloads
+cd do
+cd ~/downloads/
+ls
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg -si
+yay
+yay -S afetch
+yay -S pfetch
+yay -S pfetch-git
+afetch
+pfetch
+cd ..
+nvim .bashr
+cd ~
+nvim .bashrc
+exit
+ls
+clear
+nvim .bashrc
+exit
+ls
+npm install -g neovim
+pacs
+sudo pacman -R wl-copy
+cd yay/
+makepkg -si
+yay
+yay -S afetch
+yay -S pfetch
+yay -S pfetch-git
+afetch
+pfetch
+cd ..
+nvim .bashr
+exit
+clear
+exit
+pacs
+pacs 
+dot
+./auto.sh 
+nvm
+nvm install node
+go --version 
+go version
+cd down
+git clone https://github.com/NasifAhmed/kickstart.nvim.git
+cd kickstart.nvim/
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+cd .config/nvim/
+sudo pacman -S make gcc ripgrep unzip git xclip
+free -h
+sudo pacman -S lazygit
+cd /mnt/c/Users/ahmed/Desktop/
+ls
+sudo apt install wslu
+sudo pacman -S wslu
+yay wslu
+yay wslview
+cd ~
+nvim .bashrc
+source .bashrc
+cd /mnt/d/
+xdg-open
+sudo pacman -S xdg-utils
+nvim
+source ~/.bashrc
+yazi
+pacman -Ss wl
+pacman -Ss wlcopy
+pacman -Ss wl-copy
+pacman -Qs wl-copy
+pacman -Qs wl-clipboard
+sudo pacman -Rcns wl-clipboard
+xclip
+ls
+nvim
+exit
+ls
+ll
+pacs
+asciiquarium 
+exit
+cd /mnt/c/Users/ahmed/Desktop/
+sudo apt install wslu
+sudo pacman -S wslu
+yay wslu
+yay wslview
+nvim .bashrc
+source .bashrc
+xdg-open
+sudo pacman -S xdg-utils
+nvim
+source ~/.bashrc
+pacman -Ss wl
+pacman -Ss wlcopy
+pacman -Ss wl-copy
+pacman -Qs wl-copy
+pacman -Qs wl-clipboard
+sudo pacman -Rcns wl-clipboard
+xclip
+cd hdd
+cd d
+cd /mnt/d/
+in
+win
+exa
+ll'
+cd ~
+cd dotfiles/
+sudo pacman -S wget
+code .
+powershell.exe
+neofetch.exe 
+fastfetch 
+yazi
+yay mediainfo exiftool
+yay exiftool
+cd ~/.config/
+dot
+cd others/
+cd windows/
+cd ..
+sl
+cd stow/
+cd wezterm/
+ls
+ll
+nvim .wezterm.lua 
+asciiquarium 
+pwsh
+pwsh.exe 
+pwsh.exe 
+cd .config/
+ls
+ls
+nvim
+python --version
+ll
+mkdir workspace
+cd workspace/
+ls
+mkdir test
+cd test/
+nvim test.py
+python test.py 
+fastfetch 
+cd test/
+nvim test.py
+python test.py 
+fastfetch 
+ipconfig /flushdns
+sudo systemd-resolve --flush-caches
+sudo service nscd restart
+sudo pacman -Syyu dig
+pacs
+sudo pacman -Syyu dnsutils
+dig @8.8.8.8 reddit.com +short +time=1
+dig @1.1.1.1 reddit.com +short +time=1
+dig +noall +stats @1.1.1.1 google.com
+dig +noall +stats @8.8.8.8\ google.com
+dig +noall +stats @8.8.8.8 google.com
+dig +noall +stats @9.9.9.9 google.com
+dig +noall +stats @9.9.9.9 reddit.com
+dig xvideos.com
+dig reddit.com
+dig +noall +stats @194.242.2.6 reddit.com
+dig +noall +stats @45.90.28.116 reddit.com
+dig +noall +stats @45.90.28.116 archlinux.com
+dig +noall +stats @194.242.2.6 archlinux.com
+dig +noall +stats @194.242.2.6 youtube.com
+dig +noall +stats @45.90.28.116 youtube.com
+dig +noall +stats @45.90.28.116 grok.com
+dig +noall +stats @194.242.2.6 grok.com
+ls
+sudo pacman -Syyu
+dig +noall +stats @194.242.2.6 reddit.com
+dig +noall +stats @45.90.28.116 reddit.com
+dig +noall +stats @45.90.28.116 archlinux.com
+dig +noall +stats @194.242.2.6 archlinux.com
+dig +noall +stats @194.242.2.6 youtube.com
+dig +noall +stats @45.90.28.116 youtube.com
+dig +noall +stats @45.90.28.116 grok.com
+dig +noall +stats @194.242.2.6 grok.com
+sudo pacman -Syyu
+dev/CSE471/bipod-shongket-api/ 
+cd dev/CSE471/bipod-shongket-api/api/ 
+ls -alh
+cd bipod-shongket-
+ls
+cd ..
+rm -rf bipod-shongket-api/
+cd bipod-shongket-api/
+pnpm install
+code .
+pnpm dev
+ls
+tsc
+code .
+pnpm dev
+tsc
+z
+cd shong api
+lazygit
+git status
+git rebase --cancel
+git rebase --quit
+git reset --hard HEAD
+git branch
+git branch -h
+git checkout main
+ls

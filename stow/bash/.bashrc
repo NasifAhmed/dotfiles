@@ -273,7 +273,9 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export PAGER="less"
 export MANPAGER="less -R"
-export TERM=ghostty
+# export TERM=ghostty
+# export BROWSER=wslview
+# export XDG_OPEN=wslview
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -311,12 +313,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # pnpm
-export PNPM_HOME="/home/ahmed/.local/share/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# export PNPM_HOME="/home/ahmed/.local/share/pnpm"
+# case ":$PATH:" in
+# *":$PNPM_HOME:"*) ;;
+# *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 # pnpm end
+
+## fnm
+FNM_PATH="/home/ahmed/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
 
 # Path to DENO installation
 export DENO_INSTALL="/home/ahmed/.deno"
@@ -349,8 +358,9 @@ eval "$(fzf --bash)"
 
 #echo -e "\n"
 #echo -e "\n"
-afetch
+pfetch
 echo -e "\n"
 
 ### EOF ###
+
 
