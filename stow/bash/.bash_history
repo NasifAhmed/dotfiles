@@ -1023,3 +1023,149 @@ git branch
 git branch -h
 git checkout main
 ls
+nautilus .&
+systemctl status packagekit
+sudo nala search gnome-software
+sudo nala install /home/ahmed/Downloads/gcm-linux_amd64.2.6.1.deb
+git clone https://github.com/NasifAhmed/dotfile
+git clone https://github.com/NasifAhmed/dotfiles
+cd dotfiles/
+ls
+./auto.sh 
+ping 1.1.1.1
+source ~/.bashrc
+nvim --version
+sudo nala uninstall neovim fzf
+sudo nala search base-devle
+sudo nala search base-devel
+sudo nala search base
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+cd rm -rf pfetch/
+rm -rf pfetch/
+sudo nala install zoxide
+cd ~/Downloads/
+z
+cd ~/Downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+sudo make install
+pfetch 
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+ls
+ll
+sudo make install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+fzf
+pfetch 
+sudo nala install xclip xsel
+sudo nala install jq 7zip ffmpeg
+fc-cache -fv
+lsblk -f
+sudo nala install zram-tools
+sudo systemctl enable --now zram-config
+zramctl 
+free 0h
+
+sudo zramctl
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo nano /etc/fstab
+free -h
+curl -fsS https://dl.brave.com/install.sh | sh
+sudo apt install curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo nala install brave-browser
+sudo nala search exa
+sudo nala search eza
+sudo nala install eza
+ls
+ll
+ls
+ll
+nvim
+sudo nala search fuse
+nala history
+sudo nala remove fuse
+sudo nala install fuse
+cat /var/log/apt/history.log | grep "Remove"
+sudo nala install tracker:amd64 libgsf-1-114:amd64 libunity-scopes-json-def-desktop:amd64 ntfs-3g:amd64 libexiv2-27:amd64 libgexiv2-2:amd64 xdg-desktop-portal-gtk:amd64 xdg-desktop-portal-gnome:amd64 libtss2-tcti-libtpms0t64:amd64 libostree-1-1:amd64 libgif7:amd64 libdee-1.0-4:amd64 tracker-miner-fs:amd64 gir1.2-gnomedesktop-3.0:amd64 gnome-remote-desktop:amd64 gir1.2-gnomeautoar-0.1:amd64 gvfs-fuse:amd64 libtss2-tcti-spi-helper0t64:amd64 gnome-shell-extension-desktop-icons-ng:amd64 libunity9:amd64 xwayland:amd64 libcue2:amd64 fuse3:amd64 libfreerdp3-3:amd64 libunity-protocol-private0:amd64 libportal1:amd64 libportal-gtk4-1:amd64 libtss2-tctildr0t64:amd64 ubuntu-session:amd64 tracker-extract:amd64 libwinpr3-3:amd64 libfreerdp-server3-3:amd64 ubuntu-desktop-minimal:amd64 libtotem-plparser-common:amd64 libntfs-3g89t64:amd64 nautilus:amd64 libflatpak0:amd64 nautilus-data:amd64 gnome-software-plugin-flatpak:amd64 libtracker-sparql-3.0-0:amd64 flatpak:amd64 libei1:amd64 libtotem-plparser18:amd64 xdg-desktop-portal:amd64 libgsf-1-common:amd64
+sudo update-alternatives --config x-terminal-emulator
+sudo reboot now
+nvim .bashrc
+vim
+nano .bashrc
+cd Do
+ls
+ll
+unzip -h
+chmod +x nvim-linux-x86_64.appimage 
+./nvim-linux-x86_64.appimage 
+./nvim-linux-x86_64.appimage 
+cd Downloads/
+mv nvim-linux-x86_64.appimage nvim
+ls
+sudo mv nvim /usr/bin/
+ls
+sudo mv nvim /usr/bin/
+curl -fsSL https://fnm.vercel.app/install | bash
+source ~/.bashrc
+fnm
+fnm list-remote
+fnm 
+fnm install 22
+fnm use latest
+fnm use default
+fnm ls
+node
+nvim
+sudo nala install openjdk-17-jdk golang-go
+npm install -g pnpm
+pnpm i -g deno vercel
+pnpm setup
+fnm ls
+node
+nvim
+sudo nala install openjdk-17-jdk golang-go
+npm install -g pnpm
+pnpm setup
+nvim .bashrc
+free -h
+source ~/.bashrc
+pnpm i -g deno vercel
+pnpm i -g typescript
+pnpm approve-builds -g
+deno
+sudo reboot now
+nvim .profile 
+mv .profile .profile.bak
+sudo reboot now
+mv .profile .profile.bak
+~/.fzf/install
+nvim .bashrc
+source ~/.bashrc
+mv .profile.bak .profile
+sudo reboot now
+mv .profile .profile.bak
+sudo reboot now
+nvim .bashrc
+code .bashrc
+mkdir dev
+cd dev
+mkdir PH
+cd PH/
+mkdir module1
+cd module1/
+cd ..
+code .
+cd module1/
+deno types.ts 
+htop
+sudo nala install htop
+top

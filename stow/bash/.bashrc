@@ -27,6 +27,7 @@
 #    echo "Tmux is not installed. Please install Tmux to use this script."
 #fi
 
+
 ################################################################################
 ##  Generated from online bashrc generator                                    ##
 ################################################################################
@@ -308,25 +309,6 @@ extract() {
 ##  Webdev Stuff	                                                      ##
 ################################################################################
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-# pnpm
-# export PNPM_HOME="/home/ahmed/.local/share/pnpm"
-# case ":$PATH:" in
-# *":$PNPM_HOME:"*) ;;
-# *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# pnpm end
-
-## fnm
-FNM_PATH="/home/ahmed/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
-
 # Path to DENO installation
 export DENO_INSTALL="/home/ahmed/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -337,10 +319,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # zoxide
 eval "$(zoxide init bash)"
-
-# fzf
-eval "$(fzf --bash)"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # zellij
 # eval "$(zellij setup --generate-auto-start bash)"
@@ -364,3 +342,23 @@ echo -e "\n"
 ### EOF ###
 
 
+
+# fnm
+FNM_PATH="/home/ahmed/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+# pnpm
+export PNPM_HOME="/home/ahmed/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(fzf --bash)"
