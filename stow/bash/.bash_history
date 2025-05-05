@@ -1169,3 +1169,198 @@ deno types.ts
 htop
 sudo nala install htop
 top
+top
+sudo nala install wget unzip openssh-client openssl fontconfig tldr fastfetch tree
+sudo nala install wget unzip openssh-client openssl fontconfig tldr tree
+sudo nala install zoxide eza
+source ~/.bashrc
+cd dot
+dot
+sudo nala install xclip xsel
+sudo nala install curl
+git status
+./auto.sh 
+sudo apt install nala
+sudo nala update 
+sudo nala upgrade
+git
+sudo nala install git
+git clone https://github.com/NasifAhmed/dotfiles
+cd dotfiles/
+./auto.sh 
+nvim auto.sh 
+snap install vim
+snap install neovim
+./auto.sh 
+sudo nala install stow
+./auto.sh 
+wget
+cd ../Downloads/
+wget https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.appimage
+ls
+chmod +x nvim-linux-x86_64.appimage 
+./nvim-linux-x86_64.appimage 
+sudo mv nvim-linux-x86_64.appimage /usr/bin/nvim
+cd ..
+mv .profile .profile.bak
+cd Downloads/
+git clone https://github.com/dylanaraps/pfetch.git
+cd pfetch/
+sudo make install
+sudo nala install base-devel
+sudo nala install base
+sudo nala install make
+sudo make install
+cd ~
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+source .bashrc
+sudo nala install ripgrep fd-find gcc golang-go python jq
+sudo nala install ripgrep fd-find gcc golang-go jq
+sudo nala search openjdk
+sudo nala search openjdk-11
+sudo nala search openjdk-17-jdk
+sudo nala install openjdk-17-jdk
+nvim dotfiles/auto.sh 
+git status
+curl -fsS https://dl.brave.com/install.sh | sh
+apt install ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
+sudo nala  install ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
+sudo snap install yazi --classic
+yazi
+pacs 
+pas
+pacs
+sudo nala install gnome-softare gnome-software-plugin-flatpak gnome-software-plugin-snap
+sudo nala install gnome-software gnome-software-plugin-flatpak gnome-software-plugin-snap
+sudo nala isntall gparted
+sudo nala install gparted
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo nala install plocate
+sudo updatedb
+which fstrim
+systemctl status fs.trimmer
+sudo hdparm -I /dev/sdX | grep TRIM
+sudo service status fstrim.timer
+sudo systemctl status fstrim.timer
+cat /sys/module/zswap/parameters/enabled
+sudo nala zram-tools
+sudo nala install zram-tools
+free -h
+lsblk | grep zram
+swapon --show
+sudo reboot now
+nvim .bashrc
+sudo nala zram-tools
+sudo nala install zram-tools
+free -h
+lsblk | grep zram
+swapon --show
+sudo reboot now
+nvim .bashrc
+sudo nala install zsh
+ll
+dot
+fzf
+git config --global user.name "Nasif Ahmed"
+git config --global user.email "nasif2ahmed@gmail.com"
+cd Down
+cd Downloads/
+git clone https://github.com/saltedcoffii/gnome-backgrounds-macos.git
+sudo nala install meson ninja
+sudo nala install meson ninja-build
+cd gnome-backgrounds-macos/
+./download-backgrounds.sh
+git submodule init
+git submodule update
+./download-backgrounds.sh 
+meson setup build
+ninja -C build
+ls
+ls build/
+cd build/
+ninja
+edit
+cd ..
+code .
+sudo apt install meson ninja-build curl bash
+cd /home/ahmed/Downloads/gnome-backgrounds-macos && ninja -C build
+cd /home/ahmed/Downloads/gnome-backgrounds-macos && sudo DESTDIR='/' ninja -C build install
+mv .profile.bak .profile
+sudo reboot now
+~/.fzf/install 
+fc-cache 
+fc-cache -fv
+cd ..
+cd -
+dot
+code .
+free -h
+lsblk | grep zram
+swapon --show
+sudo reboot now
+cd ghost
+nvim config 
+jump
+cd ..
+ls
+rm -rf ./*
+ll
+git-credential-manager configure
+cd ~
+source .bashrc
+nvim .bashrc
+free -h
+lsblk | grep zram
+swapon --show
+sudo reboot now
+nvim .bashrc
+source .bashrc
+.config/
+cd .config/
+cd ghostty
+ls
+ll
+nvim config 
+exit
+ghostty +list-keybinds --default
+ls
+exit
+zsh
+pacs
+chsh
+which zsh
+edit
+ghostty +list-keybinds --default
+edit
+fzf
+edit
+zsh
+ghostty +list-keybinds 
+nvim .bashrc
+fzf -h
+fzf
+nvim .bashrc
+~/.fzf/install 
+source ~/.bashrc
+fzf --version
+sudo nala uninstall fzf
+rm -rf .fzf
+nvim .bashrc
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+~/.fzf/install 
+nvim .bashrc
+source ~/.bashrc
+zsh
+which zsh
+ls
+nvim .bashrc
+ll
+.fzf -h
+ls fzf
+cd .fzf/
+ls
+./uninstall 
+fzf

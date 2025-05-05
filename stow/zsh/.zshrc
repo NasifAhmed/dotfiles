@@ -1,9 +1,11 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Shell integration
+#
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
+pfetch
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -199,3 +201,11 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # eval "$(starship init zsh)"
 
 # fastfetch -c ~/dotfiles/fastfetch/test.jsonc
+
+
+# fnm
+FNM_PATH="/home/ahmed/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/ahmed/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
