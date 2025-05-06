@@ -65,12 +65,10 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Alias
-alias np='nano -w PKGBUILD'
 alias more=less
-# Use eza or exa(non-arch) as better than ls 
-alias ll='eza -alh --group'
-alias ls='eza --group'
-
+alias ll='exa -alh'
+alias ls='exa'
+alias cd='z'
 alias grep='grep --colour=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -90,12 +88,12 @@ alias esearch='function _esearch() { \
 
 # Quick cd using fzf
 fcd() {
-  cd "$(find -type d | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
+  cd "$(find ~ -type d -name node_modules -prune -o -type d | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
 }
 
 # Find and edit using fzf
 fe() {
-  nvim "$(find -type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
+  nvim "$(find ~ -type d -name node_modules -prune -o -type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
 } 
 
 # Function to dynamically detect package manager and search using that with fzf
@@ -126,24 +124,19 @@ fzf-search-packages() {
         return 1
     fi
 
-    # Prompt the user for input (compatible with zsh)
-    echo -n "Enter Package Name: "
-    read packagename
-    
+    read -p "Enter Package Name: " packagename
     if [[ $PM == "pacman" ]]; then
         selectedPackage="$($SEARCH_CMD "$packagename" | sed -n 's/^\([^ ]*\) .*/\1/p' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
+    elif [[ $PM == "dnf" ]]; then
+        selectedPackage="$($SEARCH_CMD "$packagename" | sed 's/\..*: .*//g' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
     else
         selectedPackage="$($SEARCH_CMD "$packagename" | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap' | awk '{print $1}')"
     fi
 
-    # Handle case where no package was selected
-    if [[ -z "$selectedPackage" ]]; then
-        echo "No package selected. Exiting."
-        return 1
+    if [[ -n "$selectedPackage" ]]; then
+        echo "Installing: $selectedPackage"
+        $INSTALL_CMD $selectedPackage
     fi
-
-    echo "Installing: $selectedPackage"
-    $INSTALL_CMD "$selectedPackage"
 }
 
 alias pacs='fzf-search-packages'
@@ -163,26 +156,6 @@ alias win='cd /mnt/c/Users/ahmed/Desktop/'
 export PAGER="less"
 export MANPAGER="less -R"
 
-#
-# Web deb stuff
-#
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-# pnpm
-export PNPM_HOME="/home/ahmed/.local/share/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# Path to DENO installation
-export DENO_INSTALL="/home/ahmed/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
-
 # User PATH setup
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
@@ -197,11 +170,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-# For starship prompt
-# eval "$(starship init zsh)"
-
 # fastfetch -c ~/dotfiles/fastfetch/test.jsonc
-
 
 # fnm
 FNM_PATH="/home/ahmed/.local/share/fnm"
