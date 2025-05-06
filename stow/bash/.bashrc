@@ -223,6 +223,37 @@ fzf-search-packages() {
     fi
 }
 
+# Enhanced fuzzy file finding
+fe() {
+    local file
+    file=$(find ~ -type d \( -name "node_modules" -o -name ".git" -o -name ".next" -o -name "dist" -o -name "build" -o -name ".cache" -o -name ".vscode" -o -name "__pycache__" -o -name "venv" -o -name ".idea" \) -prune -o -type f -print 2>/dev/null |
+           fzf --height=80% --layout=reverse --border --preview 'bat --style=numbers --color=always {} 2>/dev/null || cat {}' \
+               --preview-window=right:60%:wrap --header="Select file to edit")
+    
+    if [[ -n "$file" ]]; then
+        ${EDITOR:-nvim} "$file"
+    fi
+}
+
+# Enhanced directory navigation
+fcd() {
+    local dir
+    dir=$(find ~ -type d \( -name "node_modules" -o -name ".git" -o -name ".next" -o -name "dist" -o -name "build" -o -name ".cache" -o -name ".vscode" -o -name "__pycache__" -o -name "venv" -o -name ".idea" \) -prune -o -type d -print 2>/dev/null | 
+          fzf --height=80% --layout=reverse --border --preview 'ls -la --color=always {}' \
+              --preview-window=right:60%:wrap --header="Navigate to directory")
+    
+    if [[ -n "$dir" ]]; then
+        cd "$dir" || return 1
+        # Show directory content after changing
+        ls
+    fi
+}
+
+# Weather function
+weather() {
+  curl -s "wttr.in/${1:-}" | head -n 27
+}
+
 ################################################################################
 ##  Aliases                                                                   ##
 ################################################################################
@@ -237,8 +268,6 @@ alias ll='exa -alh'
 alias ls='exa'
 alias cd='z'
 alias dot='cd ~/dotfiles && git status'
-alias jump='cd $(find ~ -type d -name node_modules -prune -o -type d | fzf)'
-alias edit='file=$(find ~ -type d -name node_modules -prune -o -type f | fzf) && [ -n "$file" ] && nvim "$file"'
 alias win='cd /mnt/c/Users/ahmed/Desktop/'
 
 # Search and grep
@@ -250,11 +279,22 @@ alias egrep='egrep --color=auto'
 alias define='dict $(cat /usr/share/dict/words | fzf) | less'
 alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less -R'
 
+# File operations with confirmation
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
 # For WSL vscode project opening
 alias open='directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"'
 
 # Notifications
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Better directory listing with tree (if available)
+if command -v tree &> /dev/null; then
+  alias lt='tree -L 2 --dirsfirst'
+  alias ltt='tree -L 3 --dirsfirst'
+fi
 
 ################################################################################
 ##  External Tools & Completions                                              ##
