@@ -1364,3 +1364,17 @@ cd .fzf/
 ls
 ./uninstall 
 fzf
+pacs
+nvim ~/.bashrc
+pacs
+copq -h
+copq help
+copyq help
+cat .zshrc | copyq
+cat .zshrc | copyq insert
+cat .zshrc | copyq copy
+cat .zshrc | copyq copy -
+echo "Some text" | copyq copy -
+ls
+weather 
+fcd
