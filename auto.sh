@@ -128,7 +128,7 @@ handle_error() {
     read -r
 
     # If exit code is non-zero, return that value (but don't exit)
-    return "$exit_code"
+    return $exit_code
 }
 
 # Backup a file before modifying it
