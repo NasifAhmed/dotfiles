@@ -171,6 +171,36 @@ fe() {
     fi
 }
 
+# Fuzzy finding and opening VS Code workspaces/projects
+fvs() {
+    local workspace_file="$HOME/.config/Code/User/globalStorage/storage.json"
+    local selected_workspace
+
+    if [[ ! -f "$workspace_file" ]]; then
+        echo "VS Code storage file not found: $workspace_file"
+        return 1
+    fi
+
+    # Extract workspace URIs from the storage file
+    # This extracts both from backupWorkspaces.folders and profileAssociations.workspaces
+    selected_workspace=$(cat "$workspace_file" | grep -o '"file:///[^"]*"' | tr -d '"' | sed 's/file:\/\///' | sort -u |
+                         fzf --height=80% --layout=reverse --border --preview 'ls -la --color=always {} 2>/dev/null || echo "Directory not found"' \
+                             --preview-window=right:60%:wrap --header="Select VS Code workspace to open")
+
+    if [[ -n "$selected_workspace" ]]; then
+        # Check if the directory exists
+        if [[ -d "$selected_workspace" ]]; then
+            echo "Opening VS Code in: $selected_workspace"
+            code "$selected_workspace"
+        else
+            echo "Directory does not exist: $selected_workspace"
+            return 1
+        fi
+    else
+        echo "No workspace selected."
+    fi
+}
+
 # Dynamic package manager detection and fuzzy package search
 fzf-search-packages() {
     local pm search_cmd install_cmd info_cmd package_query selected_pkgs
