@@ -137,26 +137,136 @@ install_build_deps() {
   log_success "Build dependencies installed"
 }
 
-# Function to setup Paru AUR helper on Arch
-setup_paru() {
-  if ! check_cmd paru; then
-    log "Setting up Paru AUR helper..."
-    # Install base-devel if not already installed
-    $INSTALL_CMD base-devel git
+# Function to install Neovim from source
+install_neovim_from_source() {
+  log "Installing Neovim from source..."
 
-    # Clone and build paru
-    cd "$TEMP_DIR" || exit
-    git clone https://aur.archlinux.org/paru.git
-    cd paru || exit
-    makepkg -si --noconfirm
+  # Check if already installed first
+  if [ -f "$HOME/.local/bin/nvim" ] || [ -f "/usr/local/bin/nvim" ]; then
+    log_skip "Neovim is already installed"
+    return 0
+  fi
 
-    if check_cmd paru; then
-      log_success "Paru installed successfully"
-    else
-      log_error "Failed to install Paru"
-    fi
+  # Install dependencies
+  case $PKG_MANAGER in
+  apt)
+    $INSTALL_CMD ninja-build gettext cmake unzip curl libtool-bin libtool autoconf automake pkg-config
+    ;;
+  dnf)
+    $INSTALL_CMD ninja-build gettext cmake unzip curl libtool autoconf automake pkg-config
+    ;;
+  esac
+
+  cd "$TEMP_DIR" || {
+    log_error "Failed to change to temp directory for Neovim installation"
+    return 1
+  }
+
+  log "Cloning Neovim repository..."
+  if ! git clone https://github.com/neovim/neovim; then
+    log_error "Failed to clone Neovim repository - Check your internet connection and try again manually"
+    return 1
+  fi
+
+  cd neovim || {
+    log_error "Failed to change to Neovim directory"
+    return 1
+  }
+
+  if ! git checkout stable; then
+    log_error "Failed to checkout stable branch for Neovim"
+    return 1
+  fi
+
+  log "Building Neovim (this may take a while)..."
+  if ! make CMAKE_BUILD_TYPE=Release; then
+    log_error "Failed to build Neovim - Try manually with: cd $TEMP_DIR/neovim && make CMAKE_BUILD_TYPE=Release"
+    return 1
+  fi
+
+  log "Installing Neovim..."
+  if ! sudo make install; then
+    log_error "Failed to install Neovim - Try manually with: cd $TEMP_DIR/neovim && sudo make install"
+    return 1
+  fi
+
+  if check_cmd nvim; then
+    log_success "Neovim installed successfully"
+    return 0
   else
-    log_success "Paru already installed"
+    log_error "Neovim installation verification failed - Check if it's in your PATH"
+    return 1
+  fi
+}
+
+# Function to install fzf from source
+install_fzf_from_source() {
+  log "Installing fzf from source..."
+
+  if [ -d "$HOME/.fzf" ] || check_cmd fzf; then
+    log_skip "fzf is already installed"
+    return 0
+  fi
+
+  if ! git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"; then
+    log_error "Failed to clone fzf repository - Check your internet connection"
+    return 1
+  fi
+
+  if ! "$HOME/.fzf/install" --all --no-bash --no-fish; then
+    log_error "Failed to install fzf - Try manually with: $HOME/.fzf/install --all"
+    return 1
+  fi
+
+  if check_cmd fzf || [ -f "$HOME/.fzf/bin/fzf" ]; then
+    log_success "fzf installed successfully"
+    return 0
+  else
+    log_error "fzf installation verification failed"
+    return 1
+  fi
+}
+
+# Function to install pfetch from source
+install_pfetch_from_source() {
+  log "Installing pfetch from source..."
+
+  if [ -f "$HOME/.local/bin/pfetch" ] || check_cmd pfetch; then
+    log_skip "pfetch is already installed"
+    return 0
+  fi
+
+  cd "$TEMP_DIR" || {
+    log_error "Failed to change to temp directory for pfetch installation"
+    return 1
+  }
+
+  log "Cloning pfetch repository..."
+  if ! git clone https://github.com/dylanaraps/pfetch.git; then
+    log_error "Failed to clone pfetch repository - Check your internet connection"
+    return 1
+  fi
+
+  cd pfetch || {
+    log_error "Failed to change to pfetch directory"
+    return 1
+  }
+
+  # Create local bin directory if it doesn't exist
+  mkdir -p "$HOME/.local/bin"
+
+  log "Installing pfetch..."
+  if ! sudo make install; then
+    log_error "Failed to install pfetch - Install failed"
+    return 1
+  fi
+
+  if check_cmd pfetch; then
+    log_success "pfetch installed successfully"
+    return 0
+  else
+    log_error "pfetch installation verification failed - Check if ~/.local/bin is in your PATH"
+    return 1
   fi
 }
 
@@ -260,7 +370,6 @@ elif check_cmd pacman; then
     "fd:fd"
     "fontconfig:fontconfig"
     "tldr:tldr"
-    "fastfetch:fastfetch"
     "tree:tree"
     "neovim:neovim"
     "fzf:fzf"
@@ -357,154 +466,25 @@ log "Installing packages from source..."
 
 # Install Neovim from source if needed and not already installed
 if ! check_cmd nvim && [ "$PKG_MANAGER" != "pacman" ]; then
-  log "Installing Neovim from source..."
-
-  # Check if already installed first
-  if [ -f "$HOME/.local/bin/nvim" ] || [ -f "/usr/local/bin/nvim" ]; then
-    log_skip "Neovim is already installed"
-  else
-    # Install dependencies
-    case $PKG_MANAGER in
-    apt)
-      $INSTALL_CMD ninja-build gettext cmake unzip curl libtool-bin libtool autoconf automake pkg-config
-      ;;
-    dnf)
-      $INSTALL_CMD ninja-build gettext cmake unzip curl libtool autoconf automake pkg-config
-      ;;
-    esac
-
-    cd "$TEMP_DIR" || {
-      log_error "Failed to change to temp directory for Neovim installation"
-      return 1
-    }
-
-    log "Cloning Neovim repository..."
-    if ! git clone https://github.com/neovim/neovim; then
-      log_error "Failed to clone Neovim repository - Check your internet connection and try again manually"
-      return 1
-    fi
-
-    cd neovim || {
-      log_error "Failed to change to Neovim directory"
-      return 1
-    }
-
-    git checkout stable
-
-    log "Building Neovim (this may take a while)..."
-    if ! make CMAKE_BUILD_TYPE=Release; then
-      log_error "Failed to build Neovim - Try manually with: cd $TEMP_DIR/neovim && make CMAKE_BUILD_TYPE=Release"
-      return 1
-    fi
-
-    log "Installing Neovim..."
-    if ! sudo make install; then
-      log_error "Failed to install Neovim - Try manually with: cd $TEMP_DIR/neovim && sudo make install"
-      return 1
-    fi
-
-    if check_cmd nvim; then
-      log_success "Neovim installed successfully"
-    else
-      log_error "Neovim installation verification failed - Check if it's in your PATH"
-    fi
+  install_neovim_from_source
+  if [ $? -ne 0 ]; then
+    log_error "Neovim installation failed. Continuing with other installations."
   fi
 fi
 
 # Install fzf from source if needed and not already installed
 if ! check_cmd fzf && [ "$PKG_MANAGER" != "pacman" ]; then
-  log "Installing fzf from source..."
-
-  if [ -d "$HOME/.fzf" ] || check_cmd fzf; then
-    log_skip "fzf is already installed"
-  else
-    if ! git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"; then
-      log_error "Failed to clone fzf repository - Check your internet connection"
-      return 1
-    fi
-
-    if ! "$HOME/.fzf/install" --all --no-bash --no-fish; then
-      log_error "Failed to install fzf - Try manually with: $HOME/.fzf/install --all"
-      return 1
-    fi
-
-    if check_cmd fzf || [ -f "$HOME/.fzf/bin/fzf" ]; then
-      log_success "fzf installed successfully"
-    else
-      log_error "fzf installation verification failed"
-    fi
+  install_fzf_from_source
+  if [ $? -ne 0 ]; then
+    log_error "fzf installation failed. Continuing with other installations."
   fi
 fi
 
-# Install fastfetch from source if needed and not already installed
-if ! check_cmd fastfetch && [ "$PKG_MANAGER" != "pacman" ]; then
-  log "Installing fastfetch from source..."
-
-  if [ -f "$HOME/.local/bin/fastfetch" ] || [ -f "/usr/local/bin/fastfetch" ] || check_cmd fastfetch; then
-    log_skip "fastfetch is already installed"
-  else
-    # Install dependencies
-    case $PKG_MANAGER in
-    apt)
-      if ! $INSTALL_CMD cmake pkg-config libpci-dev libvulkan-dev libwayland-dev libxrandr-dev libxcb-randr0-dev libdconf-dev; then
-        log_error "Failed to install fastfetch dependencies - Some features may not work"
-      fi
-      # Additional optional dependencies
-      $INSTALL_CMD libdrm-dev libxcb-dri3-dev libglib2.0-dev libbsd-dev || log_warning "Some optional fastfetch dependencies couldn't be installed"
-      ;;
-    dnf)
-      if ! $INSTALL_CMD cmake pkgconf-pkg-config pciutils-devel vulkan-headers wayland-devel libXrandr-devel libxcb-devel dconf-devel; then
-        log_error "Failed to install fastfetch dependencies - Some features may not work"
-      fi
-      # Additional optional dependencies
-      $INSTALL_CMD libdrm-devel libxcb-dri3-devel glib2-devel libbsd-devel || log_warning "Some optional fastfetch dependencies couldn't be installed"
-      ;;
-    esac
-
-    cd "$TEMP_DIR" || {
-      log_error "Failed to change to temp directory for fastfetch installation"
-      return 1
-    }
-
-    log "Cloning fastfetch repository..."
-    if ! git clone https://github.com/fastfetch-cli/fastfetch.git; then
-      log_error "Failed to clone fastfetch repository - Check your internet connection"
-      return 1
-    fi
-
-    cd fastfetch || {
-      log_error "Failed to change to fastfetch directory"
-      return 1
-    }
-
-    log "Building fastfetch..."
-    mkdir -p build
-    cd build || {
-      log_error "Failed to create or change to build directory for fastfetch"
-      return 1
-    }
-
-    if ! cmake ..; then
-      log_error "Failed to configure fastfetch - Check that cmake is installed"
-      return 1
-    fi
-
-    log "Installing fastfetch..."
-    if ! cmake --build . --target fastfetch --target flashfetch; then
-      log_error "Failed to build fastfetch - Try manually with: cd $TEMP_DIR/fastfetch/build && cmake --build . --target fastfetch"
-      return 1
-    fi
-
-    if ! sudo cmake --install .; then
-      log_error "Failed to install fastfetch - Try manually with: cd $TEMP_DIR/fastfetch/build && sudo cmake --install ."
-      return 1
-    fi
-
-    if check_cmd fastfetch; then
-      log_success "fastfetch installed successfully"
-    else
-      log_error "fastfetch installation verification failed - Check if it's in your PATH"
-    fi
+# Install pfetch from source if needed and not already installed
+if ! check_cmd pfetch; then
+  install_pfetch_from_source
+  if [ $? -ne 0 ]; then
+    log_error "pfetch installation failed. Continuing with other installations."
   fi
 fi
 
