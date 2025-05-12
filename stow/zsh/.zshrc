@@ -19,7 +19,8 @@ if command -v pfetch &> /dev/null; then
 fi
 
 # ===== ZINIT SETUP =====
-# Based on: https://youtu.be/ud7YxC33Z3w
+# Based on: https://youtu.be/ud7YxC33Z3w/tmux
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -73,6 +74,25 @@ bindkey '^n' history-search-forward
 # ===== ENVIRONMENT VARIABLES =====
 export PAGER="less"
 
+# ===== TMUX CONFIGURATION =====
+# Function to attach to the persistent main session or create it if it doesn't exist
+tmux-main() {
+    if command -v tmux &> /dev/null; then
+        if tmux has-session -t main 2>/dev/null; then
+            # Session exists, attach to it
+            tmux attach-session -t main
+        else
+            # Session doesn't exist, create it
+            tmux new-session -s main
+        fi
+    else
+        echo "tmux is not installed"
+    fi
+}
+
+# Simple alias to quickly access the main session
+alias tm='tmux-main'
+
 # ===== COLORED MAN PAGES =====
 # Color scheme for man pages
 man() {
@@ -119,11 +139,18 @@ alias grep='grep --colour=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# Tmux shortcuts
+alias t='tmux'
+alias ta='tmux attach'
+alias tls='tmux list-sessions'
+alias tn='tmux new-session'
+# tm is already defined above to connect to the persistent main session
+
 # Project shortcuts
 alias dot='cd ~/dotfiles && git status'  # Quick access to dotfiles
 
 # Dictionary and cheatsheet functions
-alias define='dict $(cat /usr/share/dict/words | fzf) | less'
+alias define='dict $(cat /usr/share/dict/words | fzf) | less -R'
 alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less -R'
 
 # Package management
