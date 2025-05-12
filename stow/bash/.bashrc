@@ -1,379 +1,128 @@
-#===============================================================================
-#
-#		 ██████       ██      ████████ ██      ██
-#		░█░░░░██     ████    ██░░░░░░ ░██     ░██
-#		░█   ░██    ██░░██  ░██       ░██     ░██
-#		░██████    ██  ░░██ ░█████████░██████████
-#		░█░░░░ ██ ██████████░░░░░░░░██░██░░░░░░██
-#		░█    ░██░██░░░░░░██       ░██░██     ░██
-#		░███████ ░██     ░██ ████████ ░██     ░██
-#		░░░░░░░  ░░      ░░ ░░░░░░░░  ░░      ░░
-#===============================================================================
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-################################################################################
-##  Shell Options                                                             ##
-################################################################################
-
-# Don't put duplicate lines in the history and do not add lines that start with a space
-export HISTCONTROL=erasedups:ignoredups:ignorespace
-
-# Unlimited history
-HISTSIZE=
-HISTFILESIZE=
-
-# Causes bash to append to history instead of overwriting it
-shopt -s histappend
-PROMPT_COMMAND='history -a'
-
-# Check the window size after each command and update LINES and COLUMNS
-shopt -s checkwinsize
-
-# Show auto-completion list automatically, without double tab
-if [[ ${BASH_VERSINFO[0]} -gt 4 ]] || [[ ${BASH_VERSINFO[0]} -eq 4 && ${BASH_VERSINFO[1]} -ge 3 ]]; then
-    bind "set show-all-if-ambiguous On"
-fi
-
-################################################################################
-##  Environment Variables                                                     ##
-################################################################################
-
-# Set the default editor
-export EDITOR=nvim
-export VISUAL=nvim
-
-# Path settings
-# Add user's private bin directories to PATH if not already there
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
-
-# Terminal coloring
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-export CLICOLOR=1
-
-# Less pager colors
-export LESS_TERMCAP_mb=$'\e[1;36m'
-export LESS_TERMCAP_md=$'\e[1;36m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[01;33m'
-export LESS_TERMCAP_ue=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[1;4;31m'
-
-# Pager settings
-export PAGER="less"
-export MANPAGER="less -R"
-
-################################################################################
-##  Prompt                                                                    ##
-################################################################################
-
-# Git parsing functions for prompt
-function parse_git_branch() {
-	BRANCH=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-	if [ ! "${BRANCH}" == "" ]; then
-		STAT=$(parse_git_dirty)
-		echo "[${BRANCH}${STAT}] "
-	else
-		echo ""
-	fi
-}
-
-function parse_git_dirty {
-	status=$(git status 2>&1 | tee)
-	dirty=$(
-		echo -n "${status}" 2>/dev/null | grep "modified:" &>/dev/null
-		echo "$?"
-	)
-	untracked=$(
-		echo -n "${status}" 2>/dev/null | grep "Untracked files" &>/dev/null
-		echo "$?"
-	)
-	ahead=$(
-		echo -n "${status}" 2>/dev/null | grep "Your branch is ahead of" &>/dev/null
-		echo "$?"
-	)
-	newfile=$(
-		echo -n "${status}" 2>/dev/null | grep "new file:" &>/dev/null
-		echo "$?"
-	)
-	renamed=$(
-		echo -n "${status}" 2>/dev/null | grep "renamed:" &>/dev/null
-		echo "$?"
-	)
-	deleted=$(
-		echo -n "${status}" 2>/dev/null | grep "deleted:" &>/dev/null
-		echo "$?"
-	)
-	bits=''
-	if [ "${renamed}" == "0" ]; then
-		bits=">${bits}"
-	fi
-	if [ "${ahead}" == "0" ]; then
-		bits="*${bits}"
-	fi
-	if [ "${newfile}" == "0" ]; then
-		bits="+${bits}"
-	fi
-	if [ "${untracked}" == "0" ]; then
-		bits="?${bits}"
-	fi
-	if [ "${deleted}" == "0" ]; then
-		bits="x${bits}"
-	fi
-	if [ "${dirty}" == "0" ]; then
-		bits="!${bits}"
-	fi
-	if [ ! "${bits}" == "" ]; then
-		echo " ${bits}"
-	else
-		echo ""
-	fi
-}
-
-# Enable color prompt
-force_color_prompt=yes
-color_prompt=yes
-
-# Set prompt
-export PS1="[\[\e[33m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\]] \w \[\e[33m\]\`parse_git_branch\`\[\e[m\]\n\[\e[32m\]❱❱❱\[\e[m\] "
-
-# Change the window title of X terminals
-case ${TERM} in
-	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-		;;
-	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-		;;
+case $- in
+    *i*) ;;
+      *) return;;
 esac
 
-################################################################################
-##  Helper Functions                                                          ##
-################################################################################
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
-# Extracts any archive(s)
-extract() {
-	for archive in "$@"; do
-		if [ -f "$archive" ]; then
-			case $archive in
-			*.tar.bz2) tar xvjf $archive ;;
-			*.tar.gz) tar xvzf $archive ;;
-			*.bz2) bunzip2 $archive ;;
-			*.rar) rar x $archive ;;
-			*.gz) gunzip $archive ;;
-			*.tar) tar xvf $archive ;;
-			*.tbz2) tar xvjf $archive ;;
-			*.tgz) tar xvzf $archive ;;
-			*.zip) unzip $archive ;;
-			*.Z) uncompress $archive ;;
-			*.7z) 7z x $archive ;;
-			*) echo "don't know how to extract '$archive'..." ;;
-			esac
-		else
-			echo "'$archive' is not a valid file!"
-		fi
-	done
-}
+# append to the history file, don't overwrite it
+shopt -s histappend
 
-# Function to dynamically detect package manager and search using that with fzf
-fzf-search-packages() {
-    # Detect package manager
-    if command -v apt &> /dev/null; then
-        PM="apt"
-        SEARCH_CMD="apt-cache search"
-        INSTALL_CMD="sudo apt-get install"
-        INFO_CMD="apt-cache show"
-    elif command -v pacman &> /dev/null; then
-        PM="pacman"
-        SEARCH_CMD="pacman -Ss"
-        INSTALL_CMD="sudo pacman -S"
-        INFO_CMD="pacman -Si"
-    elif command -v dnf &> /dev/null; then
-        PM="dnf"
-        SEARCH_CMD="dnf search"
-        INSTALL_CMD="sudo dnf install"
-        INFO_CMD="dnf info"
-    elif command -v zypper &> /dev/null; then
-        PM="zypper"
-        SEARCH_CMD="zypper search"
-        INSTALL_CMD="sudo zypper install"
-        INFO_CMD="zypper info"
-    else
-        echo "No supported package manager found."
-        return 1
-    fi
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
 
-    read -p "Enter Package Name: " packagename
-    if [[ $PM == "pacman" ]]; then
-        selectedPackage="$($SEARCH_CMD "$packagename" | sed -n 's/^\([^ ]*\) .*/\1/p' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
-    elif [[ $PM == "dnf" ]]; then
-        selectedPackage="$($SEARCH_CMD "$packagename" | sed 's/\..*: .*//g' | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap')"
-    else
-        selectedPackage="$($SEARCH_CMD "$packagename" | fzf -m --bind=ctrl-z:ignore,alt-j:preview-down,alt-k:preview-up --preview "$INFO_CMD {1}" --preview-window='right:wrap' | awk '{print $1}')"
-    fi
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 
-    if [[ -n "$selectedPackage" ]]; then
-        echo "Installing: $selectedPackage"
-        $INSTALL_CMD $selectedPackage
-    fi
-}
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
 
-# Enhanced fuzzy file finding
-fe() {
-    local file
-    file=$(find ~ -type d \( -name "node_modules" -o -name ".git" -o -name ".next" -o -name "dist" -o -name "build" -o -name ".cache" -o -name ".vscode" -o -name "__pycache__" -o -name "venv" -o -name ".idea" \) -prune -o -type f -print 2>/dev/null |
-           fzf --height=80% --layout=reverse --border --preview 'bat --style=numbers --color=always {} 2>/dev/null || cat {}' \
-               --preview-window=right:60%:wrap --header="Select file to edit")
-    
-    if [[ -n "$file" ]]; then
-        ${EDITOR:-nvim} "$file"
-    fi
-}
-
-# Enhanced directory navigation
-fcd() {
-    local dir
-    dir=$(find ~ -type d \( -name "node_modules" -o -name ".git" -o -name ".next" -o -name "dist" -o -name "build" -o -name ".cache" -o -name ".vscode" -o -name "__pycache__" -o -name "venv" -o -name ".idea" \) -prune -o -type d -print 2>/dev/null | 
-          fzf --height=80% --layout=reverse --border --preview 'ls -la --color=always {}' \
-              --preview-window=right:60%:wrap --header="Navigate to directory")
-    
-    if [[ -n "$dir" ]]; then
-        cd "$dir" || return 1
-        # Show directory content after changing
-        ls
-    fi
-}
-
-# Weather function
-weather() {
-  curl -s "wttr.in/${1:-}" | head -n 27
-}
-
-################################################################################
-##  Aliases                                                                   ##
-################################################################################
-
-# Package management
-alias pacs='fzf-search-packages'
-alias np='nano -w PKGBUILD'
-
-# File listing and navigation
-alias more=less
-alias ll='exa -alh'
-alias ls='exa'
-alias cd='z'
-alias dot='cd ~/dotfiles && git status'
-alias win='cd /mnt/c/Users/ahmed/Desktop/'
-
-# Search and grep
-alias grep='grep --colour=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# Reference and utilities
-alias define='dict $(cat /usr/share/dict/words | fzf) | less'
-alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less -R'
-
-# File operations with confirmation
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-# For WSL vscode project opening
-alias open='directory=$(find ~/code/ -maxdepth 3 -type d -name node_modules -prune -o -type d | fzf) && [ -n "$directory" ] && code "$directory"'
-
-# Notifications
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Better directory listing with tree (if available)
-if command -v tree &> /dev/null; then
-  alias lt='tree -L 2 --dirsfirst'
-  alias ltt='tree -L 3 --dirsfirst'
-fi
-
-################################################################################
-##  External Tools & Completions                                              ##
-################################################################################
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
-# Enable programmable completion features
-if ! shopt -oq posix; then
-    if [ -f /usr/share/bash-completion/bash_completion ]; then
-        . /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
-        . /etc/bash_completion
-    fi
-fi
-
-# Make less more friendly for non-text input files
+# make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# zoxide
-if command -v zoxide &> /dev/null; then
-    eval "$(zoxide init bash)"
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
 
-################################################################################
-##  Development Environment                                                   ##
-################################################################################
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
 
-# Path to DENO installation
-export DENO_INSTALL="$HOME/.deno"
-if [ -d "$DENO_INSTALL" ]; then
-    export PATH="$DENO_INSTALL/bin:$PATH"
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
 fi
 
-# fnm - Fast Node Manager
-FNM_PATH="$HOME/.local/share/fnm"
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+export PATH="$HOME/.local/bin:$PATH"
+
+# fnm
+FNM_PATH="/home/ahmed/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-    export PATH="$FNM_PATH:$PATH"
-    eval "$(fnm env)"
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
 fi
 
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-if [ -d "$PNPM_HOME" ]; then
-    case ":$PATH:" in
-        *":$PNPM_HOME:"*) ;;
-        *) export PATH="$PNPM_HOME:$PATH" ;;
-    esac
-fi
-
-################################################################################
-##  Optional Startup Features                                                 ##
-################################################################################
-
-# Uncomment to start tmux automatically
-# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-#     tmux new -As default
-# fi
-
-# Uncomment to start zellij automatically
-# if command -v zellij &> /dev/null; then
-#     eval "$(zellij setup --generate-auto-start bash)"
-# fi
-
-################################################################################
-##  Startup Commands                                                          ##
-################################################################################
-
-# Display system information on startup
-if command -v pfetch &> /dev/null; then
-    pfetch
-    echo -e "\n"
-fi
-
-# EOF
-
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
