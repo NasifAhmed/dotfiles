@@ -172,7 +172,7 @@ fe() {
 }
 
 # Fuzzy finding and opening VS Code workspaces/projects
-fvs() {
+fcode() {
     local workspace_file="$HOME/.config/Code/User/globalStorage/storage.json"
     local selected_workspace
 
@@ -208,9 +208,14 @@ fzf-search-packages() {
     # Detect package manager
     if command -v apt &> /dev/null; then
         pm="apt"
+        # Use nala for all operations if available, fall back to apt/apt-cache
         search_cmd="apt-cache search"
-        install_cmd="sudo apt install"
         info_cmd="apt-cache show"
+        if command -v nala &> /dev/null; then
+            install_cmd="sudo nala install"
+        else
+            install_cmd="sudo apt install"
+        fi
     elif command -v pacman &> /dev/null; then
         pm="pacman"
         search_cmd="pacman -Ss"
