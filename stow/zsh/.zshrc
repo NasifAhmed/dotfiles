@@ -65,7 +65,8 @@ setopt hist_ignore_dups   # Don't record if same as previous command
 setopt hist_find_no_dups  # Don't display duplicates when searching
 
 # ===== KEYBINDINGS =====
-bindkey -e # Sets emacs mode keybindings
+# bindkey -e # Sets emacs mode keybindings
+bindkey -v # Sets emacs mode keybindings
 # Ctrl+p and Ctrl+n to search history (like Up/Down arrows)
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
@@ -73,6 +74,8 @@ bindkey '^n' history-search-forward
 
 # ===== ENVIRONMENT VARIABLES =====
 export PAGER="less"
+# Setup neovim as manpage pager
+export MANPAGER="nvim -c 'Man!' -"
 
 # ===== TMUX CONFIGURATION =====
 # Function to attach to the persistent main session or create it if it doesn't exist
@@ -92,21 +95,6 @@ tmux-main() {
 
 # Simple alias to quickly access the main session
 alias tm='tmux-main'
-
-# ===== COLORED MAN PAGES =====
-# Color scheme for man pages
-man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
-
-# Use colored pager for man
-export MANPAGER="less -R"
 
 # ===== PATH CONFIGURATION =====
 # User specific environment
@@ -150,7 +138,7 @@ alias tn='tmux new-session'
 alias dot='cd ~/dotfiles && git status'  # Quick access to dotfiles
 
 # Dictionary and cheatsheet functions
-alias define='dict $(cat /usr/share/dict/words | fzf) | less -R'
+alias define='dict $(cat /usr/share/dict/words | fzf)'
 alias cheat='curl -s cheat.sh/$(curl -s cheat.sh/:list | fzf) | less -R'
 
 # Package management
