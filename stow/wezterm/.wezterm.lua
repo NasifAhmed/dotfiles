@@ -15,7 +15,7 @@ return {
 	font_size = 13.0,
 
 	-- Use the Catppuccin color scheme
-	-- color_scheme = "Tokyo Night",
+	color_scheme = "Tokyo Night",
 	-- color_scheme = "OneDark (base16)",
 	--
 	-- Sets the window decoration to very minimal

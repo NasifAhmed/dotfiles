@@ -8,16 +8,6 @@
 # Ahmed's Zshrc - Last updated: May 6, 2025
 # =========================================
 
-# ===== SHELL INTEGRATION =====
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
-
-# Display system info on terminal start if available
-if command -v pfetch &> /dev/null; then
-  pfetch
-fi
-
 # ===== ZINIT SETUP =====
 # Based on: https://youtu.be/ud7YxC33Z3w/tmux
 
@@ -66,7 +56,7 @@ setopt hist_find_no_dups  # Don't display duplicates when searching
 
 # ===== KEYBINDINGS =====
 # bindkey -e # Sets emacs mode keybindings
-bindkey -v # Sets emacs mode keybindings
+# bindkey -v # Sets vim mode keybindings
 # Ctrl+p and Ctrl+n to search history (like Up/Down arrows)
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
@@ -101,14 +91,18 @@ alias tm='tmux-main'
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-export PATH
+if ! [[ "$PATH" =~ "/sbin" ]]; then
+    PATH="/sbin:$PATH"
+fi
 
-# ===== NODE VERSION MANAGER (FNM) =====
+# ===== Fast Node Manager (FNM) =====
 FNM_PATH="/home/ahmed/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="/home/ahmed/.local/share/fnm:$PATH"
-  eval "`fnm env`"
+  eval "$(fnm env)"
 fi
+
+export PATH
 
 # ===== ALIASES =====
 # File navigation and listing
@@ -347,6 +341,26 @@ if command -v xargs &> /dev/null && command -v curl &> /dev/null; then
       jq -r '.[0].meanings[] | "- " + .partOfSpeech + ": " + .definitions[0].definition'
     fi
   }
+fi
+
+# yazi integration
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# ===== SHELL INTEGRATION =====
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+
+# Display system info on terminal start if available
+if command -v pfetch &> /dev/null; then
+  pfetch
 fi
 
 # ===== THEME CONFIGURATION =====
