@@ -43,10 +43,7 @@ What is Kickstart?
 
 Kickstart Guide:
 
-  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
-
-    If you don't know what this means, type the following:
-      - <escape key>
+  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim. If you don't know what this means, type the following: - <escape key>
       - :
       - Tutor
       - <enter key>
@@ -840,6 +837,25 @@ require("lazy").setup({
 			logo = string.rep("\n", 8) .. logo .. "\n\n"
 			-- opts.config.header = vim.split(logo, "\n")
 		end,
+	},
+	-- Vim tmux navigator for consistent pane switching
+	{
+		"christoomey/vim-tmux-navigator",
+		cmd = {
+			"TmuxNavigateLeft",
+			"TmuxNavigateDown",
+			"TmuxNavigateUp",
+			"TmuxNavigateRight",
+			"TmuxNavigatePrevious",
+			"TmuxNavigatorProcessList",
+		},
+		keys = {
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+		},
 	},
 
 	{ -- You can easily change to a different colorscheme.
