@@ -1,4 +1,4 @@
 stow/spaceship_prompt
-stow/mpv/watch_later
-stow/nvim/lazy-lock.json
+stow/mpv/.config/mpv/watch_later
+stow/nvim/.conf/nvim/lazy-lock.json
 *:Zone.Identifier
