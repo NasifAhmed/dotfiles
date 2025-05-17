@@ -572,13 +572,13 @@ if ! check_cmd exa && ! check_cmd eza && ! command -v exa &>/dev/null && ! comma
     if check_cmd eza || [ -f "$HOME/.cargo/bin/eza" ] || check_cmd exa || [ -f "$HOME/.cargo/bin/exa" ]; then
       log_success "exa/eza installed successfully"
 
-      # Add .cargo/bin to PATH if not already there
-      for shell_rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
-        if [ -f "$shell_rc" ] && ! grep -q ".cargo/bin" "$shell_rc"; then
-          log "Adding cargo bin to PATH in $shell_rc"
-          echo 'export PATH="$HOME/.cargo/bin:$PATH"' >>"$shell_rc"
-        fi
-      done
+      # # Add .cargo/bin to PATH if not already there
+      # for shell_rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+      #   if [ -f "$shell_rc" ] && ! grep -q ".cargo/bin" "$shell_rc"; then
+      #     log "Adding cargo bin to PATH in $shell_rc"
+      #     echo 'export PATH="$HOME/.cargo/bin:$PATH"' >>"$shell_rc"
+      #   fi
+      # done
     else
       log_error "exa/eza installation verification failed - Check if it's in your PATH or $HOME/.cargo/bin"
     fi
@@ -856,18 +856,18 @@ fi
 log "Setting up shell environment..."
 
 # Add ~/.local/bin to PATH if not already there
-for shell_rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
-  if [ -f "$shell_rc" ] && ! grep -q ".local/bin" "$shell_rc"; then
-    log "Adding ~/.local/bin to PATH in $shell_rc"
-    if echo 'export PATH="$HOME/.local/bin:$PATH"' >>"$shell_rc"; then
-      log_success "Added ~/.local/bin to PATH in $shell_rc"
-    else
-      log_error "Failed to add ~/.local/bin to PATH in $shell_rc"
-    fi
-  elif [ -f "$shell_rc" ]; then
-    log_skip "~/.local/bin already in PATH in $shell_rc"
-  fi
-done
+# for shell_rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+#   if [ -f "$shell_rc" ] && ! grep -q ".local/bin" "$shell_rc"; then
+#     log "Adding ~/.local/bin to PATH in $shell_rc"
+#     if echo 'export PATH="$HOME/.local/bin:$PATH"' >>"$shell_rc"; then
+#       log_success "Added ~/.local/bin to PATH in $shell_rc"
+#     else
+#       log_error "Failed to add ~/.local/bin to PATH in $shell_rc"
+#     fi
+#   elif [ -f "$shell_rc" ]; then
+#     log_skip "~/.local/bin already in PATH in $shell_rc"
+#   fi
+# done
 
 # Source the bashrc
 if [ -f "$HOME/.bashrc" ]; then
@@ -917,18 +917,18 @@ if ! check_cmd fnm; then
 export PATH="$HOME/.local/share/fnm:$PATH"
 eval "$(fnm env --use-on-cd)"'
 
-  for shell_rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
-    if [ -f "$shell_rc" ] && ! grep -q "fnm" "$shell_rc"; then
-      log "Adding fnm config to $shell_rc"
-      if echo "$fnm_config" >>"$shell_rc"; then
-        log_success "Added fnm configuration to $shell_rc"
-      else
-        log_error "Failed to add fnm configuration to $shell_rc"
-      fi
-    elif [ -f "$shell_rc" ]; then
-      log_skip "fnm configuration already exists in $shell_rc"
-    fi
-  done
+  # for shell_rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+  #   if [ -f "$shell_rc" ] && ! grep -q "fnm" "$shell_rc"; then
+  #     log "Adding fnm config to $shell_rc"
+  #     if echo "$fnm_config" >>"$shell_rc"; then
+  #       log_success "Added fnm configuration to $shell_rc"
+  #     else
+  #       log_error "Failed to add fnm configuration to $shell_rc"
+  #     fi
+  #   elif [ -f "$shell_rc" ]; then
+  #     log_skip "fnm configuration already exists in $shell_rc"
+  #   fi
+  # done
 
   log_success "fnm installed"
 else
