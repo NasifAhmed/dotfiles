@@ -22,8 +22,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # ===== PLUGINS =====
-# Theme
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Functionality plugins
 zinit light zsh-users/zsh-syntax-highlighting  # Syntax highlighting in the shell
@@ -42,8 +40,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # ===== HISTORY CONFIGURATION =====
-HISTSIZE=5000
-# HISTFILE=~/.zsh_history
+HISTSIZE=9999
+HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory      # Append history instead of overwriting
@@ -53,6 +51,15 @@ setopt hist_ignore_all_dups # Ignore duplicates
 setopt hist_save_no_dups  # Don't save duplicates
 setopt hist_ignore_dups   # Don't record if same as previous command
 setopt hist_find_no_dups  # Don't display duplicates when searching
+
+# ===== SHELL INTEGRATION =====
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+# Config for starship prompt
+export STARSHIP_COCKPIT_MEMORY_USAGE_ENABLED=true
+export STARSHIP_COCKPIT_BATTERY_ENABLED=true
 
 # ===== KEYBINDINGS =====
 # bindkey -e # Sets emacs mode keybindings
@@ -114,9 +121,15 @@ export PATH
 # ===== ALIASES =====
 # File navigation and listing
 alias more=less
+
+if command -v exa &> /dev/null; then
 alias ll='exa -alh'        # Detailed list
 alias ls='exa'             # Modern ls replacement
+fi
+
+if command -v z &> /dev/null; then
 alias cd='z'               # Use zoxide for better directory navigation
+fi
 
 # File operations with confirmation
 alias rm='rm -i'
@@ -351,6 +364,8 @@ if command -v xargs &> /dev/null && command -v curl &> /dev/null; then
 fi
 
 # yazi integration
+#
+if command -v yazi &> /dev/null; then
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -359,11 +374,7 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# ===== SHELL INTEGRATION =====
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+fi
 
 # Display system info on terminal start if available
 if command -v pfetch &> /dev/null; then
@@ -382,12 +393,13 @@ fi
 
 # ===== THEME CONFIGURATION =====
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ===== POWERLEVEL10K INSTANT PROMPT =====
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
