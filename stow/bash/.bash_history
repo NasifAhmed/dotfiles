@@ -62,3 +62,25 @@ cd pfetch/
 sudo make install
 pfetch
 exit
+cd .fzf/
+cd .fzf/
+ls
+zsh
+which zsh
+chsh
+exit
+cd .fzf/
+nvim .zshrc 
+rm -rf .p10k.zsh 
+rm -rf .local/share/zinit
+zsh
+exit
+exit
+nvim .zshrc.bak 
+rm -rf .zshrc
+mv .zshrc.bak .zsh
+nvim .zshrc
+rm -rf .p10k.zsh 
+rm -rf .local/share/zinit/
+zsh
+exit
