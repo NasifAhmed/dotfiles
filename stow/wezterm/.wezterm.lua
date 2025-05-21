@@ -19,10 +19,10 @@ return {
 	-- color_scheme = "OneDark (base16)",
 	--
 	-- Sets the window decoration to very minimal
-	window_decorations = "NONE",
+	window_decorations = "RESIZE",
 
 	-- Customize additional settings as needed
-	window_background_opacity = 0.95, -- Slight transparency
+	window_background_opacity = 0.97, -- Slight transparency
 
 	-- tab bar
 	-- tab_bar_at_bottom = true,

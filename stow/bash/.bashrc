@@ -376,3 +376,4 @@ if command -v pfetch &>/dev/null; then
 fi
 
 # EOF
+. "$HOME/.cargo/env"

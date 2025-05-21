@@ -61,3 +61,4 @@ git clone https://github.com/dylanaraps/pfetch.git
 cd pfetch/
 sudo make install
 pfetch
+exit

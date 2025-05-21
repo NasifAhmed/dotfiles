@@ -75,8 +75,9 @@ tmux-main() {
             # Session exists, attach to it
             tmux attach-session -t main
         else
-            # Session doesn't exist, create it
+            # Session doesn't exist, create it and attach to it
             tmux new-session -s main
+            tmux attach-session -t main
         fi
     else
         echo "tmux is not installed"
@@ -93,6 +94,12 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 if ! [[ "$PATH" =~ "/sbin" ]]; then
     PATH="/sbin:$PATH"
+fi
+if ! [[ "$PATH" =~ "$HOME/go/bin" ]]; then
+    PATH="$HOME/go/bin:$PATH"
+fi
+if ! [[ "$PATH" =~ "$HOME/.cargo/bin" ]]; then
+    PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 # ===== Fast Node Manager (FNM) =====
@@ -361,6 +368,16 @@ eval "$(zoxide init zsh)"
 # Display system info on terminal start if available
 if command -v pfetch &> /dev/null; then
   pfetch
+fi
+
+# ===== TMUX AUTOSTART =====
+# Automatically start tmux main session on terminal launch
+# Only run in interactive shells that aren't already in tmux
+if [[ -z "$TMUX" && "$-" == *i* ]]; then
+  # Don't autostart when in SSH sessions
+  if [[ -z "$SSH_CONNECTION" ]]; then
+    tmux-main
+  fi
 fi
 
 # ===== THEME CONFIGURATION =====
