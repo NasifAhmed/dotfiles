@@ -43,7 +43,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # ===== HISTORY CONFIGURATION =====
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+# HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory      # Append history instead of overwriting
