@@ -30,6 +30,7 @@ Add dots to your PATH.
 ### 📂 Repository Structure
 You must maintain this structure for the script to function:
 
+```plaintext
 ~/dotfiles/
 ├── setup.sh               # The main engine
 ├── storage.conf           # (Auto-generated) Maps Vault items to locations
@@ -41,6 +42,7 @@ You must maintain this structure for the script to function:
 ├── office/                # Configs for OFFICE LAPTOP only
 │   └── monitors/          # (.config/hypr/monitors.conf)
 └── storage/               # (Auto-generated) Stores actual Vault files
+```
 
 ### 🛠 Usage
 Once installed, just type:
