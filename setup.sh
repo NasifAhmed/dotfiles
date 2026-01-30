@@ -35,6 +35,15 @@ set -o pipefail
 
 # --- 1. Logging & Error Handling ---
 
+rotate_log() {
+    local max_size=1048576 # 1MB
+    if [ -f "$LOG_FILE" ] && [ $(stat -c%s "$LOG_FILE") -gt $max_size ]; then
+        log "INFO" "Rotating log file"
+        tail -n 1000 "$LOG_FILE" > "$LOG_FILE.tmp"
+        mv "$LOG_FILE.tmp" "$LOG_FILE"
+    fi
+}
+
 log() {
     local level=$1; local msg=$2
     local timestamp=$(date "+%H:%M:%S")
@@ -67,6 +76,9 @@ safe_exec() {
 # --- 2. Environment Bootstrap (Omarchy OS Exclusive) ---
 
 ensure_environment() {
+    # 0. Rotate log file
+    rotate_log
+
     # 1. Check for Pacman (Core Sanity Check)
     if ! command -v pacman &> /dev/null; then
         die "This script requires Omarchy OS (Arch-based). 'pacman' was not found."
@@ -468,7 +480,7 @@ draw_dashboard() {
     
     # Recent Logs
     gum style --foreground "$C_MUTED" -- "--- Recent Activity ---"
-    tail -n 3 "$LOG_FILE" | sed 's/^/  /' | cut -c 1-60
+    tail -n 10 "$LOG_FILE" | sed 's/^/  /' | cut -c 1-60
     echo "" 
 
     # Message Area
@@ -498,6 +510,8 @@ while true;
         "📦  Add to Vault" \
         "🧹  Uninstall/Reset" \
         "📜  View Logs" \
+        "🔎  Filter Logs" \
+        "📝  Open Log in Editor" \
         "👋  Exit")
 
     case "$ACTION" in
@@ -528,6 +542,20 @@ while true;
             fi
             ;; 
         "📜  View Logs") gum pager < "$LOG_FILE" ;; 
+        "🔎  Filter Logs")
+            LEVEL=$(gum choose "INFO" "WARN" "ERROR" "FATAL" "SAFETY" "OK" "FIX")
+            if [ -n "$LEVEL" ]; then
+                grep "\[$LEVEL\]" "$LOG_FILE" | gum pager
+            fi
+            ;;
+        "📝  Open Log in Editor")
+            if [ -n "$EDITOR" ]; then
+                "$EDITOR" "$LOG_FILE"
+            else
+                # fallback to less
+                less "$LOG_FILE"
+            fi
+            ;;
         "👋  Exit") 
             clear
             gum style --foreground "$C_PRIMARY" "See you later, Nasif! 👋"
