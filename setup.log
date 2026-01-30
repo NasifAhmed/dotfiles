@@ -6,3 +6,58 @@
 [2026-01-30 15:11:51] [BACKUP] Moved original obsidian to /home/ahmed/dotfiles_backups/pre_link_20260130_151151/obsidian
 [2026-01-30 15:11:51] [SUCCESS] Linked Storage: obsidian
 [2026-01-30 15:12:01] [INFO] Added local bin to PATH
+To github.com:NasifAhmed/dotfiles.git
+   dbf10f5..514b0df  master -> master
+[2026-01-30 15:12:59] [INFO] Added local bin to PATH
+[2026-01-30 15:13:35] [INFO] Added local bin to PATH
+[2026-01-30 15:13:48] [INFO] Applying Configs for profile: Home PC
+stow: ERROR: Slashes are not permitted in package names
+[2026-01-30 15:13:48] [ERROR] Command failed: stow -d /home/ahmed/dotfiles -t /home/ahmed -R common/mpv (Exit Code: 2)
+stow: ERROR: Slashes are not permitted in package names
+[2026-01-30 15:13:48] [ERROR] Command failed: stow -d /home/ahmed/dotfiles -t /home/ahmed -R common/nvim (Exit Code: 2)
+stow: ERROR: Slashes are not permitted in package names
+[2026-01-30 15:13:49] [ERROR] Command failed: stow -d /home/ahmed/dotfiles -t /home/ahmed -R common/scripts (Exit Code: 2)
+stow: ERROR: Slashes are not permitted in package names
+[2026-01-30 15:13:49] [ERROR] Command failed: stow -d /home/ahmed/dotfiles -t /home/ahmed -R home/hypr (Exit Code: 2)
+[2026-01-30 15:13:49] [INFO] Syncing Vault Storage...
+[2026-01-30 15:13:57] [INFO] Added local bin to PATH
+[2026-01-30 15:16:15] [INFO] Added local bin to PATH
+[2026-01-30 15:16:21] [INFO] Applying Configs for profile: Home PC
+WARNING! stowing mpv would cause conflicts:
+  * cannot stow dotfiles/common/mpv/.config/mpv/mpv.conf over existing target .config/mpv/mpv.conf since neither a link nor a directory and --adopt not specified
+All operations aborted.
+[2026-01-30 15:16:21] [ERROR] Command failed: stow -d /home/ahmed/dotfiles/common -t /home/ahmed -R mpv (Exit Code: 1)
+WARNING! stowing nvim would cause conflicts:
+  * cannot stow dotfiles/common/nvim/.config/nvim/lua/config/options.lua over existing target .config/nvim/lua/config/options.lua since neither a link nor a directory and --adopt not specified
+All operations aborted.
+[2026-01-30 15:16:21] [ERROR] Command failed: stow -d /home/ahmed/dotfiles/common -t /home/ahmed -R nvim (Exit Code: 1)
+WARNING! stowing scripts would cause conflicts:
+  * cannot stow dotfiles/common/scripts/.local/bin/kill-process.sh over existing target .local/bin/kill-process.sh since neither a link nor a directory and --adopt not specified
+  * cannot stow dotfiles/common/scripts/.local/bin/window-switcher.sh over existing target .local/bin/window-switcher.sh since neither a link nor a directory and --adopt not specified
+All operations aborted.
+[2026-01-30 15:16:21] [ERROR] Command failed: stow -d /home/ahmed/dotfiles/common -t /home/ahmed -R scripts (Exit Code: 1)
+WARNING! stowing hypr would cause conflicts:
+  * cannot stow dotfiles/home/hypr/.config/hypr/autostart.conf over existing target .config/hypr/autostart.conf since neither a link nor a directory and --adopt not specified
+  * cannot stow dotfiles/home/hypr/.config/hypr/bindings.conf over existing target .config/hypr/bindings.conf since neither a link nor a directory and --adopt not specified
+  * cannot stow dotfiles/home/hypr/.config/hypr/hyprland.conf over existing target .config/hypr/hyprland.conf since neither a link nor a directory and --adopt not specified
+  * cannot stow dotfiles/home/hypr/.config/hypr/looknfeel.conf over existing target .config/hypr/looknfeel.conf since neither a link nor a directory and --adopt not specified
+All operations aborted.
+[2026-01-30 15:16:22] [ERROR] Command failed: stow -d /home/ahmed/dotfiles/home -t /home/ahmed -R hypr (Exit Code: 1)
+[2026-01-30 15:16:22] [INFO] Syncing Vault Storage...
+[2026-01-30 15:16:27] [INFO] Added local bin to PATH
+[2026-01-30 15:18:09] [INFO] Added local bin to PATH
+[2026-01-30 15:18:13] [INFO] Applying Configs for profile: Home PC
+[2026-01-30 15:18:13] [WARN] Conflicts detected in mpv. Moving to backup...
+[2026-01-30 15:18:13] [BACKUP] Moving collision .config/mpv/mpv.conf to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151813
+[2026-01-30 15:18:14] [WARN] Conflicts detected in nvim. Moving to backup...
+[2026-01-30 15:18:14] [BACKUP] Moving collision .config/nvim/lua/config/options.lua to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
+[2026-01-30 15:18:14] [WARN] Conflicts detected in scripts. Moving to backup...
+[2026-01-30 15:18:14] [BACKUP] Moving collision .local/bin/kill-process.sh to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
+[2026-01-30 15:18:14] [BACKUP] Moving collision .local/bin/window-switcher.sh to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
+[2026-01-30 15:18:14] [WARN] Conflicts detected in hypr. Moving to backup...
+[2026-01-30 15:18:14] [BACKUP] Moving collision .config/hypr/autostart.conf to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
+[2026-01-30 15:18:14] [BACKUP] Moving collision .config/hypr/bindings.conf to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
+[2026-01-30 15:18:14] [BACKUP] Moving collision .config/hypr/hyprland.conf to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
+[2026-01-30 15:18:14] [BACKUP] Moving collision .config/hypr/looknfeel.conf to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
+[2026-01-30 15:18:14] [INFO] Syncing Vault Storage...
+[2026-01-30 15:18:39] [INFO] Added local bin to PATH
