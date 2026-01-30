@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-#  OMARCHY DOTS MANAGER v6.1 (Stable UI & Cancel Handling)
+#  OMARCHY DOTS MANAGER v7.0 (Add Config Wizard)
 #  Author: Ahmed
 # ==============================================================================
 
@@ -14,16 +14,13 @@ LOG_FILE="$DOTFILES_DIR/setup.log"
 PROFILE_FILE="$DOTFILES_DIR/.current_profile"
 BIN_NAME="dots"
 
-# Handle Ctrl+C (SIGINT) to restore cursor and exit cleanly
 trap "tput cnorm; echo; exit" INT
-
 set -o pipefail 
 
 # --- 1. Logging ---
 
 log() {
-    local level=$1
-    local msg=$2
+    local level=$1; local msg=$2
     local timestamp=$(date "+%H:%M:%S")
     echo "[$timestamp] [$level] $msg" >> "$LOG_FILE"
 }
@@ -50,29 +47,71 @@ ensure_environment() {
     if ! command -v git &> /dev/null || ! command -v stow &> /dev/null || ! command -v gum &> /dev/null || ! command -v rsync &> /dev/null; then
         echo "📦 Installing dependencies..."
         if command -v pacman &> /dev/null; then
-            sudo pacman -S --noconfirm git stow gum rsync || die "Pacman failed."
+            sudo pacman -S --noconfirm git stow gum rsync diffutils || die "Pacman failed."
         else
-            die "Dependencies missing (git, stow, gum, rsync)."
+            die "Dependencies missing."
         fi
     fi
 
     mkdir -p "$HOME/.local/bin" "$STORAGE_DIR" "$BACKUP_ROOT"
     [ ! -f "$STORAGE_MAP" ] && touch "$STORAGE_MAP"
 
-    # Self-Install
     SCRIPT_PATH=$(realpath "$0")
     TARGET_LINK="$HOME/.local/bin/$BIN_NAME"
     if [ ! -L "$TARGET_LINK" ] || [ "$(readlink -f "$TARGET_LINK")" != "$SCRIPT_PATH" ]; then
         ln -sf "$SCRIPT_PATH" "$TARGET_LINK"
     fi
 
-    # Path check
     if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
         export PATH="$HOME/.local/bin:$PATH"
     fi
 }
 
-# --- 3. Config Logic ---
+# --- 3. Reporting Logic ---
+
+view_system_status() {
+    local report_file="/tmp/dots_status_report.txt"
+    echo "OMARCHY SYSTEM STATUS" > "$report_file"
+    echo "=====================" >> "$report_file"
+
+    local current_prof="None"
+    [ -f "$PROFILE_FILE" ] && current_prof=$(cat "$PROFILE_FILE")
+    echo -e "\n🔹 ACTIVE PROFILE: $current_prof\n" >> "$report_file"
+
+    echo "🔹 CONFIG PACKAGES:" >> "$report_file"
+    echo "   [Common]" >> "$report_file"
+    if [ -d "$DOTFILES_DIR/common" ]; then
+        ls -1 "$DOTFILES_DIR/common" | sed 's/^/   - /' >> "$report_file"
+    else
+        echo "   (None)" >> "$report_file"
+    fi
+
+    if [[ "$current_prof" != "None"* ]]; then
+        local target_dir=""
+        [[ "$current_prof" == *"Home"* ]] && target_dir="home"
+        [[ "$current_prof" == *"Office"* ]] && target_dir="office"
+
+        echo -e "\n   [Specific: $target_dir]" >> "$report_file"
+        if [ -d "$DOTFILES_DIR/$target_dir" ]; then
+            ls -1 "$DOTFILES_DIR/$target_dir" | sed 's/^/   - /' >> "$report_file"
+        fi
+    fi
+
+    echo -e "\n🔹 VAULT (Tracked Folders):" >> "$report_file"
+    if [ -f "$STORAGE_MAP" ] && [ -s "$STORAGE_MAP" ]; then
+        while IFS='|' read -r name path || [ -n "$name" ]; do
+            [[ "$name" =~ ^#.*$ ]] && continue
+            [ -z "$name" ] && continue
+            echo "   • $name  ->  $path" >> "$report_file"
+        done < "$STORAGE_MAP"
+    else
+        echo "   (Vault is empty)" >> "$report_file"
+    fi
+
+    gum pager < "$report_file"
+}
+
+# --- 4. Config Logic (Smart Conflict Handling) ---
 
 stow_config_package() {
     local rel_path=$1
@@ -80,54 +119,49 @@ stow_config_package() {
     local pkg_name=$(basename "$rel_path")
     local stow_dir="$DOTFILES_DIR/$parent_dir" 
 
-    # Dry run for conflicts
+    # 1. Detect Conflicts
     local conflict_output=$(stow -d "$stow_dir" -t "$HOME" -n "$pkg_name" 2>&1)
-
-    # Regex to extract filenames from error message
     local conflicts=$(echo "$conflict_output" | grep -oE "over existing target .* since|existing target is .*" | sed -E 's/over existing target (.*) since/\1/; s/existing target is (.*)/\1/')
 
     if [ ! -z "$conflicts" ] && [ "$conflicts" != " " ]; then
         local backup_ts="$BACKUP_ROOT/conflict_configs_$(date +%Y%m%d_%H%M%S)"
-        log "WARN" "Conflict in $pkg_name. Backing up..."
 
         echo "$conflicts" | while read conflict; do
             conflict=$(echo "$conflict" | xargs)
             [ -z "$conflict" ] && continue
+
             local real="$HOME/$conflict"
+            local source_file="$stow_dir/$pkg_name/$conflict"
 
             if [ -e "$real" ] && [ ! -L "$real" ]; then
-                mkdir -p "$backup_ts/$(dirname "$conflict")"
-                mv "$real" "$backup_ts/$conflict"
+                # SMART CHECK: Is the file identical?
+                if [ -f "$source_file" ] && cmp -s "$real" "$source_file"; then
+                    rm "$real"
+                    log "INFO" "Replaced identical file with link: $conflict"
+                else
+                    mkdir -p "$backup_ts/$(dirname "$conflict")"
+                    mv "$real" "$backup_ts/$conflict"
+                    log "SAFETY" "Backed up modified file: $conflict"
+                fi
             elif [ -L "$real" ]; then 
                 rm "$real"
             fi
         done
     fi
 
-    # Real Stow
+    # 2. Apply Link
     stow -d "$stow_dir" -t "$HOME" -R "$pkg_name" >> "$LOG_FILE" 2>&1
-    if [ $? -eq 0 ]; then
-        log "OK" "Linked $pkg_name"
-        return 0
-    else
-        log "ERROR" "Failed to link $pkg_name"
-        return 1
-    fi
+    return $?
 }
 
 apply_configs() {
-    local type=$1
-    local count=0
-
+    local type=$1; local count=0
     log "INFO" "Applying Configs: $type"
 
     # Common
     if [ -d "$DOTFILES_DIR/common" ]; then
         for folder in "$DOTFILES_DIR/common"/*; do
-            if [ -d "$folder" ]; then
-                stow_config_package "common/$(basename "$folder")"
-                ((count++))
-            fi
+            [ -d "$folder" ] && { stow_config_package "common/$(basename "$folder")"; ((count++)); }
         done
     fi
 
@@ -138,18 +172,11 @@ apply_configs() {
 
     if [ -d "$DOTFILES_DIR/$target_dir" ]; then
         for folder in "$DOTFILES_DIR/$target_dir"/*; do
-            if [ -d "$folder" ]; then
-                stow_config_package "$target_dir/$(basename "$folder")"
-                ((count++))
-            fi
+            [ -d "$folder" ] && { stow_config_package "$target_dir/$(basename "$folder")"; ((count++)); }
         done
     fi
 
-    if [ $count -eq 0 ]; then
-        LAST_MSG="⚠️ No packages found! Check folders."
-    else
-        LAST_MSG="✅ Applied $count config packages."
-    fi
+    [ $count -eq 0 ] && LAST_MSG="⚠️ No packages found!" || LAST_MSG="✅ Applied $count config packages."
 }
 
 unstow_configs() {
@@ -160,14 +187,84 @@ unstow_configs() {
     done
 }
 
-# --- 4. Storage Logic ---
+# --- NEW: Add Config Wizard ---
+add_new_config() {
+    # 1. Ask for Path
+    local target_path=$(gum input --placeholder "/home/user/.config/my_app" --header "Add Existing Config (Esc to cancel)")
+    if [ -z "$target_path" ]; then return; fi
+
+    # Expand tilde
+    target_path="${target_path/#\~/$HOME}"
+
+    if [ ! -e "$target_path" ]; then
+        LAST_MSG="❌ Path does not exist."
+        return
+    fi
+
+    # Check if inside HOME (Stow requirement)
+    if [[ "$target_path" != "$HOME"* ]]; then
+        LAST_MSG="❌ Config must be inside your Home directory."
+        return
+    fi
+
+    # 2. Ask for Category
+    local category=$(gum choose --header "Select Scope for this config" "Common (All Machines)" "Home PC Only" "Office Laptop Only")
+    if [ -z "$category" ]; then return; fi
+
+    local repo_subdir="common"
+    [[ "$category" == "Home PC Only" ]] && repo_subdir="home"
+    [[ "$category" == "Office Laptop Only" ]] && repo_subdir="office"
+
+    # 3. Calculate Structure
+    # target = /home/user/.config/nvim
+    # rel_path = .config/nvim
+    # pkg_name = nvim 
+
+    local rel_path="${target_path#$HOME/}"   # remove /home/user/ prefix
+    local pkg_name=$(basename "$target_path") 
+
+    # Allow user to rename package
+    local user_pkg_name=$(gum input --value "$pkg_name" --header "Name of the Package (e.g., nvim, bash, scripts)")
+    if [ -z "$user_pkg_name" ]; then user_pkg_name="$pkg_name"; fi
+
+    local repo_pkg_root="$DOTFILES_DIR/$repo_subdir/$user_pkg_name"
+    local repo_final_dest="$repo_pkg_root/$rel_path" 
+
+    # 4. Execution
+    gum confirm "Move '$target_path' to repo ($repo_subdir) and symlink it?" || return
+
+    gum spin --spinner dot --title "Moving files..." -- sleep 0.5
+
+    # Ensure directory structure exists
+    if [ -d "$target_path" ]; then
+        # Moving a folder: mkdir parent, mv folder
+        mkdir -p "$(dirname "$repo_final_dest")"
+        mv "$target_path" "$(dirname "$repo_final_dest")/"
+    else
+        # Moving a file: mkdir parent, mv file
+        mkdir -p "$(dirname "$repo_final_dest")"
+        mv "$target_path" "$repo_final_dest"
+    fi
+
+    log "INFO" "Moved $target_path to $repo_final_dest"
+
+    # 5. Stow it immediately
+    stow_config_package "$repo_subdir/$user_pkg_name"
+
+    if [ $? -eq 0 ]; then
+        LAST_MSG="✅ Config '$user_pkg_name' added & stowed."
+    else
+        LAST_MSG="⚠️ Added but stow failed. Check logs."
+    fi
+}
+
+
+# --- 5. Storage Logic ---
 
 handle_single_storage_item() {
-    local item_name=$1
-    local target_path=$2
+    local item_name=$1; local target_path=$2
     local repo_path="$STORAGE_DIR/$item_name"
 
-    # Ingest
     if [ -e "$target_path" ] && [ ! -L "$target_path" ]; then
         gum spin --spinner globe --title "Ingesting $item_name..." -- sleep 0.5
         if [ -d "$target_path" ]; then
@@ -180,9 +277,9 @@ handle_single_storage_item() {
         local backup_loc="$BACKUP_ROOT/pre_link_$(date +%Y%m%d_%H%M%S)/$item_name"
         mkdir -p "$(dirname "$backup_loc")"
         mv "$target_path" "$backup_loc"
+        log "SAFETY" "Archived original storage: $item_name"
     fi
 
-    # Link
     if [ ! -e "$repo_path" ]; then return; fi
     if [ ! -L "$target_path" ]; then
         mkdir -p "$(dirname "$target_path")"
@@ -192,11 +289,7 @@ handle_single_storage_item() {
 }
 
 apply_storage() {
-    if [ ! -f "$STORAGE_MAP" ]; then 
-        LAST_MSG="ℹ️ No storage map found."
-        return
-    fi
-
+    if [ ! -f "$STORAGE_MAP" ]; then LAST_MSG="ℹ️ No storage map found."; return; fi
     local count=0
     while IFS='|' read -r item_name target_path || [ -n "$item_name" ]; do
         [[ "$item_name" =~ ^#.*$ ]] && continue
@@ -205,7 +298,6 @@ apply_storage() {
         handle_single_storage_item "$item_name" "$target_path"
         ((count++))
     done < "$STORAGE_MAP"
-
     [ -z "$LAST_MSG" ] && LAST_MSG="✅ Synced $count Vault items."
 }
 
@@ -218,15 +310,11 @@ unstow_storage() {
 
 add_to_storage() {
     local target_path=$(gum input --placeholder "/abs/path/to/folder" --header "Add to Vault (Esc to cancel)")
-
-    # Selection cancelled
     if [ -z "$target_path" ]; then return; fi
-
     target_path="${target_path/#\~/$HOME}"
 
     if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path invalid"; return; fi
     local item_name=$(basename "$target_path")
-
     if grep -q "|$target_path$" "$STORAGE_MAP"; then LAST_MSG="⚠️ Already tracked."; return; fi
 
     echo "$item_name|$target_path" >> "$STORAGE_MAP"
@@ -234,12 +322,11 @@ add_to_storage() {
     LAST_MSG="✅ Added $item_name to Vault."
 }
 
-# --- 5. Main Loop ---
+# --- 6. Main Loop ---
 
 power_sync() {
     local scope=$1
-    if [ -z "$scope" ]; then return; fi # Handle empty scope
-
+    if [ -z "$scope" ]; then return; fi
     cd "$DOTFILES_DIR" || return
 
     if [[ -n $(git status -s) ]]; then
@@ -251,18 +338,13 @@ power_sync() {
     local LOCAL=$(git rev-parse @); local REMOTE=$(git rev-parse @{u}); local BASE=$(git merge-base @ @{u})
     local RELOAD=false
 
-    if [ "$LOCAL" = "$REMOTE" ]; then 
-        LAST_MSG="✨ Up to date."
+    if [ "$LOCAL" = "$REMOTE" ]; then LAST_MSG="✨ Up to date."
     elif [ "$LOCAL" = "$BASE" ]; then 
-        gum spin --title "Pulling..." -- git pull
-        RELOAD=true
+        gum spin --title "Pulling..." -- git pull; RELOAD=true
     elif [ "$REMOTE" = "$BASE" ]; then 
-        gum spin --title "Pushing..." -- git push
-        LAST_MSG="☁️ Pushed changes."
+        gum spin --title "Pushing..." -- git push; LAST_MSG="☁️ Pushed changes."
     else 
-        gum spin --title "Merging..." -- git pull --strategy-option=theirs
-        git push
-        RELOAD=true
+        gum spin --title "Merging..." -- git pull --strategy-option=theirs; git push; RELOAD=true
     fi
 
     if [ "$RELOAD" = true ] && [ -f "$PROFILE_FILE" ]; then
@@ -275,90 +357,65 @@ power_sync() {
 
 execute_setup() {
     local profile=$1; local scope=$2
-    # Handle cancellations
-    if [ -z "$profile" ] || [ -z "$scope" ]; then 
-        LAST_MSG="❌ Selection Cancelled"
-        return
-    fi
-
+    if [ -z "$profile" ] || [ -z "$scope" ]; then LAST_MSG="❌ Cancelled"; return; fi
     echo "$profile" > "$PROFILE_FILE"
-
     [[ "$scope" == "All" || "$scope" == "Configs" ]] && { unstow_configs; apply_configs "$profile"; }
     [[ "$scope" == "All" || "$scope" == "Storage" ]] && apply_storage
 }
 
 ensure_environment
-
-# --- THE MENU LOOP ---
 LAST_MSG="Welcome to Omarchy Manager"
 
 while true; do
     clear
 
-    # Header
-    gum style --border double --padding "1 2" --border-foreground 212 --align center "OMARCHY MANAGER v6.1" "Home: $(hostname)"
+    CURRENT_PROFILE="None"
+    [ -f "$PROFILE_FILE" ] && CURRENT_PROFILE=$(cat "$PROFILE_FILE")
 
-    # Dashboard (Fix: Added -- separator to prevent flag errors)
+    gum style --border double --padding "1 2" --border-foreground 212 --align center \
+    "OMARCHY MANAGER v7.0" \
+    "Host: $(hostname)" \
+    "Active Profile: $CURRENT_PROFILE"
+
     echo ""
     gum style --foreground 240 -- "--- Recent Activity ---"
     tail -n 5 "$LOG_FILE" | sed 's/^/  /' 
     echo ""
 
-    # Status
     gum style --foreground 82 --bold "$LAST_MSG"
     echo ""
 
-    # Menu
-    ACTION=$(gum choose "Sync" "Install/Switch Profile" "Add to Vault" "Reset/Uninstall" "Exit (q)")
-
-    # Handle Empty Selection (e.g., ESC pressed)
-    if [ -z "$ACTION" ]; then
-        LAST_MSG="❌ Selection Cancelled."
-        continue
-    fi
+    ACTION=$(gum choose "Sync" "Install/Switch Profile" "System Status" "Add Config (Stow)" "Add to Vault (Storage)" "Reset/Uninstall" "View Full Logs" "Exit (q)")
+    if [ -z "$ACTION" ]; then LAST_MSG="❌ Selection Cancelled."; continue; fi
 
     case "$ACTION" in
         "Sync")
             SCOPE=$(gum choose "All" "Configs Only" "Storage Only")
-            if [ -n "$SCOPE" ]; then
-                power_sync "$SCOPE"
-            else
-                LAST_MSG="❌ Sync Cancelled"
-            fi
+            [ -n "$SCOPE" ] && power_sync "$SCOPE" || LAST_MSG="❌ Cancelled"
             ;;
         "Install/Switch Profile")
             PROFILE=$(gum choose --header "Select Machine" "Home PC" "Office Laptop")
             if [ -n "$PROFILE" ]; then
                 SCOPE=$(gum choose --header "Scope" "All" "Configs Only" "Storage Only")
-                if [ -n "$SCOPE" ]; then
-                    execute_setup "$PROFILE" "$SCOPE"
-                else
-                    LAST_MSG="❌ Setup Cancelled"
-                fi
+                [ -n "$SCOPE" ] && execute_setup "$PROFILE" "$SCOPE" || LAST_MSG="❌ Cancelled"
             else
-                LAST_MSG="❌ Setup Cancelled"
+                LAST_MSG="❌ Cancelled"
             fi
             ;;
-        "Add to Vault")
-            add_to_storage
-            ;;
+        "System Status") view_system_status ;;
+        "Add Config (Stow)") add_new_config ;;
+        "Add to Vault (Storage)") add_to_storage ;;
         "Reset/Uninstall")
             SCOPE=$(gum choose "All" "Configs Only" "Storage Only")
-            if [ -n "$SCOPE" ]; then
-                if gum confirm "Unlink $SCOPE?"; then
-                    [[ "$SCOPE" == "All" || "$SCOPE" == "Configs" ]] && unstow_configs
-                    [[ "$SCOPE" == "All" || "$SCOPE" == "Storage" ]] && unstow_storage
-                    LAST_MSG="🗑️ Unlinked $SCOPE."
-                else
-                    LAST_MSG="Cancelled."
-                fi
+            if [ -n "$SCOPE" ] && gum confirm "Unlink $SCOPE?"; then
+                [[ "$SCOPE" == "All" || "$SCOPE" == "Configs" ]] && unstow_configs
+                [[ "$SCOPE" == "All" || "$SCOPE" == "Storage" ]] && unstow_storage
+                LAST_MSG="🗑️ Unlinked $SCOPE."
             else
                 LAST_MSG="Cancelled."
             fi
             ;;
-        "Exit (q)")
-            clear
-            exit 0
-            ;;
+        "View Full Logs") gum pager < "$LOG_FILE" ;;
+        "Exit (q)") clear; exit 0 ;;
     esac
 done

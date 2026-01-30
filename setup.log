@@ -67,3 +67,24 @@ To github.com:NasifAhmed/dotfiles.git
 [2026-01-30 15:23:09] [WARN] Conflicts detected in scripts. Moving to backup...
 [2026-01-30 15:23:09] [BACKUP] Moving collision .local/bin/office-menu.sh to /home/ahmed/dotfiles_backups/conflict_configs_20260130_152309
 [2026-01-30 15:23:10] [INFO] Syncing Vault Storage...
+[15:33:47] [INFO] Applying Configs: Home PC
+[15:33:48] [OK] Linked mpv
+[15:33:48] [OK] Linked nvim
+[15:33:48] [OK] Linked scripts
+[15:33:48] [OK] Linked hypr
+[15:33:57] [INFO] Applying Configs: Office Laptop
+[15:33:58] [OK] Linked mpv
+[15:33:58] [OK] Linked nvim
+[15:33:58] [OK] Linked scripts
+[15:33:58] [OK] Linked hypr
+[15:33:58] [OK] Linked scripts
+[15:34:51] [INFO] Applying Configs: Home PC
+[15:34:52] [OK] Linked mpv
+[15:34:52] [OK] Linked nvim
+[15:34:52] [OK] Linked scripts
+[15:34:52] [OK] Linked hypr
+[15:45:03] [INFO] Applying Configs: Home PC
+[15:45:04] [WARN] Conflict in hypr. Backing up...
+[15:45:04] [OK] Linked Vault: work
+[15:45:04] [OK] Linked Vault: obsidian
+[15:54:06] [INFO] Moved /home/ahmed/.config/hypr/input.conf to /home/ahmed/dotfiles/common/hypr/.config/hypr/input.conf
