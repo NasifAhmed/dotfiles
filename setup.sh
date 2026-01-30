@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-#  OMARCHY DOTS MANAGER v7.0 (Add Config Wizard)
+#  OMARCHY DOTS MANAGER v7.1 (Robust Sync Logic)
 #  Author: Ahmed
 # ==============================================================================
 
@@ -111,7 +111,7 @@ view_system_status() {
     gum pager < "$report_file"
 }
 
-# --- 4. Config Logic (Smart Conflict Handling) ---
+# --- 4. Config Logic ---
 
 stow_config_package() {
     local rel_path=$1
@@ -119,22 +119,18 @@ stow_config_package() {
     local pkg_name=$(basename "$rel_path")
     local stow_dir="$DOTFILES_DIR/$parent_dir" 
 
-    # 1. Detect Conflicts
     local conflict_output=$(stow -d "$stow_dir" -t "$HOME" -n "$pkg_name" 2>&1)
     local conflicts=$(echo "$conflict_output" | grep -oE "over existing target .* since|existing target is .*" | sed -E 's/over existing target (.*) since/\1/; s/existing target is (.*)/\1/')
 
     if [ ! -z "$conflicts" ] && [ "$conflicts" != " " ]; then
         local backup_ts="$BACKUP_ROOT/conflict_configs_$(date +%Y%m%d_%H%M%S)"
-
         echo "$conflicts" | while read conflict; do
             conflict=$(echo "$conflict" | xargs)
             [ -z "$conflict" ] && continue
-
             local real="$HOME/$conflict"
             local source_file="$stow_dir/$pkg_name/$conflict"
 
             if [ -e "$real" ] && [ ! -L "$real" ]; then
-                # SMART CHECK: Is the file identical?
                 if [ -f "$source_file" ] && cmp -s "$real" "$source_file"; then
                     rm "$real"
                     log "INFO" "Replaced identical file with link: $conflict"
@@ -149,7 +145,6 @@ stow_config_package() {
         done
     fi
 
-    # 2. Apply Link
     stow -d "$stow_dir" -t "$HOME" -R "$pkg_name" >> "$LOG_FILE" 2>&1
     return $?
 }
@@ -158,14 +153,12 @@ apply_configs() {
     local type=$1; local count=0
     log "INFO" "Applying Configs: $type"
 
-    # Common
     if [ -d "$DOTFILES_DIR/common" ]; then
         for folder in "$DOTFILES_DIR/common"/*; do
             [ -d "$folder" ] && { stow_config_package "common/$(basename "$folder")"; ((count++)); }
         done
     fi
 
-    # Specific
     local target_dir=""
     [[ "$type" == *"Home"* ]] && target_dir="home"
     [[ "$type" == *"Office"* ]] && target_dir="office"
@@ -175,7 +168,6 @@ apply_configs() {
             [ -d "$folder" ] && { stow_config_package "$target_dir/$(basename "$folder")"; ((count++)); }
         done
     fi
-
     [ $count -eq 0 ] && LAST_MSG="⚠️ No packages found!" || LAST_MSG="✅ Applied $count config packages."
 }
 
@@ -187,77 +179,46 @@ unstow_configs() {
     done
 }
 
-# --- NEW: Add Config Wizard ---
 add_new_config() {
-    # 1. Ask for Path
     local target_path=$(gum input --placeholder "/home/user/.config/my_app" --header "Add Existing Config (Esc to cancel)")
     if [ -z "$target_path" ]; then return; fi
-
-    # Expand tilde
     target_path="${target_path/#\~/$HOME}"
 
-    if [ ! -e "$target_path" ]; then
-        LAST_MSG="❌ Path does not exist."
-        return
-    fi
+    if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path does not exist."; return; fi
+    if [[ "$target_path" != "$HOME"* ]]; then LAST_MSG="❌ Config must be inside Home directory."; return; fi
 
-    # Check if inside HOME (Stow requirement)
-    if [[ "$target_path" != "$HOME"* ]]; then
-        LAST_MSG="❌ Config must be inside your Home directory."
-        return
-    fi
-
-    # 2. Ask for Category
-    local category=$(gum choose --header "Select Scope for this config" "Common (All Machines)" "Home PC Only" "Office Laptop Only")
+    local category=$(gum choose --header "Select Scope" "Common (All Machines)" "Home PC Only" "Office Laptop Only")
     if [ -z "$category" ]; then return; fi
 
     local repo_subdir="common"
     [[ "$category" == "Home PC Only" ]] && repo_subdir="home"
     [[ "$category" == "Office Laptop Only" ]] && repo_subdir="office"
 
-    # 3. Calculate Structure
-    # target = /home/user/.config/nvim
-    # rel_path = .config/nvim
-    # pkg_name = nvim 
-
-    local rel_path="${target_path#$HOME/}"   # remove /home/user/ prefix
+    local rel_path="${target_path#$HOME/}"
     local pkg_name=$(basename "$target_path") 
 
-    # Allow user to rename package
-    local user_pkg_name=$(gum input --value "$pkg_name" --header "Name of the Package (e.g., nvim, bash, scripts)")
+    local user_pkg_name=$(gum input --value "$pkg_name" --header "Package Name")
     if [ -z "$user_pkg_name" ]; then user_pkg_name="$pkg_name"; fi
 
     local repo_pkg_root="$DOTFILES_DIR/$repo_subdir/$user_pkg_name"
     local repo_final_dest="$repo_pkg_root/$rel_path" 
 
-    # 4. Execution
-    gum confirm "Move '$target_path' to repo ($repo_subdir) and symlink it?" || return
+    gum confirm "Move '$target_path' to $repo_subdir and symlink?" || return
 
     gum spin --spinner dot --title "Moving files..." -- sleep 0.5
 
-    # Ensure directory structure exists
     if [ -d "$target_path" ]; then
-        # Moving a folder: mkdir parent, mv folder
         mkdir -p "$(dirname "$repo_final_dest")"
         mv "$target_path" "$(dirname "$repo_final_dest")/"
     else
-        # Moving a file: mkdir parent, mv file
         mkdir -p "$(dirname "$repo_final_dest")"
         mv "$target_path" "$repo_final_dest"
     fi
-
     log "INFO" "Moved $target_path to $repo_final_dest"
 
-    # 5. Stow it immediately
     stow_config_package "$repo_subdir/$user_pkg_name"
-
-    if [ $? -eq 0 ]; then
-        LAST_MSG="✅ Config '$user_pkg_name' added & stowed."
-    else
-        LAST_MSG="⚠️ Added but stow failed. Check logs."
-    fi
+    if [ $? -eq 0 ]; then LAST_MSG="✅ Config '$user_pkg_name' added."; else LAST_MSG="⚠️ Added but stow failed."; fi
 }
-
 
 # --- 5. Storage Logic ---
 
@@ -322,31 +283,55 @@ add_to_storage() {
     LAST_MSG="✅ Added $item_name to Vault."
 }
 
-# --- 6. Main Loop ---
+# --- 6. Main Loop (ROBUST SYNC) ---
 
 power_sync() {
     local scope=$1
     if [ -z "$scope" ]; then return; fi
     cd "$DOTFILES_DIR" || return
 
+    # 1. AUTO-COMMIT (Equivalent to "Stash" but safer)
     if [[ -n $(git status -s) ]]; then
-        git add .
+        gum spin --title "Committing local changes..." -- git add .
         safe_exec git commit -m "Auto-sync $(hostname): $(date '+%Y-%m-%d %H:%M')"
+        log "INFO" "Auto-committed local changes."
     fi
 
-    safe_exec git fetch origin
-    local LOCAL=$(git rev-parse @); local REMOTE=$(git rev-parse @{u}); local BASE=$(git merge-base @ @{u})
+    # 2. FETCH
+    gum spin --title "Checking remote..." -- git fetch origin
+    if [ $? -ne 0 ]; then LAST_MSG="❌ Remote unreachable."; return; fi
+
+    local BRANCH=$(git branch --show-current)
+    local LOCAL=$(git rev-parse HEAD)
+    local REMOTE=$(git rev-parse origin/$BRANCH)
+    local BASE=$(git merge-base HEAD origin/$BRANCH)
     local RELOAD=false
 
-    if [ "$LOCAL" = "$REMOTE" ]; then LAST_MSG="✨ Up to date."
-    elif [ "$LOCAL" = "$BASE" ]; then 
-        gum spin --title "Pulling..." -- git pull; RELOAD=true
-    elif [ "$REMOTE" = "$BASE" ]; then 
-        gum spin --title "Pushing..." -- git push; LAST_MSG="☁️ Pushed changes."
-    else 
-        gum spin --title "Merging..." -- git pull --strategy-option=theirs; git push; RELOAD=true
+    # 3. COMPARE & ACT
+    if [ "$LOCAL" = "$REMOTE" ]; then
+        LAST_MSG="✨ Everything is up to date."
+
+    elif [ "$LOCAL" = "$BASE" ]; then
+        # REMOTE IS AHEAD -> Pull
+        gum spin --title "⬇️  Pulling updates..." -- git pull origin "$BRANCH"
+        RELOAD=true
+
+    elif [ "$REMOTE" = "$BASE" ]; then
+        # LOCAL IS AHEAD -> Push
+        gum spin --title "⬆️  Pushing changes..." -- git push origin "$BRANCH"
+        LAST_MSG="☁️ Changes pushed to cloud."
+
+    else
+        # DIVERGED (Conflict) -> Prefer Remote (Merge -X theirs)
+        gum style --foreground 196 "⚠️ Conflict detected. Merging (Remote Preferred)..."
+        gum spin --title "Resolving..." -- git pull origin "$BRANCH" --strategy-option=theirs
+
+        # After merging, we are ahead by the merge commit, so push
+        gum spin --title "⬆️  Pushing merge..." -- git push origin "$BRANCH"
+        RELOAD=true
     fi
 
+    # 4. RELOAD IF NEEDED
     if [ "$RELOAD" = true ] && [ -f "$PROFILE_FILE" ]; then
         local prof=$(cat "$PROFILE_FILE")
         [[ "$scope" == "All" || "$scope" == "Configs" ]] && { unstow_configs; apply_configs "$prof"; }
@@ -368,12 +353,11 @@ LAST_MSG="Welcome to Omarchy Manager"
 
 while true; do
     clear
-
     CURRENT_PROFILE="None"
     [ -f "$PROFILE_FILE" ] && CURRENT_PROFILE=$(cat "$PROFILE_FILE")
 
     gum style --border double --padding "1 2" --border-foreground 212 --align center \
-    "OMARCHY MANAGER v7.0" \
+    "OMARCHY MANAGER v7.1" \
     "Host: $(hostname)" \
     "Active Profile: $CURRENT_PROFILE"
 
