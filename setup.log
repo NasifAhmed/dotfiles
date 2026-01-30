@@ -61,3 +61,9 @@ All operations aborted.
 [2026-01-30 15:18:14] [BACKUP] Moving collision .config/hypr/looknfeel.conf to /home/ahmed/dotfiles_backups/conflict_configs_20260130_151814
 [2026-01-30 15:18:14] [INFO] Syncing Vault Storage...
 [2026-01-30 15:18:39] [INFO] Added local bin to PATH
+To github.com:NasifAhmed/dotfiles.git
+   514b0df..8747b32  master -> master
+[2026-01-30 15:23:09] [INFO] Applying Configs for profile: Office Laptop
+[2026-01-30 15:23:09] [WARN] Conflicts detected in scripts. Moving to backup...
+[2026-01-30 15:23:09] [BACKUP] Moving collision .local/bin/office-menu.sh to /home/ahmed/dotfiles_backups/conflict_configs_20260130_152309
+[2026-01-30 15:23:10] [INFO] Syncing Vault Storage...
