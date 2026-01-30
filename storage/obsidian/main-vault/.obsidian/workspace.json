@@ -46,7 +46,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "41620bf32f290881",
@@ -206,7 +205,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "d647ab5afef81f89",
+  "active": "af197169f3d714e3",
   "lastOpenFiles": [
     "Go Foundation with CLI.md"
   ]
