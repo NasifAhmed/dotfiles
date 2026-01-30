@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Programming Class - Student</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Metro Programming Class</h1>
+        <div id="userInfo" class="hidden">
+            <span id="userNameDisplay"></span>
+            <button onclick="logout()" class="secondary">Logout</button>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section id="loginSection" class="card">
+        <h2>Student Sign In</h2>
+        <form id="loginForm">
+            <label>Full Name</label>
+            <input type="text" id="nameInput" required placeholder="John Doe">
+            <label>Student ID</label>
+            <input type="text" id="idInput" required placeholder="S-12345">
+            <button type="submit">Enter Class</button>
+        </form>
+    </section>
+
+    <!-- Main Student Dashboard -->
+    <main id="studentDashboard" class="hidden">
+        
+        <!-- Submission Form -->
+        <section class="card">
+            <h2>Submit Code</h2>
+            <form id="submitForm">
+                <label>Paste Code Here...</label>
+                <textarea id="codeTextInput" rows="10" placeholder="// Write your code here..."></textarea>
+                
+                <p style="text-align: center; color: var(--text-secondary); margin: 10px 0;">-- OR --</p>
+                
+                <label>Upload File</label>
+                <input type="file" id="fileInput">
+                
+                <button type="submit">Submit Code</button>
+            </form>
+        </section>
+
+        <!-- Submissions List & Feedback -->
+        <section class="card">
+            <h2>My Submissions</h2>
+            <div id="submissionsList">
+                <!-- List items injected here -->
+                <p style="color: var(--text-secondary)">No submissions yet.</p>
+            </div>
+        </section>
+
+        <!-- View Modal (Simulated) -->
+        <div id="feedbackView" class="hidden card" style="border-top: 2px solid var(--accent);">
+            <h3>Teacher Feedback / Code Review</h3>
+            <div id="feedbackMeta" style="margin-bottom: 1rem; color: var(--text-secondary);"></div>
+            <div class="no-copy">
+                <pre><code id="feedbackCodeBlock" class="language-c"></code></pre>
+            </div>
+            <h4>Comments:</h4>
+            <p id="feedbackComments" class="card" style="background:#0d1117;"></p>
+            <button onclick="document.getElementById('feedbackView').classList.add('hidden')" class="secondary">Close</button>
+        </div>
+
+    </main>
+</div>
+
+<script src="js/student.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+Chapter 2 : 
+	- Multiprocessing, cluster, grid computing, containers, parallel processing, scaling up-down
+	- Vertical , horizontal scaling, web, cloud computing
+	- Raid Page 135
+	- Math @ page 140-141
+	- MIPS, FLOPS
+	- Benchmark
+	- Reliability, Fault tolerance
+	- UI - UX, GUI, Interface
+	- Usability , Accessibility
+	- Audio formats, frequency, 
+	- Image format, processing
+	- Compression, lossless, raw
+	- Computer Graphics ( Anti-aliasing, Texture, Ray tracing.... page 176-178 )
+	- 2D, 3D modelling, VR/AR
+
+Database
+	- Entity, Relation, Attribute, Schema
+	- Relational
+	- Foreign key , Primary key
+	- CRUD
+	- One to one , Many to many, many to one
+	- Normalization
+	- Encryption
+	- Replication, Backup, Recovery
+	- SQL, Syntax
+	- Data types : 
+		- Page 263
+	- Access rights
+	- Distributed Database
+
+Security
+	- Threat modelling 
+	- Page 354 - 359
+	- Vulnerabilities ( Security holes, Man made ( backdoor, honeypot ) )
+	- Cryptography
+		- Plain text
+		- Cipher text
+		- Encryption - Decryption
+		- Encryption algorithm, strength
+		- 362 ... 383
+		- Hashing
+		- Defense against hacking
+
+DSA
+	- Array
+	- Stack
+	- Queue
+	- Lists
+	- Graph
+	- Tree
+	- Algorithm and complexity
+	- Sorting algo
+	- Searching algo
+	- Graph traversal algo
+	- Path finding 

@@ -1,0 +1,24 @@
+public class SaturdayClass {
+  public static void main(String[] args) {
+    int[] a = {9, 7, 6, 2, 100, 500, 3, 1};
+    //second smallest
+
+  }
+  
+  public static int secondSmallestFinder(int[] arr) {
+    int smallest = 0;
+    int secondSmallest = 0;
+    for(int i=0 ; i<arr.length ; i++) {
+      if(arr[i] < smallest) {
+        smallest = arr[i];
+        if(arr[i] > smallest && arr[i] < secondSmallest) {
+          secondSmallest = arr[i];
+        }
+      }
+    }
+    
+    return secondSmallest;
+  }
+}
+
+

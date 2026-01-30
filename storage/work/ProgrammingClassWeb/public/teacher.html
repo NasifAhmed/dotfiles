@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Metro Programming</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CodeMirror for editing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+    <!-- For C/C++/Java -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Teacher Dashboard</h1>
+            <button onclick="loadSubmissions()" class="secondary">Refresh List</button>
+        </header>
+
+        <div class="flex" style="align-items: flex-start;">
+
+            <!-- Left Panel: Submission List -->
+            <aside class="card" style="width: 30%;">
+                <h3>Submissions</h3>
+                <div id="submissionList" style="max-height: 70vh; overflow-y: auto;">
+                    <p>Loading...</p>
+                </div>
+            </aside>
+
+            <!-- Right Panel: Editor & Feedback -->
+            <main class="card" style="flex: 1;">
+                <div id="editorSection" class="hidden">
+                    <h3 id="currentStudentName">Select a submission</h3>
+                    <p id="currentSubmissionTime" style="font-size: 0.8rem; color: var(--text-secondary);"></p>
+
+                    <div style="margin-bottom: 20px;">
+                        <!-- CodeMirror Instance -->
+                        <textarea id="codeEditor"></textarea>
+                    </div>
+
+                    <label>Feedback / Comments</label>
+                    <textarea id="feedbackComments" rows="4" placeholder="Good job, but watch out for..."></textarea>
+
+                    <div class="flex">
+                        <button onclick="saveFeedback()">Save Feedback & Return Code</button>
+                    </div>
+                </div>
+                <div id="emptyState" style="text-align: center; padding: 50px;">
+                    <p style="color: var(--text-secondary);">Select a submission to review.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/teacher.js"></script>
+</body>
+
+</html>

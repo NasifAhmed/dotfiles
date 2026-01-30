@@ -1,0 +1,3 @@
+net user administrator /active:yes
+wmic bios get serialnumber
+irm https://get.activated.win | iex

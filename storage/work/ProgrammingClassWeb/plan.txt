@@ -1,0 +1,4 @@
+I want to make a simple webpage for programming class and my students that will run only during class on my lan only. I will run this on my laptop during class and students will access it with my ip and port. In this webpage students can sign up with their name and student_id and in the webpage can copy paste their code or submit the code file directly with their name. On my end I can see the submitted code in a list with name and time&date, choose one and analyze and give feedback on their mistake and change the code. Students can see the changes I made or new code I added in color. They won't be able to copy the code but see and learn. 
+Make sure the code has syntax highlighting in views and UI is very intuitive and easy. 
+Site name should be Metro Programming Class.
+

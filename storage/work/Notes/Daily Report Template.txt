@@ -1,0 +1,18 @@
+-Example-
+To: send-report-dhaka@metro-bangladesh.com
+Title: 20250729 (Tue) T Nasif Ahmed
+Massage Body:
+［Tasks Performed］
+-Conducted a 90-minute Java programming class (loops and conditionals)
+-Prepared handouts and coding exercises for tomorrow’s session
+-Assisted two students with debugging their assignments
+-Reviewed and graded five homework submissions
+-Attended a 30-minute staff meeting regarding curriculum planning
+
+［Remarks］
+Today’s class went smoothly, and most students actively participated. 
+However, a few students still seem to struggle with basic logic-building in Java. 
+I plan to provide them with additional exercises and offer individual support after class tomorrow.
+Overall, a productive day.
+
+

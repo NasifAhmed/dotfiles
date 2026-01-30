@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTEC FE Foundation Course Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* max-w-xl equivalent */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar for text areas */
+        .custom-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals with Tech Blue & Alert Orange -->
+    <!-- Application Structure Plan:
+         1. Hero Section: Sets the context (IPTEC FE Prep) and the "Zero to Hero" mission.
+         2. Strategic Mindset: A grid layout focusing on the "How to Learn" aspect (Black Box, AI), as this is the foundation before content.
+         3. The 5+5 Curriculum: The core interactive section. Users can toggle between Math and English tracks to see the breakdown of the 5 classes.
+         4. Analytics Dashboard: Visualizes the skills distribution and topic weight using Chart.js to justify why these specific topics were chosen.
+         5. Resource Hub: A functional footer area for study tools.
+         Why: This structure moves from "Motivation" -> "Method" -> "Material" -> "Metrics", logically guiding the instructor/student through the prep phase.
+    -->
+    <!-- Visualization & Content Choices:
+         1. Curriculum Toggles: Goal -> Organize info. Method -> JS Tab switching. Justification -> Cleanly separates the two distinct subjects (Math/English) to prevent information overload.
+         2. Skill Radar Chart: Goal -> Inform/Relationships. Method -> Chart.js Radar. Justification -> Shows how the prep classes cover different cognitive domains (Logic vs. Vocab vs. Calculation).
+         3. Topic Weight Doughnut: Goal -> Inform. Method -> Chart.js Doughnut. Justification -> Visually represents the time investment in each sub-topic.
+         4. Timeline Cards: Goal -> Change/Flow. Method -> HTML/Tailwind Grid. Justification -> clearly shows the progression from Class 1 to Class 5.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">🎓</span>
+                    <span class="font-bold text-xl text-stone-900 tracking-tight">FE Foundation</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#strategy" class="text-stone-600 hover:text-blue-600 transition-colors font-medium">Strategy</a>
+                    <a href="#curriculum" class="text-stone-600 hover:text-blue-600 transition-colors font-medium">Curriculum</a>
+                    <a href="#analytics" class="text-stone-600 hover:text-blue-600 transition-colors font-medium">Analytics</a>
+                </div>
+                <!-- Mobile Menu Button (Functional via JS) -->
+                <button id="mobile-menu-btn" class="md:hidden text-stone-600 hover:text-stone-900 focus:outline-none text-2xl">
+                    ☰
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#strategy" class="block py-2 text-stone-600 hover:text-blue-600">Strategy</a>
+                <a href="#curriculum" class="block py-2 text-stone-600 hover:text-blue-600">Curriculum</a>
+                <a href="#analytics" class="block py-2 text-stone-600 hover:text-blue-600">Analytics</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 px-4 sm:px-6 lg:px-8 pt-20">
+                <h1 class="text-4xl tracking-tight font-extrabold text-stone-900 sm:text-5xl md:text-6xl">
+                    <span class="block xl:inline">Dec to Jan Prep:</span>
+                    <span class="block text-blue-600">Zero to FE Ready</span>
+                </h1>
+                <p class="mt-4 text-base text-stone-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
+                    A 5-week intensive foundation course for HSC students in Dhaka. We bridge the gap between academic theory and the IPTEC FE requirement through 10 targeted sessions (5 Math, 5 English).
+                </p>
+                <div class="mt-5 sm:mt-8 sm:flex sm:justify-start">
+                    <div class="rounded-md shadow">
+                        <a href="#curriculum" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg transition-all">
+                            View The Plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Background Element -->
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-stone-100 flex items-center justify-center">
+            <div class="text-stone-300 text-9xl font-bold opacity-20 select-none">FE</div>
+        </div>
+    </header>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="py-12 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Methodology</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-stone-900 sm:text-4xl">
+                    Learning How to Learn
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-stone-500 mx-auto">
+                    Before diving into matrices or reading comprehension, we instill the mindset required for IT engineering. These themes run parallel to every class.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-4">📦</div>
+                    <h3 class="text-lg font-medium text-stone-900">Black Box Thinking</h3>
+                    <p class="mt-2 text-stone-500 text-sm">
+                        You don't need to know how the engine works to drive the car initially. Input -> Process -> Output. Focus on using the tools first.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-4">🤖</div>
+                    <h3 class="text-lg font-medium text-stone-900">AI as a Tutor</h3>
+                    <p class="mt-2 text-stone-500 text-sm">
+                        Teaching students how to prompt ChatGPT/Claude to explain complex math concepts "like I'm 12" or translate IT jargon.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-4">⚡</div>
+                    <h3 class="text-lg font-medium text-stone-900">The 2-Week Sprint</h3>
+                    <p class="mt-2 text-stone-500 text-sm">
+                        Breaking the "I can't learn this" barrier. Adopting the mentality that any single topic can be mastered with focused sprint study.
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-4">🔍</div>
+                    <h3 class="text-lg font-medium text-stone-900">Search Engineering</h3>
+                    <p class="mt-2 text-stone-500 text-sm">
+                        Moving beyond textbooks. Mastering Google and YouTube search queries to find the best visual explanations for algorithms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <h2 class="text-3xl font-extrabold text-stone-900">The 5 + 5 Curriculum</h2>
+                <p class="mt-4 text-stone-500">
+                    Two classes per week. Use the tabs below to switch between the Math track (The Engine) and the English track (The Interface).
+                </p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="border-b border-stone-200">
+                <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                    <button id="tab-math" class="border-blue-500 text-blue-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors w-1/2 md:w-auto text-center">
+                        Math Track (5 Classes)
+                    </button>
+                    <button id="tab-english" class="border-transparent text-stone-500 hover:text-stone-700 hover:border-stone-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors w-1/2 md:w-auto text-center">
+                        English Track (5 Classes)
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Content Area -->
+            <div class="mt-8">
+                <!-- MATH CONTENT -->
+                <div id="content-math" class="space-y-6 block fade-in">
+                    <!-- Class 1 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-blue-200">01</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Number Systems</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">The Digital Foundation: Bases & Logic</h3>
+                            <p class="text-stone-600 mt-2">Connecting high school number theory to computer science. Why do computers count differently?</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Real, Natural, & Integer numbers visualization.</li>
+                                    <li>The Number Line & The idea of Infinity.</li>
+                                    <li>Binary (Base-2) & Hexadecimal (Base-16) intro.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Activity:</strong> Convert your birthday to Binary.
+                                    <br><strong>Tech Connection:</strong> How memory addresses work (Hex).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 2 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-blue-200">02</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Growth & Decay</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Exponentials & Logarithms</h3>
+                            <p class="text-stone-600 mt-2">Understanding scale. Essential for algorithm complexity (Big O notation) later.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Laws of Indices/Powers.</li>
+                                    <li>Logarithms: What they actually mean (undoing powers).</li>
+                                    <li>Factorials (!) and explosive growth.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Activity:</strong> Paper folding challenge (Exponential growth).
+                                    <br><strong>Tech Connection:</strong> Why searching a sorted list is O(log n).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 3 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-blue-200">03</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Data Math</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Percentages, Ratios & Fractions</h3>
+                            <p class="text-stone-600 mt-2">The math of business logic and system performance metrics.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Fast mental math for percentages.</li>
+                                    <li>Ratio division (allocating resources).</li>
+                                    <li>Profit/Loss basics.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Activity:</strong> Calculate download time remaining based on speed/size.
+                                    <br><strong>Tech Connection:</strong> CPU utilization & SLAs.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 4 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-blue-200">04</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Combinatorics</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Permutation, Combination & Sets</h3>
+                            <p class="text-stone-600 mt-2">The logic of possibilities. Crucial for security (passwords) and databases.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Set Theory basics (Union, Intersection).</li>
+                                    <li>Fundamental Counting Principle.</li>
+                                    <li>Permutation vs. Combination: When order matters.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Activity:</strong> How many unique passwords can you make with 4 digits?
+                                    <br><strong>Tech Connection:</strong> Database queries (SQL JOINs).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 5 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-blue-200">05</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Structures</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Matrices & Basic Algebra</h3>
+                            <p class="text-stone-600 mt-2">Handling multi-dimensional data.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Matrix addition, multiplication.</li>
+                                    <li>Solving simple linear equations.</li>
+                                    <li>Variables and substitution.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Activity:</strong> Represent an image as a matrix of pixels.
+                                    <br><strong>Tech Connection:</strong> Graphics processing & Arrays.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENGLISH CONTENT -->
+                <div id="content-english" class="space-y-6 hidden">
+                     <!-- Class 1 -->
+                     <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-orange-200">01</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Vocabulary</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">The Language of IT</h3>
+                            <p class="text-stone-600 mt-2">Building a glossary of frequent FE exam terms. Moving from "Computer" to "Architecture".</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Keywords: Protocol, throughput, latency, redundancy.</li>
+                                    <li>Hardware vs Software verb associations.</li>
+                                    <li>Tech News: Reading a simple TechCrunch headline.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Task:</strong> Create flashcards for 20 provided IT terms.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 2 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-orange-200">02</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Decoding</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Anatomy of a Long Question</h3>
+                            <p class="text-stone-600 mt-2">FE questions are often long scenarios. We learn to strip away the fluff.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Identifying the "Ask": What is the question actually wanting?</li>
+                                    <li>Subject-Verb-Object in complex technical sentences.</li>
+                                    <li>Removing adjectives to find core logic.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Task:</strong> "Sentence Surgery" - Crossing out irrelevant words in a sample question.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 3 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-orange-200">03</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Documentation</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Reading Docs & Manuals</h3>
+                            <p class="text-stone-600 mt-2">Information extraction. Reading for data rather than for story.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Scanning techniques: Looking for numbers, capitalization, and bullets.</li>
+                                    <li>Understanding conditional statements (If/Else in text).</li>
+                                    <li>Reading flowcharts description.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Task:</strong> Extract specifications from a dummy "Server Setup" guide.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 4 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-orange-200">04</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Logic Text</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Algorithm Descriptions</h3>
+                            <p class="text-stone-600 mt-2">How English is used to describe step-by-step processes.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Sequence words: Initial, subsequent, prior to, simultaneous.</li>
+                                    <li>Causality: Due to, resulting in, triggers.</li>
+                                    <li>Translating text to pseudo-code.</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Task:</strong> Draw a simple diagram based on a text description of a network.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Class 5 -->
+                    <div class="flex flex-col md:flex-row gap-4 bg-stone-50 p-6 rounded-xl border border-stone-100">
+                        <div class="md:w-1/6 flex flex-col items-center justify-center border-r border-stone-200 pr-4">
+                            <span class="text-4xl font-bold text-orange-200">05</span>
+                            <span class="text-sm font-semibold text-stone-400 uppercase tracking-wider">Simulation</span>
+                        </div>
+                        <div class="md:w-5/6 pl-2">
+                            <h3 class="text-xl font-bold text-stone-900">Exam Stamina & Speed</h3>
+                            <p class="text-stone-600 mt-2">Putting it all together. Handling pressure.</p>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <ul class="list-disc list-inside text-sm text-stone-600 space-y-1">
+                                    <li>Time management strategies for reading.</li>
+                                    <li>Skipping difficult words without losing context.</li>
+                                    <li>Mini-Mock test (Text based).</li>
+                                </ul>
+                                <div class="bg-white p-3 rounded border border-stone-200 text-xs text-stone-500">
+                                    <strong>Task:</strong> 5 questions in 10 minutes. Review and feedback.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Dashboard -->
+    <section id="analytics" class="py-12 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-extrabold text-stone-900">Curriculum Analytics</h2>
+                <p class="mt-2 text-stone-500">
+                    Why we chose these topics. This data visualization shows how the foundation course aligns with the cognitive demands of the IPTEC FE exam.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Chart 1: Topic Distribution -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                    <h3 class="text-lg font-bold text-stone-800 mb-4 text-center">Course Content Distribution</h3>
+                    <p class="text-xs text-stone-400 text-center mb-4">Breakdown of the 10 classes by skill category</p>
+                    <div class="chart-container">
+                        <canvas id="topicChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Skill Target Radar -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                    <h3 class="text-lg font-bold text-stone-800 mb-4 text-center">Student Skill Target (Zero vs. Jan 1st)</h3>
+                    <p class="text-xs text-stone-400 text-center mb-4">Projected growth after the December Prep</p>
+                    <div class="chart-container">
+                        <canvas id="skillRadar"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Interactive Element: Confidence Slider -->
+            <div class="mt-12 bg-white p-8 rounded-xl shadow-sm border border-blue-100">
+                <h3 class="text-xl font-bold text-stone-900 mb-2">Confidence Simulator</h3>
+                <p class="text-stone-500 mb-6">Adjust the "Study Hours Per Week" slider to see the projected readiness score.</p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-1/2">
+                        <label for="hoursInput" class="block text-sm font-medium text-stone-700">Self-Study Hours (Outside Class)</label>
+                        <input type="range" min="0" max="20" value="5" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer mt-2" id="hoursInput">
+                        <div class="flex justify-between text-xs text-stone-400 mt-1">
+                            <span>0 hrs</span>
+                            <span id="hoursVal">5 hrs</span>
+                            <span>20 hrs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 flex items-center justify-center bg-stone-50 rounded-lg p-4 border border-stone-200">
+                        <div class="text-center">
+                            <span class="block text-sm text-stone-500">Projected Readiness</span>
+                            <span id="readinessScore" class="text-4xl font-extrabold text-blue-600">35%</span>
+                            <span id="readinessText" class="block text-xs font-medium text-orange-500 mt-1">Needs more effort</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">FE Foundation</h4>
+                <p class="text-sm text-stone-400">
+                    Preparing Dhaka's next generation of IT Engineers.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">Quick Resources</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">IPTEC Official Site</a></li>
+                    <li><a href="#" class="hover:text-white">Khan Academy (Math)</a></li>
+                    <li><a href="#" class="hover:text-white">BBC Learning English (Tech)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">Instructor Note</h4>
+                <p class="text-sm text-stone-400 italic">
+                    "The goal of December isn't to master the syllabus. It's to master the tools required to learn the syllabus."
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Navigation Logic ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Tab Switching Logic ---
+        const tabMath = document.getElementById('tab-math');
+        const tabEnglish = document.getElementById('tab-english');
+        const contentMath = document.getElementById('content-math');
+        const contentEnglish = document.getElementById('content-english');
+
+        function switchTab(activeTab, inactiveTab, showContent, hideContent) {
+            // Update Tab Styles
+            activeTab.classList.remove('border-transparent', 'text-stone-500');
+            activeTab.classList.add('border-blue-500', 'text-blue-600');
+            
+            inactiveTab.classList.remove('border-blue-500', 'text-blue-600');
+            inactiveTab.classList.add('border-transparent', 'text-stone-500');
+
+            // Toggle Content
+            showContent.classList.remove('hidden');
+            showContent.classList.add('block'); // Simple block for display
+            
+            hideContent.classList.remove('block');
+            hideContent.classList.add('hidden');
+        }
+
+        tabMath.addEventListener('click', () => switchTab(tabMath, tabEnglish, contentMath, contentEnglish));
+        tabEnglish.addEventListener('click', () => switchTab(tabEnglish, tabMath, contentEnglish, contentMath));
+
+
+        // --- Chart.js Implementations ---
+        
+        // Chart 1: Topic Distribution (Doughnut)
+        const ctxTopic = document.getElementById('topicChart').getContext('2d');
+        const topicChart = new Chart(ctxTopic, {
+            type: 'doughnut',
+            data: {
+                labels: ['Logic & Numbers', 'Algebra & Matrix', 'Data Analysis', 'Vocab & Reading', 'Process Logic'],
+                datasets: [{
+                    data: [20, 20, 10, 30, 20], // Approximate weight
+                    backgroundColor: [
+                        '#3b82f6', // Blue
+                        '#60a5fa', // Light Blue
+                        '#93c5fd', // Lighter Blue
+                        '#f97316', // Orange
+                        '#fdba74'  // Light Orange
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            font: { family: 'sans-serif', size: 12 }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Skill Radar (Radar)
+        const ctxRadar = document.getElementById('skillRadar').getContext('2d');
+        const skillRadar = new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: ['Binary Math', 'English Comprehension', 'Problem Solving', 'Tech Vocab', 'Calculation Speed'],
+                datasets: [{
+                    label: 'Current Level (Avg HSC)',
+                    data: [20, 50, 40, 30, 60],
+                    fill: true,
+                    backgroundColor: 'rgba(148, 163, 184, 0.2)',
+                    borderColor: 'rgb(148, 163, 184)',
+                    pointBackgroundColor: 'rgb(148, 163, 184)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(148, 163, 184)'
+                }, {
+                    label: 'Goal (Jan 1st)',
+                    data: [70, 75, 70, 80, 85],
+                    fill: true,
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderColor: 'rgb(59, 130, 246)',
+                    pointBackgroundColor: 'rgb(59, 130, 246)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(59, 130, 246)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { display: true },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+
+        // --- Interactive Slider Logic ---
+        const hoursInput = document.getElementById('hoursInput');
+        const hoursVal = document.getElementById('hoursVal');
+        const readinessScore = document.getElementById('readinessScore');
+        const readinessText = document.getElementById('readinessText');
+
+        hoursInput.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value);
+            hoursVal.textContent = `${val} hrs`;
+            
+            // Simple logic: Base 20% + (Hours * 4), max 95%
+            let score = 20 + (val * 4);
+            if(score > 98) score = 98;
+            
+            readinessScore.textContent = `${score}%`;
+
+            if (score < 40) {
+                readinessText.textContent = "High Risk of Struggle";
+                readinessText.className = "block text-xs font-medium text-red-500 mt-1";
+            } else if (score < 70) {
+                readinessText.textContent = "Good Start";
+                readinessText.className = "block text-xs font-medium text-yellow-500 mt-1";
+            } else {
+                readinessText.textContent = "Exam Ready Mindset";
+                readinessText.className = "block text-xs font-medium text-green-500 mt-1";
+            }
+        });
+
+    </script>
+</body>
+</html>

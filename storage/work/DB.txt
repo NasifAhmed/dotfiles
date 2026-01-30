@@ -1,0 +1,16 @@
+CREATE DATABASE world_cup;
+
+CREATE TABLE teams (
+  name CHAR(3),
+  id CHAR(2) PRIMARY KEY
+);
+
+INSERT INTO teams VALUES ('arg', '01'), ('bra', '02'), ('fra', '03'), ('ger', '04'), ('spa', '05'), ('nor', '06'), ('ind', '07'), ('ban', '08'), ('pak', '09'), ('ira', '10'), ('ita', '11'), ('eng', '12'), ('jpn', '13'), ('gha', '14'), ('sen', '15'), ('zim', '16'); 
+
+CREATE TABLE score (
+  team_id CHAR(3),
+  FOREIGN KEY (team_id) REFERENCES teams(id),
+  goals INT(3)
+);
+
+INSERT INTO score VALUES ('01', 100), ('03', 20), ('04', 7), ('02', 1), ('05', 55), ('06', 20), ('07', 30), ('08', 40), ('09', 22), ('10', 43), ('11', 60), ('12', 30), ('13', 78), ('14', 48), ('15', 54), ('16', 12);

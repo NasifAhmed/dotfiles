@@ -1,0 +1,19 @@
+
+
+public class Test2 {
+  public static void main(String[] args) {
+    
+    int testNum = 100;
+    
+    switch(testNum%2) {
+      case 0:
+        System.out.println("Even");
+        break;
+      case 1:
+        System.out.println("Odd");
+        break;
+      default:
+        System.out.println("Zero");
+}
+  }
+}

@@ -1,0 +1,8 @@
+[2026-01-30 15:09:04] [INFO] Self-installed 'dots' command to /home/ahmed/.local/bin/dots
+[2026-01-30 15:09:04] [INFO] Added local bin to PATH
+[2026-01-30 15:11:24] [BACKUP] Moved original work to /home/ahmed/dotfiles_backups/pre_link_20260130_151124/work
+[2026-01-30 15:11:24] [SUCCESS] Linked Storage: work
+[2026-01-30 15:11:34] [INFO] Added local bin to PATH
+[2026-01-30 15:11:51] [BACKUP] Moved original obsidian to /home/ahmed/dotfiles_backups/pre_link_20260130_151151/obsidian
+[2026-01-30 15:11:51] [SUCCESS] Linked Storage: obsidian
+[2026-01-30 15:12:01] [INFO] Added local bin to PATH

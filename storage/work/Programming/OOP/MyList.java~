@@ -1,0 +1,35 @@
+public class MyArray {
+  private int a = 0;
+  private int b = 0;
+  private int c = 0;
+  private int d = 0;
+  private int e = 0;
+  
+  public void insert(int input, int index) {
+    if(index == 0) {
+      a = input;
+    } else if(index == 1) {
+      b = input;
+    } else if(index == 2) {
+      c = input;
+    } else if(index == 3) {
+      d = input;
+    } else if(index == 4) {
+      e = input;
+    }
+  }
+  
+  public int show(int index) {
+    if(index == 0) {
+      return a;
+    } else if(index == 1) {
+      return b;
+    } else if(index == 2) {
+      return c;
+    } else if(index == 3) {
+      return d;
+    } else{
+      return e;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+EHLO test.local
+MAIL FROM:risa-yamanaka@metrobooks.co.jp
+RCPT TO:nasif-ahmed@metro-bangladesh.com
+QUIT

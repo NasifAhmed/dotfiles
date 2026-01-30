@@ -1,0 +1,5 @@
+Group 1 : Alif , Mithila, Juthi , Bela
+Group 2 : Foysal , Sourab, Ayat, Nuri
+Group 3 : Shahi, Shohan, Najmul, Talha
+Group 4 : Faruk, Ahad, Rafi
+Group 5: Tamim, Joni,  Shahadat,  Rafin
