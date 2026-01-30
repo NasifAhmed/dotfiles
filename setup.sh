@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-#  OMARCHY DOTS MANAGER v7.1 (Robust Sync Logic)
+#  OMARCHY DOTS MANAGER v8.0 (Final Gold Master)
 #  Author: Ahmed
 # ==============================================================================
 
@@ -14,10 +14,11 @@ LOG_FILE="$DOTFILES_DIR/setup.log"
 PROFILE_FILE="$DOTFILES_DIR/.current_profile"
 BIN_NAME="dots"
 
+# Trap Interrupts (Ctrl+C) to exit cleanly
 trap "tput cnorm; echo; exit" INT
 set -o pipefail 
 
-# --- 1. Logging ---
+# --- 1. Logging & Error Handling ---
 
 log() {
     local level=$1; local msg=$2
@@ -41,27 +42,31 @@ safe_exec() {
     return 0
 }
 
-# --- 2. Environment ---
+# --- 2. Environment Bootstrap ---
 
 ensure_environment() {
+    # Check Dependencies
     if ! command -v git &> /dev/null || ! command -v stow &> /dev/null || ! command -v gum &> /dev/null || ! command -v rsync &> /dev/null; then
         echo "📦 Installing dependencies..."
         if command -v pacman &> /dev/null; then
             sudo pacman -S --noconfirm git stow gum rsync diffutils || die "Pacman failed."
         else
-            die "Dependencies missing."
+            die "Dependencies missing (git, stow, gum, rsync)."
         fi
     fi
 
+    # Structure Setup
     mkdir -p "$HOME/.local/bin" "$STORAGE_DIR" "$BACKUP_ROOT"
     [ ! -f "$STORAGE_MAP" ] && touch "$STORAGE_MAP"
 
+    # Self-Install (Symlink)
     SCRIPT_PATH=$(realpath "$0")
     TARGET_LINK="$HOME/.local/bin/$BIN_NAME"
     if [ ! -L "$TARGET_LINK" ] || [ "$(readlink -f "$TARGET_LINK")" != "$SCRIPT_PATH" ]; then
         ln -sf "$SCRIPT_PATH" "$TARGET_LINK"
     fi
 
+    # Path Setup
     if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
         export PATH="$HOME/.local/bin:$PATH"
     fi
@@ -111,7 +116,7 @@ view_system_status() {
     gum pager < "$report_file"
 }
 
-# --- 4. Config Logic ---
+# --- 4. Config Logic (Stow) ---
 
 stow_config_package() {
     local rel_path=$1
@@ -119,18 +124,22 @@ stow_config_package() {
     local pkg_name=$(basename "$rel_path")
     local stow_dir="$DOTFILES_DIR/$parent_dir" 
 
+    # 1. Detect Conflicts
     local conflict_output=$(stow -d "$stow_dir" -t "$HOME" -n "$pkg_name" 2>&1)
     local conflicts=$(echo "$conflict_output" | grep -oE "over existing target .* since|existing target is .*" | sed -E 's/over existing target (.*) since/\1/; s/existing target is (.*)/\1/')
 
     if [ ! -z "$conflicts" ] && [ "$conflicts" != " " ]; then
         local backup_ts="$BACKUP_ROOT/conflict_configs_$(date +%Y%m%d_%H%M%S)"
+
         echo "$conflicts" | while read conflict; do
             conflict=$(echo "$conflict" | xargs)
             [ -z "$conflict" ] && continue
+
             local real="$HOME/$conflict"
             local source_file="$stow_dir/$pkg_name/$conflict"
 
             if [ -e "$real" ] && [ ! -L "$real" ]; then
+                # Check for identity to avoid redundant backups
                 if [ -f "$source_file" ] && cmp -s "$real" "$source_file"; then
                     rm "$real"
                     log "INFO" "Replaced identical file with link: $conflict"
@@ -140,11 +149,12 @@ stow_config_package() {
                     log "SAFETY" "Backed up modified file: $conflict"
                 fi
             elif [ -L "$real" ]; then 
-                rm "$real"
+                rm "$real" # Remove dead/incorrect links
             fi
         done
     fi
 
+    # 2. Apply Link
     stow -d "$stow_dir" -t "$HOME" -R "$pkg_name" >> "$LOG_FILE" 2>&1
     return $?
 }
@@ -153,12 +163,14 @@ apply_configs() {
     local type=$1; local count=0
     log "INFO" "Applying Configs: $type"
 
+    # Common
     if [ -d "$DOTFILES_DIR/common" ]; then
         for folder in "$DOTFILES_DIR/common"/*; do
             [ -d "$folder" ] && { stow_config_package "common/$(basename "$folder")"; ((count++)); }
         done
     fi
 
+    # Specific
     local target_dir=""
     [[ "$type" == *"Home"* ]] && target_dir="home"
     [[ "$type" == *"Office"* ]] && target_dir="office"
@@ -184,8 +196,9 @@ add_new_config() {
     if [ -z "$target_path" ]; then return; fi
     target_path="${target_path/#\~/$HOME}"
 
-    if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path does not exist."; return; fi
-    if [[ "$target_path" != "$HOME"* ]]; then LAST_MSG="❌ Config must be inside Home directory."; return; fi
+    if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path invalid."; return; fi
+    if [[ "$target_path" != "$HOME"* ]]; then LAST_MSG="❌ Config must be in Home dir."; return; fi
+    if [ -L "$target_path" ]; then LAST_MSG="❌ Is already a symlink."; return; fi
 
     local category=$(gum choose --header "Select Scope" "Common (All Machines)" "Home PC Only" "Office Laptop Only")
     if [ -z "$category" ]; then return; fi
@@ -201,10 +214,16 @@ add_new_config() {
     if [ -z "$user_pkg_name" ]; then user_pkg_name="$pkg_name"; fi
 
     local repo_pkg_root="$DOTFILES_DIR/$repo_subdir/$user_pkg_name"
+
+    # SAFETY: Prevent overwriting existing packages
+    if [ -d "$repo_pkg_root" ]; then
+        LAST_MSG="❌ Package '$user_pkg_name' already exists in $repo_subdir."
+        return
+    fi
+
     local repo_final_dest="$repo_pkg_root/$rel_path" 
 
     gum confirm "Move '$target_path' to $repo_subdir and symlink?" || return
-
     gum spin --spinner dot --title "Moving files..." -- sleep 0.5
 
     if [ -d "$target_path" ]; then
@@ -214,13 +233,14 @@ add_new_config() {
         mkdir -p "$(dirname "$repo_final_dest")"
         mv "$target_path" "$repo_final_dest"
     fi
+
     log "INFO" "Moved $target_path to $repo_final_dest"
 
     stow_config_package "$repo_subdir/$user_pkg_name"
     if [ $? -eq 0 ]; then LAST_MSG="✅ Config '$user_pkg_name' added."; else LAST_MSG="⚠️ Added but stow failed."; fi
 }
 
-# --- 5. Storage Logic ---
+# --- 5. Storage Logic (Vault) ---
 
 handle_single_storage_item() {
     local item_name=$1; local target_path=$2
@@ -275,6 +295,8 @@ add_to_storage() {
     target_path="${target_path/#\~/$HOME}"
 
     if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path invalid"; return; fi
+    if [ -L "$target_path" ]; then LAST_MSG="❌ Already a symlink."; return; fi
+
     local item_name=$(basename "$target_path")
     if grep -q "|$target_path$" "$STORAGE_MAP"; then LAST_MSG="⚠️ Already tracked."; return; fi
 
@@ -283,14 +305,21 @@ add_to_storage() {
     LAST_MSG="✅ Added $item_name to Vault."
 }
 
-# --- 6. Main Loop (ROBUST SYNC) ---
+# --- 6. Power Sync (Robust) ---
 
 power_sync() {
     local scope=$1
     if [ -z "$scope" ]; then return; fi
     cd "$DOTFILES_DIR" || return
 
-    # 1. AUTO-COMMIT (Equivalent to "Stash" but safer)
+    # SAFETY: Check branch
+    local BRANCH=$(git branch --show-current)
+    if [ -z "$BRANCH" ]; then
+        LAST_MSG="❌ Git detached HEAD. Cannot sync."
+        return
+    fi
+
+    # 1. AUTO-COMMIT
     if [[ -n $(git status -s) ]]; then
         gum spin --title "Committing local changes..." -- git add .
         safe_exec git commit -m "Auto-sync $(hostname): $(date '+%Y-%m-%d %H:%M')"
@@ -301,7 +330,6 @@ power_sync() {
     gum spin --title "Checking remote..." -- git fetch origin
     if [ $? -ne 0 ]; then LAST_MSG="❌ Remote unreachable."; return; fi
 
-    local BRANCH=$(git branch --show-current)
     local LOCAL=$(git rev-parse HEAD)
     local REMOTE=$(git rev-parse origin/$BRANCH)
     local BASE=$(git merge-base HEAD origin/$BRANCH)
@@ -312,26 +340,24 @@ power_sync() {
         LAST_MSG="✨ Everything is up to date."
 
     elif [ "$LOCAL" = "$BASE" ]; then
-        # REMOTE IS AHEAD -> Pull
         gum spin --title "⬇️  Pulling updates..." -- git pull origin "$BRANCH"
         RELOAD=true
 
     elif [ "$REMOTE" = "$BASE" ]; then
-        # LOCAL IS AHEAD -> Push
         gum spin --title "⬆️  Pushing changes..." -- git push origin "$BRANCH"
         LAST_MSG="☁️ Changes pushed to cloud."
 
     else
-        # DIVERGED (Conflict) -> Prefer Remote (Merge -X theirs)
+        # CONFLICT -> Remote Wins (Merging with -X theirs)
         gum style --foreground 196 "⚠️ Conflict detected. Merging (Remote Preferred)..."
         gum spin --title "Resolving..." -- git pull origin "$BRANCH" --strategy-option=theirs
 
-        # After merging, we are ahead by the merge commit, so push
+        # Push the merge
         gum spin --title "⬆️  Pushing merge..." -- git push origin "$BRANCH"
         RELOAD=true
     fi
 
-    # 4. RELOAD IF NEEDED
+    # 4. RELOAD
     if [ "$RELOAD" = true ] && [ -f "$PROFILE_FILE" ]; then
         local prof=$(cat "$PROFILE_FILE")
         [[ "$scope" == "All" || "$scope" == "Configs" ]] && { unstow_configs; apply_configs "$prof"; }
@@ -348,6 +374,8 @@ execute_setup() {
     [[ "$scope" == "All" || "$scope" == "Storage" ]] && apply_storage
 }
 
+# --- 7. Main Menu Loop ---
+
 ensure_environment
 LAST_MSG="Welcome to Omarchy Manager"
 
@@ -357,7 +385,7 @@ while true; do
     [ -f "$PROFILE_FILE" ] && CURRENT_PROFILE=$(cat "$PROFILE_FILE")
 
     gum style --border double --padding "1 2" --border-foreground 212 --align center \
-    "OMARCHY MANAGER v7.1" \
+    "OMARCHY MANAGER v8.0" \
     "Host: $(hostname)" \
     "Active Profile: $CURRENT_PROFILE"
 
