@@ -1,6 +1,0 @@
-public class Animal {
-    String name;
-    String sound;
-    
-    void speak() {};
-}
