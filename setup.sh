@@ -279,41 +279,103 @@ handle_single_storage_item() {
         rm -rf "$target_path"
     fi
 
-    if [ ! -e "$repo_path" ]; then return; fi
+    if [ ! -e "$repo_path" ]; then
+        log "WARN" "Storage item not found in vault: $repo_path"
+        add_report "  [WARN] Missing source: $item_name"
+        return 1
+    fi
     
     if [ ! -e "$target_path" ]; then
-        mkdir -p "$(dirname "$target_path")"
-        ln -sf "$repo_path" "$target_path"
-        log "OK" "Linked Vault: $item_name"
+        local parent_dir=$(dirname "$target_path")
+        if ! mkdir -p "$parent_dir"; then
+             log "ERROR" "Failed to create directory: $parent_dir"
+             add_report "  [ERR] Mkdir failed: $parent_dir"
+             return 1
+        fi
+
+        log "INFO" "Linking: ln -sf \"$repo_path\" \"$target_path\""
+        if ln -sf "$repo_path" "$target_path"; then
+            log "OK" "Linked Vault: $item_name"
+            return 0
+        else
+            log "ERROR" "Failed to link $item_name"
+            add_report "  [ERR] Link failed: $item_name"
+            return 1
+        fi
     elif [ -L "$target_path" ]; then
         if [ "$(readlink -f "$target_path")" != "$(readlink -f "$repo_path")" ]; then
              rm "$target_path"
-             ln -sf "$repo_path" "$target_path"
-             log "FIX" "Relinked Vault: $item_name"
+             if ln -sf "$repo_path" "$target_path"; then
+                 log "FIX" "Relinked Vault: $item_name"
+                 add_report "  [FIX] Relinked: $item_name"
+                 return 0
+             else
+                 log "ERROR" "Failed to relink $item_name"
+                 add_report "  [ERR] Relink failed: $item_name"
+                 return 1
+             fi
         fi
+        return 0
     else
          log "WARN" "Conflict for $item_name. Target is a file/dir, not a link."
+         add_report "  [WARN] Conflict: $item_name (Target exists)"
+         return 1
     fi
 }
 
 apply_storage() {
     if [ ! -f "$STORAGE_MAP" ]; then LAST_MSG="ℹ️ No storage map found."; return; fi
     local count=0
+    local err_count=0
+    SESSION_REPORT=""
+    
+    log "INFO" "Applying Storage Vault..."
+    echo "📦 Linking Storage Vault items..."
+    echo "---------------------------------------------------"
+
     while IFS='|' read -r item_name target_path || [ -n "$item_name" ]; do
         [[ "$item_name" =~ ^#.*$ ]] && continue
         [ -z "$item_name" ] && continue
+        
         target_path="${target_path/#\~/$HOME}"
-        handle_single_storage_item "$item_name" "$target_path"
-        ((count++))
+        target_path=$(echo "$target_path" | xargs)
+        
+        echo -n "   • $item_name -> $target_path... "
+        if handle_single_storage_item "$item_name" "$target_path"; then
+            echo "OK"
+            ((count++))
+        else
+            echo "FAIL"
+            ((err_count++))
+        fi
     done < "$STORAGE_MAP"
-    [ -z "$LAST_MSG" ] && LAST_MSG="✅ Synced $count Vault items."
+
+    echo ""
+    if [ -n "$SESSION_REPORT" ]; then
+        echo "📝 Storage Report:"
+        echo -e "$SESSION_REPORT"
+        echo "---------------------------------------------------"
+        gum input --placeholder "Press Enter to acknowledge..."
+    else
+        sleep 0.5
+    fi
+
+    if [ $err_count -gt 0 ]; then
+        LAST_MSG="⚠️ Synced $count, Failed $err_count Vault items."
+    else
+        LAST_MSG="✅ Synced $count Vault items."
+    fi
 }
 
 unstow_storage() {
     [ -f "$STORAGE_MAP" ] && while IFS='|' read -r item_name target_path || [ -n "$item_name" ]; do
         [[ "$item_name" =~ ^#.*$ ]] && continue
         target_path="${target_path/#\~/$HOME}"
-        [ -L "$target_path" ] && rm "$target_path"
+        target_path=$(echo "$target_path" | xargs)
+        if [ -L "$target_path" ]; then
+            rm "$target_path"
+            log "INFO" "Unlinked: $target_path"
+        fi
     done < "$STORAGE_MAP"
 }
 
@@ -498,8 +560,9 @@ execute_switch_profile() {
     [ -f "$PROFILE_FILE" ] && old_profile=$(cat "$PROFILE_FILE")
 
     if [ "$old_profile" == "$new_profile" ]; then
-        LAST_MSG="ℹ️ Already on $new_profile"
-        return
+        if ! gum confirm "Profile '$new_profile' is already active. Re-apply everything?"; then
+            return
+        fi
     fi
 
     # Unstow old
@@ -510,6 +573,7 @@ execute_switch_profile() {
     # Apply new
     echo "$new_profile" > "$PROFILE_FILE"
     apply_configs "$new_profile"
+    apply_storage
     
     # Reload WM if needed
     if command -v hyprctl &> /dev/null;
