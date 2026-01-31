@@ -1,9 +1,22 @@
 #!/bin/bash
 
-# --- Configuration ---
+# ==============================================================================
+#  OFFICE MENU - Dynamic Context
+#  Integrated with Setup Script v11.0
+# ==============================================================================
+
+# --- Configuration (Dynamic Paths) ---
 JAVA_8_PATH="/usr/lib/jvm/java-8-openjdk/bin/java"
-DRJAVA_PATH="/home/nasif/Desktop/drjava.jar"
-SEARCH_ROOT_DIR="/home/nasif/Desktop/WORK/Documents/Teach"
+
+# Assumes 'work' is stowed/linked to ~/Desktop/work via setup.sh
+WORK_DIR="$HOME/Desktop/work"
+CODEBASE_DIR="$HOME/Desktop/codebase"
+
+# Paths relative to standard storage locations
+DRJAVA_PATH="$HOME/Desktop/drjava.jar" # Default fallback
+[ -f "$CODEBASE_DIR/drjava.jar" ] && DRJAVA_PATH="$CODEBASE_DIR/drjava.jar"
+
+SEARCH_ROOT_DIR="$WORK_DIR/Documents/Teach"
 
 # --- Main Menu Options ---
 OPT_DISPLAY="🖥️ Monitor"
@@ -38,7 +51,7 @@ case $SELECTION in
 
                 hyprctl keyword monitor "$EXTERNAL, 1366x768@60, auto, 1, mirror, $INTERNAL"
                 notify-send "Display" "Mirroring to $EXTERNAL"
-                ;;
+                ;; 
 
             "Extend (Strict WS 10)")
                 notify-send "Display" "Extending... Focus will remain on Laptop."
@@ -84,12 +97,17 @@ case $SELECTION in
                 # 3. Turn off projector
                 hyprctl keyword monitor "$EXTERNAL, disable"
                 notify-send "Display" "Disconnected $EXTERNAL"
+                ;; 
+esac
                 ;;
-        esac
-        ;;
 
     # 2. DrJava
     "$OPT_JAVA")
+        if [ ! -f "$DRJAVA_PATH" ]; then
+            notify-send "Error" "DrJava not found at: $DRJAVA_PATH"
+            exit 1
+        fi
+        
         notify-send "Java" "Launching DrJava..."
 
         # --- NEW: Force Tiling ---
@@ -97,10 +115,15 @@ case $SELECTION in
         hyprctl keyword windowrule "tile, title:.*DrJava.*"
 
         "$JAVA_8_PATH" -jar "$DRJAVA_PATH" &
-        ;;
+        ;; 
 
     # 3. Search All PDFs
     "$OPT_SEARCH")
+        if [ ! -d "$SEARCH_ROOT_DIR" ]; then
+            notify-send "Error" "Search directory not found: $SEARCH_ROOT_DIR"
+            exit 1
+        fi
+
         cd "$SEARCH_ROOT_DIR" || exit
         SELECTED_NAME=$(find . -type f -name "*.pdf" | sed 's!.*/!!' | walker --dmenu --placeholder "Search All Files...")
 
@@ -110,5 +133,5 @@ case $SELECTION in
                 xdg-open "$FULL_PATH"
             fi
         fi
-        ;;
+        ;; 
 esac

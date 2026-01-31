@@ -77,8 +77,7 @@ safe_exec() {
 ensure_environment() {
     rotate_log
 
-    if ! command -v pacman &> /dev/null;
- then
+    if ! command -v pacman &> /dev/null; then
         die "This script requires Omarchy OS (Arch-based). 'pacman' was not found."
     fi
 
@@ -88,8 +87,7 @@ ensure_environment() {
     for pkg in "${pkgs[@]}"; do
         local cmd_name="$pkg"
         [ "$pkg" == "diffutils" ] && cmd_name="diff"
-        if ! command -v "$cmd_name" &> /dev/null;
- then
+        if ! command -v "$cmd_name" &> /dev/null; then
             missing_pkgs+=("$pkg")
         fi
     done
@@ -103,17 +101,33 @@ ensure_environment() {
         fi
     fi
 
-    mkdir -p "$HOME/.local/bin" "$STORAGE_DIR" "$BACKUP_ROOT"
+    local LOCAL_BIN="$HOME/.local/bin"
+    mkdir -p "$LOCAL_BIN" "$STORAGE_DIR" "$BACKUP_ROOT"
     [ ! -f "$STORAGE_MAP" ] && touch "$STORAGE_MAP"
 
-    SCRIPT_PATH=$(realpath "$0")
-    TARGET_LINK="$HOME/.local/bin/$BIN_NAME"
-    if [ ! -L "$TARGET_LINK" ] || [ "$(readlink -f "$TARGET_LINK")" != "$SCRIPT_PATH" ]; then
-        ln -sf "$SCRIPT_PATH" "$TARGET_LINK"
+    # Ensure PATH in current session
+    if [[ ":$PATH:" != ":$LOCAL_BIN:"* ]]; then
+        export PATH="$LOCAL_BIN:$PATH"
+        log "INFO" "Added .local/bin to current session PATH"
     fi
 
-    if [[ ":$PATH:" != ":$HOME/.local/bin:"* ]]; then
-        export PATH="$HOME/.local/bin:$PATH"
+    # Ensure PATH persistence in shell configs
+    local PATH_CMD='export PATH="$HOME/.local/bin:$PATH"'
+    for shell_rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+        if [ -f "$shell_rc" ]; then
+            if ! grep -Fq "$LOCAL_BIN" "$shell_rc"; then
+                echo "" >> "$shell_rc"
+                echo "# Added by Omarchy Setup" >> "$shell_rc"
+                echo "$PATH_CMD" >> "$shell_rc"
+                log "INFO" "Appended local/bin to PATH in $shell_rc"
+            fi
+        fi
+    done
+
+    SCRIPT_PATH=$(realpath "$0")
+    TARGET_LINK="$LOCAL_BIN/$BIN_NAME"
+    if [ ! -L "$TARGET_LINK" ] || [ "$(readlink -f "$TARGET_LINK")" != "$SCRIPT_PATH" ]; then
+        ln -sf "$SCRIPT_PATH" "$TARGET_LINK"
     fi
 
     find "$BACKUP_ROOT" -mindepth 1 -maxdepth 1 -type d -mtime +$MAX_BACKUP_DAYS -exec rm -rf {} + 2>/dev/null
