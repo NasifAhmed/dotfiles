@@ -459,11 +459,15 @@ manage_configs() {
         "Delete Config")
             local prof=$(gum choose --header "Select Profile" $(get_profiles))
             [ -z "$prof" ] && return
-            local pkg=$(gum choose --header "Select Package" $(ls "$DOTFILES_DIR/$prof"))
+            
+            local pkgs=$(ls -1 "$DOTFILES_DIR/$prof" 2>/dev/null)
+            [ -z "$pkgs" ] && { LAST_MSG="⚠️ No packages in $prof."; return; }
+            
+            local pkg=$(gum choose --header "Select Package" $pkgs)
             [ -z "$pkg" ] && return
 
             if gum confirm "Delete '$pkg' from '$prof'? (Unstows & Deletes)"; then
-                stow -d "$DOTFILES_DIR/$prof" -t "$HOME" -D "$pkg"
+                stow -d "$DOTFILES_DIR/$prof" -t "$HOME" -D "$pkg" 2>/dev/null
                 rm -rf "$DOTFILES_DIR/$prof/$pkg"
                 LAST_MSG="🗑️ Package '$pkg' deleted."
             fi
@@ -498,13 +502,19 @@ manage_storage() {
         "Remove Item")
             local selection=$(gum choose --header "Select Item to Remove" $(cut -d'|' -f1 "$STORAGE_MAP"))
             if [ -n "$selection" ]; then
+                local target_path=$(grep "^$selection|" "$STORAGE_MAP" | cut -d'|' -f2)
+                target_path="${target_path/#\~/$HOME}"
+
                 if gum confirm "Stop tracking '$selection'? (Keeps file in Vault, removes link)"; then
+                    # Remove the symlink if it exists
+                    if [ -L "$target_path" ]; then
+                        rm "$target_path"
+                        log "INFO" "Removed symlink for $selection at $target_path"
+                    fi
+
                     # Remove line from map
                     grep -v "^$selection|" "$STORAGE_MAP" > "$STORAGE_MAP.tmp" && mv "$STORAGE_MAP.tmp" "$STORAGE_MAP"
-                    # We do NOT delete the data from storage/ to be safe, just stop syncing/linking
-                    # Optionally we could remove the symlink in HOME
-                    # Let's find where it was linked
-                    LAST_MSG="✅ Removed '$selection' from map."
+                    LAST_MSG="✅ Removed '$selection' from map and unlinked."
                 fi
             fi
             ;; 
