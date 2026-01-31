@@ -145,15 +145,19 @@ stow_config_package() {
     local pkg_name=$2
     local stow_dir="$DOTFILES_DIR/$profile" 
 
+    log "INFO" "Stowing package: $pkg_name"
+
     # 1. Dry-run to catch conflicts
     local conflict_output
     conflict_output=$(stow -d "$stow_dir" -t "$HOME" -n "$pkg_name" 2>&1)
     
     if [[ "$conflict_output" == *"existing target"* ]]; then
+        log "WARN" "Conflicts detected in $pkg_name, attempting resolution..."
         local backup_ts="$BACKUP_ROOT/conflict_configs_$(date +%Y%m%d_%H%M%S)"
+        local temp_report=$(mktemp)
         
         # Extract conflicting file paths
-        echo "$conflict_output" | grep -E "existing target" | sed -E '
+        echo "$conflict_output" | grep -iE "existing target" | sed -E '
             s/.*over existing target (.*) since.*/\1/
             s/.*existing target is not owned by stow: (.*)/\1/
             s/.*existing target is neither a link nor a directory: (.*)/\1/
@@ -168,19 +172,24 @@ stow_config_package() {
                 if [ -f "$source_file" ] && cmp -s "$real" "$source_file"; then
                     rm "$real"
                     log "INFO" "Resolved conflict (identical content): $conflict"
-                    add_report "  [FIX] Replaced identical: $conflict"
+                    echo "  [FIX] Replaced identical: $conflict" >> "$temp_report"
                 else
                     mkdir -p "$backup_ts/$(dirname "$conflict")"
                     mv "$real" "$backup_ts/$conflict"
                     log "SAFETY" "Conflict backed up to $backup_ts: $conflict"
-                    add_report "  [BAK] Backed up: $conflict"
+                    echo "  [BAK] Backed up: $conflict" >> "$temp_report"
                 fi
             elif [ -L "$real" ]; then 
                 rm "$real"
                 log "INFO" "Removed conflicting symlink: $conflict"
-                add_report "  [FIX] Removed broken link: $conflict"
+                echo "  [FIX] Removed broken link: $conflict" >> "$temp_report"
             fi
         done
+        
+        if [ -s "$temp_report" ]; then
+            SESSION_REPORT="${SESSION_REPORT}$(cat "$temp_report")\n"
+        fi
+        rm -f "$temp_report"
     fi
 
     # 2. Actual Stow Command
@@ -191,6 +200,8 @@ stow_config_package() {
         log "ERROR" "Stow failed for $profile/$pkg_name (Exit: $res)"
         add_report "  [ERR] Stow failed for package: $pkg_name"
         return $res
+    else
+        log "OK" "Successfully stowed: $pkg_name"
     fi
     return 0
 }
