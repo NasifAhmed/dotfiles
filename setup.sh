@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-#  NASIF'S OMARCHY SETUP v10.0 (Native Edition)
+#  NASIF'S OMARCHY SETUP v11.0 (Self-Sustaining Edition)
 #  Author: Nasif Ahmed
 # ==============================================================================
 
@@ -47,7 +47,6 @@ rotate_log() {
 log() {
     local level=$1; local msg=$2
     local timestamp=$(date "+%H:%M:%S")
-    # Strip color codes for log file
     local clean_msg=$(echo "$msg" | sed 's/\x1b\[[0-9;]*m//g')
     echo "[$timestamp] [$level] $clean_msg" >> "$LOG_FILE"
 }
@@ -73,25 +72,22 @@ safe_exec() {
     return 0
 }
 
-# --- 2. Environment Bootstrap (Omarchy OS Exclusive) ---
+# --- 2. Environment Bootstrap ---
 
 ensure_environment() {
-    # 0. Rotate log file
     rotate_log
 
-    # 1. Check for Pacman (Core Sanity Check)
-    if ! command -v pacman &> /dev/null; then
+    if ! command -v pacman &> /dev/null;
+ then
         die "This script requires Omarchy OS (Arch-based). 'pacman' was not found."
     fi
 
-    # 2. Check & Install Dependencies
     local pkgs=("git" "stow" "gum" "rsync" "diffutils")
     local missing_pkgs=()
 
     for pkg in "${pkgs[@]}"; do
         local cmd_name="$pkg"
         [ "$pkg" == "diffutils" ] && cmd_name="diff"
-        
         if ! command -v "$cmd_name" &> /dev/null;
  then
             missing_pkgs+=("$pkg")
@@ -99,14 +95,7 @@ ensure_environment() {
     done
 
     if [ ${#missing_pkgs[@]} -gt 0 ]; then
-        if command -v gum &> /dev/null;
- then
-            gum style --foreground "$C_WARN" "📦 Installing missing Omarchy tools: ${missing_pkgs[*]}"
-        else
-            echo "📦 Installing missing Omarchy tools: ${missing_pkgs[*]}"
-        fi
-
-        # Omarchy is Arch-based -> Use Pacman
+        echo "📦 Installing missing Omarchy tools: ${missing_pkgs[*]}"
         if sudo pacman -S --noconfirm "${missing_pkgs[@]}"; then
             log "INFO" "Installed dependencies: ${missing_pkgs[*]}"
         else
@@ -114,7 +103,6 @@ ensure_environment() {
         fi
     fi
 
-    # 3. Setup Directories & Path
     mkdir -p "$HOME/.local/bin" "$STORAGE_DIR" "$BACKUP_ROOT"
     [ ! -f "$STORAGE_MAP" ] && touch "$STORAGE_MAP"
 
@@ -128,77 +116,48 @@ ensure_environment() {
         export PATH="$HOME/.local/bin:$PATH"
     fi
 
-    # 4. Cleanup old backups
     find "$BACKUP_ROOT" -mindepth 1 -maxdepth 1 -type d -mtime +$MAX_BACKUP_DAYS -exec rm -rf {} + 2>/dev/null
 }
 
-# --- 3. Reporting Logic ---
+# --- 3. Helpers ---
 
-view_system_status() {
-    local report_file="/tmp/dots_status_report.txt"
-    {
-        gum style --foreground "$C_PRIMARY" --bold "🔮 NASIF'S OMARCHY STATUS"
-        echo "==================================="
-
-        local current_prof="None"
-        [ -f "$PROFILE_FILE" ] && current_prof=$(cat "$PROFILE_FILE")
-        echo -e "\n🔹 ACTIVE PROFILE: $current_prof\n"
-
-        echo "🔹 CONFIG PACKAGES:"
-        echo "   [Common]"
-        if [ -d "$DOTFILES_DIR/common" ]; then
-            ls -1 "$DOTFILES_DIR/common" | sed 's/^/   - /'
-        else
-            echo "   (None)"
-        fi
-
-        if [[ "$current_prof" != "None"* ]]; then
-            local target_dir=""
-            [[ "$current_prof" == *"Home"* ]] && target_dir="home"
-            [[ "$current_prof" == *"Office"* ]] && target_dir="office"
-
-            echo -e "\n   [Specific: $target_dir]"
-            if [ -d "$DOTFILES_DIR/$target_dir" ]; then
-                ls -1 "$DOTFILES_DIR/$target_dir" | sed 's/^/   - /'
-            fi
-        fi
-
-        echo -e "\n🔹 VAULT (Tracked Folders):"
-        if [ -f "$STORAGE_MAP" ] && [ -s "$STORAGE_MAP" ]; then
-            while IFS='|' read -r name path || [ -n "$name" ]; do
-                [[ "$name" =~ ^#.*$ ]] && continue
-                [ -z "$name" ] && continue
-                echo "   • $name  ->  $path"
-            done < "$STORAGE_MAP"
-        else
-            echo "   (Vault is empty)"
-        fi
-    } > "$report_file"
-
-    gum pager < "$report_file"
+get_profiles() {
+    # Lists directories that are not 'storage', 'scripts', 'test', etc.
+    find "$DOTFILES_DIR" -maxdepth 1 -mindepth 1 -type d \
+        ! -name ".*" \
+        ! -name "storage" \
+        ! -name "scripts" \
+        -exec basename {} \; | sort
 }
 
 # --- 4. Config Logic (Stow) ---
 
-stow_config_package() {
-    local rel_path=$1
-    local parent_dir=$(dirname "$rel_path")
-    local pkg_name=$(basename "$rel_path")
-    local stow_dir="$DOTFILES_DIR/$parent_dir" 
+# --- 4. Config Logic (Stow) ---
 
-    # Capture output to find conflicts
+SESSION_REPORT=""
+
+add_report() {
+    SESSION_REPORT="${SESSION_REPORT}$1\n"
+}
+
+stow_config_package() {
+    local profile=$1
+    local pkg_name=$2
+    local stow_dir="$DOTFILES_DIR/$profile" 
+
+    # 1. Dry-run to catch conflicts
     local conflict_output
     conflict_output=$(stow -d "$stow_dir" -t "$HOME" -n "$pkg_name" 2>&1)
     
-    # Regex to catch standard stow conflict messages
-    local conflicts
-    conflicts=$(echo "$conflict_output" | grep -oE "(over existing target|existing target is) .*" | sed -E 's/.*over existing target (.*) since.*/\1/; s/.*existing target is (.*)/\1/')
-
-    if [ -n "$conflicts" ] && [ "$conflicts" != " " ]; then
+    if [[ "$conflict_output" == *"existing target"* ]]; then
         local backup_ts="$BACKUP_ROOT/conflict_configs_$(date +%Y%m%d_%H%M%S)"
-
-        echo "$conflicts" | while read conflict;
- do
+        
+        # Extract conflicting file paths
+        echo "$conflict_output" | grep -E "existing target" | sed -E '
+            s/.*over existing target (.*) since.*/\1/
+            s/.*existing target is not owned by stow: (.*)/\1/
+            s/.*existing target is neither a link nor a directory: (.*)/\1/
+        ' | while read conflict; do
             conflict=$(echo "$conflict" | xargs)
             [ -z "$conflict" ] && continue
 
@@ -208,98 +167,84 @@ stow_config_package() {
             if [ -e "$real" ] && [ ! -L "$real" ]; then
                 if [ -f "$source_file" ] && cmp -s "$real" "$source_file"; then
                     rm "$real"
-                    log "INFO" "Replaced identical file: $conflict"
+                    log "INFO" "Resolved conflict (identical content): $conflict"
+                    add_report "  [FIX] Replaced identical: $conflict"
                 else
                     mkdir -p "$backup_ts/$(dirname "$conflict")"
                     mv "$real" "$backup_ts/$conflict"
-                    log "SAFETY" "Backed up: $conflict"
+                    log "SAFETY" "Conflict backed up to $backup_ts: $conflict"
+                    add_report "  [BAK] Backed up: $conflict"
                 fi
             elif [ -L "$real" ]; then 
-                # If it's a dead or wrong link, remove it
                 rm "$real"
-                log "INFO" "Removed broken/wrong link: $conflict"
+                log "INFO" "Removed conflicting symlink: $conflict"
+                add_report "  [FIX] Removed broken link: $conflict"
             fi
         done
     fi
 
+    # 2. Actual Stow Command
     stow -d "$stow_dir" -t "$HOME" -R "$pkg_name" >> "$LOG_FILE" 2>&1
     local res=$?
-    [ $res -ne 0 ] && log "ERROR" "Stow failed for $pkg_name (Exit: $res)"
-    return $res
+    
+    if [ $res -ne 0 ]; then
+        log "ERROR" "Stow failed for $profile/$pkg_name (Exit: $res)"
+        add_report "  [ERR] Stow failed for package: $pkg_name"
+        return $res
+    fi
+    return 0
 }
 
 apply_configs() {
-    local type=$1; local count=0
-    log "INFO" "Applying Configs: $type"
+    local profile=$1
+    local count=0
+    local err_count=0
+    SESSION_REPORT=""
+    
+    log "INFO" "Applying Configs for Profile: $profile"
+    echo "⚙️  Applying configuration profile: $profile"
+    echo "---------------------------------------------------"
 
-    if [ -d "$DOTFILES_DIR/common" ]; then
-        for folder in "$DOTFILES_DIR/common"/*;
- do
-            [ -d "$folder" ] && { stow_config_package "common/$(basename "$folder")"; ((count++)); }
+    if [ -d "$DOTFILES_DIR/$profile" ]; then
+        for folder in "$DOTFILES_DIR/$profile"/*; do
+            if [ -d "$folder" ]; then
+                local pkg=$(basename "$folder")
+                echo -n "   • $pkg... "
+                if stow_config_package "$profile" "$pkg"; then
+                    echo "OK"
+                    ((count++))
+                else
+                    echo "FAIL"
+                    ((err_count++))
+                fi
+            fi
         done
     fi
-
-    local target_dir=""
-    [[ "$type" == *"Home"* ]] && target_dir="home"
-    [[ "$type" == *"Office"* ]] && target_dir="office"
-
-    if [ -d "$DOTFILES_DIR/$target_dir" ]; then
-        for folder in "$DOTFILES_DIR/$target_dir"/*;
- do
-            [ -d "$folder" ] && { stow_config_package "$target_dir/$(basename "$folder")"; ((count++)); }
-        done
+    
+    echo ""
+    if [ -n "$SESSION_REPORT" ]; then
+        echo "📝 Action Report:"
+        echo -e "$SESSION_REPORT"
+        echo "---------------------------------------------------"
+        gum input --placeholder "Press Enter to acknowledge..."
+    else
+        sleep 0.5
     fi
-    [ $count -eq 0 ] && LAST_MSG="⚠️  No packages found!" || LAST_MSG="✅ Applied $count config packages."
+
+    if [ $err_count -gt 0 ]; then
+        LAST_MSG="⚠️  Applied $count, Failed $err_count."
+    elif [ $count -eq 0 ]; then
+        LAST_MSG="⚠️  No packages found in $profile!"
+    else
+        LAST_MSG="✅ Applied $count config packages."
+    fi
 }
 
 unstow_configs() {
-    for d in common home office;
- do
-        if [ -d "$DOTFILES_DIR/$d" ]; then
-            ls "$DOTFILES_DIR/$d" | xargs -I {} stow -d "$DOTFILES_DIR/$d" -t "$HOME" -D "{}" 2>/dev/null
-        fi
-    done
-}
-
-add_new_config() {
-    local target_path=$(gum input --cursor.foreground "$C_PRIMARY" --placeholder "/home/user/.config/app" --header "Add Config (Esc to cancel)")
-    if [ -z "$target_path" ]; then return; fi
-    target_path="${target_path/#\~/$HOME}"
-
-    if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path invalid."; return; fi
-    if [[ "$target_path" != "$HOME"* ]]; then LAST_MSG="❌ Must be in Home dir."; return; fi
-    if [ -L "$target_path" ]; then LAST_MSG="❌ Already a symlink."; return; fi
-
-    local category=$(gum choose --cursor.foreground "$C_PRIMARY" --header "Select Scope" "Common (All Machines)" "Home PC Only" "Office Laptop Only")
-    if [ -z "$category" ]; then return; fi
-
-    local repo_subdir="common"
-    [[ "$category" == "Home PC Only" ]] && repo_subdir="home"
-    [[ "$category" == "Office Laptop Only" ]] && repo_subdir="office"
-
-    local rel_path="${target_path#$HOME/}"
-    local pkg_name=$(basename "$target_path") 
-    local user_pkg_name=$(gum input --value "$pkg_name" --header "Package Name")
-    [ -z "$user_pkg_name" ] && user_pkg_name="$pkg_name"
-
-    local repo_pkg_root="$DOTFILES_DIR/$repo_subdir/$user_pkg_name"
-    if [ -d "$repo_pkg_root" ]; then LAST_MSG="❌ Package '$user_pkg_name' exists."; return; fi
-
-    local repo_final_dest="$repo_pkg_root/$rel_path" 
-
-    gum confirm "Move '$target_path' to $repo_subdir?" || return
-    gum spin --spinner dot --title "Moving..." -- sleep 0.5
-
-    if [ -d "$target_path" ]; then
-        mkdir -p "$(dirname "$repo_final_dest")"
-        mv "$target_path" "$(dirname "$repo_final_dest")/"
-    else
-        mkdir -p "$(dirname "$repo_final_dest")"
-        mv "$target_path" "$repo_final_dest"
+    local profile=$1
+    if [ -d "$DOTFILES_DIR/$profile" ]; then
+        ls "$DOTFILES_DIR/$profile" | xargs -I {} stow -d "$DOTFILES_DIR/$profile" -t "$HOME" -D "{}" 2>/dev/null
     fi
-
-    stow_config_package "$repo_subdir/$user_pkg_name"
-    if [ $? -eq 0 ]; then LAST_MSG="✅ Config '$user_pkg_name' added."; else LAST_MSG="⚠️ Added but stow failed."; fi
 }
 
 # --- 5. Storage Logic (Vault) ---
@@ -308,7 +253,6 @@ handle_single_storage_item() {
     local item_name=$1; local target_path=$2
     local repo_path="$STORAGE_DIR/$item_name"
 
-    # Migration Mode: If target exists and is NOT a symlink, ingest it into repo
     if [ -e "$target_path" ] && [ ! -L "$target_path" ]; then
         gum spin --spinner globe --title "Ingesting $item_name..." -- sleep 0.5
         local backup_loc="$BACKUP_ROOT/pre_link_$(date +%Y%m%d_%H%M%S)/$item_name"
@@ -326,13 +270,11 @@ handle_single_storage_item() {
 
     if [ ! -e "$repo_path" ]; then return; fi
     
-    # Linking Mode: Target shouldn't exist or should be a symlink
     if [ ! -e "$target_path" ]; then
         mkdir -p "$(dirname "$target_path")"
         ln -sf "$repo_path" "$target_path"
         log "OK" "Linked Vault: $item_name"
     elif [ -L "$target_path" ]; then
-        # If it's a symlink, check where it points
         if [ "$(readlink -f "$target_path")" != "$(readlink -f "$repo_path")" ]; then
              rm "$target_path"
              ln -sf "$repo_path" "$target_path"
@@ -364,23 +306,124 @@ unstow_storage() {
     done < "$STORAGE_MAP"
 }
 
-add_to_storage() {
-    local target_path=$(gum input --cursor.foreground "$C_PRIMARY" --placeholder "/abs/path" --header "Add to Vault")
-    if [ -z "$target_path" ]; then return; fi
-    target_path="${target_path/#\~/$HOME}"
+# --- 6. CRUD Operations (Self-Sustaining) ---
 
-    if [ ! -e "$target_path" ]; then LAST_MSG="❌ Invalid path."; return; fi
-    if [ -L "$target_path" ]; then LAST_MSG="❌ Already linked."; return; fi
-
-    local item_name=$(basename "$target_path")
-    if grep -q "|$target_path$" "$STORAGE_MAP"; then LAST_MSG="⚠️ Already tracked."; return; fi
-
-    echo "$item_name|$target_path" >> "$STORAGE_MAP"
-    handle_single_storage_item "$item_name" "$target_path"
-    LAST_MSG="✅ Added $item_name to Vault."
+manage_profiles() {
+    local action=$(gum choose --header "Manage Profiles" "Create New Profile" "Delete Profile" "List Content" "Back")
+    case "$action" in
+        "Create New Profile")
+            local name=$(gum input --placeholder "new-profile" --header "Profile Name")
+            if [ -n "$name" ]; then
+                if [ -d "$DOTFILES_DIR/$name" ]; then
+                    LAST_MSG="❌ Profile '$name' already exists."
+                else
+                    mkdir -p "$DOTFILES_DIR/$name"
+                    LAST_MSG="✅ Profile '$name' created."
+                fi
+            fi
+            ;; 
+        "Delete Profile")
+            local prof=$(gum choose --header "Select Profile to DELETE" $(get_profiles))
+            if [ -n "$prof" ]; then
+                if gum confirm "Permanently delete '$prof'? This deletes files!"; then
+                    rm -rf "$DOTFILES_DIR/$prof"
+                    LAST_MSG="🗑️ Profile '$prof' deleted."
+                fi
+            fi
+            ;; 
+        "List Content")
+            local prof=$(gum choose --header "Select Profile" $(get_profiles))
+            if [ -n "$prof" ]; then
+                ls -1 "$DOTFILES_DIR/$prof" | gum pager
+            fi
+            ;; 
+    esac
 }
 
-# --- 6. Power Sync ---
+manage_configs() {
+    local action=$(gum choose --header "Manage Configurations" "Add New Config" "Delete Config" "Back")
+    case "$action" in
+        "Add New Config")
+            local target_path=$(gum input --placeholder "/home/user/.config/app" --header "Config Path (Esc to cancel)")
+            if [ -z "$target_path" ]; then return; fi
+            target_path="${target_path/#\~/$HOME}"
+            
+            if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path invalid."; return; fi
+            if [[ "$target_path" != "$HOME"* ]]; then LAST_MSG="❌ Must be in Home dir."; return; fi
+            if [ -L "$target_path" ]; then LAST_MSG="❌ Already a symlink."; return; fi
+
+            local prof=$(gum choose --header "Select Profile" $(get_profiles))
+            if [ -z "$prof" ]; then return; fi
+
+            local pkg_name=$(basename "$target_path")
+            local user_pkg_name=$(gum input --value "$pkg_name" --header "Package Name")
+            [ -z "$user_pkg_name" ] && user_pkg_name="$pkg_name"
+
+            local rel_path="${target_path#$HOME/}"
+            local dest_dir="$DOTFILES_DIR/$prof/$user_pkg_name"
+
+            if [ -d "$dest_dir" ]; then LAST_MSG="❌ Package exists in $prof."; return; fi
+
+            if gum confirm "Move '$target_path' to '$prof/$user_pkg_name'?"; then
+                 mkdir -p "$(dirname "$dest_dir/$rel_path")"
+                 mv "$target_path" "$dest_dir/$rel_path"
+                 stow_config_package "$prof" "$user_pkg_name"
+                 LAST_MSG="✅ Config added to $prof."
+            fi
+            ;; 
+        "Delete Config")
+            local prof=$(gum choose --header "Select Profile" $(get_profiles))
+            [ -z "$prof" ] && return
+            local pkg=$(gum choose --header "Select Package" $(ls "$DOTFILES_DIR/$prof"))
+            [ -z "$pkg" ] && return
+
+            if gum confirm "Delete '$pkg' from '$prof'? (Unstows & Deletes)"; then
+                stow -d "$DOTFILES_DIR/$prof" -t "$HOME" -D "$pkg"
+                rm -rf "$DOTFILES_DIR/$prof/$pkg"
+                LAST_MSG="🗑️ Package '$pkg' deleted."
+            fi
+            ;; 
+    esac
+}
+
+manage_storage() {
+    local action=$(gum choose --header "Manage Storage" "Add Item" "Remove Item" "List Items" "Back")
+    case "$action" in
+        "Add Item")
+            local target_path=$(gum input --placeholder "/abs/path" --header "Add to Vault")
+            if [ -z "$target_path" ]; then return; fi
+            target_path="${target_path/#\~/$HOME}"
+
+            if [ ! -e "$target_path" ]; then LAST_MSG="❌ Invalid path."; return; fi
+            if [ -L "$target_path" ]; then LAST_MSG="❌ Already linked."; return; fi
+
+            local item_name=$(basename "$target_path")
+            if grep -q "|$target_path$" "$STORAGE_MAP"; then LAST_MSG="⚠️ Already tracked."; return; fi
+
+            echo "$item_name|$target_path" >> "$STORAGE_MAP"
+            handle_single_storage_item "$item_name" "$target_path"
+            LAST_MSG="✅ Added $item_name to Vault."
+            ;; 
+        "Remove Item")
+            local selection=$(gum choose --header "Select Item to Remove" $(cut -d'|' -f1 "$STORAGE_MAP"))
+            if [ -n "$selection" ]; then
+                if gum confirm "Stop tracking '$selection'? (Keeps file in Vault, removes link)"; then
+                    # Remove line from map
+                    grep -v "^$selection|" "$STORAGE_MAP" > "$STORAGE_MAP.tmp" && mv "$STORAGE_MAP.tmp" "$STORAGE_MAP"
+                    # We do NOT delete the data from storage/ to be safe, just stop syncing/linking
+                    # Optionally we could remove the symlink in HOME
+                    # Let's find where it was linked
+                    LAST_MSG="✅ Removed '$selection' from map."
+                fi
+            fi
+            ;; 
+        "List Items")
+            gum pager < "$STORAGE_MAP"
+            ;; 
+    esac
+}
+
+# --- 7. Core Actions ---
 
 power_sync() {
     local scope=$1
@@ -424,11 +467,11 @@ power_sync() {
 
     if [ "$RELOAD" = true ] && [ -f "$PROFILE_FILE" ]; then
         local prof=$(cat "$PROFILE_FILE")
-        [[ "$scope" == "All" || "$scope" == "Configs" ]] && { unstow_configs; apply_configs "$prof"; }
+        [[ "$scope" == "All" || "$scope" == "Configs" ]] && { unstow_configs "$prof"; apply_configs "$prof"; }
         [[ "$scope" == "All" || "$scope" == "Storage" ]] && apply_storage
         
-        if command -v hyprctl &> /dev/null; then
-            log "INFO" "Reloading Hyprland..."
+        if command -v hyprctl &> /dev/null;
+ then
             hyprctl reload
         fi
 
@@ -436,31 +479,65 @@ power_sync() {
     fi
 }
 
-execute_setup() {
-    local profile=$1; local scope=$2
-    if [ -z "$profile" ] || [ -z "$scope" ]; then LAST_MSG="❌ Cancelled"; return; fi
-    echo "$profile" > "$PROFILE_FILE"
-    [[ "$scope" == "All" || "$scope" == "Configs" ]] && { unstow_configs; apply_configs "$profile"; }
-    [[ "$scope" == "All" || "$scope" == "Storage" ]] && apply_storage
+execute_switch_profile() {
+    local new_profile=$(gum choose --header "Select Profile" $(get_profiles))
+    if [ -z "$new_profile" ]; then return; fi
 
-    if command -v hyprctl &> /dev/null; then
-        log "INFO" "Reloading Hyprland..."
+    local old_profile="None"
+    [ -f "$PROFILE_FILE" ] && old_profile=$(cat "$PROFILE_FILE")
+
+    if [ "$old_profile" == "$new_profile" ]; then
+        LAST_MSG="ℹ️ Already on $new_profile"
+        return
+    fi
+
+    # Unstow old
+    if [ "$old_profile" != "None" ]; then
+        unstow_configs "$old_profile"
+    fi
+
+    # Apply new
+    echo "$new_profile" > "$PROFILE_FILE"
+    apply_configs "$new_profile"
+    
+    # Reload WM if needed
+    if command -v hyprctl &> /dev/null;
+ then
         hyprctl reload
     fi
 }
 
-# --- 7. UI Helpers ---
+view_system_status() {
+    local report_file="/tmp/dots_status_report.txt"
+    {
+        gum style --foreground "$C_PRIMARY" --bold "🔮 NASIF'S OMARCHY STATUS"
+        echo "==================================="
 
-get_greeting() {
-    local h=$(date +%H)
-    if [ $h -lt 12 ]; then echo "Good Morning";
-    elif [ $h -lt 18 ]; then echo "Good Afternoon";
-    else echo "Good Evening"; fi
+        local current_prof="None"
+        [ -f "$PROFILE_FILE" ] && current_prof=$(cat "$PROFILE_FILE")
+        echo -e "\n🔹 ACTIVE PROFILE: $current_prof\n"
+
+        for prof in $(get_profiles);
+ do
+            echo "🔹 PROFILE: $prof"
+            ls -1 "$DOTFILES_DIR/$prof" | sed 's/^/   - /'
+            echo ""
+        done
+
+        echo -e "\n🔹 VAULT (Tracked Folders):"
+        if [ -f "$STORAGE_MAP" ] && [ -s "$STORAGE_MAP" ]; then
+            cat "$STORAGE_MAP" | sed 's/^/   • /'
+        else
+            echo "   (Vault is empty)"
+        fi
+    } > "$report_file"
+
+    gum pager < "$report_file"
 }
 
 draw_dashboard() {
     clear
-    local greeting="$(get_greeting), Nasif"
+    local greeting="Hello, Nasif"
     local branch=$(git branch --show-current 2>/dev/null || echo "Unknown")
     local status="Clean ✨"
     [[ -n $(git status -s) ]] && status="Dirty ✏️"
@@ -478,11 +555,6 @@ draw_dashboard() {
     gum style --foreground "$C_MUTED" --align center "📦 Vault Items: $vault_count  |  📝 Git State: $status"
     echo "" 
     
-    # Recent Logs
-    gum style --foreground "$C_MUTED" -- "--- Recent Activity ---"
-    tail -n 10 "$LOG_FILE" | sed 's/^/  /' | cut -c 1-60
-    echo "" 
-
     # Message Area
     if [ -n "$LAST_MSG" ]; then
         gum style --foreground "$C_ACCENT" --bold --align center --border normal --border-foreground "$C_ACCENT" --padding "0 2" "$LAST_MSG"
@@ -493,7 +565,7 @@ draw_dashboard() {
 # --- 8. Main Loop ---
 
 ensure_environment
-LAST_MSG="Welcome back, Nasif."
+LAST_MSG="Welcome back."
 
 while true;
  do
@@ -503,62 +575,31 @@ while true;
     draw_dashboard
 
     ACTION=$(gum choose --cursor.foreground "$C_PRIMARY" --header "Select Operation" \
-        "🚀  Sync System" \
-        "🎭  Switch Profile" \
+        "🚀  Sync System (Git)" \
+        "🎭  Switch / Apply Profile" \
+        "📁  Manage Profiles" \
+        "⚙️  Manage Configs" \
+        "📦  Manage Storage" \
         "📊  System Status" \
-        "➕  Add Config (Stow)" \
-        "📦  Add to Vault" \
-        "🧹  Uninstall/Reset" \
         "📜  View Logs" \
-        "🔎  Filter Logs" \
-        "📝  Open Log in Editor" \
         "👋  Exit")
 
     case "$ACTION" in
-        "🚀  Sync System")
+        "🚀  Sync System (Git)")
             SCOPE=$(gum choose --cursor.foreground "$C_PRIMARY" "All" "Configs Only" "Storage Only")
             [ -n "$SCOPE" ] && power_sync "$SCOPE" || LAST_MSG="❌ Cancelled"
             ;; 
-        "🎭  Switch Profile")
-            PROFILE=$(gum choose --cursor.foreground "$C_PRIMARY" --header "Select Machine" "Home PC" "Office Laptop")
-            if [ -n "$PROFILE" ]; then
-                SCOPE=$(gum choose --cursor.foreground "$C_PRIMARY" --header "Scope" "All" "Configs Only" "Storage Only")
-                [ -n "$SCOPE" ] && execute_setup "$PROFILE" "$SCOPE" || LAST_MSG="❌ Cancelled"
-            else
-                LAST_MSG="❌ Cancelled"
-            fi
+        "🎭  Switch / Apply Profile")
+            execute_switch_profile
             ;; 
+        "📁  Manage Profiles") manage_profiles ;; 
+        "⚙️  Manage Configs") manage_configs ;; 
+        "📦  Manage Storage") manage_storage ;; 
         "📊  System Status") view_system_status ;; 
-        "➕  Add Config (Stow)") add_new_config ;; 
-        "📦  Add to Vault") add_to_storage ;; 
-        "🧹  Uninstall/Reset")
-            SCOPE=$(gum choose --cursor.foreground "$C_ERR" "All" "Configs Only" "Storage Only")
-            if [ -n "$SCOPE" ] && gum confirm "Unlink $SCOPE? This is destructive."; then
-                [[ "$SCOPE" == "All" || "$SCOPE" == "Configs" ]] && unstow_configs
-                [[ "$SCOPE" == "All" || "$SCOPE" == "Storage" ]] && unstow_storage
-                LAST_MSG="🗑️ Unlinked $SCOPE."
-            else
-                LAST_MSG="Cancelled."
-            fi
-            ;; 
         "📜  View Logs") gum pager < "$LOG_FILE" ;; 
-        "🔎  Filter Logs")
-            LEVEL=$(gum choose "INFO" "WARN" "ERROR" "FATAL" "SAFETY" "OK" "FIX")
-            if [ -n "$LEVEL" ]; then
-                grep "\[$LEVEL\]" "$LOG_FILE" | gum pager
-            fi
-            ;;
-        "📝  Open Log in Editor")
-            if [ -n "$EDITOR" ]; then
-                "$EDITOR" "$LOG_FILE"
-            else
-                # fallback to less
-                less "$LOG_FILE"
-            fi
-            ;;
         "👋  Exit") 
             clear
-            gum style --foreground "$C_PRIMARY" "See you later, Nasif! 👋"
+            gum style --foreground "$C_PRIMARY" "See you later! 👋"
             exit 0 
             ;; 
     esac
