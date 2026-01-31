@@ -485,13 +485,15 @@ manage_storage() {
             if [ -L "$target_path" ]; then LAST_MSG="❌ Already linked."; return; fi
 
             local item_name=$(basename "$target_path")
-            if grep -q "|$target_path$" "$STORAGE_MAP"; then LAST_MSG="⚠️ Already tracked."; return; fi
+            local stored_path="${target_path/#$HOME/~}"
+
+            if grep -q "|$target_path$" "$STORAGE_MAP" || grep -q "|$stored_path$" "$STORAGE_MAP"; then LAST_MSG="⚠️ Already tracked."; return; fi
 
             # Ensure file ends with newline before appending
             if [ -s "$STORAGE_MAP" ] && [ -n "$(tail -c 1 "$STORAGE_MAP")" ]; then
                 echo "" >> "$STORAGE_MAP"
             fi
-            echo "$item_name|$target_path" >> "$STORAGE_MAP"
+            echo "$item_name|$stored_path" >> "$STORAGE_MAP"
             handle_single_storage_item "$item_name" "$target_path"
             LAST_MSG="✅ Added $item_name to Vault."
             ;; 
