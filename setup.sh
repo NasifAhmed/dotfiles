@@ -627,9 +627,9 @@ view_system_status() {
 draw_dashboard() {
     clear
     local greeting="Hello, Nasif"
-    local branch=$(git branch --show-current 2>/dev/null || echo "Unknown")
+    local branch=$(cd "$DOTFILES_DIR" && git branch --show-current 2>/dev/null || echo "Unknown")
     local status="Clean ✨"
-    [[ -n $(git status -s) ]] && status="Dirty ✏️"
+    [[ -n $(cd "$DOTFILES_DIR" && git status -s) ]] && status="Dirty ✏️"
     local vault_count=$(wc -l < "$STORAGE_MAP" 2>/dev/null || echo 0)
 
     # Header Card
