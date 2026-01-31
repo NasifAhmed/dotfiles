@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-#  NASIF'S OMARCHY SETUP v11.0 (Self-Sustaining Edition)
+#  NASIF'S OMARCHY SETUP v11.0
 #  Author: Nasif Ahmed
 # ==============================================================================
 
@@ -54,7 +54,7 @@ log() {
 die() {
     log "FATAL" "$1"
     if command -v gum &> /dev/null;
- then
+    then
         gum style --border double --border-foreground "$C_ERR" --foreground "$C_ERR" --align center --width 50 --margin "1" "CRITICAL FAILURE" "$1"
     else
         echo "CRITICAL FAILURE: $1"
@@ -138,13 +138,11 @@ ensure_environment() {
 get_profiles() {
     # Lists directories that are not 'storage', 'scripts', 'test', etc.
     find "$DOTFILES_DIR" -maxdepth 1 -mindepth 1 -type d \
-        ! -name ".*" \
-        ! -name "storage" \
-        ! -name "scripts" \
-        -exec basename {} \; | sort
+    ! -name ".*" \
+    ! -name "storage" \
+    ! -name "scripts" \
+    -exec basename {} \; | sort
 }
-
-# --- 4. Config Logic (Stow) ---
 
 # --- 4. Config Logic (Stow) ---
 
@@ -164,17 +162,17 @@ stow_config_package() {
     # 1. Dry-run to catch conflicts
     local conflict_output
     conflict_output=$(stow -d "$stow_dir" -t "$HOME" -n "$pkg_name" 2>&1)
-    
+
     if [[ "$conflict_output" == *"existing target"* ]]; then
         log "WARN" "Conflicts detected in $pkg_name, attempting resolution..."
         local backup_ts="$BACKUP_ROOT/conflict_configs_$(date +%Y%m%d_%H%M%S)"
         local temp_report=$(mktemp)
-        
+
         # Extract conflicting file paths
         echo "$conflict_output" | grep -iE "existing target" | sed -E '
-            s/.*over existing target (.*) since.*/\1/
-            s/.*existing target is not owned by stow: (.*)/\1/
-            s/.*existing target is neither a link nor a directory: (.*)/\1/
+        s/.*over existing target (.*) since.*/\1/
+        s/.*existing target is not owned by stow: (.*)/\1/
+        s/.*existing target is neither a link nor a directory: (.*)/\1/
         ' | while read conflict; do
             conflict=$(echo "$conflict" | xargs)
             [ -z "$conflict" ] && continue
@@ -199,7 +197,7 @@ stow_config_package() {
                 echo "  [FIX] Removed broken link: $conflict" >> "$temp_report"
             fi
         done
-        
+
         if [ -s "$temp_report" ]; then
             SESSION_REPORT="${SESSION_REPORT}$(cat "$temp_report")\n"
         fi
@@ -209,7 +207,7 @@ stow_config_package() {
     # 2. Actual Stow Command
     stow -d "$stow_dir" -t "$HOME" -R "$pkg_name" >> "$LOG_FILE" 2>&1
     local res=$?
-    
+
     if [ $res -ne 0 ]; then
         log "ERROR" "Stow failed for $profile/$pkg_name (Exit: $res)"
         add_report "  [ERR] Stow failed for package: $pkg_name"
@@ -225,7 +223,7 @@ apply_configs() {
     local count=0
     local err_count=0
     SESSION_REPORT=""
-    
+
     log "INFO" "Applying Configs for Profile: $profile"
     echo "⚙️  Applying configuration profile: $profile"
     echo "---------------------------------------------------"
@@ -245,7 +243,7 @@ apply_configs() {
             fi
         done
     fi
-    
+
     echo ""
     if [ -n "$SESSION_REPORT" ]; then
         echo "📝 Action Report:"
@@ -283,7 +281,7 @@ handle_single_storage_item() {
         local backup_loc="$BACKUP_ROOT/pre_link_$(date +%Y%m%d_%H%M%S)/$item_name"
         mkdir -p "$(dirname "$backup_loc")"
         cp -r "$target_path" "$backup_loc"
-        
+
         if [ -d "$target_path" ]; then
             safe_exec rsync -avu "$target_path/" "$repo_path/"
         else
@@ -298,13 +296,13 @@ handle_single_storage_item() {
         add_report "  [WARN] Missing source: $item_name"
         return 1
     fi
-    
+
     if [ ! -e "$target_path" ]; then
         local parent_dir=$(dirname "$target_path")
         if ! mkdir -p "$parent_dir"; then
-             log "ERROR" "Failed to create directory: $parent_dir"
-             add_report "  [ERR] Mkdir failed: $parent_dir"
-             return 1
+            log "ERROR" "Failed to create directory: $parent_dir"
+            add_report "  [ERR] Mkdir failed: $parent_dir"
+            return 1
         fi
 
         log "INFO" "Linking: ln -sf \"$repo_path\" \"$target_path\""
@@ -318,22 +316,22 @@ handle_single_storage_item() {
         fi
     elif [ -L "$target_path" ]; then
         if [ "$(readlink -f "$target_path")" != "$(readlink -f "$repo_path")" ]; then
-             rm "$target_path"
-             if ln -sf "$repo_path" "$target_path"; then
-                 log "FIX" "Relinked Vault: $item_name"
-                 add_report "  [FIX] Relinked: $item_name"
-                 return 0
-             else
-                 log "ERROR" "Failed to relink $item_name"
-                 add_report "  [ERR] Relink failed: $item_name"
-                 return 1
-             fi
+            rm "$target_path"
+            if ln -sf "$repo_path" "$target_path"; then
+                log "FIX" "Relinked Vault: $item_name"
+                add_report "  [FIX] Relinked: $item_name"
+                return 0
+            else
+                log "ERROR" "Failed to relink $item_name"
+                add_report "  [ERR] Relink failed: $item_name"
+                return 1
+            fi
         fi
         return 0
     else
-         log "WARN" "Conflict for $item_name. Target is a file/dir, not a link."
-         add_report "  [WARN] Conflict: $item_name (Target exists)"
-         return 1
+        log "WARN" "Conflict for $item_name. Target is a file/dir, not a link."
+        add_report "  [WARN] Conflict: $item_name (Target exists)"
+        return 1
     fi
 }
 
@@ -342,7 +340,7 @@ apply_storage() {
     local count=0
     local err_count=0
     SESSION_REPORT=""
-    
+
     log "INFO" "Applying Storage Vault..."
     echo "📦 Linking Storage Vault items..."
     echo "---------------------------------------------------"
@@ -350,10 +348,10 @@ apply_storage() {
     while IFS='|' read -r item_name target_path || [ -n "$item_name" ]; do
         [[ "$item_name" =~ ^#.*$ ]] && continue
         [ -z "$item_name" ] && continue
-        
+
         target_path="${target_path/#\~/$HOME}"
         target_path=$(echo "$target_path" | xargs)
-        
+
         echo -n "   • $item_name -> $target_path... "
         if handle_single_storage_item "$item_name" "$target_path"; then
             echo "OK"
@@ -434,7 +432,7 @@ manage_configs() {
             local target_path=$(gum input --placeholder "/home/user/.config/app" --header "Config Path (Esc to cancel)")
             if [ -z "$target_path" ]; then return; fi
             target_path="${target_path/#\~/$HOME}"
-            
+
             if [ ! -e "$target_path" ]; then LAST_MSG="❌ Path invalid."; return; fi
             if [[ "$target_path" != "$HOME"* ]]; then LAST_MSG="❌ Must be in Home dir."; return; fi
             if [ -L "$target_path" ]; then LAST_MSG="❌ Already a symlink."; return; fi
@@ -452,10 +450,10 @@ manage_configs() {
             if [ -d "$dest_dir" ]; then LAST_MSG="❌ Package exists in $prof."; return; fi
 
             if gum confirm "Move '$target_path' to '$prof/$user_pkg_name'?"; then
-                 mkdir -p "$(dirname "$dest_dir/$rel_path")"
-                 mv "$target_path" "$dest_dir/$rel_path"
-                 stow_config_package "$prof" "$user_pkg_name"
-                 LAST_MSG="✅ Config added to $prof."
+                mkdir -p "$(dirname "$dest_dir/$rel_path")"
+                mv "$target_path" "$dest_dir/$rel_path"
+                stow_config_package "$prof" "$user_pkg_name"
+                LAST_MSG="✅ Config added to $prof."
             fi
             ;; 
         "Delete Config")
@@ -549,9 +547,9 @@ power_sync() {
         LAST_MSG="☁️  Pushed to cloud."
     else
         if gum confirm "⚠️ Conflict! Force merge (remote wins)?"; then
-             gum spin --title "Resolving..." -- git pull origin "$BRANCH" --strategy-option=theirs
-             gum spin --title "Pushing..." -- git push origin "$BRANCH"
-             RELOAD=true
+            gum spin --title "Resolving..." -- git pull origin "$BRANCH" --strategy-option=theirs
+            gum spin --title "Pushing..." -- git push origin "$BRANCH"
+            RELOAD=true
         else
             LAST_MSG="⚠️ Sync paused."
             return
@@ -562,9 +560,9 @@ power_sync() {
         local prof=$(cat "$PROFILE_FILE")
         [[ "$scope" == "All" || "$scope" == "Configs" ]] && { unstow_configs "$prof"; apply_configs "$prof"; }
         [[ "$scope" == "All" || "$scope" == "Storage" ]] && apply_storage
-        
+
         if command -v hyprctl &> /dev/null;
- then
+        then
             hyprctl reload
         fi
 
@@ -594,10 +592,10 @@ execute_switch_profile() {
     echo "$new_profile" > "$PROFILE_FILE"
     apply_configs "$new_profile"
     apply_storage
-    
+
     # Reload WM if needed
     if command -v hyprctl &> /dev/null;
- then
+    then
         hyprctl reload
     fi
 }
@@ -613,11 +611,11 @@ view_system_status() {
         echo -e "\n🔹 ACTIVE PROFILE: $current_prof\n"
 
         for prof in $(get_profiles);
- do
-            echo "🔹 PROFILE: $prof"
-            ls -1 "$DOTFILES_DIR/$prof" | sed 's/^/   - /'
-            echo ""
-        done
+        do
+                echo "🔹 PROFILE: $prof"
+                ls -1 "$DOTFILES_DIR/$prof" | sed 's/^/   - /'
+                echo ""
+            done
 
         echo -e "\n🔹 VAULT (Tracked Folders):"
         if [ -f "$STORAGE_MAP" ] && [ -s "$STORAGE_MAP" ]; then
@@ -640,16 +638,16 @@ draw_dashboard() {
 
     # Header Card
     gum style \
-        --border double --margin "1" --padding "1 2" --border-foreground "$C_PRIMARY" --align center \
-        "$(gum style --foreground "$C_PRIMARY" --bold "🔮 OMARCHY SETUP")" \
-        "" \
-        "$(gum style --foreground "$C_SECONDARY" "👤 $greeting  |  💻 $(hostname)")" \
-        "$(gum style --foreground "$C_SECONDARY" "🔧 Profile: $CURRENT_PROFILE  |  🌿 Branch: $branch")"
+    --border double --margin "1" --padding "1 2" --border-foreground "$C_PRIMARY" --align center \
+    "$(gum style --foreground "$C_PRIMARY" --bold "🔮 NASIF'S OMARCHY SETUP")" \
+    "" \
+    "$(gum style --foreground "$C_SECONDARY" "👤 $greeting  |  💻 $(hostname)")" \
+    "$(gum style --foreground "$C_SECONDARY" "🔧 Profile: $CURRENT_PROFILE  |  🌿 Branch: $branch")"
 
     # Status Bar
     gum style --foreground "$C_MUTED" --align center "📦 Vault Items: $vault_count  |  📝 Git State: $status"
     echo "" 
-    
+
     # Message Area
     if [ -n "$LAST_MSG" ]; then
         gum style --foreground "$C_ACCENT" --bold --align center --border normal --border-foreground "$C_ACCENT" --padding "0 2" "$LAST_MSG"
@@ -663,39 +661,39 @@ ensure_environment
 LAST_MSG="Welcome back."
 
 while true;
- do
-    CURRENT_PROFILE="None"
-    [ -f "$PROFILE_FILE" ] && CURRENT_PROFILE=$(cat "$PROFILE_FILE")
+do
+        CURRENT_PROFILE="None"
+        [ -f "$PROFILE_FILE" ] && CURRENT_PROFILE=$(cat "$PROFILE_FILE")
 
-    draw_dashboard
+        draw_dashboard
 
-    ACTION=$(gum choose --cursor.foreground "$C_PRIMARY" --header "Select Operation" \
-        "🚀  Sync System (Git)" \
-        "🎭  Switch / Apply Profile" \
-        "📁  Manage Profiles" \
-        "⚙️  Manage Configs" \
-        "📦  Manage Storage" \
-        "📊  System Status" \
-        "📜  View Logs" \
-        "👋  Exit")
+        ACTION=$(gum choose --cursor.foreground "$C_PRIMARY" --header "Select Operation" \
+            "🚀  Sync System (Git)" \
+            "🎭  Switch / Apply Profile" \
+            "📁  Manage Profiles" \
+            "⚙️  Manage Configs" \
+            "📦  Manage Storage" \
+            "📊  System Status" \
+            "📜  View Logs" \
+            "👋  Exit")
 
-    case "$ACTION" in
-        "🚀  Sync System (Git)")
-            SCOPE=$(gum choose --cursor.foreground "$C_PRIMARY" "All" "Configs Only" "Storage Only")
-            [ -n "$SCOPE" ] && power_sync "$SCOPE" || LAST_MSG="❌ Cancelled"
-            ;; 
-        "🎭  Switch / Apply Profile")
-            execute_switch_profile
-            ;; 
-        "📁  Manage Profiles") manage_profiles ;; 
-        "⚙️  Manage Configs") manage_configs ;; 
-        "📦  Manage Storage") manage_storage ;; 
-        "📊  System Status") view_system_status ;; 
-        "📜  View Logs") gum pager < "$LOG_FILE" ;; 
-        "👋  Exit") 
-            clear
-            gum style --foreground "$C_PRIMARY" "See you later! 👋"
-            exit 0 
-            ;; 
-    esac
-done
+        case "$ACTION" in
+            "🚀  Sync System (Git)")
+                SCOPE=$(gum choose --cursor.foreground "$C_PRIMARY" "All" "Configs Only" "Storage Only")
+                [ -n "$SCOPE" ] && power_sync "$SCOPE" || LAST_MSG="❌ Cancelled"
+                ;; 
+            "🎭  Switch / Apply Profile")
+                execute_switch_profile
+                ;; 
+            "📁  Manage Profiles") manage_profiles ;; 
+            "⚙️  Manage Configs") manage_configs ;; 
+            "📦  Manage Storage") manage_storage ;; 
+            "📊  System Status") view_system_status ;; 
+            "📜  View Logs") gum pager < "$LOG_FILE" ;; 
+            "👋  Exit") 
+                clear
+                gum style --foreground "$C_PRIMARY" "See you later! 👋"
+                exit 0 
+                ;; 
+        esac
+    done
