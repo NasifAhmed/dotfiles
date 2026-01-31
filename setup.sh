@@ -603,7 +603,7 @@ execute_switch_profile() {
 view_system_status() {
     local report_file="/tmp/dots_status_report.txt"
     {
-        gum style --foreground "$C_PRIMARY" --bold "🔮 NASIF'S OMARCHY STATUS"
+        gum style --foreground "$C_PRIMARY" --bold "🔮 OMARCHY STATUS"
         echo "==================================="
 
         local current_prof="None"
@@ -630,7 +630,7 @@ view_system_status() {
 
 draw_dashboard() {
     clear
-    local greeting="Hello, Nasif"
+    local greeting="Hello, $(whoami)"
     local branch=$(cd "$DOTFILES_DIR" && git branch --show-current 2>/dev/null || echo "Unknown")
     local status="Clean ✨"
     [[ -n $(cd "$DOTFILES_DIR" && git status -s) ]] && status="Dirty ✏️"
@@ -639,7 +639,7 @@ draw_dashboard() {
     # Header Card
     gum style \
         --border double --margin "1" --padding "1 2" --border-foreground "$C_PRIMARY" --align center \
-        "$(gum style --foreground "$C_PRIMARY" --bold "🔮 NASIF'S OMARCHY SETUP")" \
+        "$(gum style --foreground "$C_PRIMARY" --bold "🔮 OMARCHY SETUP")" \
         "" \
         "$(gum style --foreground "$C_SECONDARY" "👤 $greeting  |  💻 $(hostname)")" \
         "$(gum style --foreground "$C_SECONDARY" "🔧 Profile: $CURRENT_PROFILE  |  🌿 Branch: $branch")"
