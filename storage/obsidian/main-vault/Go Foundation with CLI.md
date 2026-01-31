@@ -1,4 +1,4 @@
-- GoBoax
+- GoBox
 - PID
 - Process Struct
 - Registry

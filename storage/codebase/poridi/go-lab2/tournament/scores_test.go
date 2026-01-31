@@ -2,7 +2,7 @@ package tournament
 
 import "testing"
 
-func TestRepeat(t *testing.T) {
+func TestCalculateTotal(t *testing.T) {
 	scores := [5]int{10, 15, 20, 12, 18}
 	got := CalculateTotal(scores)
 	want := 75
