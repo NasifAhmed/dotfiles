@@ -8,47 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4678cce32afc1755",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
-            }
-          },
-          {
-            "id": "af197169f3d714e3",
+            "id": "3b16d9283a61138e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go Foundation with CLI.md",
-                "mode": "source",
+                "file": "Java Problems.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Go Foundation with CLI"
-            }
-          },
-          {
-            "id": "d647ab5afef81f89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Go Foundation with CLI.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Go Foundation with CLI"
+              "title": "Java Problems"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,8 +180,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "af197169f3d714e3",
+  "active": "3b16d9283a61138e",
   "lastOpenFiles": [
-    "Go Foundation with CLI.md"
+    "Go Foundation with CLI.md",
+    "Java Problems.md"
   ]
 }

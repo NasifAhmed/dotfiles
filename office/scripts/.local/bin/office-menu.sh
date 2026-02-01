@@ -30,31 +30,31 @@ case $SELECTION in
 
     # 1. Display Manager
     "$OPT_DISPLAY")
-        # Auto-detect monitors
-        INTERNAL=$(hyprctl monitors all | grep "Monitor" | awk '{print $2}' | grep "eDP" | head -n 1)
-        EXTERNAL=$(hyprctl monitors all | grep "Monitor" | awk '{print $2}' | grep -v "$INTERNAL" | head -n 1)
-        [ -z "$INTERNAL" ] && INTERNAL="eDP-1"
+    # Auto-detect monitors
+    INTERNAL=$(hyprctl monitors all | grep "Monitor" | awk '{print $2}' | grep "eDP" | head -n 1)
+    EXTERNAL=$(hyprctl monitors all | grep "Monitor" | awk '{print $2}' | grep -v "$INTERNAL" | head -n 1)
+    [ -z "$INTERNAL" ] && INTERNAL="eDP-1"
 
-        if [ -z "$EXTERNAL" ]; then
-            notify-send "Display Error" "No external monitor detected."
-            exit 1
-        fi
+    if [ -z "$EXTERNAL" ]; then
+        notify-send "Display Error" "No external monitor detected."
+        exit 1
+    fi
 
-        MODE=$(echo -e "Duplicate (Mirror)\nExtend (Strict WS 10)\nDisconnect Projector" | walker --dmenu --placeholder "Select Display Mode")
+    MODE=$(echo -e "Duplicate (Mirror)\nExtend (Strict WS 10)\nDisconnect Projector" | walker --dmenu --placeholder "Select Display Mode")
 
-        case $MODE in
-            "Duplicate (Mirror)")
-                # Clear workspace bindings so mirroring works normally
-                for i in {1..10}; do
-                    hyprctl keyword workspace "$i, monitor:desc:bound"
-                done
+    case $MODE in
+        "Duplicate (Mirror)")
+            # Clear workspace bindings so mirroring works normally
+            for i in {1..10}; do
+                hyprctl keyword workspace "$i, monitor:desc:bound"
+            done
 
-                hyprctl keyword monitor "$EXTERNAL, 1366x768@60, auto, 1, mirror, $INTERNAL"
-                notify-send "Display" "Mirroring to $EXTERNAL"
-                ;; 
+            hyprctl keyword monitor "$EXTERNAL, 1366x768@60, auto, 1, mirror, $INTERNAL"
+            notify-send "Display" "Mirroring to $EXTERNAL"
+            ;; 
 
-            "Extend (Strict WS 10)")
-                notify-send "Display" "Extending... Focus will remain on Laptop."
+        "Extend (Strict WS 10)")
+            notify-send "Display" "Extending... Focus will remain on Laptop."
 
                 # 1. PRE-CHECK: If we are currently ON workspace 10, leave it first.
                 CURRENT_WS=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .activeWorkspace.id')
@@ -63,7 +63,7 @@ case $SELECTION in
                 fi
 
                 # 2. Enable the Projector
-                hyprctl keyword monitor "$EXTERNAL, preferred, auto-right, 1"
+                hyprctl keyword monitor "$EXTERNAL, 1366x768@60, auto-right, 1"
 
                 # 3. Wait for the monitor to wake up
                 sleep 2
@@ -98,17 +98,17 @@ case $SELECTION in
                 hyprctl keyword monitor "$EXTERNAL, disable"
                 notify-send "Display" "Disconnected $EXTERNAL"
                 ;; 
-esac
-                ;;
+        esac
+        ;;
 
     # 2. DrJava
     "$OPT_JAVA")
-        if [ ! -f "$DRJAVA_PATH" ]; then
-            notify-send "Error" "DrJava not found at: $DRJAVA_PATH"
-            exit 1
-        fi
-        
-        notify-send "Java" "Launching DrJava..."
+    if [ ! -f "$DRJAVA_PATH" ]; then
+        notify-send "Error" "DrJava not found at: $DRJAVA_PATH"
+        exit 1
+    fi
+
+    notify-send "Java" "Launching DrJava..."
 
         # --- NEW: Force Tiling ---
         # Java apps often default to floating. This rule forces it to tile.
@@ -119,19 +119,19 @@ esac
 
     # 3. Search All PDFs
     "$OPT_SEARCH")
-        if [ ! -d "$SEARCH_ROOT_DIR" ]; then
-            notify-send "Error" "Search directory not found: $SEARCH_ROOT_DIR"
-            exit 1
-        fi
+    if [ ! -d "$SEARCH_ROOT_DIR" ]; then
+        notify-send "Error" "Search directory not found: $SEARCH_ROOT_DIR"
+        exit 1
+    fi
 
-        cd "$SEARCH_ROOT_DIR" || exit
-        SELECTED_NAME=$(find . -type f -name "*.pdf" | sed 's!.*/!!' | walker --dmenu --placeholder "Search All Files...")
+    cd "$SEARCH_ROOT_DIR" || exit
+    SELECTED_NAME=$(find . -type f -name "*.pdf" | sed 's!.*/!!' | walker --dmenu --placeholder "Search All Files...")
 
-        if [ -n "$SELECTED_NAME" ]; then
-            FULL_PATH=$(find . -type f -name "$SELECTED_NAME" -print -quit)
-            if [ -n "$FULL_PATH" ]; then
-                xdg-open "$FULL_PATH"
-            fi
+    if [ -n "$SELECTED_NAME" ]; then
+        FULL_PATH=$(find . -type f -name "$SELECTED_NAME" -print -quit)
+        if [ -n "$FULL_PATH" ]; then
+            xdg-open "$FULL_PATH"
         fi
-        ;; 
+    fi
+    ;; 
 esac
