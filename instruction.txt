@@ -1,0 +1,49 @@
+ok currently this whole this is convoluted I hate the code. Code should be easy
+to read and understand and follow best practice with documentation for every
+code. 
+Here is the plan . Review this plan and redo this whole thing from scratch again.
+No need to worry about old script and its work I have those backed up. Just make
+the new one.
+
+Its a script to sync work and configs accross computers. It will be computer
+agnostic. It will be a compfy cool TUI cli app or script. Keep things lighweight
+and fast. Use ascii art when possible. 
+
+Log every step and Show the user everthing step the script is doing visually, if there is issue
+show the user. Everything will be saved in logs with timestamps. Also add a
+gitignore for whats necessary to ignore. 
+
+This is a git repo. To sync omarchy linux configs and scripts accross computers. The
+workflow will be like this : I will load up the script then sync which will sync
+with the cloud on github. If the last commit is older than the cloud it will
+pull if the commit is newer than the cloud then it will push and then pull. If
+there is conflict it will prefer the changes on cloud always. I will not be
+bothered with any issues all will be automated. 
+
+It will have profiles. For example one for Home linux pc and another for Office linux PC. Will be able to CRUD profiles. I will be able to choose a profile and apply it. While applying a profile make sure it restarts things like hyprland to reflect the new changes with default Omarchy options for reloading if it exists. 
+
+It will manage directories for each profile that will use stow to stow the
+configs to right places and prompting me for choosing which folder to add it to and scripts to right places like $HOME/.local/bin/ etc... If $HOME/.local/bin/ is not in PATH it will auto add it.
+
+It will also have a general storage folder that will store necessary files like a cloud storage. I will be a able to CRUD storage from the TUI. It will also be a stow structure folder that will store main
+things in this repo and stow in right places as user placed it. 
+
+For every step if there is storage conflicts while stowing or something handle
+those as well. Like backing up the old one to another folder and then stowing
+etc. type solution. 
+
+There will be TUI visual gui for every work nothing to do manually. On main
+dashboard it will show current date, current user name, current applied profile, last commit, last few
+logs and the last files that was changed currently uncommited but changed files
+and their count, show warning if the repo is outdated or if its ahead of cloud etc.. all types of cool visual information and git status. There will be an option to reset and it will give option to which specific file to reset I will choose in current profile and that will be reset to previous commit. 
+
+For paths use dynamic paths like $HOME etc.. Dont hardcode paths. 
+
+The whole thing will be self-healing , self-sustaining and crystal clear of
+whats happening what it doing and log everything. It will also bootstrapped.
+Handle and verify dependancies for the script to work auto. It will feel like a proper TUI
+app. 
+
+In the end I will be able to run the script sync and apply a profile on any
+computer and immediately in my setup. Switch profiles on the fly. No hassle. 
+

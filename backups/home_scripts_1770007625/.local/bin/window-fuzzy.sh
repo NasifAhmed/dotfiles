@@ -1,0 +1,1 @@
+../../dotfiles/office/scripts/.local/bin/window-fuzzy.sh

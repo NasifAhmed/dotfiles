@@ -1,0 +1,1 @@
+../../dotfiles/home/scripts/.local/bin/window-switcher.sh

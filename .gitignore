@@ -1,2 +1,5 @@
-.current_profile
-setup.log
+.dotman_venv/
+__pycache__/
+*.pyc
+dotman.log
+.gemini/
