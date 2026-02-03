@@ -117,48 +117,37 @@ show_status() {
 }
 
 # ==============================================================================
-# Dashboard (with loading indicator)
+# Dashboard (with caching to avoid reload on every menu return)
 # ==============================================================================
+
+# Cache variables for dashboard
+_CACHE_STATUS=""
+_CACHE_CHANGES=""
+_CACHE_PROFILES=""
+_CACHE_LAST_COMMIT=""
+_CACHE_LOADED=false
+
+# Refresh dashboard cache
+refresh_dashboard_cache() {
+    _CACHE_STATUS=$(git_check_status 2>/dev/null || echo 'unknown')
+    _CACHE_CHANGES=$(git_get_changes_count 2>/dev/null || echo '0')
+    _CACHE_PROFILES=$(profile_count 2>/dev/null || echo '0')
+    _CACHE_LAST_COMMIT=$(git_get_last_commit short 2>/dev/null || echo 'N/A')
+    _CACHE_LOADED=true
+}
+
 show_dashboard() {
+    local force_refresh="${1:-false}"
+    
     clear
     draw_ascii_banner
     
-    # Temp file for subshell data passing
-    local tmpfile="/tmp/dotman_status_$$"
-    
-    # Run data fetching in background - use printf with %q to properly quote values
-    (
-        local s c p l
-        s=$(git_check_status 2>/dev/null || echo 'unknown')
-        c=$(git_get_changes_count 2>/dev/null || echo '0')
-        p=$(profile_count 2>/dev/null || echo '0')
-        l=$(git_get_last_commit short 2>/dev/null || echo 'N/A')
-        printf 'status=%q\n' "$s"
-        printf 'changes_count=%q\n' "$c"
-        printf 'profile_cnt=%q\n' "$p"
-        printf 'last_commit=%q\n' "$l"
-    ) > "$tmpfile" &
-    local pid=$!
-    
-    # Show animated spinner while loading (disable set -e for this loop)
-    set +e
-    local chars='|/-\'
-    local i=0
-    while kill -0 "$pid" 2>/dev/null; do
-        printf "\r  [%c] Loading status..." "${chars:$i:1}"
-        ((i = (i + 1) % 4)) || true
-        sleep 0.08
-    done
-    wait "$pid" 2>/dev/null
-    set -e
-    printf "\r%-40s\n" " "
-    
-    # Read results from temp file
-    local status="" changes_count="" profile_cnt="" last_commit=""
-    if [[ -f "$tmpfile" ]]; then
-        # shellcheck source=/dev/null
-        source "$tmpfile"
-        rm -f "$tmpfile"
+    # Load data if not cached or forced refresh
+    if [[ "$_CACHE_LOADED" == "false" ]] || [[ "$force_refresh" == "true" ]]; then
+        echo -n "  [*] Loading status... "
+        refresh_dashboard_cache
+        echo "Done!"
+        echo ""
     fi
     
     tui_section "Overview"
@@ -167,16 +156,16 @@ show_dashboard() {
     tui_kv "Profile" "$(profile_get_current || echo 'None')" 212
     
     echo ""
-    echo "  Git: $(tui_status_indicator "$status")  |  Changed: $changes_count files  |  Profiles: $profile_cnt"
-    echo "  Last: $last_commit"
+    echo "  Git: $(tui_status_indicator "$_CACHE_STATUS")  |  Changed: $_CACHE_CHANGES files  |  Profiles: $_CACHE_PROFILES"
+    echo "  Last: $_CACHE_LAST_COMMIT"
     
     # Show warnings
-    if [[ "$status" == "behind" ]]; then
+    if [[ "$_CACHE_STATUS" == "behind" ]]; then
         echo ""
         tui_kv "[!] Warning" "Repository is behind cloud - sync recommended" 214
     fi
     
-    if [[ "$status" == "diverged" ]]; then
+    if [[ "$_CACHE_STATUS" == "diverged" ]]; then
         echo ""
         tui_kv "[!] Warning" "Repository has diverged - conflicts may occur" 196
     fi
@@ -212,142 +201,164 @@ main_menu() {
 sync_menu() {
     log_init
     
-    local choice
-    choice=$(tui_menu "Sync Options:" \
-        "Quick Sync (auto)" \
-        "Pull from Cloud" \
-        "Push to Cloud" \
-        "View Changes" \
-        "Reset File" \
-        "Back to Main")
-    
-    case "$choice" in
-        "Quick Sync (auto)")
-            tui_spin "Syncing with cloud..." git_smart_sync
-            tui_success "Sync completed!"
-            read -rp "Press Enter to continue..."
-            ;;
-        "Pull from Cloud")
-            tui_spin "Pulling from cloud..." git_pull_prefer_theirs
-            tui_success "Pull completed!"
-            read -rp "Press Enter to continue..."
-            ;;
-        "Push to Cloud")
-            git_auto_commit
-            tui_spin "Pushing to cloud..." git_push
-            tui_success "Push completed!"
-            read -rp "Press Enter to continue..."
-            ;;
-        "View Changes")
-            local files
-            files=$(git_get_changed_files)
-            if [[ -z "$files" ]]; then
-                tui_msgbox "Changes" "No uncommitted changes"
-            else
-                echo "Changed files:"
-                echo "$files"
+    while true; do
+        clear
+        echo ""
+        local choice
+        choice=$(tui_menu "Sync Options:" \
+            "Quick Sync (auto)" \
+            "Pull from Cloud" \
+            "Push to Cloud" \
+            "View Changes" \
+            "Reset File" \
+            "[<] Back")
+        
+        # Handle Esc/empty/back
+        case "$choice" in
+            "[<] Back"|"")
+                return
+                ;;
+            "Quick Sync (auto)")
+                tui_spin "Syncing with cloud..." git_smart_sync
+                tui_success "Sync completed!"
+                refresh_dashboard_cache  # Refresh after sync
                 read -rp "Press Enter to continue..."
-            fi
-            ;;
-        "Reset File")
-            local files
-            files=$(git_get_resettable_files)
-            if [[ -z "$files" ]]; then
-                tui_msgbox "Reset" "No files to reset"
-            else
-                local file
-                file=$(tui_filter "Select file to reset:" $files)
-                if [[ -n "$file" ]]; then
-                    if tui_confirm "Reset $file to last commit?"; then
-                        git_reset_file "$file"
-                        tui_success "File reset: $file"
+                ;;
+            "Pull from Cloud")
+                tui_spin "Pulling from cloud..." git_pull_prefer_theirs
+                tui_success "Pull completed!"
+                refresh_dashboard_cache
+                read -rp "Press Enter to continue..."
+                ;;
+            "Push to Cloud")
+                git_auto_commit
+                tui_spin "Pushing to cloud..." git_push
+                tui_success "Push completed!"
+                refresh_dashboard_cache
+                read -rp "Press Enter to continue..."
+                ;;
+            "View Changes")
+                local files
+                files=$(git_get_changed_files)
+                if [[ -z "$files" ]]; then
+                    tui_msgbox "Changes" "No uncommitted changes"
+                else
+                    echo "Changed files:"
+                    echo "$files"
+                    read -rp "Press Enter to continue..."
+                fi
+                ;;
+            "Reset File")
+                local files
+                files=$(git_get_resettable_files)
+                if [[ -z "$files" ]]; then
+                    tui_msgbox "Reset" "No files to reset"
+                else
+                    local file
+                    file=$(tui_filter "Select file to reset:" $files)
+                    if [[ -n "$file" ]]; then
+                        if tui_confirm "Reset $file to last commit?"; then
+                            git_reset_file "$file"
+                            tui_success "File reset: $file"
+                            refresh_dashboard_cache
+                        fi
                     fi
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-    esac
+                read -rp "Press Enter to continue..."
+                ;;
+        esac
+    done
 }
 
 # ==============================================================================
 # Profile Menu
 # ==============================================================================
 profile_menu() {
-    local choice
-    choice=$(tui_menu "Profile Management:" \
-        "Switch Profile" \
-        "Create Profile" \
-        "Delete Profile" \
-        "Manage Configs" \
-        "View Profile Info" \
-        "Back to Main")
-    
-    case "$choice" in
-        "Switch Profile")
-            local profiles
-            profiles=$(profile_list)
-            if [[ -z "$profiles" ]]; then
-                tui_msgbox "Profiles" "No profiles found"
-            else
-                local selected
-                selected=$(tui_filter "Select profile:" $profiles)
-                if [[ -n "$selected" ]]; then
-                    tui_spin "Applying profile: $selected..." profile_apply "$selected"
-                    tui_success "Profile applied: $selected"
-                fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "Create Profile")
-            local name
-            name=$(tui_input "Enter new profile name:" "" "profile-name")
-            if [[ -n "$name" ]]; then
-                profile_create "$name"
-                tui_success "Profile created: $name"
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "Delete Profile")
-            local profiles
-            profiles=$(profile_list)
-            if [[ -z "$profiles" ]]; then
-                tui_msgbox "Profiles" "No profiles to delete"
-            else
-                local selected
-                selected=$(tui_filter "Select profile to delete:" $profiles)
-                if [[ -n "$selected" ]]; then
-                    if tui_confirm "Delete profile '$selected'? This cannot be undone."; then
-                        profile_delete "$selected"
-                        tui_success "Profile deleted: $selected"
+    while true; do
+        clear
+        echo ""
+        local choice
+        choice=$(tui_menu "Profile Management:" \
+            "Switch Profile" \
+            "Create Profile" \
+            "Delete Profile" \
+            "Manage Configs" \
+            "View Profile Info" \
+            "[<] Back")
+        
+        case "$choice" in
+            "[<] Back"|"")
+                return
+                ;;
+            "Switch Profile")
+                local profiles
+                profiles=$(profile_list)
+                if [[ -z "$profiles" ]]; then
+                    tui_msgbox "Profiles" "No profiles found"
+                else
+                    local selected
+                    selected=$(tui_filter "Select profile:" $profiles)
+                    if [[ -n "$selected" ]]; then
+                        tui_spin "Applying profile: $selected..." profile_apply "$selected"
+                        tui_success "Profile applied: $selected"
+                        refresh_dashboard_cache
                     fi
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "Manage Configs")
-            config_management_menu
-            ;;
-        "View Profile Info")
-            local profiles
-            profiles=$(profile_list)
-            if [[ -z "$profiles" ]]; then
-                tui_msgbox "Profiles" "No profiles found"
-            else
-                local selected
-                selected=$(tui_filter "Select profile:" $profiles)
-                if [[ -n "$selected" ]]; then
-                    echo ""
-                    profile_get_info "$selected"
-                    echo ""
-                    echo "Configs:"
-                    profile_list_configs "$selected" | while read -r cfg; do
-                        echo "  - $cfg"
-                    done
+                read -rp "Press Enter to continue..."
+                ;;
+            "Create Profile")
+                local name
+                name=$(tui_input "Enter new profile name:" "" "profile-name")
+                if [[ -n "$name" ]]; then
+                    profile_create "$name"
+                    tui_success "Profile created: $name"
+                    refresh_dashboard_cache
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-    esac
+                read -rp "Press Enter to continue..."
+                ;;
+            "Delete Profile")
+                local profiles
+                profiles=$(profile_list)
+                if [[ -z "$profiles" ]]; then
+                    tui_msgbox "Profiles" "No profiles to delete"
+                else
+                    local selected
+                    selected=$(tui_filter "Select profile to delete:" $profiles)
+                    if [[ -n "$selected" ]]; then
+                        if tui_confirm "Delete profile '$selected'? This cannot be undone."; then
+                            profile_delete "$selected"
+                            tui_success "Profile deleted: $selected"
+                            refresh_dashboard_cache
+                        fi
+                    fi
+                fi
+                read -rp "Press Enter to continue..."
+                ;;
+            "Manage Configs")
+                config_management_menu
+                ;;
+            "View Profile Info")
+                local profiles
+                profiles=$(profile_list)
+                if [[ -z "$profiles" ]]; then
+                    tui_msgbox "Profiles" "No profiles found"
+                else
+                    local selected
+                    selected=$(tui_filter "Select profile:" $profiles)
+                    if [[ -n "$selected" ]]; then
+                        echo ""
+                        profile_get_info "$selected"
+                        echo ""
+                        echo "Configs:"
+                        profile_list_configs "$selected" | while read -r cfg; do
+                            echo "  - $cfg"
+                        done
+                    fi
+                fi
+                read -rp "Press Enter to continue..."
+                ;;
+        esac
+    done
 }
 
 # ==============================================================================
@@ -365,239 +376,302 @@ config_management_menu() {
     profile=$(tui_filter "Select profile to manage:" $profiles)
     [[ -z "$profile" ]] && return
     
-    local choice
-    choice=$(tui_menu "Config Management - $profile:" \
-        "Add Config" \
-        "Remove Config" \
-        "List Configs" \
-        "Back")
-    
-    case "$choice" in
-        "Add Config")
-            local path
-            path=$(tui_file_browser "$HOME" "all")
-            if [[ -n "$path" && -e "$path" ]]; then
-                local name
-                name=$(tui_input "Config name:" "$(basename "$path")")
-                if [[ -n "$name" ]]; then
-                    profile_add_config "$profile" "$path" "$name"
-                    tui_success "Config added: $name"
+    while true; do
+        clear
+        echo ""
+        local choice
+        choice=$(tui_menu "Config Management - $profile:" \
+            "Add Config" \
+            "Remove Config" \
+            "List Configs" \
+            "[<] Back")
+        
+        case "$choice" in
+            "[<] Back"|"")
+                return
+                ;;
+            "Add Config")
+                local type_choice
+                type_choice=$(tui_menu "What to add?" "File" "Directory" "[<] Cancel")
+                
+                local browser_type=""
+                if [[ "$type_choice" == "File" ]]; then
+                    browser_type="file"
+                elif [[ "$type_choice" == "Directory" ]]; then
+                    browser_type="dir"
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "Remove Config")
-            local configs
-            configs=$(profile_list_configs "$profile")
-            if [[ -z "$configs" ]]; then
-                tui_msgbox "Configs" "No configs in profile"
-            else
-                local selected
-                selected=$(tui_filter "Select config to remove:" $configs)
-                if [[ -n "$selected" ]]; then
-                    if tui_confirm "Remove config '$selected'? Files will be restored to original location."; then
-                        profile_remove_config "$profile" "$selected"
-                        tui_success "Config removed and restored: $selected"
+                
+                if [[ -n "$browser_type" ]]; then
+                    local path
+                    path=$(tui_file_browser "$HOME" "$browser_type")
+                    if [[ -n "$path" ]] && [[ -e "$path" ]]; then
+                        local name
+                        name=$(tui_input "Config name:" "$(basename "$path")")
+                        if [[ -n "$name" ]]; then
+                            profile_add_config "$profile" "$path" "$name"
+                            tui_success "Config added: $name"
+                            refresh_dashboard_cache
+                        fi
                     fi
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "List Configs")
-            echo ""
-            echo "Configs in $profile:"
-            profile_list_configs "$profile" | while read -r cfg; do
-                echo "  - $cfg"
-            done
-            read -rp "Press Enter to continue..."
-            ;;
-    esac
+                read -rp "Press Enter to continue..."
+                ;;
+            "Remove Config")
+                local configs
+                configs=$(profile_list_configs "$profile")
+                if [[ -z "$configs" ]]; then
+                    tui_msgbox "Configs" "No configs in profile"
+                else
+                    local selected
+                    selected=$(tui_filter "Select config to remove:" $configs)
+                    if [[ -n "$selected" ]]; then
+                        if tui_confirm "Remove config '$selected'? Files will be restored to original location."; then
+                            profile_remove_config "$profile" "$selected"
+                            tui_success "Config removed and restored: $selected"
+                        fi
+                    fi
+                fi
+                read -rp "Press Enter to continue..."
+                ;;
+            "List Configs")
+                echo ""
+                echo "Configs in $profile:"
+                profile_list_configs "$profile" | while read -r cfg; do
+                    echo "  - $cfg"
+                done
+                read -rp "Press Enter to continue..."
+                ;;
+        esac
+    done
 }
 
 # ==============================================================================
 # Storage Menu
 # ==============================================================================
 storage_menu() {
-    local choice
-    choice=$(tui_menu "Storage Management:" \
-        "Add to Storage" \
-        "Remove from Storage" \
-        "List Storage" \
-        "Sync Storage" \
-        "Back to Main")
-    
-    case "$choice" in
-        "Add to Storage")
-            local path
-            path=$(tui_file_browser "$HOME" "all")
-            if [[ -n "$path" && -e "$path" ]]; then
-                local name
-                name=$(tui_input "Storage item name:" "$(basename "$path")")
-                if [[ -n "$name" ]]; then
-                    storage_add "$path" "$name"
-                    tui_success "Added to storage: $name"
+    while true; do
+        clear
+        echo ""
+        local choice
+        choice=$(tui_menu "Storage Management:" \
+            "Add to Storage" \
+            "Remove from Storage" \
+            "List Storage" \
+            "Sync Storage" \
+            "[<] Back")
+        
+        case "$choice" in
+            "[<] Back"|"")
+                return
+                ;;
+            "Add to Storage")
+                local type_choice
+                type_choice=$(tui_menu "What to add?" "File" "Directory" "[<] Cancel")
+                
+                local browser_type=""
+                if [[ "$type_choice" == "File" ]]; then
+                    browser_type="file"
+                elif [[ "$type_choice" == "Directory" ]]; then
+                    browser_type="dir"
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "Remove from Storage")
-            local items
-            items=$(storage_list)
-            if [[ -z "$items" ]]; then
-                tui_msgbox "Storage" "No storage items"
-            else
-                local selected
-                selected=$(tui_filter "Select item to remove:" $items)
-                if [[ -n "$selected" ]]; then
-                    if tui_confirm "Remove '$selected' from storage? Files will be restored."; then
-                        storage_remove "$selected"
-                        tui_success "Removed and restored: $selected"
+                
+                if [[ -n "$browser_type" ]]; then
+                    local path
+                    path=$(tui_file_browser "$HOME" "$browser_type")
+                    if [[ -n "$path" ]] && [[ -e "$path" ]]; then
+                        local name
+                        name=$(tui_input "Storage item name:" "$(basename "$path")")
+                        if [[ -n "$name" ]]; then
+                            storage_add "$path" "$name"
+                            tui_success "Added to storage: $name"
+                            refresh_dashboard_cache
+                        fi
                     fi
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "List Storage")
-            echo ""
-            echo "Storage Items:"
-            storage_list_detailed
-            echo ""
-            echo "Total: $(storage_count) items ($(storage_get_size))"
-            read -rp "Press Enter to continue..."
-            ;;
-        "Sync Storage")
-            tui_spin "Syncing storage..." storage_sync
-            tui_success "Storage synced!"
-            read -rp "Press Enter to continue..."
-            ;;
-    esac
+                read -rp "Press Enter to continue..."
+                ;;
+            "Remove from Storage")
+                local items
+                items=$(storage_list)
+                if [[ -z "$items" ]]; then
+                    tui_msgbox "Storage" "No storage items"
+                else
+                    local selected
+                    selected=$(tui_filter "Select item to remove:" $items)
+                    if [[ -n "$selected" ]]; then
+                        if tui_confirm "Remove '$selected' from storage? Files will be restored."; then
+                            storage_remove "$selected"
+                            tui_success "Removed and restored: $selected"
+                        fi
+                    fi
+                fi
+                read -rp "Press Enter to continue..."
+                ;;
+            "List Storage")
+                echo ""
+                echo "Storage Items:"
+                storage_list_detailed
+                echo ""
+                echo "Total: $(storage_count) items ($(storage_get_size))"
+                read -rp "Press Enter to continue..."
+                ;;
+            "Sync Storage")
+                tui_spin "Syncing storage..." storage_sync
+                tui_success "Storage synced!"
+                read -rp "Press Enter to continue..."
+                ;;
+        esac
+    done
 }
 
 # ==============================================================================
 # Time Travel Menu
 # ==============================================================================
 time_travel_menu() {
-    local choice
-    choice=$(tui_menu "Time Travel - Snapshots:" \
-        "Browse Snapshots" \
-        "Restore Snapshot" \
-        "View Backup Branches" \
-        "Return from Backup" \
-        "Back to Main")
-    
-    case "$choice" in
-        "Browse Snapshots")
-            echo ""
-            echo "Recent Snapshots (commits):"
-            tui_divider 60
-            git_list_snapshots_formatted 15
-            read -rp "Press Enter to continue..."
-            ;;
-        "Restore Snapshot")
-            local snapshots
-            snapshots=$(git_list_snapshots 20 | cut -d'|' -f1-2 | tr '|' ' ')
-            if [[ -z "$snapshots" ]]; then
-                tui_msgbox "Snapshots" "No snapshots found"
-            else
-                echo "Select snapshot to restore:"
-                git_list_snapshots_formatted 20
+    while true; do
+        clear
+        echo ""
+        local choice
+        choice=$(tui_menu "Time Travel - Snapshots:" \
+            "Browse Snapshots" \
+            "Restore Snapshot" \
+            "View Backup Branches" \
+            "Return from Backup" \
+            "[<] Back")
+        
+        case "$choice" in
+            "[<] Back"|"")
+                return
+                ;;
+            "Browse Snapshots")
                 echo ""
-                local hash
-                hash=$(tui_input "Enter commit hash (first 7 chars):")
-                if [[ -n "$hash" ]]; then
+                echo "Recent Snapshots (commits):"
+                tui_divider 60
+                git_list_snapshots_formatted 15
+                read -rp "Press Enter to continue..."
+                ;;
+            "Restore Snapshot")
+                local snapshots
+                snapshots=$(git_list_snapshots 20 | cut -d'|' -f1-2 | tr '|' ' ')
+                if [[ -z "$snapshots" ]]; then
+                    tui_msgbox "Snapshots" "No snapshots found"
+                else
+                    echo "Select snapshot to restore:"
+                    git_list_snapshots_formatted 20
                     echo ""
-                    echo "Preview of changes:"
-                    git_preview_snapshot "$hash"
-                    echo ""
-                    if tui_confirm "Restore to this snapshot? A backup branch will be created."; then
-                        git_restore_snapshot "$hash"
-                        tui_success "Restored to snapshot: $hash"
+                    local hash
+                    hash=$(tui_input "Enter commit hash (first 7 chars):")
+                    if [[ -n "$hash" ]]; then
+                        echo ""
+                        echo "Preview of changes:"
+                        git_preview_snapshot "$hash"
+                        echo ""
+                        if tui_confirm "Restore to this snapshot? A backup branch will be created."; then
+                            git_restore_snapshot "$hash"
+                            tui_success "Restored to snapshot: $hash"
+                            refresh_dashboard_cache
+                        fi
                     fi
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "View Backup Branches")
-            local branches
-            branches=$(git_list_backup_branches)
-            if [[ -z "$branches" ]]; then
-                tui_msgbox "Backups" "No backup branches found"
-            else
-                echo ""
-                echo "Backup Branches:"
-                echo "$branches"
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "Return from Backup")
-            local branches
-            branches=$(git_list_backup_branches)
-            if [[ -z "$branches" ]]; then
-                tui_msgbox "Backups" "No backup branches to restore from"
-            else
-                local selected
-                # shellcheck disable=SC2086
-                selected=$(tui_filter "Select backup to restore:" $branches)
-                if [[ -n "$selected" ]]; then
-                    if tui_confirm "Return to backup '$selected'? Current changes will be lost."; then
-                        git_restore_from_backup "$selected"
-                        tui_success "Restored from backup: $selected"
+                read -rp "Press Enter to continue..."
+                ;;
+            "View Backup Branches")
+                local branches
+                branches=$(git_list_backup_branches)
+                if [[ -z "$branches" ]]; then
+                    tui_msgbox "Backups" "No backup branches found"
+                else
+                    echo ""
+                    echo "Backup Branches:"
+                    echo "$branches"
+                fi
+                read -rp "Press Enter to continue..."
+                ;;
+            "Return from Backup")
+                local branches
+                branches=$(git_list_backup_branches)
+                if [[ -z "$branches" ]]; then
+                    tui_msgbox "Backups" "No backup branches to restore from"
+                else
+                    local selected
+                    # shellcheck disable=SC2086
+                    selected=$(tui_filter "Select backup to restore:" $branches)
+                    if [[ -n "$selected" ]]; then
+                        if tui_confirm "Return to backup '$selected'? Current changes will be lost."; then
+                            git_restore_from_backup "$selected"
+                            tui_success "Restored from backup: $selected"
+                            refresh_dashboard_cache
+                        fi
                     fi
                 fi
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-    esac
+                read -rp "Press Enter to continue..."
+                ;;
+        esac
+    done
 }
 
 # ==============================================================================
 # Settings Menu
 # ==============================================================================
 settings_menu() {
-    local choice
-    choice=$(tui_menu "Settings:" \
-        "View Config" \
-        "Check Dependencies" \
-        "Clear Logs" \
-        "View Logs" \
-        "Reset Config" \
-        "Back to Main")
-    
-    case "$choice" in
-        "View Config")
-            echo ""
-            echo "Current Configuration:"
-            tui_divider 40
-            config_list
-            read -rp "Press Enter to continue..."
-            ;;
-        "Check Dependencies")
-            deps_print_status
-            read -rp "Press Enter to continue..."
-            ;;
-        "Clear Logs")
-            if tui_confirm "Clear all logs?"; then
-                log_clear
-                tui_success "Logs cleared"
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-        "View Logs")
-            echo ""
-            echo "Log file: $(log_get_path)"
-            echo "Size: $(log_get_size)"
-            tui_divider 50
-            log_get_recent 20
-            read -rp "Press Enter to continue..."
-            ;;
-        "Reset Config")
-            if tui_confirm "Reset configuration to defaults?"; then
-                config_reset
-                tui_success "Configuration reset"
-            fi
-            read -rp "Press Enter to continue..."
-            ;;
-    esac
+    while true; do
+        clear
+        echo ""
+        local choice
+        choice=$(tui_menu "Settings:" \
+            "View Config" \
+            "Check Dependencies" \
+            "Refresh Status" \
+            "Clear Logs" \
+            "View Logs" \
+            "Reset Config" \
+            "[<] Back")
+        
+        case "$choice" in
+            "[<] Back"|"")
+                return
+                ;;
+            "View Config")
+                echo ""
+                echo "Current Configuration:"
+                tui_divider 40
+                config_list
+                read -rp "Press Enter to continue..."
+                ;;
+            "Check Dependencies")
+                deps_print_status
+                read -rp "Press Enter to continue..."
+                ;;
+            "Refresh Status")
+                echo -n "Refreshing dashboard..."
+                refresh_dashboard_cache
+                tui_success " Done!"
+                read -rp "Press Enter to continue..."
+                ;;
+            "Clear Logs")
+                if tui_confirm "Clear all logs?"; then
+                    log_clear
+                    tui_success "Logs cleared"
+                fi
+                read -rp "Press Enter to continue..."
+                ;;
+            "View Logs")
+                echo ""
+                echo "Log file: $(log_get_path)"
+                echo "Size: $(log_get_size)"
+                tui_divider 50
+                log_get_recent 20
+                read -rp "Press Enter to continue..."
+                ;;
+            "Reset Config")
+                if tui_confirm "Reset configuration to defaults?"; then
+                    config_reset
+                    tui_success "Configuration reset"
+                fi
+                read -rp "Press Enter to continue..."
+                ;;
+        esac
+    done
 }
 
 # ==============================================================================

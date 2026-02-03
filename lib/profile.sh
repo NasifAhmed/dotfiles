@@ -258,7 +258,9 @@ profile_add_config() {
     return 0
 }
 
-# Remove config from profile (unstow and move back)
+# Remove config from profile (unstow and restore to original location)
+# Usage: profile_remove_config "profile_name" "config_name"
+# Remove config from profile (unstow and restore to original location)
 # Usage: profile_remove_config "profile_name" "config_name"
 profile_remove_config() {
     local profile_name="$1"
@@ -273,34 +275,44 @@ profile_remove_config() {
     
     log_info "Removing config: $config_name from profile: $profile_name"
     
-    # Get original path from metadata if available
-    local original_path=""
-    if [[ -f "${config_dir}/.stow_meta" ]]; then
-        original_path=$(grep "^original_path=" "${config_dir}/.stow_meta" | cut -d'=' -f2-)
+    # Unstow first (remove symlinks)
+    stow_remove "$config_dir" 2>/dev/null || true
+    
+    # Restore files to $HOME based on their relative path in the package
+    # We rely on the stow structure being correct relative to HOME
+    log_info "Restoring files to original locations..."
+    
+    if [[ -d "$config_dir" ]]; then
+        while IFS= read -r -d '' file; do
+            # Skip metadata and git files
+            local filename
+            filename=$(basename "$file")
+            if [[ "$filename" == ".stow_meta" ]] || [[ "$filename" == ".git" ]]; then
+                continue
+            fi
+            
+            # Calculate relative path from config_dir root
+            local rel_path="${file#$config_dir/}"
+            local target="${HOME}/${rel_path}"
+            
+            # Create parent directory
+            mkdir -p "$(dirname "$target")"
+            
+            if [[ -e "$target" ]]; then
+                 log_warning "Target exists, overwriting: $target"
+            fi
+            
+            # Move file back
+            mv "$file" "$target"
+            log_debug "Restored: $target"
+            
+        done < <(find "$config_dir" -type f -print0 2>/dev/null)
     fi
     
-    # Unstow first
-    stow_remove "$config_dir"
-    
-    # Move files back to original location
-    for item in "$config_dir"/*; do
-        if [[ -e "$item" && "$(basename "$item")" != ".stow_meta" ]]; then
-            # Walk through stow structure and copy back
-            while IFS= read -r -d '' file; do
-                local rel_path="${file#$config_dir/}"
-                local target="${HOME}/${rel_path}"
-                
-                mkdir -p "$(dirname "$target")"
-                cp -a "$file" "$target"
-                log_debug "Restored: $target"
-            done < <(find "$item" -type f -print0 2>/dev/null)
-        fi
-    done
-    
-    # Remove from profile
+    # Remove the now empty config directory
     rm -rf "$config_dir"
     
-    log_success "Config removed: $config_name (restored to original location)"
+    log_success "Config removed: $config_name (restored)"
     return 0
 }
 

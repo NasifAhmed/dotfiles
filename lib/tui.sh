@@ -101,14 +101,25 @@ tui_style() {
 
 # Show a menu and get selection
 # Usage: tui_menu "prompt" "option1" "option2" ...
-# Returns: selected option
+# Returns: selected option (empty on cancel)
 tui_menu() {
     local prompt="$1"
     shift
     local options=("$@")
     
     if [[ "$TUI_TOOL" == "gum" ]]; then
-        gum choose --header "$prompt" "${options[@]}"
+        # Handle Esc/cancel gracefully
+        set +e
+        local result
+        result=$(gum choose --header "$prompt" "${options[@]}")
+        local rc=$?
+        set -e
+        
+        if [[ $rc -eq 0 ]] && [[ -n "$result" ]]; then
+            echo "$result"
+        else
+            echo ""  # Return empty on cancel
+        fi
     elif [[ "$TUI_TOOL" == "dialog" ]]; then
         local items=()
         local i=1
@@ -149,7 +160,11 @@ tui_confirm() {
     local prompt="$1"
     
     if [[ "$TUI_TOOL" == "gum" ]]; then
+        set +e
         gum confirm "$prompt"
+        local rc=$?
+        set -e
+        return $rc
     elif [[ "$TUI_TOOL" == "dialog" ]]; then
         dialog --clear --yesno "$prompt" 8 50
     elif [[ "$TUI_TOOL" == "whiptail" ]]; then
@@ -164,7 +179,7 @@ tui_confirm() {
 
 # Get text input
 # Usage: tui_input "prompt" [default] [placeholder]
-# Returns: user input
+# Returns: user input (empty on cancel)
 tui_input() {
     local prompt="$1"
     local default="${2:-}"
@@ -174,7 +189,18 @@ tui_input() {
         local args=(--header "$prompt")
         [[ -n "$default" ]] && args+=(--value "$default")
         [[ -n "$placeholder" ]] && args+=(--placeholder "$placeholder")
-        gum input "${args[@]}"
+        
+        set +e
+        local result
+        result=$(gum input "${args[@]}")
+        local rc=$?
+        set -e
+        
+        if [[ $rc -eq 0 ]]; then
+            echo "$result"
+        else
+            echo ""  # Return empty on cancel
+        fi
     elif [[ "$TUI_TOOL" == "dialog" ]]; then
         dialog --clear --inputbox "$prompt" 8 60 "$default" 2>&1 >/dev/tty
     elif [[ "$TUI_TOOL" == "whiptail" ]]; then
@@ -190,14 +216,24 @@ tui_input() {
 
 # Fuzzy filter selection
 # Usage: tui_filter "prompt" "option1" "option2" ...
-# Returns: selected option
+# Returns: selected option (empty on cancel)
 tui_filter() {
     local prompt="$1"
     shift
     local options=("$@")
     
     if [[ "$TUI_TOOL" == "gum" ]]; then
-        printf '%s\n' "${options[@]}" | gum filter --header "$prompt"
+        set +e
+        local result
+        result=$(printf '%s\n' "${options[@]}" | gum filter --header "$prompt")
+        local rc=$?
+        set -e
+        
+        if [[ $rc -eq 0 ]] && [[ -n "$result" ]]; then
+            echo "$result"
+        else
+            echo ""  # Return empty on cancel
+        fi
     else
         # Fallback to regular menu
         tui_menu "$prompt" "${options[@]}"
@@ -435,18 +471,92 @@ tui_checklist() {
 # File Browser Component
 # ==============================================================================
 
+# Custom Directory Browser that allows navigation
+# Usage: tui_dir_browser [start_path]
+# Returns: selected path (empty if cancelled)
+tui_dir_browser() {
+    local current_path="${1:-$HOME}"
+    # Resolve absolute path
+    current_path=$(cd "$current_path" && pwd)
+    
+    while true; do
+        local options=()
+        options+=("[.]  Select Current: $current_path")
+        options+=("[..] Go Up")
+        
+        # Read directories
+        while IFS= read -r dir; do
+            [[ -n "$dir" ]] && options+=("$dir/")
+        done < <(find "$current_path" -mindepth 1 -maxdepth 1 -type d | sort)
+        
+        # Show menu
+        local choice
+        if [[ "$TUI_TOOL" == "gum" ]]; then
+            choice=$(printf '%s\n' "${options[@]}" | gum filter --header "Navigate (Enter to Go, Select Current to Pick)" --height 20 --placeholder "Filter directories...")
+        else
+             choice=$(tui_menu "Navigate: $current_path" "${options[@]}")
+        fi
+        
+        if [[ -z "$choice" ]]; then
+            echo "" # Cancelled
+            return
+        fi
+        
+        if [[ "$choice" == "[.]  Select Current"* ]]; then
+            echo "$current_path"
+            return
+        elif [[ "$choice" == "[..] Go Up" ]]; then
+            current_path=$(dirname "$current_path")
+        else
+            # Extract directory name (remove trailing slash)
+            local dir_name="${choice%/}"
+            if [[ "$dir_name" == /* ]]; then
+                current_path="$dir_name"
+            else
+                current_path="$current_path/$dir_name"
+            fi
+        fi
+    done
+}
+
 # Browse and select file/directory
-# Usage: tui_file_browser [start_path] [type: file|dir|all]
-# Returns: selected path
+# Usage: tui_file_browser [start_path] [type: file|dir|both]
+# Returns: selected path (empty if cancelled)
 tui_file_browser() {
     local start_path="${1:-$HOME}"
-    local type="${2:-all}"
+    local type="${2:-both}"
+    
+    # If strictly directory selection, use custom browser to allow navigation
+    if [[ "$type" == "dir" ]]; then
+        tui_dir_browser "$start_path"
+        return
+    fi
     
     if [[ "$TUI_TOOL" == "gum" ]]; then
-        local args=(--path "$start_path")
-        [[ "$type" == "file" ]] && args+=(--file)
-        [[ "$type" == "dir" ]] && args+=(--directory)
-        gum file "${args[@]}"
+        local args=(--all --height 20)
+        
+        case "$type" in
+            file)
+                # Only allow file selection
+                args+=(--file)
+                ;;
+            both|all|*)
+                # Allow selecting EITHER files OR directories
+                args+=(--file --directory)
+                ;;
+        esac
+        
+        set +e
+        local result
+        result=$(gum file "${args[@]}" "$start_path")
+        local rc=$?
+        set -e
+        
+        if [[ $rc -eq 0 ]] && [[ -n "$result" ]]; then
+            echo "$result"
+        else
+            echo ""
+        fi
     else
         echo -n "Enter path [$start_path]: " >&2
         local path

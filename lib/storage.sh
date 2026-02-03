@@ -157,7 +157,7 @@ storage_add() {
     return 0
 }
 
-# Remove item from storage (unstow and restore)
+# Remove item from storage (unstow and restore to original location)
 # Usage: storage_remove "name"
 storage_remove() {
     local name="$1"
@@ -171,28 +171,59 @@ storage_remove() {
     log_info "Removing from storage: $name"
     
     # Get metadata
+    local original_path=""
     local stow_target="$HOME"
     local meta_file="${item_dir}/.item_meta"
     if [[ -f "$meta_file" ]]; then
-        stow_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2-)
+        original_path=$(grep "^original_path=" "$meta_file" | cut -d'=' -f2- || echo "")
+        stow_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2- || echo "$HOME")
     fi
     
-    # Unstow first
-    stow_remove "$item_dir" "$stow_target"
+    # Unstow first (remove symlinks)
+    stow_remove "$item_dir" "$stow_target" 2>/dev/null || true
     
-    # Restore files to original locations
-    for item in "$item_dir"/*; do
-        if [[ -e "$item" && "$(basename "$item")" != ".item_meta" ]]; then
-            while IFS= read -r -d '' file; do
-                local rel_path="${file#$item_dir/}"
-                local target="${stow_target}/${rel_path}"
-                
-                mkdir -p "$(dirname "$target")"
-                cp -a "$file" "$target"
-                log_debug "Restored: $target"
-            done < <(find "$item" -type f -print0 2>/dev/null)
-        fi
-    done
+    # Restore to original path if we have it
+    if [[ -n "$original_path" ]]; then
+        log_info "Restoring to original location: $original_path"
+        
+        # Find the actual content (skip .item_meta)
+        for content in "$item_dir"/*; do
+            if [[ -e "$content" ]] && [[ "$(basename "$content")" != ".item_meta" ]]; then
+                # This is the stow structure, find actual files
+                while IFS= read -r -d '' file; do
+                    local rel_in_content="${file#$content/}"
+                    
+                    # Determine if original was a file or directory
+                    if [[ -d "$original_path" ]] || [[ "$rel_in_content" == */* ]]; then
+                        # Original was a directory, restore structure
+                        local target_file="${original_path}/${rel_in_content}"
+                        mkdir -p "$(dirname "$target_file")"
+                        cp -a "$file" "$target_file"
+                        log_debug "Restored: $target_file"
+                    else
+                        # Original was a single file
+                        mkdir -p "$(dirname "$original_path")"
+                        cp -a "$file" "$original_path"
+                        log_debug "Restored: $original_path"
+                    fi
+                done < <(find "$content" -type f -print0 2>/dev/null)
+            fi
+        done
+    else
+        # Fallback: restore to stow_target using relative path
+        log_warning "No original path in metadata, restoring to $stow_target"
+        for content in "$item_dir"/*; do
+            if [[ -e "$content" ]] && [[ "$(basename "$content")" != ".item_meta" ]]; then
+                while IFS= read -r -d '' file; do
+                    local rel_path="${file#$item_dir/}"
+                    local target="${stow_target}/${rel_path}"
+                    mkdir -p "$(dirname "$target")"
+                    cp -a "$file" "$target"
+                    log_debug "Restored: $target"
+                done < <(find "$content" -type f -print0 2>/dev/null)
+            fi
+        done
+    fi
     
     # Remove from storage
     rm -rf "$item_dir"
