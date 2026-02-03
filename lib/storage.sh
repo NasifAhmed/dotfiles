@@ -3,7 +3,8 @@
 # Dotfiles Sync - Storage Library
 # ==============================================================================
 # Manages general storage with full CRUD operations via TUI.
-# Storage is a stow-compatible directory for any files.
+# Storage is a stow-compatible directory where items mirror paths relative to HOME
+# and are always stowed to HOME.
 # ==============================================================================
 
 # Strict mode
@@ -24,7 +25,6 @@ source "${DOTFILES_DIR}/lib/stow_manager.sh"
 
 # Storage directory
 STORAGE_DIR="${DOTFILES_DIR}/storage"
-STORAGE_META_FILE="${STORAGE_DIR}/.storage_meta"
 
 # ==============================================================================
 # Storage Initialization
@@ -36,11 +36,6 @@ storage_init() {
     if [[ ! -d "$STORAGE_DIR" ]]; then
         mkdir -p "$STORAGE_DIR"
         log_debug "Created storage directory"
-    fi
-    
-    if [[ ! -f "$STORAGE_META_FILE" ]]; then
-        echo "# Storage Metadata" > "$STORAGE_META_FILE"
-        echo "# Format: name|original_path|stow_target|added_date" >> "$STORAGE_META_FILE"
     fi
 }
 
@@ -100,11 +95,10 @@ storage_get_size() {
 # ==============================================================================
 
 # Add item to storage
-# Usage: storage_add "source_path" [name] [stow_target]
+# Usage: storage_add "source_path" [name]
 storage_add() {
     local source_path="$1"
     local name="${2:-$(basename "$source_path")}"
-    local stow_target="${3:-$HOME}"
     
     storage_init
     
@@ -120,38 +114,37 @@ storage_add() {
         return 1
     fi
     
-    log_info "Adding to storage: $name"
-    
-    # Determine relative path from target
+    # Determine absolute path of source
     local abs_source
     abs_source=$(realpath "$source_path")
-    local rel_path="${abs_source#$stow_target/}"
     
-    # Create stow structure
-    mkdir -p "$item_dir"
-    local parent_in_stow="${item_dir}/$(dirname "$rel_path")"
-    mkdir -p "$parent_in_stow"
-    
-    # Copy to storage
-    if [[ -d "$source_path" ]]; then
-        cp -a "$source_path" "${parent_in_stow}/"
-    else
-        cp -a "$source_path" "${parent_in_stow}/"
+    # Check if source is inside HOME
+    if [[ "$abs_source" != "$HOME"* ]]; then
+        log_error "Source must be inside HOME directory: $source_path"
+        log_error "Current implementation only supports HOME-relative storage."
+        return 1
     fi
     
-    # Save metadata
-    local meta_file="${item_dir}/.item_meta"
-    {
-        echo "original_path=$abs_source"
-        echo "stow_target=$stow_target"
-        echo "added=$(date -Iseconds)"
-    } > "$meta_file"
+    log_info "Adding to storage: $name"
+    
+    # Determine path relative to HOME
+    local rel_path="${abs_source#$HOME/}"
+    local parent_dir
+    parent_dir=$(dirname "$rel_path")
+    
+    local storage_path="${item_dir}/${rel_path}"
+    
+    # Create structure in storage
+    mkdir -p "$(dirname "$storage_path")"
+    
+    # Copy to storage
+    cp -a "$source_path" "$storage_path"
     
     # Remove original
     rm -rf "$source_path"
     
-    # Stow to target
-    stow_apply "$item_dir" "$stow_target"
+    # Stow to HOME
+    stow_apply "$item_dir" "$HOME"
     
     log_success "Added to storage: $name"
     return 0
@@ -170,59 +163,24 @@ storage_remove() {
     
     log_info "Removing from storage: $name"
     
-    # Get metadata
-    local original_path=""
-    local stow_target="$HOME"
-    local meta_file="${item_dir}/.item_meta"
-    if [[ -f "$meta_file" ]]; then
-        original_path=$(grep "^original_path=" "$meta_file" | cut -d'=' -f2- || echo "")
-        stow_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2- || echo "$HOME")
+    # Unstow first (remove symlinks)
+    stow_remove "$item_dir" "$HOME" 2>/dev/null || true
+    
+    # Restore content
+    # Walk through the storage item to find the files and move them back to HOME
+    log_info "Restoring files..."
+    
+    if [[ -z "$(ls -A "$item_dir")" ]]; then
+        rm -rf "$item_dir"
+        return 0
     fi
     
-    # Unstow first (remove symlinks)
-    stow_remove "$item_dir" "$stow_target" 2>/dev/null || true
-    
-    # Restore to original path if we have it
-    if [[ -n "$original_path" ]]; then
-        log_info "Restoring to original location: $original_path"
-        
-        # Find the actual content (skip .item_meta)
-        for content in "$item_dir"/*; do
-            if [[ -e "$content" ]] && [[ "$(basename "$content")" != ".item_meta" ]]; then
-                # This is the stow structure, find actual files
-                while IFS= read -r -d '' file; do
-                    local rel_in_content="${file#$content/}"
-                    
-                    # Determine if original was a file or directory
-                    if [[ -d "$original_path" ]] || [[ "$rel_in_content" == */* ]]; then
-                        # Original was a directory, restore structure
-                        local target_file="${original_path}/${rel_in_content}"
-                        mkdir -p "$(dirname "$target_file")"
-                        cp -a "$file" "$target_file"
-                        log_debug "Restored: $target_file"
-                    else
-                        # Original was a single file
-                        mkdir -p "$(dirname "$original_path")"
-                        cp -a "$file" "$original_path"
-                        log_debug "Restored: $original_path"
-                    fi
-                done < <(find "$content" -type f -print0 2>/dev/null)
-            fi
-        done
+    # Use rsync to merge back to HOME
+    if command -v rsync &>/dev/null; then
+        rsync -a --remove-source-files "${item_dir}/" "$HOME/"
     else
-        # Fallback: restore to stow_target using relative path
-        log_warning "No original path in metadata, restoring to $stow_target"
-        for content in "$item_dir"/*; do
-            if [[ -e "$content" ]] && [[ "$(basename "$content")" != ".item_meta" ]]; then
-                while IFS= read -r -d '' file; do
-                    local rel_path="${file#$item_dir/}"
-                    local target="${stow_target}/${rel_path}"
-                    mkdir -p "$(dirname "$target")"
-                    cp -a "$file" "$target"
-                    log_debug "Restored: $target"
-                done < <(find "$content" -type f -print0 2>/dev/null)
-            fi
-        done
+        # Fallback
+        cp -a "${item_dir}/." "$HOME/"
     fi
     
     # Remove from storage
@@ -250,12 +208,7 @@ storage_get_info() {
     echo "name=$name"
     echo "size=$size"
     echo "files=$file_count"
-    
-    # Include metadata if available
-    local meta_file="${item_dir}/.item_meta"
-    if [[ -f "$meta_file" ]]; then
-        cat "$meta_file"
-    fi
+    echo "target=$HOME"
 }
 
 # ==============================================================================
@@ -276,15 +229,11 @@ storage_sync() {
             name=$(basename "$item_dir")
             [[ "$name" == "*" ]] && continue
             
-            local stow_target="$HOME"
-            local meta_file="${item_dir}/.item_meta"
-            if [[ -f "$meta_file" ]]; then
-                stow_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2- || echo "$HOME")
-            fi
-            
             log_info "Syncing: $name"
-            stow_restow "$item_dir" "$stow_target" 2>/dev/null || stow_apply "$item_dir" "$stow_target"
-            ((count++))
+            if ! (stow_restow "$item_dir" "$HOME" 2>/dev/null || stow_apply "$item_dir" "$HOME"); then
+                log_warning "Failed to sync package: $name"
+            fi
+            ((count+=1))
         fi
     done
     
@@ -302,13 +251,7 @@ storage_apply() {
         return 1
     fi
     
-    local stow_target="$HOME"
-    local meta_file="${item_dir}/.item_meta"
-    if [[ -f "$meta_file" ]]; then
-        stow_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2- || echo "$HOME")
-    fi
-    
-    stow_apply "$item_dir" "$stow_target"
+    stow_apply "$item_dir" "$HOME"
 }
 
 # Unapply single storage item
@@ -322,54 +265,12 @@ storage_unapply() {
         return 1
     fi
     
-    local stow_target="$HOME"
-    local meta_file="${item_dir}/.item_meta"
-    if [[ -f "$meta_file" ]]; then
-        stow_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2- || echo "$HOME")
-    fi
-    
-    stow_remove "$item_dir" "$stow_target"
+    stow_remove "$item_dir" "$HOME"
 }
 
 # ==============================================================================
 # Storage Edit Operations
 # ==============================================================================
-
-# Change stow target for storage item
-# Usage: storage_edit_target "name" "new_target"
-storage_edit_target() {
-    local name="$1"
-    local new_target="$2"
-    local item_dir="${STORAGE_DIR}/${name}"
-    
-    if [[ ! -d "$item_dir" ]]; then
-        log_error "Storage item not found: $name"
-        return 1
-    fi
-    
-    local meta_file="${item_dir}/.item_meta"
-    
-    # Get current target
-    local old_target="$HOME"
-    if [[ -f "$meta_file" ]]; then
-        old_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2- || echo "$HOME")
-    fi
-    
-    # Unstow from old target
-    stow_remove "$item_dir" "$old_target" 2>/dev/null || true
-    
-    # Update metadata
-    if [[ -f "$meta_file" ]]; then
-        sed -i "s|^stow_target=.*|stow_target=$new_target|" "$meta_file"
-    else
-        echo "stow_target=$new_target" > "$meta_file"
-    fi
-    
-    # Stow to new target
-    stow_apply "$item_dir" "$new_target"
-    
-    log_success "Target updated: $name -> $new_target"
-}
 
 # Rename storage item
 # Usage: storage_rename "old_name" "new_name"
@@ -389,21 +290,14 @@ storage_rename() {
         return 1
     fi
     
-    # Get stow target
-    local stow_target="$HOME"
-    local meta_file="${old_dir}/.item_meta"
-    if [[ -f "$meta_file" ]]; then
-        stow_target=$(grep "^stow_target=" "$meta_file" | cut -d'=' -f2- || echo "$HOME")
-    fi
-    
     # Unstow old
-    stow_remove "$old_dir" "$stow_target" 2>/dev/null || true
+    stow_remove "$old_dir" "$HOME" 2>/dev/null || true
     
     # Rename
     mv "$old_dir" "$new_dir"
     
     # Restow with new name
-    stow_apply "$new_dir" "$stow_target"
+    stow_apply "$new_dir" "$HOME"
     
     log_success "Renamed: $old_name -> $new_name"
 }
@@ -423,5 +317,5 @@ storage_browse() {
         return 1
     fi
     
-    find "$item_dir" -type f ! -name ".item_meta" -printf "%P\n" 2>/dev/null | sort
+    find "$item_dir" -type f -printf "%P\n" 2>/dev/null | sort
 }

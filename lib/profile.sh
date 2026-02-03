@@ -367,6 +367,11 @@ profile_apply() {
     
     log_success "Profile applied: $name ($count configs)"
     
+    # Sync storage
+    if command -v storage_sync &>/dev/null; then
+        storage_sync
+    fi
+
     # Restart services
     profile_restart_services
     

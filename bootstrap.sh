@@ -468,6 +468,20 @@ setup_new_profile() {
                         warning "Conflict applying: $config_name"
                 fi
             done
+                fi
+            done
+
+            # Sync storage after profile application
+            if [[ -f "${SCRIPT_DIR}/lib/storage.sh" ]]; then
+                echo ""
+                info "Syncing storage items..."
+                # Source storage lib and run sync
+                (source "${SCRIPT_DIR}/lib/logger.sh" && \
+                 source "${SCRIPT_DIR}/lib/config.sh" && \
+                 source "${SCRIPT_DIR}/lib/stow_manager.sh" && \
+                 source "${SCRIPT_DIR}/lib/storage.sh" && \
+                 storage_sync) || warning "Storage sync failed"
+            fi
         fi
     else
         info "Skipped profile selection"
