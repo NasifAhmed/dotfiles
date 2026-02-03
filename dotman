@@ -238,14 +238,21 @@ sync_menu() {
                 read -rp "Press Enter to continue..."
                 ;;
             "View Changes")
-                local files
-                files=$(git_get_changed_files)
-                if [[ -z "$files" ]]; then
+                if ! git_has_changes; then
                     tui_msgbox "Changes" "No uncommitted changes"
                 else
-                    echo "Changed files:"
-                    echo "$files"
-                    read -rp "Press Enter to continue..."
+                    echo "Current Status:"
+                    echo ""
+                    git -C "$DOTFILES_DIR" status --short --branch
+                    echo ""
+                    
+                    if tui_confirm "View full diff?"; then
+                        if [[ "$TUI_TOOL" == "gum" ]]; then
+                            git -C "$DOTFILES_DIR" diff --color=always | gum pager
+                        else
+                            git -C "$DOTFILES_DIR" diff --color=always | less -R
+                        fi
+                    fi
                 fi
                 ;;
             "Reset File")
