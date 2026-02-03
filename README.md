@@ -1,48 +1,104 @@
-# Dotman - Omarchy Dotfiles Manager
+# 🔄 Dotfiles Sync
 
-A modern, self-healing, and automated TUI for managing dotfiles and syncing configurations across multiple machines.
+> **Native Bash Dotfiles Manager for Omarchy Linux**
 
-## Features
+A beautiful TUI-based dotfiles sync and profile management system built entirely with native Linux tools (Bash, gum, stow, git).
 
-- **Profile Management**: Create and switch between profiles (e.g., Home, Office).
-- **Auto-Sync**: Smart Git syncing with conflict resolution (prefers cloud).
-- **Stow Integration**: Automated `stow` usage with conflict handling (backup & retry).
-- **Self-Healing**: Checks and fixes environment issues (PATH, dependencies).
-- **TUI**: Beautiful terminal interface powered by Bubble Tea.
+## ✨ Features
 
-## Usage
+- **📊 Dashboard** - Real-time status with ASCII art, git status, profile info
+- **🔄 Smart Sync** - Auto commit/push/pull with conflict resolution (prefers cloud)
+- **👤 Profiles** - Manage multiple configs (home, office, etc.)
+- **📦 Storage** - General file storage with stow integration
+- **⏰ Time Travel** - Browse and restore to any commit snapshot
+- **🎨 Beautiful TUI** - Uses gum for modern, beautiful interface
 
-### Bootstrap (First Time)
-
-Run the bootstrap script to install dependencies and build the tool:
-
-```bash
-./bootstrap.sh
-```
-
-### Running
-
-Once installed, simply run:
+## 🚀 Quick Start
 
 ```bash
-dotman
+# Bootstrap (installs dependencies)
+bash bootstrap.sh
+
+# Launch TUI
+./sync
+
+# Or after bootstrap, from anywhere:
+sync
 ```
 
-### Controls
+## 📖 Usage
 
-- **s**: Sync with Git (Fetch/Pull/Push)
-- **p**: Select and Apply Profile
-- **c**: Create New Profile
-- **o**: Manage Storage Files
-- **r**: Reset Modified Files
-- **q**: Quit
+```bash
+./sync              # Launch TUI dashboard
+./sync --help       # Show help
+./sync --sync       # Quick sync to cloud
+./sync --profile X  # Switch to profile X
+./sync --status     # Show current status
+```
 
-## Structure
+## 📁 Structure
 
-- `dotman/`: Source code (Go).
-- `home/`, `office/`: Profiles containing stowable configs.
-- `storage/`: General file storage.
+```
+dotfiles/
+├── sync                 # Main entry point script
+├── bootstrap.sh         # Setup script
+├── lib/                 # Library modules
+│   ├── logger.sh        # Logging with timestamps
+│   ├── config.sh        # Configuration management
+│   ├── deps.sh          # Dependency verification
+│   ├── tui.sh           # TUI framework (gum/dialog)
+│   ├── git_sync.sh      # Git sync & time travel
+│   ├── stow_manager.sh  # Stow operations & backup
+│   ├── profile.sh       # Profile CRUD
+│   └── storage.sh       # Storage CRUD
+├── home/                # Home profile (example)
+├── office/              # Office profile (example)
+├── storage/             # General storage
+└── backups/             # Conflict backups
+```
 
-## License
+## 🔧 Dependencies
+
+**Required:**
+- `git` - Version control
+- `stow` - Symlink manager
+
+**Recommended:**
+- `gum` - Modern TUI (Charmbracelet)
+
+**Fallback:**
+- `dialog` or `whiptail` - Basic TUI
+
+## ⚙️ How It Works
+
+### Profiles
+Each profile is a directory containing stow-compatible config subdirectories:
+```
+home/
+├── hypr/          # Hyprland configs
+│   └── .config/
+│       └── hypr/
+├── nvim/          # Neovim configs
+│   └── .config/
+│       └── nvim/
+└── scripts/       # Custom scripts
+    └── .local/
+        └── bin/
+```
+
+### Sync Logic
+1. Fetch from origin
+2. Compare local vs remote commits
+3. If behind → pull (prefer cloud on conflicts)
+4. If ahead → push
+5. If diverged → save local, pull, push
+
+### Time Travel
+- Browse all commits as snapshots
+- Preview changes before restoring
+- Creates backup branch before time travel
+- Easily return from any backup
+
+## 📝 License
 
 MIT

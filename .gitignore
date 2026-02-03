@@ -1,5 +1,37 @@
+# Dotfiles Manager - Git Ignore
+# =============================
+
+# Logs
+dotfiles.log
+*.log
+
+# Backups (too large for git)
+backups/
+
+# Local configuration (machine-specific)
+.dotfiles_config
+.current_profile
+
+# Editor temp files
+*.swp
+*.swo
+*~
+.*.swp
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Gemini artifacts
+.gemini/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Old Python/Go artifacts (if any remain)
 .dotman_venv/
 __pycache__/
 *.pyc
-dotman.log
-.gemini/
+.dotman_build_hash

@@ -1,0 +1,841 @@
+#!/usr/bin/env bash
+# ==============================================================================
+#  DOTMAN - Nasif's Dotfiles Manager
+#  Native Bash Implementation
+# ==============================================================================
+# Main entry point for the dotfiles manager TUI application.
+# Provides sync, profile management, storage, and time-travel features.
+#
+# Usage:
+#   dotman              Launch TUI dashboard
+#   dotman --help       Show help
+#   dotman --sync       Quick sync (no TUI)
+#   dotman --profile X  Quick switch to profile X
+# ==============================================================================
+
+# Strict mode
+set -euo pipefail
+
+# ==============================================================================
+# Script Directory (resolve symlinks)
+# ==============================================================================
+# Get the real path of the script, resolving symlinks
+SCRIPT_PATH="${BASH_SOURCE[0]}"
+while [[ -L "$SCRIPT_PATH" ]]; do
+    SCRIPT_DIR="$(cd -P "$(dirname "$SCRIPT_PATH")" && pwd)"
+    SCRIPT_PATH="$(readlink "$SCRIPT_PATH")"
+    [[ "$SCRIPT_PATH" != /* ]] && SCRIPT_PATH="$SCRIPT_DIR/$SCRIPT_PATH"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SCRIPT_PATH")" && pwd)"
+export DOTFILES_DIR="$SCRIPT_DIR"
+
+# ==============================================================================
+# Source Libraries
+# ==============================================================================
+source "${DOTFILES_DIR}/lib/logger.sh"
+source "${DOTFILES_DIR}/lib/config.sh"
+source "${DOTFILES_DIR}/lib/deps.sh"
+source "${DOTFILES_DIR}/lib/tui.sh"
+source "${DOTFILES_DIR}/lib/git_sync.sh"
+source "${DOTFILES_DIR}/lib/stow_manager.sh"
+source "${DOTFILES_DIR}/lib/profile.sh"
+source "${DOTFILES_DIR}/lib/storage.sh"
+
+# ==============================================================================
+# Version
+# ==============================================================================
+VERSION="1.0.0"
+
+# ==============================================================================
+# Show Help
+# ==============================================================================
+show_help() {
+    cat << EOF
++-----------------------------------------------------------+
+|  DOTMAN - Nasif's Dotfiles Manager v${VERSION}                |
++-----------------------------------------------------------+
+
+Usage: dotman [OPTIONS]
+
+Options:
+  (no args)        Launch interactive TUI dashboard
+  --help, -h       Show this help message
+  --sync, -s       Quick sync (commit, push, pull)
+  --profile, -p    Switch to specified profile
+  --status         Show current status
+  --version, -v    Show version
+
+Examples:
+  dotman                  # Launch TUI
+  dotman --sync           # Quick sync to cloud
+  dotman --profile home   # Switch to 'home' profile
+  dotman --status         # Show current status
+
+EOF
+}
+
+# ==============================================================================
+# Show Status
+# ==============================================================================
+show_status() {
+    tui_init
+    
+    echo ""
+    draw_ascii_banner
+    
+    tui_section "System"
+    tui_kv "Date" "$(date '+%A, %B %d, %Y %H:%M')"
+    tui_kv "User" "$USER@$(hostname)"
+    tui_kv "Profile" "$(profile_get_current || echo 'None')" 212
+    
+    tui_section "Git Status"
+    local status
+    status=$(git_check_status)
+    tui_kv "Branch" "$(git_get_branch)"
+    tui_kv "Status" "$(tui_status_indicator "$status")"
+    
+    local ahead_behind
+    ahead_behind=$(git_get_ahead_behind)
+    local ahead behind
+    ahead=$(echo "$ahead_behind" | awk '{print $1}')
+    behind=$(echo "$ahead_behind" | awk '{print $2}')
+    [[ "$ahead" != "0" ]] && tui_kv "Ahead" "$ahead commits"
+    [[ "$behind" != "0" ]] && tui_kv "Behind" "$behind commits"
+    
+    local changes
+    changes=$(git_get_changes_count)
+    tui_kv "Changed" "$changes files"
+    
+    tui_kv "Last Commit" "$(git_get_last_commit short)"
+    
+    tui_section "Repository"
+    tui_kv "Profiles" "$(profile_count)"
+    tui_kv "Storage" "$(storage_count) items ($(storage_get_size))"
+    tui_kv "Repo Size" "$(git_get_repo_size)"
+    
+    echo ""
+}
+
+# ==============================================================================
+# Dashboard (with loading indicator)
+# ==============================================================================
+show_dashboard() {
+    clear
+    draw_ascii_banner
+    
+    # Temp file for subshell data passing
+    local tmpfile="/tmp/dotman_status_$$"
+    
+    # Run data fetching in background - use printf with %q to properly quote values
+    (
+        local s c p l
+        s=$(git_check_status 2>/dev/null || echo 'unknown')
+        c=$(git_get_changes_count 2>/dev/null || echo '0')
+        p=$(profile_count 2>/dev/null || echo '0')
+        l=$(git_get_last_commit short 2>/dev/null || echo 'N/A')
+        printf 'status=%q\n' "$s"
+        printf 'changes_count=%q\n' "$c"
+        printf 'profile_cnt=%q\n' "$p"
+        printf 'last_commit=%q\n' "$l"
+    ) > "$tmpfile" &
+    local pid=$!
+    
+    # Show animated spinner while loading (disable set -e for this loop)
+    set +e
+    local chars='|/-\'
+    local i=0
+    while kill -0 "$pid" 2>/dev/null; do
+        printf "\r  [%c] Loading status..." "${chars:$i:1}"
+        ((i = (i + 1) % 4)) || true
+        sleep 0.08
+    done
+    wait "$pid" 2>/dev/null
+    set -e
+    printf "\r%-40s\n" " "
+    
+    # Read results from temp file
+    local status="" changes_count="" profile_cnt="" last_commit=""
+    if [[ -f "$tmpfile" ]]; then
+        # shellcheck source=/dev/null
+        source "$tmpfile"
+        rm -f "$tmpfile"
+    fi
+    
+    tui_section "Overview"
+    tui_kv "Date" "$(date '+%A, %B %d, %Y %H:%M')"
+    tui_kv "User" "$USER@$(hostname)"
+    tui_kv "Profile" "$(profile_get_current || echo 'None')" 212
+    
+    echo ""
+    echo "  Git: $(tui_status_indicator "$status")  |  Changed: $changes_count files  |  Profiles: $profile_cnt"
+    echo "  Last: $last_commit"
+    
+    # Show warnings
+    if [[ "$status" == "behind" ]]; then
+        echo ""
+        tui_kv "[!] Warning" "Repository is behind cloud - sync recommended" 214
+    fi
+    
+    if [[ "$status" == "diverged" ]]; then
+        echo ""
+        tui_kv "[!] Warning" "Repository has diverged - conflicts may occur" 196
+    fi
+    
+    # Recent logs
+    tui_section "Recent Activity"
+    log_get_recent 5 | tail -5 | while IFS= read -r line; do
+        echo "  $line"
+    done
+    
+    tui_divider 50
+}
+
+# ==============================================================================
+# Main Menu (using ASCII/Nerd Font compatible icons)
+# ==============================================================================
+main_menu() {
+    local options=(
+        "[S] Sync Now"
+        "[P] Profiles"
+        "[D] Storage"
+        "[T] Time Travel"
+        "[C] Settings"
+        "[Q] Exit"
+    )
+    
+    tui_menu "=== Main Menu ===" "${options[@]}"
+}
+
+# ==============================================================================
+# Sync Menu
+# ==============================================================================
+sync_menu() {
+    log_init
+    
+    local choice
+    choice=$(tui_menu "Sync Options:" \
+        "Quick Sync (auto)" \
+        "Pull from Cloud" \
+        "Push to Cloud" \
+        "View Changes" \
+        "Reset File" \
+        "Back to Main")
+    
+    case "$choice" in
+        "Quick Sync (auto)")
+            tui_spin "Syncing with cloud..." git_smart_sync
+            tui_success "Sync completed!"
+            read -rp "Press Enter to continue..."
+            ;;
+        "Pull from Cloud")
+            tui_spin "Pulling from cloud..." git_pull_prefer_theirs
+            tui_success "Pull completed!"
+            read -rp "Press Enter to continue..."
+            ;;
+        "Push to Cloud")
+            git_auto_commit
+            tui_spin "Pushing to cloud..." git_push
+            tui_success "Push completed!"
+            read -rp "Press Enter to continue..."
+            ;;
+        "View Changes")
+            local files
+            files=$(git_get_changed_files)
+            if [[ -z "$files" ]]; then
+                tui_msgbox "Changes" "No uncommitted changes"
+            else
+                echo "Changed files:"
+                echo "$files"
+                read -rp "Press Enter to continue..."
+            fi
+            ;;
+        "Reset File")
+            local files
+            files=$(git_get_resettable_files)
+            if [[ -z "$files" ]]; then
+                tui_msgbox "Reset" "No files to reset"
+            else
+                local file
+                file=$(tui_filter "Select file to reset:" $files)
+                if [[ -n "$file" ]]; then
+                    if tui_confirm "Reset $file to last commit?"; then
+                        git_reset_file "$file"
+                        tui_success "File reset: $file"
+                    fi
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+    esac
+}
+
+# ==============================================================================
+# Profile Menu
+# ==============================================================================
+profile_menu() {
+    local choice
+    choice=$(tui_menu "Profile Management:" \
+        "Switch Profile" \
+        "Create Profile" \
+        "Delete Profile" \
+        "Manage Configs" \
+        "View Profile Info" \
+        "Back to Main")
+    
+    case "$choice" in
+        "Switch Profile")
+            local profiles
+            profiles=$(profile_list)
+            if [[ -z "$profiles" ]]; then
+                tui_msgbox "Profiles" "No profiles found"
+            else
+                local selected
+                selected=$(tui_filter "Select profile:" $profiles)
+                if [[ -n "$selected" ]]; then
+                    tui_spin "Applying profile: $selected..." profile_apply "$selected"
+                    tui_success "Profile applied: $selected"
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "Create Profile")
+            local name
+            name=$(tui_input "Enter new profile name:" "" "profile-name")
+            if [[ -n "$name" ]]; then
+                profile_create "$name"
+                tui_success "Profile created: $name"
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "Delete Profile")
+            local profiles
+            profiles=$(profile_list)
+            if [[ -z "$profiles" ]]; then
+                tui_msgbox "Profiles" "No profiles to delete"
+            else
+                local selected
+                selected=$(tui_filter "Select profile to delete:" $profiles)
+                if [[ -n "$selected" ]]; then
+                    if tui_confirm "Delete profile '$selected'? This cannot be undone."; then
+                        profile_delete "$selected"
+                        tui_success "Profile deleted: $selected"
+                    fi
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "Manage Configs")
+            config_management_menu
+            ;;
+        "View Profile Info")
+            local profiles
+            profiles=$(profile_list)
+            if [[ -z "$profiles" ]]; then
+                tui_msgbox "Profiles" "No profiles found"
+            else
+                local selected
+                selected=$(tui_filter "Select profile:" $profiles)
+                if [[ -n "$selected" ]]; then
+                    echo ""
+                    profile_get_info "$selected"
+                    echo ""
+                    echo "Configs:"
+                    profile_list_configs "$selected" | while read -r cfg; do
+                        echo "  - $cfg"
+                    done
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+    esac
+}
+
+# ==============================================================================
+# Config Management Menu
+# ==============================================================================
+config_management_menu() {
+    local profiles
+    profiles=$(profile_list)
+    if [[ -z "$profiles" ]]; then
+        tui_msgbox "Profiles" "No profiles found"
+        return
+    fi
+    
+    local profile
+    profile=$(tui_filter "Select profile to manage:" $profiles)
+    [[ -z "$profile" ]] && return
+    
+    local choice
+    choice=$(tui_menu "Config Management - $profile:" \
+        "Add Config" \
+        "Remove Config" \
+        "List Configs" \
+        "Back")
+    
+    case "$choice" in
+        "Add Config")
+            local path
+            path=$(tui_file_browser "$HOME" "all")
+            if [[ -n "$path" && -e "$path" ]]; then
+                local name
+                name=$(tui_input "Config name:" "$(basename "$path")")
+                if [[ -n "$name" ]]; then
+                    profile_add_config "$profile" "$path" "$name"
+                    tui_success "Config added: $name"
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "Remove Config")
+            local configs
+            configs=$(profile_list_configs "$profile")
+            if [[ -z "$configs" ]]; then
+                tui_msgbox "Configs" "No configs in profile"
+            else
+                local selected
+                selected=$(tui_filter "Select config to remove:" $configs)
+                if [[ -n "$selected" ]]; then
+                    if tui_confirm "Remove config '$selected'? Files will be restored to original location."; then
+                        profile_remove_config "$profile" "$selected"
+                        tui_success "Config removed and restored: $selected"
+                    fi
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "List Configs")
+            echo ""
+            echo "Configs in $profile:"
+            profile_list_configs "$profile" | while read -r cfg; do
+                echo "  - $cfg"
+            done
+            read -rp "Press Enter to continue..."
+            ;;
+    esac
+}
+
+# ==============================================================================
+# Storage Menu
+# ==============================================================================
+storage_menu() {
+    local choice
+    choice=$(tui_menu "Storage Management:" \
+        "Add to Storage" \
+        "Remove from Storage" \
+        "List Storage" \
+        "Sync Storage" \
+        "Back to Main")
+    
+    case "$choice" in
+        "Add to Storage")
+            local path
+            path=$(tui_file_browser "$HOME" "all")
+            if [[ -n "$path" && -e "$path" ]]; then
+                local name
+                name=$(tui_input "Storage item name:" "$(basename "$path")")
+                if [[ -n "$name" ]]; then
+                    storage_add "$path" "$name"
+                    tui_success "Added to storage: $name"
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "Remove from Storage")
+            local items
+            items=$(storage_list)
+            if [[ -z "$items" ]]; then
+                tui_msgbox "Storage" "No storage items"
+            else
+                local selected
+                selected=$(tui_filter "Select item to remove:" $items)
+                if [[ -n "$selected" ]]; then
+                    if tui_confirm "Remove '$selected' from storage? Files will be restored."; then
+                        storage_remove "$selected"
+                        tui_success "Removed and restored: $selected"
+                    fi
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "List Storage")
+            echo ""
+            echo "Storage Items:"
+            storage_list_detailed
+            echo ""
+            echo "Total: $(storage_count) items ($(storage_get_size))"
+            read -rp "Press Enter to continue..."
+            ;;
+        "Sync Storage")
+            tui_spin "Syncing storage..." storage_sync
+            tui_success "Storage synced!"
+            read -rp "Press Enter to continue..."
+            ;;
+    esac
+}
+
+# ==============================================================================
+# Time Travel Menu
+# ==============================================================================
+time_travel_menu() {
+    local choice
+    choice=$(tui_menu "Time Travel - Snapshots:" \
+        "Browse Snapshots" \
+        "Restore Snapshot" \
+        "View Backup Branches" \
+        "Return from Backup" \
+        "Back to Main")
+    
+    case "$choice" in
+        "Browse Snapshots")
+            echo ""
+            echo "Recent Snapshots (commits):"
+            tui_divider 60
+            git_list_snapshots_formatted 15
+            read -rp "Press Enter to continue..."
+            ;;
+        "Restore Snapshot")
+            local snapshots
+            snapshots=$(git_list_snapshots 20 | cut -d'|' -f1-2 | tr '|' ' ')
+            if [[ -z "$snapshots" ]]; then
+                tui_msgbox "Snapshots" "No snapshots found"
+            else
+                echo "Select snapshot to restore:"
+                git_list_snapshots_formatted 20
+                echo ""
+                local hash
+                hash=$(tui_input "Enter commit hash (first 7 chars):")
+                if [[ -n "$hash" ]]; then
+                    echo ""
+                    echo "Preview of changes:"
+                    git_preview_snapshot "$hash"
+                    echo ""
+                    if tui_confirm "Restore to this snapshot? A backup branch will be created."; then
+                        git_restore_snapshot "$hash"
+                        tui_success "Restored to snapshot: $hash"
+                    fi
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "View Backup Branches")
+            local branches
+            branches=$(git_list_backup_branches)
+            if [[ -z "$branches" ]]; then
+                tui_msgbox "Backups" "No backup branches found"
+            else
+                echo ""
+                echo "Backup Branches:"
+                echo "$branches"
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "Return from Backup")
+            local branches
+            branches=$(git_list_backup_branches)
+            if [[ -z "$branches" ]]; then
+                tui_msgbox "Backups" "No backup branches to restore from"
+            else
+                local selected
+                # shellcheck disable=SC2086
+                selected=$(tui_filter "Select backup to restore:" $branches)
+                if [[ -n "$selected" ]]; then
+                    if tui_confirm "Return to backup '$selected'? Current changes will be lost."; then
+                        git_restore_from_backup "$selected"
+                        tui_success "Restored from backup: $selected"
+                    fi
+                fi
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+    esac
+}
+
+# ==============================================================================
+# Settings Menu
+# ==============================================================================
+settings_menu() {
+    local choice
+    choice=$(tui_menu "Settings:" \
+        "View Config" \
+        "Check Dependencies" \
+        "Clear Logs" \
+        "View Logs" \
+        "Reset Config" \
+        "Back to Main")
+    
+    case "$choice" in
+        "View Config")
+            echo ""
+            echo "Current Configuration:"
+            tui_divider 40
+            config_list
+            read -rp "Press Enter to continue..."
+            ;;
+        "Check Dependencies")
+            deps_print_status
+            read -rp "Press Enter to continue..."
+            ;;
+        "Clear Logs")
+            if tui_confirm "Clear all logs?"; then
+                log_clear
+                tui_success "Logs cleared"
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+        "View Logs")
+            echo ""
+            echo "Log file: $(log_get_path)"
+            echo "Size: $(log_get_size)"
+            tui_divider 50
+            log_get_recent 20
+            read -rp "Press Enter to continue..."
+            ;;
+        "Reset Config")
+            if tui_confirm "Reset configuration to defaults?"; then
+                config_reset
+                tui_success "Configuration reset"
+            fi
+            read -rp "Press Enter to continue..."
+            ;;
+    esac
+}
+
+# ==============================================================================
+# Main Loop
+# ==============================================================================
+main_loop() {
+    while true; do
+        show_dashboard
+        
+        local choice
+        choice=$(main_menu)
+        
+        case "$choice" in
+            "[S] Sync Now")
+                sync_menu
+                ;;
+            "[P] Profiles")
+                profile_menu
+                ;;
+            "[D] Storage")
+                storage_menu
+                ;;
+            "[T] Time Travel")
+                time_travel_menu
+                ;;
+            "[C] Settings")
+                settings_menu
+                ;;
+            "[Q] Exit"|"")
+                clear
+                echo ""
+                echo "Goodbye!"
+                echo ""
+                exit 0
+                ;;
+        esac
+    done
+}
+
+# ==============================================================================
+# Self-Bootstrap: Ensure dotman is properly set up
+# ==============================================================================
+self_bootstrap() {
+    local bin_dir="$HOME/.local/bin"
+    local symlink="$bin_dir/dotman"
+    local needs_setup=false
+    
+    # Check if symlink exists and is correct
+    if [[ ! -L "$symlink" ]]; then
+        needs_setup=true
+    else
+        local current_target
+        current_target=$(readlink -f "$symlink" 2>/dev/null || echo "")
+        if [[ "$current_target" != "${DOTFILES_DIR}/dotman" ]]; then
+            needs_setup=true
+        fi
+    fi
+    
+    if [[ "$needs_setup" == "true" ]]; then
+        echo ""
+        echo "[*] First run detected - setting up dotman..."
+        echo ""
+        
+        # Create ~/.local/bin
+        mkdir -p "$bin_dir"
+        
+        # Create/update symlink
+        ln -sf "${DOTFILES_DIR}/dotman" "$symlink"
+        echo "[+] Created symlink: $symlink"
+        
+        # Check PATH
+        if [[ ":$PATH:" != *":$bin_dir:"* ]]; then
+            # Add to shell rc files
+            local rc_files=("$HOME/.bashrc" "$HOME/.zshrc")
+            for rc_file in "${rc_files[@]}"; do
+                if [[ -f "$rc_file" ]] && ! grep -q 'export PATH=.*\.local/bin' "$rc_file" 2>/dev/null; then
+                    echo '' >> "$rc_file"
+                    echo '# Added by dotman' >> "$rc_file"
+                    echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$rc_file"
+                    echo "[+] Added ~/.local/bin to PATH in $(basename "$rc_file")"
+                fi
+            done
+            
+            # Export for current session
+            export PATH="$bin_dir:$PATH"
+            echo "[+] Updated PATH for current session"
+        fi
+        
+        echo ""
+        echo "[+] Setup complete! You can now run 'dotman' from anywhere."
+        echo "[!] Restart your shell or run: source ~/.bashrc"
+        echo ""
+        sleep 1
+    fi
+}
+
+# ==============================================================================
+# Check and offer profile setup for new machines
+# ==============================================================================
+check_new_machine() {
+    if [[ -f "${DOTFILES_DIR}/.current_profile" ]]; then
+        return 0  # Already has profile
+    fi
+    
+    # Check if there are profiles available
+    local profiles=()
+    for dir in "${DOTFILES_DIR}"/*/; do
+        local name
+        name=$(basename "$dir")
+        if [[ "$name" != "lib" ]] && \
+           [[ "$name" != "backups" ]] && \
+           [[ "$name" != "storage" ]] && \
+           [[ "$name" != "tests" ]] && \
+           [[ "$name" != ".git" ]] && \
+           [[ -d "$dir" ]]; then
+            if find "$dir" -mindepth 1 -type d 2>/dev/null | head -1 | grep -q .; then
+                profiles+=("$name")
+            fi
+        fi
+    done
+    
+    if [[ ${#profiles[@]} -eq 0 ]]; then
+        return 0  # No profiles to offer
+    fi
+    
+    echo ""
+    echo "[!] No profile selected. Available profiles:"
+    for i in "${!profiles[@]}"; do
+        echo "    $((i+1)). ${profiles[$i]}"
+    done
+    echo ""
+    
+    if tui_confirm "Would you like to select a profile now?"; then
+        local choice
+        choice=$(tui_menu "Select Profile:" "${profiles[@]}" "Skip")
+        
+        if [[ -n "$choice" ]] && [[ "$choice" != "Skip" ]]; then
+            echo "$choice" > "${DOTFILES_DIR}/.current_profile"
+            log_success "Profile set to: $choice"
+            
+            if tui_confirm "Apply profile now (stow configs)?"; then
+                profile_apply "$choice"
+            fi
+        fi
+    fi
+}
+
+# ==============================================================================
+# Initialization
+# ==============================================================================
+init() {
+    # Self-bootstrap: ensure symlink and PATH are set up
+    self_bootstrap
+    
+    # Initialize logging
+    log_init
+    log_debug "Starting dotfiles sync v$VERSION"
+    
+    # Initialize configuration
+    config_init
+    
+    # Check dependencies
+    if ! deps_verify_all; then
+        log_error "Missing dependencies."
+        echo ""
+        echo "[!] Required dependencies missing. Options:"
+        echo "    1. Run: bash ${DOTFILES_DIR}/bootstrap.sh"
+        echo "    2. Install manually: git, stow"
+        echo ""
+        if tui_confirm "Try to install missing dependencies now?"; then
+            deps_install_missing
+            if ! deps_verify_all; then
+                echo "[X] Still missing dependencies. Please install manually."
+                exit 1
+            fi
+        else
+            exit 1
+        fi
+    fi
+    
+    # Ensure ~/.local/bin in PATH
+    deps_ensure_local_bin_path
+    
+    # Initialize TUI
+    tui_init
+    
+    # Initialize storage
+    storage_init
+    
+    # Check for new machine and offer profile setup
+    check_new_machine
+}
+
+# ==============================================================================
+# Main Entry Point
+# ==============================================================================
+main() {
+    # Parse command line arguments
+    case "${1:-}" in
+        --help|-h)
+            show_help
+            exit 0
+            ;;
+        --version|-v)
+            echo "dotman v$VERSION"
+            exit 0
+            ;;
+        --sync|-s)
+            init
+            git_smart_sync
+            exit $?
+            ;;
+        --profile|-p)
+            if [[ -z "${2:-}" ]]; then
+                echo "Error: Profile name required"
+                exit 1
+            fi
+            init
+            profile_apply "$2"
+            exit $?
+            ;;
+        --status)
+            init
+            show_status
+            exit 0
+            ;;
+        "")
+            # No arguments - launch TUI
+            init
+            main_loop
+            ;;
+        *)
+            echo "Unknown option: $1"
+            show_help
+            exit 1
+            ;;
+    esac
+}
+
+# Run main
+main "$@"
