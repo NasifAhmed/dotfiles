@@ -21,15 +21,17 @@ vim.opt.cursorcolumn = true -- Highlight current column
 vim.opt.list = true         -- Show invisible chars
 vim.opt.listchars = { space = '·', tab = '» ', trail = '·', nbsp = '␣' }
 
+vim.g.autoformat = true
+
 -- 4. AUTO-INDENT ON SAVE (Native Engine)
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*",
-    callback = function()
-        local view = vim.fn.winsaveview() -- Save cursor position
-        vim.cmd('normal! gg=G')           -- Indent whole file
-        vim.fn.winrestview(view)          -- Restore cursor position
-    end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--     pattern = "*",
+--     callback = function()
+--         local view = vim.fn.winsaveview() -- Save cursor position
+--         vim.cmd('normal! gg=G')           -- Indent whole file
+--         vim.fn.winrestview(view)          -- Restore cursor position
+--     end,
+-- })
 
 -- 5. PRESENTATION MODE TOGGLE
 -- Maps <Space> + z to toggle everything (including top tabs)

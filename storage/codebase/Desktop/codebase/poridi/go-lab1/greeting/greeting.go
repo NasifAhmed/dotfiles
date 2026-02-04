@@ -11,7 +11,8 @@ func Greet(name string, style string) string {
 func getPrefix(style string) string {
 	switch style {
 	case "casual":
-		return "Hello, "
+		
+return "Hello, "
 	case "formal":
 		return "Good Day, "
 		default :
