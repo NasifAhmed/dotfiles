@@ -1,1 +1,0 @@
-../../dotfiles/office/scripts/.local/bin/kill-process.sh

@@ -1,1 +1,0 @@
-../../dotfiles/office/scripts/.local/bin/files.sh
