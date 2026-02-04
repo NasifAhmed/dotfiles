@@ -10,7 +10,16 @@ set -euo pipefail
 # ─────────────────────────────────────────────────────────────────────────────
 # Configuration
 # ─────────────────────────────────────────────────────────────────────────────
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Resolve the actual script location (follows symlinks)
+SCRIPT_PATH="${BASH_SOURCE[0]}"
+while [[ -L "$SCRIPT_PATH" ]]; do
+    SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
+    SCRIPT_PATH="$(readlink "$SCRIPT_PATH")"
+    [[ "$SCRIPT_PATH" != /* ]] && SCRIPT_PATH="$SCRIPT_DIR/$SCRIPT_PATH"
+done
+SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
+SCRIPT_NAME="$(basename "$SCRIPT_PATH")"
+
 REPO_DIR="$SCRIPT_DIR/repo"
 TARGET_DIR="$HOME"
 LOCAL_BIN="$HOME/.local/bin"
@@ -106,6 +115,9 @@ check_dependencies() {
     # Check PATH for ~/.local/bin
     check_local_bin_path
     
+    # Symlink dotman to ~/.local/bin for global access
+    setup_dotman_symlink
+    
     echo ""
     success "All dependencies satisfied!"
     sleep 1
@@ -138,6 +150,35 @@ check_local_bin_path() {
     fi
 }
 
+setup_dotman_symlink() {
+    local symlink_path="$LOCAL_BIN/dotman"
+    local script_full_path="$SCRIPT_DIR/$SCRIPT_NAME"
+    
+    # Ensure ~/.local/bin exists
+    mkdir -p "$LOCAL_BIN"
+    
+    # Check if symlink already exists and points to correct location
+    if [[ -L "$symlink_path" ]]; then
+        local current_target
+        current_target=$(readlink -f "$symlink_path" 2>/dev/null || echo "")
+        if [[ "$current_target" == "$script_full_path" ]]; then
+            success "dotman symlink OK"
+            return
+        else
+            # Remove old symlink
+            rm -f "$symlink_path"
+        fi
+    elif [[ -e "$symlink_path" ]]; then
+        # Regular file exists, back it up
+        mv "$symlink_path" "${symlink_path}.bak"
+        warning "Backed up existing dotman to dotman.bak"
+    fi
+    
+    # Create symlink
+    ln -sf "$script_full_path" "$symlink_path"
+    success "Symlinked dotman to $LOCAL_BIN"
+}
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Package Management Functions
 # ─────────────────────────────────────────────────────────────────────────────
@@ -145,69 +186,48 @@ get_packages() {
     find "$REPO_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort
 }
 
-# Comprehensive conflict resolution for stow
-# Handles: existing files, symlinks (ours or foreign), directories
+# Simplified conflict resolution for stow - preserves tree folding
+# Only handles: existing files and foreign symlinks that block stow
+# Does NOT create directories - let stow handle tree folding naturally
 resolve_all_conflicts() {
     local pkg="$1"
     local pkg_dir="$REPO_DIR/$pkg"
-    local conflicts_resolved=0
     
-    # Process all items (files AND directories) in the package
+    # Only process FILES in the package (not directories)
+    # This preserves stow's tree folding behavior
     while IFS= read -r -d '' item; do
         local rel_path="${item#$pkg_dir/}"
         local target="$TARGET_DIR/$rel_path"
-        local target_parent="$(dirname "$target")"
         
-        # Ensure parent directory exists
-        if [[ ! -d "$target_parent" ]]; then
-            mkdir -p "$target_parent"
-        fi
+        # Skip .stow-folder marker if present
+        [[ "$(basename "$item")" == ".stow-folder" ]] && continue
         
-        # Check if target exists (file, dir, or symlink)
-        if [[ -e "$target" || -L "$target" ]]; then
-            if [[ -L "$target" ]]; then
-                # It's a symlink
-                local link_target
-                link_target=$(readlink -f "$target" 2>/dev/null || echo "")
-                
-                # Check if it points to our repo
-                if [[ "$link_target" == "$REPO_DIR"* ]]; then
-                    # It's our symlink - already stowed, skip or remove to re-stow
-                    rm -f "$target"
-                else
-                    # Foreign symlink - remove it
-                    rm -f "$target"
-                    ((conflicts_resolved++)) || true
-                fi
-            elif [[ -d "$target" && -d "$item" ]]; then
-                # Both are directories - recurse into contents (stow will merge)
-                # But we need to check files inside
-                continue
-            elif [[ -f "$target" ]]; then
-                # Regular file exists - backup it
-                local backup="${target}.bak"
-                local counter=1
-                while [[ -e "$backup" ]]; do
-                    backup="${target}.bak.${counter}"
-                    ((counter++)) || true
-                done
-                mv "$target" "$backup"
-                warning "Backed up: $rel_path → $(basename "$backup")"
-                ((conflicts_resolved++)) || true
-            elif [[ -d "$target" ]]; then
-                # Directory exists where we need a file - backup
-                local backup="${target}.bak"
-                local counter=1
-                while [[ -e "$backup" ]]; do
-                    backup="${target}.bak.${counter}"
-                    ((counter++)) || true
-                done
-                mv "$target" "$backup"
-                warning "Backed up dir: $rel_path → $(basename "$backup")"
-                ((conflicts_resolved++)) || true
+        # Only handle if target exists as a file or symlink (not directory)
+        if [[ -L "$target" ]]; then
+            # It's a symlink
+            local link_target
+            link_target=$(readlink -f "$target" 2>/dev/null || echo "")
+            
+            # Check if it points to our repo - remove to allow re-stow
+            if [[ "$link_target" == "$REPO_DIR"* ]]; then
+                rm -f "$target"
+            else
+                # Foreign symlink - remove it
+                rm -f "$target"
             fi
+        elif [[ -f "$target" ]]; then
+            # Regular file exists - backup it
+            local backup="${target}.bak"
+            local counter=1
+            while [[ -e "$backup" ]]; do
+                backup="${target}.bak.${counter}"
+                ((counter++)) || true
+            done
+            mv "$target" "$backup"
+            warning "Backed up: $rel_path → $(basename "$backup")"
         fi
-    done < <(find "$pkg_dir" -mindepth 1 \( -type f -o -type d \) -print0)
+        # If target is a directory, let stow handle it (tree folding will work)
+    done < <(find "$pkg_dir" -type f -print0)
     
     return 0
 }
