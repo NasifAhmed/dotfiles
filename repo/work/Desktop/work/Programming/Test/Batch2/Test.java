@@ -1,55 +1,16 @@
 public class Test {
     public static void main(String[] args) {
-        switch(day) {
-            case 1 :
-                System.out.println("saturday");
-                break;
-            case 2 :
-                System.out.println("sunday");
-                break;
-            case 3 :
-                System.out.println("monday");
-                break;
-            case 4 :
-                System.out.println("wednesday");
-                break;
-            case 5 :
-                System.out.println("thursday");
-                break;
-            case 6 :
-                System.out.println("friday");
-                break;
-            default :
-                System.out.println("");
-        }
+        String thing = "*";
+        String thing2 = " ";
 
-
-        if(day==1) {
-            System.out.println("saturday");
+        for (int i = 4; i >= 0; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(thing2); 
+            }
+            for (int a = 5-i ; a>0; a--) {
+                System.out.print(thing);
+            }
+            System.out.println();
         }
-        if(day==2) {
-            System.out.println("sunday");
-        }
-        if(day==3) {
-            System.out.println("monday");
-        }
-        if(day==4) {
-            System.out.println("tuesday");
-        }
-        if(day==5) {
-            System.out.println("wednesday");
-        }
-        if(day==6) {
-            System.out.println("thursday");
-        }
-        if(day==7) {
-            System.out.println("thursday");
-        }
-        if(day==7) {
-            System.out.println("thursday");
-        }
-
-
-
     }
 }

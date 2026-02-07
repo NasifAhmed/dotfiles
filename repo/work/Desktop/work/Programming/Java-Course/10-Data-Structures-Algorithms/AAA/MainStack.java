@@ -1,5 +1,5 @@
 // A simple integer stack implementation without using generics.
-public class IntStack {
+public class MainStack {
 
     // Array to store the elements of the stack.
     private int[] stackArray;
