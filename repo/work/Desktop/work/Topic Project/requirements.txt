@@ -1,0 +1,16 @@
+# FE Question Bank - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# PDF Processing
+pdf2image>=1.16.0        # Convert PDF pages to images
+PyMuPDF>=1.23.0          # PDF manipulation (fitz)
+pdfplumber>=0.10.0       # Extract text from PDF
+
+# Image Processing
+Pillow>=10.0.0           # Image manipulation
+
+
+
+# Note: System dependencies required:
+# - Tesseract OCR: sudo apt install tesseract-ocr
+# - Poppler (for pdf2image): sudo apt install poppler-utils

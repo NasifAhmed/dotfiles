@@ -45,6 +45,7 @@ class QuestionCrop:
     x2: int
     y2: int
     confirmed: bool = False
+    extracted_text: str = ""
     # For multi-page questions: list of additional page regions
     extra_pages: list = None  # List of dicts with page_num, y1, y2
     
@@ -304,6 +305,79 @@ def combine_multipage_crop(page_images: list[Image.Image], crop: 'QuestionCrop')
         y_offset += img.height
     
     return combined
+
+
+def extract_text_from_crop(pdf_path: Path, crop: QuestionCrop, dpi: int = 150) -> str:
+    """
+    Extract text from the PDF region corresponding to the crop.
+    
+    Args:
+        pdf_path: Path to the PDF file
+        crop: QuestionCrop object
+        dpi: DPI used for image conversion (default 150)
+    
+    Returns:
+        Extracted text string
+    """
+    scale = 72.0 / dpi
+    full_text = []
+    
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            # First page
+            if crop.page_num < len(pdf.pages):
+                page = pdf.pages[crop.page_num]
+                # Convert pixels to points
+                bbox = (
+                    crop.x1 * scale,
+                    crop.y1 * scale,
+                    crop.x2 * scale,
+                    crop.y2 * scale
+                )
+                # Ensure bbox is within page
+                bbox = (
+                    max(0, bbox[0]),
+                    max(0, bbox[1]),
+                    min(page.width, bbox[2]),
+                    min(page.height, bbox[3])
+                )
+                
+                # Check for valid area
+                if bbox[2] > bbox[0] and bbox[3] > bbox[1]:
+                    text = page.within_bbox(bbox).extract_text()
+                    if text:
+                        full_text.append(text)
+            
+            # Extra pages
+            if crop.extra_pages:
+                for ep in crop.extra_pages:
+                    p_num = ep['page_num']
+                    if p_num < len(pdf.pages):
+                        page = pdf.pages[p_num]
+                        # Use same X coordinates, different Y
+                        bbox = (
+                            crop.x1 * scale,
+                            ep['y1'] * scale,
+                            crop.x2 * scale,
+                            ep['y2'] * scale
+                        )
+                        bbox = (
+                            max(0, bbox[0]),
+                            max(0, bbox[1]),
+                            min(page.width, bbox[2]),
+                            min(page.height, bbox[3])
+                        )
+                        
+                        if bbox[2] > bbox[0] and bbox[3] > bbox[1]:
+                            text = page.within_bbox(bbox).extract_text()
+                            if text:
+                                full_text.append(text)
+                                
+    except Exception as e:
+        print(f"Error extracting text for Q{crop.question_num}: {e}")
+        return ""
+
+    return "\n".join(full_text)
 
 
 class QuestionCropperApp:
@@ -667,11 +741,10 @@ class QuestionCropperApp:
             for saved_crop in self.progress[exam_key]:
                 for crop in self.crops:
                     if crop.question_num == saved_crop['question_num']:
-                        crop.x1 = saved_crop['x1']
-                        crop.y1 = saved_crop['y1']
                         crop.x2 = saved_crop['x2']
                         crop.y2 = saved_crop['y2']
                         crop.confirmed = saved_crop['confirmed']
+                        crop.extracted_text = saved_crop.get('extracted_text', "")
                         break
         
         # Update question list
@@ -913,18 +986,28 @@ class QuestionCropperApp:
         # Mark as confirmed
         crop.confirmed = True
         
+        # Extract text from PDF
+        exam = self.exams[self.current_exam_idx]
+        try:
+            text = extract_text_from_crop(exam.pdf_path, crop, DPI)
+            if text:
+                # Simple cleanup: remove excessive newlines
+                clean_text = re.sub(r'\n+', '\n', text).strip()
+                crop.extracted_text = clean_text
+                print(f"Extracted text for Q{crop.question_num}: {clean_text[:50]}...")
+        except Exception as e:
+            print(f"Failed to extract text: {e}")
+        
         # Save progress
         exam_key = exam.output_folder
         self.progress[exam_key] = [asdict(c) for c in self.crops]
         self.save_progress()
-        
-        # Update UI
         self.update_question_list()
         self.update_progress_label()
-        self.status_var.set(f"Saved Q{crop.question_num} to {output_path.name}")
+        self.status_var.set(f"Saved Q{crop.question_num}")
         
-        # Move to next question
-        self.next_question()
+        # Move to next
+        self.root.after(200, self.next_question)
     
     def skip_question(self):
         """Skip to next question without confirming."""
@@ -1032,6 +1115,15 @@ class QuestionCropperApp:
             
             # Mark as confirmed
             crop.confirmed = True
+            
+            # Extract text
+            try:
+                text = extract_text_from_crop(exam.pdf_path, crop, DPI)
+                if text:
+                    clean_text = re.sub(r'\n+', '\n', text).strip()
+                    crop.extracted_text = clean_text
+            except Exception:
+                pass
         
         # Save progress
         exam_key = exam.output_folder

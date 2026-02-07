@@ -1,6 +1,13 @@
+#!/usr/bin/env python3
+"""
+Build Topics Taxonomy for FE Question Bank
+This script builds a hierarchical taxonomy from extracted terms.
+Supports incremental processing - skips if output is up to date.
+"""
 
 import json
 import re
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
@@ -118,7 +125,7 @@ KEYWORD_RULES = [
     ("vlan", "Networks", "Data Link", "Switching"),
     
     ("ip", "Networks", "Network Layer", "IP Protocol"),
-    ("address", "Networks", "Network Layer", "Adressing"), # Careful with strict memory 'address'
+    ("address", "Networks", "Network Layer", "Adressing"),
     ("subnet", "Networks", "Network Layer", "Adressing"),
     ("route", "Networks", "Network Layer", "Routing"),
     ("routing", "Networks", "Network Layer", "Routing"),
@@ -145,8 +152,7 @@ KEYWORD_RULES = [
     ("relational", "Databases", "RDBMS", "Concepts"),
     ("normalization", "Databases", "RDBMS", "Normalization"),
     ("join", "Databases", "RDBMS", "Operations"),
-    ("index", "Databases", "RDBMS", "Optimization"), # Conflict with 'index' blacklist? 
-    # Add exception logic: "index file" vs "book index"
+    ("index", "Databases", "RDBMS", "Optimization"),
     
     ("sql", "Databases", "SQL", "Language"),
     ("select", "Databases", "SQL", "DML"),
@@ -245,9 +251,7 @@ KEYWORD_RULES = [
     ("profit", "Strategy", "Finance", "Accounting"),
     ("asset", "Strategy", "Finance", "Accounting"),
     ("depreciation", "Strategy", "Finance", "Accounting"),
-    ("cost", "Strategy", "Finance", "Accounting"), # Overrides Project Management cost? Order matters.
-    # Let's put Finance Cost after PM Cost if we want PM focus. 
-    # Actually, Cost in FE is often PM (EVM). So keep PM Cost earlier.
+    ("cost", "Strategy", "Finance", "Accounting"),
     
     ("financial", "Strategy", "Finance", "Analysis"),
     ("accounting", "Strategy", "Finance", "Basics"),
@@ -267,7 +271,7 @@ KEYWORD_RULES = [
     
     ("law", "Strategy", "Legal", "General"),
     ("act", "Strategy", "Legal", "Laws"),
-    ("code", "Strategy", "Legal", "Codes"), # Civil Code etc.
+    ("code", "Strategy", "Legal", "Codes"),
     ("right", "Strategy", "Legal", "Rights"),
     ("license", "Strategy", "Legal", "Licensing"),
     ("contract", "Strategy", "Legal", "Contracts"),
@@ -279,15 +283,37 @@ KEYWORD_RULES = [
     ("management", "Strategy", "Management", "General"),
 ]
 
+
+def is_up_to_date():
+    """Check if output file is newer than input file."""
+    if not OUTPUT_FILE.exists():
+        return False
+    if not RAW_FILE.exists():
+        return False
+    
+    return OUTPUT_FILE.stat().st_mtime > RAW_FILE.stat().st_mtime
+
+
 def clean_term(term):
     # Normalize
     term = term.strip()
-    term = re.sub(r'[\(\uff08].*?[\)\uff09]', '', term) # Remove (...) and fullwidth parens
+    term = re.sub(r'[\(\uff08].*?[\)\uff09]', '', term)  # Remove (...) and fullwidth parens
     term = re.sub(r' +', ' ', term)
     term = term.strip()
     return term
 
-def build_taxonomy():
+
+def build_taxonomy(force=False):
+    # Check if we need to do anything
+    if not force and is_up_to_date():
+        print("✓ Topics taxonomy already up to date.")
+        print(f"  Output: {OUTPUT_FILE}")
+        return
+    
+    if not RAW_FILE.exists():
+        print("Error: raw_terms.txt not found. Run extract_index.py first.")
+        return
+    
     with open(RAW_FILE) as f:
         raw_list = f.readlines()
         
@@ -304,8 +330,7 @@ def build_taxonomy():
             continue
         if term_lower in BLACKLIST:
             continue
-        if any(b in term_lower for b in BLACKLIST if len(b) > 4): # Contains blacklist word check (safeguard)
-             # e.g. "figure 1"
+        if any(b in term_lower for b in BLACKLIST if len(b) > 4):
              if "figure" in term_lower or "chapter" in term_lower:
                  continue
                  
@@ -325,8 +350,6 @@ def build_taxonomy():
                 break
         
         if not mapped:
-             # Try stricter match? or sub-match?
-             # If no match, add to Uncategorized
              uncategorized.append(term_clean)
 
     # Sort
@@ -343,18 +366,26 @@ def build_taxonomy():
     with open(OUTPUT_FILE, 'w') as f:
         json.dump(taxonomy, f, indent=2)
         
-    print(f"Processed {len(raw_list)} raw lines.")
-    # Simple count by traversing
-    count = 0
+    # Count helper
     def count_leaves(d):
         c = 0
         if isinstance(d, list): return len(d)
         for k, v in d.items():
             c += count_leaves(v)
         return c
-        
-    print(f"Mapped terms: {count_leaves(taxonomy)}")
-    print(f"Uncategorized: {len(uncategorized)}")
+    
+    print(f"✓ Topics taxonomy built!")
+    print(f"  Processed: {len(raw_list)} raw lines")
+    print(f"  Mapped terms: {count_leaves(taxonomy)}")
+    print(f"  Uncategorized: {len(uncategorized)}")
+    print(f"  Output: {OUTPUT_FILE}")
+
 
 if __name__ == "__main__":
-    build_taxonomy()
+    import argparse
+    parser = argparse.ArgumentParser(description="Build topics taxonomy from extracted terms")
+    parser.add_argument("--force", "-f", action="store_true", 
+                        help="Force rebuild even if output is up to date")
+    args = parser.parse_args()
+    
+    build_taxonomy(force=args.force)
