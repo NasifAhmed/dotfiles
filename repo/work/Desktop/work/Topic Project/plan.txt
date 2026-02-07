@@ -1,0 +1,12 @@
+In this folder there is two textbooks for ITPEC FE exam. Search online if needed for info on the exam. 
+In the book there is topic list and subjcets. 
+Also here in Past Questions folder there is qustions of every FE exam in the past. 
+Morning exam stayed the same. A is for morning exam and B is for afternoon exam. Morning exam stayed same for years. But the evening exam question pattern changed from Arpil 2024. In the folder naming 2024S means April 2024 and 2024 means october 2024 and so on.
+
+I am a teacher of FE exam preparing students to pass the exam. I want a question bank of all the FE questions divided into topics. 
+
+For example lets say I am taking a class on sql. I should be able to easily access all the FE question of SQL easily. Instead of hunting the questions but opening each folder and checking the questions. Also I should be able to see the topics I need to teach for FE. Instead of spending hours on analyzing the past questions. 
+
+So tell me what system can I make easily automated. A question bank book ? or a website ? what ? 
+
+Deeply analyze pros and cons of every approach to solve this and suggest me solutions. 

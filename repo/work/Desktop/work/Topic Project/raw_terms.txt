@@ -1,0 +1,1921 @@
+0-address instruction
+1-address instruction
+1-word instructions
+100-percent inspection
+1000BASE-FX
+1000BASE-T
+100BASE-FX
+100BASE-TX
+10BASE-T
+1’s complementer
+2-address instruction
+2-word instructions
+2’s complement
+2’s complementer
+3-address instruction
+3-tier client/server systems
+3C analysis
+3DCG
+5F analysis (5 Forces Analysis)
+7 QC tools
+A/D conversion
+A/D converter
+AA (Application Architecture)
+ABC analysis
+ACID characteristics
+ADSL (Asymmetric Digital Subscriber Line)
+ADSL modem
+AES (Advanced Encryption Standard)
+AI (Artificial Intelligence)
+ALU (Arithmetic and Logical Unit)
+AM (Amplitude Modulation)
+AND
+AND circuit
+ANSI (American National Standards Institute)
+ANSI (American National Standards audit function
+ANY connection refusal function
+API (Application Program Interface)
+APOP (Authenticated POP)
+AR (Augmented Reality)
+ARP
+ARP (Address Resolution Protocol)
+ASCII code
+ASP
+ATM (Asynchronous Transfer Mode)
+AV system
+AVR (Automatic Voltage Regulator)
+Absolute addressing
+Absolute error
+Absolute path
+Absorption laws
+Acceptance testing
+Access
+Access operation
+Access rights control
+Accessibility
+Accident
+Accounting audit
+Accounting management
+Accreditation body
+Accredited certification business operator
+Accumulator
+Acquisition System)
+Act for Promotion of Use of Recycled Resources
+ActiveX
+Activity diagram
+Actuator
+Adaptive maintenance
+Address bus
+Address selection feature
+Addressing mode
+Agile
+Ajax (Asynchronous JavaScript + XML)
+Algorithm design
+Alphabets advisory opinion
+Amdahl’s law
+Analog line
+Analog resistive film method
+Annual securities report
+Ansoff growth matrix
+Anti-aliasing
+Anti-cracking measure
+Antivirus software
+Apache HTTP Server
+Apache license
+Application gateway
+Application security
+Appropriation statement
+Architecture pattern
+Architecture)
+Archived file
+Arithmetic and logical unit
+Arithmetic operation instruction
+Arithmetic shift
+Array
+Article 36 agreement
+Aspiration level principle
+Assertion checker
+Assets
+Association)
+Associative laws
+Assumptions analysis
+Audit module method
+Audit software method
+Auditor
+Automated guided vehicle
+Automated warehouse
+Automatic monitoring equipment
+Average
+B to B
+B to C
+B to E
+B/S (Balance sheet)
+BA (Business Architecture)
+BABOK (Business Analysis Body Of Knowledge)
+BCA (Bridge Certification Authority)
+BCD code (Binary-Coded Decimal code)
+BIND
+BIOS
+BMP (Bit MaP)
+BNF (Backus Naur Form) notation
+BNF notation
+BPM (Business Process Management)
+BSC (Balanced ScoreCard)
+BSDL (BSD License)
+Binary numbers
+Biometric authentication
+Biometric authentication device
+Bipolar type
+Bit error rate
+Bit synchronization method
+Blacklist
+Blending
+Block cipher mode of operation
+Block code
+Blu-ray disc
+Blu-ray drives
+Bluetooth
+Boot sector virus
+Bug control chart
+Bug curve
+Build-to-stock production system
+Building tools
+Business management
+Business management system
+Business model patent
+Business operations audit
+Business process improvement
+Business reports
+Business strategy
+Business system
+Buzz session
+C to C
+CAD (Computer Aided Design)
+CAE (Computer Aided Engineering)
+CAL (Client Access License)
+CAM (Computer Aided Manufacturing)
+CAP (Computer Aided Planning)
+CASE selection
+CASL II
+CATV
+CCD (Charge Coupled Device)
+CCU (Communication Control Unit)
+CD (Compact Disc)
+CD-R (CD-Recordable)
+CD-R/RW drive
+CD-ROM (CD-Read Only Memory)
+CD-ROM drive
+CD-RW (CD-ReWritable)
+CDM (Code Division Multiplexing)
+CG (Computer Graphics)
+CGI (Common Gateway Interface)
+CI (Configuration Items)
+CI (Control Interval)
+CI (Corporate Identity)
+CIM (Computer Integrated Manufacturing)
+CIO
+CIO (Chief Information Officer)
+CISO
+CMDB (Capacity Management Database)
+CMDB (Configuration Management Database)
+CMMI (Capability Maturity Model-Integrated)
+COBIT (Control OBjectives for Information computerization investment plan
+COCOMO (COnstructive COst MOdel)
+COCOMOII
+COO
+COQ (Cost of Quality)
+CORBA (COmmon Request Broker Crushing
+COSO framework
+Call center
+Card International Association)
+Cell phone
+Cell relay
+Centronics
+Challenge-response authentication
+Challenger
+Channel coding
+Channel control
+Character string processing
+Character synchronization method
+Check box
+Check digit check
+Checksum
+Chief programmer team
+Child Care and Family Care Leave
+Chrome
+Circuit
+Civil Code
+Closing accounts
+Cloud computing
+Cluster analysis method
+Code auditor
+Code comparison method
+Code inspection
+Combination
+Commercial Code
+Commercial Transactions Law
+Commercial database
+Common Criteria
+Common Frame
+Common application software
+Common key cryptography
+Communication
+Communication control unit
+Communication diagram
+Communication line
+Communication management system
+Communication server
+Commutative laws
+Comparison instruction
+Complement notation
+Componentware
+Composite key
+Computational complexity
+Computer virus
+Conceptual data model
+Conceptual schema
+Consistency
+Content filtering
+Continuous production system
+Contraposition
+Control process
+Converse
+Cooperation and Development)
+Coordinated strategy
+Copyright Act
+Core competence management
+Corporate activities
+Corporate strategy
+Corporate tax
+Corporation Tax Act
+Corporation forms
+Corrective maintenance
+Correlation
+Cost
+Cost deployment
+Cursor
+Cyber mall
+D/A conversion
+D/A converter
+DAO (Disk-At-Once)
+DAT
+DAT (Digital Audio Tape)
+DCF
+DCF (Discounted Cash Flow)
+DDL (Data Definition Language)
+DDR (Double Data Rate)
+DDoS (Distributed DoS)
+DIMM (Dual In-line Memory Module)
+DKIM (Domain Keys Identified Mail)
+DLL (Dynamic Link Library)
+DMA method (Direct Memory Access method)
+DML (Data Manipulation Language)
+DRM (Digital Rights Management)
+DSL (Definitive Software Library)
+DSS (Decision Support System)
+DaaS (Desktop as a Service)
+Daisy chain connection
+Damage
+Data bus
+Data cleaning
+Data cleansing
+Data link control
+Data management
+Data mapping
+Data mining
+Data model
+Data organizing techniques
+Data stream)
+Data transfer
+Data warehouse
+Database access layer
+Database control function
+Database definition function
+Database manipulation function
+Database security
+De Morgan’s laws
+De facto standards
+Debate
+Decision condition / condition coverage
+Decision condition coverage (branch coverage)
+Decision making on investment
+Declining metered rate
+Deduction inference
+Deferred assets
+Definite future
+Delegation
+Delphi method
+Demand forecasting
+Depreciation
+Depreciation cost
+Design Act
+Design pattern
+Design review
+Development)
+Differential backup
+Digital camera
+Digital forensics
+Digital line
+Digital signature
+Digital watermarking
+Digitizer
+Dijkstra method
+Direct access
+Direct addressing
+Directory traversal
+Directory type
+Disaster
+Disk encryption
+Display
+Disposition
+Distributed database
+Distributive laws
+Drop shipping
+Dump
+Dye sublimation thermal transfer printer
+Dynamic Address Translator
+Dynamic SQL
+Dynamic access
+Dynamic programming
+EA (Enterprise Architecture)
+EAL (Evaluation Assurance Level)
+EAP (PPP Extensible Authentication Protocol)
+EAP-TLS (EAP Transport Layer Security)
+EBCDIC
+EC (Electronic Commerce)
+ECC (Error Correcting Code)
+ECMAScript
+EDI (Electronic Data Interchange)
+EDIFACT (EDI For Administration, Commerce and Engineering System
+EDINET (Electronic Disclosure for Investors EOQ (Economic Order Quantity)
+EDSAC
+EEPROM (Electrically EPROM)
+EFT (Electronic Fund Transfer)
+EHR (Electronic Health Record)
+EIA (Electronic Industries Association)
+EIP (Enterprise Information Portal)
+EJB (Enterprise JavaBeans)
+ENIAC
+EOR
+EVM
+EVM (Earned Value Management)
+Earliest node time
+Eclipse
+Economic efficiency calculation
+Efficiency
+ElGamal encryption
+Electronic Consumer Contract Act
+Electronic Ledger Preservation Law
+Electronic auction
+Electronic banking system
+Electronic bulletin board
+Electronic marketplace
+Electronic paper
+Elliptic Curve Cryptography
+Encoding
+Engineers)
+Entity
+Entrance and exit control
+Environmental aspect
+Ethernet
+Ethernet header
+Evaluation and Certification scheme)
+Evolution model
+Exception test
+Exclusive event
+Execution environment requirements
+Expectation principle
+Experience estimate method
+Experimental design
+Experimental technique
+Expert system
+Exponential smoothing
+Export Control Internal Rules
+External audit
+External design
+Extraordinary loss
+Extraordinary profit
+FA (Factory Automation)
+FAQ (Frequently Asked Questions)
+FCFS (First-Come First-Served)
+FD (Floppy Disk)
+FDDI
+FDM (Frequency Division Multiplexing)
+FIFO
+FIFO (First-In First-Out)
+FMS (Flexible Manufacturing System)
+Fabless manufacturing
+Facility management
+Factorization
+False
+Fault avoidance
+Fault management
+Fault tolerant
+Feed-forward control
+Feedback control
+File processing
+File server
+File sharing
+Final purchase cost method
+Financial accounting
+Firefox
+Firewall
+First normalization
+First-come first-served
+Fixed length record
+Flag register
+Flag synchronization method
+Flash memory
+Flat-rate system
+Fuzzy computer
+Fuzzy control
+G to B
+G to C
+GCC (GNU Compile Collection)
+GIF (Graphic Interchange Format)
+GIPS (Giga Instructions Per Second)
+GIS (Geographic Information System)
+GNU
+GNU projects
+GPIB
+GPKI (Government PKI)
+GPKI (Government Public Key Infrastructure)
+GPL (GNU General Public License)
+GPS (Global Positioning System) application system
+GUI
+GZIP (GNU ZIP)
+Game theory
+Gantt chart
+Gateway
+Gateway server
+General register
+Gibson mix
+Gigabit Ethernet
+Going concern (Continuous Business Entities)
+Graph
+Graph processing
+Graph theory
+Graphics software
+Green IT
+Grid computing
+Gross profit
+Group classification code
+Group commitment function
+Grouping
+Groupware
+Growth matrix analysis
+Guideline
+Guidelines for Information System Safety Measures
+Guidelines on Personal Information Protection
+Gumblar
+HDB (Hierarchical DataBase)
+HDD (Hard Disk Drive)
+HDLC (High-level Data Link Control)
+HDMI
+HFS (Hierarchical File System)
+HIPO (Hierarchy plus Input Process Output)
+HPC (High Performance Computing)
+HTML (HyperText Markup Language)
+HTTP
+HTTP (HyperText Transfer Protocol)
+Half duplex communication
+Hamming distance
+Hardware monitoring
+Harvard architecture
+Hash search algorithm
+Heap
+Help desk
+Heuristic evaluation
+Hexadecimal numbers
+Hierarchical model
+Hierarchical organization
+High-speed Ethernet
+Historical file
+Honey pot
+Horizontal parity
+Horizontal/Vertical parity
+Host language system
+Host-based IDS
+Hot standby method
+Household electrical appliances
+Huffman coding
+Human security
+Human-centered design
+Hypertext database
+IBG (InterBlock Gap)
+IBM/
+IC (Integrated Circuit)
+IC card
+IC card reader
+IC memory
+ICMP
+IDE (Integrated Device Electronics)
+IDEA (International Data Encryption Algorithm)
+IDF (Intermediate Distribution Frame)
+IDS (Intrusion Detection System)
+IEEE
+IEEE (Institute of Electrical and Electronics Inner join
+IF-THEN-ELSE selection
+IMAP
+IMAP4 (Internet Message Access Protocol version 4)
+IP (Internet Protocol)
+IP 317 Java
+IP address
+IP header
+IP layer
+IP masquerade
+IP spoofing
+IP telephone
+IPA Security Center
+IPO (Initial Public Offering)
+IR 13 ITIL v
+IRR (Internal Rate of Return)
+IRR method
+IS (International Standards)
+ISBN code
+ISDB-T (Integrated Service Digital Broadcasting- JAN code
+ISMS (Information Security Management System) Java
+ISO
+ISO (International Organization for JIS (Japanese Industrial Standards)
+ISO 14000 certification
+ISO 9000 certification
+ISO/IEC
+ISO/IEC 9126 (JIS X 0129-1)
+ISO/TC
+IT Strategic Headquarters
+IT control
+IT governance
+IT investment management
+IT management power index
+IT portfolio
+IT service
+IT service management
+ITF code
+ITIL 2011 edition
+IaaS (Infrastructure as a Service)
+Icon
+Idempotent laws
+Image scanner
+Imaging device
+Immediate addressing
+Impact printer
+In-basket
+In-house company system
+In-house information system
+In-house venture organization
+Incorrect operation
+Individual plan
+Individual production system
+Inductive Inference
+Industrial Property Law
+Industrial Safety and Health Act
+Industrial Standardization Act
+Industrial devices
+Industry-academia-government collaboration
+Industry-specific package
+Inference
+Information Disclosure Act
+Information Security Audit Standards
+Information Security Early Warning Partnership Interactive communication
+Information Security Management Standards
+Information ethics
+Information security audit
+Information security incidents
+Information-based product creation contract
+Inheritance
+Innovator theory
+Institute)
+Instruction address register
+Instruction register
+Intangible information assets
+Interface board
+Internal bus
+Internal interrupt
+Internal schema
+Internal sorting
+Internet VPN
+Internet broadcasting
+Internet layer
+Interpreter virus
+Interview method
+Intranet
+JCMVP (Japan Cryptographic Module L3 switch
+JDBC (Java DataBase Connectivity)
+JEIDA (Japan Electronic Industry Development LAN (Local Area Network)
+JIS (Japanese Industrial Standards)
+JIS 7-bit codes
+JIS 8-bit codes
+JIS X
+JIS Z
+JIS code
+JIS kanji code
+JISC (Japanese Industrial Standards Committee)
+JISEC (Japan Information technology Security Leaf
+JIT compiler
+JIT compiler (Just-In-Time compiler)
+JPCERT/CC (JaPan Computer Emergency Light pen
+JPEG (Joint Photographic Experts Group)
+JPNIC (Japan Network Information Center)
+JVM (Java Virtual Machine)
+Job management
+Join
+Joining
+Joystick
+KEDB (Known Error Database)
+KFS (Key Factor for Success)
+KGI (Key Goal Indicator)
+KJ method
+KM (Knowledge Management)
+KMS (Knowledge Management System)
+KPI (Key Performance Indicator)
+Kernel program test
+Key logger
+Keyboard
+L2 switch
+LGPL (GNU Lesser GPL)
+LGWAN (Local Government Wide Area Network)
+LOC (Lines of Code) method
+LRU
+LSI (Large Scale Integration)
+LTE (Long Term Evolution)
+Labor Relations Adjustment Act
+Labor Standards Act
+Lagrange interpolation
+Laplace’s principle
+Latest node time
+Leader
+Leadership
+Lease contract
+Least squares method
+Legal reserves
+Liabilities
+Library)
+License agreements
+Limited partnership
+Line graphs
+Line production system
+Line speed
+Linking software between application programs
+Linux
+Linux kernel
+List
+List box
+Load sharing system
+Load test
+Local service desk
+Locking management
+Logic circuit
+Logic language
+Logic programming
+Logical check
+Logical data model
+Logical design of databases
+Logical operation instruction
+Logical product operation
+Logical shift
+Logical sum operation
+Loop
+Loosely coupled multiprocessor system
+Loss
+Loss of trailing digits
+Lost-call rate
+Lot production system
+MBO (Management Buy-Out)
+MBO (Management By Objective)
+MEMS (Micro-Electro-Mechanical Systems)
+MHz (Mega Hertz)
+MIB (Management Information Base)
+MICR (Magnetic Ink Character Reader)
+MIDI (Musical Instruments Digital Interface)
+MIL (Military Specifications and Standards) Multimedia database
+MIMD (Multiple Instruction stream Multiple multi-platform
+MIME
+MIME (Multipurpose Internet Mail Extensions)
+MIPS
+MIS (Management Information System)
+MISD (Multiple Instruction stream Single Multi-point (or multi-drop) method
+MMR (Modified Modified Read)
+MO (Magneto-Optical disc)
+MVS (Multiple Virtual Storage)
+Management for Part-Time Workers
+Marketing mix
+Marketing research
+Marketing strategy
+Marketing techniques
+Markov process
+Mashups
+Mass marketing
+Maternity protection
+Maxi-max principle
+Maxi-min principle
+Median
+Medium- and long-term plan
+Memory bus
+Memory devices
+Memory interleave
+Memory management
+Memory unit
+Mental health
+Menu bar
+Merge sort
+Message authentication
+Metered rate
+Metered-rate system
+Metrics measurement
+Microcomputer
+Microkernel
+Microprocessor
+Microprogram control
+Middle management
+Middleware
+Mini-blog
+Mini-max regret principle
+Mission-critical business support system
+Mixed enterprise
+Mnemonic code
+Mobile communication
+Mock-up
+Mode
+MySQL
+NAND
+NAND circuit
+NAPT
+NAPT (Network Address Port Translation)
+NAS (Network Attached Storage)
+NAT
+NAT (Network Address Translation)
+NCU (Network Control Unit)
+NDB (Network DataBase)
+NETwork)
+NIC (Network Information Center)
+NIC (Network Interface Card)
+NPV
+NPV (Net Present Value)
+NPV method
+NS (Nassi-Shneiderman)
+NS (Nassi-Shneiderman) chart
+Natural-language interface
+Negation operation
+NetBSD
+NetWare
+Network
+Network layer
+Network management
+Network model
+Network security
+Network-based IDS
+Neumann architecture
+Non-functional requirements
+Non-operating expense
+Non-operating income
+Non-scheduled maintenance
+Normal distribution
+Numerical analysis
+OA equipment
+OC (Operating Characteristic) curve
+OCSP (On-line Certificate Status Protocol)
+OECD (Organization for Economic Cooperation and Optimization problems
+OECD (Organization for Economic OSS licenses
+OECD Privacy Guidelines
+OECD Security Guidelines
+OEM (Original Equipment Manufacturing)
+OJT (On the Job Training)
+OLA (Operation Level Agreement)
+OLAP (On-Line Analytical Processing)
+OLAP (OnLine Analytical Processing)
+OLED (Organic Light Emitting Diode) display
+OLTP (OnLine Transaction Processing)
+OMG (Object Management Group)
+OMR (Optical Mark Reader)
+OODB (Object-Oriented DataBase)
+OP25B (Outbound Port 25 Blocking)
+OR circuit
+OS (Operating System)
+OS for PCs
+OS updating
+OSD (The Open Source Definition)
+Object diagram
+Object-oriented design
+Object-oriented development model
+Observation method
+Octal numbers
+Odd parity
+Off-JT (Off the Job Training)
+Official Personal Authentication Act
+Offshore outsourcing
+One fact in one place
+One-click fraud
+One-dimensional array
+One-dimensional bar code
+One-to-one marketing
+Online mall
+Open batch processing
+OpenBSD
+Operational cost
+Operations management
+Operations management tool
+Optical disc
+Optical fiber cable
+Optimization
+Optimization compiler
+Organization Law
+Organizational aspect
+P/L statement
+PAD (Problem Analysis Diagram)
+PBO (Project-Based Organization)
+PBP
+PBP (PayBack Period)
+PBP method
+PBX (Private Branch eXchange)
+PC (Personal Computers)
+PC card
+PCI (Peripheral Component Interconnect)
+PCI Express
+PCIDSS (Payment Card Industry Data PLC (Power Line Communications)
+PCM (Pulse Code Modulation)
+PCMCIA (Personal Computer Memory PM (Phase Modulation)
+PDA (Personal Digital Assistant)
+PDCA cycle
+PDCA cycle (Plan, Do, Check, Act)
+PDCA cycle (Plan, Do, Check, and Act)
+PDF (Portable Document Format)
+PDL (Page Description Language)
+PDM (Precedence Diagramming Method)
+PDM (Product Data Management)
+PDP (Plasma Display)
+PDPC (Process Decision Program Chart)
+PDS (Public Domain Software)
+PEAP (Protected EAP)
+PEAR
+PGP (Pretty Good Privacy)
+PHP
+PROM (Programmable ROM)
+PROXY server
+PTS (Predetermined Time Standard) method
+PWM (Pulse Width Modulation) control
+PaaS (Platform as a Service)
+Package diagram
+Packaged software
+Pair programming
+Parallel simulation method
+Parallel transition
+Pareto analysis
+Pareto chart
+Partitioning method
+Pascal
+Password cracking
+Patent Act
+Patent acquisition road map
+Patent strategy
+Path
+Pattern matching method
+PayBack Period method
+Peeping
+Peer code review
+Penetration test
+Perfective maintenance
+Performance management
+Performance test
+Periodic ordering method
+Perl
+Personal Digital Assistance (PDA) security
+Phishing
+Phishing fraud
+Physical aspect
+Physical data model
+Pre-order
+Presentation
+Presentation layer
+Presentation software
+Preventive maintenance
+Price strategy
+Primary key constraint
+Prime area
+Print server
+Printer
+Priority scheduling
+Privacy Mark (P Mark)
+Privacy Mark System
+Private enterprise
+Private power generator
+Privilege management
+Probability
+Probability distribution
+Probable future
+Procedural language
+Process analysis
+Process flow
+Process innovation
+Process production system
+Procurement
+Product
+Product application road map
+Product innovation
+Product strategy
+Production management
+Professionalism
+Program control
+Program file virus
+Program interrupt
+Progress bar
+Projection
+Proposal
+Proposal competition bidding
+Propositional logic
+Providers
+Public enterprise
+Public information system
+Publicity right
+Pull communication
+Pull strategy
+Push communication
+Push strategy
+Putnum model
+QC (Quality Control) techniques
+QFD (Quality Function Deployment)
+QR code
+Qualification requirements
+Quality audit
+Quality control
+Quality deployment
+Questionnaire
+Questionnaire survey
+Queueing theory
+Quotation
+R&D (Research and Development)
+RA (Registration Authority)
+RAD
+RADIUS server
+RAID
+RAM
+RAM disk
+RAM file
+RAM file system
+RARP
+RAS
+RAS (Remote Access Service) server
+RAS technology
+RASIS
+RBS (Resource Breakdown Structure)
+RBS (Risk Breakdown Structure)
+RDA (Remote Database Access)
+RDB (Relational DataBase)
+RDRAM (Rambus DRAM)
+RFC (Request For Change)
+RFI (Request For Information)
+RFID (Radio Frequency IDentification)
+RFM analysis
+RFP (Request For Proposal)
+RFQ (Request For Quotation)
+RJE (Remote Job Entry) terminal
+ROA (Return On Assets)
+ROE (Return On Equity)
+ROI (Return On Investment)
+ROI method
+ROM
+RPC (Remote Procedure Call)
+RS-232C
+RSA
+RSS (RDF Site Summary)
+RSS reader
+RTP
+Radar chart
+Radio Law
+Radio box
+Radio button
+Radix conversion
+Range
+Ray-tracing
+Re-authentication
+Re-engineering
+Read-only
+Read/write feature
+Recommendation system
+Recording area
+Redirect function
+Refactoring
+Register
+Regression test
+Relational model
+Relationship
+Relationship marketing
+Relationship process
+Release
+Reliability
+Reliability deployment
+Remainder
+Representative value
+Requirements analysis
+Requirements definition
+Requirements definition process
+Reserves
+Resolution process
+Resource leveling
+Resource management
+Respect for human right
+Response Team / Coordination Center)
+Retained earnings carried forward to next period
+Return On Investment method
+Reverse
+Reverse engineering
+Risk finance
+Risk isolation
+Risk optimization
+Risk prevention
+Risk retention
+Risk transfer
+Robot type
+Role
+Role-playing
+Rollback
+Rollforward
+Rotation shift
+Round robin
+Rounding Error
+Rounding error
+Router
+Routing control
+Ruby
+Rule-based method
+Run length coding
+SET (Secure Electronic Transactions)
+SFA (Sales Force Automation)
+SGML (Standard Generalized Markup Language)
+SHA-
+SNMP management station
+SOAP
+SOAP (Simple Object Access Protocol)
+SOHO (Small Office Home Office)
+SP (Solution Provider)
+SP (Stack Pointer)
+SPD (Surge Protective Device)
+SPEC benchmark
+SPECfp
+SPECint
+SPF (Sender Policy Framework)
+SPOC (Single Point Of Contact)
+SQC (Statistical Quality Control)
+SQL
+SQL injection
+SRAM (Static RAM)
+SRI (Socially Responsible Investments)
+SSD (Solid State Drive)
+SSH (Secure SHell)
+SSI (Server Side Include)
+SSID (Service Set IDentifier)
+SSL (Secure Sockets Layer)
+SSL accelerator
+SaaS (Software as a Service)
+Safety indicator
+Safety stock
+Salami technique (Salami slicing)
+Sales
+Sales support system
+Security Standard)
+Segment
+Segment method
+Selling, general and administration expense
+Semantic analysis
+Semaphore
+Sensors
+Sequence
+Sequence check
+Sequence code
+Sequence control
+Sequence diagram
+Sequence number
+Sequential access
+Sequential circuit
+Sequential method
+Sequential organization
+Serial ATA
+Serial transmission
+Server license agreement
+Server-side programming
+Service
+Service acceptance criteria
+Service delivery
+Service delivery processes
+Service design
+Service management
+Service management system
+Service profit chain
+Service strategy
+Service support
+Service transition
+Serviceability
+Session hijacking
+Session key cryptography
+Session layer
+Seven QC Tools
+Seven-segment LED
+Shading
+Shaker sort
+Shared service
+Shareware
+Shrink-wrap license
+Simpson’s method
+SoC (System on a Chip)
+Social engineering
+Soft real-time system
+Software
+Software Management Guidelines
+Software Supply Chain Management
+Software development tool
+Software maintenance
+Software monitoring
+Software patent
+Software product line
+Software qualification test
+Software reuse
+Solution using the dynamic programming
+Sorting process
+Sound input device
+Sound processing
+Source code editor
+Source coding
+Source library
+Specialist team
+Specified Commercial Transactions Act
+Specified Electronic Mail Act
+Spoofing
+Spooling
+Spreadsheet software
+Spyware
+Stack
+Staff members
+Standard deviation
+Standardization)
+Terrestrial)
+Transportation)
+User Service) server
+Validation Program)
+absolute error
+abstract tree structure
+abstraction
+acceptance inspections
+acceptance test
+access control
+access log analysis
+access method
+access mode
+access right
+access trail
+accountability
+accounting standards
+acquisition process
+activation
+activity cost estimate
+activity list
+activity resource request list
+acupointer
+adder
+addition
+addition theorem
+additional memory
+address modification
+address part
+address scanning
+address selection operation
+adjacency matrix
+administration system
+affiliate
+affinity diagram
+agent
+aggregation
+aging
+air conditioning facility
+algorithms
+alias
+alliance
+allocation problems
+analog RGB
+analog input/output board
+analog input/output interfaces
+analogous estimate
+analysis
+analysis of business operations
+and related Technology)
+anonymous FTP
+applet
+applets
+application layer
+application server
+application servers
+application software
+archive
+archiver
+archiving
+area graph
+arp
+array processor
+arrow diagram
+artificial intelligence
+as-is model
+assembler
+assembling
+assembly languages
+assertion checking
+asset management
+association diagram
+assurance opinion
+assurance-based audit
+attributes
+audit
+audit evidence
+audit trail
+audit working paper
+auditability
+auditing services
+availability
+availability plan
+backup
+balance sheets
+banner advertisement
+batch processing system
+bathtub curve
+baud
+behavior method
+benchmark program
+benchmark test
+benchmarking
+best effort-type
+between Men and Women in Employment
+bias value
+big O notation
+big data
+binary search
+binary search tree
+binary semaphore
+binary tree
+bit
+bitmap fonts
+block
+block cipher
+blocking
+blocking factor
+boot
+boundary value analysis
+budgeting and accounting for services
+business analysis
+business continuity plan
+business impact analysis
+business improvement
+business model
+business models
+business objectives
+business operations design
+business operations model
+business operations modeling
+business package
+business process
+business relationship management
+business strategy
+call by reference
+call by value
+call graphs
+cascade connection
+cell
+center batch processing
+centralized processing system
+chain method
+change directory
+channel
+channel program
+character codes
+character corruption
+chattering
+check character
+check constraint
+check digit
+checkpoint
+checkpoint file
+chunk
+class
+class diagram
+client monitoring tool
+client/server systems
+closed loop control
+co-sourcing
+code completion
+code design
+code review
+coding
+coding conventions
+cold aisle
+cold standby
+collaboration diagram
+commercial mix
+commit
+common functional partitioning
+common key
+common logarithms
+communication service
+communications protocols
+company regulation
+compilation method
+compiler
+compiling
+complement
+complementer
+complete binary tree
+compliance program
+compression
+compression rate
+compromise
+computer crime
+condenser
+confidentiality
+conformity assessment scheme
+connection method
+connection-less method
+consistency constraint
+contribution margi
+control chart
+control framework
+copy guard
+copy protection
+copyleft
+copyright
+copyright management
+copyright registration system
+core competence
+core technology
+corporate brand
+corporate governance
+corporate hierarchy structur
+corporate organization
+corporate philosophy
+correlation analysis
+correlation coefficient
+cost baseline
+cost leadership strategy
+cost management plan
+current directory
+currently used system
+customization
+cycle time
+cylinder
+data administration
+data analysis
+data cache
+data compression
+data dictionary
+data link layer
+data mart
+data modeling
+data normalization
+data owner
+data structure
+data transfer rate
+data transfer time
+data warehouse
+data-oriented design
+de jure standards
+debit cards
+debuggers
+debugging
+decision table
+decision tree
+decomposition
+defective rate
+defective rate estimation
+deliverable scope
+dendrograms
+deployment
+design constraint conditions
+design data management
+digital certificate
+digital video camera
+diode
+direct control
+direct cost
+direct organization file
+direct product
+directed graph
+directory
+directory service
+disaster recovery
+disk cache
+disk mirroring
+disk striping
+dispatcher
+dispatches
+distributed processing system
+divide-and-conquer approach
+division
+division method
+driver
+dynamic array
+dynamic linking
+dynamic priority scheduling
+dynamic relocatable programs
+e-Document Law (Electronic Document Law)
+e-Gov
+e-JAPAN initiative
+e-Learning
+e-government
+e-mail address
+e-marketplace
+earnings summary
+econometric analysis
+edges
+editor
+education and entertainment devices
+effective access time
+effective address
+effective address calculation
+electronic application and notification system
+electronic bidding
+electronic local governments
+electronic mail
+electronic signatures
+embedded OS
+embedded SQLs
+emulator
+encryption control
+end tag
+enqueue (enq)
+equijoin
+exclusive licenses
+expected value
+experience curve
+exponential distribution
+facilitation
+facilities
+factorial
+failure rate curve
+failure report
+fast-tracking
+fault tolerant system
+feasibility study
+feature extraction
+feed
+feedback communication
+fetch cycle
+fields
+file
+file access rights
+file organization format
+file search function
+file system
+file transfer service
+final acquisition cost method
+financial indicator
+finite automaton
+finite fraction
+five major units
+fixed partitioning method
+fixed point numbers
+fixed-width fonts
+flag
+flash bootloader
+flatbed plotter
+flip-flop circuit
+floating point numbers
+focus group
+fund plan
+fuzzy theory
+garbage collection
+general ledger
+general partnership company
+general purpose computer OS
+general purpose processors
+general-purpose computer
+generalization
+generator
+global IP address
+goodwill
+gradation
+graph
+graphic accelerator
+graphical editors
+green procurement
+group management
+guarantee-type
+guest
+half adder
+hamming code
+hard real-time system
+hard-wired logic control
+hardware faults
+hardware maintenance
+has-a relationship
+hash function
+hash organization file
+hash table
+hashing
+hazards
+header
+heap sort
+hearing
+heuristic evaluation
+heuristic method
+hierarchical escalation
+high-level languages
+histogram
+hit ratio
+home banking
+home directory
+home record
+horizontal distributed system
+host address
+hot plug
+hot standby
+hub
+human interface
+hybrid cryptography
+hyperlink
+hypermedia
+hypertext
+image recognition
+image sensor
+incident
+industrial property rights
+infinite fraction
+information amount
+information computerization committee
+information hiding
+information household electrical appliances
+information literacy
+information morals
+information security management
+information security policy
+information strategy
+information system implementation risk analysis
+information systems model
+information systems strategy
+information systems strategy implementation internal control system
+initiator
+innovation
+input/output conceptual design
+input/output design
+input/output detailed design
+instruction cache
+instruction decoder
+instruction decoding
+instruction execution stage
+instruction fetching
+instruction fetching stage
+instruction mix
+instruction part
+integrity
+interactive
+interactive SQL method
+interactive processing system
+interactive system
+interlaced mode
+intermediate language
+internal model
+international communication service
+interpreter
+interrupt
+is-a relationship
+iterative model
+jQuery
+job scheduler
+job scheduling
+job steps
+jobs
+journal file
+kernel
+kernel mode
+knowledge areas
+knowledge base
+knowledge engineering
+lag
+lead
+leading indicator method
+learning theory
+license management
+licensee
+licenser
+limited liability company
+limited partnership company
+line and staff organization
+line utilization rate
+linking loader
+list of companies providing information security Manufacturing contract
+list of companies providing system auditing services
+listing advertisement
+load distribution
+load forecast
+load library
+load module
+loader
+lock system
+log data analysis method
+log file
+log management
+logarithm
+logging function
+logic gates
+logical design
+logical expressions
+logical functions
+logical laws
+logical operations
+logical record
+loss
+lossless compression
+lossy compression
+low-level languages
+management
+marketing theory
+mathematical probability
+matrix
+matrix data analysis
+matrix diagram
+matrix organization
+memory card
+memory compaction
+memory dump
+memory hierarchy
+memory leak
+merchandising
+merge
+merge program
+merging process
+message control
+messages
+metadata
+metalanguage
+methods
+microcomputers
+microprocessors
+migration requirements
+milestone
+milestone list
+mirroring
+mission critical systems
+moderator
+multi-tenant method
+multitasking
+n-adic numbers
+n-ary tree
+navigation
+need-to-know
+negative logical product (negative AND) operation
+negative logical sum operation
+nested structure
+netstat
+network OS
+network address
+network architecture
+network boot
+network control program
+network interface layer
+network management tool
+network operations management
+network storage
+non-incremental testing
+number of cases
+object orientated analysis method
+object orientation
+off-balance
+office tools
+one chip microcomputer
+one seg
+one-phase commitment
+ongoing monitoring
+online real time processing
+online shopping
+online transaction processing system
+open OS
+open source communities
+open source libraries
+operand
+operand fetching
+operand part
+operational planning
+operational requirements
+ordered tree
+organization format
+parametric estimate
+part-of relationship
+partitioning into components
+password
+patch program
+patent management
+patent pool
+patent right
+path
+payoff matrix
+payoff table
+penetration testing
+performance measurement baseline
+performance requirements
+perils
+periodic average method
+peripheral devices
+peripheral interface requirements
+personal digital assistants
+personal information protection policies
+personal threat
+photo printer
+pre-test iteration
+preparation of system audit plans
+preprocessor
+preventive control
+price elasticity
+price setting methods
+primary cache
+primary key
+primary system
+privacy policies
+private CA
+private IP address
+private key
+privilege mode
+problem
+problem management
+problem resolution data structures
+process
+process approach
+process framework
+process groups
+process management
+process map
+process-oriented design
+processing privilege
+processor
+procurement management plan
+procurement period
+procurement statement of work
+producer’s risk
+product
+product life cycle
+product portfolio
+product set (intersection set)
+production plan
+production process
+production system
+productivity indicators
+profile function
+program counter
+program library
+program register
+programming language
+progressive enhancement
+projector
+property rights of author
+proportional fonts
+proposal evaluation standards
+proposition
+protocol control
+protocols
+prototype
+prototype model
+publicity
+pyramid organization
+qualitative risk analysis
+quality characteristics
+quality control frameworks
+quality management plan
+quality requirements
+quantitative risk analysis
+quasi-mandate contract
+radix
+radix conversion method
+random access
+reader
+ready state
+real memory management
+real-time OS
+real-time control
+real-time control processing system
+real-time processing system
+receiving inspection
+recommendations
+record
+record array
+recurring fraction
+recursive
+recursive algorithm
+recursive call
+recursive program
+redefinition
+reengineering
+reentrant program
+reference information
+referential constraint
+refresh
+regression analysis
+regression line
+regression testing
+regular expression
+relation
+relational algebra
+relational databases
+relational operations
+relative error
+release and deployment management
+release policy
+reliability growth curve
+remote maintenance
+rental contract
+repository
+requirements document
+requirements management plan
+requirements specification document
+reserve analysis
+residual risks
+resource calendar
+response manual
+restore
+reverse auction
+review
+rich clients
+risk assessment
+risk management
+risk management plan
+risk register
+risks
+road map
+roll-in
+roll-out
+root
+root certificates
+root directory
+rootkit
+rotational latency
+route searching
+routing
+run length method
+running cost
+running state
+runtime compiler
+segregation of duties
+selective perception
+semaphore system
+semiconductor memory
+sendmail
+sensor network
+sentinel method
+sequential transition
+serial bus
+serial interface
+serial printer
+series system
+server
+server virtualization
+service catalogue
+service component
+service continuity plan
+service contract
+service design document
+service desk
+service levels
+service life cycle
+service operation
+service program
+service quality
+service report
+service reporting
+service requests
+servlet
+servlets
+set functions
+set operations
+set operators
+shortest path problem
+simple Markov process
+simplex method
+software faults
+software license
+software qualification testin
+software qualification testing report
+software requirements
+software requirements definition
+software requirements definitions
+software unit test
+software unit test report document
+software unit test specifications document
+software units
+solution business
+sort program
+sorting
+source program
+space complexity
+span of control
+spanning tree
+specialization
+specification document of a system qualification test
+speculative risk
+spiral model
+spline interpolation
+splitter
+spool
+stakeholder
+stakeholder engagement
+stakeholder management plan
+stakeholder register
+stakeholder requirements
+symbols
+test method
+‒‒ 0 ‒‒ access time
+‒‒ 1 ‒‒ account function
+‒‒ 3 ‒‒ activity
+‒‒ A ‒‒ aggregate functions
+‒‒ G ‒‒ Hardware
+‒‒ H ‒‒ Hot site
