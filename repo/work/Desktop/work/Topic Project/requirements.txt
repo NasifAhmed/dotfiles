@@ -9,6 +9,9 @@ pdfplumber>=0.10.0       # Extract text from PDF
 # Image Processing
 Pillow>=10.0.0           # Image manipulation
 
+# Gemini API
+google-generativeai>=0.3.0
+
 
 
 # Note: System dependencies required:

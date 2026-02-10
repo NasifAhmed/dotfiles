@@ -3,7 +3,7 @@
 # Wrapper script to run the Search Index Builder with correct environment
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR/.."
 
 # Check for virtual environment
 if [ -f "venv/bin/python3" ]; then
@@ -14,4 +14,4 @@ else
 fi
 
 echo "Running Search Index Builder..."
-$PYTHON_CMD build_search_index.py "$@"
+$PYTHON_CMD app/build_search_index.py "$@"

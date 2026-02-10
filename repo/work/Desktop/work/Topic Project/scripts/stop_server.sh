@@ -3,7 +3,7 @@
 # FE Question Bank - Server Stop Script
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR/.."
 
 # Check if docker-compose is available
 if command -v docker-compose &> /dev/null; then

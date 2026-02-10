@@ -30258,7 +30258,7 @@
     "q_num": 1,
     "img_path": "../cropped_questions/2007A_A/Q01.png",
     "text": "Q1. What range of decimal numbers can be represented with an 11-bit two's-complement\nnumber?\na) -2048 to 2047\nb) -2048 to 2048\nc) -1024 to 1023\nd) -1024 to 1024",
-    "tag": "Uncategorized"
+    "tag": "Number Systems"
   },
   {
     "id": "2007S_A_Q01",
@@ -30280,7 +30280,7 @@
     "q_num": 2,
     "img_path": "../cropped_questions/2007A_A/Q02.png",
     "text": "Q2. Which of the following decimal fractions becomes a finite fraction in an octal\nrepresentation?\na) 0.3 b) 0.4 c) 0.5 d) 0.8",
-    "tag": "Uncategorized"
+    "tag": "Number Systems"
   },
   {
     "id": "2007S_A_Q02",
@@ -30302,7 +30302,7 @@
     "q_num": 3,
     "img_path": "../cropped_questions/2007A_A/Q03.png",
     "text": "Q3. When a certain natural number x is expressed as a 2n-digit binary number \u201c1010...10\u201d\nconsisting of 1 and 0 arranged alternately, which of the following equations can be\nformulated in terms of the number x?\nx\na) x + = 22n\n2\nx\nb) x + = 22n-1\n2\nx\nc) x + = 22n+1\n2\nx\nd) x + = 22n+1-1\n2",
-    "tag": "Uncategorized"
+    "tag": "Number Systems"
   },
   {
     "id": "2007S_A_Q03",
@@ -30324,7 +30324,7 @@
     "q_num": 4,
     "img_path": "../cropped_questions/2007A_A/Q04.png",
     "text": "Q4. An integer m is stored in a register as a binary value. If this value is shifted to the left\nby three bits and m is added to the shifted value, how many times as large as m is the\nresulting number? Here, no overflow occurs.\na) 4 b) 7 c) 8 d) 9",
-    "tag": "Uncategorized"
+    "tag": "Number Systems"
   },
   {
     "id": "2007S_A_Q04",
@@ -30346,7 +30346,7 @@
     "q_num": 5,
     "img_path": "../cropped_questions/2007A_A/Q05.png",
     "text": "Q5. Which of the following is the reason why a large number of computers use \u201ccomplement\nrepresentation\u201d to simplify arithmetic circuits?\na) Addition can be processed by subtraction.\nb) Division can be processed by a combination of subtractions.\nc) Multiplication can be processed by a combination of additions.\nd) Subtraction can be processed by addition.",
-    "tag": "Uncategorized"
+    "tag": "Number Systems"
   },
   {
     "id": "2007S_A_Q05",
@@ -30368,7 +30368,7 @@
     "q_num": 6,
     "img_path": "../cropped_questions/2007A_A/Q06.png",
     "text": "Q6. Which of the following is the appropriate statement concerning Newton\u2019s method that is\nknown as an algorithm for obtaining the approximate value of the solution to the\nformula \u0192(x) = 0?\na) An approximate value of the solution can be obtained even if the function \u0192(x) is\nindifferentiable.\nb) An approximate value of the solution is obtained geometrically using the tangent\nlines of y = \u0192(x).\nc) No matter what initial values are provided, an approximate value of the solution can\nalways be obtained.\nd) Two different initial values must be provided.",
-    "tag": "Uncategorized"
+    "tag": "Numerical Analysis"
   },
   {
     "id": "2007S_A_Q06",
@@ -30390,7 +30390,7 @@
     "q_num": 7,
     "img_path": "../cropped_questions/2007A_A/Q07.png",
     "text": "Q7. There is a four-digit number N N N C that is used for Customer Account Number\n1 2 3\n(CAN). The right most digit \u201cC\u201d can be calculated as follows:\nC = (N *3 + N *5 + N *7) mod 10\n1 2 3\nWhich of the following is a correct CAN? Here, x mod y returns the remainder when x\nis divided by y.\na) 7714 b) 7715 c) 9690 d) 9695",
-    "tag": "Uncategorized"
+    "tag": "Encoding"
   },
   {
     "id": "2007S_A_Q07",
@@ -30412,7 +30412,7 @@
     "q_num": 8,
     "img_path": "../cropped_questions/2007A_A/Q08.png",
     "text": "Q8. Two players, X and Y play a dice game. A pair of dice is tossed. If the sum of the dice\nis 2, 4, or 6, X wins the game. Otherwise, Y wins. What is the probability that Y wins\nthe game?\na) 1/4 b) 1/3 c) 1/2 d) 3/4",
-    "tag": "Uncategorized"
+    "tag": "Probability"
   },
   {
     "id": "2007S_A_Q08",
@@ -30434,7 +30434,7 @@
     "q_num": 9,
     "img_path": "../cropped_questions/2007A_A/Q09.png",
     "text": "Q9. There are a total of 1,900 students in a school, 553 of whom are taking a course in\ncomputer science, 667 of whom are in mathematics, and 290 of whom are in both\ncomputer science and mathematics. How many students are not taking a course in\neither computer science or in mathematics?\na) 680 b) 930 c) 970 d) 1260",
-    "tag": "Uncategorized"
+    "tag": "Set Theory"
   },
   {
     "id": "2007S_A_Q09",
@@ -30456,7 +30456,7 @@
     "q_num": 10,
     "img_path": "../cropped_questions/2007A_A/Q10.png",
     "text": "Q10. Which of the following is equivalent to the logical expression A\u2022B+B\u2022C\u2022(B+C)?\nHere, \u201c\u2022\u201d is the logical product, and \u201c+\u201d is the logical sum.\na) A\u2022B+ A\u2022C b) A\u2022C + B\nc) B\u2022(A+C) d) B+ A\u2022C",
-    "tag": "Uncategorized"
+    "tag": "Logic"
   },
   {
     "id": "2007S_A_Q10",
@@ -30478,7 +30478,7 @@
     "q_num": 11,
     "img_path": "../cropped_questions/2007A_A/Q11.png",
     "text": "Q11. There are three 7-bit character codes: 30, 3F, and 7A. When an even parity bit is\nadded to the front of each character code, which of the following shows the correct\nresult? Here, the character codes are expressed in hexadecimal.\na) 30, 3F, 7A b) 30, 3F, FA\nc) B0, 3F, FA d) B0, BF, 7A",
-    "tag": "Uncategorized"
+    "tag": "Encoding"
   },
   {
     "id": "2007S_A_Q11",
@@ -30500,7 +30500,7 @@
     "q_num": 12,
     "img_path": "../cropped_questions/2007A_A/Q12.png",
     "text": "Q12. Which of the following data structures uses the LIFO (Last In First Out) method in order\nto manage data?\na) Array b) Linked list c) Queue d) Stack",
-    "tag": "Uncategorized"
+    "tag": "Linear"
   },
   {
     "id": "2007S_A_Q12",
@@ -30522,7 +30522,7 @@
     "q_num": 13,
     "img_path": "../cropped_questions/2007A_A/Q13.png",
     "text": "Q13. In a microprocessor, there are two general registers: GRi and GRj (hereinafter referred\nto as GRx instead of GRi or GRj). PUSH GRx is used for adding the contents of GRx\nto the top of a stack. POP GRx is for removing the current top data of the stack and\nstoring it to GRx. Which of the following operations can exchange the contents of GRi\nand GRj?\na) PUSH GRi\nPOP GRj\nPUSH GRj\nPOP GRi\nb) PUSH GRj\nPOP GRi\nPUSH GRi\nPOP GRj\nc) PUSH GRi\nPUSH GRj\nPOP GRi\nPOP GRj\nd) PUSH GRi\nPUSH GRj\nPOP GRj\nPOP GRi",
-    "tag": "Uncategorized"
+    "tag": "Instruction Set"
   },
   {
     "id": "2007S_A_Q13",
@@ -30544,7 +30544,7 @@
     "q_num": 14,
     "img_path": "../cropped_questions/2007A_A/Q14.png",
     "text": "Q14. Which of the following is the appropriate statement concerning data sorting methods?\na) The \u201cbubble sort\u201d method determines an intermediate reference value and divides the\nelements into two groups of \u201clarger\u201d values and \u201csmaller\u201d values. This operation\nis then repeated recursively on these two groups.\nb) The \u201cheap sort\u201d method builds an ordered tree from the unsorted portion of the\nelements, extracts the maximum or minimum value from this ordered tree, and\nmoves it to the sorted portion. This operational sequence is then repeated to\ngradually shrink the unsorted portion.\nc) The \u201cquick sort\u201d method sorts each substring composed of elements extracted at\nregular intervals, and then the interval is further decreased and the same operation is\nperformed again. This operation is repeated until the interval becomes 1.\nd) The \u201cshell sort\u201d method repeatedly compares two adjacent elements and swaps them\nif the first element is larger than the second.",
-    "tag": "Uncategorized"
+    "tag": "Sorting"
   },
   {
     "id": "2007S_A_Q14",
@@ -30566,7 +30566,7 @@
     "q_num": 15,
     "img_path": "../cropped_questions/2007A_A/Q15.png",
     "text": "Q15. A binary tree is said to be perfect, if all its leaves are at the same depth and every internal\nnode has two children. Which of the following is correct about the perfect binary tree?\nHere, n is the number of nodes, and h is the height of the perfect binary tree.\na) h = log (n+1)\n2\nb) If every proper subtree of a binary tree is perfect, then the tree itself must also be\nperfect.\nc) n = 2h+1 -1\nd) The number of internal nodes is 2h.",
-    "tag": "Uncategorized"
+    "tag": "Non-Linear"
   },
   {
     "id": "2007S_A_Q15",
@@ -30588,7 +30588,7 @@
     "q_num": 16,
     "img_path": "../cropped_questions/2007A_A/Q16.png",
     "text": "Q16. A depth-first search (DFS) visits all the vertices in a graph. When an edge to be\nexplored next is chosen, this algorithm always chooses to go \u201cdeeper\u201d into the graph.\nThat is, it will pick the next adjacent unvisited vertex until reaching a vertex that has no\nunvisited adjacent vertices. The algorithm will then backtrack to the previous vertex\nand continue along any as-yet unexplored edges from that vertex. After DFS has\nvisited all the reachable vertices from a particular source vertex, it chooses one of the\nremaining undiscovered vertices and continues the search. Which of the following is\nnot a valid order in which the vertices of the graph below can be marked as \u201cvisited\u201d\nduring a DFS?\na) ABCDEF b) ABDFEC\nc) ABEDFC d) ADEFCB",
-    "tag": "Uncategorized"
+    "tag": "Searching"
   },
   {
     "id": "2007S_A_Q16",
@@ -30610,7 +30610,7 @@
     "q_num": 17,
     "img_path": "../cropped_questions/2007A_A/Q17.png",
     "text": "Q17. Which of the following equations holds well in the postfix notation (or Reverse Polish\nNotation)? Here, x, y, and z are variables.\na) xy+z- = xyz+- b) xy-z+ = xyz-+\nc) xy-z+ = xyz-- d) xy-z- = xyz--",
-    "tag": "Uncategorized"
+    "tag": "Linear"
   },
   {
     "id": "2007S_A_Q17",
@@ -30632,7 +30632,7 @@
     "q_num": 18,
     "img_path": "../cropped_questions/2007A_A/Q18.png",
     "text": "Q18. The following function f (n, k) exists:\n1 (k=0)\nf (n, k)= f (n-1, k-1) + f (n-1, k) (0<k<n)\n1 (k=n)\nWhat is the value of f (4, 2)?\na) 3 b) 4 c) 5 d) 6",
-    "tag": "Uncategorized"
+    "tag": "Recursion"
   },
   {
     "id": "2007S_A_Q18",
@@ -30654,7 +30654,7 @@
     "q_num": 19,
     "img_path": "../cropped_questions/2007A_A/Q19.png",
     "text": "Q19. Which of the following logic circuits generates the same output as the logic circuit\nshown in the figure below? Here, , , and represent the\nlogical product, the logical sum, and the logical negation respectively.\nA\nX\nB\na) A b) A\nX X\nB\nB\nc) A d) A\nX X\nB\nB",
-    "tag": "Uncategorized"
+    "tag": "Logic Gates"
   },
   {
     "id": "2007S_A_Q19",
@@ -30676,7 +30676,7 @@
     "q_num": 20,
     "img_path": "../cropped_questions/2007A_A/Q20.png",
     "text": "Q20. Which of the following leads to the von Neumann bottleneck?\na) Capacity of main memory\nb) CPU performance\nc) Data transfer speed between CPU and I/O devices\nd) Data transfer speed between CPU and main memory",
-    "tag": "Uncategorized"
+    "tag": "Architecture"
   },
   {
     "id": "2007S_A_Q20",

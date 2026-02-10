@@ -800,7 +800,8 @@
         "Marketing research",
         "file search function",
         "route searching"
-      ]
+      ],
+      "Recursion": []
     },
     "Applied Math": {
       "Stochastic Processes": [
@@ -819,7 +820,8 @@
       ],
       "Queueing Theory": [
         "Queueing theory"
-      ]
+      ],
+      "Numerical Analysis": []
     }
   },
   "Databases": {

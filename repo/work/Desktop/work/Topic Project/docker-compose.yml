@@ -8,7 +8,7 @@ services:
       # Mount web folder for live updates during development
       - ./web:/usr/share/nginx/html/web:ro
       # Mount cropped questions (read-only)
-      - ./cropped_questions:/usr/share/nginx/html/cropped_questions:ro
+      - ./data/output/cropped_questions:/usr/share/nginx/html/cropped_questions:ro
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]

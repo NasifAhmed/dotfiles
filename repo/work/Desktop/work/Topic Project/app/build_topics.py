@@ -10,9 +10,9 @@ import re
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
-RAW_FILE = BASE_DIR / "raw_terms.txt"
-OUTPUT_FILE = BASE_DIR / "topics.json"
+BASE_DIR = Path(__file__).parent.parent
+RAW_FILE = BASE_DIR / "data" / "output" / "raw_terms.txt"
+OUTPUT_FILE = BASE_DIR / "data" / "output" / "topics.json"
 
 # Terms to ignore completely
 BLACKLIST = {

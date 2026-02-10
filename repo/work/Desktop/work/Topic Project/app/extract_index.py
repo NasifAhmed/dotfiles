@@ -10,10 +10,10 @@ import re
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
-VOL1 = BASE_DIR / "New FE Textbook Vol1.pdf"
-VOL2 = BASE_DIR / "New FE Textbook Vol2.pdf"
-OUTPUT_FILE = BASE_DIR / "raw_terms.txt"
+BASE_DIR = Path(__file__).parent.parent
+VOL1 = BASE_DIR / "data" / "input" / "pdfs" / "New FE Textbook Vol1.pdf"
+VOL2 = BASE_DIR / "data" / "input" / "pdfs" / "New FE Textbook Vol2.pdf"
+OUTPUT_FILE = BASE_DIR / "data" / "output" / "raw_terms.txt"
 
 
 def get_source_mtime():

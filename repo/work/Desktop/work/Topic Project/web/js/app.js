@@ -8,13 +8,37 @@ const yearToSelect = document.getElementById('yearTo');
 const clearFiltersBtn = document.getElementById('clearFilters');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
+// Nav & View Elements
+const navBtns = document.querySelectorAll('.nav-btn');
+const views = document.querySelectorAll('.view');
+const topicsList = document.getElementById('topics-list');
+const topicsBreadcrumb = document.getElementById('topics-breadcrumb');
+const topicResultsContainer = document.getElementById('topic-results');
+const topicResultsHeader = document.getElementById('topic-results-header');
+const currentTopicName = document.getElementById('currentTopicName');
+const topicStats = document.getElementById('topic-stats');
+
 let allData = [];
+let topicsData = {};
 let fuse;
 let debounceTimer;
 
-// Helper to normalize image paths (works for both Docker and local file access)
+// State
+let currentState = {
+    view: 'search-view',
+    topicsPath: [] // [Category, Subcategory, Topic]
+};
+
+// Filter State
+let filters = {
+    yearFrom: null,
+    yearTo: null,
+    terms: ['Spring', 'Autumn'],
+    types: ['Morning', 'Afternoon']
+};
+
+// Helper to normalize image paths
 function getImagePath(imgPath) {
-    // Convert ../cropped_questions/... to /cropped_questions/...
     if (imgPath.startsWith('../')) {
         return '/' + imgPath.substring(3);
     }
@@ -26,14 +50,6 @@ function escapeRegex(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-// Filter State
-let filters = {
-    yearFrom: null,
-    yearTo: null,
-    terms: ['Spring', 'Autumn'],
-    types: ['Morning', 'Afternoon']
-};
-
 // Initialize
 function init() {
     try {
@@ -41,6 +57,7 @@ function init() {
             throw new Error("SEARCH_DATA not found. Make sure data.js is loaded.");
         }
         allData = window.SEARCH_DATA;
+        topicsData = window.TOPICS_DATA || {};
 
         // Get unique years and populate dropdowns
         const years = [...new Set(allData.map(d => d.year))].filter(y => y).sort((a, b) => a - b);
@@ -56,10 +73,12 @@ function init() {
         };
         fuse = new Fuse(allData, options);
 
-        updateStats();
-
-        // Show initial batch
-        applyFiltersAndSearch();
+        // Navigation Listeners
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchView(btn.dataset.view);
+            });
+        });
 
         // Search Input Listener with Debounce
         searchInput.addEventListener('input', (e) => {
@@ -85,9 +104,7 @@ function init() {
             btn.addEventListener('click', () => {
                 const filterType = btn.dataset.filter;
                 const value = btn.dataset.value;
-
                 btn.classList.toggle('active');
-
                 if (filterType === 'term') {
                     if (btn.classList.contains('active')) {
                         if (!filters.terms.includes(value)) filters.terms.push(value);
@@ -101,7 +118,6 @@ function init() {
                         filters.types = filters.types.filter(t => t !== value);
                     }
                 }
-
                 applyFiltersAndSearch();
             });
         });
@@ -109,10 +125,25 @@ function init() {
         // Clear Filters
         clearFiltersBtn.addEventListener('click', resetFilters);
 
+        // Initial render
+        updateStats();
+        applyFiltersAndSearch();
+        renderTopics();
+
     } catch (e) {
-        statsDiv.textContent = "Error loading index. Check console.";
+        if (statsDiv) statsDiv.textContent = "Error loading index. Check console.";
         console.error(e);
     }
+}
+
+function switchView(viewId) {
+    currentState.view = viewId;
+    navBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === viewId);
+    });
+    views.forEach(view => {
+        view.classList.toggle('active', view.id === viewId);
+    });
 }
 
 function populateYearDropdowns(years) {
@@ -130,45 +161,31 @@ function populateYearDropdowns(years) {
 }
 
 function resetFilters() {
-    // Reset state
     filters = {
         yearFrom: null,
         yearTo: null,
         terms: ['Spring', 'Autumn'],
         types: ['Morning', 'Afternoon']
     };
-
-    // Reset UI
     searchInput.value = '';
     yearFromSelect.value = '';
     yearToSelect.value = '';
     filterBtns.forEach(btn => btn.classList.add('active'));
-
     applyFiltersAndSearch();
 }
 
 function applyFiltersAndSearch() {
     const query = searchInput.value.trim();
-
-    // Step 1: Apply filters
     let filtered = allData.filter(item => {
-        // Year filter
         if (filters.yearFrom && item.year < filters.yearFrom) return false;
         if (filters.yearTo && item.year > filters.yearTo) return false;
-
-        // Term filter
         if (filters.terms.length > 0 && !filters.terms.includes(item.term)) return false;
-
-        // Type filter
         if (filters.types.length > 0 && !filters.types.includes(item.type)) return false;
-
         return true;
     });
 
-    // Step 2: Apply search using Unified Parser
     let results;
     if (query.length === 0) {
-        // No search, just show filtered results sorted by year (newest first)
         results = filtered.sort((a, b) => {
             if (b.year !== a.year) return b.year - a.year;
             return a.q_num - b.q_num;
@@ -178,214 +195,123 @@ function applyFiltersAndSearch() {
     }
 
     updateStats(results.length, query);
-    renderResults(results);
+    renderResults(results, resultsContainer);
 }
 
-/**
- * Advanced Search Implementation
- * 
- * Supports mixing and matching:
- * - Exact phrase: "linked list"
- * - Wildcards: *term*, term*, *term, +term, term+
- * - Boolean: term1 & term2 (AND), term1 | term2 (OR)
- * - Combinations: "exact phrase" & *term* | +prefix
- */
-function advancedSearch(items, query) {
-    if (!query) return items;
+// Hierarchical Topics Logic
+function renderTopics() {
+    const path = currentState.topicsPath;
+    topicsList.innerHTML = '';
+    topicResultsContainer.innerHTML = '';
+    topicResultsHeader.style.display = 'none';
+    
+    updateBreadcrumbs();
 
-    // Split by | first (OR groups)
-    const orGroups = splitByOperator(query, '|');
+    let currentLevel = topicsData;
+    for (const segment of path) {
+        currentLevel = currentLevel[segment];
+    }
 
-    const results = new Set();
+    if (Array.isArray(currentLevel)) {
+        // We reached the questions (Topic level)
+        renderTopicQuestions(path[path.length - 1], currentLevel);
+    } else {
+        // Still in hierarchy (Category or Subcategory level)
+        const keys = Object.keys(currentLevel).sort();
+        
+        if (keys.length === 0) {
+            topicsList.innerHTML = '<div class="no-results">No topics found in this category.</div>';
+            return;
+        }
 
-    for (const group of orGroups) {
-        if (!group.trim()) continue;
-
-        // Parse AND tokens within this OR group
-        // We split by & or implicit space (unless quoted)
-        const tokens = parseTokens(group);
-
-        if (tokens.length === 0) continue;
-
-        // Strict AND: Item must match ALL tokens in this group
-        const groupMatches = items.filter(item => {
-            return tokens.every(token => matchToken(item, token));
+        keys.forEach(key => {
+            const item = document.createElement('div');
+            item.className = 'topic-item';
+            
+            // Count helper
+            const count = countQuestionsUnder(currentLevel[key]);
+            
+            item.innerHTML = `
+                <div class="topic-item-title">${key}</div>
+                <div class="topic-item-count">${count} question${count !== 1 ? 's' : ''}</div>
+            `;
+            
+            item.onclick = () => {
+                currentState.topicsPath.push(key);
+                renderTopics();
+            };
+            
+            topicsList.appendChild(item);
         });
-
-        // Add all matches from this OR group
-        groupMatches.forEach(m => results.add(m));
-    }
-
-    return Array.from(results);
-}
-
-/**
- * Helper to split by an operator but respect quotes
- */
-function splitByOperator(str, op) {
-    const parts = [];
-    let current = '';
-    let inQuote = false;
-
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
-        if (char === '"') inQuote = !inQuote;
-
-        if (char === op && !inQuote) {
-            parts.push(current);
-            current = '';
-        } else {
-            current += char;
-        }
-    }
-    parts.push(current);
-    return parts;
-}
-
-/**
- * Parses a string into tokens, respecting quotes
- * Treats '&' as delimiter, and spaces as delimiters (implicit AND)
- */
-function parseTokens(str) {
-    const tokens = [];
-    let current = '';
-    let inQuote = false;
-
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
-
-        if (char === '"') {
-            inQuote = !inQuote;
-            if (!inQuote && current) {
-                // End of quote -> Add as phrase token
-                tokens.push({ type: 'phrase', value: current });
-                current = '';
-            }
-        } else if ((char === '&' || char === ' ') && !inQuote) {
-            if (current.trim()) tokens.push(createToken(current));
-            current = '';
-        } else {
-            current += char;
-        }
-    }
-
-    if (current.trim()) tokens.push(createToken(current));
-
-    return tokens;
-}
-
-function createToken(str) {
-    str = str.trim();
-    // Default to pattern token
-    return { type: 'pattern', value: str };
-}
-
-/**
- * Checks if an item matches a single token pattern
- */
-function matchToken(item, token) {
-    const text = (item.text || '').toLowerCase();
-    const tag = (item.tag || '').toLowerCase();
-
-    // 1. Exact Phrase (Quoted) or Simple Term (No Wildcards)
-    // Both should use smart boundary logic:
-    // - If it starts/ends with alphanumeric, require \b boundary.
-    // - If it starts/ends with symbol, do strictly substring at that edge.
-    // This allows "AI" to match strict, but "C++" to work.
-
-    let pattern = escapeRegex(token.value);
-
-    // Check if it has wildcards (escaped by escapeRegex as \* and \+)
-    // Only if token.type is 'pattern' (not quoted phrase)
-    let hasWildcards = false;
-    if (token.type === 'pattern') {
-        hasWildcards = pattern.includes('\\*') || pattern.includes('\\+');
-    }
-
-    if (hasWildcards) {
-        // Replace escaped wildcards with Regex equivalents
-        // \* -> .* (Match any sequence)
-        // \+ -> .+ (Match at least one char)
-        pattern = pattern
-            .replace(/\\\*/g, '.*')
-            .replace(/\\\+/g, '.+');
-
-        // Boundary Logic:
-        // If query starts with wildcard, NO leading boundary.
-        // If query does NOT start with wildcard, use word boundary \b
-        if (!token.value.startsWith('*') && !token.value.startsWith('+')) {
-            pattern = '\\b' + pattern;
-        }
-
-        // Same for end
-        if (!token.value.endsWith('*') && !token.value.endsWith('+')) {
-            pattern = pattern + '\\b';
-        }
-    } else {
-        // No wildcards OR Quoted Phrase.
-        // TREAT AS STRICT WORD if alphanumeric boundaries exist.
-
-        // Reset pattern (just in case)
-        pattern = escapeRegex(token.value);
-
-        // Smart Boundaries
-        // If it starts with a word char [a-zA-Z0-9_], require leading \b
-        if (/^\w/.test(token.value)) {
-            pattern = '\\b' + pattern;
-        }
-        // If it ends with a word char, require trailing \b
-        if (/\w$/.test(token.value)) {
-            pattern = pattern + '\\b';
-        }
-    }
-
-    try {
-        const regex = new RegExp(pattern, 'i');
-        return regex.test(text) || regex.test(tag);
-    } catch (e) {
-        // Fallback to simple includes if regex fails (unlikely)
-        return text.includes(token.value.toLowerCase()) || tag.includes(token.value.toLowerCase());
     }
 }
 
-function updateStats(count = null, query = '') {
-    const total = allData.length;
-    const activeFilters = getActiveFilterCount();
-
-    if (count === null) {
-        statsDiv.textContent = `${total} questions indexed`;
-    } else if (query) {
-        statsDiv.textContent = `Found ${count} of ${total} questions`;
-    } else if (activeFilters > 0) {
-        statsDiv.textContent = `Showing ${count} of ${total} questions (${activeFilters} filter${activeFilters > 1 ? 's' : ''} active)`;
-    } else {
-        statsDiv.textContent = `Showing ${Math.min(count, 100)} of ${total} questions`;
-    }
-}
-
-function getActiveFilterCount() {
+function countQuestionsUnder(node) {
+    if (Array.isArray(node)) return node.length;
     let count = 0;
-    if (filters.yearFrom) count++;
-    if (filters.yearTo) count++;
-    if (filters.terms.length < 2) count++;
-    if (filters.types.length < 2) count++;
+    for (const key in node) {
+        count += countQuestionsUnder(node[key]);
+    }
     return count;
 }
 
-function renderResults(items) {
-    resultsContainer.innerHTML = '';
+function updateBreadcrumbs() {
+    topicsBreadcrumb.innerHTML = '';
+    
+    // Home item
+    const home = document.createElement('span');
+    home.className = 'breadcrumb-item';
+    home.textContent = 'All Categories';
+    home.onclick = () => {
+        currentState.topicsPath = [];
+        renderTopics();
+    };
+    topicsBreadcrumb.appendChild(home);
+
+    currentState.topicsPath.forEach((segment, index) => {
+        const item = document.createElement('span');
+        item.className = 'breadcrumb-item';
+        item.textContent = segment;
+        item.onclick = () => {
+            currentState.topicsPath = currentState.topicsPath.slice(0, index + 1);
+            renderTopics();
+        };
+        topicsBreadcrumb.appendChild(item);
+    });
+}
+
+function renderTopicQuestions(topicName, questionIds) {
+    topicResultsHeader.style.display = 'block';
+    document.getElementById('current-topic-name').textContent = topicName;
+    topicStats.textContent = `${questionIds.length} question${questionIds.length !== 1 ? 's' : ''} found`;
+
+    // Map IDs back to full data objects
+    const dataMap = new Map(allData.map(d => [d.id, d]));
+    const items = questionIds.map(id => dataMap.get(id)).filter(item => !!item);
+    
+    renderResults(items, topicResultsContainer, true);
+}
+
+// Reusable Render Results
+function renderResults(items, container, showAll = false) {
+    container.innerHTML = '';
 
     if (items.length === 0) {
-        resultsContainer.style.display = 'none';
-        noResultsDiv.style.display = 'flex';
+        if (container === resultsContainer) {
+            container.style.display = 'none';
+            noResultsDiv.style.display = 'flex';
+        } else {
+            container.innerHTML = '<div class="no-results">No questions found.</div>';
+        }
         return;
     }
 
-    resultsContainer.style.display = 'grid';
-    noResultsDiv.style.display = 'none';
+    if (container === resultsContainer) {
+        container.style.display = 'grid';
+        noResultsDiv.style.display = 'none';
+    }
 
-    // Limit DOM nodes for performance
-    const displayItems = items.slice(0, 100);
+    const displayItems = showAll ? items : items.slice(0, 100);
 
     displayItems.forEach(item => {
         const card = document.createElement('div');
@@ -393,7 +319,6 @@ function renderResults(items) {
         const imgPath = getImagePath(item.img_path);
         card.onclick = () => window.open(imgPath, '_blank');
 
-        // Badges
         const badgesHtml = `
             <div class="badges">
                 <span class="badge badge-year">${item.year}</span>
@@ -413,16 +338,128 @@ function renderResults(items) {
             </div>
         `;
 
-        resultsContainer.appendChild(card);
+        container.appendChild(card);
     });
 
-    // Show count if limited
-    if (items.length > 100) {
+    if (!showAll && items.length > 100) {
         const moreDiv = document.createElement('div');
         moreDiv.className = 'more-results';
         moreDiv.textContent = `+${items.length - 100} more results. Refine your search to see all.`;
-        resultsContainer.appendChild(moreDiv);
+        container.appendChild(moreDiv);
     }
+}
+
+/**
+ * Advanced Search Implementation
+ */
+function advancedSearch(items, query) {
+    if (!query) return items;
+    const orGroups = splitByOperator(query, '|');
+    const results = new Set();
+
+    for (const group of orGroups) {
+        if (!group.trim()) continue;
+        const tokens = parseTokens(group);
+        if (tokens.length === 0) continue;
+        const groupMatches = items.filter(item => {
+            return tokens.every(token => matchToken(item, token));
+        });
+        groupMatches.forEach(m => results.add(m));
+    }
+    return Array.from(results);
+}
+
+function splitByOperator(str, op) {
+    const parts = [];
+    let current = '';
+    let inQuote = false;
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if (char === '"') inQuote = !inQuote;
+        if (char === op && !inQuote) {
+            parts.push(current);
+            current = '';
+        } else {
+            current += char;
+        }
+    }
+    parts.push(current);
+    return parts;
+}
+
+function parseTokens(str) {
+    const tokens = [];
+    let current = '';
+    let inQuote = false;
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if (char === '"') {
+            inQuote = !inQuote;
+            if (!inQuote && current) {
+                tokens.push({ type: 'phrase', value: current });
+                current = '';
+            }
+        } else if ((char === '&' || char === ' ') && !inQuote) {
+            if (current.trim()) tokens.push({ type: 'pattern', value: current.trim() });
+            current = '';
+        } else {
+            current += char;
+        }
+    }
+    if (current.trim()) tokens.push({ type: 'pattern', value: current.trim() });
+    return tokens;
+}
+
+function matchToken(item, token) {
+    const text = (item.text || '').toLowerCase();
+    const tag = (item.tag || '').toLowerCase();
+    let pattern = escapeRegex(token.value);
+    let hasWildcards = false;
+    if (token.type === 'pattern') {
+        hasWildcards = pattern.includes('\\*') || pattern.includes('\\+');
+    }
+
+    if (hasWildcards) {
+        pattern = pattern.replace(/\\\*/g, '.*').replace(/\\\+/g, '.+');
+        if (!token.value.startsWith('*') && !token.value.startsWith('+')) pattern = '\\b' + pattern;
+        if (!token.value.endsWith('*') && !token.value.endsWith('+')) pattern = pattern + '\\b';
+    } else {
+        pattern = escapeRegex(token.value);
+        if (/^\w/.test(token.value)) pattern = '\\b' + pattern;
+        if (/\w$/.test(token.value)) pattern = pattern + '\\b';
+    }
+
+    try {
+        const regex = new RegExp(pattern, 'i');
+        return regex.test(text) || regex.test(tag);
+    } catch (e) {
+        return text.includes(token.value.toLowerCase()) || tag.includes(token.value.toLowerCase());
+    }
+}
+
+function updateStats(count = null, query = '') {
+    const total = allData.length;
+    const activeFilters = getActiveFilterCount();
+    if (!statsDiv) return;
+
+    if (count === null) {
+        statsDiv.textContent = `${total} questions indexed`;
+    } else if (query) {
+        statsDiv.textContent = `Found ${count} of ${total} questions`;
+    } else if (activeFilters > 0) {
+        statsDiv.textContent = `Showing ${count} of ${total} questions (${activeFilters} filter${activeFilters > 1 ? 's' : ''} active)`;
+    } else {
+        statsDiv.textContent = `Showing ${Math.min(count, 100)} of ${total} questions`;
+    }
+}
+
+function getActiveFilterCount() {
+    let count = 0;
+    if (filters.yearFrom) count++;
+    if (filters.yearTo) count++;
+    if (filters.terms.length < 2) count++;
+    if (filters.types.length < 2) count++;
+    return count;
 }
 
 init();

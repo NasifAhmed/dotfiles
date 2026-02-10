@@ -17,11 +17,11 @@ from pdf2image import convert_from_path
 from PIL import Image, ImageTk
 
 # Configuration
-BASE_DIR = Path(__file__).parent
-QUESTIONS_DIR = BASE_DIR / "Past Questions with Answers"
-OUTPUT_DIR = BASE_DIR / "cropped_questions"
-PROGRESS_FILE = BASE_DIR / ".cropper_progress.json"
-TOPICS_FILE = BASE_DIR / "topics.json"
+BASE_DIR = Path(__file__).parent.parent
+QUESTIONS_DIR = BASE_DIR / "data" / "input" / "past_exams"
+OUTPUT_DIR = BASE_DIR / "data" / "output" / "cropped_questions"
+PROGRESS_FILE = BASE_DIR / "data" / "state" / ".cropper_progress.json"
+TOPICS_FILE = BASE_DIR / "data" / "output" / "topics.json"
 DPI = 150  # Resolution for PDF conversion
 
 

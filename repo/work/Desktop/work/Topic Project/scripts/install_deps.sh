@@ -6,7 +6,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR/.."
 
 # Colors
 RED='\033[0;31m'
@@ -86,6 +86,7 @@ packages = [
     ('fitz', 'PyMuPDF'),
     ('pdf2image', 'pdf2image'),
     ('pdfplumber', 'pdfplumber'),
+    ('google.generativeai', 'google-generativeai'),
 ]
 all_ok = True
 for module, name in packages:
@@ -111,8 +112,9 @@ if [ ${#MISSING_DEPS[@]} -gt 0 ]; then
 fi
 
 echo -e "You can now run the Python scripts:"
-echo -e "  • ${BLUE}./run_cropper.sh${NC} - Crop questions & Extract text (PDF)"
-echo -e "  • ${BLUE}./run_indexer.sh${NC} - Build search index (or python3 build_search_index.py)"
-echo -e "  • ${BLUE}python3 extract_index.py${NC} - Extract terms from textbooks"
-echo -e "  • ${BLUE}python3 build_topics.py${NC} - Build topics taxonomy"
+echo -e "  • ${BLUE}./scripts/run_cropper.sh${NC} - Crop questions & Extract text (PDF)"
+echo -e "  • ${BLUE}./scripts/run_indexer.sh${NC} - Build search index"
+echo -e "  • ${BLUE}python3 app/extract_index.py${NC} - Extract terms from textbooks"
+echo -e "  • ${BLUE}python3 app/build_topics.py${NC} - Build topics taxonomy"
+echo -e "  • ${BLUE}./scripts/run_classifier.sh${NC} - Classify questions (Gemini API)"
 echo ""

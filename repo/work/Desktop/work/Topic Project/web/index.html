@@ -15,112 +15,28 @@
 
   <body>
     <div class="container">
+      <nav class="main-nav">
+        <button class="nav-btn active" data-view="search-view">🔍 Search</button>
+        <button class="nav-btn" data-view="topics-view">📚 Topics</button>
+      </nav>
+
       <header>
         <h1>🎓 FE Question Bank</h1>
         <p class="subtitle">
-          Search and filter ITPEC Fundamental IT Engineer exam questions
+          Fundamental IT Engineer exam questions
         </p>
+      </header>
 
-        <!-- Search Box -->
-        <div class="search-box">
-          <svg
-            class="search-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.3-4.3"></path>
-          </svg>
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search questions... (e.g., 'SQL', 'linked list', 'deadlock')"
-            autofocus
-          />
-        </div>
-        <div class="search-tips">
-          <!-- <span class="tip">💡 Tips:</span> -->
-          <!-- Type query to search. -->
-          <!-- <span class="tip-sep">|</span> -->
-          <!-- <br /> -->
-          Use <code>*</code> for parts (e.g., <code>*sort*</code>)
-          <span class="tip-sep">|</span>
-          Use <code>"..."</code> for exact phrases
-          <span class="tip-sep">|</span>
-          <code>&</code> / <code>|</code> for logic
-        </div>
-
-        <!-- Filter Bar -->
-        <div class="filter-bar">
-          <!-- Year Range -->
-          <div class="filter-group">
-            <label class="filter-label">Year</label>
-            <div class="filter-row">
-              <select id="yearFrom" class="filter-select">
-                <option value="">From</option>
-              </select>
-              <span class="filter-separator">–</span>
-              <select id="yearTo" class="filter-select">
-                <option value="">To</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Term Filter -->
-          <div class="filter-group">
-            <label class="filter-label">Term</label>
-            <div class="filter-buttons">
-              <button
-                class="filter-btn active"
-                data-filter="term"
-                data-value="Spring"
-              >
-                🌸 Spring
-              </button>
-              <button
-                class="filter-btn active"
-                data-filter="term"
-                data-value="Autumn"
-              >
-                🍂 Autumn
-              </button>
-            </div>
-          </div>
-
-          <!-- Type Filter -->
-          <div class="filter-group">
-            <label class="filter-label">Exam Type</label>
-            <div class="filter-buttons">
-              <button
-                class="filter-btn active"
-                data-filter="type"
-                data-value="Morning"
-              >
-                ☀️ Morning
-              </button>
-              <button
-                class="filter-btn active"
-                data-filter="type"
-                data-value="Afternoon"
-              >
-                🌙 Afternoon
-              </button>
-            </div>
-          </div>
-
-          <!-- Clear Filters -->
-          <button id="clearFilters" class="clear-btn" title="Reset all filters">
+      <!-- Search View -->
+      <div id="search-view" class="view active">
+        <div class="search-section">
+          <!-- Search Box -->
+          <div class="search-box">
             <svg
+              class="search-icon"
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -128,32 +44,145 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path d="M3 6h18"></path>
-              <path d="M7 12h10"></path>
-              <path d="M10 18h4"></path>
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
             </svg>
-            Clear
-          </button>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search questions... (e.g., 'SQL', 'linked list', 'deadlock')"
+              autofocus
+            />
+          </div>
+          <div class="search-tips">
+            Use <code>*</code> for parts (e.g., <code>*sort*</code>)
+            <span class="tip-sep">|</span>
+            Use <code>"..."</code> for exact phrases
+            <span class="tip-sep">|</span>
+            <code>&</code> / <code>|</code> for logic
+          </div>
+
+          <!-- Filter Bar -->
+          <div class="filter-bar">
+            <!-- Year Range -->
+            <div class="filter-group">
+              <label class="filter-label">Year</label>
+              <div class="filter-row">
+                <select id="yearFrom" class="filter-select">
+                  <option value="">From</option>
+                </select>
+                <span class="filter-separator">–</span>
+                <select id="yearTo" class="filter-select">
+                  <option value="">To</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Term Filter -->
+            <div class="filter-group">
+              <label class="filter-label">Term</label>
+              <div class="filter-buttons">
+                <button
+                  class="filter-btn active"
+                  data-filter="term"
+                  data-value="Spring"
+                >
+                  🌸 Spring
+                </button>
+                <button
+                  class="filter-btn active"
+                  data-filter="term"
+                  data-value="Autumn"
+                >
+                  🍂 Autumn
+                </button>
+              </div>
+            </div>
+
+            <!-- Type Filter -->
+            <div class="filter-group">
+              <label class="filter-label">Exam Type</label>
+              <div class="filter-buttons">
+                <button
+                  class="filter-btn active"
+                  data-filter="type"
+                  data-value="Morning"
+                >
+                  ☀️ Morning
+                </button>
+                <button
+                  class="filter-btn active"
+                  data-filter="type"
+                  data-value="Afternoon"
+                >
+                  🌙 Afternoon
+                </button>
+              </div>
+            </div>
+
+            <!-- Clear Filters -->
+            <button id="clearFilters" class="clear-btn" title="Reset all filters">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 6h18"></path>
+                <path d="M7 12h10"></path>
+                <path d="M10 18h4"></path>
+              </svg>
+              Clear
+            </button>
+          </div>
+
+          <!-- Stats -->
+          <div id="stats" class="stats">Loading index...</div>
         </div>
 
-        <!-- Stats -->
-        <div id="stats" class="stats">Loading index...</div>
-      </header>
+        <main id="results" class="results-grid">
+          <!-- Results injected here -->
+        </main>
 
-      <main id="results" class="results-grid">
-        <!-- Results injected here -->
-      </main>
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results" style="display: none">
+          <div class="no-results-icon">🔍</div>
+          <h2>No questions found</h2>
+          <p>Try adjusting your search or filters</p>
+        </div>
+      </div>
 
-      <!-- No Results Message -->
-      <div id="noResults" class="no-results" style="display: none">
-        <div class="no-results-icon">🔍</div>
-        <h2>No questions found</h2>
-        <p>Try adjusting your search or filters</p>
+      <!-- Topics View -->
+      <div id="topics-view" class="view">
+        <div class="topics-container">
+          <div id="topics-breadcrumb" class="breadcrumb">
+            <span class="breadcrumb-item" data-path="">All Categories</span>
+          </div>
+          
+          <div id="topics-list" class="topics-list-grid">
+            <!-- Category/Subcategory/Topic buttons injected here -->
+          </div>
+
+          <div id="topic-results-header" class="topic-results-header" style="display: none;">
+            <h2 id="current-topic-name">Topic Name</h2>
+            <p id="topic-stats" class="stats">0 questions</p>
+          </div>
+
+          <main id="topic-results" class="results-grid">
+            <!-- Questions for selected topic injected here -->
+          </main>
+        </div>
       </div>
     </div>
 
-    <!-- Load data first (defines window.SEARCH_DATA) -->
+    <!-- Load data first -->
     <script src="data.js"></script>
+    <script src="topics_data.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

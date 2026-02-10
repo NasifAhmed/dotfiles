@@ -1,0 +1,122 @@
+{
+  "2007A_A/Q01.png": {
+    "category": "Basic Theory",
+    "subcategory": "Discrete Math",
+    "topic": "Number Systems",
+    "explanation": "The question asks for the range of decimal numbers representable by an 11-bit two's complement binary system. This is a core topic within number systems and the representation of signed integers."
+  },
+  "2007A_A/Q02.png": {
+    "category": "Basic Theory",
+    "subcategory": "Discrete Math",
+    "topic": "Number Systems",
+    "explanation": "The question requires knowledge of converting decimal fractions to other bases (specifically octal) and understanding which fractions terminate or recur in different number systems. This is a core topic in Discrete Math under Number Systems."
+  },
+  "2007A_A/Q03.png": {
+    "category": "Basic Theory",
+    "subcategory": "Discrete Math",
+    "topic": "Number Systems",
+    "explanation": "The question involves analyzing a specific binary number representation (1010...10 in base-2) and determining its algebraic properties. This falls directly under 'Number Systems' within the 'Discrete Math' subdomain of the FE syllabus."
+  },
+  "2007A_A/Q04.png": {
+    "category": "Basic Theory",
+    "subcategory": "Discrete Math",
+    "topic": "Number Systems",
+    "explanation": "The question asks about the mathematical effect of shifting a binary value in a register. Shifting a binary number to the left by 'n' bits is equivalent to multiplying the value by 2 to the power of 'n'. This is a fundamental concept of binary number systems and radix-based arithmetic."
+  },
+  "2007A_A/Q05.png": {
+    "category": "Basic Theory",
+    "subcategory": "Discrete Math",
+    "topic": "Number Systems",
+    "explanation": "The question pertains to 'complement representation' (specifically two's complement), which is a fundamental concept in number systems used to represent signed integers and perform subtraction using addition circuits."
+  },
+  "2007A_A/Q06.png": {
+    "category": "Basic Theory",
+    "subcategory": "Applied Math",
+    "topic": "Numerical Analysis",
+    "explanation": "The question asks about Newton's method, which is a fundamental numerical analysis technique used for finding approximate roots of a function. This is a core part of the Applied Mathematics section in the ITPEC FE syllabus, but it is not currently represented by the existing sub-topics like Statistics or Probability. Therefore, 'Numerical Analysis' is the most appropriate new topic."
+  },
+  "2007A_A/Q07.png": {
+    "category": "Basic Theory",
+    "subcategory": "Information Theory",
+    "topic": "Encoding",
+    "explanation": "The question asks to verify a 'Customer Account Number' using a check digit calculation. Check digits are a fundamental method of encoding data with redundancy to detect errors (like transposition or substitution) during data entry or transmission, which falls under the Encoding topic of Information Theory."
+  },
+  "2007A_A/Q08.png": {
+    "category": "Basic Theory",
+    "subcategory": "Applied Math",
+    "topic": "Probability",
+    "explanation": "The question requires calculating the probability of a specific outcome in a game involving tossing a pair of dice. This is a fundamental concept in probability theory within the Applied Math section of the FE syllabus."
+  },
+  "2007A_A/Q09.png": {
+    "category": "Basic Theory",
+    "subcategory": "Discrete Math",
+    "topic": "Set Theory",
+    "explanation": "The question requires calculating the number of elements in the complement of the union of two sets (students taking computer science and students taking mathematics). This is a fundamental application of the Principle of Inclusion-Exclusion within Set Theory."
+  },
+  "2007A_A/Q10.png": {
+    "category": "Basic Theory",
+    "subcategory": "Discrete Math",
+    "topic": "Logic",
+    "explanation": "The question requires the simplification of a Boolean (logical) expression using algebraic rules such as distribution and idempotence, which is a core component of Discrete Mathematics and Logic theory in the FE syllabus."
+  },
+  "2007A_A/Q11.png": {
+    "category": "Basic Theory",
+    "subcategory": "Information Theory",
+    "topic": "Encoding",
+    "explanation": "The question asks about adding an even parity bit to 7-bit character codes and converting the results between hexadecimal and binary. Parity bits are a fundamental form of error-detecting code, which falls under data encoding within Information Theory."
+  },
+  "2007A_A/Q12.png": {
+    "category": "Basic Theory",
+    "subcategory": "Data Structures",
+    "topic": "Linear",
+    "explanation": "The question asks about the LIFO (Last In First Out) management method, which is the defining characteristic of a Stack. Stacks, alongside Queues and Lists, are fundamental linear data structures."
+  },
+  "2007A_A/Q13.png": {
+    "category": "Computer Systems",
+    "subcategory": "Processor",
+    "topic": "Instruction Set",
+    "explanation": "The question asks for a sequence of microprocessor instructions (PUSH and POP) to manipulate general-purpose registers (GRi and GRj). This falls under the 'Instruction Set' topic as it focuses on the logical operation and execution flow of processor-level instructions."
+  },
+  "2007A_A/Q14.png": {
+    "category": "Basic Theory",
+    "subcategory": "Algorithms",
+    "topic": "Sorting",
+    "explanation": "The question asks to identify the correct description for various data sorting algorithms (bubble sort, heap sort, quick sort, and shell sort), which falls under the category of Algorithms in the FE syllabus."
+  },
+  "2007A_A/Q15.png": {
+    "category": "Basic Theory",
+    "subcategory": "Data Structures",
+    "topic": "Non-Linear",
+    "explanation": "The question discusses the properties and mathematical relationships (number of nodes vs. height) of a perfect binary tree, which is a fundamental non-linear data structure."
+  },
+  "2007A_A/Q16.png": {
+    "category": "Basic Theory",
+    "subcategory": "Algorithms",
+    "topic": "Searching",
+    "explanation": "The question tests the understanding of the Depth-First Search (DFS) algorithm, which is a fundamental graph search/traversal algorithm. It requires verifying whether specific vertex visitation sequences conform to the backtracking and 'deep-dive' rules of DFS."
+  },
+  "2007A_A/Q17.png": {
+    "category": "Basic Theory",
+    "subcategory": "Data Structures",
+    "topic": "Linear",
+    "explanation": "The question concerns Reverse Polish Notation (postfix notation), which is a fundamental method for representing mathematical expressions. It is primarily associated with the use of stacks, a linear data structure, for evaluation and conversion from infix notation."
+  },
+  "2007A_A/Q18.png": {
+    "category": "Basic Theory",
+    "subcategory": "Algorithms",
+    "topic": "Recursion",
+    "explanation": "The question provides a recursive definition of a function (specifically the identity for binomial coefficients/Pascal's triangle) and asks for a specific value. Evaluating such functions tests the understanding of recursive execution and base cases, which are fundamental concepts in the Algorithms section of the FE syllabus."
+  },
+  "2007A_A/Q19.png": {
+    "category": "Computer Systems",
+    "subcategory": "Hardware",
+    "topic": "Logic Gates",
+    "explanation": "The question asks to identify an equivalent logic circuit among several options. It involves analyzing combinations of fundamental logic gates: AND (logical product), OR (logical sum), and NOT (logical negation)."
+  },
+  "2007A_A/Q20.png": {
+    "category": "Computer Systems",
+    "subcategory": "Processor",
+    "topic": "Architecture",
+    "explanation": "The von Neumann bottleneck refers to a performance limitation inherent in the von Neumann architecture, where the shared bus for data and instructions between the CPU and main memory restricts throughput. It is a fundamental concept of processor and system architecture."
+  }
+}

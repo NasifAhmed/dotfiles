@@ -3,7 +3,7 @@
 # Wrapper script to run the Question Cropper with correct environment
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$SCRIPT_DIR/.."
 
 # Check for virtual environment
 if [ -f "venv/bin/python3" ]; then
@@ -14,4 +14,4 @@ else
 fi
 
 echo "Running Question Cropper..."
-$PYTHON_CMD question_cropper.py "$@"
+$PYTHON_CMD app/question_cropper.py "$@"

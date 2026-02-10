@@ -16,11 +16,11 @@ from dataclasses import dataclass
 sys.path.append(str(Path(__file__).parent))
 from question_cropper import parse_exam_folders, extract_text_from_crop
 
-BASE_DIR = Path(__file__).parent
-PROGRESS_FILE = BASE_DIR / ".cropper_progress.json"
-OUTPUT_DIR = BASE_DIR / "cropped_questions"
+BASE_DIR = Path(__file__).parent.parent
+PROGRESS_FILE = BASE_DIR / "data" / "state" / ".cropper_progress.json"
+OUTPUT_DIR = BASE_DIR / "data" / "output" / "cropped_questions"
 WEB_DATA_FILE = BASE_DIR / "web" / "data.js"
-STATE_FILE = BASE_DIR / ".search_index_state.json"
+STATE_FILE = BASE_DIR / "data" / "state" / ".search_index_state.json"
 
 @dataclass
 class CropWrapper:
@@ -87,18 +87,12 @@ def build_index(force=False):
     exams = parse_exam_folders()
     exam_map = {e.output_folder: e for e in exams}
     
-    # Pre-load all tags
-    tags_dict = {}
-    for eid in exam_map.keys():
-        meta_path = OUTPUT_DIR / eid / "metadata.json"
-        if meta_path.exists():
-            try:
-                with open(meta_path) as f:
-                    tags_dict[eid] = json.load(f)
-            except:
-                tags_dict[eid] = {}
-        else:
-             tags_dict[eid] = {}
+    # Load all tags from question_tags.json
+    all_tags = {}
+    tags_file = BASE_DIR / "data" / "output" / "question_tags.json"
+    if tags_file.exists():
+        with open(tags_file) as f:
+            all_tags = json.load(f)
              
     # Prepare list of items
     items_to_keep = set()
@@ -132,8 +126,9 @@ def build_index(force=False):
             
             current_hash = get_file_hash(img_path)
             # Tag lookup
-            exam_tags = tags_dict.get(exam_folder, {})
-            tag = exam_tags.get(str(q_num), "Uncategorized")
+            img_rel_path = f"{exam_folder}/Q{q_num:02d}.png"
+            tag_info = all_tags.get(img_rel_path, {})
+            tag = tag_info.get("topic", "Uncategorized")
             
             # Logic:
             # 1. If force=True, re-process
