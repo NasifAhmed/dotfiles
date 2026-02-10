@@ -56,12 +56,66 @@ window.TOPICS_DATA = {
         "2007A_A_Q13"
       ],
       "Architecture": [
+        "2007A_A_Q32",
+        "2007A_A_Q22",
         "2007A_A_Q20"
+      ],
+      "Control": [
+        "2007A_A_Q24",
+        "2007A_A_Q21"
+      ],
+      "Performance": [
+        "2007A_A_Q23"
       ]
     },
     "Hardware": {
       "Logic Gates": [
         "2007A_A_Q19"
+      ]
+    },
+    "Memory": {
+      "Cache": [
+        "2007A_A_Q26",
+        "2007A_A_Q25"
+      ],
+      "Main Memory": [
+        "2007A_A_Q27"
+      ]
+    },
+    "Storage": {
+      "Disk Drives": [
+        "2007A_A_Q29",
+        "2007A_A_Q28"
+      ],
+      "Redundancy": [
+        "2007A_A_Q38",
+        "2007A_A_Q37",
+        "2007A_A_Q30"
+      ],
+      "Technologies": [
+        "2007A_A_Q31"
+      ]
+    }
+  },
+  "Operating Systems": {
+    "Process Management": {
+      "Basics": [
+        "2007A_A_Q33"
+      ],
+      "Synchronization": [
+        "2007A_A_Q34"
+      ]
+    },
+    "Architecture": {
+      "Kernel": [
+        "2007A_A_Q35"
+      ]
+    }
+  },
+  "Networks": {
+    "Architecture": {
+      "Models": [
+        "2007A_A_Q36"
       ]
     }
   }

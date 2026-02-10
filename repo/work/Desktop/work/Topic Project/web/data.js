@@ -30698,7 +30698,7 @@ window.SEARCH_DATA = [
     "q_num": 21,
     "img_path": "../cropped_questions/2007A_A/Q21.png",
     "text": "Q21. Which of the following is the highest priority process just after execution of each\ninstruction on CPU?\na) Check if there are any instructions waiting\nb) Check if there are any interrupts waiting\nc) Fetch the next instruction\nd) Transfer to an interrupt-handling program",
-    "tag": "Uncategorized"
+    "tag": "Control"
   },
   {
     "id": "2007S_A_Q21",
@@ -30720,7 +30720,7 @@ window.SEARCH_DATA = [
     "q_num": 22,
     "img_path": "../cropped_questions/2007A_A/Q22.png",
     "text": "Q22. The instruction pipeline is a technique used in order to improve the CPU performance.\nInstructions are divided into stages and moved through the processor. An RISC\nprocessor has five-stage pipeline (Instruction fetch, Instruction decode, Execute,\nMemory access, Register write back) and can accept a new instruction at every clock\ncycle. How many clock cycles does this processor take for completion of the\nexecution of 10 instructions? Here, there are no pipeline stalls, such as branch stall,\nload stall, and so on.\na) 13 b) 14 c) 15 d) 16",
-    "tag": "Uncategorized"
+    "tag": "Architecture"
   },
   {
     "id": "2007S_A_Q22",
@@ -30742,7 +30742,7 @@ window.SEARCH_DATA = [
     "q_num": 23,
     "img_path": "../cropped_questions/2007A_A/Q23.png",
     "text": "Q23. There is a processor with a clock frequency of 1 GHz. When the instruction set of this\nprocessor is composed of two types of commands as shown in the table below, what is\nthe approximate processing performance in MIPS?\nCommand type Execution time (clocks) Execution frequency (%)\nCommand 1 10 60\nCommand 2 5 40\na) 34 b) 100 c) 125 d) 133",
-    "tag": "Uncategorized"
+    "tag": "Performance"
   },
   {
     "id": "2007S_A_Q23",
@@ -30764,7 +30764,7 @@ window.SEARCH_DATA = [
     "q_num": 24,
     "img_path": "../cropped_questions/2007A_A/Q24.png",
     "text": "Q24. Which of the following is classified as an external interrupt?\na) An interrupt which is caused by overflow in floating point operations\nb) An interrupt which is generated when a request for a service, such as a demand for\ninput/output, is issued to OS\nc) An interrupt which occurs when a page not existing in the main memory is to be\naccessed\nd) An interrupt which takes place when hardware detects malfunctions",
-    "tag": "Uncategorized"
+    "tag": "Control"
   },
   {
     "id": "2007S_A_Q24",
@@ -30786,7 +30786,7 @@ window.SEARCH_DATA = [
     "q_num": 25,
     "img_path": "../cropped_questions/2007A_A/Q25.png",
     "text": "Q25. A CPU has four blocks of cache memory. Using the LRU (Least Recently Used)\nreplacement algorithm, which memory blocks are stored in the cache memory after the\nexecution of the following sequence of access to memory blocks: 1 2 3 4 5 2 5 4 1 5 2 3?\nHere, at the start of the memory access, the four cache blocks are empty and used in\nsequence until all the blocks are occupied. In other words, the cache blocks contain\nmemory blocks \u201c1 2 3 4\u201d after access to the first four memory blocks.\na) 1 2 3 5 b) 1 5 2 3 c) 3 2 5 1 d) 5 2 1 3",
-    "tag": "Uncategorized"
+    "tag": "Cache"
   },
   {
     "id": "2007S_A_Q25",
@@ -30808,7 +30808,7 @@ window.SEARCH_DATA = [
     "q_num": 26,
     "img_path": "../cropped_questions/2007A_A/Q26.png",
     "text": "Q26. Which of the following appropriately describes the purpose of the cache memory used\nby processors?\na) To compensate for the difference between the main memory access speed and the\nprocessor speed\nb) To manage frequently-used programs on a resident basis\nc) To perform virtual memory address conversion at high speed\nd) To perform virtual memory paging process at high speed",
-    "tag": "Uncategorized"
+    "tag": "Cache"
   },
   {
     "id": "2007S_A_Q26",
@@ -30830,7 +30830,7 @@ window.SEARCH_DATA = [
     "q_num": 27,
     "img_path": "../cropped_questions/2007A_A/Q27.png",
     "text": "Q27. Which of the following appropriately describes \u201cmemory interleaving\u201d that is one of\nthe high-speed computer technologies?\na) It is a method for bridging the gap between register and main memory access speeds\nby copying a part of the main memory data to the cache.\nb) It is a method for dividing the memory into multiple independently-operating groups\nand accessing each group in parallel.\nc) It is a method for transferring data directly between the main memory and an I/O\ndevice or between main memories without passing through the CPU.\nd) It is a method for writing data to the cache or writing data to the main memory if the\ncache overflows, when sending data to the main memory.",
-    "tag": "Uncategorized"
+    "tag": "Main Memory"
   },
   {
     "id": "2007S_A_Q27",
@@ -30852,7 +30852,7 @@ window.SEARCH_DATA = [
     "q_num": 28,
     "img_path": "../cropped_questions/2007A_A/Q28.png",
     "text": "Q28. How many tracks are required to store a sequentially organized data file including a\ntotal of 10,000 records on the hard disk drive under the following conditions? Here,\neach track can contain multiple blocks, but each block cannot be stored across multiple\ntracks.\n[Conditions]\nRecord length: 300 bytes/record\nTrack capacity: 30,000 bytes/track\nInter-block gap: 400 bytes\nBlocking factor: 20 records/block\na) 100 b) 106 c) 107 d) 125",
-    "tag": "Uncategorized"
+    "tag": "Disk Drives"
   },
   {
     "id": "2007S_A_Q28",
@@ -30874,7 +30874,7 @@ window.SEARCH_DATA = [
     "q_num": 29,
     "img_path": "../cropped_questions/2007A_A/Q29.png",
     "text": "Q29. The head of a hard disk drive is currently positioned at cylinder number 100, and the\ncylinder numbers 120, 90, 70, 80, 140, 110, and 60 are lined up in the I/O request queue.\nWhat is the total number of cylinders that the head moves under the following\nconditions?\n[Conditions]\n(1) The seek optimization method reorders the I/O requests so that the head can move as\nmuch as possible in a single direction, and the requests are processed in order of\ncylinder number.\n(2) The requests so far are in the direction where the cylinder numbers increase.\n(3) When there are no more requests in the current direction, the direction of head\nmovement is reversed.\n(4) The results are unaffected by the processing order of the requests.\n(5) New requests do not occur during the process.\na) 80 b) 120 c) 160 d) 220",
-    "tag": "Uncategorized"
+    "tag": "Disk Drives"
   },
   {
     "id": "2007S_A_Q29",
@@ -30896,7 +30896,7 @@ window.SEARCH_DATA = [
     "q_num": 30,
     "img_path": "../cropped_questions/2007A_A/Q30.png",
     "text": "Q30. Which of the following technologies is used to divide each data file into blocks at\nconstant length and to store them across multiple hard disks that can be accessed in\nparallel, thereby speeding up file access?\na) Disk at once b) Disk cache\nc) Disk mirroring d) Disk striping",
-    "tag": "Uncategorized"
+    "tag": "Redundancy"
   },
   {
     "id": "2007S_A_Q30",
@@ -30918,7 +30918,7 @@ window.SEARCH_DATA = [
     "q_num": 31,
     "img_path": "../cropped_questions/2007A_A/Q31.png",
     "text": "Q31. Which of the following appropriately describes a method of recording data on CD-R?\na) A two-layer structure is provided in which two disks are bonded together. The\nrecording layer is subjected to phase changes by means of laser beams, thereby\nrecording the data.\nb) Laser beams are radiated on the magnetized disk recording film to heat the film and\nto change the magnetization direction by means of a magnetic head, thereby\nrecording the data.\nc) Laser beams are radiated onto an organic dye layer in a disk. As a result, a series of\nburned spots called pits are created on that layer, thereby recording the data.\nd) The magnetization direction of the magnetic substance applied to a disk is changed\nby means of a magnetic head, thereby recording the data.",
-    "tag": "Uncategorized"
+    "tag": "Technologies"
   },
   {
     "id": "2007S_A_Q31",
@@ -30940,7 +30940,7 @@ window.SEARCH_DATA = [
     "q_num": 32,
     "img_path": "../cropped_questions/2007A_A/Q32.png",
     "text": "Q32. Which of the following is a method whereby the relevant program is read into main\nmemory and the CPU reads out and executes it sequentially?\na) Addressing method b) Direct program control method\nc) Stored program method d) Virtual memory method",
-    "tag": "Uncategorized"
+    "tag": "Architecture"
   },
   {
     "id": "2007S_A_Q32",
@@ -30962,7 +30962,7 @@ window.SEARCH_DATA = [
     "q_num": 33,
     "img_path": "../cropped_questions/2007A_A/Q33.png",
     "text": "Q33. Which of the following functions is a part of OS task management?\na) CPU allocation b) File protection\nc) I/O execution d) Spool control",
-    "tag": "Uncategorized"
+    "tag": "Basics"
   },
   {
     "id": "2007S_A_Q33",
@@ -30984,7 +30984,7 @@ window.SEARCH_DATA = [
     "q_num": 34,
     "img_path": "../cropped_questions/2007A_A/Q34.png",
     "text": "Q34. When variables shared among tasks are updated, an unexpected result may occur if\nsynchronous control among tasks is not performed. When the initial value of the\nvariable x shared among tasks is 3, the final value of x is expected to be 12 if task A\nexecutes the assignment statement \u201cx = x + x\u201d and if task B executes the assignment\nstatement \u201cx = x \u00d7 x.\u201d Which of the following is the appropriate execution sequence\nthat can return the expected result? Here, each assignment statement is executed by\nbeing divided into four portions as shown below.\nTask A (x = x + x) Task B (x = x \u00d7 x)\na1: The value of x is referred to and b1: The value of x is referred to and\nis saved as e. is saved as h.\na2: The value of x is referred to and b2: The value of x is referred to and\nis saved as f. is saved as i.\na3: e + f is computed and is saved b3: h \u00d7 i is computed and is saved\nas g. as j.\na4: The value of x is updated by b4: The value of x is updated by\nmeans of g. means of j.\na) a1 \uf0e0 a2 \uf0e0 b1 \uf0e0 b2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b3 \uf0e0 b4\nb) a1 \uf0e0 b1 \uf0e0 b2 \uf0e0 b3 \uf0e0 b4 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4\nc) b1 \uf0e0 a1 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b2 \uf0e0 b3 \uf0e0 b4\nd) b1 \uf0e0 b2 \uf0e0 b3 \uf0e0 a1 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b4",
-    "tag": "Uncategorized"
+    "tag": "Synchronization"
   },
   {
     "id": "2007S_A_Q34",
@@ -31006,7 +31006,7 @@ window.SEARCH_DATA = [
     "q_num": 35,
     "img_path": "../cropped_questions/2007A_A/Q35.png",
     "text": "Q35. Which of the following has the feature whereby only minimally limited OS functions,\nsuch as memory management and process management, are supported and other OS\nfunctions, such as the file system, are implemented as server processes?\na) Microkernel b) Monolithic kernel\nc) Multithread d) Single user mode",
-    "tag": "Uncategorized"
+    "tag": "Kernel"
   },
   {
     "id": "2007S_A_Q35",
@@ -31028,7 +31028,7 @@ window.SEARCH_DATA = [
     "q_num": 36,
     "img_path": "../cropped_questions/2007A_A/Q36.png",
     "text": "Q36. Which of the following is the appropriate statement concerning client/server\narchitecture?\na) It divides a series of processes into two groups by means of an inter-process\ncommunication mechanism; one group includes processes that request services, and\nthe other consists of processes that execute the requested services.\nb) It is mainly aimed at achieving horizontal load sharing by connecting terminals to\nmultiple workstations replacing the host computer.\nc) It is mainly aimed at achieving load sharing by distributing, among the terminals,\npart of functions and data files to be processed by the host computer.\nd) It is the generic term for a system configuration in which a PC is connected to a\nworkstation via LAN. The PC and workstation are called a client and a server,\nrespectively.",
-    "tag": "Uncategorized"
+    "tag": "Models"
   },
   {
     "id": "2007S_A_Q36",
@@ -31050,7 +31050,7 @@ window.SEARCH_DATA = [
     "q_num": 37,
     "img_path": "../cropped_questions/2007A_A/Q37.png",
     "text": "Q37. Which of the following is the primary purpose to use RAID?\na) To achieve a lower hardware cost\nb) To ensure higher reliability and/or performance\nc) To improve data security\nd) To simplify the hardware configuration for a quick and easy installation",
-    "tag": "Uncategorized"
+    "tag": "Redundancy"
   },
   {
     "id": "2007S_A_Q37",
@@ -31072,7 +31072,7 @@ window.SEARCH_DATA = [
     "q_num": 38,
     "img_path": "../cropped_questions/2007A_A/Q38.png",
     "text": "Q38. There is an RAID5 disk array system that is composed of 10 hard disk drives, and each\ndisk capacity is 100Gbytes. What is the approximate maximum capacity (in Gbytes)\nthat can be used to store user data and/or programs on this system?\na) 450 b) 500 c) 900 d) 1,000",
-    "tag": "Uncategorized"
+    "tag": "Redundancy"
   },
   {
     "id": "2007S_A_Q38",

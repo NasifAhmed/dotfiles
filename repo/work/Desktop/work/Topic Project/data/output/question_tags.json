@@ -118,5 +118,113 @@
     "subcategory": "Processor",
     "topic": "Architecture",
     "explanation": "The von Neumann bottleneck refers to a performance limitation inherent in the von Neumann architecture, where the shared bus for data and instructions between the CPU and main memory restricts throughput. It is a fundamental concept of processor and system architecture."
+  },
+  "2007A_A/Q21.png": {
+    "category": "Computer Systems",
+    "subcategory": "Processor",
+    "topic": "Control",
+    "explanation": "The question asks about the specific operation a CPU performs at the end of every instruction execution cycle. In computer architecture, the control unit checks for pending interrupts (the highest priority process) immediately after an instruction is executed and before the next instruction is fetched."
+  },
+  "2007A_A/Q22.png": {
+    "category": "Computer Systems",
+    "subcategory": "Processor",
+    "topic": "Architecture",
+    "explanation": "The question concerns the calculation of clock cycles in an instruction pipeline, which is a key concept in CPU architecture, specifically relating to how RISC processors manage instruction execution stages."
+  },
+  "2007A_A/Q23.png": {
+    "category": "Computer Systems",
+    "subcategory": "Processor",
+    "topic": "Performance",
+    "explanation": "The question requires calculating the processing performance of a processor in MIPS (Millions of Instructions Per Second) using the clock frequency and the average cycles per instruction (CPI) derived from the command execution frequencies. While not currently in the sub-subdomain list for Processor, 'Performance' is a standard FE syllabus topic (equivalent to the 'Performance' topic listed under 'Memory')."
+  },
+  "2007A_A/Q24.png": {
+    "category": "Computer Systems",
+    "subcategory": "Processor",
+    "topic": "Control",
+    "explanation": "The question asks to identify an 'external interrupt' from a list of interrupt types. Interrupt handling\u2014specifically the distinction between internal interrupts (exceptions, software interrupts) and external interrupts (hardware failures, I/O signals, timers)\u2014is a key concept within the Control unit's management of the CPU's execution flow."
+  },
+  "2007A_A/Q25.png": {
+    "category": "Computer Systems",
+    "subcategory": "Memory",
+    "topic": "Cache",
+    "explanation": "The question asks about the state of cache memory after a specific sequence of accesses using the LRU (Least Recently Used) replacement algorithm. This is a fundamental concept in CPU cache management."
+  },
+  "2007A_A/Q26.png": {
+    "category": "Computer Systems",
+    "subcategory": "Memory",
+    "topic": "Cache",
+    "explanation": "The question asks about the fundamental purpose of cache memory, which is to bridge the performance gap between the high-speed processor and the relatively slower main memory."
+  },
+  "2007A_A/Q27.png": {
+    "category": "Computer Systems",
+    "subcategory": "Memory",
+    "topic": "Main Memory",
+    "explanation": "The question asks for the definition of 'memory interleaving,' which is a technique used to organize main memory into multiple banks or groups that can be accessed in parallel to increase data transfer speeds. This is a fundamental concept regarding the architecture and operation of Main Memory."
+  },
+  "2007A_A/Q28.png": {
+    "category": "Computer Systems",
+    "subcategory": "Storage",
+    "topic": "Disk Drives",
+    "explanation": "The question asks for a calculation of the physical storage requirements (number of tracks) on a hard disk drive, based on parameters like track capacity, record length, blocking factor, and inter-block gaps. This directly relates to the physical characteristics and capacity planning of magnetic disk storage."
+  },
+  "2007A_A/Q29.png": {
+    "category": "Computer Systems",
+    "subcategory": "Storage",
+    "topic": "Disk Drives",
+    "explanation": "The question asks to calculate the total movement of a hard disk head (seek distance) across cylinders using a specific seek optimization algorithm (the SCAN or Elevator algorithm). This is a core topic related to the mechanical operation and access efficiency of Hard Disk Drives (HDD)."
+  },
+  "2007A_A/Q30.png": {
+    "category": "Computer Systems",
+    "subcategory": "Storage",
+    "topic": "Redundancy",
+    "explanation": "The question describes 'Disk Striping' (RAID 0), a technique where data is split across multiple disks to increase performance through parallel access. In the ITPEC FE syllabus, RAID-related technologies (striping, mirroring, parity) are typically categorized under 'Redundancy' within the Storage subdomain."
+  },
+  "2007A_A/Q31.png": {
+    "category": "Computer Systems",
+    "subcategory": "Storage",
+    "topic": "Technologies",
+    "explanation": "The question asks about the physical recording mechanism for a CD-R (Compact Disc-Recordable), which involves using a laser to burn pits into an organic dye layer. This falls under the technologies used in various storage media."
+  },
+  "2007A_A/Q32.png": {
+    "category": "Computer Systems",
+    "subcategory": "Processor",
+    "topic": "Architecture",
+    "explanation": "The question describes the 'stored program method' (von Neumann architecture), which is a fundamental concept in computer architecture where programs are stored in memory for the CPU to fetch and execute sequentially."
+  },
+  "2007A_A/Q33.png": {
+    "category": "Operating Systems",
+    "subcategory": "Process Management",
+    "topic": "Basics",
+    "explanation": "The question asks about the functions of OS task management. Task management (often synonymous with process management in the FE syllabus) involves managing task states, scheduling, and CPU allocation (dispatching). Therefore, it belongs to the 'Basics' of Process Management."
+  },
+  "2007A_A/Q34.png": {
+    "category": "Operating Systems",
+    "subcategory": "Process Management",
+    "topic": "Synchronization",
+    "explanation": "The question discusses the 'synchronous control' of tasks sharing variables. It demonstrates how different interleaving of atomic read/write/compute steps in concurrent tasks can lead to different results, which is the fundamental problem addressed by process synchronization and mutual exclusion (critical sections)."
+  },
+  "2007A_A/Q35.png": {
+    "category": "Operating Systems",
+    "subcategory": "Architecture",
+    "topic": "Kernel",
+    "explanation": "The question describes an OS architecture where the kernel is kept to a minimum (handling only basic tasks like memory and process management), while other services like file systems are moved to user space as server processes. This is the definition of a Microkernel architecture."
+  },
+  "2007A_A/Q36.png": {
+    "category": "Networks",
+    "subcategory": "Architecture",
+    "topic": "Models",
+    "explanation": "The question asks for a description of the client/server architecture, which is a fundamental network computing model where processes are divided into those that request services (clients) and those that provide/execute them (servers)."
+  },
+  "2007A_A/Q37.png": {
+    "category": "Computer Systems",
+    "subcategory": "Storage",
+    "topic": "Redundancy",
+    "explanation": "The question asks about RAID (Redundant Array of Independent Disks), which is a storage technology designed to improve system reliability and availability through data redundancy and to enhance performance through disk striping."
+  },
+  "2007A_A/Q38.png": {
+    "category": "Computer Systems",
+    "subcategory": "Storage",
+    "topic": "Redundancy",
+    "explanation": "The question asks for the usable capacity of a RAID 5 configuration. RAID (Redundant Array of Independent Disks) is a technology used for data redundancy and performance. Specifically, RAID 5 uses distributed parity, which consumes the capacity equivalent to one disk in the array. Calculating usable storage for RAID systems is a core part of the Redundancy topic under Storage."
   }
 }
