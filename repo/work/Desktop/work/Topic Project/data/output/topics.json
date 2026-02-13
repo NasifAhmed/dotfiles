@@ -44,7 +44,9 @@
       "Profit and Cost Analysis": [],
       "Inventory Valuation": [],
       "Product Cost Calculation": [],
-      "Break-even Point Analysis": []
+      "Break-even Point Analysis": [],
+      "Financial Ratios": [],
+      "Break-even Analysis": []
     },
     "Corporate Activities": {
       "Strategy": [
@@ -110,7 +112,8 @@
       "Numerical Rounding": [],
       "Permutations and Combinations": [],
       "Probability": [],
-      "Counting and Combinatorics": []
+      "Counting and Combinatorics": [],
+      "Expected Value": []
     }
   },
   "Data Structure and Algorithm": {
@@ -214,7 +217,10 @@
       "Database Schema": [],
       "Relational Database Concepts": [],
       "Relational Algebra Operations": [],
-      "Transaction Management": []
+      "Transaction Management": [],
+      "Data Models": [],
+      "Relational Data Model": [],
+      "Relational Operations": []
     },
     "SQL": {
       "SQL Commands": [
@@ -223,7 +229,9 @@
         "SQL injection",
         "interactive SQL method"
       ],
-      "SQL SELECT Statement": []
+      "SQL SELECT Statement": [],
+      "SQL Group Functions": [],
+      "Table Inheritance": []
     },
     "Various Databases": {
       "Advanced DB": [
@@ -266,7 +274,9 @@
       "Software Internal Design": [],
       "Structured Analysis": [],
       "Object-Oriented Methodology": [],
-      "White-box Testing": []
+      "White-box Testing": [],
+      "Software Quality Management": [],
+      "UML Modeling": []
     },
     "System Development Technology (SLCP)": {
       "Development Phases": [
@@ -617,7 +627,8 @@
         "SNMP management station",
         "network management tool",
         "routing"
-      ]
+      ],
+      "LAN Analyzer": []
     },
     "Network Mechanism": {
       "Transmission Tech": [
@@ -634,7 +645,10 @@
       "Subnet Mask": [],
       "VPN": [],
       "DHCP Protocol": [],
-      "Bit Error Rate": []
+      "Bit Error Rate": [],
+      "IPv4 Addressing": [],
+      "Multicast": [],
+      "ATM Cell Switching": []
     },
     "The Internet": {
       "Internet Services": [
@@ -653,7 +667,11 @@
       ],
       "Server-side Technology": [],
       "Global IP Address": [],
-      "Remote Login Protocols": []
+      "Remote Login Protocols": [],
+      "Email Protocols": [],
+      "Network Time Protocol": [],
+      "HTTP Cookie": [],
+      "Common Gateway Interface (CGI)": []
     }
   },
   "Project Management": {
@@ -760,7 +778,11 @@
       "Encryption Technology": [],
       "Port Scanning": [],
       "Virus Pattern File": [],
-      "SSL/TLS Protocols": []
+      "SSL/TLS Protocols": [],
+      "Challenge-Response Authentication": [],
+      "E-mail Encryption": [],
+      "Virus Countermeasures": [],
+      "Password Management": []
     },
     "Overview of Information Security": {
       "Security Management": [
@@ -792,7 +814,8 @@
         "problem resolution data structures",
         "service desk",
         "shortest path problem"
-      ]
+      ],
+      "System Monitoring Operations": []
     },
     "Overview of Service Management": {
       "ITIL Lifecycle": [
@@ -874,7 +897,8 @@
       "Task Scheduling": [],
       "Process Scheduling": [],
       "Process Management": [],
-      "Spooling": []
+      "Spooling": [],
+      "Job Scheduling": []
     },
     "Programming Languages and Language Processors": {
       "Languages & Tools": [

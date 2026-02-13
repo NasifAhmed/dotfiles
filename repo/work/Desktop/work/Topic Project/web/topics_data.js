@@ -349,6 +349,9 @@ window.TOPICS_DATA = {
       ],
       "Counting and Combinatorics": [
         "2008A_A_Q08"
+      ],
+      "Expected Value": [
+        "2008A_A_Q49"
       ]
     },
     "Corporate Activities": {
@@ -371,6 +374,12 @@ window.TOPICS_DATA = {
       ],
       "Break-even Point Analysis": [
         "2007S_A_Q75"
+      ],
+      "Financial Ratios": [
+        "2008A_A_Q72"
+      ],
+      "Break-even Analysis": [
+        "2008A_A_Q73"
       ]
     }
   },
@@ -411,6 +420,9 @@ window.TOPICS_DATA = {
       ],
       "OS Functions": [
         "2008A_A_Q31"
+      ],
+      "Job Scheduling": [
+        "2008A_A_Q51"
       ]
     },
     "Programming Languages and Language Processors": {
@@ -488,6 +500,12 @@ window.TOPICS_DATA = {
       ],
       "White-box Testing": [
         "2008A_A_Q47"
+      ],
+      "Software Quality Management": [
+        "2008A_A_Q48"
+      ],
+      "UML Modeling": [
+        "2008A_A_Q71"
       ]
     },
     "System Development Technology (SLCP)": {
@@ -511,6 +529,7 @@ window.TOPICS_DATA = {
         "2007S_A_Q52"
       ],
       "Regression Testing": [
+        "2008A_A_Q52",
         "2007S_A_Q54"
       ],
       "Input Check Methods": [
@@ -531,6 +550,18 @@ window.TOPICS_DATA = {
       ],
       "Remote Login Protocols": [
         "2007S_A_Q62"
+      ],
+      "Email Protocols": [
+        "2008A_A_Q55"
+      ],
+      "Network Time Protocol": [
+        "2008A_A_Q57"
+      ],
+      "HTTP Cookie": [
+        "2008A_A_Q58"
+      ],
+      "Common Gateway Interface (CGI)": [
+        "2008A_A_Q59"
       ]
     },
     "Network Mechanism": {
@@ -545,6 +576,15 @@ window.TOPICS_DATA = {
       ],
       "Bit Error Rate": [
         "2007S_A_Q65"
+      ],
+      "IPv4 Addressing": [
+        "2008A_A_Q53"
+      ],
+      "Multicast": [
+        "2008A_A_Q54"
+      ],
+      "ATM Cell Switching": [
+        "2008A_A_Q56"
       ]
     },
     "Network Architecture": {
@@ -563,6 +603,11 @@ window.TOPICS_DATA = {
       ],
       "CSMA/CD Method": [
         "2007S_A_Q64"
+      ]
+    },
+    "Network Management": {
+      "LAN Analyzer": [
+        "2008A_A_Q70"
       ]
     }
   },
@@ -598,11 +643,27 @@ window.TOPICS_DATA = {
       ],
       "Transaction Management": [
         "2007S_A_Q69"
+      ],
+      "Data Models": [
+        "2008A_A_Q60"
+      ],
+      "Relational Data Model": [
+        "2008A_A_Q61"
+      ],
+      "Relational Operations": [
+        "2008A_A_Q62"
       ]
     },
     "SQL": {
       "SQL SELECT Statement": [
+        "2008A_A_Q63",
         "2007A_A_Q69"
+      ],
+      "SQL Group Functions": [
+        "2008A_A_Q64"
+      ],
+      "Table Inheritance": [
+        "2008A_A_Q65"
       ]
     },
     "Various Databases": {
@@ -641,6 +702,18 @@ window.TOPICS_DATA = {
       ],
       "SSL/TLS Protocols": [
         "2007S_A_Q72"
+      ],
+      "Challenge-Response Authentication": [
+        "2008A_A_Q66"
+      ],
+      "E-mail Encryption": [
+        "2008A_A_Q67"
+      ],
+      "Virus Countermeasures": [
+        "2008A_A_Q68"
+      ],
+      "Password Management": [
+        "2008A_A_Q69"
       ]
     },
     "Overview of Information Security": {
@@ -671,6 +744,11 @@ window.TOPICS_DATA = {
     "Overview of Service Management": {
       "Service Transition": [
         "2007S_A_Q58"
+      ]
+    },
+    "Method of Service Management": {
+      "System Monitoring Operations": [
+        "2008A_A_Q50"
       ]
     }
   }

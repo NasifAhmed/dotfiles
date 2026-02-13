@@ -29532,7 +29532,7 @@ window.SEARCH_DATA = [
     "q_num": 48,
     "img_path": "../cropped_questions/2008A_A/Q48.png",
     "text": "Q48. Which of the following is the appropriate interpretation of the testing-process quality\ncontrol graph shown below and follow-on actions to be taken?\ndellifluf\nton\nsmeti\ntset\nfo\nrebmuN\nNumber of test items not fulfilled\nEstimated cumulative\nnumber of errors detected\nCumulative\nnumber of errors Estimated number of\ndetected test items not fulfilled\n(Present time)\nDays\ndetceted\nsrorre\nfo\nrebmun\nevitalumuC\na) Detection of errors is ahead of the pace of fulfilling the test items. The test is thus\nefficiently conducted. At this time there is no concern, but progress management is\nnecessary to cope with errors in order not to leave them unresolved over a protracted\nperiod of time.\nb) Fulfillment of test items is fast, and detection of errors is also more advanced than\nexpected. The test is still in the first half, so it is advisable to continue testing and\nsee what happens.\nc) Fulfillment of test items is slow, so some measures should be discussed concerning\nthe insufficiency of the testing environment and the lack of development staff\nmembers before it is too late. There is no problem with the quality, as errors are\ndetected more often than expected.\nd) The resulting quality is generally rather poor, so it is necessary to take strong\nmeasures against places in which errors occur frequently; the quality status of the\npreceding process should be reviewed and do it over again if necessary.",
-    "tag": "Uncategorized"
+    "tag": "Software Quality Management"
   },
   {
     "id": "2008S_A_Q48",
@@ -29554,7 +29554,7 @@ window.SEARCH_DATA = [
     "q_num": 49,
     "img_path": "../cropped_questions/2008A_A/Q49.png",
     "text": "Q49. How much is the approximate expected value in dollars, for the first-year correction\ncost of an application program under the following conditions?\n[Conditions]\n(1) Program size: 2,000 Ksteps\n(2) Potential program error rate: 0.04 errors / Ksteps\n(3) Annual discovery rate of potential errors: 20 % / year\n(4) Classification of errors\nError with major impact: 20 %\nError with minor impact: 80 %\n(5) Correction cost per error\nError with major impact: 20,000 dollars\nError with minor impact: 5,000 dollars\n(6) Only errors with major impact are corrected.\na) 64,000 b) 128,000 c) 160,000 d) 640,000",
-    "tag": "Uncategorized"
+    "tag": "Expected Value"
   },
   {
     "id": "2008S_A_Q49",
@@ -29576,7 +29576,7 @@ window.SEARCH_DATA = [
     "q_num": 50,
     "img_path": "../cropped_questions/2008A_A/Q50.png",
     "text": "Q50. Which of the following is the most appropriate description concerning a \u201cwatch list\u201d of\nsystem failures?\na) \u201cMonitoring software\u201d monitors messages displayed on system consoles.\nb) All of the items that cannot be monitored by \u201cmonitoring software\u201d need to be\nobserved by persons in charge.\nc) System operators also monitor processing delays, because such delays can cause\nsystem failures.\nd) System operators continuously monitor all items which have the possibility of\ncausing failures.",
-    "tag": "Uncategorized"
+    "tag": "System Monitoring Operations"
   },
   {
     "id": "2008S_A_Q50",
@@ -29598,7 +29598,7 @@ window.SEARCH_DATA = [
     "q_num": 51,
     "img_path": "../cropped_questions/2008A_A/Q51.png",
     "text": "Q51. Which of the following is an appropriate description concerning a characteristic of job\nscheduling in a computer system?\na) In a system on which interactive processing and batch processing are mixed, it is\nexpected that the response performance of interactive processing is improved by\ngiving a higher priority to interactive processing.\nb) In the FCFS (first-come first-served) scheduling, it is possible to guarantee\nthroughput and response time because the CPU is assigned equally among jobs.\nc) In the time slice scheduling, where the OS forcibly switches jobs assigned to the\nCPU, throughput goes down due to frequent timer interrupts.\nd) It is expected that overall throughput is improved by giving a higher priority to\nCPU-bound jobs than to I/O-bound jobs, because the CPU waiting time can be\nreduced.",
-    "tag": "Uncategorized"
+    "tag": "Job Scheduling"
   },
   {
     "id": "2008S_A_Q51",
@@ -29620,7 +29620,7 @@ window.SEARCH_DATA = [
     "q_num": 52,
     "img_path": "../cropped_questions/2008A_A/Q52.png",
     "text": "Q52. In software maintenance, which of the following tests is performed to ensure that fixes\nor modifications do not affect other, unchanged parts of the software?\na) Endurance test b) Exception handling test\nc) Performance test d) Regression test",
-    "tag": "Uncategorized"
+    "tag": "Regression Testing"
   },
   {
     "id": "2008S_A_Q52",
@@ -29642,7 +29642,7 @@ window.SEARCH_DATA = [
     "q_num": 53,
     "img_path": "../cropped_questions/2008A_A/Q53.png",
     "text": "Q53. An IP address in IPv4 consists of two parts: the network address part and the host\naddress part. Which of the following is the appropriate description concerning the\nnetwork address and the host address? Here, n is the number of bits in the network\naddress part, and h is the number of bits in the host address part. In addition, the\nspecial-purpose and ineffective addresses should not be counted as an effective address.\na) In classes A, B, and C, the maximum number of effective host addresses available to\none network is defined as 2h \u2013 2.\nb) In classes A, B, and C, the maximum number of effective network addresses\navailable is defined as 2n.\nc) In class A, the maximum number of effective host addresses available to one\nnetwork is defined as 2h \u2013 2, but in classes B and C it is defined as 2h.\nd) The maximum number of effective network addresses available is defined as 2n \u2013 2,\nwhere n=7 in class A, n=14 in class B, and n=21 in class C.",
-    "tag": "Uncategorized"
+    "tag": "IPv4 Addressing"
   },
   {
     "id": "2008S_A_Q53",
@@ -29664,7 +29664,7 @@ window.SEARCH_DATA = [
     "q_num": 54,
     "img_path": "../cropped_questions/2008A_A/Q54.png",
     "text": "Q54. Which of the following terms can be applicable to an explanation below?\n\u201cThe sender sends a single datagram; the routers are responsible for making copies and\nsending them to a group of interested receivers.\u201d\na) Anycast b) Broadcast c) Multicast d) Unicast",
-    "tag": "Uncategorized"
+    "tag": "Multicast"
   },
   {
     "id": "2008S_A_Q54",
@@ -29686,7 +29686,7 @@ window.SEARCH_DATA = [
     "q_num": 55,
     "img_path": "../cropped_questions/2008A_A/Q55.png",
     "text": "Q55. Which of the following is a protocol for e-mail on the Internet that supports not only\ntext but other data such as audio and images through message header extension?\na) HTML b) MHS c) MIME d) SMTP",
-    "tag": "Uncategorized"
+    "tag": "Email Protocols"
   },
   {
     "id": "2008S_A_Q55",
@@ -29708,7 +29708,7 @@ window.SEARCH_DATA = [
     "q_num": 56,
     "img_path": "../cropped_questions/2008A_A/Q56.png",
     "text": "Q56. Which of the following is the appropriate description concerning ATM exchange?\na) It is a general term referring to a private branch exchange used for connection\nbetween internal extension telephones located within a limited area such as an office\nor for connection between subscribers\u2019 telephone lines and internal extension\ntelephones.\nb) It is a store-and-forward type of exchange device that transfers data by dividing the\ndata into blocked units. The transfer speed is only up to about several tens of Kbps.\nc) It is an exchange device that exchanges data divided up into units called frames.\nSince it does not re-send data when a transfer error occurs, it can increase the\nprocessing speed in the network.\nd) It is an exchange device that handles a variety of data in an integrated way by\npartitioning data into fixed-length blocks called cells and adding a header containing\ndestination information to each cell.",
-    "tag": "Uncategorized"
+    "tag": "ATM Cell Switching"
   },
   {
     "id": "2008S_A_Q56",
@@ -29730,7 +29730,7 @@ window.SEARCH_DATA = [
     "q_num": 57,
     "img_path": "../cropped_questions/2008A_A/Q57.png",
     "text": "Q57. Which of the following protocols is used for synchronizing the clocks in multiple\nnodes on the Internet?\na) NNTP b) NTP c) SMTP d) SNMP",
-    "tag": "Uncategorized"
+    "tag": "Network Time Protocol"
   },
   {
     "id": "2008S_A_Q57",
@@ -29752,7 +29752,7 @@ window.SEARCH_DATA = [
     "q_num": 58,
     "img_path": "../cropped_questions/2008A_A/Q58.png",
     "text": "Q58. Which of the following is a mechanism that allows a Web server to store its own\ninformation about a user on the user\u2019s own computer so that the Web server can\nidentify users and possibly prepare customized Web pages for them?\na) Cookie b) Password c) SSL d) URL",
-    "tag": "Uncategorized"
+    "tag": "HTTP Cookie"
   },
   {
     "id": "2008S_A_Q58",
@@ -29774,7 +29774,7 @@ window.SEARCH_DATA = [
     "q_num": 59,
     "img_path": "../cropped_questions/2008A_A/Q59.png",
     "text": "Q59. Which of the following is the mechanism for interfacing a Web server with an external\nprogram in order to implement an interactive page where an application program on the\nserver executes a request from a client and returns the resulting output to the browser?\na) CGI b) HTML c) MIME d) URL",
-    "tag": "Uncategorized"
+    "tag": "Common Gateway Interface (CGI)"
   },
   {
     "id": "2008S_A_Q59",
@@ -29796,7 +29796,7 @@ window.SEARCH_DATA = [
     "q_num": 60,
     "img_path": "../cropped_questions/2008A_A/Q60.png",
     "text": "Q60. Which of the following data models represents data relationships in a tree structure?\na) E-R model b) Hierarchical model\nc) Relational model d) Network model",
-    "tag": "Uncategorized"
+    "tag": "Data Models"
   },
   {
     "id": "2008S_A_Q60",
@@ -29818,7 +29818,7 @@ window.SEARCH_DATA = [
     "q_num": 61,
     "img_path": "../cropped_questions/2008A_A/Q61.png",
     "text": "Q61. Which of the following is an appropriate explanation of a relational database?\na) A parent record and child records are connected by means of pointers.\nb) Data and methods are encapsulated.\nc) Data is represented by two-dimensional tables.\nd) Tags are used to define data structures and meanings.",
-    "tag": "Uncategorized"
+    "tag": "Relational Data Model"
   },
   {
     "id": "2008S_A_Q61",
@@ -29840,7 +29840,7 @@ window.SEARCH_DATA = [
     "q_num": 62,
     "img_path": "../cropped_questions/2008A_A/Q62.png",
     "text": "Q62. Which of the following is an appropriate explanation of \u201cprojection\u201d in relational\noperations?\na) Only specified attributes are extracted from tables, and a new table is created.\nb) The tuples in two tables that meet the relevant conditions are combined, and a new\ntable is created.\nc) Tuples that commonly exist in two tables are extracted, and a new table is created.\nd) Tuples that meet given conditions are selected from tables, and a new table is created.",
-    "tag": "Uncategorized"
+    "tag": "Relational Operations"
   },
   {
     "id": "2008S_A_Q62",
@@ -29862,7 +29862,7 @@ window.SEARCH_DATA = [
     "q_num": 63,
     "img_path": "../cropped_questions/2008A_A/Q63.png",
     "text": "Q63. There are two tables \u201cmovie\u201d and \u201cmovietype\u201d as shown below. Which of the\nfollowing tables is created as the result of executing the SQL statement specified\nbelow?\nSELECT mName, mTypeCode, mCompany\nFROM movie M, movietype MT\nWHERE M.mTypeID = MT.mTypeID AND MT.mTypeName = 'Action'\nmovie\nmID mName mTypeID mDirector mCompany\nM01 Beowulf 01 Robert Zemeckis Paramount Pictures\nM02 Enchanted 02 Kevin Lima Walt Disney Pictures\nM03 This Christmas 03 Preston A. Whitmore II Sony Pictures\nM04 Hitman 01 Xavier Gens 20th Century Fox\nmovietype\nmTypeID mTypeCode mTypeName\n01 AC Action\n02 AD Adventure\n03 CO Comedy\na) mName mTypeID mCompany\nBeowulf 01 Robert Zemeckis\nHitman 01 Xavier Gens\nb) mName mTypeCode mCompany\nBeowulf AC Paramount Pictures\nHitman AC 20th Century Fox\nc) mName mTypeName mCompany\nBeowulf Action Paramount Pictures\nHitman Action 20th Century Fox\nd) mName mTypeCode mCompany\nBeowulf AC Paramount Pictures\nEnchanted AD Walt Disney Pictures\nThis Christmas CO Sony Pictures\nHitman AC 20th Century Fox",
-    "tag": "Uncategorized"
+    "tag": "SQL SELECT Statement"
   },
   {
     "id": "2008S_A_Q63",
@@ -29884,7 +29884,7 @@ window.SEARCH_DATA = [
     "q_num": 64,
     "img_path": "../cropped_questions/2008A_A/Q64.png",
     "text": "Q64. Which of the following appropriately describes a group function of SQL?\na) A group function returns a group of results from one row.\nb) A group function returns a single result row per group for a set of queried rows.\nc) A group function returns multiple result rows per group for a set of queried rows.\nd) A group function returns one result from each row in the table.",
-    "tag": "Uncategorized"
+    "tag": "SQL Group Functions"
   },
   {
     "id": "2008S_A_Q64",
@@ -29906,7 +29906,7 @@ window.SEARCH_DATA = [
     "q_num": 65,
     "img_path": "../cropped_questions/2008A_A/Q65.png",
     "text": "Q65. Which of the following appropriately explains the SQL statements shown below?\nCREATE TABLE STAFF (\nName CHAR(256),\nBirthdate DATE,\nDeptID NUMBER\n)\nCREATE TABLE MANAGER UNDER STAFF AS (\nManagedDept NUMBER\n)\na) \u201cSELECT * FROM STAFF\u201d extracts all records in the table MANAGER.\nb) STAFF is called subtable, and MANAGER is called supertable.\nc) The table MANAGER has only one attribute.\nd) The table STAFF is composed of four attributes.",
-    "tag": "Uncategorized"
+    "tag": "Table Inheritance"
   },
   {
     "id": "2008S_A_Q65",
@@ -29928,7 +29928,7 @@ window.SEARCH_DATA = [
     "q_num": 66,
     "img_path": "../cropped_questions/2008A_A/Q66.png",
     "text": "Q66. Which of the following authentications can be realized with the information exchange\nbetween two communication actors X and Y according to the procedure below?\n[Procedure]\n(1) Y transmits a character string (challenge) including optional information to X.\n(2) X generates a new character string (response) from the received character string\nbased on predetermined rules between X and Y, and sends back this character string\n(response) to Y.\n(3) Y confirms that the returned character string (response) is correct.\na) X authenticates Y.\nb) X authenticates Y, with the result that Y authenticates X.\nc) Y authenticates X.\nd) Y authenticates X, with the result that X authenticates Y.",
-    "tag": "Uncategorized"
+    "tag": "Challenge-Response Authentication"
   },
   {
     "id": "2008S_A_Q66",
@@ -29950,7 +29950,7 @@ window.SEARCH_DATA = [
     "q_num": 67,
     "img_path": "../cropped_questions/2008A_A/Q67.png",
     "text": "Q67. Which of the following is an advantageous effect of encrypting e-mails?\na) It is possible to prevent denial-of-service attacks against e-mails.\nb) It is possible to prevent encryption keys from being lost.\nc) It is possible to prevent the contents of e-mails from leaking out.\nd) It is possible to protect transmission records on mail servers from being falsified.",
-    "tag": "Uncategorized"
+    "tag": "E-mail Encryption"
   },
   {
     "id": "2008S_A_Q67",
@@ -29972,7 +29972,7 @@ window.SEARCH_DATA = [
     "q_num": 68,
     "img_path": "../cropped_questions/2008A_A/Q68.png",
     "text": "Q68. Which of the following is an appropriate action to be taken when a computer virus is\nfound?\na) First, the computer is powered off, because the virus program may be resident in\nmemory.\nb) First, the infected computer is disconnected from the relevant network, because\nother computers may be infected via the network.\nc) If a worm that infects a wide area in a short period of time is found while an on-line\nbusiness system is running, the virus countermeasure is taken without stopping the\nsystem.\nd) The reproducibility of virus activities is confirmed for the purpose of identifying the\nvirus name by special characteristics activated at the time of infection.",
-    "tag": "Uncategorized"
+    "tag": "Virus Countermeasures"
   },
   {
     "id": "2008S_A_Q68",
@@ -29994,7 +29994,7 @@ window.SEARCH_DATA = [
     "q_num": 69,
     "img_path": "../cropped_questions/2008A_A/Q69.png",
     "text": "Q69. Which of the following is an appropriate operations management method for user IDs\nand passwords?\na) A list of user IDs and passwords is prepared for the purpose of expediting\ntroubleshooting, and the administrator in charge keeps the list.\nb) For the purpose of preventing passwords from being abused by other people, it is so\narranged that users become free to change their passwords at any time.\nc) User IDs and passwords that are not currently used are reused for the purpose of\nsimplifying management work.\nd) With the aim of improving convenience, user IDs and temporary passwords for\nnewcomers are registered, prior to the arrival of user registration applications, by\nreferring to the advance announcements of personnel changes.",
-    "tag": "Uncategorized"
+    "tag": "Password Management"
   },
   {
     "id": "2008S_A_Q69",
@@ -30016,7 +30016,7 @@ window.SEARCH_DATA = [
     "q_num": 70,
     "img_path": "../cropped_questions/2008A_A/Q70.png",
     "text": "Q70. When LAN analyzers are used for finding out the causes of network failures, which of\nthe following is a point to keep in mind?\na) As a provision against the occurrence of failures, it is necessary to inform all\nnetwork users of the storage places and directions for use of LAN analyzers.\nb) LAN cables must be temporarily disconnected during measurement. Therefore, it is\nnecessary to inform users of the measurement dates in advance.\nc) Packets originally intended to be transmitted to their destinations are destroyed\nduring measurement. Therefore, it is necessary to limit the use of computers other\nthan those to be measured.\nd) Some analyzers are capable of displaying packets that pass through networks.\nTherefore, it is necessary to be careful not to use them in different ways such as\nwiretapping.",
-    "tag": "Uncategorized"
+    "tag": "LAN Analyzer"
   },
   {
     "id": "2008S_A_Q70",
@@ -30038,7 +30038,7 @@ window.SEARCH_DATA = [
     "q_num": 71,
     "img_path": "../cropped_questions/2008A_A/Q71.png",
     "text": "Q71. Which of the following is UML standardized by OMG?\na) Description language of an interface for using objects from other programs\nb) Manipulation language for relational databases, which defines tables and handles\ndata\nc) Mark-up language to describe meanings and structure of a file or data\nd) Modeling language used in software development using object orientation",
-    "tag": "Uncategorized"
+    "tag": "UML Modeling"
   },
   {
     "id": "2008S_A_Q71",
@@ -30060,7 +30060,7 @@ window.SEARCH_DATA = [
     "q_num": 72,
     "img_path": "../cropped_questions/2008A_A/Q72.png",
     "text": "Q72. Which of the following is an appropriate description concerning financial indexes?\na) Capital ratio signifies the ratio of equity capital to fixed assets. The larger the value\nof this ratio, the greater the financial soundness.\nb) Current ratio means the ratio of current assets to current liabilities. The smaller the\nvalue of this ratio, the higher the financial stability.\nc) Fixed ratio means the ratio of fixed assets to fixed liabilities. The smaller the value\nof this ratio, the higher the financial stability.\nd) Total capital profit ratio denotes the ratio of profits to gross capital. The larger the\nvalue of this ratio, the higher the profitability.",
-    "tag": "Uncategorized"
+    "tag": "Financial Ratios"
   },
   {
     "id": "2008S_A_Q72",
@@ -30082,7 +30082,7 @@ window.SEARCH_DATA = [
     "q_num": 73,
     "img_path": "../cropped_questions/2008A_A/Q73.png",
     "text": "Q73. A certain company is producing and selling its product X. The variable cost of the\nproduct X is 60% of its selling price, and the fixed cost of the company is $50,000 per\nmonth. When the company\u2019s target profit for the forthcoming month is $20,000, how\nmuch sales volume (in dollars) is required to meet it?\na) 100,000 b) 125,000 c) 150,000 d) 175,000",
-    "tag": "Uncategorized"
+    "tag": "Break-even Analysis"
   },
   {
     "id": "2008S_A_Q73",

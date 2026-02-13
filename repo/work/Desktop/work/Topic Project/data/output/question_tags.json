@@ -1240,5 +1240,161 @@
     "subcategory": "Software Development Technology",
     "topic": "White-box Testing",
     "explanation": "The question relates to software testing techniques, specifically decision (branch) coverage, which is a key concept within white-box testing in software development."
+  },
+  "2008A_A/Q48.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Software Quality Management",
+    "explanation": "The question requires analyzing a reliability growth model graph (tracking test item completion and error detection) to evaluate the quality and progress of the software testing process."
+  },
+  "2008A_A/Q49.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Expected Value",
+    "explanation": "The question requires calculating a projected cost based on statistical probability and discovery rates, which is a core quantitative technique in management science."
+  },
+  "2008A_A/Q50.png": {
+    "category": "Service Management",
+    "subcategory": "Method of Service Management",
+    "topic": "System Monitoring Operations",
+    "explanation": "The question concerns the management and monitoring of system failures, which is a core operational activity within IT Service Management."
+  },
+  "2008A_A/Q51.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Job Scheduling",
+    "explanation": "The question focuses on job scheduling characteristics and algorithms like FCFS and time-slicing, which are core functions of an Operating System."
+  },
+  "2008A_A/Q52.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Regression Testing",
+    "explanation": "The question asks about a specific type of software test performed during the maintenance phase of the System Development Life Cycle (SLCP) to ensure code changes haven't introduced new bugs."
+  },
+  "2008A_A/Q53.png": {
+    "category": "Network",
+    "subcategory": "Network Mechanism",
+    "topic": "IPv4 Addressing",
+    "explanation": "The question asks about the fundamental structure of IPv4 addresses and the specific calculation for effective host addresses within network classes."
+  },
+  "2008A_A/Q54.png": {
+    "category": "Network",
+    "subcategory": "Network Mechanism",
+    "topic": "Multicast",
+    "explanation": "The question describes the mechanism of multicast transmission, where a single datagram is replicated by routers to reach a specific group of interested receivers."
+  },
+  "2008A_A/Q55.png": {
+    "category": "Network",
+    "subcategory": "The Internet",
+    "topic": "Email Protocols",
+    "explanation": "The question asks about MIME, which is a standard protocol that extends email capabilities to include multimedia attachments on the Internet."
+  },
+  "2008A_A/Q56.png": {
+    "category": "Network",
+    "subcategory": "Network Mechanism",
+    "topic": "ATM Cell Switching",
+    "explanation": "The question describes Asynchronous Transfer Mode (ATM), which is a high-speed networking technology based on transmitting data in fixed-length blocks called cells."
+  },
+  "2008A_A/Q57.png": {
+    "category": "Network",
+    "subcategory": "The Internet",
+    "topic": "Network Time Protocol",
+    "explanation": "The question asks for a protocol used for clock synchronization over the internet, which is the primary function of NTP (Network Time Protocol)."
+  },
+  "2008A_A/Q58.png": {
+    "category": "Network",
+    "subcategory": "The Internet",
+    "topic": "HTTP Cookie",
+    "explanation": "The question describes the functionality of a cookie, which is a mechanism used by web servers to store state information on a client's computer via the HTTP protocol on the Internet."
+  },
+  "2008A_A/Q59.png": {
+    "category": "Network",
+    "subcategory": "The Internet",
+    "topic": "Common Gateway Interface (CGI)",
+    "explanation": "The question describes the Common Gateway Interface (CGI), which is a standard protocol for web servers to execute external programs and generate dynamic content, a key topic under Internet technologies."
+  },
+  "2008A_A/Q60.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Data Models",
+    "explanation": "The question asks about fundamental logical data models (Hierarchical, Relational, Network), which are core concepts within the outline of database systems."
+  },
+  "2008A_A/Q61.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Relational Data Model",
+    "explanation": "The question asks for the fundamental definition of a relational database, specifically its representation as two-dimensional tables."
+  },
+  "2008A_A/Q62.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Relational Operations",
+    "explanation": "The question asks for the definition of 'projection', which is one of the fundamental relational algebra operations used in database management."
+  },
+  "2008A_A/Q63.png": {
+    "category": "Database",
+    "subcategory": "SQL",
+    "topic": "SQL SELECT Statement",
+    "explanation": "The question requires interpreting a standard SQL query involving a join condition and filtering to determine the resulting table."
+  },
+  "2008A_A/Q64.png": {
+    "category": "Database",
+    "subcategory": "SQL",
+    "topic": "SQL Group Functions",
+    "explanation": "The question asks for the definition and behavior of group (aggregate) functions specifically within the SQL language."
+  },
+  "2008A_A/Q65.png": {
+    "category": "Database",
+    "subcategory": "SQL",
+    "topic": "Table Inheritance",
+    "explanation": "The question requires an understanding of SQL DDL statements, specifically the 'UNDER' clause used for table inheritance in object-relational databases."
+  },
+  "2008A_A/Q66.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "Challenge-Response Authentication",
+    "explanation": "The procedure describes a classic challenge-response protocol where party Y verifies the identity of party X based on a correct response to a transmitted challenge."
+  },
+  "2008A_A/Q67.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "E-mail Encryption",
+    "explanation": "The question asks about the benefits of e-mail encryption, which is a specific technical measure used to ensure confidentiality and prevent information leakage."
+  },
+  "2008A_A/Q68.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "Virus Countermeasures",
+    "explanation": "The question asks for the correct incident response procedure when a computer virus is detected, which is a key aspect of technical security measures."
+  },
+  "2008A_A/Q69.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "Password Management",
+    "explanation": "The question identifies appropriate operational practices for handling authentication credentials, which is a core component of administrative security measures."
+  },
+  "2008A_A/Q70.png": {
+    "category": "Network",
+    "subcategory": "Network Management",
+    "topic": "LAN Analyzer",
+    "explanation": "The question concerns the practical and ethical considerations of using LAN analyzers, which are key tools for network troubleshooting and monitoring within the scope of network management."
+  },
+  "2008A_A/Q71.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "UML Modeling",
+    "explanation": "The question defines UML (Unified Modeling Language), which is a standard graphical language for modeling software systems in object-oriented development."
+  },
+  "2008A_A/Q72.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Financial Ratios",
+    "explanation": "The question tests knowledge of financial indicators and ratios used to analyze a company's financial health, which falls under corporate accounting."
+  },
+  "2008A_A/Q73.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Break-even Analysis",
+    "explanation": "The question involves calculating the required sales volume to reach a target profit based on fixed and variable costs, which is a core component of break-even and CVP analysis."
   }
 }
