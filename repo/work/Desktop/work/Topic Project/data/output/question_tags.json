@@ -1,230 +1,32 @@
 {
   "2007A_A/Q01.png": {
-    "category": "Basic Theory",
-    "subcategory": "Discrete Math",
-    "topic": "Number Systems",
-    "explanation": "The question asks for the range of decimal numbers representable by an 11-bit two's complement binary system. This is a core topic within number systems and the representation of signed integers."
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Two's Complement Representation",
+    "explanation": "The question concerns calculating the numerical range of signed integers representable in binary using the two's complement system."
   },
   "2007A_A/Q02.png": {
-    "category": "Basic Theory",
-    "subcategory": "Discrete Math",
-    "topic": "Number Systems",
-    "explanation": "The question requires knowledge of converting decimal fractions to other bases (specifically octal) and understanding which fractions terminate or recur in different number systems. This is a core topic in Discrete Math under Number Systems."
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Radix Conversion",
+    "explanation": "The question involves converting decimal fractions to another base (octal) and understanding finite vs. recurring representations, which is a core part of data representation in computer systems."
   },
   "2007A_A/Q03.png": {
-    "category": "Basic Theory",
-    "subcategory": "Discrete Math",
-    "topic": "Number Systems",
-    "explanation": "The question involves analyzing a specific binary number representation (1010...10 in base-2) and determining its algebraic properties. This falls directly under 'Number Systems' within the 'Discrete Math' subdomain of the FE syllabus."
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Binary Number Systems",
+    "explanation": "The question requires analyzing the mathematical properties and value of a specific binary bit pattern, which falls under the study of numerical data representation."
   },
   "2007A_A/Q04.png": {
-    "category": "Basic Theory",
-    "subcategory": "Discrete Math",
-    "topic": "Number Systems",
-    "explanation": "The question asks about the mathematical effect of shifting a binary value in a register. Shifting a binary number to the left by 'n' bits is equivalent to multiplying the value by 2 to the power of 'n'. This is a fundamental concept of binary number systems and radix-based arithmetic."
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Bitwise Shift Operations",
+    "explanation": "The question tests the understanding of how leftward bit shifts in binary representation equate to multiplication by powers of two."
   },
   "2007A_A/Q05.png": {
-    "category": "Basic Theory",
-    "subcategory": "Discrete Math",
-    "topic": "Number Systems",
-    "explanation": "The question pertains to 'complement representation' (specifically two's complement), which is a fundamental concept in number systems used to represent signed integers and perform subtraction using addition circuits."
-  },
-  "2007A_A/Q06.png": {
-    "category": "Basic Theory",
-    "subcategory": "Applied Math",
-    "topic": "Numerical Analysis",
-    "explanation": "The question asks about Newton's method, which is a fundamental numerical analysis technique used for finding approximate roots of a function. This is a core part of the Applied Mathematics section in the ITPEC FE syllabus, but it is not currently represented by the existing sub-topics like Statistics or Probability. Therefore, 'Numerical Analysis' is the most appropriate new topic."
-  },
-  "2007A_A/Q07.png": {
-    "category": "Basic Theory",
-    "subcategory": "Information Theory",
-    "topic": "Encoding",
-    "explanation": "The question asks to verify a 'Customer Account Number' using a check digit calculation. Check digits are a fundamental method of encoding data with redundancy to detect errors (like transposition or substitution) during data entry or transmission, which falls under the Encoding topic of Information Theory."
-  },
-  "2007A_A/Q08.png": {
-    "category": "Basic Theory",
-    "subcategory": "Applied Math",
-    "topic": "Probability",
-    "explanation": "The question requires calculating the probability of a specific outcome in a game involving tossing a pair of dice. This is a fundamental concept in probability theory within the Applied Math section of the FE syllabus."
-  },
-  "2007A_A/Q09.png": {
-    "category": "Basic Theory",
-    "subcategory": "Discrete Math",
-    "topic": "Set Theory",
-    "explanation": "The question requires calculating the number of elements in the complement of the union of two sets (students taking computer science and students taking mathematics). This is a fundamental application of the Principle of Inclusion-Exclusion within Set Theory."
-  },
-  "2007A_A/Q10.png": {
-    "category": "Basic Theory",
-    "subcategory": "Discrete Math",
-    "topic": "Logic",
-    "explanation": "The question requires the simplification of a Boolean (logical) expression using algebraic rules such as distribution and idempotence, which is a core component of Discrete Mathematics and Logic theory in the FE syllabus."
-  },
-  "2007A_A/Q11.png": {
-    "category": "Basic Theory",
-    "subcategory": "Information Theory",
-    "topic": "Encoding",
-    "explanation": "The question asks about adding an even parity bit to 7-bit character codes and converting the results between hexadecimal and binary. Parity bits are a fundamental form of error-detecting code, which falls under data encoding within Information Theory."
-  },
-  "2007A_A/Q12.png": {
-    "category": "Basic Theory",
-    "subcategory": "Data Structures",
-    "topic": "Linear",
-    "explanation": "The question asks about the LIFO (Last In First Out) management method, which is the defining characteristic of a Stack. Stacks, alongside Queues and Lists, are fundamental linear data structures."
-  },
-  "2007A_A/Q13.png": {
-    "category": "Computer Systems",
-    "subcategory": "Processor",
-    "topic": "Instruction Set",
-    "explanation": "The question asks for a sequence of microprocessor instructions (PUSH and POP) to manipulate general-purpose registers (GRi and GRj). This falls under the 'Instruction Set' topic as it focuses on the logical operation and execution flow of processor-level instructions."
-  },
-  "2007A_A/Q14.png": {
-    "category": "Basic Theory",
-    "subcategory": "Algorithms",
-    "topic": "Sorting",
-    "explanation": "The question asks to identify the correct description for various data sorting algorithms (bubble sort, heap sort, quick sort, and shell sort), which falls under the category of Algorithms in the FE syllabus."
-  },
-  "2007A_A/Q15.png": {
-    "category": "Basic Theory",
-    "subcategory": "Data Structures",
-    "topic": "Non-Linear",
-    "explanation": "The question discusses the properties and mathematical relationships (number of nodes vs. height) of a perfect binary tree, which is a fundamental non-linear data structure."
-  },
-  "2007A_A/Q16.png": {
-    "category": "Basic Theory",
-    "subcategory": "Algorithms",
-    "topic": "Searching",
-    "explanation": "The question tests the understanding of the Depth-First Search (DFS) algorithm, which is a fundamental graph search/traversal algorithm. It requires verifying whether specific vertex visitation sequences conform to the backtracking and 'deep-dive' rules of DFS."
-  },
-  "2007A_A/Q17.png": {
-    "category": "Basic Theory",
-    "subcategory": "Data Structures",
-    "topic": "Linear",
-    "explanation": "The question concerns Reverse Polish Notation (postfix notation), which is a fundamental method for representing mathematical expressions. It is primarily associated with the use of stacks, a linear data structure, for evaluation and conversion from infix notation."
-  },
-  "2007A_A/Q18.png": {
-    "category": "Basic Theory",
-    "subcategory": "Algorithms",
-    "topic": "Recursion",
-    "explanation": "The question provides a recursive definition of a function (specifically the identity for binomial coefficients/Pascal's triangle) and asks for a specific value. Evaluating such functions tests the understanding of recursive execution and base cases, which are fundamental concepts in the Algorithms section of the FE syllabus."
-  },
-  "2007A_A/Q19.png": {
-    "category": "Computer Systems",
-    "subcategory": "Hardware",
-    "topic": "Logic Gates",
-    "explanation": "The question asks to identify an equivalent logic circuit among several options. It involves analyzing combinations of fundamental logic gates: AND (logical product), OR (logical sum), and NOT (logical negation)."
-  },
-  "2007A_A/Q20.png": {
-    "category": "Computer Systems",
-    "subcategory": "Processor",
-    "topic": "Architecture",
-    "explanation": "The von Neumann bottleneck refers to a performance limitation inherent in the von Neumann architecture, where the shared bus for data and instructions between the CPU and main memory restricts throughput. It is a fundamental concept of processor and system architecture."
-  },
-  "2007A_A/Q21.png": {
-    "category": "Computer Systems",
-    "subcategory": "Processor",
-    "topic": "Control",
-    "explanation": "The question asks about the specific operation a CPU performs at the end of every instruction execution cycle. In computer architecture, the control unit checks for pending interrupts (the highest priority process) immediately after an instruction is executed and before the next instruction is fetched."
-  },
-  "2007A_A/Q22.png": {
-    "category": "Computer Systems",
-    "subcategory": "Processor",
-    "topic": "Architecture",
-    "explanation": "The question concerns the calculation of clock cycles in an instruction pipeline, which is a key concept in CPU architecture, specifically relating to how RISC processors manage instruction execution stages."
-  },
-  "2007A_A/Q23.png": {
-    "category": "Computer Systems",
-    "subcategory": "Processor",
-    "topic": "Performance",
-    "explanation": "The question requires calculating the processing performance of a processor in MIPS (Millions of Instructions Per Second) using the clock frequency and the average cycles per instruction (CPI) derived from the command execution frequencies. While not currently in the sub-subdomain list for Processor, 'Performance' is a standard FE syllabus topic (equivalent to the 'Performance' topic listed under 'Memory')."
-  },
-  "2007A_A/Q24.png": {
-    "category": "Computer Systems",
-    "subcategory": "Processor",
-    "topic": "Control",
-    "explanation": "The question asks to identify an 'external interrupt' from a list of interrupt types. Interrupt handling\u2014specifically the distinction between internal interrupts (exceptions, software interrupts) and external interrupts (hardware failures, I/O signals, timers)\u2014is a key concept within the Control unit's management of the CPU's execution flow."
-  },
-  "2007A_A/Q25.png": {
-    "category": "Computer Systems",
-    "subcategory": "Memory",
-    "topic": "Cache",
-    "explanation": "The question asks about the state of cache memory after a specific sequence of accesses using the LRU (Least Recently Used) replacement algorithm. This is a fundamental concept in CPU cache management."
-  },
-  "2007A_A/Q26.png": {
-    "category": "Computer Systems",
-    "subcategory": "Memory",
-    "topic": "Cache",
-    "explanation": "The question asks about the fundamental purpose of cache memory, which is to bridge the performance gap between the high-speed processor and the relatively slower main memory."
-  },
-  "2007A_A/Q27.png": {
-    "category": "Computer Systems",
-    "subcategory": "Memory",
-    "topic": "Main Memory",
-    "explanation": "The question asks for the definition of 'memory interleaving,' which is a technique used to organize main memory into multiple banks or groups that can be accessed in parallel to increase data transfer speeds. This is a fundamental concept regarding the architecture and operation of Main Memory."
-  },
-  "2007A_A/Q28.png": {
-    "category": "Computer Systems",
-    "subcategory": "Storage",
-    "topic": "Disk Drives",
-    "explanation": "The question asks for a calculation of the physical storage requirements (number of tracks) on a hard disk drive, based on parameters like track capacity, record length, blocking factor, and inter-block gaps. This directly relates to the physical characteristics and capacity planning of magnetic disk storage."
-  },
-  "2007A_A/Q29.png": {
-    "category": "Computer Systems",
-    "subcategory": "Storage",
-    "topic": "Disk Drives",
-    "explanation": "The question asks to calculate the total movement of a hard disk head (seek distance) across cylinders using a specific seek optimization algorithm (the SCAN or Elevator algorithm). This is a core topic related to the mechanical operation and access efficiency of Hard Disk Drives (HDD)."
-  },
-  "2007A_A/Q30.png": {
-    "category": "Computer Systems",
-    "subcategory": "Storage",
-    "topic": "Redundancy",
-    "explanation": "The question describes 'Disk Striping' (RAID 0), a technique where data is split across multiple disks to increase performance through parallel access. In the ITPEC FE syllabus, RAID-related technologies (striping, mirroring, parity) are typically categorized under 'Redundancy' within the Storage subdomain."
-  },
-  "2007A_A/Q31.png": {
-    "category": "Computer Systems",
-    "subcategory": "Storage",
-    "topic": "Technologies",
-    "explanation": "The question asks about the physical recording mechanism for a CD-R (Compact Disc-Recordable), which involves using a laser to burn pits into an organic dye layer. This falls under the technologies used in various storage media."
-  },
-  "2007A_A/Q32.png": {
-    "category": "Computer Systems",
-    "subcategory": "Processor",
-    "topic": "Architecture",
-    "explanation": "The question describes the 'stored program method' (von Neumann architecture), which is a fundamental concept in computer architecture where programs are stored in memory for the CPU to fetch and execute sequentially."
-  },
-  "2007A_A/Q33.png": {
-    "category": "Operating Systems",
-    "subcategory": "Process Management",
-    "topic": "Basics",
-    "explanation": "The question asks about the functions of OS task management. Task management (often synonymous with process management in the FE syllabus) involves managing task states, scheduling, and CPU allocation (dispatching). Therefore, it belongs to the 'Basics' of Process Management."
-  },
-  "2007A_A/Q34.png": {
-    "category": "Operating Systems",
-    "subcategory": "Process Management",
-    "topic": "Synchronization",
-    "explanation": "The question discusses the 'synchronous control' of tasks sharing variables. It demonstrates how different interleaving of atomic read/write/compute steps in concurrent tasks can lead to different results, which is the fundamental problem addressed by process synchronization and mutual exclusion (critical sections)."
-  },
-  "2007A_A/Q35.png": {
-    "category": "Operating Systems",
-    "subcategory": "Architecture",
-    "topic": "Kernel",
-    "explanation": "The question describes an OS architecture where the kernel is kept to a minimum (handling only basic tasks like memory and process management), while other services like file systems are moved to user space as server processes. This is the definition of a Microkernel architecture."
-  },
-  "2007A_A/Q36.png": {
-    "category": "Networks",
-    "subcategory": "Architecture",
-    "topic": "Models",
-    "explanation": "The question asks for a description of the client/server architecture, which is a fundamental network computing model where processes are divided into those that request services (clients) and those that provide/execute them (servers)."
-  },
-  "2007A_A/Q37.png": {
-    "category": "Computer Systems",
-    "subcategory": "Storage",
-    "topic": "Redundancy",
-    "explanation": "The question asks about RAID (Redundant Array of Independent Disks), which is a storage technology designed to improve system reliability and availability through data redundancy and to enhance performance through disk striping."
-  },
-  "2007A_A/Q38.png": {
-    "category": "Computer Systems",
-    "subcategory": "Storage",
-    "topic": "Redundancy",
-    "explanation": "The question asks for the usable capacity of a RAID 5 configuration. RAID (Redundant Array of Independent Disks) is a technology used for data redundancy and performance. Specifically, RAID 5 uses distributed parity, which consumes the capacity equivalent to one disk in the array. Calculating usable storage for RAID systems is a core part of the Redundancy topic under Storage."
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Complement Representation",
+    "explanation": "The question focuses on how 'complement representation' is used to represent signed numbers and simplify hardware by allowing subtraction to be performed as addition."
   }
 }

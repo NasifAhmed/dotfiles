@@ -23,10 +23,22 @@ A comprehensive, searchable, and AI-categorized question bank for the **ITPEC Fu
 ```
 
 ### 2. Setup Gemini API (Required for AI Tagging)
-Get an API key from [Google AI Studio](https://aistudio.google.com/) and add it to your environment:
+You can use a single API key or a collection for automatic rotation.
+
+**Option A: Single Key**
 ```bash
 export GOOGLE_API_KEY='your-api-key'
 ```
+
+**Option B: Multiple Keys (Auto-rotation)**
+Create a file named `.api_collection` in the project root and add one API key per line:
+```bash
+# .api_collection
+key_1
+key_2
+key_3
+```
+The classifier will automatically switch to the next key when the current one hits its daily quota.
 
 ### 3. Launch Manager
 Everything you need is in the central management script:

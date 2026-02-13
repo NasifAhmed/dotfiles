@@ -18,7 +18,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2025S_A/Q01.png",
-    "text": "April 2025\nFundamental IT Engineer Examination (Subject A)\nQuestions must be answered in accordance with the following:\nQuestion Nos. Q1 \u2013 Q60\nQuestion Selection All questions are compulsory.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nII. Circuit symbol\nGraphical symbol Explanation\nResistor (R)\nCapacitor (C)\nDiode (D)\nTransistor (Tr)\nEarth (Ground)\nOperational amplifier\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For an 8-bit binary integer, which of the following is the operation that extracts the most\nsignificant 4-bits while making the other bits zero?\na) Bitwise AND operation with 11110000.\nb) Bitwise NAND operation with 11110000.\nc) Bitwise OR operation with 00001111.\nd) Bitwise XOR operation with 00001111.",
     "tag": "Uncategorized"
   },
   {
@@ -29,7 +29,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2025S_A/Q01.png",
-    "text": "April 2025\nFundamental IT Engineer Examination (Subject A)\nQuestions must be answered in accordance with the following:\nQuestion Nos. Q1 \u2013 Q60\nQuestion Selection All questions are compulsory.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nII. Circuit symbol\nGraphical symbol Explanation\nResistor (R)\nCapacitor (C)\nDiode (D)\nTransistor (Tr)\nEarth (Ground)\nOperational amplifier\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For an 8-bit binary integer, which of the following is the operation that extracts the most\nsignificant 4-bits while making the other bits zero?\na) Bitwise AND operation with 11110000.\nb) Bitwise NAND operation with 11110000.\nc) Bitwise OR operation with 00001111.\nd) Bitwise XOR operation with 00001111.",
     "tag": "Uncategorized"
   },
   {
@@ -898,7 +898,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2024A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nII. Circuit symbol\nGraphical symbol Explanation\nResistor (R)\nCapacitor (C)\nDiode (D)\nTransistor (Tr)\nEarth (Ground)\nOperational amplifier\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. P, Q, and R are propositions. It is known that the truth value of proposition P is true, and\nthe values of both the propositions \u201c(not P) or Q\u201d and \u201c(not Q) or R\u201d are true. Which of the\nfollowing is a combination of the truth values of Q and R? Here, X or Y represents the\nlogical sum of X and Y, and not X represents the negation of X.\nQ R\na) False False\nb) False True\nc) True False\nd) True True",
     "tag": "Uncategorized"
   },
   {
@@ -909,7 +909,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2024A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nII. Circuit symbol\nGraphical symbol Explanation\nResistor (R)\nCapacitor (C)\nDiode (D)\nTransistor (Tr)\nEarth (Ground)\nOperational amplifier\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. P, Q, and R are propositions. It is known that the truth value of proposition P is true, and\nthe values of both the propositions \u201c(not P) or Q\u201d and \u201c(not Q) or R\u201d are true. Which of the\nfollowing is a combination of the truth values of Q and R? Here, X or Y represents the\nlogical sum of X and Y, and not X represents the negation of X.\nQ R\na) False False\nb) False True\nc) True False\nd) True True",
     "tag": "Uncategorized"
   },
   {
@@ -931,7 +931,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2024S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nII. Circuit symbol\nGraphical symbol Explanation\nResistor (R)\nCapacitor (C)\nDiode (D)\nTransistor (Tr)\nEarth (Ground)\nOperational amplifier\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. What is the decimal representation of the hexadecimal number 123.4?\na) 83.25 b) 83.5 c) 291.25 d) 291.5",
     "tag": "Uncategorized"
   },
   {
@@ -942,7 +942,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2024S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nII. Circuit symbol\nGraphical symbol Explanation\nResistor (R)\nCapacitor (C)\nDiode (D)\nTransistor (Tr)\nEarth (Ground)\nOperational amplifier\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. What is the decimal representation of the hexadecimal number 123.4?\na) 83.25 b) 83.5 c) 291.25 d) 291.5",
     "tag": "Uncategorized"
   },
   {
@@ -2680,7 +2680,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2023A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. In a school class, 13 students play basketball and 19 play football. Among them, 8\nstudents play both. Further, 7 students play neither. How many students are there in the\nclass?\na) 17 b) 31 c) 33 d) 47",
     "tag": "Uncategorized"
   },
   {
@@ -2691,7 +2691,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2023A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. In a school class, 13 students play basketball and 19 play football. Among them, 8\nstudents play both. Further, 7 students play neither. How many students are there in the\nclass?\na) 17 b) 31 c) 33 d) 47",
     "tag": "Uncategorized"
   },
   {
@@ -2702,7 +2702,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2023S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. Which of the following is a Venn diagram that represents the set below?\n(cid:4666)\ud835\udc34\u2229\ud835\udc36\u0305(cid:4667)\u222a(cid:4666)\ud835\udc34\u2229\ud835\udc35(cid:3364) \u2229\ud835\udc36(cid:4667)\u222a(cid:4666)\ud835\udc34\u0305\u2229\ud835\udc35\u2229\ud835\udc36(cid:4667)\na) b)\nc) d)",
     "tag": "Uncategorized"
   },
   {
@@ -2713,7 +2713,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2023S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. Which of the following is a Venn diagram that represents the set below?\n(cid:4666)\ud835\udc34\u2229\ud835\udc36\u0305(cid:4667)\u222a(cid:4666)\ud835\udc34\u2229\ud835\udc35(cid:3364) \u2229\ud835\udc36(cid:4667)\u222a(cid:4666)\ud835\udc34\u0305\u2229\ud835\udc35\u2229\ud835\udc36(cid:4667)\na) b)\nc) d)",
     "tag": "Uncategorized"
   },
   {
@@ -4462,7 +4462,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2022A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For an 8-bit binary integer, which of the following sets the least significant bit to 1 while\nleaving the other bits unchanged?\na) Perform bitwise AND operation with 00000001.\nb) Perform bitwise NAND operation with 11111110.\nc) Perform bitwise OR operation with 00000001.\nd) Perform bitwise XOR operation with 00000001.",
     "tag": "Uncategorized"
   },
   {
@@ -4473,7 +4473,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2022A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For an 8-bit binary integer, which of the following sets the least significant bit to 1 while\nleaving the other bits unchanged?\na) Perform bitwise AND operation with 00000001.\nb) Perform bitwise NAND operation with 11111110.\nc) Perform bitwise OR operation with 00000001.\nd) Perform bitwise XOR operation with 00000001.",
     "tag": "Uncategorized"
   },
   {
@@ -4484,7 +4484,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2022S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For logical variables A and B, which of the following is equivalent to the NOR operation on\nA and B? Here, (cid:1827)+(cid:1828), (cid:1827)\u30fb(cid:1828), and (cid:1827)\u0305 are OR, AND, and NOT operations on the\ncorresponding variables, respectively.\na) (cid:1827)\u0305\u30fb(cid:4666)(cid:1827)+(cid:1828)(cid:3364)(cid:4667) b) (cid:1827)\u0305\u30fb(cid:4666)(cid:1827)\u0305+(cid:1828)(cid:3364)(cid:4667) c) B \u30fb(cid:4666)(cid:1827)+(cid:1828)(cid:3364)(cid:4667) d) (cid:1828)(cid:3364)\u30fb(cid:4666)(cid:1827)\u0305+(cid:1828)(cid:3364)(cid:4667)",
     "tag": "Uncategorized"
   },
   {
@@ -4495,7 +4495,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2022S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For logical variables A and B, which of the following is equivalent to the NOR operation on\nA and B? Here, (cid:1827)+(cid:1828), (cid:1827)\u30fb(cid:1828), and (cid:1827)\u0305 are OR, AND, and NOT operations on the\ncorresponding variables, respectively.\na) (cid:1827)\u0305\u30fb(cid:4666)(cid:1827)+(cid:1828)(cid:3364)(cid:4667) b) (cid:1827)\u0305\u30fb(cid:4666)(cid:1827)\u0305+(cid:1828)(cid:3364)(cid:4667) c) B \u30fb(cid:4666)(cid:1827)+(cid:1828)(cid:3364)(cid:4667) d) (cid:1828)(cid:3364)\u30fb(cid:4666)(cid:1827)\u0305+(cid:1828)(cid:3364)(cid:4667)",
     "tag": "Uncategorized"
   },
   {
@@ -6233,7 +6233,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2021A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. What is the octal equivalent value of the hexadecimal number 7B5?\na) 735 b) 3665 c) 7551 d) 7561",
     "tag": "Uncategorized"
   },
   {
@@ -6244,7 +6244,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2021A_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. What is the octal equivalent value of the hexadecimal number 7B5?\na) 735 b) 3665 c) 7551 d) 7561",
     "tag": "Uncategorized"
   },
   {
@@ -6255,7 +6255,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2021S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. Which of the following is equivalent to the logic expression below?\n(cid:4666)(cid:1876) (cid:3397)(cid:1877)(cid:4667)\u2219(cid:4666)(cid:1876) (cid:3397)(cid:1878)(cid:4667)\nHere, the letters are logic variables; (cid:1876) (cid:3397)(cid:1877) , (cid:1876) \u2219(cid:1877) , and (cid:1876)\u0305 are OR, AND, and NOT\noperations on the corresponding variables, respectively.\na) (cid:1876) \u2219(cid:4666)(cid:1877)(cid:3397)(cid:1878)(cid:4667) b) (cid:1876) (cid:3397)(cid:1877)\u2219(cid:1878)\nc) (cid:1876) \u2219(cid:1877)(cid:3397)(cid:1877)\u2219(cid:1878) d) (cid:4666)(cid:1876)\u0305 (cid:3397)(cid:1877)(cid:4667)\u2219(cid:1878)",
     "tag": "Uncategorized"
   },
   {
@@ -6266,7 +6266,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2021S_A/Q01.png",
-    "text": "Q1. Which of the following should be used for marking your answer on the answer\nsheet?\na) Ballpoint pen b) Crayon c) Fountain pen d) Pencil\nSince the correct answer is \u201cd) Pencil\u201d, mark the answer as below:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nA small circle or \u201cbubble\u201d on either the\ninput or the output terminal shows inversion\nor negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. Which of the following is equivalent to the logic expression below?\n(cid:4666)(cid:1876) (cid:3397)(cid:1877)(cid:4667)\u2219(cid:4666)(cid:1876) (cid:3397)(cid:1878)(cid:4667)\nHere, the letters are logic variables; (cid:1876) (cid:3397)(cid:1877) , (cid:1876) \u2219(cid:1877) , and (cid:1876)\u0305 are OR, AND, and NOT\noperations on the corresponding variables, respectively.\na) (cid:1876) \u2219(cid:4666)(cid:1877)(cid:3397)(cid:1878)(cid:4667) b) (cid:1876) (cid:3397)(cid:1877)\u2219(cid:1878)\nc) (cid:1876) \u2219(cid:1877)(cid:3397)(cid:1877)\u2219(cid:1878) d) (cid:4666)(cid:1876)\u0305 (cid:3397)(cid:1877)(cid:4667)\u2219(cid:1878)",
     "tag": "Uncategorized"
   },
   {
@@ -8015,7 +8015,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2020A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination usually\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. When the decimal arithmetic expression, 7 / 32, is evaluated, which of the following\nrepresents the result in binary?\na) 0.001011 b) 0.001101 c) 0.00111 d) 0.0111",
     "tag": "Uncategorized"
   },
   {
@@ -8026,7 +8026,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2020A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination usually\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. When the decimal arithmetic expression, 7 / 32, is evaluated, which of the following\nrepresents the result in binary?\na) 0.001011 b) 0.001101 c) 0.00111 d) 0.0111",
     "tag": "Uncategorized"
   },
   {
@@ -8037,7 +8037,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2020S_A/Q01.png",
-    "text": "Q1. In which month was the autumn Fundamental IT Engineer Examination conducted\nin 2019?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For two 8-bit signed integers A and B in 2\u2019s complement format, which of the following will\ncause an overflow when the addition of A and B is executed?\nA B\na) 0111 1111 1111 1110\nb) 0111 1111 0111 1110\nc) 1000 0000 0111 0000\nd) 1111 1111 1111 1111",
     "tag": "Uncategorized"
   },
   {
@@ -8048,7 +8048,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2020S_A/Q01.png",
-    "text": "Q1. In which month was the autumn Fundamental IT Engineer Examination conducted\nin 2019?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For two 8-bit signed integers A and B in 2\u2019s complement format, which of the following will\ncause an overflow when the addition of A and B is executed?\nA B\na) 0111 1111 1111 1110\nb) 0111 1111 0111 1110\nc) 1000 0000 0111 0000\nd) 1111 1111 1111 1111",
     "tag": "Uncategorized"
   },
   {
@@ -9786,7 +9786,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2019A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination conducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For logical variables p and q, which of the following is a logical expressions that evaluates\nto true for any values of p and q?\na) \ud835\udc5d\u0305 + (p \u2219 q) b) (p \u2219 q) + (\ud835\udc5d\u0305 + (p \u2219 \ud835\udc5e(cid:3364)))\nc) (p \u2219 \ud835\udc5e(cid:3364)) \u2219 (\ud835\udc5d\u0305 + q) d) ((\ud835\udc5d\u0305 \u2219 q) \u2219 (p \u2219 q)) \u2219 \ud835\udc5e(cid:3364)",
     "tag": "Uncategorized"
   },
   {
@@ -9797,7 +9797,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2019A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination conducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the table.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For logical variables p and q, which of the following is a logical expressions that evaluates\nto true for any values of p and q?\na) \ud835\udc5d\u0305 + (p \u2219 q) b) (p \u2219 q) + (\ud835\udc5d\u0305 + (p \u2219 \ud835\udc5e(cid:3364)))\nc) (p \u2219 \ud835\udc5e(cid:3364)) \u2219 (\ud835\udc5d\u0305 + q) d) ((\ud835\udc5d\u0305 \u2219 q) \u2219 (p \u2219 q)) \u2219 \ud835\udc5e(cid:3364)",
     "tag": "Uncategorized"
   },
   {
@@ -9808,7 +9808,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2019S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For an eight-bit integer x represented in two\u2019s complement format, which of the following\nyields the value of 5x? Here, the overflow or underflow can be ignored in this multiplication.\na) Shift x to the left by 1 bit, then add the initial value of x to it.\nb) Shift x to the left by 2 bits, then add the initial value of x to it.\nc) Shift x to the right arithmetically by 1 bit, then subtract the initial value of x from it.\nd) Shift x to the right arithmetically by 2 bits, then subtract the initial value of x from it.",
     "tag": "Uncategorized"
   },
   {
@@ -9819,7 +9819,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2019S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. For an eight-bit integer x represented in two\u2019s complement format, which of the following\nyields the value of 5x? Here, the overflow or underflow can be ignored in this multiplication.\na) Shift x to the left by 1 bit, then add the initial value of x to it.\nb) Shift x to the left by 2 bits, then add the initial value of x to it.\nc) Shift x to the right arithmetically by 1 bit, then subtract the initial value of x from it.\nd) Shift x to the right arithmetically by 2 bits, then subtract the initial value of x from it.",
     "tag": "Uncategorized"
   },
   {
@@ -11557,7 +11557,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2018A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. Which of the following is a logical expression equivalent to the exclusive-OR operation\nof logical variables p and q? Here, \u201c\uf0da\u201d, \u201c\uf0d9\u201d, and \u201c\uf0d8\u201d are OR, AND, and NOT operators,\nrespectively.\na) \uf0d8p \uf0da q b) (p \uf0da q) \uf0d9 \uf0d8(p \uf0d9 q)\nc) \uf0d8(p \uf0da q) \uf0da (p \uf0d9 q) d) (p \uf0d9 \uf0d8q) \uf0da \uf0d8(q \uf0d9 p)",
     "tag": "Uncategorized"
   },
   {
@@ -11568,7 +11568,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2018A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. Which of the following is a logical expression equivalent to the exclusive-OR operation\nof logical variables p and q? Here, \u201c\uf0da\u201d, \u201c\uf0d9\u201d, and \u201c\uf0d8\u201d are OR, AND, and NOT operators,\nrespectively.\na) \uf0d8p \uf0da q b) (p \uf0da q) \uf0d9 \uf0d8(p \uf0d9 q)\nc) \uf0d8(p \uf0da q) \uf0da (p \uf0d9 q) d) (p \uf0d9 \uf0d8q) \uf0da \uf0d8(q \uf0d9 p)",
     "tag": "Uncategorized"
   },
   {
@@ -11579,7 +11579,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2018S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted\nin 2018?\na) February b) March c) April d) May\nSince the correct answer is \u201cb)\u201d (March), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. There is a register where an integer value is stored in binary. Let x be a positive integer\nwhich is stored into the register, then perform the operations below.\n(1) Shift the content of the register to the left by 2 bits\n(2) Add x to the register.\nHow many times larger than the integer x is the content of the register?\na) 3 b) 4 c) 5 d) 6",
     "tag": "Uncategorized"
   },
   {
@@ -11590,7 +11590,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2018S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted\nin 2018?\na) February b) March c) April d) May\nSince the correct answer is \u201cb)\u201d (March), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nLogic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. There is a register where an integer value is stored in binary. Let x be a positive integer\nwhich is stored into the register, then perform the operations below.\n(1) Shift the content of the register to the left by 2 bits\n(2) Add x to the register.\nHow many times larger than the integer x is the content of the register?\na) 3 b) 4 c) 5 d) 6",
     "tag": "Uncategorized"
   },
   {
@@ -13339,7 +13339,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2017A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination conducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2011\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. What is the octal representation of a hexadecimal fraction F1B0.C?\na) 170660.6 b) 361540.14\nc) 743300.6 d) 5213052.3",
     "tag": "Uncategorized"
   },
   {
@@ -13350,7 +13350,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2017A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination conducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2011\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or registered\ntrademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used within.",
+    "text": "Q1. What is the octal representation of a hexadecimal fraction F1B0.C?\na) 170660.6 b) 361540.14\nc) 743300.6 d) 5213052.3",
     "tag": "Uncategorized"
   },
   {
@@ -13361,7 +13361,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2017S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2011\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. For an 8-bit binary number, which of the following sets the middle 4 bits to 1s while\ninverting the remaining bits?\na) Performing a bitwise AND operation with 00111100\nb) Performing a bitwise NAND operation with 11000011\nc) Performing a bitwise OR operation with 11000011\nd) Performing a bitwise XOR operation with 00111100",
     "tag": "Uncategorized"
   },
   {
@@ -13372,7 +13372,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2017S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2011\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. For an 8-bit binary number, which of the following sets the middle 4 bits to 1s while\ninverting the remaining bits?\na) Performing a bitwise AND operation with 00111100\nb) Performing a bitwise NAND operation with 11000011\nc) Performing a bitwise OR operation with 11000011\nd) Performing a bitwise XOR operation with 00111100",
     "tag": "Uncategorized"
   },
   {
@@ -15121,7 +15121,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2016A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2011\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. If a given bit string contains at least one 1-bit, the algorithm below leaves the rightmost\n1-bit unchanged but makes all the others 0. For example, if the given bit string is 00101000,\nthe result will be 00001000. Which of the following is the appropriate logical operation to be\nfilled in D?\nStep 1: By regarding the given bit string A as an unsigned binary number, let B be the\nresult of subtracting 1 from A.\nStep 2: Calculate the XOR (exclusive logical sum) of A and B, and let C be the result.\nStep 3: Calculate the D of A and C, then set the result back to A.\na) AND (logical product) b) NAND (negative logical product)\nc) OR (logical sum) d) XOR (exclusive logical sum)",
     "tag": "Uncategorized"
   },
   {
@@ -15132,7 +15132,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2016A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2011\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. If a given bit string contains at least one 1-bit, the algorithm below leaves the rightmost\n1-bit unchanged but makes all the others 0. For example, if the given bit string is 00101000,\nthe result will be 00001000. Which of the following is the appropriate logical operation to be\nfilled in D?\nStep 1: By regarding the given bit string A as an unsigned binary number, let B be the\nresult of subtracting 1 from A.\nStep 2: Calculate the XOR (exclusive logical sum) of A and B, and let C be the result.\nStep 3: Calculate the D of A and C, then set the result back to A.\na) AND (logical product) b) NAND (negative logical product)\nc) OR (logical sum) d) XOR (exclusive logical sum)",
     "tag": "Uncategorized"
   },
   {
@@ -16012,7 +16012,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2015A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2013\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. What is the sum of two binary fractions 1.0101 and 1.0111 expressed in decimal?\na) 2.5 b) 2.75 c) 2.875 d) 2.9375",
     "tag": "Uncategorized"
   },
   {
@@ -16023,7 +16023,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2015A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2013\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: A small circle or \u201cbubble\u201d on either the input or the output\nterminal shows inversion or negation of the logic state.\nCompany names or product names mentioned in the examination questions are the trademarks or\nregistered trademarks of their respective companies or organizations. The symbol \u00ae or \u2122 is not used\nwithin.",
+    "text": "Q1. What is the sum of two binary fractions 1.0101 and 1.0111 expressed in decimal?\na) 2.5 b) 2.75 c) 2.875 d) 2.9375",
     "tag": "Uncategorized"
   },
   {
@@ -16034,7 +16034,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2015S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted\nin 2015?\na) March b) April c) May d) June\nSince the correct answer is \u201cc)\u201d (May), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC 25010:2013\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or registered\ntrademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following is the appropriate combination that represents the decimal\nnumber \u201c\u201319\u201d in 8-bit one\u2019s complement binary and 8-bit two\u2019s complement binary?\nOne\u2019s complement binary Two\u2019s complement binary\na) 00010011 11101100\nb) 00010011 11101101\nc) 11101100 11101100\nd) 11101100 11101101",
     "tag": "Uncategorized"
   },
   {
@@ -16045,7 +16045,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2015S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted\nin 2015?\na) March b) April c) May d) June\nSince the correct answer is \u201cc)\u201d (May), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC 25010:2013\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or registered\ntrademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following is the appropriate combination that represents the decimal\nnumber \u201c\u201319\u201d in 8-bit one\u2019s complement binary and 8-bit two\u2019s complement binary?\nOne\u2019s complement binary Two\u2019s complement binary\na) 00010011 11101100\nb) 00010011 11101101\nc) 11101100 11101100\nd) 11101100 11101101",
     "tag": "Uncategorized"
   },
   {
@@ -17794,7 +17794,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2014A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2013\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or registered\ntrademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used within.",
+    "text": "Q1. When a total of 400 data records are stored in contiguous memory starting from the\naddress 0274 , which of the following is the address where the last data record is stored?\n8\nHere, each data record occupies one address location, and each address is represented in\nradix notation.\na) 0673 b) 0674 c) 1113 d) 1114\n8 8 8 8",
     "tag": "Uncategorized"
   },
   {
@@ -17805,7 +17805,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2014A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following notational conventions are applied as\nshown in the tables.\nI. Standards\nNotation\nName of the standard\nin the exam questions\nISO 9001 ISO 9001:2008\nISO 14001 ISO 14001:2004\nISO/IEC 20000-1 ISO/IEC 20000-1:2011\nISO/IEC 20000-2 ISO/IEC 20000-2:2012\nISO/IEC 25010 ISO/IEC25010:2013\nISO/IEC 27001 ISO/IEC 27001:2005\nISO/IEC 27002 ISO/IEC 27002:2013\nISO/IEC 12207 ISO/IEC 12207:2008\nISO 21500 ISO 21500:2012\nITIL ITIL 2011 edition\nPMBOK PMBOK Guide \u2013 Fifth Edition\nII. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or registered\ntrademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used within.",
+    "text": "Q1. When a total of 400 data records are stored in contiguous memory starting from the\naddress 0274 , which of the following is the address where the last data record is stored?\n8\nHere, each data record occupies one address location, and each address is represented in\nradix notation.\na) 0673 b) 0674 c) 1113 d) 1114\n8 8 8 8",
     "tag": "Uncategorized"
   },
   {
@@ -17816,7 +17816,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2014S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or registered\ntrademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following is equivalent to the calculation result of the arithmetic expression\nshown below? Here, each number is represented in radix notation; that is, the radix is\nrepresented by a subscript following the number.\n6140 + 10011100 \u2013 C46\n8 2 16\na) 1011 0101 b) 256 c) 180 d) B6\n2 8 10 16",
     "tag": "Uncategorized"
   },
   {
@@ -17827,7 +17827,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2014S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination conducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or registered\ntrademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following is equivalent to the calculation result of the arithmetic expression\nshown below? Here, each number is represented in radix notation; that is, the radix is\nrepresented by a subscript following the number.\n6140 + 10011100 \u2013 C46\n8 2 16\na) 1011 0101 b) 256 c) 180 d) B6\n2 8 10 16",
     "tag": "Uncategorized"
   },
   {
@@ -19576,7 +19576,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2013A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. When the hexadecimal value 2A is stored in an 8-bit register and is logically shifted left\nthree bits, which of the following is the resulting value in decimal? Here, the bit\npositions vacated on the right are filled with zeros, and bits shifted out on the left are\ndiscarded.\na) 2 b) 5 c) 80 d) 160",
     "tag": "Uncategorized"
   },
   {
@@ -19587,7 +19587,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2013A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. When the hexadecimal value 2A is stored in an 8-bit register and is logically shifted left\nthree bits, which of the following is the resulting value in decimal? Here, the bit\npositions vacated on the right are filled with zeros, and bits shifted out on the left are\ndiscarded.\na) 2 b) 5 c) 80 d) 160",
     "tag": "Uncategorized"
   },
   {
@@ -19598,7 +19598,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2013S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following is the result of calculating the arithmetic expression \u201cB6\u20137C\u201d?\nHere, all numbers are represented in unsigned hexadecimal.\na) 32 b) 3A c) B2 d) BA",
     "tag": "Uncategorized"
   },
   {
@@ -19609,7 +19609,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2013S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following is the result of calculating the arithmetic expression \u201cB6\u20137C\u201d?\nHere, all numbers are represented in unsigned hexadecimal.\na) 32 b) 3A c) B2 d) BA",
     "tag": "Uncategorized"
   },
   {
@@ -21358,7 +21358,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2012A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Computer A uses the single precision of \u201cIEEE Standard for Binary Floating-Point\nArithmetic\u201d (IEEE 754) as shown below.\n0 1 8 9 31\nS E (8 bits) F (23 bits)\nOn the other hand, computer B can represent 32-bit floating-point numbers as shown\nbelow.\n0 1 7 8 31\nS E (7 bits) F (24 bits)\nWhich of the following is the appropriate description concerning the comparison of\nrange and precision of floating-point values represented by computers A and B? Here,\n\u201cS\u201d is a sign bit, \u201cE\u201d is an exponent field, and \u201cF\u201d is a fraction field.\na) The range and precision of computer A are greater than those of computer B.\nb) The range and precision of computer A are smaller than those of computer B.\nc) The range of computer A is greater than that of computer B, but the precision is\nsmaller.\nd) The range of computer A is smaller than that of computer B, but the precision is\ngreater.",
     "tag": "Uncategorized"
   },
   {
@@ -21369,7 +21369,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2012A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 \u30a6\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Computer A uses the single precision of \u201cIEEE Standard for Binary Floating-Point\nArithmetic\u201d (IEEE 754) as shown below.\n0 1 8 9 31\nS E (8 bits) F (23 bits)\nOn the other hand, computer B can represent 32-bit floating-point numbers as shown\nbelow.\n0 1 7 8 31\nS E (7 bits) F (24 bits)\nWhich of the following is the appropriate description concerning the comparison of\nrange and precision of floating-point values represented by computers A and B? Here,\n\u201cS\u201d is a sign bit, \u201cE\u201d is an exponent field, and \u201cF\u201d is a fraction field.\na) The range and precision of computer A are greater than those of computer B.\nb) The range and precision of computer A are smaller than those of computer B.\nc) The range of computer A is greater than that of computer B, but the precision is\nsmaller.\nd) The range of computer A is smaller than that of computer B, but the precision is\ngreater.",
     "tag": "Uncategorized"
   },
   {
@@ -21380,7 +21380,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2012S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted in 2012?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following is the binary fraction that is equivalent to the decimal fraction\n115.625?\na) 1100111.1001110001 b) 1100111.101\nc) 1110011.1001110001 d) 1110011.101",
     "tag": "Uncategorized"
   },
   {
@@ -21391,7 +21391,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2012S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted in 2012?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following is the binary fraction that is equivalent to the decimal fraction\n115.625?\na) 1100111.1001110001 b) 1100111.101\nc) 1110011.1001110001 d) 1110011.101",
     "tag": "Uncategorized"
   },
   {
@@ -23140,7 +23140,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2011A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following graphic symbols are used for logic\ngates and circuit components.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nII. Circuit symbol\nGraphic symbol Explanation\nResistor\nEarth (Ground)\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following is equivalent to the result of the arithmetic expression\n\u201c753 \uf02dA6 \u201d? Here, each number is written in radix notation; that is, the radix is\n8 16\nrepresented by a subscript following the number.\na) 101001101 b) 501 c) 325 d) 135\n2 8 10 16",
     "tag": "Uncategorized"
   },
   {
@@ -23151,7 +23151,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2011A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the following graphic symbols are used for logic\ngates and circuit components.\nI. Logic Circuit\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nThree-state buffer (or tri-state buffer)\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nII. Circuit symbol\nGraphic symbol Explanation\nResistor\nEarth (Ground)\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following is equivalent to the result of the arithmetic expression\n\u201c753 \uf02dA6 \u201d? Here, each number is written in radix notation; that is, the radix is\n8 16\nrepresented by a subscript following the number.\na) 101001101 b) 501 c) 325 d) 135\n2 8 10 16",
     "tag": "Uncategorized"
   },
   {
@@ -23162,7 +23162,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2011S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted in 2011?\na) March b) April c) May d) June\nSince the correct answer is \u201ca)\u201d (March), mark your answer sheet as follows:\n[Sample Answer]\nQ1 B C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. According to a survey of 100 students, there are 40 students studying English, 30\nstudying French, and 25 studying Spanish. In addition, 8 students are studying English\nand French, 6 are studying English and Spanish, 5 are studying French and Spanish, and\n22 are not studying any of the three languages. Which of the following is the number\nof students studying all three languages?\na) 1 b) 2 c) 3 d) 4",
     "tag": "Uncategorized"
   },
   {
@@ -23173,7 +23173,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2011S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted in 2011?\na) March b) April c) May d) June\nSince the correct answer is \u201ca)\u201d (March), mark your answer sheet as follows:\n[Sample Answer]\nQ1 B C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. According to a survey of 100 students, there are 40 students studying English, 30\nstudying French, and 25 studying Spanish. In addition, 8 students are studying English\nand French, 6 are studying English and Spanish, 5 are studying French and Spanish, and\n22 are not studying any of the three languages. Which of the following is the number\nof students studying all three languages?\na) 1 b) 2 c) 3 d) 4",
     "tag": "Uncategorized"
   },
   {
@@ -24922,7 +24922,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2010A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. There is an 8-bit register where integers are represented in binary by using 2\u2019s\ncomplement for negative numbers. When the decimal integer \u201c\u201324\u201d is stored in the\nregister and then arithmetically shifted 2 bits right, what is the resulting value in\ndecimal? Here, the leftmost bit of the register is used as a sign bit.\na) \u2013102 b) \u201396 c) \u20136 d) 58",
     "tag": "Uncategorized"
   },
   {
@@ -24933,7 +24933,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2010A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. There is an 8-bit register where integers are represented in binary by using 2\u2019s\ncomplement for negative numbers. When the decimal integer \u201c\u201324\u201d is stored in the\nregister and then arithmetically shifted 2 bits right, what is the resulting value in\ndecimal? Here, the leftmost bit of the register is used as a sign bit.\na) \u2013102 b) \u201396 c) \u20136 d) 58",
     "tag": "Uncategorized"
   },
   {
@@ -24944,7 +24944,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2010S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. When the equation \u201c100 \u201334 =44 \u201d holds, which of the following represents 26 ?\nn n n n\nHere, each number is written in radix notation; that is, each subscript \u201cn\u201d indicates the\nradix. In addition, when there is no subscript, the radix 10 is implied.\na) 18 b) 20 c) 22 d) 38",
     "tag": "Uncategorized"
   },
   {
@@ -24955,7 +24955,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2010S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. When the equation \u201c100 \u201334 =44 \u201d holds, which of the following represents 26 ?\nn n n n\nHere, each number is written in radix notation; that is, each subscript \u201cn\u201d indicates the\nradix. In addition, when there is no subscript, the radix 10 is implied.\na) 18 b) 20 c) 22 d) 38",
     "tag": "Uncategorized"
   },
   {
@@ -26704,7 +26704,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2009A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following represents the hexadecimal fraction 3A.5C as a decimal\nfraction?\n939 3735 14939 14941\na) b) c) d)\n16 64 256 256",
     "tag": "Uncategorized"
   },
   {
@@ -26715,7 +26715,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2009A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nSymbols commonly used in questions\nUnless otherwise noted in each question, the logic gate symbols are applied as shown in the\ntable below.\nGraphic symbol Explanation\nAND gate\nNAND gate\nOR gate\nNOR gate\nExclusive OR (XOR) gate\nExclusive NOR gate\nBuffer\nNOT gate\nTri-state buffer\nNote: The small circle or \u201cbubble\u201d on either the input or output\nterminal shows inversion or negation of the logic state.\nCompany names and product names appearing in the examination questions are trademarks or\nregistered trademarks of their respective companies. Note that the \u00ae and \u2122 symbols are not used\nwithin.",
+    "text": "Q1. Which of the following represents the hexadecimal fraction 3A.5C as a decimal\nfraction?\n939 3735 14939 14941\na) b) c) d)\n16 64 256 256",
     "tag": "Uncategorized"
   },
   {
@@ -26726,7 +26726,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2009S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nCompany names and product names appearing in the examination questions are\ntrademarks or registered trademarks of their respective companies. Note that the \u00ae\nand \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following arithmetic expressions is correct? Here, a number is written in\nradix notation; that is, a decimal subscript following the number (i.e. number ) is\nradix\nused to indicate the radix.\na) 1010 + 10 = 17 b) 1101 + 4 = 17\n2 8 10 2 16 10\nc) 14 + 11 = 16 d) B + 10 = 14\n8 2 10 16 2 10",
     "tag": "Uncategorized"
   },
   {
@@ -26737,7 +26737,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2009S_A/Q01.png",
-    "text": "Q1. In which month is the spring Fundamental IT Engineer Examination\nconducted?\na) March b) April c) May d) June\nSince the correct answer is \u201cb)\u201d (April), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nCompany names and product names appearing in the examination questions are\ntrademarks or registered trademarks of their respective companies. Note that the \u00ae\nand \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following arithmetic expressions is correct? Here, a number is written in\nradix notation; that is, a decimal subscript following the number (i.e. number ) is\nradix\nused to indicate the radix.\na) 1010 + 10 = 17 b) 1101 + 4 = 17\n2 8 10 2 16 10\nc) 14 + 11 = 16 d) B + 10 = 14\n8 2 10 16 2 10",
     "tag": "Uncategorized"
   },
   {
@@ -28486,7 +28486,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2008A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nCompany names and product names appearing in the test questions are\ntrademarks or registered trademarks of their respective companies. Note that the \u00ae\nand \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following decimal fractions becomes a finite fraction when converted to\nan octal number?\na) 0.3 b) 0.4 c) 0.5 d) 0.8",
     "tag": "Uncategorized"
   },
   {
@@ -28497,7 +28497,7 @@ window.SEARCH_DATA = [
     "type": "Morning",
     "q_num": 1,
     "img_path": "../cropped_questions/2008A_A/Q01.png",
-    "text": "Q1. In which month is the autumn Fundamental IT Engineer Examination\nconducted?\na) September b) October c) November d) December\nSince the correct answer is \u201cb)\u201d (October), mark your answer sheet as follows:\n[Sample Answer]\nQ1 A \u30a6 C D\nDo not open the exam booklet until instructed to do so.\nInquiries about the exam questions will not be answered.\nCompany names and product names appearing in the test questions are\ntrademarks or registered trademarks of their respective companies. Note that the \u00ae\nand \u2122 symbols are not used within.",
+    "text": "Q1. Which of the following decimal fractions becomes a finite fraction when converted to\nan octal number?\na) 0.3 b) 0.4 c) 0.5 d) 0.8",
     "tag": "Uncategorized"
   },
   {
@@ -30258,7 +30258,7 @@ window.SEARCH_DATA = [
     "q_num": 1,
     "img_path": "../cropped_questions/2007A_A/Q01.png",
     "text": "Q1. What range of decimal numbers can be represented with an 11-bit two's-complement\nnumber?\na) -2048 to 2047\nb) -2048 to 2048\nc) -1024 to 1023\nd) -1024 to 1024",
-    "tag": "Number Systems"
+    "tag": "Two's Complement Representation"
   },
   {
     "id": "2007S_A_Q01",
@@ -30280,7 +30280,7 @@ window.SEARCH_DATA = [
     "q_num": 2,
     "img_path": "../cropped_questions/2007A_A/Q02.png",
     "text": "Q2. Which of the following decimal fractions becomes a finite fraction in an octal\nrepresentation?\na) 0.3 b) 0.4 c) 0.5 d) 0.8",
-    "tag": "Number Systems"
+    "tag": "Radix Conversion"
   },
   {
     "id": "2007S_A_Q02",
@@ -30302,7 +30302,7 @@ window.SEARCH_DATA = [
     "q_num": 3,
     "img_path": "../cropped_questions/2007A_A/Q03.png",
     "text": "Q3. When a certain natural number x is expressed as a 2n-digit binary number \u201c1010...10\u201d\nconsisting of 1 and 0 arranged alternately, which of the following equations can be\nformulated in terms of the number x?\nx\na) x + = 22n\n2\nx\nb) x + = 22n-1\n2\nx\nc) x + = 22n+1\n2\nx\nd) x + = 22n+1-1\n2",
-    "tag": "Number Systems"
+    "tag": "Binary Number Systems"
   },
   {
     "id": "2007S_A_Q03",
@@ -30324,7 +30324,7 @@ window.SEARCH_DATA = [
     "q_num": 4,
     "img_path": "../cropped_questions/2007A_A/Q04.png",
     "text": "Q4. An integer m is stored in a register as a binary value. If this value is shifted to the left\nby three bits and m is added to the shifted value, how many times as large as m is the\nresulting number? Here, no overflow occurs.\na) 4 b) 7 c) 8 d) 9",
-    "tag": "Number Systems"
+    "tag": "Bitwise Shift Operations"
   },
   {
     "id": "2007S_A_Q04",
@@ -30346,7 +30346,7 @@ window.SEARCH_DATA = [
     "q_num": 5,
     "img_path": "../cropped_questions/2007A_A/Q05.png",
     "text": "Q5. Which of the following is the reason why a large number of computers use \u201ccomplement\nrepresentation\u201d to simplify arithmetic circuits?\na) Addition can be processed by subtraction.\nb) Division can be processed by a combination of subtractions.\nc) Multiplication can be processed by a combination of additions.\nd) Subtraction can be processed by addition.",
-    "tag": "Number Systems"
+    "tag": "Complement Representation"
   },
   {
     "id": "2007S_A_Q05",
@@ -30368,7 +30368,7 @@ window.SEARCH_DATA = [
     "q_num": 6,
     "img_path": "../cropped_questions/2007A_A/Q06.png",
     "text": "Q6. Which of the following is the appropriate statement concerning Newton\u2019s method that is\nknown as an algorithm for obtaining the approximate value of the solution to the\nformula \u0192(x) = 0?\na) An approximate value of the solution can be obtained even if the function \u0192(x) is\nindifferentiable.\nb) An approximate value of the solution is obtained geometrically using the tangent\nlines of y = \u0192(x).\nc) No matter what initial values are provided, an approximate value of the solution can\nalways be obtained.\nd) Two different initial values must be provided.",
-    "tag": "Numerical Analysis"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q06",
@@ -30390,7 +30390,7 @@ window.SEARCH_DATA = [
     "q_num": 7,
     "img_path": "../cropped_questions/2007A_A/Q07.png",
     "text": "Q7. There is a four-digit number N N N C that is used for Customer Account Number\n1 2 3\n(CAN). The right most digit \u201cC\u201d can be calculated as follows:\nC = (N *3 + N *5 + N *7) mod 10\n1 2 3\nWhich of the following is a correct CAN? Here, x mod y returns the remainder when x\nis divided by y.\na) 7714 b) 7715 c) 9690 d) 9695",
-    "tag": "Encoding"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q07",
@@ -30412,7 +30412,7 @@ window.SEARCH_DATA = [
     "q_num": 8,
     "img_path": "../cropped_questions/2007A_A/Q08.png",
     "text": "Q8. Two players, X and Y play a dice game. A pair of dice is tossed. If the sum of the dice\nis 2, 4, or 6, X wins the game. Otherwise, Y wins. What is the probability that Y wins\nthe game?\na) 1/4 b) 1/3 c) 1/2 d) 3/4",
-    "tag": "Probability"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q08",
@@ -30434,7 +30434,7 @@ window.SEARCH_DATA = [
     "q_num": 9,
     "img_path": "../cropped_questions/2007A_A/Q09.png",
     "text": "Q9. There are a total of 1,900 students in a school, 553 of whom are taking a course in\ncomputer science, 667 of whom are in mathematics, and 290 of whom are in both\ncomputer science and mathematics. How many students are not taking a course in\neither computer science or in mathematics?\na) 680 b) 930 c) 970 d) 1260",
-    "tag": "Set Theory"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q09",
@@ -30456,7 +30456,7 @@ window.SEARCH_DATA = [
     "q_num": 10,
     "img_path": "../cropped_questions/2007A_A/Q10.png",
     "text": "Q10. Which of the following is equivalent to the logical expression A\u2022B+B\u2022C\u2022(B+C)?\nHere, \u201c\u2022\u201d is the logical product, and \u201c+\u201d is the logical sum.\na) A\u2022B+ A\u2022C b) A\u2022C + B\nc) B\u2022(A+C) d) B+ A\u2022C",
-    "tag": "Logic"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q10",
@@ -30478,7 +30478,7 @@ window.SEARCH_DATA = [
     "q_num": 11,
     "img_path": "../cropped_questions/2007A_A/Q11.png",
     "text": "Q11. There are three 7-bit character codes: 30, 3F, and 7A. When an even parity bit is\nadded to the front of each character code, which of the following shows the correct\nresult? Here, the character codes are expressed in hexadecimal.\na) 30, 3F, 7A b) 30, 3F, FA\nc) B0, 3F, FA d) B0, BF, 7A",
-    "tag": "Encoding"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q11",
@@ -30500,7 +30500,7 @@ window.SEARCH_DATA = [
     "q_num": 12,
     "img_path": "../cropped_questions/2007A_A/Q12.png",
     "text": "Q12. Which of the following data structures uses the LIFO (Last In First Out) method in order\nto manage data?\na) Array b) Linked list c) Queue d) Stack",
-    "tag": "Linear"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q12",
@@ -30522,7 +30522,7 @@ window.SEARCH_DATA = [
     "q_num": 13,
     "img_path": "../cropped_questions/2007A_A/Q13.png",
     "text": "Q13. In a microprocessor, there are two general registers: GRi and GRj (hereinafter referred\nto as GRx instead of GRi or GRj). PUSH GRx is used for adding the contents of GRx\nto the top of a stack. POP GRx is for removing the current top data of the stack and\nstoring it to GRx. Which of the following operations can exchange the contents of GRi\nand GRj?\na) PUSH GRi\nPOP GRj\nPUSH GRj\nPOP GRi\nb) PUSH GRj\nPOP GRi\nPUSH GRi\nPOP GRj\nc) PUSH GRi\nPUSH GRj\nPOP GRi\nPOP GRj\nd) PUSH GRi\nPUSH GRj\nPOP GRj\nPOP GRi",
-    "tag": "Instruction Set"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q13",
@@ -30544,7 +30544,7 @@ window.SEARCH_DATA = [
     "q_num": 14,
     "img_path": "../cropped_questions/2007A_A/Q14.png",
     "text": "Q14. Which of the following is the appropriate statement concerning data sorting methods?\na) The \u201cbubble sort\u201d method determines an intermediate reference value and divides the\nelements into two groups of \u201clarger\u201d values and \u201csmaller\u201d values. This operation\nis then repeated recursively on these two groups.\nb) The \u201cheap sort\u201d method builds an ordered tree from the unsorted portion of the\nelements, extracts the maximum or minimum value from this ordered tree, and\nmoves it to the sorted portion. This operational sequence is then repeated to\ngradually shrink the unsorted portion.\nc) The \u201cquick sort\u201d method sorts each substring composed of elements extracted at\nregular intervals, and then the interval is further decreased and the same operation is\nperformed again. This operation is repeated until the interval becomes 1.\nd) The \u201cshell sort\u201d method repeatedly compares two adjacent elements and swaps them\nif the first element is larger than the second.",
-    "tag": "Sorting"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q14",
@@ -30566,7 +30566,7 @@ window.SEARCH_DATA = [
     "q_num": 15,
     "img_path": "../cropped_questions/2007A_A/Q15.png",
     "text": "Q15. A binary tree is said to be perfect, if all its leaves are at the same depth and every internal\nnode has two children. Which of the following is correct about the perfect binary tree?\nHere, n is the number of nodes, and h is the height of the perfect binary tree.\na) h = log (n+1)\n2\nb) If every proper subtree of a binary tree is perfect, then the tree itself must also be\nperfect.\nc) n = 2h+1 -1\nd) The number of internal nodes is 2h.",
-    "tag": "Non-Linear"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q15",
@@ -30588,7 +30588,7 @@ window.SEARCH_DATA = [
     "q_num": 16,
     "img_path": "../cropped_questions/2007A_A/Q16.png",
     "text": "Q16. A depth-first search (DFS) visits all the vertices in a graph. When an edge to be\nexplored next is chosen, this algorithm always chooses to go \u201cdeeper\u201d into the graph.\nThat is, it will pick the next adjacent unvisited vertex until reaching a vertex that has no\nunvisited adjacent vertices. The algorithm will then backtrack to the previous vertex\nand continue along any as-yet unexplored edges from that vertex. After DFS has\nvisited all the reachable vertices from a particular source vertex, it chooses one of the\nremaining undiscovered vertices and continues the search. Which of the following is\nnot a valid order in which the vertices of the graph below can be marked as \u201cvisited\u201d\nduring a DFS?\na) ABCDEF b) ABDFEC\nc) ABEDFC d) ADEFCB",
-    "tag": "Searching"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q16",
@@ -30610,7 +30610,7 @@ window.SEARCH_DATA = [
     "q_num": 17,
     "img_path": "../cropped_questions/2007A_A/Q17.png",
     "text": "Q17. Which of the following equations holds well in the postfix notation (or Reverse Polish\nNotation)? Here, x, y, and z are variables.\na) xy+z- = xyz+- b) xy-z+ = xyz-+\nc) xy-z+ = xyz-- d) xy-z- = xyz--",
-    "tag": "Linear"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q17",
@@ -30632,7 +30632,7 @@ window.SEARCH_DATA = [
     "q_num": 18,
     "img_path": "../cropped_questions/2007A_A/Q18.png",
     "text": "Q18. The following function f (n, k) exists:\n1 (k=0)\nf (n, k)= f (n-1, k-1) + f (n-1, k) (0<k<n)\n1 (k=n)\nWhat is the value of f (4, 2)?\na) 3 b) 4 c) 5 d) 6",
-    "tag": "Recursion"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q18",
@@ -30654,7 +30654,7 @@ window.SEARCH_DATA = [
     "q_num": 19,
     "img_path": "../cropped_questions/2007A_A/Q19.png",
     "text": "Q19. Which of the following logic circuits generates the same output as the logic circuit\nshown in the figure below? Here, , , and represent the\nlogical product, the logical sum, and the logical negation respectively.\nA\nX\nB\na) A b) A\nX X\nB\nB\nc) A d) A\nX X\nB\nB",
-    "tag": "Logic Gates"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q19",
@@ -30676,7 +30676,7 @@ window.SEARCH_DATA = [
     "q_num": 20,
     "img_path": "../cropped_questions/2007A_A/Q20.png",
     "text": "Q20. Which of the following leads to the von Neumann bottleneck?\na) Capacity of main memory\nb) CPU performance\nc) Data transfer speed between CPU and I/O devices\nd) Data transfer speed between CPU and main memory",
-    "tag": "Architecture"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q20",
@@ -30698,7 +30698,7 @@ window.SEARCH_DATA = [
     "q_num": 21,
     "img_path": "../cropped_questions/2007A_A/Q21.png",
     "text": "Q21. Which of the following is the highest priority process just after execution of each\ninstruction on CPU?\na) Check if there are any instructions waiting\nb) Check if there are any interrupts waiting\nc) Fetch the next instruction\nd) Transfer to an interrupt-handling program",
-    "tag": "Control"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q21",
@@ -30720,7 +30720,7 @@ window.SEARCH_DATA = [
     "q_num": 22,
     "img_path": "../cropped_questions/2007A_A/Q22.png",
     "text": "Q22. The instruction pipeline is a technique used in order to improve the CPU performance.\nInstructions are divided into stages and moved through the processor. An RISC\nprocessor has five-stage pipeline (Instruction fetch, Instruction decode, Execute,\nMemory access, Register write back) and can accept a new instruction at every clock\ncycle. How many clock cycles does this processor take for completion of the\nexecution of 10 instructions? Here, there are no pipeline stalls, such as branch stall,\nload stall, and so on.\na) 13 b) 14 c) 15 d) 16",
-    "tag": "Architecture"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q22",
@@ -30742,7 +30742,7 @@ window.SEARCH_DATA = [
     "q_num": 23,
     "img_path": "../cropped_questions/2007A_A/Q23.png",
     "text": "Q23. There is a processor with a clock frequency of 1 GHz. When the instruction set of this\nprocessor is composed of two types of commands as shown in the table below, what is\nthe approximate processing performance in MIPS?\nCommand type Execution time (clocks) Execution frequency (%)\nCommand 1 10 60\nCommand 2 5 40\na) 34 b) 100 c) 125 d) 133",
-    "tag": "Performance"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q23",
@@ -30764,7 +30764,7 @@ window.SEARCH_DATA = [
     "q_num": 24,
     "img_path": "../cropped_questions/2007A_A/Q24.png",
     "text": "Q24. Which of the following is classified as an external interrupt?\na) An interrupt which is caused by overflow in floating point operations\nb) An interrupt which is generated when a request for a service, such as a demand for\ninput/output, is issued to OS\nc) An interrupt which occurs when a page not existing in the main memory is to be\naccessed\nd) An interrupt which takes place when hardware detects malfunctions",
-    "tag": "Control"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q24",
@@ -30786,7 +30786,7 @@ window.SEARCH_DATA = [
     "q_num": 25,
     "img_path": "../cropped_questions/2007A_A/Q25.png",
     "text": "Q25. A CPU has four blocks of cache memory. Using the LRU (Least Recently Used)\nreplacement algorithm, which memory blocks are stored in the cache memory after the\nexecution of the following sequence of access to memory blocks: 1 2 3 4 5 2 5 4 1 5 2 3?\nHere, at the start of the memory access, the four cache blocks are empty and used in\nsequence until all the blocks are occupied. In other words, the cache blocks contain\nmemory blocks \u201c1 2 3 4\u201d after access to the first four memory blocks.\na) 1 2 3 5 b) 1 5 2 3 c) 3 2 5 1 d) 5 2 1 3",
-    "tag": "Cache"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q25",
@@ -30808,7 +30808,7 @@ window.SEARCH_DATA = [
     "q_num": 26,
     "img_path": "../cropped_questions/2007A_A/Q26.png",
     "text": "Q26. Which of the following appropriately describes the purpose of the cache memory used\nby processors?\na) To compensate for the difference between the main memory access speed and the\nprocessor speed\nb) To manage frequently-used programs on a resident basis\nc) To perform virtual memory address conversion at high speed\nd) To perform virtual memory paging process at high speed",
-    "tag": "Cache"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q26",
@@ -30830,7 +30830,7 @@ window.SEARCH_DATA = [
     "q_num": 27,
     "img_path": "../cropped_questions/2007A_A/Q27.png",
     "text": "Q27. Which of the following appropriately describes \u201cmemory interleaving\u201d that is one of\nthe high-speed computer technologies?\na) It is a method for bridging the gap between register and main memory access speeds\nby copying a part of the main memory data to the cache.\nb) It is a method for dividing the memory into multiple independently-operating groups\nand accessing each group in parallel.\nc) It is a method for transferring data directly between the main memory and an I/O\ndevice or between main memories without passing through the CPU.\nd) It is a method for writing data to the cache or writing data to the main memory if the\ncache overflows, when sending data to the main memory.",
-    "tag": "Main Memory"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q27",
@@ -30852,7 +30852,7 @@ window.SEARCH_DATA = [
     "q_num": 28,
     "img_path": "../cropped_questions/2007A_A/Q28.png",
     "text": "Q28. How many tracks are required to store a sequentially organized data file including a\ntotal of 10,000 records on the hard disk drive under the following conditions? Here,\neach track can contain multiple blocks, but each block cannot be stored across multiple\ntracks.\n[Conditions]\nRecord length: 300 bytes/record\nTrack capacity: 30,000 bytes/track\nInter-block gap: 400 bytes\nBlocking factor: 20 records/block\na) 100 b) 106 c) 107 d) 125",
-    "tag": "Disk Drives"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q28",
@@ -30874,7 +30874,7 @@ window.SEARCH_DATA = [
     "q_num": 29,
     "img_path": "../cropped_questions/2007A_A/Q29.png",
     "text": "Q29. The head of a hard disk drive is currently positioned at cylinder number 100, and the\ncylinder numbers 120, 90, 70, 80, 140, 110, and 60 are lined up in the I/O request queue.\nWhat is the total number of cylinders that the head moves under the following\nconditions?\n[Conditions]\n(1) The seek optimization method reorders the I/O requests so that the head can move as\nmuch as possible in a single direction, and the requests are processed in order of\ncylinder number.\n(2) The requests so far are in the direction where the cylinder numbers increase.\n(3) When there are no more requests in the current direction, the direction of head\nmovement is reversed.\n(4) The results are unaffected by the processing order of the requests.\n(5) New requests do not occur during the process.\na) 80 b) 120 c) 160 d) 220",
-    "tag": "Disk Drives"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q29",
@@ -30896,7 +30896,7 @@ window.SEARCH_DATA = [
     "q_num": 30,
     "img_path": "../cropped_questions/2007A_A/Q30.png",
     "text": "Q30. Which of the following technologies is used to divide each data file into blocks at\nconstant length and to store them across multiple hard disks that can be accessed in\nparallel, thereby speeding up file access?\na) Disk at once b) Disk cache\nc) Disk mirroring d) Disk striping",
-    "tag": "Redundancy"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q30",
@@ -30918,7 +30918,7 @@ window.SEARCH_DATA = [
     "q_num": 31,
     "img_path": "../cropped_questions/2007A_A/Q31.png",
     "text": "Q31. Which of the following appropriately describes a method of recording data on CD-R?\na) A two-layer structure is provided in which two disks are bonded together. The\nrecording layer is subjected to phase changes by means of laser beams, thereby\nrecording the data.\nb) Laser beams are radiated on the magnetized disk recording film to heat the film and\nto change the magnetization direction by means of a magnetic head, thereby\nrecording the data.\nc) Laser beams are radiated onto an organic dye layer in a disk. As a result, a series of\nburned spots called pits are created on that layer, thereby recording the data.\nd) The magnetization direction of the magnetic substance applied to a disk is changed\nby means of a magnetic head, thereby recording the data.",
-    "tag": "Technologies"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q31",
@@ -30940,7 +30940,7 @@ window.SEARCH_DATA = [
     "q_num": 32,
     "img_path": "../cropped_questions/2007A_A/Q32.png",
     "text": "Q32. Which of the following is a method whereby the relevant program is read into main\nmemory and the CPU reads out and executes it sequentially?\na) Addressing method b) Direct program control method\nc) Stored program method d) Virtual memory method",
-    "tag": "Architecture"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q32",
@@ -30962,7 +30962,7 @@ window.SEARCH_DATA = [
     "q_num": 33,
     "img_path": "../cropped_questions/2007A_A/Q33.png",
     "text": "Q33. Which of the following functions is a part of OS task management?\na) CPU allocation b) File protection\nc) I/O execution d) Spool control",
-    "tag": "Basics"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q33",
@@ -30984,7 +30984,7 @@ window.SEARCH_DATA = [
     "q_num": 34,
     "img_path": "../cropped_questions/2007A_A/Q34.png",
     "text": "Q34. When variables shared among tasks are updated, an unexpected result may occur if\nsynchronous control among tasks is not performed. When the initial value of the\nvariable x shared among tasks is 3, the final value of x is expected to be 12 if task A\nexecutes the assignment statement \u201cx = x + x\u201d and if task B executes the assignment\nstatement \u201cx = x \u00d7 x.\u201d Which of the following is the appropriate execution sequence\nthat can return the expected result? Here, each assignment statement is executed by\nbeing divided into four portions as shown below.\nTask A (x = x + x) Task B (x = x \u00d7 x)\na1: The value of x is referred to and b1: The value of x is referred to and\nis saved as e. is saved as h.\na2: The value of x is referred to and b2: The value of x is referred to and\nis saved as f. is saved as i.\na3: e + f is computed and is saved b3: h \u00d7 i is computed and is saved\nas g. as j.\na4: The value of x is updated by b4: The value of x is updated by\nmeans of g. means of j.\na) a1 \uf0e0 a2 \uf0e0 b1 \uf0e0 b2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b3 \uf0e0 b4\nb) a1 \uf0e0 b1 \uf0e0 b2 \uf0e0 b3 \uf0e0 b4 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4\nc) b1 \uf0e0 a1 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b2 \uf0e0 b3 \uf0e0 b4\nd) b1 \uf0e0 b2 \uf0e0 b3 \uf0e0 a1 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b4",
-    "tag": "Synchronization"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q34",
@@ -31006,7 +31006,7 @@ window.SEARCH_DATA = [
     "q_num": 35,
     "img_path": "../cropped_questions/2007A_A/Q35.png",
     "text": "Q35. Which of the following has the feature whereby only minimally limited OS functions,\nsuch as memory management and process management, are supported and other OS\nfunctions, such as the file system, are implemented as server processes?\na) Microkernel b) Monolithic kernel\nc) Multithread d) Single user mode",
-    "tag": "Kernel"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q35",
@@ -31028,7 +31028,7 @@ window.SEARCH_DATA = [
     "q_num": 36,
     "img_path": "../cropped_questions/2007A_A/Q36.png",
     "text": "Q36. Which of the following is the appropriate statement concerning client/server\narchitecture?\na) It divides a series of processes into two groups by means of an inter-process\ncommunication mechanism; one group includes processes that request services, and\nthe other consists of processes that execute the requested services.\nb) It is mainly aimed at achieving horizontal load sharing by connecting terminals to\nmultiple workstations replacing the host computer.\nc) It is mainly aimed at achieving load sharing by distributing, among the terminals,\npart of functions and data files to be processed by the host computer.\nd) It is the generic term for a system configuration in which a PC is connected to a\nworkstation via LAN. The PC and workstation are called a client and a server,\nrespectively.",
-    "tag": "Models"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q36",
@@ -31050,7 +31050,7 @@ window.SEARCH_DATA = [
     "q_num": 37,
     "img_path": "../cropped_questions/2007A_A/Q37.png",
     "text": "Q37. Which of the following is the primary purpose to use RAID?\na) To achieve a lower hardware cost\nb) To ensure higher reliability and/or performance\nc) To improve data security\nd) To simplify the hardware configuration for a quick and easy installation",
-    "tag": "Redundancy"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q37",
@@ -31072,7 +31072,7 @@ window.SEARCH_DATA = [
     "q_num": 38,
     "img_path": "../cropped_questions/2007A_A/Q38.png",
     "text": "Q38. There is an RAID5 disk array system that is composed of 10 hard disk drives, and each\ndisk capacity is 100Gbytes. What is the approximate maximum capacity (in Gbytes)\nthat can be used to store user data and/or programs on this system?\na) 450 b) 500 c) 900 d) 1,000",
-    "tag": "Redundancy"
+    "tag": "Uncategorized"
   },
   {
     "id": "2007S_A_Q38",

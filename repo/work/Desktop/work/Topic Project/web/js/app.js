@@ -216,9 +216,13 @@ function renderTopics() {
         // We reached the questions (Topic level)
         renderTopicQuestions(path[path.length - 1], currentLevel);
     } else {
-        // Still in hierarchy (Category or Subcategory level)
+        // If we are at Subcategory level and it only has "General", skip the list
         const keys = Object.keys(currentLevel).sort();
-        
+        if (path.length === 2 && keys.length === 1 && keys[0] === 'General') {
+            renderTopicQuestions(path[path.length - 1], currentLevel['General']);
+            return;
+        }
+
         if (keys.length === 0) {
             topicsList.innerHTML = '<div class="no-results">No topics found in this category.</div>';
             return;

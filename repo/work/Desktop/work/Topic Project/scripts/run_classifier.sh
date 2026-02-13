@@ -21,9 +21,10 @@ echo -e "${BLUE}╚════════════════════�
 echo ""
 
 # Check for API Key
-if [ -z "$GOOGLE_API_KEY" ]; then
-    echo -e "${RED}Error: GOOGLE_API_KEY environment variable is not set.${NC}"
-    echo "Please set it with: export GOOGLE_API_KEY='your-api-key'"
+if [ -z "$GOOGLE_API_KEY" ] && [ ! -f ".api_collection" ]; then
+    echo -e "${RED}Error: API key not found.${NC}"
+    echo "Please set GOOGLE_API_KEY environment variable or"
+    echo "create a .api_collection file with your keys."
     exit 1
 fi
 
