@@ -5,7 +5,8 @@
         "IC card",
         "IC card reader",
         "SFA (Sales Force Automation)"
-      ]
+      ],
+      "Electronic Commerce": []
     },
     "Business Strategy Management": {
       "Strategic Mgmt": [
@@ -14,7 +15,9 @@
         "alliance",
         "business strategy",
         "core competence"
-      ]
+      ],
+      "Benchmarking": [],
+      "CRM": []
     },
     "Technological Strategy Management": {
       "Tech Strategy": [
@@ -37,7 +40,11 @@
         "accounting standards",
         "budgeting and accounting for services",
         "financial indicator"
-      ]
+      ],
+      "Profit and Cost Analysis": [],
+      "Inventory Valuation": [],
+      "Product Cost Calculation": [],
+      "Break-even Point Analysis": []
     },
     "Corporate Activities": {
       "Strategy": [
@@ -51,7 +58,9 @@
         "One-to-one marketing",
         "Relationship marketing",
         "marketing theory"
-      ]
+      ],
+      "Cause-and-effect Diagram": [],
+      "Graphic Analysis Tools": []
     },
     "Legal Affairs and Standardization": {
       "IP Rights": [
@@ -89,7 +98,19 @@
         "Probability distribution",
         "Queueing theory",
         "mathematical probability"
-      ]
+      ],
+      "Probability Calculation": [],
+      "Set Theory": [],
+      "Management Science Techniques": [],
+      "Logic Puzzle": [],
+      "Set Operations": [],
+      "Check Digit": [],
+      "Scatter Diagram and Correlation": [],
+      "Linear Programming": [],
+      "Numerical Rounding": [],
+      "Permutations and Combinations": [],
+      "Probability": [],
+      "Counting and Combinatorics": []
     }
   },
   "Data Structure and Algorithm": {
@@ -109,7 +130,15 @@
         "merge",
         "merge program",
         "sort program"
-      ]
+      ],
+      "Newton's Method": [],
+      "Sorting Algorithms": [],
+      "Depth-First Search": [],
+      "Recursive Function": [],
+      "State Transition Table": [],
+      "Linear Search Algorithm": [],
+      "Recursive Algorithm": [],
+      "Flowchart Tracing": []
     },
     "Data Structure": {
       "Structures": [
@@ -143,7 +172,17 @@
         "ordered tree",
         "record array",
         "spanning tree"
-      ]
+      ],
+      "Stack and LIFO": [],
+      "Binary Tree": [],
+      "Reverse Polish Notation": [],
+      "Stack Operations": [],
+      "Stack": [],
+      "Array and List Structures": [],
+      "Hash Table": [],
+      "Array Index Calculation": [],
+      "k-ary Tree Properties": [],
+      "Binary Search Tree": []
     }
   },
   "Database": {
@@ -165,7 +204,17 @@
         "Logical data model",
         "Physical data model",
         "data normalization"
-      ]
+      ],
+      "E-R Diagram": [],
+      "Database Design Process": [],
+      "Relational Algebra": [],
+      "Exclusive Control": [],
+      "Database Recovery": [],
+      "Stored Procedure": [],
+      "Database Schema": [],
+      "Relational Database Concepts": [],
+      "Relational Algebra Operations": [],
+      "Transaction Management": []
     },
     "SQL": {
       "SQL Commands": [
@@ -173,7 +222,8 @@
         "SQL",
         "SQL injection",
         "interactive SQL method"
-      ]
+      ],
+      "SQL SELECT Statement": []
     },
     "Various Databases": {
       "Advanced DB": [
@@ -182,7 +232,8 @@
         "Distributed database",
         "big data",
         "data warehouse"
-      ]
+      ],
+      "Data Warehouse": []
     }
   },
   "Development Technology": {
@@ -198,7 +249,24 @@
         "software unit test",
         "software unit test report document",
         "software unit test specifications document"
-      ]
+      ],
+      "Object-oriented Approach": [],
+      "Data Oriented Approach": [],
+      "Driver and Stub": [],
+      "Black-box Testing": [],
+      "Debugging Tools": [],
+      "Object-oriented Design": [],
+      "UML Sequence Diagram": [],
+      "Software Design Diagrams": [],
+      "Module Cohesion and Coupling": [],
+      "Software Testing Principles": [],
+      "CASE Tools": [],
+      "Reverse Engineering": [],
+      "Object-Oriented Concepts": [],
+      "Software Internal Design": [],
+      "Structured Analysis": [],
+      "Object-Oriented Methodology": [],
+      "White-box Testing": []
     },
     "System Development Technology (SLCP)": {
       "Development Phases": [
@@ -227,7 +295,16 @@
       "Process Models": [
         "Agile",
         "spiral model"
-      ]
+      ],
+      "Internal Design": [],
+      "Data Flow Diagram": [],
+      "Function Point Method": [],
+      "Check Digit": [],
+      "Waterfall Model": [],
+      "Software Unit Testing": [],
+      "Regression Testing": [],
+      "Input Check Methods": [],
+      "Integration Testing": []
     }
   },
   "Hardware": {
@@ -239,14 +316,25 @@
         "Optical disc",
         "RAID",
         "SSD (Solid State Drive)"
-      ]
+      ],
+      "Disk Capacity Calculation": [],
+      "Disk Scheduling Algorithm": [],
+      "Disk Striping": [],
+      "Optical Disk Storage": [],
+      "RAID Technology": [],
+      "RAID disk array": [],
+      "HDD Access Time": [],
+      "Optical Disc Storage": []
     },
     "Basic Configuration of Computers": {
       "Logic Circuits": [
         "Logic circuit",
         "Sequential circuit",
         "flip-flop circuit"
-      ]
+      ],
+      "Stored Program Concept": [],
+      "RS Flip-flop": [],
+      "Five Units of Computer": []
     },
     "Central Processing Unit and Main Memory Unit": {
       "CPU Architecture": [
@@ -280,7 +368,28 @@
         "memory hierarchy",
         "primary cache",
         "\u2012\u2012 0 \u2012\u2012 access time"
-      ]
+      ],
+      "Stack Operations": [],
+      "von Neumann Bottleneck": [],
+      "Interrupt Processing": [],
+      "Instruction Pipelining": [],
+      "MIPS Calculation": [],
+      "Cache Replacement Algorithm": [],
+      "Cache Memory": [],
+      "Memory Interleaving": [],
+      "Semiconductor Memory": [],
+      "Addressing Modes": [],
+      "Pipeline Processing": [],
+      "Cache Memory Operations": [],
+      "Effective Access Time": [],
+      "Processor Registers": [],
+      "Instruction Execution Time": [],
+      "CPU Clock Frequency": [],
+      "CPU Performance Evaluation": [],
+      "Memory Addressing": [],
+      "Hamming Code": [],
+      "Cache Memory Hit Ratio": [],
+      "Memory Hierarchy": []
     },
     "Data Representation in Computers": {
       "Number Representation": [
@@ -313,7 +422,19 @@
       "Radix Conversion": [],
       "Binary Number Systems": [],
       "Bitwise Shift Operations": [],
-      "Complement Representation": []
+      "Complement Representation": [],
+      "Boolean Algebra Simplification": [],
+      "Even Parity Bit": [],
+      "Radix Calculation": [],
+      "Floating-point Normalization": [],
+      "2's Complement and Logical Shift": [],
+      "Floating-point Representation": [],
+      "Logical Operations": [],
+      "Number Base Conversion": [],
+      "Shift Operations": [],
+      "Bitwise Operations": [],
+      "Boolean Algebra": [],
+      "Logic Gates": []
     },
     "Input/Output Unit": {
       "I/O Devices": [
@@ -348,7 +469,12 @@
         "peripheral interface requirements",
         "serial bus",
         "serial interface"
-      ]
+      ],
+      "CMYK Color Model": [],
+      "Printer Performance Metrics": [],
+      "Pointing Devices": [],
+      "Display Devices": [],
+      "Serial Interface": []
     }
   },
   "Information Processing System": {
@@ -363,7 +489,10 @@
         "backup",
         "fault tolerant system",
         "reliability growth curve"
-      ]
+      ],
+      "Dual System": [],
+      "Duplex System": [],
+      "Fail-safe design": []
     },
     "Evaluation of Information Processing System": {
       "Performance Evaluation": [
@@ -376,13 +505,21 @@
         "benchmark test",
         "performance measurement baseline",
         "performance requirements"
-      ]
+      ],
+      "Check Digit Calculation": [],
+      "Performance Evaluation Methods": [],
+      "System Reliability Indices": [],
+      "System Availability Calculation": [],
+      "MTBF Calculation": [],
+      "Parallel System Availability": [],
+      "MTBF and MTTR": []
     },
     "Human Interface": {
       "UI/UX": [
         "Accessibility",
         "GUI"
-      ]
+      ],
+      "Computer Fonts": []
     },
     "Multimedia": {
       "Multimedia Tech": [
@@ -395,7 +532,8 @@
         "data compression",
         "lossless compression",
         "lossy compression"
-      ]
+      ],
+      "Markup Languages": []
     },
     "Processing Type of Information Processing System": {
       "Cloud & Virtualization": [
@@ -409,7 +547,12 @@
       "System Architecture": [
         "3-tier client/server systems",
         "client/server systems"
-      ]
+      ],
+      "Client/Server System": [],
+      "Batch and Online Processing": [],
+      "Distributed Processing": [],
+      "Remote Procedure Call": [],
+      "3-tier Architecture": []
     }
   },
   "Information Systems Strategy": {
@@ -452,7 +595,9 @@
         "JEIDA (Japan Electronic Industry Development LAN (Local Area Network)",
         "Router",
         "arp"
-      ]
+      ],
+      "Ethernet Standards": [],
+      "CSMA/CD Method": []
     },
     "Network Architecture": {
       "Protocols & Models": [
@@ -461,7 +606,9 @@
         "Network layer",
         "global IP address",
         "private IP address"
-      ]
+      ],
+      "OSI Reference Model": [],
+      "TCP Protocol": []
     },
     "Network Management": {
       "Management": [
@@ -483,7 +630,11 @@
         "PCM (Pulse Code Modulation)",
         "PCMCIA (Personal Computer Memory PM (Phase Modulation)",
         "PWM (Pulse Width Modulation) control"
-      ]
+      ],
+      "Subnet Mask": [],
+      "VPN": [],
+      "DHCP Protocol": [],
+      "Bit Error Rate": []
     },
     "The Internet": {
       "Internet Services": [
@@ -499,7 +650,10 @@
         "Internet layer",
         "MIME (Multipurpose Internet Mail Extensions)",
         "anonymous FTP"
-      ]
+      ],
+      "Server-side Technology": [],
+      "Global IP Address": [],
+      "Remote Login Protocols": []
     }
   },
   "Project Management": {
@@ -553,7 +707,10 @@
         "stakeholder engagement",
         "stakeholder management plan",
         "stakeholder requirements"
-      ]
+      ],
+      "Work Breakdown Structure (WBS)": [],
+      "Three Point Estimate": [],
+      "Critical Path Method": []
     }
   },
   "Security": {
@@ -598,7 +755,12 @@
         "Phishing",
         "Phishing fraud",
         "Program file virus"
-      ]
+      ],
+      "Backup Methods": [],
+      "Encryption Technology": [],
+      "Port Scanning": [],
+      "Virus Pattern File": [],
+      "SSL/TLS Protocols": []
     },
     "Overview of Information Security": {
       "Security Management": [
@@ -608,7 +770,9 @@
         "integrity",
         "risk management",
         "risk management plan"
-      ]
+      ],
+      "DoS Attack": [],
+      "Three Elements of Information Security": []
     }
   },
   "Service Management": {
@@ -636,7 +800,8 @@
         "Service transition",
         "service design document",
         "service operation"
-      ]
+      ],
+      "Service Transition": []
     }
   },
   "Software": {
@@ -676,7 +841,8 @@
         "file system",
         "home directory",
         "root directory"
-      ]
+      ],
+      "File Access Control": []
     },
     "OS (Operating System)": {
       "OS Functions": [
@@ -697,7 +863,18 @@
         "process management",
         "real memory management",
         "real-time OS"
-      ]
+      ],
+      "Task Management": [],
+      "Exclusive Control": [],
+      "Microkernel Architecture": [],
+      "Garbage Collection": [],
+      "Program Characteristics": [],
+      "Virtual Memory Management": [],
+      "Role of Shell": [],
+      "Task Scheduling": [],
+      "Process Scheduling": [],
+      "Process Management": [],
+      "Spooling": []
     },
     "Programming Languages and Language Processors": {
       "Languages & Tools": [
@@ -715,7 +892,12 @@
         "loader",
         "programming language",
         "runtime compiler"
-      ]
+      ],
+      "Language Processor Types": [],
+      "Parameter Passing Mechanisms": [],
+      "Program Relocation": [],
+      "Java Programming Language": [],
+      "Compiler and Interpreter": []
     }
   },
   "System Audit and Internal Control": {

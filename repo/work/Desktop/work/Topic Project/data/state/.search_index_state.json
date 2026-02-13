@@ -33956,7 +33956,7 @@
       "q_num": 1,
       "img_path": "../cropped_questions/2008A_A/Q01.png",
       "text": "Q1. Which of the following decimal fractions becomes a finite fraction when converted to\nan octal number?\na) 0.3 b) 0.4 c) 0.5 d) 0.8",
-      "tag": "Uncategorized",
+      "tag": "Number Base Conversion",
       "_hash": "dcfc05cb834a80b270bf06cc8f03a58a"
     },
     {
@@ -33968,7 +33968,7 @@
       "q_num": 1,
       "img_path": "../cropped_questions/2008A_A/Q01.png",
       "text": "Q1. Which of the following decimal fractions becomes a finite fraction when converted to\nan octal number?\na) 0.3 b) 0.4 c) 0.5 d) 0.8",
-      "tag": "Uncategorized",
+      "tag": "Number Base Conversion",
       "_hash": "dcfc05cb834a80b270bf06cc8f03a58a"
     },
     {
@@ -33992,7 +33992,7 @@
       "q_num": 2,
       "img_path": "../cropped_questions/2008A_A/Q02.png",
       "text": "Q2. A register stores a numerical value representing a binary number. After a positive\ninteger x is entered in the register, the following operation is performed: \u201cshift the\nregister value two bits to the left and add x.\u201d How many times as large as x is the new\nvalue of the register? Here, the shift does not cause an overflow.\na) 3 b) 4 c) 5 d) 6",
-      "tag": "Uncategorized",
+      "tag": "Shift Operations",
       "_hash": "c42bb338905a11a41b3758b077995b00"
     },
     {
@@ -34016,7 +34016,7 @@
       "q_num": 3,
       "img_path": "../cropped_questions/2008A_A/Q03.png",
       "text": "Q3. Which of the following is the appropriate way to check whether or not an 8-bit\nunsigned binary number x is a multiple of 16?\na) The bit-by-bit logical product between x and the binary number 00001111 is 0.\nb) The bit-by-bit logical product between x and the binary number 11110000 is 0.\nc) The bit-by-bit logical sum between x and the binary number 00001111 is 0.\nd) The bit-by-bit logical sum between x and the binary number 11110000 is 0.",
-      "tag": "Uncategorized",
+      "tag": "Bitwise Operations",
       "_hash": "68069b9420e88126e952c53b5adb8892"
     },
     {
@@ -34040,7 +34040,7 @@
       "q_num": 4,
       "img_path": "../cropped_questions/2008A_A/Q04.png",
       "text": "Q4. In the single precision of \u201cIEEE Standard for Binary Floating-Point Arithmetic\u201d (IEEE\n754), the value \u201cV\u201d is represented as follows:\nS: Sign (1 bit) E: Exponent (8 bits) F: Fraction (23 bits)\nIf 0<E<255 then V = (\u20131)S x 2 (E\u2013127) x (1.F)\nwhere \u201c1.F\u201d is intended to represent the binary number created by prefixing F with an\nimplicit leading 1 and a binary point.\nWhen the hexadecimal value C1E00000 is represented in IEEE 754, what is the correct\nvalue converted to decimal?\na) \u201359 b) \u201344 c) \u201328 d) 26",
-      "tag": "Uncategorized",
+      "tag": "Floating-point Representation",
       "_hash": "fead950df20613239ecf4c0a749d1a89"
     },
     {
@@ -34064,7 +34064,7 @@
       "q_num": 5,
       "img_path": "../cropped_questions/2008A_A/Q05.png",
       "text": "Q5. There are a total of N values observed. The sum S (S>0) of these values is obtained,\nand then the average value is calculated. Which of the following is the correct\nexpression when the average value is rounded off to the nearest integer value? Here,\n\u201c/\u201d indicates division, and [X] is the maximum integer equal to X or less.\na) [(S+0.5)/N] b) [(S\u20131)/N]+1\nc) [S/N+0.5] d) [S/N]+1",
-      "tag": "Uncategorized",
+      "tag": "Numerical Rounding",
       "_hash": "62b743483bdf575f2cc281893b05981f"
     },
     {
@@ -34088,7 +34088,7 @@
       "q_num": 6,
       "img_path": "../cropped_questions/2008A_A/Q06.png",
       "text": "Q6. A k-string is a character string with a length of k characters. An m-substring is an\nordered sequence with a length of m characters, which consists of consecutive elements\nof the original k-string. An n-subsequence is also an ordered sequence with a length\nof n characters, which consists of elements of the original k-string, but it does not need\nto be consecutive. How many m-substrings and n-subsequences are respectively\nincluded in the k-string?\nTotal number of m-substrings Total number of n-subsequences\nk!\na) k \u2212m+1\nn!(k \u2212n)!\nk!\nb) k \u2212m\nn!(k \u2212n)!\nk!\nc) k \u2212m+1\n(k \u2212n)!\nk!\nd) k \u2212m\n(k \u2212n)!",
-      "tag": "Uncategorized",
+      "tag": "Permutations and Combinations",
       "_hash": "da33a25b47d56cf7eb66f6fc2c445746"
     },
     {
@@ -34112,7 +34112,7 @@
       "q_num": 7,
       "img_path": "../cropped_questions/2008A_A/Q07.png",
       "text": "Q7. There are 3 white balls and 3 red balls in a box. What is the probability that the two\nballs taken out at random from the box are one white ball and one red ball?\na) 1/5 b) 1/3 c) 1/2 d) 3/5",
-      "tag": "Uncategorized",
+      "tag": "Probability",
       "_hash": "e3a14fe64ee22829750be8dd0c348c5b"
     },
     {
@@ -34136,7 +34136,7 @@
       "q_num": 8,
       "img_path": "../cropped_questions/2008A_A/Q08.png",
       "text": "Q8. There are n locks and n keys; the keys are mixed and need to specify which key\nbelongs to which lock. Which of the following is the maximum number of trials to\nfind the correct key for each lock? Here, one key can open only one lock.\na) n2 b) (n\u20131)! c) n! d) (n2\u2013n)/2",
-      "tag": "Uncategorized",
+      "tag": "Counting and Combinatorics",
       "_hash": "6799fdde32c300460fe0c2bf0e3bb050"
     },
     {
@@ -34160,7 +34160,7 @@
       "q_num": 9,
       "img_path": "../cropped_questions/2008A_A/Q09.png",
       "text": "Q9. Which of the following is equivalent to the logical expression shown below? Here,\n\u201c\u2022\u201d is used for the logical product, and \u201c+\u201d is for the logical sum.\n((X + Y) \u2022 (X + Z)) + ((X \u2022Y) + (X \u2022 Z))\na) (X + (Y \u2022 Z)) + (X \u2022 (Y + Z))\nb) (X + (Y \u2022 Z)) \u2022 (X \u2022 (Y + Z))\nc) (X \u2022 (Y \u2022 Z)) + (X \u2022 (Y + Z))\nd) ((X + Y) \u2022 Z) + (X \u2022 (Y + Z))",
-      "tag": "Uncategorized",
+      "tag": "Boolean Algebra",
       "_hash": "cae0be0283d6e0712488d8291309b065"
     },
     {
@@ -34184,7 +34184,7 @@
       "q_num": 10,
       "img_path": "../cropped_questions/2008A_A/Q10.png",
       "text": "Q10. Which of the following Boolean expressions is equivalent to the sentence below?\n\u201cThe output z is true if at least two of the three inputs x , x , and x are true.\u201d\n1 2 3\nHere, \u201cx \u201d is used for the logical negation of x , \u201c+\u201d for the logical sum, \u201c.\u201d for the\nn n\nlogical product, and \u201c\u2295\u201d for the exclusive disjunction (or exclusive OR).\na) z = x \u22c5x \u22c5x +x \u22c5x \u22c5x +x \u22c5x \u22c5x\n1 2 3 1 2 3 1 2 3\n( ) ( ) ( )\nb) z = x +x +x \u22c5 x +x +x \u22c5 x +x +x\n1 2 3 1 2 3 1 2 3\n( ) ( ) ( )\nc) z = x \u2295 x \u22c5 x \u2295 x \u22c5 x \u2295 x\n1 2 2 3 1 3\nd) z = x \u22c5x +x \u22c5x +x \u22c5x\n1 2 2 3 1 3",
-      "tag": "Uncategorized",
+      "tag": "Boolean Algebra",
       "_hash": "14a89c2f4cea40a8ad85a534007f0e40"
     },
     {
@@ -34208,7 +34208,7 @@
       "q_num": 11,
       "img_path": "../cropped_questions/2008A_A/Q11.png",
       "text": "Q11. There are three stacks A, B, and C where stack A contains the values 1, 2, and 3; 3 is on\nthe top of the stack, and stacks B and C are empty. The stack command format is as\nfollows:\n<stack command> (<stack name>, <temporary variable>)\nWhat is the resulting content of stack A after executing the stack operations shown\nbelow? Each rightmost element in the option list represents the value on the top of\nthe stack.\nPop (A, x) \u2192 Push (B, x) \u2192 Pop (A, x), \u2192 Push (C, x) \u2192 Pop (A, x) \u2192 Push (C, x)\n\u2192 Pop (B, x) \u2192 Push (A, x) \u2192 Pop (C, x) \u2192 Push (B, x) \u2192 Pop (C, x) \u2192 Push (A, x)\n\u2192 Pop (B, x) \u2192 Push (A, x)\na) 1, 2, 3 b) 2, 1, 3 c) 3, 1, 2 d) 3, 2, 1",
-      "tag": "Uncategorized",
+      "tag": "Stack Operations",
       "_hash": "91ecab77fc5f9c9cdc0b5b2ad48073dd"
     },
     {
@@ -34232,7 +34232,7 @@
       "q_num": 12,
       "img_path": "../cropped_questions/2008A_A/Q12.png",
       "text": "Q12. In a certain examination, the minimum and maximum scores are 31 and 95 respectively.\nA one-dimensional array shown below is used to display the distribution of scores for\nall examinees, and each array element indicates the number of examinees whose scores\nare in the specified ranges. Which of the following is the most appropriate expression\nto calculate an array index for each score? Here, any digits after the decimal point of\nthe resulting value are truncated to generate an integer as an index.\nArray index Score range\n1 Score < 40\n2 40 <= Score < 50\n3 50 <= Score < 60\n4 60 <= Score < 70\n5 70 <= Score < 80\n6 80 <= Score < 90\n7 90 <= Score < 100\na) (Score/10)\u20133 b) (Score/30)/10\nc) (Score\u201330)/10+1 d) (Score\u201340)/10",
-      "tag": "Uncategorized",
+      "tag": "Array Index Calculation",
       "_hash": "4df14ba8aac9d1b605455a73d0a5bd63"
     },
     {
@@ -34256,7 +34256,7 @@
       "q_num": 13,
       "img_path": "../cropped_questions/2008A_A/Q13.png",
       "text": "Q13. A k-ary tree is a tree in which every node has no more than k children. A binary tree\nis the special case where k=2. In a k-ary tree with n nodes and height h, which of the\nfollowing is an upper bound for the number of leaves?\na) hk b) kh c) log n d) n/log h\nk k",
-      "tag": "Uncategorized",
+      "tag": "k-ary Tree Properties",
       "_hash": "01db4904f13cd8b70bceec183e420fc8"
     },
     {
@@ -34280,7 +34280,7 @@
       "q_num": 14,
       "img_path": "../cropped_questions/2008A_A/Q14.png",
       "text": "Q14. A recursive definition of a factorial function f(n) that calculates \u201cn!\u201d can be\nrepresented as follows:\nf(n) = A (n > 1)\nf(n) = B (n = 0)\nWhich of the following combinations should be inserted in the boxes A and B? Here,\n\u201cn\u201d is a non-negative integer.\nA B\na) n * f(n\u20131) 0\nb) n * f(n+1) 0\nc) n * f(n\u20131) 1\nd) n * f(n+1) 1",
-      "tag": "Uncategorized",
+      "tag": "Recursive Algorithm",
       "_hash": "4f6617e146824e6786059f8daa3f5770"
     },
     {
@@ -34304,7 +34304,7 @@
       "q_num": 15,
       "img_path": "../cropped_questions/2008A_A/Q15.png",
       "text": "Q15. A binary search tree is created by inserting the values shown below.\n7 9 11 2 8 10 5 3\nAfter deletion of the root from the newly created tree, what does it look like?\na) b)\n7 10\n2 9 2 9\n5 8 11 5 8 11\n3 10 3\nc) d)\n8 8\n2 9 2 9\n5 11 5 11\n3 7 10 3 10",
-      "tag": "Uncategorized",
+      "tag": "Binary Search Tree",
       "_hash": "109d343d4018bf90ef43b75e2e2b961d"
     },
     {
@@ -34328,7 +34328,7 @@
       "q_num": 16,
       "img_path": "../cropped_questions/2008A_A/Q16.png",
       "text": "Q16. Which of the following is the sorting algorithm that divides the data elements into two\ngroups, in which all those elements less than a particular element (called a pivot value)\nand all those elements greater than or equal to it are separately included, and then\nrepeats the same operation until all elements are sorted in ascending or descending\norder?\na) Heap sort b) Insertion sort\nc) Merge sort d) Quick sort",
-      "tag": "Uncategorized",
+      "tag": "Sorting Algorithms",
       "_hash": "de326104f1194d84311f821e4ed8bea3"
     },
     {
@@ -34352,7 +34352,7 @@
       "q_num": 17,
       "img_path": "../cropped_questions/2008A_A/Q17.png",
       "text": "Q17. The figure shown below represents a logic gate and its timing chart. Which of the\nfollowing is an appropriate logical function of this gate? Here, both A and B are the\ninput signals and F is the output signal.\na) AND b) Exclusive-NOR\nc) Exclusive-OR d) NOR",
-      "tag": "Uncategorized",
+      "tag": "Logic Gates",
       "_hash": "ac638045650bb90ac203a07b6bf3e14e"
     },
     {
@@ -34376,7 +34376,7 @@
       "q_num": 18,
       "img_path": "../cropped_questions/2008A_A/Q18.png",
       "text": "Q18. Which of the following is an appropriate description concerning registers in processors?\na) A base register stores the starting address of the computer system.\nb) A complement register generates integer complements in order to perform operations\nin the adder circuit.\nc) An accumulator stores a collection of flag bits for a processor.\nd) An index register stores the instruction being performed in a processor.",
-      "tag": "Uncategorized",
+      "tag": "Processor Registers",
       "_hash": "00eddb5c8411d37f388186a87a7d8da2"
     },
     {
@@ -34400,7 +34400,7 @@
       "q_num": 19,
       "img_path": "../cropped_questions/2008A_A/Q19.png",
       "text": "Q19. When a CPU can perform a multiplication in 12 nanoseconds (ns), an addition in 1 ns,\nand a subtraction in 1.5 ns, which of the following is the minimum CPU time, in\nnanoseconds, for the calculation of \u201ca\u00d7a\u2013b\u00d7b\u201d?\na) 12.5 b) 13.5 c) 14.5 d) 25.5",
-      "tag": "Uncategorized",
+      "tag": "Instruction Execution Time",
       "_hash": "d78c6dec6c8e8e5595e45a878b2e47ae"
     },
     {
@@ -34424,7 +34424,7 @@
       "q_num": 20,
       "img_path": "../cropped_questions/2008A_A/Q20.png",
       "text": "Q20. Which of the following is the appropriate diagram that explains pipeline control?\nHere, the meanings of the capital letters in the diagrams are as follows:\nF: Fetching instruction\nD: Decoding\nA: Address calculation\nR: Reading operand\nE: Executing\na)\nb)\nc)\nd)",
-      "tag": "Uncategorized",
+      "tag": "Pipeline Processing",
       "_hash": "232f318640451e123bf9340d53c95eba"
     },
     {
@@ -34448,7 +34448,7 @@
       "q_num": 21,
       "img_path": "../cropped_questions/2008A_A/Q21.png",
       "text": "Q21. Which of the following is the appropriate description of CPU clock frequencies for\nPCs?\na) LAN communication speed changes depending on the clock frequency. The higher\nthe frequency, the faster the communication speed on the LAN gets.\nb) The instruction execution timing in a CPU varies depending on the clock frequency.\nThe higher the frequency, the faster the instruction execution speed gets.\nc) The interrupt interval of real-time processes changes depending on the clock\nfrequency. The higher the clock frequency, the higher the frequency of interrupt\nprocessing gets, increasing the processing speed of real-time processes.\nd) The revolution speed of the hard disk varies depending on the clock frequency.\nThe higher the frequency, the faster the revolution speed gets, increasing the transfer\nspeed of the hard disk.",
-      "tag": "Uncategorized",
+      "tag": "CPU Clock Frequency",
       "_hash": "34ed614f398fd276df41aec442fdd65c"
     },
     {
@@ -34472,7 +34472,7 @@
       "q_num": 22,
       "img_path": "../cropped_questions/2008A_A/Q22.png",
       "text": "Q22. There is a CPU with an internal clock frequency of 700 MHz. The number of clock\ncycles for executing instructions and their appearance rates are shown in the table\nbelow. What is the approximate performance (measured in MIPS) of this CPU?\nNumber of clock cycles for Appearance rate\nType of instructions\nexecuting instructions (%)\nOperation between registers 4 30\nOperation between memory\n8 60\nand registers\nUnconditional branch 10 10\na) 10 b) 50 c) 70 d) 100",
-      "tag": "Uncategorized",
+      "tag": "CPU Performance Evaluation",
       "_hash": "1c3e42c38f2f82639e6dbfdfb4badcd8"
     },
     {
@@ -34496,7 +34496,7 @@
       "q_num": 23,
       "img_path": "../cropped_questions/2008A_A/Q23.png",
       "text": "Q23. A processor with a 256-Mbyte address space is using the address \u201c35E3C03\u201d to access\na 16-Mbyte memory device. What are the highest and lowest addresses in the memory\nmap of the 16-Mbyte memory device? Here, the memory addresses are expressed in\nhexadecimal.\nHighest address Lowest address\na) 3FFFFFF 0000000\nb) 3FFFFFF 3000000\nc) 40000000 0000000\nd) FFFFFFF 0000000",
-      "tag": "Uncategorized",
+      "tag": "Memory Addressing",
       "_hash": "5ef0debb0aa6607d756b2cda8efe3521"
     },
     {
@@ -34520,7 +34520,7 @@
       "q_num": 24,
       "img_path": "../cropped_questions/2008A_A/Q24.png",
       "text": "Q24. Which of the following is used in ECC memory to detect 2-bit errors and correct 1-bit\nerrors?\na) Checksum b) Even parity\nc) Hamming code d) Vertical parity",
-      "tag": "Uncategorized",
+      "tag": "Hamming Code",
       "_hash": "5d6cd93c00480489d12a99bd80d30e8e"
     },
     {
@@ -34544,7 +34544,7 @@
       "q_num": 25,
       "img_path": "../cropped_questions/2008A_A/Q25.png",
       "text": "Q25. A system has a main memory access time of 60 nanoseconds (ns) and a cache memory\naccess time of 10 ns. When the effective access time for accessing the main memory\nvia the cache memory is 15 ns, what is the hit ratio of the cache memory?\na) 0.1 b) 0.17 c) 0.83 d) 0.9",
-      "tag": "Uncategorized",
+      "tag": "Cache Memory Hit Ratio",
       "_hash": "20680e721cc942473e54d9c88646338a"
     },
     {
@@ -34568,7 +34568,7 @@
       "q_num": 26,
       "img_path": "../cropped_questions/2008A_A/Q26.png",
       "text": "Q26. Which of the following storage devices has the fastest access time?\na) CPU L2 cache memory b) CPU register\nc) Hard disk d) Main memory",
-      "tag": "Uncategorized",
+      "tag": "Memory Hierarchy",
       "_hash": "586f8086e6d1dd6f6c53f5ad753b1e96"
     },
     {
@@ -34592,7 +34592,7 @@
       "q_num": 27,
       "img_path": "../cropped_questions/2008A_A/Q27.png",
       "text": "Q27. Which of the following is widely used as a computer port for a modem connection?\na) IEEE 1394 port b) Parallel port\nc) SCSI port d) Serial port",
-      "tag": "Uncategorized",
+      "tag": "Serial Interface",
       "_hash": "9a66c74f524e7f95057186ae821fb6d2"
     },
     {
@@ -34616,7 +34616,7 @@
       "q_num": 28,
       "img_path": "../cropped_questions/2008A_A/Q28.png",
       "text": "Q28. A certain computer system runs in a multi-programming environment using a non-\npreemptive \u201cshortest job first\u201d algorithm. In this system, four processes A, B, C, and\nD arrive sequentially in the process queue every 1 millisecond. The table shown\nbelow includes estimated execution time for each process; for example, process A uses\nCPU, I/O, and then CPU sequentially for 4, 5, and 5 milliseconds respectively. When\n14 milliseconds elapse after the arrival of the first process A, which of the following\nprocesses is executed in CPU? Here, the multi-processing overhead of OS can be\nignored, and both CPU and I/O operations can be executed concurrently.\nUnit: millisecond\nProcess Execution time\nName CPU I/O CPU\nA 4 5 5\nB 3 4 6\nC 2 3 3\nD 4 3 2\na) A b) B c) C d) D",
-      "tag": "Uncategorized",
+      "tag": "Process Scheduling",
       "_hash": "1f8b5802ece65b58d782a33741606fef"
     },
     {
@@ -34640,7 +34640,7 @@
       "q_num": 29,
       "img_path": "../cropped_questions/2008A_A/Q29.png",
       "text": "Q29. The figure below shows the state transition diagram of a certain process. Which of\nthe following is the appropriate combination of States A, B, and C?\n[Factors for State Transitions]\nA\n(1) The right to use the CPU is transferred to another process with a\nhigher execution priority.\n(1) (3)\n(2) The right to use the CPU is given.\n(2)\n(3) Waiting for completion of an input/out operation\nB C\n(4) (4) An input/output operation is completed.\nState A State B State C\na) Ready Running Waiting\nb) Ready Waiting Running\nc) Running Ready Waiting\nd) Running Waiting Ready",
-      "tag": "Uncategorized",
+      "tag": "Process Management",
       "_hash": "33d8b2f020a062493ec80412c7f2da72"
     },
     {
@@ -34664,7 +34664,7 @@
       "q_num": 30,
       "img_path": "../cropped_questions/2008A_A/Q30.png",
       "text": "Q30. Which of the following is the appropriate explanation of spooling?\na) Communication data is sent to a substitute device registered in advance instead of\nbeing directly transferred to the communication destination.\nb) Input data from the keyboard is temporarily saved in the queue of the main memory.\nc) Output data to a low speed device such as a printer is temporarily stored on a high\nspeed hard disk and later sent as output to that target device.\nd) The order of execution for jobs requested in the system is determined according to\ntheir priorities and characteristics.",
-      "tag": "Uncategorized",
+      "tag": "Spooling",
       "_hash": "c9a928f359ced412d683bff2827f1adf"
     },
     {
@@ -34688,7 +34688,7 @@
       "q_num": 31,
       "img_path": "../cropped_questions/2008A_A/Q31.png",
       "text": "Q31. Which of the following is the appropriate set of major functions supported by an OS?\na) Compiler management, I/O management, and network management\nb) Data management, job management, and task management\nc) Development tool management, job management, and memory management\nd) I/O management, multimedia management, and security management",
-      "tag": "Uncategorized",
+      "tag": "OS Functions",
       "_hash": "2023264a92a4d5637645e4aa5ca34343"
     },
     {
@@ -34712,7 +34712,7 @@
       "q_num": 32,
       "img_path": "../cropped_questions/2008A_A/Q32.png",
       "text": "Q32. Which of the following is the appropriate explanation of RPC in a client/server system?\na) It is a method of communication between programs, where parts of the process are\nassigned to another computer.\nb) It is a method of remotely using a hard disk of a computer at another location as a\nshared resource.\nc) It is a method to check whether a user remotely accessing the computer is registered\nor not.\nd) It is a method where a series of procedures for a database is handled together and\nprocessed at the server with the arguments provided by the client.",
-      "tag": "Uncategorized",
+      "tag": "Remote Procedure Call",
       "_hash": "8bb77bd7546c654f2743e5b5dbf7c277"
     },
     {
@@ -34736,7 +34736,7 @@
       "q_num": 33,
       "img_path": "../cropped_questions/2008A_A/Q33.png",
       "text": "Q33. In order to make a multiplexing system with an availability of at least 0.999 by using\ndevices with an availability of 0.9, how many of these devices need linking together in\nparallel?\na) 2 b) 3 c) 4 d) 5",
-      "tag": "Uncategorized",
+      "tag": "Parallel System Availability",
       "_hash": "83db50e44b12eb051048974380a58a45"
     },
     {
@@ -34760,7 +34760,7 @@
       "q_num": 34,
       "img_path": "../cropped_questions/2008A_A/Q34.png",
       "text": "Q34. Which of the following helps improve availability?\na) Doubling both MTBF and MTTR\nb) Doubling MTBF and reducing MTTR to half\nc) Reducing both MTBF and MTTR to half\nd) Reducing MTBF to half and doubling MTTR",
-      "tag": "Uncategorized",
+      "tag": "MTBF and MTTR",
       "_hash": "b0cfe754ef7a958264bb1e1f9f98c041"
     },
     {
@@ -34784,7 +34784,7 @@
       "q_num": 35,
       "img_path": "../cropped_questions/2008A_A/Q35.png",
       "text": "Q35. Which of the following refers to the concept of fail-safe design?\na) If a failure occurs in a leased line, the system immediately switches to a public line\nand continues processing even if the processing capacity of the system goes down.\nb) If a system failure occurs with a data transfer process in a data collection system,\nonly the data input process is performed, and the data is transferred all at once after\nrecovery of its failure.\nc) If something other than a number is entered into a number input field, the system\ndisplays a warning message, requesting correct entry.\nd) If the system determines that the sensor which detects someone entering the work\narea has failed, the robot arm is stopped by force.",
-      "tag": "Uncategorized",
+      "tag": "Fail-safe design",
       "_hash": "0676e4ea59175c481efe314cd2e9fc1b"
     },
     {
@@ -34808,7 +34808,7 @@
       "q_num": 36,
       "img_path": "../cropped_questions/2008A_A/Q36.png",
       "text": "Q36. Which of the following is the term that refers to collecting a large volume of data\nthrough a variety of corporate activities, organizing, integrating, and saving the data\nfor specific purposes, and using it for decision-making support, for example?\na) Data administration b) Data dictionary\nc) Data mapping d) Data warehouse",
-      "tag": "Uncategorized",
+      "tag": "Data Warehouse",
       "_hash": "daad05d031065278554d5528d9445d25"
     },
     {
@@ -34832,7 +34832,7 @@
       "q_num": 37,
       "img_path": "../cropped_questions/2008A_A/Q37.png",
       "text": "Q37. When large-scale websites are built, application servers are often used in addition to\nWeb servers. Which of the following is an appropriate reason for this?\na) System modification or expansion is made easier in comparison with Web servers\nalone.\nb) Web servers alone cannot create content dynamically.\nc) Web servers alone cannot execute the business processing.\nd) Web servers do not have authentication functions.",
-      "tag": "Uncategorized",
+      "tag": "3-tier Architecture",
       "_hash": "243a10be08332af1d4281e23869e74f1"
     },
     {
@@ -34856,7 +34856,7 @@
       "q_num": 38,
       "img_path": "../cropped_questions/2008A_A/Q38.png",
       "text": "Q38. CASE tools can be classified on the basis of the applicable development processes and\nphases. Which of the following classifications includes support functions for\nrequirements analysis?\na) Downstream b) Maintenance\nc) Testing d) Upstream",
-      "tag": "Uncategorized",
+      "tag": "CASE Tools",
       "_hash": "2924b5ea81a280dcbcc365ce22f8dd74"
     },
     {
@@ -34880,7 +34880,7 @@
       "q_num": 39,
       "img_path": "../cropped_questions/2008A_A/Q39.png",
       "text": "Q39. Which of the following is the method which analyzes the source or object code to\nretrieve information concerning program specifications and design?\na) Reengineering b) Refactoring\nc) Restructuring d) Reverse engineering",
-      "tag": "Uncategorized",
+      "tag": "Reverse Engineering",
       "_hash": "aeac3b7fbe78bc5abaf9de32cf2ee557"
     },
     {
@@ -34904,7 +34904,7 @@
       "q_num": 40,
       "img_path": "../cropped_questions/2008A_A/Q40.png",
       "text": "Q40. Based on the concept of object orientation, which of the following can be commonly\nregarded as a subclass of the class \u201cautomobile\u201d?\na) Engine b) Serial number\nc) Tire d) Truck",
-      "tag": "Uncategorized",
+      "tag": "Object-Oriented Concepts",
       "_hash": "f96a4a01a3917c8071ee037e6da9371b"
     },
     {
@@ -34928,7 +34928,7 @@
       "q_num": 41,
       "img_path": "../cropped_questions/2008A_A/Q41.png",
       "text": "Q41. Which of the following should be done in the internal design phase of software\ndevelopment processes?\na) Designing interfaces between subsystems\nb) Designing logical data structure\nc) Designing physical data structure\nd) Designing screen layouts",
-      "tag": "Uncategorized",
+      "tag": "Software Internal Design",
       "_hash": "751f6cdd7ae84403a167b0c57534d819"
     },
     {
@@ -34952,7 +34952,7 @@
       "q_num": 42,
       "img_path": "../cropped_questions/2008A_A/Q42.png",
       "text": "Q42. In the flowchart below, which of the following indicates the relationship between the\ninitial values a and b that are given in m and n in the process (1) in order to carry out\nthese processes in the order shown below?\n\u2192 \u2192 \u2192 \u2192 \u2192 \u2192 \u2192 \u2192\n(1) (2) (3) (5) (2) (3) (4) (2) (6)\nHere, a and b are both positive integers.\na) a = 2b b) 2a = b c) 2a = 3b d) 3a = 2b",
-      "tag": "Uncategorized",
+      "tag": "Flowchart Tracing",
       "_hash": "6fbcef5f70f4006ed27e011fae51a033"
     },
     {
@@ -34976,7 +34976,7 @@
       "q_num": 43,
       "img_path": "../cropped_questions/2008A_A/Q43.png",
       "text": "Q43. Which of the following is the appropriate sequence for drawing up a DFD model that is\nused to develop a new system based on the current system?\n1. Current logical model\n2. Current physical model\n3. New logical model\n4. New physical model\na) 1 \u2192 2 \u2192 3 \u2192 4\nb) 1 \u2192 2 \u2192 4 \u2192 3\nc) 2 \u2192 1 \u2192 3 \u2192 4\nd) 2 \u2192 1 \u2192 4 \u2192 3",
-      "tag": "Uncategorized",
+      "tag": "Structured Analysis",
       "_hash": "5c6798b32578e498dfd169a5758d8b9f"
     },
     {
@@ -35000,7 +35000,7 @@
       "q_num": 44,
       "img_path": "../cropped_questions/2008A_A/Q44.png",
       "text": "Q44. In DFD illustrated below, DFi is used for data flow i, Pj for process j, Ek for source or\ndestination of data k, and DSl for data storage l. There are three errors (rule\nviolations) in this DFD. One is in P2; that is, P2 must have at least one output data\nflow. The other two are in data flows. Which of the following combinations\nincludes two rule violations, one for each data flow?\nDF3\nE1 DF5 P2\nDS1\nDF1 DF7\nDF4 DF6\nE2 DF2 P1\na) DF1 and DF2 b) DF1 and DF5\nc) DF2 and DF3 d) DF3 and DF4",
-      "tag": "Uncategorized",
+      "tag": "Data Flow Diagram",
       "_hash": "0e2dac18abe9062361afd2da7f928ca7"
     },
     {
@@ -35024,7 +35024,7 @@
       "q_num": 45,
       "img_path": "../cropped_questions/2008A_A/Q45.png",
       "text": "Q45. Which of the following is the appropriate characteristic of object-oriented models?\na) A program consists of operational expressions in nested structure, commands\nexpressing functions (operation symbols), and data. \u201cCommand execution\u201d\ncorresponds to \u201ccalculation (evaluation) of operational expressions or function\nvalues.\u201d\nb) Control of computation is passed from command to command in order. Data is\ndelivered between commands indirectly by referencing memory through the\n\u201cvariables.\u201d Definitions of commands and data are separated.\nc) Data is hidden from the outside and indirectly handled by procedures called methods.\nA program is a collection of data and methods.\nd) The order of computation is determined by data flow, not by control flow.\nCommands can be executed when all the input data becomes available.",
-      "tag": "Uncategorized",
+      "tag": "Object-Oriented Methodology",
       "_hash": "a0c1f4c3bb6e8816a1acbf83c49731f9"
     },
     {
@@ -35048,7 +35048,7 @@
       "q_num": 46,
       "img_path": "../cropped_questions/2008A_A/Q46.png",
       "text": "Q46. Which of the following is the test to verify interfaces both between modules and\nbetween subsystems?\na) Integration test b) Operational test\nc) System test d) Unit test",
-      "tag": "Uncategorized",
+      "tag": "Integration Testing",
       "_hash": "e776b99a30ea3630cf8e789637bdca71"
     },
     {
@@ -35072,7 +35072,7 @@
       "q_num": 47,
       "img_path": "../cropped_questions/2008A_A/Q47.png",
       "text": "Q47. A certain program contains the complex decision shown below:\n\u201cCondition 1\u201d OR (\u201cCondition 2\u201d AND \u201cCondition 3\u201d)\nWhen testing based on decision-condition coverage (branch coverage), which of the\nfollowing is appropriate for an additional test item?\n[Test items completed]\n(1) \u201cCondition 1\u201d is true, \u201cCondition 2\u201d is false, and \u201cCondition 3\u201d is false.\n(2) \u201cCondition 1\u201d is false, \u201cCondition 2\u201d is true, and \u201cCondition 3\u201d is true.\nCondition 1 Condition 2 Condition 3\na) false false true\nb) true false true\nc) true true false\nd) true true true",
-      "tag": "Uncategorized",
+      "tag": "White-box Testing",
       "_hash": "68604dd0d380c3e3e569ad40f02a67c3"
     },
     {
@@ -35900,7 +35900,7 @@
       "q_num": 1,
       "img_path": "../cropped_questions/2007S_A/Q01.png",
       "text": "Q1. Which of the following is the correct decimal fraction equal to hexadecimal fraction\n0.248?\n31 31 31 73\na) b) c) d)\n32 125 512 512",
-      "tag": "Uncategorized",
+      "tag": "Radix Conversion",
       "_hash": "db80c81b5151791c5add935f8869593b"
     },
     {
@@ -35924,7 +35924,7 @@
       "q_num": 2,
       "img_path": "../cropped_questions/2007S_A/Q02.png",
       "text": "Q2. Which of the following is the correct value of the quadruple of hexadecimal fraction\n0.FEDC?\na) 1.FDB8 b) 2.FB78 c) 3.FB70 d) F.EDC0",
-      "tag": "Uncategorized",
+      "tag": "Radix Calculation",
       "_hash": "693c817b31e201fec8077176e5bb6a04"
     },
     {
@@ -35948,7 +35948,7 @@
       "q_num": 3,
       "img_path": "../cropped_questions/2007S_A/Q03.png",
       "text": "Q3. In a floating-point number format, which of the following is the correct operation for\nadjusting the radix point and the exponent so that the most significant digit of the\nmantissa can be a non-zero value? Here, an absolute value is used for the mantissa.\na) Carry b) Normalize c) Round down d) Round up",
-      "tag": "Uncategorized",
+      "tag": "Floating-point Normalization",
       "_hash": "82d7ebd508fec5d147cef870b713cc45"
     },
     {
@@ -35972,7 +35972,7 @@
       "q_num": 4,
       "img_path": "../cropped_questions/2007S_A/Q04.png",
       "text": "Q4. The decimal value \u201c-72\u201d is stored in an 8-bit register using 2\u2019s complement. If the data\nin the register is logically shifted two bits to the right, which of the following is the\ncorrect result that is represented in decimal?\na) -19 b) -18 c) 45 d) 46",
-      "tag": "Uncategorized",
+      "tag": "2's Complement and Logical Shift",
       "_hash": "cebf7c0800a6a00112739f45daee7d17"
     },
     {
@@ -35996,7 +35996,7 @@
       "q_num": 5,
       "img_path": "../cropped_questions/2007S_A/Q05.png",
       "text": "Q5. By definition of the IEEE754 standard, 32-bit floating point numbers are represented as\nfollows:\nS (1 bit) E (8 bits) M (23 bits)\nS: Sign bit\nE: Exponent\nM: Mantissa\nWhich of the following is the correct \u201cmask bits\u201d in hexadecimal to be used for\nextracting only the exponent part of the above format? Here, \u201cmask bits\u201d means a bit\npattern which is logically ANDed with the 32-bit floating point value.\na) 107FFFFF b) 7F800000 c) FF100000 d) FF800000",
-      "tag": "Uncategorized",
+      "tag": "Floating-point Representation",
       "_hash": "cc9d29a09249726a4c028933208c9926"
     },
     {
@@ -36008,7 +36008,7 @@
       "q_num": 6,
       "img_path": "../cropped_questions/2007A_A/Q06.png",
       "text": "Q6. Which of the following is the appropriate statement concerning Newton\u2019s method that is\nknown as an algorithm for obtaining the approximate value of the solution to the\nformula \u0192(x) = 0?\na) An approximate value of the solution can be obtained even if the function \u0192(x) is\nindifferentiable.\nb) An approximate value of the solution is obtained geometrically using the tangent\nlines of y = \u0192(x).\nc) No matter what initial values are provided, an approximate value of the solution can\nalways be obtained.\nd) Two different initial values must be provided.",
-      "tag": "Uncategorized",
+      "tag": "Newton's Method",
       "_hash": "8839ce49067f216b3d15c05eb26246c2"
     },
     {
@@ -36020,7 +36020,7 @@
       "q_num": 6,
       "img_path": "../cropped_questions/2007S_A/Q06.png",
       "text": "Q6. In the Venn Diagrams labeled 1 to 3, which of the following is the result of Boolean\n\u201cOR\u201d operations for all three to be combined? Here, \u201c\uf0b7\u201d is used for \u201clogical AND,\u201d\n\u201c+\u201d for \u201clogical OR,\u201d and \u201cA\u201d for the \u201clogical NOT\u201d of A. Each set corresponding to\nx, y, or z is depicted by a circle\nx y x y x y\nz\nz z\n1 2 3\na) x\uf0b7 y\uf0b7z + x + y b) x\uf0b7 y\uf0b7z + x + y\nc) x\uf0b7 y\uf0b7z + x + y d) x\uf0b7 y\uf0b7z + x + y",
-      "tag": "Uncategorized",
+      "tag": "Logical Operations",
       "_hash": "2172ecd6041ab804ddbadcf53fda5f4b"
     },
     {
@@ -36032,7 +36032,7 @@
       "q_num": 7,
       "img_path": "../cropped_questions/2007A_A/Q07.png",
       "text": "Q7. There is a four-digit number N N N C that is used for Customer Account Number\n1 2 3\n(CAN). The right most digit \u201cC\u201d can be calculated as follows:\nC = (N *3 + N *5 + N *7) mod 10\n1 2 3\nWhich of the following is a correct CAN? Here, x mod y returns the remainder when x\nis divided by y.\na) 7714 b) 7715 c) 9690 d) 9695",
-      "tag": "Uncategorized",
+      "tag": "Check Digit Calculation",
       "_hash": "a66a524429bdcaf7d19a565eba8989d2"
     },
     {
@@ -36044,7 +36044,7 @@
       "q_num": 7,
       "img_path": "../cropped_questions/2007S_A/Q07.png",
       "text": "Q7. When you flip a coin four times, what is the probability that it will come up heads\nexactly twice?\na) 0.2 b) 0.375 c) 0.5 d) 0.625",
-      "tag": "Uncategorized",
+      "tag": "Probability Calculation",
       "_hash": "863f8d27735ab2c4bf6390fd89e16a65"
     },
     {
@@ -36056,7 +36056,7 @@
       "q_num": 8,
       "img_path": "../cropped_questions/2007A_A/Q08.png",
       "text": "Q8. Two players, X and Y play a dice game. A pair of dice is tossed. If the sum of the dice\nis 2, 4, or 6, X wins the game. Otherwise, Y wins. What is the probability that Y wins\nthe game?\na) 1/4 b) 1/3 c) 1/2 d) 3/4",
-      "tag": "Uncategorized",
+      "tag": "Probability Calculation",
       "_hash": "dc899da7b4ecc2152f65e2bb7cd2899a"
     },
     {
@@ -36068,7 +36068,7 @@
       "q_num": 8,
       "img_path": "../cropped_questions/2007S_A/Q08.png",
       "text": "Q8. There are two important operations on a stack: PUSH and POP. PUSH adds the new\ndata to the top of the stack leaving previous data below, and POP removes and returns\nthe current top data of the stack. When the operations shown below are sequentially\nexecuted, which of the following is the correct combination of the values x and y?\nHere, the size of the stack is big enough to hold the entire data. \u201cPUSH(a)\u201d inserts the\ndata a into the stack, and \u201cPOP(b)\u201d removes the data b from the stack.\n[Operations]\nPUSH (5);\nPUSH (3);\nPUSH (6);\nPUSH (1);\nx = POP ( );\nPUSH (7);\ny = POP ( );\nx y\na) 1 6\nb) 1 7\nc) 5 3\nd) 5 7",
-      "tag": "Uncategorized",
+      "tag": "Stack Operations",
       "_hash": "9bfb6d91b387bff7ab7778daaf9254d7"
     },
     {
@@ -36080,7 +36080,7 @@
       "q_num": 9,
       "img_path": "../cropped_questions/2007A_A/Q09.png",
       "text": "Q9. There are a total of 1,900 students in a school, 553 of whom are taking a course in\ncomputer science, 667 of whom are in mathematics, and 290 of whom are in both\ncomputer science and mathematics. How many students are not taking a course in\neither computer science or in mathematics?\na) 680 b) 930 c) 970 d) 1260",
-      "tag": "Uncategorized",
+      "tag": "Set Theory",
       "_hash": "35a4e7fdbb93a0c878e7e56e13ccf2a7"
     },
     {
@@ -36092,7 +36092,7 @@
       "q_num": 9,
       "img_path": "../cropped_questions/2007S_A/Q09.png",
       "text": "Q9. Reverse Polish Notation (RPN) is used to represent arithmetic expressions without\nusing brackets to define priorities for evaluation of operators. For example, 3\uf0b4(a+b)\nbecomes 3ab+\uf0b4 in RPN. Which of the following is the best data structure that should\nbe used for implementation of RPN in a computer?\na) List b) Queue c) Stack d) Tree",
-      "tag": "Uncategorized",
+      "tag": "Stack",
       "_hash": "fc8a205d3c5f871c69530e315de4195f"
     },
     {
@@ -36104,7 +36104,7 @@
       "q_num": 10,
       "img_path": "../cropped_questions/2007A_A/Q10.png",
       "text": "Q10. Which of the following is equivalent to the logical expression A\u2022B+B\u2022C\u2022(B+C)?\nHere, \u201c\u2022\u201d is the logical product, and \u201c+\u201d is the logical sum.\na) A\u2022B+ A\u2022C b) A\u2022C + B\nc) B\u2022(A+C) d) B+ A\u2022C",
-      "tag": "Uncategorized",
+      "tag": "Boolean Algebra Simplification",
       "_hash": "1c977c95e8cfffddc0891b8e12297fce"
     },
     {
@@ -36116,7 +36116,7 @@
       "q_num": 10,
       "img_path": "../cropped_questions/2007S_A/Q10.png",
       "text": "Q10. Which of the following is an appropriate description concerning the list and/or array\nstructures?\na) The list structure allows any data to be inserted or deleted simply by modifying\npointers. But, after the data was deleted, the cells that contained the data remain as\ngarbage in memory.\nb) The list structure is similar to the array structure in that all data elements of the same\ntype are sequentially lined up. In the list structure, the logical arrangement is the\nsame as the physical arrangement.\nc) The number of operations is fixed in inserting or deleting an element in an array; it\ndoes not depend on the position of the element in the array.\nd) Using a subscript for each element in an array, quick access to any element can be\nachieved. The array structure allows any data to be inserted or deleted simply by\nmodifying pointers.",
-      "tag": "Uncategorized",
+      "tag": "Array and List Structures",
       "_hash": "27e1d0833df2f0cf8baad3f8e8918343"
     },
     {
@@ -36128,7 +36128,7 @@
       "q_num": 11,
       "img_path": "../cropped_questions/2007A_A/Q11.png",
       "text": "Q11. There are three 7-bit character codes: 30, 3F, and 7A. When an even parity bit is\nadded to the front of each character code, which of the following shows the correct\nresult? Here, the character codes are expressed in hexadecimal.\na) 30, 3F, 7A b) 30, 3F, FA\nc) B0, 3F, FA d) B0, BF, 7A",
-      "tag": "Uncategorized",
+      "tag": "Even Parity Bit",
       "_hash": "de92230fba41b3ddcd7ed5ae14c3c1f2"
     },
     {
@@ -36140,7 +36140,7 @@
       "q_num": 11,
       "img_path": "../cropped_questions/2007S_A/Q11.png",
       "text": "Q11. The table below shows a state transition table that checks the input character string.\nThis check starts from the initial state A, and it fails if the state changes to E during the\ninput of the character string. Which of the character strings in the answer group fails this\ncheck? Here, the symbol \uf044 in the answer group represents a space.\nInput character\nSpace Numeric Sign Radix point Other\netats\ntnerruC\nA A B C D E\nB A B E D E\nC E B E D E\nD A E E E E\na) +0010 b) -1 c) 12.2 d) 9.\uf044",
-      "tag": "Uncategorized",
+      "tag": "State Transition Table",
       "_hash": "67ad03722b5af9cc7e30fe1308d15e61"
     },
     {
@@ -36152,7 +36152,7 @@
       "q_num": 12,
       "img_path": "../cropped_questions/2007A_A/Q12.png",
       "text": "Q12. Which of the following data structures uses the LIFO (Last In First Out) method in order\nto manage data?\na) Array b) Linked list c) Queue d) Stack",
-      "tag": "Uncategorized",
+      "tag": "Stack and LIFO",
       "_hash": "b2b7a4bfcc1ad1011e0fcf2a2cfcc0b2"
     },
     {
@@ -36164,7 +36164,7 @@
       "q_num": 12,
       "img_path": "../cropped_questions/2007S_A/Q12.png",
       "text": "Q12. There are two jugs; one is a 4-liter (4L) jug and the other is a 3-liter (3L) jug. Which of\nthe following is the correct sequence to obtain exactly 2 liters of water in the 4L jug\nunder the conditions shown below? Here, (x, y) indicates that the 4L jug contains x\nliters of water and the 3L jug has y liters of water.\n[Conditions]\nYou can use only the 3L and 4L jugs.\nYou are allowed to fill up or empty either jug.\nYou are allowed to pour water from one jug to the other.\nThe jugs have no scale marks.\nThere is an ample supply of water.\na) (0,0)\uf0ae(0,3)\uf0ae(3,0)\uf0ae(0,3)\uf0ae(4,2)\uf0ae(0,2)\uf0ae(2,0)\nb) (0,0)\uf0ae(0,3)\uf0ae(3,0)\uf0ae(3,3)\uf0ae(4,2)\uf0ae(0,2)\uf0ae(2,0)\nc) (0,0)\uf0ae(0,3)\uf0ae(3,3)\uf0ae(3,0)\uf0ae(4,2)\uf0ae(0,2)\uf0ae(2,0)\nd) (0,0)\uf0ae(3,0)\uf0ae(0,3)\uf0ae(3,3)\uf0ae(0,2)\uf0ae(4,2)\uf0ae(2,0)",
-      "tag": "Uncategorized",
+      "tag": "Logic Puzzle",
       "_hash": "c40d2325a6810b8fc126ee87eba29d3e"
     },
     {
@@ -36176,7 +36176,7 @@
       "q_num": 13,
       "img_path": "../cropped_questions/2007A_A/Q13.png",
       "text": "Q13. In a microprocessor, there are two general registers: GRi and GRj (hereinafter referred\nto as GRx instead of GRi or GRj). PUSH GRx is used for adding the contents of GRx\nto the top of a stack. POP GRx is for removing the current top data of the stack and\nstoring it to GRx. Which of the following operations can exchange the contents of GRi\nand GRj?\na) PUSH GRi\nPOP GRj\nPUSH GRj\nPOP GRi\nb) PUSH GRj\nPOP GRi\nPUSH GRi\nPOP GRj\nc) PUSH GRi\nPUSH GRj\nPOP GRi\nPOP GRj\nd) PUSH GRi\nPUSH GRj\nPOP GRj\nPOP GRi",
-      "tag": "Uncategorized",
+      "tag": "Stack Operations",
       "_hash": "bb3bf76ec0db923428b681a08e431d87"
     },
     {
@@ -36188,7 +36188,7 @@
       "q_num": 13,
       "img_path": "../cropped_questions/2007S_A/Q13.png",
       "text": "Q13. Which of the following is the correct result produced by executing the program shown\nbelow? Here, the parameter \u201cx\u201d is called by value, and the parameter \u201cy\u201d is called by\nreference.\nMain Program Subprogram sub(x, y)\na = 2; x = x + y;\nb = 3; y = x + y;\nsub(b, a); return;\na) a = 2, b = 3 b) a = 2, b = 5\nc) a = 7, b = 3 d) a = 7, b = 5",
-      "tag": "Uncategorized",
+      "tag": "Parameter Passing Mechanisms",
       "_hash": "7f6d6cdebe4b35e4bf61a3d0c206160d"
     },
     {
@@ -36200,7 +36200,7 @@
       "q_num": 14,
       "img_path": "../cropped_questions/2007A_A/Q14.png",
       "text": "Q14. Which of the following is the appropriate statement concerning data sorting methods?\na) The \u201cbubble sort\u201d method determines an intermediate reference value and divides the\nelements into two groups of \u201clarger\u201d values and \u201csmaller\u201d values. This operation\nis then repeated recursively on these two groups.\nb) The \u201cheap sort\u201d method builds an ordered tree from the unsorted portion of the\nelements, extracts the maximum or minimum value from this ordered tree, and\nmoves it to the sorted portion. This operational sequence is then repeated to\ngradually shrink the unsorted portion.\nc) The \u201cquick sort\u201d method sorts each substring composed of elements extracted at\nregular intervals, and then the interval is further decreased and the same operation is\nperformed again. This operation is repeated until the interval becomes 1.\nd) The \u201cshell sort\u201d method repeatedly compares two adjacent elements and swaps them\nif the first element is larger than the second.",
-      "tag": "Uncategorized",
+      "tag": "Sorting Algorithms",
       "_hash": "18db7254ce5a6d8df7814f2089309d72"
     },
     {
@@ -36212,7 +36212,7 @@
       "q_num": 14,
       "img_path": "../cropped_questions/2007S_A/Q14.png",
       "text": "Q14. The \u201cprime number division remainder\u201d method is a well-known hashing algorithm. In\nthis method, a key value is divided by a number N, and the remainder which is also called\na hash value is used directly as an index into the hash table. N is the largest prime\nnumber less than or equal to the size of the available addressable spaces. When the 20\naddressable spaces are available, which of the following is the correct hash value\ncalculated from the key value 136? Here, a prime number is one that cannot be divided\nevenly by any other number except one (1). 2, 3, 5, 7, 11, and 13 are the first few prime\nnumbers.\na) 0 b) 1 c) 3 d) 16",
-      "tag": "Uncategorized",
+      "tag": "Hash Table",
       "_hash": "c2dfb5133ed92c442dea0c041c388479"
     },
     {
@@ -36224,7 +36224,7 @@
       "q_num": 15,
       "img_path": "../cropped_questions/2007A_A/Q15.png",
       "text": "Q15. A binary tree is said to be perfect, if all its leaves are at the same depth and every internal\nnode has two children. Which of the following is correct about the perfect binary tree?\nHere, n is the number of nodes, and h is the height of the perfect binary tree.\na) h = log (n+1)\n2\nb) If every proper subtree of a binary tree is perfect, then the tree itself must also be\nperfect.\nc) n = 2h+1 -1\nd) The number of internal nodes is 2h.",
-      "tag": "Uncategorized",
+      "tag": "Binary Tree",
       "_hash": "f3ff956f17ad5592b7a7e9c38fcf8c94"
     },
     {
@@ -36236,7 +36236,7 @@
       "q_num": 15,
       "img_path": "../cropped_questions/2007S_A/Q15.png",
       "text": "Q15. In a certain computer, a bubble sort of an array of 200 data elements takes the same time\nas a quick sort of the array. In case of an array of 40,000 data elements, how many\ntimes faster is a quick sort than a bubble sort? Here, a bubble sort and a quick sort take\ntime proportional to n2 and n\uf0b4log n respectively, and \u201cn\u201d is the number of data elements.\n2\na) 10 b) 50 c) 100 d) 200",
-      "tag": "Uncategorized",
+      "tag": "Sorting Algorithms",
       "_hash": "3dd5cea9004013d33522a19fee28973c"
     },
     {
@@ -36248,7 +36248,7 @@
       "q_num": 16,
       "img_path": "../cropped_questions/2007A_A/Q16.png",
       "text": "Q16. A depth-first search (DFS) visits all the vertices in a graph. When an edge to be\nexplored next is chosen, this algorithm always chooses to go \u201cdeeper\u201d into the graph.\nThat is, it will pick the next adjacent unvisited vertex until reaching a vertex that has no\nunvisited adjacent vertices. The algorithm will then backtrack to the previous vertex\nand continue along any as-yet unexplored edges from that vertex. After DFS has\nvisited all the reachable vertices from a particular source vertex, it chooses one of the\nremaining undiscovered vertices and continues the search. Which of the following is\nnot a valid order in which the vertices of the graph below can be marked as \u201cvisited\u201d\nduring a DFS?\na) ABCDEF b) ABDFEC\nc) ABEDFC d) ADEFCB",
-      "tag": "Uncategorized",
+      "tag": "Depth-First Search",
       "_hash": "20e2c1ac2115b87cca8b2b4b62f0411e"
     },
     {
@@ -36260,7 +36260,7 @@
       "q_num": 16,
       "img_path": "../cropped_questions/2007S_A/Q16.png",
       "text": "Q16. Integers are stored in the 1st to N-th elements of an array A (N >1). The flowchart\nbelow shows the process to check which element of the array contains the same value as\nX. Which of the following correctly describes the execution result of this process?\nStart\n1 k\n>\nk : N\n<=\n=\nX : A(k)\nk + 1 k End\na) If the same value as X exists in two places of the array, the 1st and N-th elements, k is\nset to 1.\nb) If the same value as X exists in two places of the array, the 1st and N-th elements, k is\nset to N.\nc) If the same value as X is not in the array, k is set to 1.\nd) If the same value as X is not in the array, k is set to N.",
-      "tag": "Uncategorized",
+      "tag": "Linear Search Algorithm",
       "_hash": "14c3cfda6d485a092a50e17a7f6549c3"
     },
     {
@@ -36272,7 +36272,7 @@
       "q_num": 17,
       "img_path": "../cropped_questions/2007A_A/Q17.png",
       "text": "Q17. Which of the following equations holds well in the postfix notation (or Reverse Polish\nNotation)? Here, x, y, and z are variables.\na) xy+z- = xyz+- b) xy-z+ = xyz-+\nc) xy-z+ = xyz-- d) xy-z- = xyz--",
-      "tag": "Uncategorized",
+      "tag": "Reverse Polish Notation",
       "_hash": "3e2055058814606aa3c04758253cb1d4"
     },
     {
@@ -36284,7 +36284,7 @@
       "q_num": 17,
       "img_path": "../cropped_questions/2007S_A/Q17.png",
       "text": "Q17. Which of the following is a re-writable, erasable memory, using electrical signals,\nwhich is widely used for various devices such as digital cameras and digital music\nplayers and can maintain the data even after the power is turned off?\na) DRAM b) Flash memory\nc) Mask ROM d) SRAM",
-      "tag": "Uncategorized",
+      "tag": "Semiconductor Memory",
       "_hash": "b9c0a09b4dd023d82c88d1fadae86347"
     },
     {
@@ -36296,7 +36296,7 @@
       "q_num": 18,
       "img_path": "../cropped_questions/2007A_A/Q18.png",
       "text": "Q18. The following function f (n, k) exists:\n1 (k=0)\nf (n, k)= f (n-1, k-1) + f (n-1, k) (0<k<n)\n1 (k=n)\nWhat is the value of f (4, 2)?\na) 3 b) 4 c) 5 d) 6",
-      "tag": "Uncategorized",
+      "tag": "Recursive Function",
       "_hash": "59085f89a0f26f4f53e9d80f37a8d2f9"
     },
     {
@@ -36308,7 +36308,7 @@
       "q_num": 18,
       "img_path": "../cropped_questions/2007S_A/Q18.png",
       "text": "Q18. The figure shows an RS flip-flop using two NOR gates. Which of the following is the\ncorrect truth table for the flip-flop? Here, \u201cunchanged\u201d shown in the table means the\noutputs maintain a previous state, and \u201cunstable\u201d means the outputs are in an unstable\nstate.\na) b)\nInputs Outputs Inputs Outputs\nS R Q Q S R Q Q\n0 0 unchanged 0 0 unchanged\n0 1 0 1 0 1 1 0\n1 0 1 0 1 0 0 1\n1 1 unstable 1 1 unstable\nc) d)\nInputs Outputs Inputs Outputs\nS R Q Q S R Q Q\n0 0 unstable 0 0 unstable\n0 1 0 1 0 1 1 0\n1 0 1 0 1 0 0 1\n1 1 unchanged 1 1 unchanged",
-      "tag": "Uncategorized",
+      "tag": "RS Flip-flop",
       "_hash": "be87733e2e58d80884766640a188d2b1"
     },
     {
@@ -36320,7 +36320,7 @@
       "q_num": 19,
       "img_path": "../cropped_questions/2007A_A/Q19.png",
       "text": "Q19. Which of the following logic circuits generates the same output as the logic circuit\nshown in the figure below? Here, , , and represent the\nlogical product, the logical sum, and the logical negation respectively.\nA\nX\nB\na) A b) A\nX X\nB\nB\nc) A d) A\nX X\nB\nB",
-      "tag": "Uncategorized",
+      "tag": "Logic Circuits",
       "_hash": "cb8ea4456eeb2c475966bde3a6c23291"
     },
     {
@@ -36332,7 +36332,7 @@
       "q_num": 19,
       "img_path": "../cropped_questions/2007S_A/Q19.png",
       "text": "Q19. Which of the following is the correct combination of various addressing modes? Here,\nX is an address which is stored in a program counter. X is an address part of an\n1 2\ninstruction which is addressed by X . X is an address in which an operand needed to\n1 3\nexecute an instruction is stored. X is a value in an index register. (X ) means the\n4 2\ncontents of location X .\n2\nAddressing PC (Program\nDirect Indirect Indexed\nmode Counter)-relative\na) X = X X = X +X X = (X ) X = X +X\n3 2 3 2 4 3 2 3 1 2\nb) X = X X = (X ) X = X +X X = X +X\n3 2 3 2 3 1 2 3 2 4\nc) X = X X = (X ) X = X +X X = X +X\n3 2 3 2 3 2 4 3 1 2\nd) X = (X ) X = X X = X +X X = X +X\n3 2 3 2 3 1 2 3 2 4",
-      "tag": "Uncategorized",
+      "tag": "Addressing Modes",
       "_hash": "d586253a936f408c777dc2fa43e2a300"
     },
     {
@@ -36344,7 +36344,7 @@
       "q_num": 20,
       "img_path": "../cropped_questions/2007A_A/Q20.png",
       "text": "Q20. Which of the following leads to the von Neumann bottleneck?\na) Capacity of main memory\nb) CPU performance\nc) Data transfer speed between CPU and I/O devices\nd) Data transfer speed between CPU and main memory",
-      "tag": "Uncategorized",
+      "tag": "von Neumann Bottleneck",
       "_hash": "de3cb118773fe043bb9b95508b24c6f7"
     },
     {
@@ -36356,7 +36356,7 @@
       "q_num": 20,
       "img_path": "../cropped_questions/2007S_A/Q20.png",
       "text": "Q20. A computer is designed to enable pipeline control so that each instruction can be\ncompleted in five cycles. How many cycles are needed to execute 20 instructions?\nHere, all instructions can be executed without being stopped halfway.\na) 20 b) 21 c) 24 d) 25",
-      "tag": "Uncategorized",
+      "tag": "Pipeline Processing",
       "_hash": "2db3bfad9dbe7da187409b75352448c6"
     },
     {
@@ -36368,7 +36368,7 @@
       "q_num": 21,
       "img_path": "../cropped_questions/2007A_A/Q21.png",
       "text": "Q21. Which of the following is the highest priority process just after execution of each\ninstruction on CPU?\na) Check if there are any instructions waiting\nb) Check if there are any interrupts waiting\nc) Fetch the next instruction\nd) Transfer to an interrupt-handling program",
-      "tag": "Uncategorized",
+      "tag": "Interrupt Processing",
       "_hash": "3d7a0a596363e6c9220b95f2dd20040b"
     },
     {
@@ -36380,7 +36380,7 @@
       "q_num": 21,
       "img_path": "../cropped_questions/2007S_A/Q21.png",
       "text": "Q21. Which of the following is an appropriate statement in regard to interrupts?\na) Applications must constantly detect the occurrence of interrupts.\nb) A priority is individually assigned to the cause of an interrupt in preparation for the\noccurrence of multiple interrupts.\nc) The operation completion notice from an I/O device is classified as an internal\ninterrupt.\nd) When the CPU accepts an interrupt, it stops the program currently being executed\nand stores the information needed to restart the program in the designated area of the\nhard disk.",
-      "tag": "Uncategorized",
+      "tag": "Interrupt Processing",
       "_hash": "459e580ee810425f600583193871a0c3"
     },
     {
@@ -36392,7 +36392,7 @@
       "q_num": 22,
       "img_path": "../cropped_questions/2007A_A/Q22.png",
       "text": "Q22. The instruction pipeline is a technique used in order to improve the CPU performance.\nInstructions are divided into stages and moved through the processor. An RISC\nprocessor has five-stage pipeline (Instruction fetch, Instruction decode, Execute,\nMemory access, Register write back) and can accept a new instruction at every clock\ncycle. How many clock cycles does this processor take for completion of the\nexecution of 10 instructions? Here, there are no pipeline stalls, such as branch stall,\nload stall, and so on.\na) 13 b) 14 c) 15 d) 16",
-      "tag": "Uncategorized",
+      "tag": "Instruction Pipelining",
       "_hash": "e8535abc4247dce92f06b5b38a7395bf"
     },
     {
@@ -36404,7 +36404,7 @@
       "q_num": 22,
       "img_path": "../cropped_questions/2007S_A/Q22.png",
       "text": "Q22. Which of the following is an appropriate description concerning cache memory?\na) Cache memory is used to compensate the difference in capacity between real storage\nand virtual storage.\nb) If a cache miss occurs in access to main memory, an interrupt occurs and data is\ntransferred from main memory to cache memory by the program.\nc) In one method, when executing a write instruction, data is written to both cache\nmemory and main memory. In the other method, data is written only to a block in\ncache, and the modified block is written back into main memory only when it is\nreplaced.\nd) The need for cache memory is diminishing these days because of the significant\nimprovement in access speeds of semiconductor memory.",
-      "tag": "Uncategorized",
+      "tag": "Cache Memory Operations",
       "_hash": "6b7044290912e45f92c5be2f4d1e7071"
     },
     {
@@ -36416,7 +36416,7 @@
       "q_num": 23,
       "img_path": "../cropped_questions/2007A_A/Q23.png",
       "text": "Q23. There is a processor with a clock frequency of 1 GHz. When the instruction set of this\nprocessor is composed of two types of commands as shown in the table below, what is\nthe approximate processing performance in MIPS?\nCommand type Execution time (clocks) Execution frequency (%)\nCommand 1 10 60\nCommand 2 5 40\na) 34 b) 100 c) 125 d) 133",
-      "tag": "Uncategorized",
+      "tag": "MIPS Calculation",
       "_hash": "8cecbdccd85007e18a5bea7ee310540b"
     },
     {
@@ -36428,7 +36428,7 @@
       "q_num": 23,
       "img_path": "../cropped_questions/2007S_A/Q23.png",
       "text": "Q23. There are two systems A and B whose access times of cache and main memory are\nshown in the table. When a certain program runs on these systems, the cache hit ratio\nand the effective access time are the same on both systems. What is the cache hit ratio\nin this case?\nUnit: nsec.\nSystem A System B\nCache memory 15 10\nMain memory 50 70\na) 0.2 b) 0.3 c) 0.5 d) 0.8",
-      "tag": "Uncategorized",
+      "tag": "Effective Access Time",
       "_hash": "48d7cd4a78e36dbca1a11ea565f9dd0c"
     },
     {
@@ -36440,7 +36440,7 @@
       "q_num": 24,
       "img_path": "../cropped_questions/2007A_A/Q24.png",
       "text": "Q24. Which of the following is classified as an external interrupt?\na) An interrupt which is caused by overflow in floating point operations\nb) An interrupt which is generated when a request for a service, such as a demand for\ninput/output, is issued to OS\nc) An interrupt which occurs when a page not existing in the main memory is to be\naccessed\nd) An interrupt which takes place when hardware detects malfunctions",
-      "tag": "Uncategorized",
+      "tag": "Interrupt Processing",
       "_hash": "fa28d7d3cb0ede006fe05965998bbae1"
     },
     {
@@ -36452,7 +36452,7 @@
       "q_num": 24,
       "img_path": "../cropped_questions/2007S_A/Q24.png",
       "text": "Q24. Which of the following is an appropriate description of memory interleaving?\na) Compensating the difference between the access time of main memory and that of\nhard disk.\nb) Dividing main memory into several banks and speeding up access to sequential\naddresses in memory.\nc) Updating cache and main memory simultaneously.\nd) Writing data not needed in cache to main memory when fetching new data to cache\nmemory.",
-      "tag": "Uncategorized",
+      "tag": "Memory Interleaving",
       "_hash": "0b39fa9f8cdfab60f2667c366a01d70e"
     },
     {
@@ -36464,7 +36464,7 @@
       "q_num": 25,
       "img_path": "../cropped_questions/2007A_A/Q25.png",
       "text": "Q25. A CPU has four blocks of cache memory. Using the LRU (Least Recently Used)\nreplacement algorithm, which memory blocks are stored in the cache memory after the\nexecution of the following sequence of access to memory blocks: 1 2 3 4 5 2 5 4 1 5 2 3?\nHere, at the start of the memory access, the four cache blocks are empty and used in\nsequence until all the blocks are occupied. In other words, the cache blocks contain\nmemory blocks \u201c1 2 3 4\u201d after access to the first four memory blocks.\na) 1 2 3 5 b) 1 5 2 3 c) 3 2 5 1 d) 5 2 1 3",
-      "tag": "Uncategorized",
+      "tag": "Cache Replacement Algorithm",
       "_hash": "e8373841145a0ade6c7882c23b81f7cc"
     },
     {
@@ -36476,7 +36476,7 @@
       "q_num": 25,
       "img_path": "../cropped_questions/2007S_A/Q25.png",
       "text": "Q25. There is a hard disk drive with specifications shown below. When a record of 15\nKbytes is processed, which of the following is the average access time in milliseconds?\nHere, the record is stored in one track.\n[Specifications]\nCapacity: 25 Kbytes/track\nRotation speed: 2,400 revolutions/minute\nAverage seek time: 10 milliseconds\na) 22.5 b) 37.5 c) 40.0 d) 50.0",
-      "tag": "Uncategorized",
+      "tag": "HDD Access Time",
       "_hash": "4dbad395994ce213c20fd9d526c9f5ce"
     },
     {
@@ -36488,7 +36488,7 @@
       "q_num": 26,
       "img_path": "../cropped_questions/2007A_A/Q26.png",
       "text": "Q26. Which of the following appropriately describes the purpose of the cache memory used\nby processors?\na) To compensate for the difference between the main memory access speed and the\nprocessor speed\nb) To manage frequently-used programs on a resident basis\nc) To perform virtual memory address conversion at high speed\nd) To perform virtual memory paging process at high speed",
-      "tag": "Uncategorized",
+      "tag": "Cache Memory",
       "_hash": "4734043f5a74e39bcd8a92b607b4ef2e"
     },
     {
@@ -36500,7 +36500,7 @@
       "q_num": 26,
       "img_path": "../cropped_questions/2007S_A/Q26.png",
       "text": "Q26. The sequence of virtual page numbers shown below is encountered in the course of\nexecution of programs on a computer with virtual memory.\n[Sequence of virtual page numbers]\n3 4 2 6 4 7 1 3 2 6 3 5 1 2 3\nIn the computer, the LRU page replacement policy is adopted. Main memory has a\ncapacity of 5 pages for programs, and each page is initially empty. What is the page hit\nratio (percentage of times that the referenced page is found in main memory) rounded to\nthe nearest integer value?\na) 20 b) 33 c) 50 d) 67",
-      "tag": "Uncategorized",
+      "tag": "Virtual Memory Management",
       "_hash": "e405b200cfb485156cc72b3eb06339d9"
     },
     {
@@ -36512,7 +36512,7 @@
       "q_num": 27,
       "img_path": "../cropped_questions/2007A_A/Q27.png",
       "text": "Q27. Which of the following appropriately describes \u201cmemory interleaving\u201d that is one of\nthe high-speed computer technologies?\na) It is a method for bridging the gap between register and main memory access speeds\nby copying a part of the main memory data to the cache.\nb) It is a method for dividing the memory into multiple independently-operating groups\nand accessing each group in parallel.\nc) It is a method for transferring data directly between the main memory and an I/O\ndevice or between main memories without passing through the CPU.\nd) It is a method for writing data to the cache or writing data to the main memory if the\ncache overflows, when sending data to the main memory.",
-      "tag": "Uncategorized",
+      "tag": "Memory Interleaving",
       "_hash": "7a8e74a18d100c2b230ae1e7fc1dbaae"
     },
     {
@@ -36524,7 +36524,7 @@
       "q_num": 27,
       "img_path": "../cropped_questions/2007S_A/Q27.png",
       "text": "Q27. What is an advantage of DVD-RAM in comparison with DVD-RW and DVD+RW?\na) Higher access speed\nb) Higher capacity\nc) More durable rewritable disc\nd) Support of dual-layer DVD format",
-      "tag": "Uncategorized",
+      "tag": "Optical Disc Storage",
       "_hash": "c1d7ed665e8b118b2917637a8f8a0685"
     },
     {
@@ -36536,7 +36536,7 @@
       "q_num": 28,
       "img_path": "../cropped_questions/2007A_A/Q28.png",
       "text": "Q28. How many tracks are required to store a sequentially organized data file including a\ntotal of 10,000 records on the hard disk drive under the following conditions? Here,\neach track can contain multiple blocks, but each block cannot be stored across multiple\ntracks.\n[Conditions]\nRecord length: 300 bytes/record\nTrack capacity: 30,000 bytes/track\nInter-block gap: 400 bytes\nBlocking factor: 20 records/block\na) 100 b) 106 c) 107 d) 125",
-      "tag": "Uncategorized",
+      "tag": "Disk Capacity Calculation",
       "_hash": "7114841a6480edbba1fbda3af5dd5798"
     },
     {
@@ -36548,7 +36548,7 @@
       "q_num": 28,
       "img_path": "../cropped_questions/2007S_A/Q28.png",
       "text": "Q28. Which of the following is the appropriate combination of 4 color inks or toners for a\nfull-color printer?\na) Aqua, Orange, Brown, and Black\nb) Cyan, Magenta, Yellow, and Black\nc) Red, Green, Blue, and Black\nd) Red, Green, Blue, and Gray",
-      "tag": "Uncategorized",
+      "tag": "CMYK Color Model",
       "_hash": "5372cd247dd3d5ac2bd0604a7d1b4667"
     },
     {
@@ -36560,7 +36560,7 @@
       "q_num": 29,
       "img_path": "../cropped_questions/2007A_A/Q29.png",
       "text": "Q29. The head of a hard disk drive is currently positioned at cylinder number 100, and the\ncylinder numbers 120, 90, 70, 80, 140, 110, and 60 are lined up in the I/O request queue.\nWhat is the total number of cylinders that the head moves under the following\nconditions?\n[Conditions]\n(1) The seek optimization method reorders the I/O requests so that the head can move as\nmuch as possible in a single direction, and the requests are processed in order of\ncylinder number.\n(2) The requests so far are in the direction where the cylinder numbers increase.\n(3) When there are no more requests in the current direction, the direction of head\nmovement is reversed.\n(4) The results are unaffected by the processing order of the requests.\n(5) New requests do not occur during the process.\na) 80 b) 120 c) 160 d) 220",
-      "tag": "Uncategorized",
+      "tag": "Disk Scheduling Algorithm",
       "_hash": "5bc944df4642c9ceb2829f9b8f3720d4"
     },
     {
@@ -36572,7 +36572,7 @@
       "q_num": 29,
       "img_path": "../cropped_questions/2007S_A/Q29.png",
       "text": "Q29. Which of the following is the most appropriate index indicating the performance of a\nlaser printer?\na) Number of dots per inch (2.54 cm) and number of pages that can be printed per\nminute\nb) Number of horizontal dots and number of vertical dots used to print a character and\nnumber of characters that can be printed per second\nc) Spacing of printed lines and number of lines that can be printed per second\nd) Types of characters printed and number of characters that can be printed per second",
-      "tag": "Uncategorized",
+      "tag": "Printer Performance Metrics",
       "_hash": "bc924ebc1b2f466099d77d4ac6ddde58"
     },
     {
@@ -36584,7 +36584,7 @@
       "q_num": 30,
       "img_path": "../cropped_questions/2007A_A/Q30.png",
       "text": "Q30. Which of the following technologies is used to divide each data file into blocks at\nconstant length and to store them across multiple hard disks that can be accessed in\nparallel, thereby speeding up file access?\na) Disk at once b) Disk cache\nc) Disk mirroring d) Disk striping",
-      "tag": "Uncategorized",
+      "tag": "Disk Striping",
       "_hash": "1a504e8bc90da23799707347d8d9d3d3"
     },
     {
@@ -36596,7 +36596,7 @@
       "q_num": 30,
       "img_path": "../cropped_questions/2007S_A/Q30.png",
       "text": "Q30. Computer font is an element in the user interface. Which of the following is the most\nappropriate explanation concerning the font?\na) A set of characters to be displayed on a computer\nb) A set of glyphs and associated information such as code points\nc) A set of letters used by a computer as an interface to users\nd) A visual representation of generic elements generated from a script",
-      "tag": "Uncategorized",
+      "tag": "Computer Fonts",
       "_hash": "debc18b4550dc982ed80596fbdc929b4"
     },
     {
@@ -36608,7 +36608,7 @@
       "q_num": 31,
       "img_path": "../cropped_questions/2007A_A/Q31.png",
       "text": "Q31. Which of the following appropriately describes a method of recording data on CD-R?\na) A two-layer structure is provided in which two disks are bonded together. The\nrecording layer is subjected to phase changes by means of laser beams, thereby\nrecording the data.\nb) Laser beams are radiated on the magnetized disk recording film to heat the film and\nto change the magnetization direction by means of a magnetic head, thereby\nrecording the data.\nc) Laser beams are radiated onto an organic dye layer in a disk. As a result, a series of\nburned spots called pits are created on that layer, thereby recording the data.\nd) The magnetization direction of the magnetic substance applied to a disk is changed\nby means of a magnetic head, thereby recording the data.",
-      "tag": "Uncategorized",
+      "tag": "Optical Disk Storage",
       "_hash": "8592ab452383957d7788ba194e3a7736"
     },
     {
@@ -36620,7 +36620,7 @@
       "q_num": 31,
       "img_path": "../cropped_questions/2007S_A/Q31.png",
       "text": "Q31. The figure shows the basic configuration of a computer. Which of the following is\nthe correct combination of A, B, and C to be inserted in the figure?\nA B C\na) ALU Memory Control unit\nb) Control unit ALU Memory\nc) Control unit Memory ALU\nd) Memory Control unit ALU",
-      "tag": "Uncategorized",
+      "tag": "Five Units of Computer",
       "_hash": "86e0cdda2ba31b78ed945a3ce98de822"
     },
     {
@@ -36632,7 +36632,7 @@
       "q_num": 32,
       "img_path": "../cropped_questions/2007A_A/Q32.png",
       "text": "Q32. Which of the following is a method whereby the relevant program is read into main\nmemory and the CPU reads out and executes it sequentially?\na) Addressing method b) Direct program control method\nc) Stored program method d) Virtual memory method",
-      "tag": "Uncategorized",
+      "tag": "Stored Program Concept",
       "_hash": "3765dd72dec68db5fbb9b28f2ad83db5"
     },
     {
@@ -36644,7 +36644,7 @@
       "q_num": 32,
       "img_path": "../cropped_questions/2007S_A/Q32.png",
       "text": "Q32. Which of the following is an input device classified as a pointing device and can be\nused for graphical input in a CAD system?\na) Image scanner b) OCR c) OMR d) Tablet",
-      "tag": "Uncategorized",
+      "tag": "Pointing Devices",
       "_hash": "3e20425ebae12e79d460e6dc00ee6b21"
     },
     {
@@ -36656,7 +36656,7 @@
       "q_num": 33,
       "img_path": "../cropped_questions/2007A_A/Q33.png",
       "text": "Q33. Which of the following functions is a part of OS task management?\na) CPU allocation b) File protection\nc) I/O execution d) Spool control",
-      "tag": "Uncategorized",
+      "tag": "Task Management",
       "_hash": "cd9cd2f72ee2aa48f6c6c88e2c4ec4a0"
     },
     {
@@ -36668,7 +36668,7 @@
       "q_num": 33,
       "img_path": "../cropped_questions/2007S_A/Q33.png",
       "text": "Q33. Which of the following is a display, with low-voltage operation and low-power\nconsumption, which does not need backlighting because it emits light when voltage is\napplied?\na) CRT b) OLED c) PDP d) TFT LCD",
-      "tag": "Uncategorized",
+      "tag": "Display Devices",
       "_hash": "e12b167b90bf1e7a874d50440ac8fc50"
     },
     {
@@ -36680,7 +36680,7 @@
       "q_num": 34,
       "img_path": "../cropped_questions/2007A_A/Q34.png",
       "text": "Q34. When variables shared among tasks are updated, an unexpected result may occur if\nsynchronous control among tasks is not performed. When the initial value of the\nvariable x shared among tasks is 3, the final value of x is expected to be 12 if task A\nexecutes the assignment statement \u201cx = x + x\u201d and if task B executes the assignment\nstatement \u201cx = x \u00d7 x.\u201d Which of the following is the appropriate execution sequence\nthat can return the expected result? Here, each assignment statement is executed by\nbeing divided into four portions as shown below.\nTask A (x = x + x) Task B (x = x \u00d7 x)\na1: The value of x is referred to and b1: The value of x is referred to and\nis saved as e. is saved as h.\na2: The value of x is referred to and b2: The value of x is referred to and\nis saved as f. is saved as i.\na3: e + f is computed and is saved b3: h \u00d7 i is computed and is saved\nas g. as j.\na4: The value of x is updated by b4: The value of x is updated by\nmeans of g. means of j.\na) a1 \uf0e0 a2 \uf0e0 b1 \uf0e0 b2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b3 \uf0e0 b4\nb) a1 \uf0e0 b1 \uf0e0 b2 \uf0e0 b3 \uf0e0 b4 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4\nc) b1 \uf0e0 a1 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b2 \uf0e0 b3 \uf0e0 b4\nd) b1 \uf0e0 b2 \uf0e0 b3 \uf0e0 a1 \uf0e0 a2 \uf0e0 a3 \uf0e0 a4 \uf0e0 b4",
-      "tag": "Uncategorized",
+      "tag": "Exclusive Control",
       "_hash": "a0932024b9f19f9673b9cb55a0b6d594"
     },
     {
@@ -36692,7 +36692,7 @@
       "q_num": 34,
       "img_path": "../cropped_questions/2007S_A/Q34.png",
       "text": "Q34. Which of the following is an appropriate description concerning the role of a shell in an\nOS?\na) It allows mouse operations, instead of keyboard operations, such as selecting\ncommands from menus and selecting items on setup screens in an application.\nb) It holds reference information for frequently used files and directories so that users\ncan use these items even if they do not know the actual paths.\nc) It interprets the commands entered by the user and instructs the OS to execute the\ncorresponding functions.\nd) It performs efficient security management and mutual exclusion (exclusive control)\nwhen multiple users simultaneously access common resources.",
-      "tag": "Uncategorized",
+      "tag": "Role of Shell",
       "_hash": "fdb03b20112c40ad72eb024222e3fc7d"
     },
     {
@@ -36704,7 +36704,7 @@
       "q_num": 35,
       "img_path": "../cropped_questions/2007A_A/Q35.png",
       "text": "Q35. Which of the following has the feature whereby only minimally limited OS functions,\nsuch as memory management and process management, are supported and other OS\nfunctions, such as the file system, are implemented as server processes?\na) Microkernel b) Monolithic kernel\nc) Multithread d) Single user mode",
-      "tag": "Uncategorized",
+      "tag": "Microkernel Architecture",
       "_hash": "5240f1fb2855e71cbe4321b3396046e3"
     },
     {
@@ -36716,7 +36716,7 @@
       "q_num": 35,
       "img_path": "../cropped_questions/2007S_A/Q35.png",
       "text": "Q35. Which of the following terms refers to the function that adjusts all address dependent\nlocations within a program to correspond to the load position when the program is\nloaded into main memory prior to its execution?\na) Optimization b) Recompilation c) Reloading d) Relocation",
-      "tag": "Uncategorized",
+      "tag": "Program Relocation",
       "_hash": "c7814db208bad41d68b29de605c4caf8"
     },
     {
@@ -36728,7 +36728,7 @@
       "q_num": 36,
       "img_path": "../cropped_questions/2007A_A/Q36.png",
       "text": "Q36. Which of the following is the appropriate statement concerning client/server\narchitecture?\na) It divides a series of processes into two groups by means of an inter-process\ncommunication mechanism; one group includes processes that request services, and\nthe other consists of processes that execute the requested services.\nb) It is mainly aimed at achieving horizontal load sharing by connecting terminals to\nmultiple workstations replacing the host computer.\nc) It is mainly aimed at achieving load sharing by distributing, among the terminals,\npart of functions and data files to be processed by the host computer.\nd) It is the generic term for a system configuration in which a PC is connected to a\nworkstation via LAN. The PC and workstation are called a client and a server,\nrespectively.",
-      "tag": "Uncategorized",
+      "tag": "Client/Server System",
       "_hash": "5a272c675578b2188c9764fa37df363d"
     },
     {
@@ -36740,7 +36740,7 @@
       "q_num": 36,
       "img_path": "../cropped_questions/2007S_A/Q36.png",
       "text": "Q36. The table shows the priorities of five tasks A to E. When each task is independently\nexecuted, the processing sequences and times associated with CPU and I/O devices are\nalso shown in the table. Which of the tasks B to E should be combined together with\ntask A assigned a \u201chigh\u201d priority so that there may be no idle time of CPU from\nstarting of execution of the combined tasks to ending of both tasks? Here, I/O\noperations never conflict with each other, and any overhead involved in the OS can be\nignored. The number in parentheses denotes each processing time.\nProcessing sequence and time (in milliseconds)\nTask Priority\nduring independent execution\nA High CPU (3) \uf0ae I/O (3) \uf0ae CPU (3) \uf0ae I/O (3) \uf0ae CPU (2)\na) B Low CPU (2) \uf0ae I/O (5) \uf0ae CPU (2) \uf0ae I/O (2) \uf0ae CPU (3)\nb) C Low CPU (3) \uf0ae I/O (2) \uf0ae CPU (2) \uf0ae I/O (3) \uf0ae CPU (2)\nc) D Low CPU (3) \uf0ae I/O (2) \uf0ae CPU (3) \uf0ae I/O (1) \uf0ae CPU (4)\nd) E Low CPU (3) \uf0ae I/O (4) \uf0ae CPU (2) \uf0ae I/O (5) \uf0ae CPU (2)",
-      "tag": "Uncategorized",
+      "tag": "Task Scheduling",
       "_hash": "99dc3b87d6bdd6417b29fe58f2c08b2e"
     },
     {
@@ -36752,7 +36752,7 @@
       "q_num": 37,
       "img_path": "../cropped_questions/2007A_A/Q37.png",
       "text": "Q37. Which of the following is the primary purpose to use RAID?\na) To achieve a lower hardware cost\nb) To ensure higher reliability and/or performance\nc) To improve data security\nd) To simplify the hardware configuration for a quick and easy installation",
-      "tag": "Uncategorized",
+      "tag": "RAID Technology",
       "_hash": "950a1af4371a47719dc471d92566de25"
     },
     {
@@ -36764,7 +36764,7 @@
       "q_num": 37,
       "img_path": "../cropped_questions/2007S_A/Q37.png",
       "text": "Q37. In a search system, when search was first performed under condition A, there were 5,000\nsearch results. When further narrowed down with condition B, 30% of these search\nresults remained. If search first performed under condition B produces 10,000 search\nresults, what percentage will remain when these are further narrowed down with\ncondition A?\na) 15 b) 30 c) 35 d) 60",
-      "tag": "Uncategorized",
+      "tag": "Set Operations",
       "_hash": "0a8c0aaef5c269ac35146ed38f6f81c6"
     },
     {
@@ -36776,7 +36776,7 @@
       "q_num": 38,
       "img_path": "../cropped_questions/2007A_A/Q38.png",
       "text": "Q38. There is an RAID5 disk array system that is composed of 10 hard disk drives, and each\ndisk capacity is 100Gbytes. What is the approximate maximum capacity (in Gbytes)\nthat can be used to store user data and/or programs on this system?\na) 450 b) 500 c) 900 d) 1,000",
-      "tag": "Uncategorized",
+      "tag": "RAID disk array",
       "_hash": "e2964ba46506147382f126b2a802cf83"
     },
     {
@@ -36788,7 +36788,7 @@
       "q_num": 38,
       "img_path": "../cropped_questions/2007S_A/Q38.png",
       "text": "Q38. Which of the following functions can reduce the network load by placing a\nfrequently-used instruction set on the server in advance, when accessing a database in a\nclient/server system?\na) Group commitment function\nb) Multi-thread function of server process\nc) Stored procedure function\nd) Two-phase commitment function",
-      "tag": "Uncategorized",
+      "tag": "Stored Procedure",
       "_hash": "e8836a12319e425718f6233b057a15e7"
     },
     {
@@ -36800,7 +36800,7 @@
       "q_num": 39,
       "img_path": "../cropped_questions/2007A_A/Q39.png",
       "text": "Q39. In some systems, the system manually or automatically determines memory blocks\nwhich are no longer referenced by a program and reorganizes the memory space so that\nit can be available for subsequent allocation. What is this process called?\na) Fragmentation b) Garbage collection\nc) Swapping d) Thrashing",
-      "tag": "Uncategorized",
+      "tag": "Garbage Collection",
       "_hash": "e803bb54a36d08dcbd7de45ea8b8c99c"
     },
     {
@@ -36812,7 +36812,7 @@
       "q_num": 39,
       "img_path": "../cropped_questions/2007S_A/Q39.png",
       "text": "Q39. Which of the following is a system where one computer is in standby mode when the\nother computer is functioning normally?\na) Dual system b) Duplex system\nc) Load sharing system d) Multiprocessing system",
-      "tag": "Uncategorized",
+      "tag": "Duplex System",
       "_hash": "a27b62f4aef18fe59db00459efc430f2"
     },
     {
@@ -36824,7 +36824,7 @@
       "q_num": 40,
       "img_path": "../cropped_questions/2007A_A/Q40.png",
       "text": "Q40. Which of the following is the appropriate description concerning the performance\nevaluation of a computer system?\na) At a stage where the system is not in actual operation, it is possible to predict the\nperformance of the computer system by running experimental simulations using a\nhardware monitor.\nb) In case that it is planned to enhance computer system resources, the performance, as\nit will be when the whole system is operating, can be confirmed by means of a\nprototype model based on load forecasting.\nc) In the case of a system in operation, a software monitor can be used to collect and\nanalyze statistical data, thereby permitting performance-related problems to be\ngrasped.\nd) Since a benchmark program for measuring CPU performance covers a wide range of\napplications, it can be used for performance prediction at stages ranging from the\ncomputer installation to the system enhancement planning.",
-      "tag": "Uncategorized",
+      "tag": "Performance Evaluation Methods",
       "_hash": "254d62d04cacd7cd3b39c953caa41f4f"
     },
     {
@@ -36836,7 +36836,7 @@
       "q_num": 40,
       "img_path": "../cropped_questions/2007S_A/Q40.png",
       "text": "Q40. There is a CPU whose clock cycle time is 0.01 microsecond. The table below shows a\nprogram\u2019s instruction mix executed on the CPU. What is the approximate MIPS value\nfor the processor?\nNumber of clock\nFrequency of\nType of instruction cycles required for\noccurrence\ninstruction execution\nData transfer instructions 5 70%\nCalculation instructions 10 15%\nDecision instructions 5 10%\nJump instruction 1 5%\nTotal 100%\na) 4.76 b) 10.30 c) 18.02 d) 20.70",
-      "tag": "Uncategorized",
+      "tag": "MIPS Calculation",
       "_hash": "dab165e9dde96ed63b762cc388b4321c"
     },
     {
@@ -36848,7 +36848,7 @@
       "q_num": 41,
       "img_path": "../cropped_questions/2007A_A/Q41.png",
       "text": "Q41. Which of the following appropriately describes a dual system?\na) Processor, memory, channel, power supply system, and so on are duplicated. If a\nfault occurs in any one of the pairs of equipment, the other is used to continue the\nprocessing.\nb) The active system performs online processing, and a standby system stands by\nperforming batch processing, etc. If a fault occurs in the active system, the standby\nsystem takes over and continues the online processing.\nc) The online processing program of the active system is loaded in the standby system.\nIf a fault occurs in the active system, the standby system immediately takes over and\ncontinues the processing.\nd) Two systems perform the same processing, and the processed results are collated to\nconfirm the correctness of the processing. If a fault occurs in either system,\nprocessing continues in degraded operation.",
-      "tag": "Uncategorized",
+      "tag": "Dual System",
       "_hash": "c935172ee85a32da67ef159233e30f9a"
     },
     {
@@ -36860,7 +36860,7 @@
       "q_num": 41,
       "img_path": "../cropped_questions/2007S_A/Q41.png",
       "text": "Q41. Which of the following is an appropriate statement with regard to system performance\nevaluation, when selecting a new computer system?\na) Evaluation can be performed in an environment close to actual use by creating a\nrelatively simple and easy-to-understand program for test purposes, repeatedly\nrunning this program as necessary, and measuring the performance.\nb) Evaluation can be performed with high accuracy by using a test program that is\nrelatively unaffected by differences in memory capacity and I/O device\nconfiguration.\nc) Performance should be measured in as simple environment as possible. The data\nrequired for evaluation can be obtained by running many programs with multiplicity\n1.\nd) The data required for evaluation can be acquired by running programs which are\nfrequently used or time critical.",
-      "tag": "Uncategorized",
+      "tag": "Performance Evaluation Methods",
       "_hash": "941d7603e69ed4dd482f4f9415d2bcd1"
     },
     {
@@ -36872,7 +36872,7 @@
       "q_num": 42,
       "img_path": "../cropped_questions/2007A_A/Q42.png",
       "text": "Q42. When the operational model of a system is shown in the figure below, which of the\nfollowing represents the correct combination of MTBF and MTTR of the system?\nHere, t (i = 1, 2, ..., n) denotes the operating time of the system, and r (i = 1, 2, ..., n)\ni i\ndenotes the repair time of the system.\nOccurrence of failure Occurrence of failure Occurrence of failure\nOperation\u2605 Operation \u2605 Operation \u2605 Operation\nRepair Repair Repair\nt r t r t r t\n1 1 2 2 3 3 4\nMTBF MTTR\n1 1\na) n \u03a3 n r i n \u03a3 n t i\ni\uff1d1 i\uff1d1\n1 1\nb) n \u03a3 n t i n \u03a3 n r i\ni\uff1d1 i\uff1d1\n1 1\nc) n \u03a3 n t i n \u03a3 n ( t i + r i )\ni\uff1d1 i\uff1d1\n1 1\nd) n \u03a3 i\uff1d n 1 ( t i + r i ) n \u03a3 i\uff1d n 1 r i",
-      "tag": "Uncategorized",
+      "tag": "System Reliability Indices",
       "_hash": "01d3b59148d560acaa1363cc9a3b0c98"
     },
     {
@@ -36884,7 +36884,7 @@
       "q_num": 42,
       "img_path": "../cropped_questions/2007S_A/Q42.png",
       "text": "Q42. A company uses 1,000 PCs. The mean failure in 20 days is to be restricted to 2 PCs.\nHow many hours of MTBF are at least required for these PCs? Here, the mean usage\ntime of the PCs is assumed to be 8 hours per day.\na) 8,000 b) 20,000 c) 80,000 d) 160,000",
-      "tag": "Uncategorized",
+      "tag": "MTBF Calculation",
       "_hash": "ada65017c5269bef06c021955cb10eee"
     },
     {
@@ -36896,7 +36896,7 @@
       "q_num": 43,
       "img_path": "../cropped_questions/2007A_A/Q43.png",
       "text": "Q43. Which of the following shows the system configuration that can operate with an overall\nsystem availability of (1-(1-A)2)2? Here, the element X is a processor with an\navailability of A. Also, the segment connected in parallel is considered operating if\neither of the two processors is operating. However, the segment connected in series is\nconsidered operating only when both processors are operating.\na) b)\nX\nX\nX\nX\nc) d)",
-      "tag": "Uncategorized",
+      "tag": "System Availability Calculation",
       "_hash": "2c0e8df446499b90e72a05b2d293c538"
     },
     {
@@ -36908,7 +36908,7 @@
       "q_num": 43,
       "img_path": "../cropped_questions/2007S_A/Q43.png",
       "text": "Q43. Which of the following statements concerning programming languages appropriately\ndescribes Java?\na) It enables the creation of applets and other programs that run in web browsers. The\napplets can be run on any environment where virtual machines are implemented.\nb) It incorporates object-oriented concepts of class and inheritance into C and has upper\ncompatibility with C.\nc) It is a markup language used on the Web and describes the document structure using\ntags. It enables the creation of hypertext that links text, movies, etc.\nd) It is an interpreter-type, object-oriented language developed in the 1970\u2019s and\nincludes editor, debugger, and other integrated development environment as well as\nOS functions.",
-      "tag": "Uncategorized",
+      "tag": "Java Programming Language",
       "_hash": "9174e8a92a439278a02a4f0c2bfb305b"
     },
     {
@@ -36920,7 +36920,7 @@
       "q_num": 44,
       "img_path": "../cropped_questions/2007A_A/Q44.png",
       "text": "Q44. In some circumstances, a program may be still running when it is called again by\nanother program. Which of the following is the appropriate characteristic that should\nbe implemented to execute this program correctly?\na) Recursive b) Reentrant\nc) Relocatable d) Reusable",
-      "tag": "Uncategorized",
+      "tag": "Program Characteristics",
       "_hash": "3e791057d0b93f071dffe0be62366971"
     },
     {
@@ -36932,7 +36932,7 @@
       "q_num": 44,
       "img_path": "../cropped_questions/2007S_A/Q44.png",
       "text": "Q44. There are two methods to execute byte-code programs written in Java. In the first\nmethod, an interpreter is used to execute byte-code. In the second method, native code\ngenerated by a compiler is executed. In the second method, how many lines of\nbyte-code are at least required, in order to achieve shorter processing time (including\ncompiling time) than the first method, under the conditions below?\n[Conditions]\n(1) The execution time is proportional to the number of lines in the program.\n(2) If a program consisting of 100 lines of byte-code is executed using an interpreter,\nit takes 0.2 seconds. If the same program is executed after compiling, it takes\n0.003 seconds.\n(3) It takes 0.1 seconds to compile 100 lines.\n(4) In case of the method using a compiler, an overhead of 0.15 seconds is always\nrequired for file input/output, compiler startup, and so on, regardless of the\nnumber of lines in the program.\n(5) Other miscellaneous time such as time for downloading the program file may be\nignored.\na) 50 b) 75 c) 125 d) 155",
-      "tag": "Uncategorized",
+      "tag": "Compiler and Interpreter",
       "_hash": "982b24dce5adba882c1949f21ca50009"
     },
     {
@@ -36944,7 +36944,7 @@
       "q_num": 45,
       "img_path": "../cropped_questions/2007A_A/Q45.png",
       "text": "Q45. Which of the following is the language processing program that generates, on a certain\ncomputer, object programs that can be executed on another computer that has a different\ninstruction set?\na) Cross compiler b) Emulator\nc) Generator d) Optimizing compiler",
-      "tag": "Uncategorized",
+      "tag": "Language Processor Types",
       "_hash": "e59a6044989ea80c3d1393d6ff51cfa1"
     },
     {
@@ -36956,7 +36956,7 @@
       "q_num": 45,
       "img_path": "../cropped_questions/2007S_A/Q45.png",
       "text": "Q45. Which of the following is an appropriate description concerning a tracer that is used as\na debugging tool?\na) It outputs history information such as execution sequences and execution results of\nprogram instructions.\nb) It outputs the contents of a specified memory each time a specific instruction in a\nprogram is executed.\nc) It outputs the contents of magnetic tape files and hard disk files.\nd) It outputs the contents of the relevant memory when an error occurs during the\nexecution of a program.",
-      "tag": "Uncategorized",
+      "tag": "Debugging Tools",
       "_hash": "64494daf7db1ec00552075a390b54434"
     },
     {
@@ -36968,7 +36968,7 @@
       "q_num": 46,
       "img_path": "../cropped_questions/2007A_A/Q46.png",
       "text": "Q46. Which of the following is the standardized document description language that\nprescribes methods, as an international standard, for describing the logical structures\nand attributes of documents using tags and facilitates the management and exchange of\nelectronic documents?\na) DML b) HTML c) SGML d) STEP",
-      "tag": "Uncategorized",
+      "tag": "Markup Languages",
       "_hash": "532770f9dcfb8364ed24d0cfea02e157"
     },
     {
@@ -36980,7 +36980,7 @@
       "q_num": 46,
       "img_path": "../cropped_questions/2007S_A/Q46.png",
       "text": "Q46. Which of the following is an appropriate description in regard to a waterfall model?\na) System development proceeds in the order of process flow, so going back upstream\nresults in a significant loss of efficiency.\nb) Systems are developed in a short time by involving users, performing development in\nsmall groups and utilizing development tools.\nc) The design and implementation of an application is performed for a unit of\ncomponent, and then this process is repeated successively for every component.\nd) Working prototypes are created to verify and evaluate requirements specifications at\nan early stage.",
-      "tag": "Uncategorized",
+      "tag": "Waterfall Model",
       "_hash": "de089442a53e974456b9ee55b80007d3"
     },
     {
@@ -36992,7 +36992,7 @@
       "q_num": 47,
       "img_path": "../cropped_questions/2007A_A/Q47.png",
       "text": "Q47. Which of the following is the appropriate combination of basic concepts of\nobject-oriented approach?\na) Abstraction, encapsulation, inheritance, and class\nb) Instantiation, Structuralization, sequence, and class\nc) Normalization, encapsulation, division, and class\nd) Virtualization, Structuralization, projection, and class",
-      "tag": "Uncategorized",
+      "tag": "Object-oriented Approach",
       "_hash": "8690eb9593712e97e7ebd87ef3985f03"
     },
     {
@@ -37004,7 +37004,7 @@
       "q_num": 47,
       "img_path": "../cropped_questions/2007S_A/Q47.png",
       "text": "Q47. Which of the following is an appropriate description concerning object-oriented design?\na) A class always has at least one instance.\nb) A class can inherit attributes and methods from its base class.\nc) An object is a template for a class.\nd) Encapsulation refers to the creation of a library of classes.",
-      "tag": "Uncategorized",
+      "tag": "Object-oriented Design",
       "_hash": "47a55e7277d24dca647bf4bd7e824a68"
     },
     {
@@ -37016,7 +37016,7 @@
       "q_num": 48,
       "img_path": "../cropped_questions/2007A_A/Q48.png",
       "text": "Q48. Which of the following is the appropriate characteristic of \u201cdata oriented design\u201d as\ncompared with \u201cprocess oriented design?\u201d\na) Data modeling is performed prior to the modeling of business operations.\nb) Data oriented design is effective for building a specific business application system\nin a short period of time.\nc) It is possible to consider data as shared resources and to manage it in a unified\nmanner.\nd) It is possible to create data structures combined with business processes.",
-      "tag": "Uncategorized",
+      "tag": "Data Oriented Approach",
       "_hash": "1336553d4f12ed10a804d78ce1d76d67"
     },
     {
@@ -37028,7 +37028,7 @@
       "q_num": 48,
       "img_path": "../cropped_questions/2007S_A/Q48.png",
       "text": "Q48. Which of the following is a UML diagram that can be used to describe interactions\namong a number of objects in terms of an exchange of messages?\na) Activity diagram b) Class diagram\nc) Sequence diagram d) Use case diagram",
-      "tag": "Uncategorized",
+      "tag": "UML Sequence Diagram",
       "_hash": "237d6222e2f41a8a1f1931148be58db6"
     },
     {
@@ -37040,7 +37040,7 @@
       "q_num": 49,
       "img_path": "../cropped_questions/2007A_A/Q49.png",
       "text": "Q49. Which of the following is the appropriate program that supports dynamic processing in\na Web environment and runs only on a Web server?\na) Java applet b) JavaScript\nc) Java servlet d) VBScript",
-      "tag": "Uncategorized",
+      "tag": "Server-side Technology",
       "_hash": "54d47b2317a4343ea285a00ccab6af1c"
     },
     {
@@ -37052,7 +37052,7 @@
       "q_num": 49,
       "img_path": "../cropped_questions/2007S_A/Q49.png",
       "text": "Q49. A systems design is represented using several diagrams. When a system analyst wants\nto confirm the design information such as the relationships among functions and the\ninterface among modules in a hierarchical manner, which of the following is the most\nappropriate diagram that should be inspected by the analyst?\na) Data flow diagram b) Entity-relationship diagram\nc) State transition diagram d) Structured chart",
-      "tag": "Uncategorized",
+      "tag": "Software Design Diagrams",
       "_hash": "33089e94f9bc5f8ae26dce4019c56d2e"
     },
     {
@@ -37064,7 +37064,7 @@
       "q_num": 50,
       "img_path": "../cropped_questions/2007A_A/Q50.png",
       "text": "Q50. When the data model is represented to conform to the notational convention shown\nbelow, which of the following statements appropriately interprets the designated E-R\ndiagram?\n[Notational convention]\n[E-R diagram]\na) A single product is supplied by a single supplier.\nb) It doe not occur that a single order placement is given for multiple types of\nproducts.\nc) It does not occur that a single order placement is given to multiple suppliers.\nd) Order statements and delivery statements have a one-to-one correspondence.",
-      "tag": "Uncategorized",
+      "tag": "E-R Diagram",
       "_hash": "ac0d6ab62ce0fb2074ec38ba0c50149f"
     },
     {
@@ -37076,7 +37076,7 @@
       "q_num": 50,
       "img_path": "../cropped_questions/2007S_A/Q50.png",
       "text": "Q50. In the module design of software, which of the following is the appropriate technique\nfor improving reliability and maintainability?\na) Module cohesion is increased, and module coupling is strengthened.\nb) Module cohesion is increased, and module coupling is weakened.\nc) Module cohesion is reduced, and module coupling is strengthened.\nd) Module cohesion is reduced, and module coupling is weakened.",
-      "tag": "Uncategorized",
+      "tag": "Module Cohesion and Coupling",
       "_hash": "c93b7d048d0465fc96d1a19626663056"
     },
     {
@@ -37088,7 +37088,7 @@
       "q_num": 51,
       "img_path": "../cropped_questions/2007A_A/Q51.png",
       "text": "Q51. Which of the following design tasks is performed from the standpoint of the system\ndeveloper, based on the deliverables of external design and in consideration of the\nimplementation method and processing efficiency?\na) Code design\nb) Functional decomposition and structured design\nc) Logical data design\nd) Screen flow design",
-      "tag": "Uncategorized",
+      "tag": "Internal Design",
       "_hash": "ad739779b0d10d678bdb00b30af946a0"
     },
     {
@@ -37100,7 +37100,7 @@
       "q_num": 51,
       "img_path": "../cropped_questions/2007S_A/Q51.png",
       "text": "Q51. The entity-relationship diagrams A and B shows the relationships between three entities\nin a school: teacher, class, and classroom. Which of the following is an appropriate\n1 1\ninterpretation concerning the diagrams? Here, \" \" shows a one-to-one\n1 *\nrelationship while \" \" shows a one-to-many relationship.\n1 1 1 1\nA Teacher Class Classroom\n1 * * 1\nB Teacher Class Classroom\na) In A, a teacher is responsible for one class only. In B, a teacher may be responsible\nfor one or more classes.\nb) In A, one class is always assigned to the same classroom. In B, one class may be\nassigned to one or more classrooms.\nc) In A, one class is always supervised by one teacher. In B, one class may be\nsupervised by one or more teachers.\nd) In A, when a teacher or a classroom is decided, a single class will be decided. In B,\nif a teacher and a classroom are decided, a single class will be decided.",
-      "tag": "Uncategorized",
+      "tag": "E-R Diagram",
       "_hash": "a28dfc1bba72c348d63e32915760af7d"
     },
     {
@@ -37112,7 +37112,7 @@
       "q_num": 52,
       "img_path": "../cropped_questions/2007A_A/Q52.png",
       "text": "Q52. Which of the following is the appropriate sequence of DB application development\nactivities?\na) Conceptual design \uf0e0 Database planning \uf0e0 Data conversion \uf0e0 Physical design\nb) Conceptual design \uf0e0 Database planning \uf0e0 Physical design \uf0e0 Data conversion\nc) Database planning \uf0e0 Conceptual design \uf0e0 Physical design \uf0e0 Data conversion\nd) Database planning \uf0e0 Physical design \uf0e0 Conceptual design \uf0e0 Data conversion",
-      "tag": "Uncategorized",
+      "tag": "Database Design Process",
       "_hash": "96ed9af1d742c672d17c505d7c58020d"
     },
     {
@@ -37124,7 +37124,7 @@
       "q_num": 52,
       "img_path": "../cropped_questions/2007S_A/Q52.png",
       "text": "Q52. Which of the following is an appropriate statement in regard to a module unit test?\na) Generally, test cases are created and executed by dedicated testing staff, not\nprogrammers who have done the coding.\nb) The module design documents have already been verified. If a problem is found in\nthe test results, an error exists in the test case or the module.\nc) The module interface falls outside the scope of the unit test because the module\ninterface cannot be tested using a single module.\nd) Verification should be performed, in principle, using test cases which cover all the\nlogic paths at least once while reviewing the module design documents.",
-      "tag": "Uncategorized",
+      "tag": "Software Unit Testing",
       "_hash": "a1995e839bfeb9d9cf3e8f1d00916e6e"
     },
     {
@@ -37136,7 +37136,7 @@
       "q_num": 53,
       "img_path": "../cropped_questions/2007A_A/Q53.png",
       "text": "Q53. Which of the following is the appropriate statement concerning how to illustrate data\nflows (arrows) in DFD?\na) Each data store must be connected to another data store with at least one data flow.\nb) Each data store must have at least one data flow in and one data flow out.\nc) Each external entity must be connected to another external entity with at least one\ndata flow.\nd) Each process must have at least one data flow in and one data flow out.",
-      "tag": "Uncategorized",
+      "tag": "Data Flow Diagram",
       "_hash": "9786036c1600af44d12fa3cf68f26039"
     },
     {
@@ -37148,7 +37148,7 @@
       "q_num": 53,
       "img_path": "../cropped_questions/2007S_A/Q53.png",
       "text": "Q53. Which of the following is an appropriate statement in regard to program testing?\na) In the program testing, it is necessary to check not only whether the program works\nas intended but also whether there are any unintended operations.\nb) The black box method is used for the test of internal structure, and the white box\nmethod is used for the test of external specifications.\nc) The number of errors remaining in a program is unrelated to the number of errors\nalready found.\nd) The objective of program testing is to verify its completeness, and the test should be\nplanned under the assumption that all errors can be detected.",
-      "tag": "Uncategorized",
+      "tag": "Software Testing Principles",
       "_hash": "0e49a0535c63c977ab33200cdeadc9af"
     },
     {
@@ -37160,7 +37160,7 @@
       "q_num": 54,
       "img_path": "../cropped_questions/2007A_A/Q54.png",
       "text": "Q54. Which of the following is the appropriate description concerning the functions of\n\u201cdriver\u201d or \u201cstub\u201d used in the module test?\na) \u201cDriver\u201d calls the module to be tested while passing arguments to it.\nb) \u201cDriver\u201d is a module that is called from the module to be tested.\nc) \u201cStub\u201d displays and prints the value returned by the module to be tested.\nd) \u201cStub\u201d is a module that calls the module to be tested.",
-      "tag": "Uncategorized",
+      "tag": "Driver and Stub",
       "_hash": "6aebe6ac644d496aac90df4aae7c1257"
     },
     {
@@ -37172,7 +37172,7 @@
       "q_num": 54,
       "img_path": "../cropped_questions/2007S_A/Q54.png",
       "text": "Q54. Which of the following software test methods is performed to verify whether changes\nmade for software maintenance are not affecting other portions of the software?\na) Integration test b) Operation test\nc) Regression test d) System test",
-      "tag": "Uncategorized",
+      "tag": "Regression Testing",
       "_hash": "a03bbd8b28249403f3fd988b59462f2e"
     },
     {
@@ -37184,7 +37184,7 @@
       "q_num": 55,
       "img_path": "../cropped_questions/2007A_A/Q55.png",
       "text": "Q55. Which of the following is the appropriate description concerning black box testing?\na) Attention is focused on the internal structures of programs, and verification is made\nas to whether necessary portions are executed.\nb) Even if any redundant code exists in a tested program, it cannot be detected.\nc) If branch instructions and modules increase in number, the amount of test data also\nleaps upward.\nd) The test case coverage is used as criteria for preparing test data.",
-      "tag": "Uncategorized",
+      "tag": "Black-box Testing",
       "_hash": "f2df0f2a72f0c37cee4bef8af1d51df0"
     },
     {
@@ -37196,7 +37196,7 @@
       "q_num": 55,
       "img_path": "../cropped_questions/2007S_A/Q55.png",
       "text": "Q55. A check digit for a 4-digit number X X X X can be calculated as follows:\n1 2 3 4\nmod((X \uf0b44+X \uf0b43+X \uf0b42+X \uf0b41), 10)\n1 2 3 4\nWhen the check digit for the 4-digit number \u201c7X 42\u201d is equal to 6, which of the\n2\nfollowing is the correct number to be put in X ? Here, mod (a,b) returns the remainder\n2\nafter \u201ca\u201d is divided by \u201cb.\u201d\na) 5 b) 6 c) 7 d) 8",
-      "tag": "Uncategorized",
+      "tag": "Check Digit",
       "_hash": "0908cd5674bbab13c493134bcd692780"
     },
     {
@@ -37208,7 +37208,7 @@
       "q_num": 56,
       "img_path": "../cropped_questions/2007A_A/Q56.png",
       "text": "Q56. Which of the following appropriately describes the purpose of using WBS (Work\nBreakdown Structure) in software development?\na) To divide development work into small tasks in a top-down manner, thereby\nfacilitating work management\nb) To estimate development cost and place the full weight of cost management\nc) To find the critical path at an early stage and focus on such a path\nd) To make a work schedule in consideration of available resources",
-      "tag": "Uncategorized",
+      "tag": "Work Breakdown Structure (WBS)",
       "_hash": "55663cc66a4723407bb5f721d6e1006a"
     },
     {
@@ -37220,7 +37220,7 @@
       "q_num": 56,
       "img_path": "../cropped_questions/2007S_A/Q56.png",
       "text": "Q56. An implementation plan for a system development project was drawn up, and the\ncritical path was determined. Which of the following tasks can be identified by the\ncritical path?\na) Tasks directly connected with the delay of the entire project\nb) Tasks entailing the highest cost\nc) Tasks in which the greatest care should be exercised in terms of system quality\nd) Tasks where the execution sequence can be changed",
-      "tag": "Uncategorized",
+      "tag": "Critical Path Method",
       "_hash": "76f768625fe04d869c869559e06306eb"
     },
     {
@@ -37232,7 +37232,7 @@
       "q_num": 57,
       "img_path": "../cropped_questions/2007A_A/Q57.png",
       "text": "Q57. Which of the following appropriately explains the function point method, which is one\nof the estimation methods used in system development?\na) It is a method for estimating the person-hours and time period for development on\nthe assumption that the scale of development is figured out. This method can be\napplicable not only to business area but also to all areas.\nb) It is a method for estimating the system size by evaluating system functions\nquantitatively on the basis of the amount of input/output data, the number of files,\netc. and by making proper adjustments based on the complexity and characteristics of\nthe application.\nc) It is a method for looking into the differences among systems on the basis of the\ndata of similar systems experienced in the past and estimating the size and\nperson-hours by using the past data for the similar portions and the empirically\npredicted data for the different portions.\nd) It is a method for predetermining the reference values per unit of workload, dividing\nall the work items into the unit work items, and thereby estimating the total\nworkload by making up all of them.",
-      "tag": "Uncategorized",
+      "tag": "Function Point Method",
       "_hash": "a6428be3f6adfd076d3e446a5cdb9829"
     },
     {
@@ -37244,7 +37244,7 @@
       "q_num": 57,
       "img_path": "../cropped_questions/2007S_A/Q57.png",
       "text": "Q57. From multiple types of slips, data in items specified for each type is inputted. Which\nof the following is the appropriate initial process to be executed in the program to\nconfirm that all the required data is inputted?\na) A comparison is made between the number of items specified for each slip type and\nthe number of items inputted.\nb) Inputted data is checked against master files to confirm that the contents of inputted\nitems are correct.\nc) It is confirmed that the contents of inputted items are in agreement with the data\nformats specified for the slip type.\nd) The slip type code is used to inspect the data formats of inputted items.",
-      "tag": "Uncategorized",
+      "tag": "Input Check Methods",
       "_hash": "77102c16a52cb920a581989a579d5fad"
     },
     {
@@ -37256,7 +37256,7 @@
       "q_num": 58,
       "img_path": "../cropped_questions/2007A_A/Q58.png",
       "text": "Q58. Which of the following appropriately describes the purpose of using a check digit?\na) To detect an error of the inputted code value\nb) To detect an error of the number of inputted code digits\nc) To detect an error that alphabetic characters and/or symbols are mixed in data\ninputted into the numerical item\nd) To detect an error that the inputted data value is out of the predefined range",
-      "tag": "Uncategorized",
+      "tag": "Check Digit",
       "_hash": "f94da9acbf32b01c53e81f20da77d728"
     },
     {
@@ -37268,7 +37268,7 @@
       "q_num": 58,
       "img_path": "../cropped_questions/2007S_A/Q58.png",
       "text": "Q58. When the system development division and the operations division are separately\norganized, which of the following is an appropriate method for ensuring that the\ntransition from development to operation proceeds smoothly and efficiently?\na) After completion of the operation test, the development division explains the system\nspecifications and operation methods to the operations division.\nb) In order to improve the efficiency of the operation test, the operation test should be\nperformed only by the operations division without the participation or assistance of\nthe development division.\nc) The development division conducts the operation test, prepares the operation manual,\nand then hands over the system to the operations division.\nd) The operations division participates actively in system development to provide\nassistance from the viewpoint of operability.",
-      "tag": "Uncategorized",
+      "tag": "Service Transition",
       "_hash": "25412752e7489736f82356a7dc5625ee"
     },
     {
@@ -37280,7 +37280,7 @@
       "q_num": 59,
       "img_path": "../cropped_questions/2007A_A/Q59.png",
       "text": "Q59. How many magnetic tapes are required to create and manage backup copies of server\nfiles under the following conditions?\n[Processing conditions]\n(1) A full backup copy is made at the beginning (on the first day) of each month. One\nmagnetic tape is required per full backup.\n(2) An incremental backup copy is made each day between the day following the day\nwhen a full backup copy is made and the day when the next full backup copy is made.\nAn incremental backup copy is added to a separate magnetic tape dedicated to\nincremental backups. All the incremental backup copies made during a one-month\nperiod can be recorded on a single magnetic tape.\n(3) It is guaranteed that any file can always be restored to the state of any specified day\nwith respect to any data for any day not earlier than this day six months ago. Here, if\nthis day of the month did not exist six months ago, it is guaranteed that any file can be\nrestored to the state of any specified day with respect to any data for any day not\nearlier than the last day six months ago. (For example, if the current day is October\n31, it is guaranteed that any file can be restored to the state of any specified day with\nrespect to any data for any day not earlier than April 30.)\na) 12 b) 13 c) 14 d) 15",
-      "tag": "Uncategorized",
+      "tag": "Backup Methods",
       "_hash": "9dfccbb5508fbd4f765a0c68dc0da41a"
     },
     {
@@ -37292,7 +37292,7 @@
       "q_num": 59,
       "img_path": "../cropped_questions/2007S_A/Q59.png",
       "text": "Q59. Which of the following is an appropriate statement in regard to operation of a distributed\nsystem?\na) A dedicated administrator is assigned in the same manner as in a centralized system\nto manage common resources such as databases.\nb) An administrator is not assigned at each site; instead, the users involved in operation\nare thoroughly educated, and operation is left to the users.\nc) The extent of user responsibilities is made clear, and each user is able to manage the\nnetwork configuration.\nd) The information resources are distributed, so a malicious network intrusion is not\nlikely to happen, and the workload of security management is relatively low.",
-      "tag": "Uncategorized",
+      "tag": "Distributed Processing",
       "_hash": "7bd4233e2c3402f51ec07582ba0bb305"
     },
     {
@@ -37304,7 +37304,7 @@
       "q_num": 60,
       "img_path": "../cropped_questions/2007A_A/Q60.png",
       "text": "Q60. Which of the following subnet masks provides the minimum number of IP addresses\navailable in the subnet to assign to devices that request a connection?\na) 255.255.255.0 b) 255.255.255.248\nc) 255.255.255.252 d) 255.255.255.254",
-      "tag": "Uncategorized",
+      "tag": "Subnet Mask",
       "_hash": "eb0af058cdfc951e8279f4c72d97056f"
     },
     {
@@ -37316,7 +37316,7 @@
       "q_num": 60,
       "img_path": "../cropped_questions/2007S_A/Q60.png",
       "text": "Q60. In the OSI 7-layer model, which of the following layers converts data from the upper\nlayer into many tiny pieces called segments for transmission across the network?\na) Data Link Layer b) Network Layer\nc) Physical Layer d) Transport Layer",
-      "tag": "Uncategorized",
+      "tag": "OSI Reference Model",
       "_hash": "19aae9799b64303cfca804391103f68a"
     },
     {
@@ -37328,7 +37328,7 @@
       "q_num": 61,
       "img_path": "../cropped_questions/2007A_A/Q61.png",
       "text": "Q61. In the OSI basic reference model, which of the following layers provides a set of rules\nfor establishing and terminating the connection between applications on computer\nsystems?\na) Data link layer b) Network layer\nc) Session layer d) Transport layer",
-      "tag": "Uncategorized",
+      "tag": "OSI Reference Model",
       "_hash": "e5233c201f7f67367d83e2bacd36fa03"
     },
     {
@@ -37340,7 +37340,7 @@
       "q_num": 61,
       "img_path": "../cropped_questions/2007S_A/Q61.png",
       "text": "Q61. Which of the following is the appropriate protocol that can deliver data from sender to\nreceiver, correctly and in order?\na) IP b) RARP c) SNMP d) TCP",
-      "tag": "Uncategorized",
+      "tag": "TCP Protocol",
       "_hash": "c009a0b5dc20ed2f484fb9471234aeaa"
     },
     {
@@ -37352,7 +37352,7 @@
       "q_num": 62,
       "img_path": "../cropped_questions/2007A_A/Q62.png",
       "text": "Q62. Which of the following protocols is used on the transport layer of OSI basic reference\nmodel?\na) FTP b) PPP c) SNMP d) UDP",
-      "tag": "Uncategorized",
+      "tag": "OSI Reference Model",
       "_hash": "7236626dcaa550be6a52732fcdc202eb"
     },
     {
@@ -37364,7 +37364,7 @@
       "q_num": 62,
       "img_path": "../cropped_questions/2007S_A/Q62.png",
       "text": "Q62. Which of the following protocols is used in a TCP/IP network to provide a virtual\nterminal function that enables remote login to a host for remote operation?\na) FTP b) HTTP c) SMTP d) TELNET",
-      "tag": "Uncategorized",
+      "tag": "Remote Login Protocols",
       "_hash": "504255547e11a85668b9ce89678c2557"
     },
     {
@@ -37376,7 +37376,7 @@
       "q_num": 63,
       "img_path": "../cropped_questions/2007A_A/Q63.png",
       "text": "Q63. Which of the following is the appropriate technology that is used to establish a private or\nsecure network connection within a public IP network, such as the Internet, and to give\nthe company the same capabilities at much lower cost by using the shared public\ninfrastructure rather than a private one?\na) Firewall b) PAT c) RPC d) VPN",
-      "tag": "Uncategorized",
+      "tag": "VPN",
       "_hash": "7909a2a89f9cf25c296344684661606f"
     },
     {
@@ -37388,7 +37388,7 @@
       "q_num": 63,
       "img_path": "../cropped_questions/2007S_A/Q63.png",
       "text": "Q63. When constructing a network with a TCP/IP environment, IP address management\nbecomes cumbersome and complicated as the number of clients becomes larger.\nWhich of the following protocols is able to increase the efficiency of IP address\nmanagement by assigning IP addresses dynamically according to requests from clients?\na) DHCP b) HTTP c) LDAP d) SNMP",
-      "tag": "Uncategorized",
+      "tag": "DHCP Protocol",
       "_hash": "2e2faf9d77ebec9c981a299dd9212619"
     },
     {
@@ -37400,7 +37400,7 @@
       "q_num": 64,
       "img_path": "../cropped_questions/2007A_A/Q64.png",
       "text": "Q64. Which of the following IP addresses can be used to connect a computer directly to the\nInternet?\na) 10.10.11.88 b) 127.0.0.1\nc) 172.16.255.255 d) 203.162.1.160",
-      "tag": "Uncategorized",
+      "tag": "Global IP Address",
       "_hash": "e3eff077a1d8732a029ab73e4262fba6"
     },
     {
@@ -37412,7 +37412,7 @@
       "q_num": 64,
       "img_path": "../cropped_questions/2007S_A/Q64.png",
       "text": "Q64. Which of the following is an appropriate statement in regard to the transmission\noperation of nodes connected to a LAN in the CSMA/CD method?\na) Each node checks whether the carrier is busy and can transmit only if the carrier is\nnot busy. When collision is detected, transmission is tried again after a random time\nhas elapsed.\nb) Each node is assigned a logical ranking, the transmission privilege is passed on down\nthe nodes in order of this ranking, and only the node that has received this privilege\ncan transmit.\nc) Only the node that has been assigned a time slot can transmit.\nd) The nodes are connected in a ring, a special frame for controlling transmission\nprivileges is circulated, and only the node that has received this frame can transmit.",
-      "tag": "Uncategorized",
+      "tag": "CSMA/CD Method",
       "_hash": "443d392aad74c1a0aeb87b95bd761787"
     },
     {
@@ -37424,7 +37424,7 @@
       "q_num": 65,
       "img_path": "../cropped_questions/2007A_A/Q65.png",
       "text": "Q65. Which of the following is the appropriate specifications concerning 100Base-T?\nNetwork Maximum length\nTransmission media\ntopology of one segment (unit: meter)\na) Coaxial cable Bus 500\nb) Coaxial cable Star 100\nc) Twisted pair cable Bus 500\nd) Twisted pair cable Star 100",
-      "tag": "Uncategorized",
+      "tag": "Ethernet Standards",
       "_hash": "8b48377f77a1d20d4a02cca7f05c7687"
     },
     {
@@ -37436,7 +37436,7 @@
       "q_num": 65,
       "img_path": "../cropped_questions/2007S_A/Q65.png",
       "text": "Q65. A message consists of 200 characters. If we can transmit 200 messages on average\nbefore a 1-bit error occurs, what is the bit error rate of the transmission line? Here, 1\ncharacter equals to 2 bytes while 1 byte equals to 8 bits.\na) 1/640000 b) 1/320000 c) 1/80000 d) 1/64000",
-      "tag": "Uncategorized",
+      "tag": "Bit Error Rate",
       "_hash": "d28ca1cad82461ebc272420d0cf61681"
     },
     {
@@ -37448,7 +37448,7 @@
       "q_num": 66,
       "img_path": "../cropped_questions/2007A_A/Q66.png",
       "text": "Q66. Which of the following is the correct table that is created by the \u201cnatural join\u201d operation\nof two tables T and T ?\n1 2\nT T\n1 2\nA B C B C D\na b c b c d\n1 1 1 1 1 1\na b c b c d\n2 1 1 1 2 2\na b c b c d\n3 2 1 2 2 3\na)\nA B C D\na b c d\n1 1 1 1\nb)\nA B C D\na b c d\n1 1 1 1\na b c d\n2 1 1 1\nc)\nA B C B C D\na b c b c d\n1 1 1 1 1 1\na b c b c d\n2 1 1 1 1 1\nd)\nA B C D\na b c d\n1 1 1 1\na b c d\n2 1 1 2\na b c d\n3 2 1 3",
-      "tag": "Uncategorized",
+      "tag": "Relational Algebra",
       "_hash": "f453927b120b8460362316661b63983a"
     },
     {
@@ -37460,7 +37460,7 @@
       "q_num": 66,
       "img_path": "../cropped_questions/2007S_A/Q66.png",
       "text": "Q66. Which of the following appropriately describes a schema in a relational database\nmanagement system?\na) It is a set of data definitions such as the data properties, format, relationship with\nother data, etc.\nb) It is not an actual table but a virtual table from the perspective of the user.\nc) It is the general term for database operations such as data insertion, updating,\ndeletion, search, etc.\nd) It is the general term for various conditions and constraints that are used to maintain\nthe database in absolutely perfect condition.",
-      "tag": "Uncategorized",
+      "tag": "Database Schema",
       "_hash": "240adfc705427acbb0136835cf04f205"
     },
     {
@@ -37472,7 +37472,7 @@
       "q_num": 67,
       "img_path": "../cropped_questions/2007A_A/Q67.png",
       "text": "Q67. Which of the following is the appropriate description of a lock that is the exclusive\ncontrol of a database?\na) If a lock is used, deadlock cannot occur.\nb) Locks come in two types: shared locks, used while reading, and exclusive locks, used\nduring a change.\nc) The coarser the level of granularity of locked data is, the more concurrent\ntransactions can be executed.\nd) When deadlock occurs, the lock rolls back the transaction on both sides.",
-      "tag": "Uncategorized",
+      "tag": "Exclusive Control",
       "_hash": "868b8c276ab1edb686b2a49ee8be0de8"
     },
     {
@@ -37484,7 +37484,7 @@
       "q_num": 67,
       "img_path": "../cropped_questions/2007S_A/Q67.png",
       "text": "Q67. Which of the following appropriately describes a domain (defined area), a term used for\nrelational databases?\na) It is a relationship derived by applying the relational operations to the basic\nrelationship.\nb) It is a set of values that attributes can hold.\nc) It is a specification for copying the real world to a database.\nd) It is the general term for data insertion, updating, deletion, and search in a database.",
-      "tag": "Uncategorized",
+      "tag": "Relational Database Concepts",
       "_hash": "b993c880590096428ff5a25dfc3137f3"
     },
     {
@@ -37496,7 +37496,7 @@
       "q_num": 68,
       "img_path": "../cropped_questions/2007A_A/Q68.png",
       "text": "Q68. In a database system employing incremental log with immediate updates, information in\nthe log is used in restoring the state of the system to a previous consistent state when a\ncrash occurs. A log record is generated upon execution of a write operation. Each\nlog record consists of the transaction name T, the data item name, the old value of the\ni\ndata item, and the new value of the data item. The log record shown below is the normal\ntransaction sequence after the last checkpoint. Which of the following recovery\nactions should be performed after a restart of the system if a crash occurs just after <\nT , C, 3000, 3500> and before < T , commit>?\n2 2\n[Log records]\n<T , start>\n1\n<T , A, 1000, 900>\n1\n<T , B, 2000, 2100>\n1\n<T , commit>\n1\n<T , start>\n2\n<T , C, 3000, 3500>\n2\n<T , commit>\n2\na) Roll back both T and T b) Roll back T and roll forward T\n1 2 1 2\nc) Roll forward both T and T d) Roll forward T and roll back T\n1 2 1 2",
-      "tag": "Uncategorized",
+      "tag": "Database Recovery",
       "_hash": "a22fd1d318374f613d61936fdacade32"
     },
     {
@@ -37508,7 +37508,7 @@
       "q_num": 68,
       "img_path": "../cropped_questions/2007S_A/Q68.png",
       "text": "Q68. Which of the following operations extracts specific columns from tables in a relational\ndatabase?\na) Join b) Projection c) Selection d) Union",
-      "tag": "Uncategorized",
+      "tag": "Relational Algebra Operations",
       "_hash": "0aae2fa04e04fb4888a04a24e19a46e2"
     },
     {
@@ -37520,7 +37520,7 @@
       "q_num": 69,
       "img_path": "../cropped_questions/2007A_A/Q69.png",
       "text": "Q69. Which of the following is the appropriate SQL statement that is used to create Table A\nfrom Persons Table?\nPersons Table\nname age gender country\nHoney 23 F Korea\nJun 24 M Japan\nMark 22 M Korea\nRey 27 M Philippines\nRob 26 M Philippines\nSakura 27 F Japan\nTable A\nname\nHoney\nRob\na) SELECT name FROM Persons WHERE country LIKE '%Korea%'\nAND gender = 'F' AND age = 26\nb) SELECT name FROM Persons WHERE country LIKE '%Korea%'\nAND gender = 'F' OR age = 26\nc) SELECT name FROM Persons WHERE country LIKE '%Korea%'\nOR gender = ' F' AND age = 26\nd) SELECT name FROM Persons WHERE country LIKE '%Korea%'\nOR gender = 'F' OR age = 26",
-      "tag": "Uncategorized",
+      "tag": "SQL SELECT Statement",
       "_hash": "8819cb22fe0d53fb7772437d87f3c082"
     },
     {
@@ -37532,7 +37532,7 @@
       "q_num": 69,
       "img_path": "../cropped_questions/2007S_A/Q69.png",
       "text": "Q69. When a transaction fails, which of the following should be performed in order to abort it\nand to rebuild the previous state of the database?\na) Archive b) Checkpoint dump\nc) Commit d) Rollback",
-      "tag": "Uncategorized",
+      "tag": "Transaction Management",
       "_hash": "80064f28d031cd7663305e08efd32f5d"
     },
     {
@@ -37544,7 +37544,7 @@
       "q_num": 70,
       "img_path": "../cropped_questions/2007A_A/Q70.png",
       "text": "Q70. Which of the following is the major impact of a Denial of Service (DoS) attack?\na) An increased volume of spam e-mails\nb) Degradation of service due to network traffic congestion\nc) Falsification of database and/or website\nd) Leakage of user ID and password",
-      "tag": "Uncategorized",
+      "tag": "DoS Attack",
       "_hash": "120c4a6ca2404f172426f60568bfd2aa"
     },
     {
@@ -37556,7 +37556,7 @@
       "q_num": 70,
       "img_path": "../cropped_questions/2007S_A/Q70.png",
       "text": "Q70. There is an OS that can set access privileges to read, update, and create subordinate files\nin a directory. These three types of access privileges can be set to \u201cenabled\u201d or\n\u201cdisabled\u201d using 1 bit. If these three bits are set by an octal (base-8) number expressed\nby numerals 0 to 7, which of the following is an appropriate description, taking into\naccount the trial results below?\n[Trial results]\n(1) When 0 was set, all accesses were disabled.\n(2) When 3 was set, read and update were enabled, but create was disabled.\n(3) When 7 was set, all accesses were enabled.\na) When 2 is set, read and create are enabled.\nb) When 4 is set, only create is enabled.\nc) When 5 is set, only update is enabled.\nd) When 6 is set, read and update are enabled.",
-      "tag": "Uncategorized",
+      "tag": "File Access Control",
       "_hash": "f44539c8739077e1bb5cfa905a2dcbb3"
     },
     {
@@ -37568,7 +37568,7 @@
       "q_num": 71,
       "img_path": "../cropped_questions/2007A_A/Q71.png",
       "text": "Q71. Which of the following is the appropriate method that supports both private key\ncryptography and public key cryptography, enables users to securely exchange e-mail\nmessages, and to secure files, disk volumes, and network connections with both privacy\nand strong authentication?\na) DES (Data Encryption Standard)\nb) DSA(Digital Signature Algorithm)\nc) PGP (Pretty Good Privacy)\nd) RSA (Rivest, Shamir, and Adleman)",
-      "tag": "Uncategorized",
+      "tag": "Encryption Technology",
       "_hash": "7e399d68e4f1a73212d0c214bf6d5197"
     },
     {
@@ -37580,7 +37580,7 @@
       "q_num": 71,
       "img_path": "../cropped_questions/2007S_A/Q71.png",
       "text": "Q71. Which of the following is an appropriate description of the virus pattern file that is used\nin virus protection measures for computers?\na) It is a file included in virus protection software and is used to repair files that have\nbeen infected by viruses.\nb) It is a file that records the program code of known viruses and is used to re-enact\nviruses to monitor their activities.\nc) It is a file that records the signature code of known viruses and is used to detect\nviruses by the virus protection software.\nd) It is a restoration file and is used when a data file is damaged by a virus.",
-      "tag": "Uncategorized",
+      "tag": "Virus Pattern File",
       "_hash": "b80eaba895a343fc37047d88d55fccda"
     },
     {
@@ -37592,7 +37592,7 @@
       "q_num": 72,
       "img_path": "../cropped_questions/2007A_A/Q72.png",
       "text": "Q72. Port scanning is the process of sending packets to check every port on each target system\nto see which ports are open and which ports are locked. Which of the following\ninformation can be identified by port scanning?\na) Computer viruses in activity\nb) Hardware configuration and compatibility\nc) Network and application services currently available\nd) Operating system in execution",
-      "tag": "Uncategorized",
+      "tag": "Port Scanning",
       "_hash": "ec0a1332290b2aaa2c3739d6a2ea4e56"
     },
     {
@@ -37604,7 +37604,7 @@
       "q_num": 72,
       "img_path": "../cropped_questions/2007S_A/Q72.png",
       "text": "Q72. Against what kind of attacks does SSL (Secure Socket Layer) protect users on the\nInternet?\na) Bruce force attack b) DoS (Denial of Service) attack\nc) IP Spoofing d) Tapping and exploitation of data",
-      "tag": "Uncategorized",
+      "tag": "SSL/TLS Protocols",
       "_hash": "f1cba9dd11d69a76c5ed2963ec5c031b"
     },
     {
@@ -37616,7 +37616,7 @@
       "q_num": 73,
       "img_path": "../cropped_questions/2007A_A/Q73.png",
       "text": "Q73. Which of the following appropriately explains benchmarking used in business\nmanagement?\na) It is to make comparisons with the strongest competitors or advanced companies in\norder to scope out best practices for setting business goals, and to gain an\nunderstanding of products, services, and practical methods qualitatively and\nquantitatively.\nb) It is to pick out company\u2019s own skills and technologies that are profitable and\nsuperior to those of other companies.\nc) It is to promote quality control in all departments in an integrated manner for the\npurpose of quality improvement, to check up the degrees of improvement in the\nquality of in-house products, and to make comparisons with the quality of\ncompetitors\u2019 products.\nd) It is to redesign business processes, to make full use of information technologies,\nand to transform the existing constitution and structures fundamentally.",
-      "tag": "Uncategorized",
+      "tag": "Benchmarking",
       "_hash": "9a288736a3343c84b46cc7634e99fbf1"
     },
     {
@@ -37628,7 +37628,7 @@
       "q_num": 73,
       "img_path": "../cropped_questions/2007S_A/Q73.png",
       "text": "Q73. Which of the following is an appropriate statement regarding elements of information\nsecurity defined in ISO/IEC 17799:2005?\na) Availability is ensuring that information is accessible only to those authorized to have\naccess.\nb) Confidentiality is ensuring that authorized users have access to information and\nassociated assets when required.\nc) Information security is characterized as the preservation of confidentiality and\nintegrity of information assets, but not its availability.\nd) Integrity is safe-guarding the accuracy and completeness of information and\nprocessing methods.",
-      "tag": "Uncategorized",
+      "tag": "Three Elements of Information Security",
       "_hash": "000a47c8ba8d9dbd27cd7f6044977c37"
     },
     {
@@ -37640,7 +37640,7 @@
       "q_num": 74,
       "img_path": "../cropped_questions/2007A_A/Q74.png",
       "text": "Q74. Which of the following appropriately describes a cause-and-effect diagram?\na) It classifies the collected data into a few categories, draws the number of data for\neach category as a bar graph, and captures variance in quality.\nb) It classifies the data into a few categories, sorts the categories from the largest to\nthe smallest as a bar graph along the horizontal axis, draws the cumulative values as\na line graph, and sorts out problems.\nc) It expresses variance of time series data as a line graph and achieves an objectively\ncontrolled state by using control limit lines.\nd) It systematically arranges the relation between cause and effect in a fishbone format\nand clarifies which causes are related to particular effects.",
-      "tag": "Uncategorized",
+      "tag": "Cause-and-effect Diagram",
       "_hash": "9aec467aad1a635ce6e5bec6c42676b8"
     },
     {
@@ -37652,7 +37652,7 @@
       "q_num": 74,
       "img_path": "../cropped_questions/2007S_A/Q74.png",
       "text": "Q74. Which of the following is an appropriate description concerning CRM (Customer\nRelationship Management)?\na) It is a management technique that vastly improves efficiency throughout the entire\nsupply chain by exchanging all information such as production, inventory,\npurchasing, sales, and distribution in real time.\nb) It is a method for wholesalers and manufacturers to expand their transactions by\nsupporting the business activities of retailers with the aim of increasing retailers\u2019\nsales and profits.\nc) It is a technique for effectively and comprehensively planning and managing\nbusiness resources throughout an entire company to raise management efficiency.\nd) It is an approach for increasing customer satisfaction and ultimately revenues by\nsharing information and raising the service levels, not only in the sales division but in\nall customer related channels within a company.",
-      "tag": "Uncategorized",
+      "tag": "CRM",
       "_hash": "49b141a3b03fca6520a5e912dd85a965"
     },
     {
@@ -37664,7 +37664,7 @@
       "q_num": 75,
       "img_path": "../cropped_questions/2007A_A/Q75.png",
       "text": "Q75. Which of the following is the appropriate statement concerning how to use management\nscience methodology?\na) PERT is used to perform machine reliability analysis.\nb) The queuing model is used to perform financial analysis.\nc) The simplex method is used for product quality control.\nd) The time-series analysis method is used to forecast product sales in the market.",
-      "tag": "Uncategorized",
+      "tag": "Management Science Techniques",
       "_hash": "cb160e2feb3531b5813eb770ec09dded"
     },
     {
@@ -37676,7 +37676,7 @@
       "q_num": 75,
       "img_path": "../cropped_questions/2007S_A/Q75.png",
       "text": "Q75. The figures show the break-even point for two companies A and B. Which of the\nfollowing is an appropriate statement with regard to the profit/loss analysis of\nCompanies A and B?\na) Both companies have the same break-even point, so their profits and loss are also the\nsame.\nb) Both companies have the same break-even point, so when both companies are\nproducing the same profit, their sales are also the same.\nc) Company A has low variable costs per unit of product, so when sales exceed the\nbreak-even point, Company A's profits are larger than Company B.\nd) When sales figures increase for both Company A and Company B, Company B has\nlower fixed costs, so its profits are larger than Company A.",
-      "tag": "Uncategorized",
+      "tag": "Break-even Point Analysis",
       "_hash": "fce6aed2ba49c8cc191bf74c8a311dde"
     },
     {
@@ -37688,7 +37688,7 @@
       "q_num": 76,
       "img_path": "../cropped_questions/2007A_A/Q76.png",
       "text": "Q76. The selling price per unit of product Z is set to $250, and sales for the coming year are\nexpected to be 500 units. If the company requires a return of 15% in the coming year\non its investment of $250,000 in product Z, what is the target variable cost per unit for\nthe coming year? Here, the fixed cost is $10,000 per annum.\na) $145 b) $155 c) $165 d) $175",
-      "tag": "Uncategorized",
+      "tag": "Profit and Cost Analysis",
       "_hash": "059301113d81f8bf0f333a9ed5c817ea"
     },
     {
@@ -37700,7 +37700,7 @@
       "q_num": 76,
       "img_path": "../cropped_questions/2007S_A/Q76.png",
       "text": "Q76. Which of the following is an appropriate statement concerning a radar chart?\na) A bar graph and a line graph are combined together to graphically show the ratio of\nthe cumulative total of each item to that of all items, thereby indicating important\nmanagement items.\nb) Relations between many causes and a specific effect are systematically represented\nin a fishbone-like form, thereby clarifying what kinds of causes are associated with a\nsingle effect.\nc) The degree of attainment of the benchmarking goal is plotted on the radial axis\nwhich corresponds to each item. All such plotted points are connected by a line,\nthereby making a comparison of overall balance.\nd) The schedule and actual achievement record during the execution period are shown,\nfor each job, in a bar graph.",
-      "tag": "Uncategorized",
+      "tag": "Graphic Analysis Tools",
       "_hash": "ba97b505b35cdfdb9bc15b3ed8785948"
     },
     {
@@ -37712,7 +37712,7 @@
       "q_num": 77,
       "img_path": "../cropped_questions/2007A_A/Q77.png",
       "text": "Q77. When the moving average method is applied to the receipt/shipment ledger shown\nbelow, how much in dollars is the closing inventory value of August?\n[Receipt/shipment ledger]\nDate Transaction Quantity Unit price ($)\nAugust 1 Beginning inventory 100 10\nAugust 5 Purchased 100 12\nAugust 15 Sold 50\nAugust 18 Sold 100\nAugust 20 Purchased 50 15\nAugust 31 Ending inventory 100\na) 1,180 b) 1,250 c) 1,300 d) 1,350",
-      "tag": "Uncategorized",
+      "tag": "Inventory Valuation",
       "_hash": "44e1fc78c86716bd139f8f9fa7e79647"
     },
     {
@@ -37724,7 +37724,7 @@
       "q_num": 77,
       "img_path": "../cropped_questions/2007S_A/Q77.png",
       "text": "Q77. The figure below shows plots of the relationship between values of a certain factor x, in\nthe product manufacturing process, and values of quality characteristics y. Which of\nthe following is an appropriate description concerning this figure?\ny\n0 x\na) The coefficient of correlation between x and y is negative.\nb) The coefficient of correlation between x and y is positive.\nc) The regression equation for estimating y from x is the same as that for estimating x\nfrom y.\nd) To estimate y from x, it is necessary to calculate second order regression coefficients.",
-      "tag": "Uncategorized",
+      "tag": "Scatter Diagram and Correlation",
       "_hash": "310c54b021c7d782213363b6bc938657"
     },
     {
@@ -37736,7 +37736,7 @@
       "q_num": 78,
       "img_path": "../cropped_questions/2007A_A/Q78.png",
       "text": "Q78. In a production process of 1,000 units of product X, \u201cmaterial cost\u201d incurred is $10,000,\nand \u201cdirect labor cost\u201d is $20,000. \u201cProduction overhead\u201d is 100% of direct labor cost.\n\u201cSelling and distribution cost\u201d is $10,000. How much in dollars is the unit cost of\nproduct X?\na) 10 b) 30 c) 50 d) 60",
-      "tag": "Uncategorized",
+      "tag": "Product Cost Calculation",
       "_hash": "8a82c32e151c26733f4a298df0987978"
     },
     {
@@ -37748,7 +37748,7 @@
       "q_num": 78,
       "img_path": "../cropped_questions/2007S_A/Q78.png",
       "text": "Q78. In order to shorten the cumulative duration of activities on the critical path by one day,\nwhich of the following is the appropriate action to be taken?\nActivity-E\n(1 day)\nActivity-B\n3\n(6 days) 6\nActivity- A\n(4 days)\n1 2\nActivity-F Activity-H\nActivity-C (2 days) (3 days)\n(5 days)\n8\n4\nActivity-D\n(2 days) Activity-I\n(6 days)\nActivity-G\n(1 day)\n5 7\nDummy Activity\na) To shorten the activities B and F by one day respectively\nb) To shorten the activity B by one day\nc) To shorten the activity H by one day\nd) To shorten the activity I by one day",
-      "tag": "Uncategorized",
+      "tag": "Critical Path Method",
       "_hash": "d2ecc19e0e4dbd38abe22c9fbc6669c4"
     },
     {
@@ -37760,7 +37760,7 @@
       "q_num": 79,
       "img_path": "../cropped_questions/2007A_A/Q79.png",
       "text": "Q79. The following table shows the duration for the optimistic, most likely, and pessimistic\nscenarios in a program development. How many hours are required to complete all the\nactivities on a \u201cthree point estimate\u201d basis?\nEstimated duration (hours)\nDevelopment activities\nOptimistic Most likely Pessimistic\nRequirement understanding 1.0 1.5 2.0\nDesign 2.0 2.5 3.0\nCoding 4.5 6.5 7.0\nTesting 2.5 4.5 5.0\na) 14 b) 14.5 c) 15 d) 17",
-      "tag": "Uncategorized",
+      "tag": "Three Point Estimate",
       "_hash": "28a404c119b0a73faf9397f71d393b68"
     },
     {
@@ -37772,7 +37772,7 @@
       "q_num": 79,
       "img_path": "../cropped_questions/2007S_A/Q79.png",
       "text": "Q79. Three products A, B, and C are produced from raw materials at plant X. The\nproduction time per unit volume of each product, the required quantity of raw materials,\nand the profit amounts are shown in the table below. The maximum production hours\nper month at this plant total 240 hours, and the amount of raw materials that can be fed\nfor production is 150 kg per month.\nUnder these conditions, management would like to know how many of A, B, and C\nshould be manufactured so as to yield maximum profits. Which of the following is an\nappropriate method for solving this problem?\nProduct A B C\nProduction time (hours) 2 3 1\nQuantity of raw materials required (kg) 2 1 2\nProfit (US$) 80 50 50\na) Fixed order quantity system b) Least squares method\nc) Linear programming method d) Moving average method",
-      "tag": "Uncategorized",
+      "tag": "Linear Programming",
       "_hash": "d720262e958123c2a726bc9402fca19a"
     },
     {
@@ -37784,7 +37784,7 @@
       "q_num": 80,
       "img_path": "../cropped_questions/2007A_A/Q80.png",
       "text": "Q80. Which of the following is the appropriate combination of processing modes in banking\nactivities?\nDeposit Interest calculation Withdrawal Posting to account\na) Batch Batch Batch Online\nb) Batch Online Online Batch\nc) Online Batch Online Batch\nd) Online Online Online Online",
-      "tag": "Uncategorized",
+      "tag": "Batch and Online Processing",
       "_hash": "895bdfcc41b1f55d3b87917dac2f7c85"
     },
     {
@@ -37796,7 +37796,7 @@
       "q_num": 80,
       "img_path": "../cropped_questions/2007S_A/Q80.png",
       "text": "Q80. There are various types of e-commerce, depending on the transaction: B2B, B2C, C2C,\nm-commerce, etc. Which of the following refers to the activities associated with the\nselling and buying of goods and services via the Internet such as an online auction\nwebsite and an online flea market?\na) B2B (Business to Business)\nb) B2C (Business to Consumer)\nc) C2C (Consumer to Consumer)\nd) m-commerce (Mobile Commerce)",
-      "tag": "Uncategorized",
+      "tag": "Electronic Commerce",
       "_hash": "3c4e34deb2ded4536c30647604510b4a"
     }
   ]

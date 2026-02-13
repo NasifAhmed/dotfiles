@@ -28,5 +28,1217 @@
     "subcategory": "Data Representation in Computers",
     "topic": "Complement Representation",
     "explanation": "The question focuses on how 'complement representation' is used to represent signed numbers and simplify hardware by allowing subtraction to be performed as addition."
+  },
+  "2007A_A/Q06.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Newton's Method",
+    "explanation": "Newton's method is a fundamental numerical algorithm used for finding approximate roots of equations, which is a key topic in the study of computational algorithms."
+  },
+  "2007A_A/Q07.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "Check Digit Calculation",
+    "explanation": "The question asks to verify a Customer Account Number using a mathematical formula, which is a check digit method used to ensure data integrity and system reliability."
+  },
+  "2007A_A/Q08.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Probability Calculation",
+    "explanation": "The question requires calculating the probability of a specific outcome in a dice game, which falls under the math and statistics topics within Management Science."
+  },
+  "2007A_A/Q09.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Set Theory",
+    "explanation": "The question requires applying the inclusion-exclusion principle of set theory to solve a logical counting problem, which is a fundamental topic within Management Science."
+  },
+  "2007A_A/Q10.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Boolean Algebra Simplification",
+    "explanation": "The question involves simplifying a logical expression using Boolean algebra laws (like distributive and absorption laws), which is a fundamental part of how data and logic are represented in computers."
+  },
+  "2007A_A/Q11.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Even Parity Bit",
+    "explanation": "The question requires calculating parity bits for character codes, which is a fundamental concept in data representation and error detection."
+  },
+  "2007A_A/Q12.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Stack and LIFO",
+    "explanation": "The question asks to identify the specific data structure characterized by the Last-In-First-Out (LIFO) access method, which is a core concept of Stacks."
+  },
+  "2007A_A/Q13.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Stack Operations",
+    "explanation": "The question concerns the manipulation of microprocessor registers (GRi, GRj) using stack instructions (PUSH and POP) to achieve a data swap, which falls under CPU operations."
+  },
+  "2007A_A/Q14.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Sorting Algorithms",
+    "explanation": "The question asks to identify the correct definitions of various fundamental sorting algorithms like heap sort, bubble sort, and quick sort."
+  },
+  "2007A_A/Q15.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Binary Tree",
+    "explanation": "The question concerns the structural properties and mathematical relationships between height and node count in a binary tree, a core data structure concept."
+  },
+  "2007A_A/Q16.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Depth-First Search",
+    "explanation": "The question asks to identify an invalid visitation order for a Depth-First Search (DFS) algorithm applied to a specific directed graph."
+  },
+  "2007A_A/Q17.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Reverse Polish Notation",
+    "explanation": "The question concerns postfix notation (Reverse Polish Notation), which is a fundamental method for representing mathematical expressions typically processed using a stack data structure."
+  },
+  "2007A_A/Q18.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Recursive Function",
+    "explanation": "The question requires evaluating a value by tracing a recursively defined mathematical function, which is a fundamental concept in algorithmic thinking."
+  },
+  "2007A_A/Q19.png": {
+    "category": "Hardware",
+    "subcategory": "Basic Configuration of Computers",
+    "topic": "Logic Circuits",
+    "explanation": "The question requires identifying equivalent logical expressions by analyzing diagrams of fundamental logic gates (AND, OR, NOT), which are the building blocks of computer hardware."
+  },
+  "2007A_A/Q20.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "von Neumann Bottleneck",
+    "explanation": "The von Neumann bottleneck refers to the limitation on throughput caused by the physical separation and shared bus between the CPU and main memory."
+  },
+  "2007A_A/Q21.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Interrupt Processing",
+    "explanation": "The question pertains to the CPU instruction cycle and the sequence of checking for interrupt signals immediately following the execution of an instruction."
+  },
+  "2007A_A/Q22.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Instruction Pipelining",
+    "explanation": "The question requires calculating clock cycles for a CPU using the instruction pipelining technique, which is a fundamental concept of CPU architecture."
+  },
+  "2007A_A/Q23.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "MIPS Calculation",
+    "explanation": "The question involves calculating processor performance in MIPS using clock frequency and the weighted average of instruction execution clocks."
+  },
+  "2007A_A/Q24.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Interrupt Processing",
+    "explanation": "The question asks to distinguish between types of interrupts (internal vs. external), which is a fundamental mechanism handled by the Central Processing Unit's control unit."
+  },
+  "2007A_A/Q25.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Cache Replacement Algorithm",
+    "explanation": "The question asks about cache memory management and the LRU (Least Recently Used) algorithm, which are fundamental components of the CPU and memory hierarchy studied in computer hardware."
+  },
+  "2007A_A/Q26.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Cache Memory",
+    "explanation": "The question asks about the function of cache memory in bridging the speed gap between the processor and main memory."
+  },
+  "2007A_A/Q27.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Memory Interleaving",
+    "explanation": "The question asks for the definition of memory interleaving, which is a hardware-level technology used to increase the speed of access to the main memory unit."
+  },
+  "2007A_A/Q28.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "Disk Capacity Calculation",
+    "explanation": "The question requires calculating the number of tracks needed to store data on a magnetic hard disk drive, which is a standard auxiliary storage device."
+  },
+  "2007A_A/Q29.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "Disk Scheduling Algorithm",
+    "explanation": "The question involves calculating the head movement of a hard disk drive based on a seek optimization method, which is a core topic in the study of auxiliary storage devices."
+  },
+  "2007A_A/Q30.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "Disk Striping",
+    "explanation": "The question describes disk striping (RAID 0), which is a storage technology used to improve performance by distributing data blocks across multiple physical drives."
+  },
+  "2007A_A/Q31.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "Optical Disk Storage",
+    "explanation": "The question asks about the physical data recording mechanism of a CD-R, which is a common type of optical auxiliary storage media."
+  },
+  "2007A_A/Q32.png": {
+    "category": "Hardware",
+    "subcategory": "Basic Configuration of Computers",
+    "topic": "Stored Program Concept",
+    "explanation": "The question defines the stored-program method (von Neumann architecture), which is a fundamental concept in how computer systems are configured to execute instructions."
+  },
+  "2007A_A/Q33.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Task Management",
+    "explanation": "The question asks about task management functions, which is a fundamental component of Operating System management including CPU scheduling and allocation."
+  },
+  "2007A_A/Q34.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Exclusive Control",
+    "explanation": "The question analyzes the execution sequence of tasks sharing a common variable and the resulting race conditions, which is a core concept of task management and exclusive control in an Operating System."
+  },
+  "2007A_A/Q35.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Microkernel Architecture",
+    "explanation": "The question describes a system architecture where only essential services run in the kernel, which is a defining characteristic of a microkernel."
+  },
+  "2007A_A/Q36.png": {
+    "category": "Information Processing System",
+    "subcategory": "Processing Type of Information Processing System",
+    "topic": "Client/Server System",
+    "explanation": "The question asks for the definition of client/server architecture, which is a standard processing configuration model categorized under information processing system types."
+  },
+  "2007A_A/Q37.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "RAID Technology",
+    "explanation": "RAID (Redundant Array of Independent Disks) is a technology used to manage multiple disk drives to enhance system reliability and performance."
+  },
+  "2007A_A/Q38.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "RAID disk array",
+    "explanation": "The question involves calculating the usable storage capacity of a RAID 5 system, which is a standard method of configuring auxiliary storage devices for performance and redundancy."
+  },
+  "2007A_A/Q39.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Garbage Collection",
+    "explanation": "The question describes the reclamation of unused memory blocks, a fundamental memory management function of operating systems and language runtimes."
+  },
+  "2007A_A/Q40.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "Performance Evaluation Methods",
+    "explanation": "The question focuses on different techniques used to measure and analyze system performance, such as software monitors, hardware monitors, and benchmarks."
+  },
+  "2007A_A/Q41.png": {
+    "category": "Information Processing System",
+    "subcategory": "Configuration of High-reliability System",
+    "topic": "Dual System",
+    "explanation": "The question asks for the definition of a dual system, which is a specific redundant configuration used to ensure high reliability and processing accuracy by running two systems in parallel and comparing their outputs."
+  },
+  "2007A_A/Q42.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "System Reliability Indices",
+    "explanation": "The question asks for the mathematical definitions of MTBF and MTTR, which are standard metrics used for evaluating the reliability and maintainability of a system."
+  },
+  "2007A_A/Q43.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "System Availability Calculation",
+    "explanation": "The question requires calculating the overall system availability by applying the mathematical formulas for series and parallel component configurations."
+  },
+  "2007A_A/Q44.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Program Characteristics",
+    "explanation": "The question asks about reentrancy, which is a fundamental program execution characteristic managed by the Operating System's memory and process management."
+  },
+  "2007A_A/Q45.png": {
+    "category": "Software",
+    "subcategory": "Programming Languages and Language Processors",
+    "topic": "Language Processor Types",
+    "explanation": "The question asks to identify a specific type of language processor (a cross-compiler) that generates executable code for a different hardware architecture."
+  },
+  "2007A_A/Q46.png": {
+    "category": "Information Processing System",
+    "subcategory": "Multimedia",
+    "topic": "Markup Languages",
+    "explanation": "SGML is an international standard markup language for describing the structure of electronic documents, which falls under multimedia data representation."
+  },
+  "2007A_A/Q47.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Object-oriented Approach",
+    "explanation": "The question identifies the fundamental design principles and concepts associated with the object-oriented methodology in software development."
+  },
+  "2007A_A/Q48.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Data Oriented Approach",
+    "explanation": "The question compares Data Oriented Design (DOA) and Process Oriented Design (POA), which are fundamental methodologies for system and software design."
+  },
+  "2007A_A/Q49.png": {
+    "category": "Network",
+    "subcategory": "The Internet",
+    "topic": "Server-side Technology",
+    "explanation": "The question asks about programs like Java servlets that run on a web server to generate dynamic content, which is a core topic of web systems in the Internet section."
+  },
+  "2007A_A/Q50.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "E-R Diagram",
+    "explanation": "The question requires interpreting cardinalities and relationships between entities within a provided Entity-Relationship (E-R) diagram."
+  },
+  "2007A_A/Q51.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Internal Design",
+    "explanation": "The question distinguishes between user-oriented external design and developer-oriented internal design tasks within the software development life cycle."
+  },
+  "2007A_A/Q52.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Database Design Process",
+    "explanation": "The question asks for the correct sequence of stages in the database development lifecycle, which is a foundational concept covered in the general outline of databases."
+  },
+  "2007A_A/Q53.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Data Flow Diagram",
+    "explanation": "The question pertains to the rules for creating a Data Flow Diagram (DFD), which is a standard modeling tool used during the requirements analysis phase of the system development life cycle."
+  },
+  "2007A_A/Q54.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Driver and Stub",
+    "explanation": "The question pertains to testing techniques (specifically unit and integration testing) where drivers and stubs are used as placeholders for calling or called modules."
+  },
+  "2007A_A/Q55.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Black-box Testing",
+    "explanation": "The question asks about the characteristics of black-box testing, which is a core software testing methodology covered under software development technology."
+  },
+  "2007A_A/Q56.png": {
+    "category": "Project Management",
+    "subcategory": "Subject Group Management",
+    "topic": "Work Breakdown Structure (WBS)",
+    "explanation": "The question asks about the purpose of a WBS, which is a fundamental tool in Project Scope Management used to decompose a project into smaller, manageable tasks."
+  },
+  "2007A_A/Q57.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Function Point Method",
+    "explanation": "The question asks for the definition of the Function Point method, which is a quantitative technique used to estimate system development size based on functional requirements like inputs and outputs."
+  },
+  "2007A_A/Q58.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Check Digit",
+    "explanation": "A check digit is a redundancy check used for error detection in code values, which is a key component of input design within the system development lifecycle."
+  },
+  "2007A_A/Q59.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "Backup Methods",
+    "explanation": "The question calculates the required resources for a backup rotation scheme (full and incremental), which is a technical measure used to ensure data availability and recoverability."
+  },
+  "2007A_A/Q60.png": {
+    "category": "Network",
+    "subcategory": "Network Mechanism",
+    "topic": "Subnet Mask",
+    "explanation": "The question asks for the calculation of assignable IP addresses based on different subnet masks, which is a fundamental concept of IP addressing mechanisms."
+  },
+  "2007A_A/Q61.png": {
+    "category": "Network",
+    "subcategory": "Network Architecture",
+    "topic": "OSI Reference Model",
+    "explanation": "The question asks about the specific functions and definitions of the layers within the OSI basic reference model, which is a core concept of network architecture."
+  },
+  "2007A_A/Q62.png": {
+    "category": "Network",
+    "subcategory": "Network Architecture",
+    "topic": "OSI Reference Model",
+    "explanation": "The question asks to identify a protocol belonging to a specific layer of the OSI basic reference model, which is a fundamental component of network architecture."
+  },
+  "2007A_A/Q63.png": {
+    "category": "Network",
+    "subcategory": "Network Mechanism",
+    "topic": "VPN",
+    "explanation": "The question describes the purpose and function of a Virtual Private Network (VPN), which is a key networking technology used for secure communication over public infrastructure."
+  },
+  "2007A_A/Q64.png": {
+    "category": "Network",
+    "subcategory": "The Internet",
+    "topic": "Global IP Address",
+    "explanation": "The question requires identifying a routable Global IP address, as opposed to private or reserved addresses, for direct internet connectivity."
+  },
+  "2007A_A/Q65.png": {
+    "category": "Network",
+    "subcategory": "LAN",
+    "topic": "Ethernet Standards",
+    "explanation": "The question asks for the physical layer specifications of 100Base-T, which is a common standard used in Local Area Networks (LAN)."
+  },
+  "2007A_A/Q66.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Relational Algebra",
+    "explanation": "The question asks to identify the result of a 'natural join' operation, which is a fundamental concept in relational algebra within the database chapter."
+  },
+  "2007A_A/Q67.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Exclusive Control",
+    "explanation": "The question focuses on locking mechanisms (shared and exclusive locks) and transaction management, which are core concepts of exclusive control in database systems."
+  },
+  "2007A_A/Q68.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Database Recovery",
+    "explanation": "The question focuses on identifying the correct transaction recovery procedures (roll-forward and roll-back) using log records following a system failure."
+  },
+  "2007A_A/Q69.png": {
+    "category": "Database",
+    "subcategory": "SQL",
+    "topic": "SQL SELECT Statement",
+    "explanation": "The question asks for the correct SQL syntax, specifically the WHERE clause with logical operators (AND, OR), to filter and retrieve specific data from a relational table."
+  },
+  "2007A_A/Q70.png": {
+    "category": "Security",
+    "subcategory": "Overview of Information Security",
+    "topic": "DoS Attack",
+    "explanation": "The question asks for the definition and primary impact of a Denial of Service (DoS) attack, which is a core concept under security threats and vulnerabilities."
+  },
+  "2007A_A/Q71.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "Encryption Technology",
+    "explanation": "The question identifies a hybrid cryptographic application (PGP) that utilizes both private and public key cryptography for securing data and communication."
+  },
+  "2007A_A/Q72.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "Port Scanning",
+    "explanation": "The question concerns port scanning, a technique used to identify active network and application services, which is a key element of network security assessment and vulnerability detection."
+  },
+  "2007A_A/Q73.png": {
+    "category": "Business Strategy",
+    "subcategory": "Business Strategy Management",
+    "topic": "Benchmarking",
+    "explanation": "The question asks for the definition of benchmarking, which is a strategic management tool used to compare business processes and performance metrics to industry bests and best practices from other companies."
+  },
+  "2007A_A/Q74.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Activities",
+    "topic": "Cause-and-effect Diagram",
+    "explanation": "The question asks for the definition of a cause-and-effect (fishbone) diagram, which is one of the Seven Basic Tools of Quality used in corporate quality management."
+  },
+  "2007A_A/Q75.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Management Science Techniques",
+    "explanation": "The question asks for the correct application of various operations research and statistical methods such as PERT, queuing models, and time-series analysis."
+  },
+  "2007A_A/Q76.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Profit and Cost Analysis",
+    "explanation": "The question requires calculating a target variable cost to achieve a specific return on investment (profit), which is a fundamental concept in management accounting and financial planning."
+  },
+  "2007A_A/Q77.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Inventory Valuation",
+    "explanation": "The question asks for the calculation of closing inventory value using the moving average method, which is a standard accounting practice for managing stock assets."
+  },
+  "2007A_A/Q78.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Product Cost Calculation",
+    "explanation": "The question involves calculating the unit manufacturing cost by summing material costs, direct labor costs, and production overheads, which is a standard topic in cost accounting."
+  },
+  "2007A_A/Q79.png": {
+    "category": "Project Management",
+    "subcategory": "Subject Group Management",
+    "topic": "Three Point Estimate",
+    "explanation": "The question requires calculating total project duration using the three-point estimation (PERT) technique, which is a core tool in project schedule management."
+  },
+  "2007A_A/Q80.png": {
+    "category": "Information Processing System",
+    "subcategory": "Processing Type of Information Processing System",
+    "topic": "Batch and Online Processing",
+    "explanation": "The question asks for the correct identification of processing modes (Batch or Online) applied to specific banking transactions and operations."
+  },
+  "2007S_A/Q01.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Radix Conversion",
+    "explanation": "The question requires converting a numeric value from hexadecimal base to a decimal fraction, which is a fundamental aspect of how data is represented in computers."
+  },
+  "2007S_A/Q02.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Radix Calculation",
+    "explanation": "The question requires calculating the product of a hexadecimal fraction and a multiplier, which falls under the study of number systems and radix arithmetic."
+  },
+  "2007S_A/Q03.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Floating-point Normalization",
+    "explanation": "The question defines the process of 'normalization' in the context of floating-point number representation, which is a key topic in computer data representation."
+  },
+  "2007S_A/Q04.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "2's Complement and Logical Shift",
+    "explanation": "The question requires knowledge of representing negative integers using 2's complement and performing bitwise logical shift operations on binary data."
+  },
+  "2007S_A/Q05.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Floating-point Representation",
+    "explanation": "The question asks about the internal structure of the IEEE 754 single-precision format and requires identifying a bit mask for extracting the exponent field."
+  },
+  "2007S_A/Q06.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Logical Operations",
+    "explanation": "The question involves interpreting Venn diagrams and applying Boolean algebra (AND, OR, NOT) to find the correct logical expression, which is a core part of data representation fundamentals."
+  },
+  "2007S_A/Q07.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Probability Calculation",
+    "explanation": "The question requires calculating the probability of independent events (coin flips), which falls under the mathematical and statistical methods covered in Management Science."
+  },
+  "2007S_A/Q08.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Stack Operations",
+    "explanation": "The question requires knowledge of the stack data structure and how its PUSH and POP operations affect the storage and retrieval of data."
+  },
+  "2007S_A/Q09.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Stack",
+    "explanation": "Reverse Polish Notation (RPN) is traditionally evaluated using a stack to store operands until an operator is encountered."
+  },
+  "2007S_A/Q10.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Array and List Structures",
+    "explanation": "The question compares the fundamental characteristics, such as memory allocation and operational efficiency, of array and list data structures."
+  },
+  "2007S_A/Q11.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "State Transition Table",
+    "explanation": "The question requires tracing input character strings through a state transition table to determine if they lead to an error state, which is a fundamental concept in algorithm logic."
+  },
+  "2007S_A/Q12.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Logic Puzzle",
+    "explanation": "This question is a classic state-transition logic puzzle, which is categorized under Management Science (Operations Research) in the FE exam as it involves finding a sequence of operations to reach a target state within constraints."
+  },
+  "2007S_A/Q13.png": {
+    "category": "Software",
+    "subcategory": "Programming Languages and Language Processors",
+    "topic": "Parameter Passing Mechanisms",
+    "explanation": "The question evaluates the understanding of how 'call by value' and 'call by reference' affect variable values during subprogram execution."
+  },
+  "2007S_A/Q14.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Hash Table",
+    "explanation": "The question concerns the calculation of a hash value using the division-remainder method, which is a fundamental technique for indexing into a hash table data structure."
+  },
+  "2007S_A/Q15.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Sorting Algorithms",
+    "explanation": "The question requires analyzing and comparing the computational complexity and performance of bubble sort and quick sort."
+  },
+  "2007S_A/Q16.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Linear Search Algorithm",
+    "explanation": "The question requires analyzing a flowchart that demonstrates a linear search process through an array to locate a specific integer value."
+  },
+  "2007S_A/Q17.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Semiconductor Memory",
+    "explanation": "The question describes the characteristics of Flash memory, which is a type of non-volatile semiconductor memory typically covered under the study of main memory and storage media components."
+  },
+  "2007S_A/Q18.png": {
+    "category": "Hardware",
+    "subcategory": "Basic Configuration of Computers",
+    "topic": "RS Flip-flop",
+    "explanation": "The question asks for the truth table of an RS flip-flop, which is a fundamental sequential logic circuit used as a building block in computer hardware architecture."
+  },
+  "2007S_A/Q19.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Addressing Modes",
+    "explanation": "The question requires identifying the correct formulas for calculating effective memory addresses for different CPU addressing modes such as direct, indirect, relative, and indexed."
+  },
+  "2007S_A/Q20.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Pipeline Processing",
+    "explanation": "The question asks for the calculation of execution cycles in an instruction pipeline, which is a core function of the CPU."
+  },
+  "2007S_A/Q21.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Interrupt Processing",
+    "explanation": "The question pertains to the types, priorities, and handling mechanisms of CPU interrupts."
+  },
+  "2007S_A/Q22.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Cache Memory Operations",
+    "explanation": "The question asks for a description of cache memory mechanisms, specifically referring to write policies like write-through and write-back."
+  },
+  "2007S_A/Q23.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Effective Access Time",
+    "explanation": "The question requires calculating the cache hit ratio based on the performance relationship between cache memory and main memory."
+  },
+  "2007S_A/Q24.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Memory Interleaving",
+    "explanation": "The question defines memory interleaving, which is a technique for increasing the throughput of main memory by organizing it into multiple independently accessible banks."
+  },
+  "2007S_A/Q25.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "HDD Access Time",
+    "explanation": "The question requires calculating the total access time for a hard disk drive based on seek time, rotational latency, and data transfer time."
+  },
+  "2007S_A/Q26.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Virtual Memory Management",
+    "explanation": "The question requires calculating a page hit ratio using the LRU (Least Recently Used) page replacement algorithm, which is a key concept in OS memory management."
+  },
+  "2007S_A/Q27.png": {
+    "category": "Hardware",
+    "subcategory": "Auxiliary Storage",
+    "topic": "Optical Disc Storage",
+    "explanation": "The question compares different DVD rewritable formats, which are types of optical storage media categorized under auxiliary storage hardware."
+  },
+  "2007S_A/Q28.png": {
+    "category": "Hardware",
+    "subcategory": "Input/Output Unit",
+    "topic": "CMYK Color Model",
+    "explanation": "The question asks about the standard ink or toner colors used in printer hardware, which is classified as an output unit."
+  },
+  "2007S_A/Q29.png": {
+    "category": "Hardware",
+    "subcategory": "Input/Output Unit",
+    "topic": "Printer Performance Metrics",
+    "explanation": "The question relates to the performance indices (DPI and PPM) of a laser printer, which is a standard output device."
+  },
+  "2007S_A/Q30.png": {
+    "category": "Information Processing System",
+    "subcategory": "Human Interface",
+    "topic": "Computer Fonts",
+    "explanation": "The question explicitly identifies fonts as an element of the user interface, which is a primary topic under Human Interface design and components."
+  },
+  "2007S_A/Q31.png": {
+    "category": "Hardware",
+    "subcategory": "Basic Configuration of Computers",
+    "topic": "Five Units of Computer",
+    "explanation": "The question asks to identify the components and connections within the standard von Neumann architecture, consisting of the five main functional units."
+  },
+  "2007S_A/Q32.png": {
+    "category": "Hardware",
+    "subcategory": "Input/Output Unit",
+    "topic": "Pointing Devices",
+    "explanation": "The question focuses on identifying a specific hardware input device used for pointing and graphical input, which belongs to the Input/Output Unit section."
+  },
+  "2007S_A/Q33.png": {
+    "category": "Hardware",
+    "subcategory": "Input/Output Unit",
+    "topic": "Display Devices",
+    "explanation": "The question asks for the identification of a specific display technology (OLED) based on its physical characteristics, which is a key topic within hardware output devices."
+  },
+  "2007S_A/Q34.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Role of Shell",
+    "explanation": "The question asks for the definition and function of a shell, which is the user interface and command interpreter component of an Operating System."
+  },
+  "2007S_A/Q35.png": {
+    "category": "Software",
+    "subcategory": "Programming Languages and Language Processors",
+    "topic": "Program Relocation",
+    "explanation": "The question describes the process of adjusting memory addresses when a program is loaded for execution, which is a fundamental concept of loaders and language processors."
+  },
+  "2007S_A/Q36.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Task Scheduling",
+    "explanation": "The question involves analyzing task execution sequences and priorities to optimize CPU utilization, which is a core function of OS task management and scheduling."
+  },
+  "2007S_A/Q37.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Set Operations",
+    "explanation": "The question involves calculating the intersection of two sets (search results A and B) based on percentages and cardinalities, which is a standard topic in management science and quantitative logic."
+  },
+  "2007S_A/Q38.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Stored Procedure",
+    "explanation": "The question describes the concept of a stored procedure, where a pre-compiled set of database operations is stored on the server to improve performance and reduce network overhead."
+  },
+  "2007S_A/Q39.png": {
+    "category": "Information Processing System",
+    "subcategory": "Configuration of High-reliability System",
+    "topic": "Duplex System",
+    "explanation": "The question asks to identify a system configuration where a standby unit is used for redundancy, which is a core concept in high-reliability system architecture."
+  },
+  "2007S_A/Q40.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "MIPS Calculation",
+    "explanation": "The question asks for the MIPS (Million Instructions Per Second) value, which is a standard performance metric for evaluating the Central Processing Unit (CPU)."
+  },
+  "2007S_A/Q41.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "Performance Evaluation Methods",
+    "explanation": "The question asks about the correct approach to system performance evaluation, which is a central topic within the evaluation and measurement of information processing systems."
+  },
+  "2007S_A/Q42.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "MTBF Calculation",
+    "explanation": "The question requires calculating the Mean Time Between Failures (MTBF), which is a key reliability metric used in evaluating information processing systems."
+  },
+  "2007S_A/Q43.png": {
+    "category": "Software",
+    "subcategory": "Programming Languages and Language Processors",
+    "topic": "Java Programming Language",
+    "explanation": "The question specifically asks to identify the defining characteristics of Java, such as its use of virtual machines and applets, which falls under the study of programming languages."
+  },
+  "2007S_A/Q44.png": {
+    "category": "Software",
+    "subcategory": "Programming Languages and Language Processors",
+    "topic": "Compiler and Interpreter",
+    "explanation": "The question requires comparing the performance and execution mechanisms of an interpreter versus a compiler for Java byte-code."
+  },
+  "2007S_A/Q45.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Debugging Tools",
+    "explanation": "The question asks for the definition of a tracer, which is a specific tool used during the debugging phase of software development."
+  },
+  "2007S_A/Q46.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Waterfall Model",
+    "explanation": "The question asks for a description of the Waterfall model, which is a fundamental software development life cycle (SDLC) model categorized under SLCP."
+  },
+  "2007S_A/Q47.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Object-oriented Design",
+    "explanation": "The question asks about fundamental concepts of object-oriented design, such as inheritance and the relationship between classes and objects."
+  },
+  "2007S_A/Q48.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "UML Sequence Diagram",
+    "explanation": "The question concerns Unified Modeling Language (UML) diagrams, which are standard tools used for object-oriented modeling within software development technology."
+  },
+  "2007S_A/Q49.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Software Design Diagrams",
+    "explanation": "The question identifies a diagram used to represent module hierarchy and interfaces, which is a core concept in structured software design techniques."
+  },
+  "2007S_A/Q50.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Module Cohesion and Coupling",
+    "explanation": "The question concerns software module design principles where high cohesion and low (weakened) coupling are used to improve software quality."
+  },
+  "2007S_A/Q51.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "E-R Diagram",
+    "explanation": "The question requires interpreting cardinality and relationships between entities within Entity-Relationship (E-R) diagrams, which is a fundamental part of conceptual database design."
+  },
+  "2007S_A/Q52.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Software Unit Testing",
+    "explanation": "The question asks about the characteristics and methodologies of module unit tests, which is a core phase in the Software Life Cycle Process (SLCP)."
+  },
+  "2007S_A/Q53.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Software Testing Principles",
+    "explanation": "The question focuses on fundamental concepts and methodologies of program testing, including testing objectives and common methods like black-box and white-box testing."
+  },
+  "2007S_A/Q54.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Regression Testing",
+    "explanation": "The question defines regression testing, which is a standard testing method used during the software development life cycle (SLCP) to verify that modifications do not negatively impact existing functionality."
+  },
+  "2007S_A/Q55.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Check Digit",
+    "explanation": "The question requires calculating a missing value in a check digit formula, which is a standard data validation technique categorized under Management Science in the FE exam syllabus."
+  },
+  "2007S_A/Q56.png": {
+    "category": "Project Management",
+    "subcategory": "Subject Group Management",
+    "topic": "Critical Path Method",
+    "explanation": "The question asks about the characteristics of the critical path, which is a fundamental technique for schedule management within the project management subject groups."
+  },
+  "2007S_A/Q57.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Input Check Methods",
+    "explanation": "The question concerns the initial validation process for data input (specifically a completeness check), which is a core topic in input design within the System Development Technology section."
+  },
+  "2007S_A/Q58.png": {
+    "category": "Service Management",
+    "subcategory": "Overview of Service Management",
+    "topic": "Service Transition",
+    "explanation": "The question addresses the organizational coordination and best practices for moving a system from the development phase to the operations phase to ensure service quality and operability."
+  },
+  "2007S_A/Q59.png": {
+    "category": "Information Processing System",
+    "subcategory": "Processing Type of Information Processing System",
+    "topic": "Distributed Processing",
+    "explanation": "The question pertains to the operational characteristics and management requirements of a distributed system, which is a specific type of information processing system configuration."
+  },
+  "2007S_A/Q60.png": {
+    "category": "Network",
+    "subcategory": "Network Architecture",
+    "topic": "OSI Reference Model",
+    "explanation": "The question asks about the specific functions and terminology (segments) associated with the layers of the OSI 7-layer model."
+  },
+  "2007S_A/Q61.png": {
+    "category": "Network",
+    "subcategory": "Network Architecture",
+    "topic": "TCP Protocol",
+    "explanation": "The question identifies the specific characteristics of TCP (Transmission Control Protocol), which is a core protocol of the transport layer in the TCP/IP network architecture."
+  },
+  "2007S_A/Q62.png": {
+    "category": "Network",
+    "subcategory": "The Internet",
+    "topic": "Remote Login Protocols",
+    "explanation": "The question asks to identify a specific TCP/IP application layer protocol (TELNET) used for remote terminal access and virtual login."
+  },
+  "2007S_A/Q63.png": {
+    "category": "Network",
+    "subcategory": "Network Mechanism",
+    "topic": "DHCP Protocol",
+    "explanation": "The question describes the dynamic assignment of IP addresses in a TCP/IP environment, which is the specific function of the Dynamic Host Configuration Protocol (DHCP)."
+  },
+  "2007S_A/Q64.png": {
+    "category": "Network",
+    "subcategory": "LAN",
+    "topic": "CSMA/CD Method",
+    "explanation": "The question asks about the operational characteristics of CSMA/CD, which is a fundamental media access control protocol used in Local Area Networks (LAN)."
+  },
+  "2007S_A/Q65.png": {
+    "category": "Network",
+    "subcategory": "Network Mechanism",
+    "topic": "Bit Error Rate",
+    "explanation": "The question involves calculating the bit error rate (BER) for a data transmission line, which is a key performance metric within network communication mechanisms."
+  },
+  "2007S_A/Q66.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Database Schema",
+    "explanation": "The question asks for the definition of a 'schema', which is a fundamental concept describing the structure and data definitions within a database system."
+  },
+  "2007S_A/Q67.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Relational Database Concepts",
+    "explanation": "The question asks for the definition of 'domain', which is a fundamental term used in the relational model to describe the set of allowable values for an attribute."
+  },
+  "2007S_A/Q68.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Relational Algebra Operations",
+    "explanation": "The question identifies 'Projection', which is a fundamental relational algebra operation used to extract specific columns from a relational table."
+  },
+  "2007S_A/Q69.png": {
+    "category": "Database",
+    "subcategory": "Outline of Database",
+    "topic": "Transaction Management",
+    "explanation": "The question asks about undoing changes after a transaction failure, which is a fundamental concept of transaction management and ACID properties in database systems."
+  },
+  "2007S_A/Q70.png": {
+    "category": "Software",
+    "subcategory": "Files",
+    "topic": "File Access Control",
+    "explanation": "The question asks about representing and interpreting directory/file access permissions (read, update, create) using bitwise octal notation."
+  },
+  "2007S_A/Q71.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "Virus Pattern File",
+    "explanation": "The question asks about the definition and function of a virus pattern file, which is a technical measure used for detecting known malware."
+  },
+  "2007S_A/Q72.png": {
+    "category": "Security",
+    "subcategory": "Information Security Measures",
+    "topic": "SSL/TLS Protocols",
+    "explanation": "The question asks about the protective function of SSL, which is a technical security measure used to encrypt data and prevent eavesdropping during transmission."
+  },
+  "2007S_A/Q73.png": {
+    "category": "Security",
+    "subcategory": "Overview of Information Security",
+    "topic": "Three Elements of Information Security",
+    "explanation": "The question asks for the correct definitions of Confidentiality, Integrity, and Availability (CIA), which are the fundamental concepts covered in the overview of information security."
+  },
+  "2007S_A/Q74.png": {
+    "category": "Business Strategy",
+    "subcategory": "Business Strategy Management",
+    "topic": "CRM",
+    "explanation": "The question asks for the definition of Customer Relationship Management (CRM), which is a key business management technique used to improve customer satisfaction and revenue."
+  },
+  "2007S_A/Q75.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Break-even Point Analysis",
+    "explanation": "The question requires an analysis of fixed costs, variable costs, and break-even points to determine profit trends, which is a key topic in management accounting."
+  },
+  "2007S_A/Q76.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Activities",
+    "topic": "Graphic Analysis Tools",
+    "explanation": "The question asks to identify the correct description of a radar chart, which is a graphical tool used in corporate management and quality control to visualize performance across multiple categories."
+  },
+  "2007S_A/Q77.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Scatter Diagram and Correlation",
+    "explanation": "The question requires interpreting a scatter plot to identify the correlation between two variables, which is a standard statistical method covered in Management Science."
+  },
+  "2007S_A/Q78.png": {
+    "category": "Project Management",
+    "subcategory": "Subject Group Management",
+    "topic": "Critical Path Method",
+    "explanation": "The question requires identifying the critical path in an arrow diagram and determining how to shorten the project schedule."
+  },
+  "2007S_A/Q79.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Linear Programming",
+    "explanation": "The question describes an optimization problem where a profit function must be maximized subject to linear constraints, which is specifically solved using linear programming."
+  },
+  "2007S_A/Q80.png": {
+    "category": "Business Strategy",
+    "subcategory": "Business Industry",
+    "topic": "Electronic Commerce",
+    "explanation": "The question asks to identify a specific model of electronic commerce (C2C) which is categorized under business industry trends and systems."
+  },
+  "2008A_A/Q01.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Number Base Conversion",
+    "explanation": "The question requires knowledge of converting decimal fractions to other bases (octal), which is a fundamental part of data representation in computing."
+  },
+  "2008A_A/Q02.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Shift Operations",
+    "explanation": "The question tests the understanding of bitwise left-shift operations and their arithmetic equivalent (multiplication by powers of 2) in binary representation."
+  },
+  "2008A_A/Q03.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Bitwise Operations",
+    "explanation": "The question involves identifying properties of unsigned binary numbers using bit-by-bit logical operations (masking) to check for specific numeric multiples."
+  },
+  "2008A_A/Q04.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Floating-point Representation",
+    "explanation": "The question requires converting a hexadecimal value to decimal using the IEEE 754 single-precision format, which is a fundamental method of representing numerical data in computers."
+  },
+  "2008A_A/Q05.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Numerical Rounding",
+    "explanation": "The question requires identifying the mathematical expression for rounding an average to the nearest integer using floor function notation, which is a core topic in applied mathematics and statistics under Management Science."
+  },
+  "2008A_A/Q06.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Permutations and Combinations",
+    "explanation": "The question requires calculating the number of possible substrings and subsequences using discrete mathematics and combinatorial formulas (specifically combinations for subsequences)."
+  },
+  "2008A_A/Q07.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Probability",
+    "explanation": "The question requires calculating the probability of a specific outcome from a set of discrete events, which is a standard mathematical topic under Management Science in the FE syllabus."
+  },
+  "2008A_A/Q08.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Counting and Combinatorics",
+    "explanation": "The question requires calculating the maximum number of trials (worst-case scenario) for a matching problem using an arithmetic progression, which is a fundamental counting principle in Management Science."
+  },
+  "2008A_A/Q09.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Boolean Algebra",
+    "explanation": "The question requires simplifying a logical expression using Boolean algebra laws, which is a fundamental topic in the data representation section of the hardware chapter."
+  },
+  "2008A_A/Q10.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Boolean Algebra",
+    "explanation": "The question requires identifying the correct Boolean expression for a given logical condition, which is a fundamental concept in digital logic and data representation."
+  },
+  "2008A_A/Q11.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Stack Operations",
+    "explanation": "The question requires tracing the contents of multiple stacks as they undergo a series of push and pop operations."
+  },
+  "2008A_A/Q12.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Array Index Calculation",
+    "explanation": "The question requires determining the correct mathematical expression to map specific data ranges to indices within a one-dimensional array."
+  },
+  "2008A_A/Q13.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "k-ary Tree Properties",
+    "explanation": "The question asks about the structural properties and mathematical relationships (nodes, height, leaves) within a k-ary tree data structure."
+  },
+  "2008A_A/Q14.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Recursive Algorithm",
+    "explanation": "The question asks to identify the correct recursive step and base case for a factorial function, which is a fundamental concept in algorithm design."
+  },
+  "2008A_A/Q15.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Data Structure",
+    "topic": "Binary Search Tree",
+    "explanation": "The question tests the understanding of binary search tree properties, specifically how nodes are inserted and how the tree structure is reorganized after deleting the root node."
+  },
+  "2008A_A/Q16.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Sorting Algorithms",
+    "explanation": "The question describes the operational mechanism of Quick sort, which is a fundamental sorting algorithm covered in the Basic Algorithm section."
+  },
+  "2008A_A/Q17.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Logic Gates",
+    "explanation": "The question requires identifying a logical function (Exclusive-NOR) by analyzing the relationship between input signals and output results shown in a timing chart."
+  },
+  "2008A_A/Q18.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Processor Registers",
+    "explanation": "The question asks for descriptions of various internal CPU components, specifically different types of registers and their functions."
+  },
+  "2008A_A/Q19.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Instruction Execution Time",
+    "explanation": "The question calculates the minimum time a CPU takes to execute a specific arithmetic expression based on individual instruction processing speeds and potential parallelism."
+  },
+  "2008A_A/Q20.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Pipeline Processing",
+    "explanation": "The question asks for the diagram representing pipeline control, which is a key CPU architecture technique for overlapping instruction execution stages to improve performance."
+  },
+  "2008A_A/Q21.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "CPU Clock Frequency",
+    "explanation": "The question asks about the characteristics and effects of CPU clock frequency on system performance, specifically instruction execution speed."
+  },
+  "2008A_A/Q22.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "CPU Performance Evaluation",
+    "explanation": "The question requires calculating CPU performance in MIPS using clock frequency and the weighted average of clock cycles per instruction (CPI)."
+  },
+  "2008A_A/Q23.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Memory Addressing",
+    "explanation": "The question requires calculating the address range (lowest and highest hexadecimal addresses) for a specific memory device size within a processor's address space."
+  },
+  "2008A_A/Q24.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Hamming Code",
+    "explanation": "The question asks about the specific error-correcting code used within ECC (Error Correcting Code) main memory to manage bit-level data integrity."
+  },
+  "2008A_A/Q25.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Cache Memory Hit Ratio",
+    "explanation": "The question focuses on calculating the performance of the memory hierarchy (effective access time and hit ratio) involving the CPU, cache, and main memory."
+  },
+  "2008A_A/Q26.png": {
+    "category": "Hardware",
+    "subcategory": "Central Processing Unit and Main Memory Unit",
+    "topic": "Memory Hierarchy",
+    "explanation": "The question compares the access speeds of different storage levels, including registers, cache, main memory, and secondary storage."
+  },
+  "2008A_A/Q27.png": {
+    "category": "Hardware",
+    "subcategory": "Input/Output Unit",
+    "topic": "Serial Interface",
+    "explanation": "The question asks about the type of physical port (Input/Output interface) used for connecting a modem, which is a hardware peripheral component."
+  },
+  "2008A_A/Q28.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Process Scheduling",
+    "explanation": "The question requires analyzing a process scheduling algorithm (Shortest Job First) to determine CPU state, which is a core function of an Operating System."
+  },
+  "2008A_A/Q29.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Process Management",
+    "explanation": "The question concerns the state transition diagram for processes (Running, Ready, Waiting), which is a fundamental concept in Operating System process management."
+  },
+  "2008A_A/Q30.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "Spooling",
+    "explanation": "Spooling is an Operating System function that manages high-speed data transfer between the CPU and slow peripheral devices by using intermediate storage."
+  },
+  "2008A_A/Q31.png": {
+    "category": "Software",
+    "subcategory": "OS (Operating System)",
+    "topic": "OS Functions",
+    "explanation": "The question asks to identify the core management functions performed by an operating system, such as data, job, and task management."
+  },
+  "2008A_A/Q32.png": {
+    "category": "Information Processing System",
+    "subcategory": "Processing Type of Information Processing System",
+    "topic": "Remote Procedure Call",
+    "explanation": "The question defines Remote Procedure Call (RPC), which is a key communication mechanism used in distributed environments and client/server system architectures."
+  },
+  "2008A_A/Q33.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "Parallel System Availability",
+    "explanation": "This question involves calculating the total availability of a system configured in parallel, which is a standard method for evaluating system reliability (RASIS)."
+  },
+  "2008A_A/Q34.png": {
+    "category": "Information Processing System",
+    "subcategory": "Evaluation of Information Processing System",
+    "topic": "MTBF and MTTR",
+    "explanation": "The question focuses on evaluating system reliability and availability using metrics such as Mean Time Between Failures (MTBF) and Mean Time To Repair (MTTR)."
+  },
+  "2008A_A/Q35.png": {
+    "category": "Information Processing System",
+    "subcategory": "Configuration of High-reliability System",
+    "topic": "Fail-safe design",
+    "explanation": "The question asks for an example of a fail-safe design, which is a core concept in configuring high-reliability systems to ensure safety when a failure occurs."
+  },
+  "2008A_A/Q36.png": {
+    "category": "Database",
+    "subcategory": "Various Databases",
+    "topic": "Data Warehouse",
+    "explanation": "The question describes the collection, integration, and storage of large data volumes for decision-making support, which is the standard definition of a Data Warehouse."
+  },
+  "2008A_A/Q37.png": {
+    "category": "Information Processing System",
+    "subcategory": "Processing Type of Information Processing System",
+    "topic": "3-tier Architecture",
+    "explanation": "The question concerns the functional division between web servers and application servers, which is a fundamental concept of the 3-tier system architecture."
+  },
+  "2008A_A/Q38.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "CASE Tools",
+    "explanation": "The question asks about the classification of CASE (Computer-Aided Software Engineering) tools into categories like 'upstream' or 'downstream' based on the development lifecycle phases they support."
+  },
+  "2008A_A/Q39.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Reverse Engineering",
+    "explanation": "The question asks for the definition of reverse engineering, which is a key methodology for software maintenance and analysis within software development technology."
+  },
+  "2008A_A/Q40.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Object-Oriented Concepts",
+    "explanation": "The question tests the understanding of class inheritance and the 'is-a' relationship within the context of object-oriented design."
+  },
+  "2008A_A/Q41.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Software Internal Design",
+    "explanation": "The question concerns the specific tasks performed during the internal design (detailed design) phase of the software development life cycle."
+  },
+  "2008A_A/Q42.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Flowchart Tracing",
+    "explanation": "The question requires analyzing and tracing the step-by-step execution path of an algorithm represented by a flowchart."
+  },
+  "2008A_A/Q43.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Structured Analysis",
+    "explanation": "The question asks for the standard sequence of modeling (Current Physical \u2192 Current Logical \u2192 New Logical \u2192 New Physical) used in structured analysis with DFDs."
+  },
+  "2008A_A/Q44.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Data Flow Diagram",
+    "explanation": "The question focuses on identifying rule violations in a Data Flow Diagram (DFD), which is a key modeling tool used during the analysis phase of system development."
+  },
+  "2008A_A/Q45.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "Object-Oriented Methodology",
+    "explanation": "The question asks for the fundamental characteristics of the object-oriented model, such as encapsulation and the combination of data and methods."
+  },
+  "2008A_A/Q46.png": {
+    "category": "Development Technology",
+    "subcategory": "System Development Technology (SLCP)",
+    "topic": "Integration Testing",
+    "explanation": "The question asks to identify a specific testing phase within the software development life cycle that focuses on verifying interfaces between components."
+  },
+  "2008A_A/Q47.png": {
+    "category": "Development Technology",
+    "subcategory": "Software Development Technology",
+    "topic": "White-box Testing",
+    "explanation": "The question relates to software testing techniques, specifically decision (branch) coverage, which is a key concept within white-box testing in software development."
   }
 }
