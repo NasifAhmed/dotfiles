@@ -5,6 +5,7 @@ window.TOPICS_DATA = {
         "2007A_A_Q01"
       ],
       "Radix Conversion": [
+        "2008S_A_Q01",
         "2007S_A_Q01",
         "2007A_A_Q02"
       ],
@@ -24,6 +25,7 @@ window.TOPICS_DATA = {
         "2007A_A_Q11"
       ],
       "Radix Calculation": [
+        "2008S_A_Q02",
         "2007S_A_Q02"
       ],
       "Floating-point Normalization": [
@@ -54,6 +56,9 @@ window.TOPICS_DATA = {
       ],
       "Logic Gates": [
         "2008A_A_Q17"
+      ],
+      "Two's Complement Range": [
+        "2008S_A_Q03"
       ]
     },
     "Central Processing Unit and Main Memory Unit": {
@@ -211,6 +216,9 @@ window.TOPICS_DATA = {
       ],
       "Flowchart Tracing": [
         "2008A_A_Q42"
+      ],
+      "Logical Operations": [
+        "2008S_A_Q04"
       ]
     },
     "Data Structure": {
@@ -336,6 +344,7 @@ window.TOPICS_DATA = {
         "2007S_A_Q77"
       ],
       "Linear Programming": [
+        "2008A_A_Q77",
         "2007S_A_Q79"
       ],
       "Numerical Rounding": [
@@ -352,6 +361,12 @@ window.TOPICS_DATA = {
       ],
       "Expected Value": [
         "2008A_A_Q49"
+      ],
+      "Game Theory": [
+        "2008A_A_Q76"
+      ],
+      "Economic Order Quantity": [
+        "2008A_A_Q78"
       ]
     },
     "Corporate Activities": {
@@ -367,6 +382,7 @@ window.TOPICS_DATA = {
         "2007A_A_Q76"
       ],
       "Inventory Valuation": [
+        "2008A_A_Q75",
         "2007A_A_Q77"
       ],
       "Product Cost Calculation": [
@@ -380,6 +396,9 @@ window.TOPICS_DATA = {
       ],
       "Break-even Analysis": [
         "2008A_A_Q73"
+      ],
+      "Fixed and Variable Costs": [
+        "2008A_A_Q74"
       ]
     }
   },
@@ -681,6 +700,7 @@ window.TOPICS_DATA = {
         "2007A_A_Q79"
       ],
       "Critical Path Method": [
+        "2008A_A_Q79",
         "2007S_A_Q78",
         "2007S_A_Q56"
       ]
@@ -737,6 +757,9 @@ window.TOPICS_DATA = {
     "Business Industry": {
       "Electronic Commerce": [
         "2007S_A_Q80"
+      ],
+      "Material Requirements Planning (MRP)": [
+        "2008A_A_Q80"
       ]
     }
   },

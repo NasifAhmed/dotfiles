@@ -1396,5 +1396,71 @@
     "subcategory": "Corporate Accounting",
     "topic": "Break-even Analysis",
     "explanation": "The question involves calculating the required sales volume to reach a target profit based on fixed and variable costs, which is a core component of break-even and CVP analysis."
+  },
+  "2008A_A/Q74.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Fixed and Variable Costs",
+    "explanation": "The question requires calculating the fixed cost component by analyzing total manufacturing costs at different production volumes, which is a fundamental concept in cost accounting."
+  },
+  "2008A_A/Q75.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Corporate Accounting",
+    "topic": "Inventory Valuation",
+    "explanation": "The question requires calculating the cost of goods sold using the FIFO (First-In, First-Out) method, which is a core concept in corporate inventory accounting."
+  },
+  "2008A_A/Q76.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Game Theory",
+    "explanation": "The question asks to apply the maximin strategy within a payoff matrix, which is a fundamental concept of game theory studied under management science."
+  },
+  "2008A_A/Q77.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Linear Programming",
+    "explanation": "The question defines a mathematical optimization problem with linear constraints and objective functions, which is the core concept of Linear Programming within management science."
+  },
+  "2008A_A/Q78.png": {
+    "category": "Corporate and Legal Affairs",
+    "subcategory": "Management Science",
+    "topic": "Economic Order Quantity",
+    "explanation": "The question requires calculating the optimal order quantity using the Economic Order Quantity (EOQ) formula, which is a mathematical model used in Management Science for inventory optimization."
+  },
+  "2008A_A/Q79.png": {
+    "category": "Project Management",
+    "subcategory": "Subject Group Management",
+    "topic": "Critical Path Method",
+    "explanation": "The question requires calculating the longest path (critical path) in a sequence of activities based on dependencies and durations, which is a core part of project schedule management."
+  },
+  "2008A_A/Q80.png": {
+    "category": "Business Strategy",
+    "subcategory": "Business Industry",
+    "topic": "Material Requirements Planning (MRP)",
+    "explanation": "MRP is a management system specifically designed to optimize production by calculating the quantities and timing of materials needed, which falls under business management systems in the Business Industry section."
+  },
+  "2008S_A/Q01.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Radix Conversion",
+    "explanation": "The question requires converting a hexadecimal fractional value into a sum of powers of two, which is a fundamental concept in computer data representation and number system conversion."
+  },
+  "2008S_A/Q02.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Radix Calculation",
+    "explanation": "The question involves identifying the base (radix) of a numerical equation, which is a fundamental concept of how data is represented in computer systems."
+  },
+  "2008S_A/Q03.png": {
+    "category": "Hardware",
+    "subcategory": "Data Representation in Computers",
+    "topic": "Two's Complement Range",
+    "explanation": "The question asks for the numerical range of integers that can be represented using $n$ bits in two's complement format, which is a fundamental part of data representation in hardware."
+  },
+  "2008S_A/Q04.png": {
+    "category": "Data Structure and Algorithm",
+    "subcategory": "Basic Algorithm",
+    "topic": "Logical Operations",
+    "explanation": "The question requires applying De Morgan's laws to negate a logical 'stay' condition to find the corresponding loop exit condition."
   }
 }

@@ -28509,7 +28509,7 @@
     "q_num": 1,
     "img_path": "../cropped_questions/2008S_A/Q01.png",
     "text": "Q1. Which of the following is equal to the hexadecimal fraction 2A.4C?\na) 2\n5+2 3+2 1+2 -2+2 -5+2 -6\nb) 2\n5+2 3+2 1+2 -1+2 -4+2 -5\nc) 2\n6+2 4+2 2+2 -2+2 -5+2 -6\nd) 2\n6+2 4+2 2+2 -1+2 -4+2 -5",
-    "tag": "Uncategorized"
+    "tag": "Radix Conversion"
   },
   {
     "id": "2008A_A_Q02",
@@ -28531,7 +28531,7 @@
     "q_num": 2,
     "img_path": "../cropped_questions/2008S_A/Q02.png",
     "text": "Q2. In what radix does the following equation hold?\n131\u221245 = 53\na) 6 b) 7 c) 8 d) 9",
-    "tag": "Uncategorized"
+    "tag": "Radix Calculation"
   },
   {
     "id": "2008A_A_Q03",
@@ -28553,7 +28553,7 @@
     "q_num": 3,
     "img_path": "../cropped_questions/2008S_A/Q03.png",
     "text": "Q3. In fixed-point representation that expresses negative numbers by two\u2019s complement,\nwhich range of integers can be expressed with n bits? Here, the position of the\nbinary point is to the right of the least significant bit.\na) \u22122\nn\nthrough 2\nn\u20131\nb) \u22122\nn\u20131\n\u22121 through 2\nn\u20131\nc) \u22122\nn\u20131\nthrough 2\nn\u20131-1\nd) \u22122\nn\u20131\nthrough 2\nn\u20131",
-    "tag": "Uncategorized"
+    "tag": "Two's Complement Range"
   },
   {
     "id": "2008A_A_Q04",
@@ -28575,7 +28575,7 @@
     "q_num": 4,
     "img_path": "../cropped_questions/2008S_A/Q04.png",
     "text": "Q4. In a certain program, in order to stay in a loop, variable X must be in the range from 1\nthrough 10 (X >= 1 AND X <= 10). In this program, which of the following is the\ncondition of exiting the loop? Here, \u201cAND\u201d and \u201cOR\u201d are the logical product and\nlogical sum operations respectively. In addition, comparison operators <, <=, >, and\n>= are less than, less than or equal to, greater than, and greater than or equal to,\nrespectively.\na) X < 1 AND X > 10 b) X >= 1 OR X <= 10\nc) X <= 1 OR X >= 10 d) X < 1 OR X > 10",
-    "tag": "Uncategorized"
+    "tag": "Logical Operations"
   },
   {
     "id": "2008A_A_Q05",
@@ -30104,7 +30104,7 @@
     "q_num": 74,
     "img_path": "../cropped_questions/2008A_A/Q74.png",
     "text": "Q74. A certain manufacturer plans to produce products in the two periods 1 and 2 as shown\nin the table below. How much is the fixed cost (in dollars) to produce the planned\nproducts during a single period? Here, the fixed cost remains unchanged for each\nperiod.\nPeriod Number of products Manufacturing\nto be produced cost ($)\n1 1,000 5,000\n2 1,500 6,000\na) 1,000 b) 2,500 c) 3,000 d) 5,000",
-    "tag": "Uncategorized"
+    "tag": "Fixed and Variable Costs"
   },
   {
     "id": "2008S_A_Q74",
@@ -30126,7 +30126,7 @@
     "q_num": 75,
     "img_path": "../cropped_questions/2008A_A/Q75.png",
     "text": "Q75. A certain retailer purchases watches from a wholesaler and sells them to customers.\nAs shown in the transaction record table below, the retailer purchased a total of 150\nwatches and sold 120 watches in January. In addition, the retailer had a stock of 30\nwatches at the beginning of January. What is the total purchase cost (in dollars) of\nwatches that were sold on an FIFO (First In First Out) basis in January?\n[Transaction record]\nDate Quantity Unit cost\nTransaction\n(yyyy-mm-dd) ($)\n2008-01-01 Beginning inventory 30 20\n2008-01-10 Purchased 60 21\n2008-01-16 Purchased 40 22\n2008-01-25 Purchased 50 23\n2008-01 Sold 120\na) 2,500 b) 2,520 c) 2,550 d) 2,670",
-    "tag": "Uncategorized"
+    "tag": "Inventory Valuation"
   },
   {
     "id": "2008S_A_Q75",
@@ -30148,7 +30148,7 @@
     "q_num": 76,
     "img_path": "../cropped_questions/2008A_A/Q76.png",
     "text": "Q76. Company A and Company B can expect profits as shown in the table below when each\nof them implements two different strategies. Which of the following is the profit of\nCompany A when both companies carry out the maximin strategy? In each cell of the\ntable, the left value indicates the profit of A, and the right value indicates the profit of B.\nCompany B\nStrategy b1 Strategy b2\nStrategy a1 \u201315, 15 20, \u201320\nCompany A\nStrategy a2 5, \u20135 0, 0\na) \u201315 b) 0 c) 5 d) 20",
-    "tag": "Uncategorized"
+    "tag": "Game Theory"
   },
   {
     "id": "2008S_A_Q76",
@@ -30170,7 +30170,7 @@
     "q_num": 77,
     "img_path": "../cropped_questions/2008A_A/Q77.png",
     "text": "Q77. Which is the method of solving a problem of the following type: \u201cHow can we\ndistribute a resource subject to constraints that can be expressed by first-degree\nequations so as to obtain a maximum effect?\u201d\na) Design of experiments b) Factor analysis\nc) Linear programming d) Regression analysis",
-    "tag": "Uncategorized"
+    "tag": "Linear Programming"
   },
   {
     "id": "2008S_A_Q77",
@@ -30192,7 +30192,7 @@
     "q_num": 78,
     "img_path": "../cropped_questions/2008A_A/Q78.png",
     "text": "Q78. A certain company has installed an online computer for the purpose of improving its\ninventory control system. When the company anticipates sales of 15,000 units per\nyear, ordering cost of $60 per order, and annual holding cost of $20 per unit, what is\nthe optimal order quantity (in units) per order? Here, the fixed order quantity model\ncan be applied.\na) 300 b) 500 c) 1,500 d) 3,000",
-    "tag": "Uncategorized"
+    "tag": "Economic Order Quantity"
   },
   {
     "id": "2008S_A_Q78",
@@ -30214,7 +30214,7 @@
     "q_num": 79,
     "img_path": "../cropped_questions/2008A_A/Q79.png",
     "text": "Q79. There are seven activities A through G shown in the table below. Activities A and B\ncan be performed concurrently, but the others cannot be done until their preceding\nactivities are completed. For example, C cannot begin until A is completed. Which\nof the following is the critical path of these activities?\nActivity Preceding activity Used Time (days)\nA \u2014 4\nB \u2014 5\nC A 5\nD A 6\nE B, C 5\nF D 4\nG E 5\n\u2192 \u2192 \u2192\na) A C E G\n\u2192 \u2192\nb) A D F\n\u2192 \u2192 \u2192\nc) B C D F\n\u2192 \u2192\nd) B E G",
-    "tag": "Uncategorized"
+    "tag": "Critical Path Method"
   },
   {
     "id": "2008S_A_Q79",
@@ -30236,7 +30236,7 @@
     "q_num": 80,
     "img_path": "../cropped_questions/2008A_A/Q80.png",
     "text": "Q80. Which of the following is the situation that is expected to be improved by the\nintroduction of an MRP (Material Requirements Planning) system?\na) Design changes are so frequent that production efficiency does not improve.\nb) Drawing information is managed both by electronic files and on paper, so the history\nof design changes cannot be correctly understood.\nc) Information concerning materials necessary for manufacturing and their required\nquantities is complex, so errors can occur repeatedly in the estimated quantity of\norder and thereby bring about problems to production.\nd) Many types of products are produced in small quantities, so the introduction cost of\nmanufacturing facilities is increasing.",
-    "tag": "Uncategorized"
+    "tag": "Material Requirements Planning (MRP)"
   },
   {
     "id": "2008S_A_Q80",

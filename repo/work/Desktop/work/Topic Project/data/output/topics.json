@@ -6,7 +6,8 @@
         "IC card reader",
         "SFA (Sales Force Automation)"
       ],
-      "Electronic Commerce": []
+      "Electronic Commerce": [],
+      "Material Requirements Planning (MRP)": []
     },
     "Business Strategy Management": {
       "Strategic Mgmt": [
@@ -46,7 +47,8 @@
       "Product Cost Calculation": [],
       "Break-even Point Analysis": [],
       "Financial Ratios": [],
-      "Break-even Analysis": []
+      "Break-even Analysis": [],
+      "Fixed and Variable Costs": []
     },
     "Corporate Activities": {
       "Strategy": [
@@ -113,7 +115,9 @@
       "Permutations and Combinations": [],
       "Probability": [],
       "Counting and Combinatorics": [],
-      "Expected Value": []
+      "Expected Value": [],
+      "Game Theory": [],
+      "Economic Order Quantity": []
     }
   },
   "Data Structure and Algorithm": {
@@ -141,7 +145,8 @@
       "State Transition Table": [],
       "Linear Search Algorithm": [],
       "Recursive Algorithm": [],
-      "Flowchart Tracing": []
+      "Flowchart Tracing": [],
+      "Logical Operations": []
     },
     "Data Structure": {
       "Structures": [
@@ -444,7 +449,8 @@
       "Shift Operations": [],
       "Bitwise Operations": [],
       "Boolean Algebra": [],
-      "Logic Gates": []
+      "Logic Gates": [],
+      "Two's Complement Range": []
     },
     "Input/Output Unit": {
       "I/O Devices": [
