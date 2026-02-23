@@ -16,6 +16,29 @@ public class Main {
         addNewNode(1000, head);
         printList(head);
 
+        System.out.println("Reversing the list");
+        head = reverseList(head);
+        printList(head);
+
+    }
+
+    public static Node reverseList(Node head) {
+        // List ultano
+        Node aagerta = null;
+        Node current = head;
+        Node porerta = null;
+
+        while(current != null) {
+            //Main kaaj
+            porerta = current.next;
+            current.next = aagerta;
+
+            // Loop ghurar aage kaaj
+            aagerta = current;
+            current = porerta;
+        }
+
+        return aagerta;
     }
 
     public static void addToNode(Node a, Node b) {
@@ -47,4 +70,29 @@ public class Main {
         }
         currentNode.next = null;
     }
+
+    public static Node reverseList(Node currentNode, Node porerNode) {
+        Node reversedHead;
+        
+        if(currentNode.next != null) {
+            reversedHead = reverseList(currentNode.next, currentNode);
+        } else {
+            reversedHead = currentNode;
+        }
+        currentNode.next = porerNode;
+        return reversedHead;
+    }
+
+    public static Node reverseListRecursive(Node currentNode, Node porerNode) {
+        Node reversedHead;
+
+        if(currentNode.next != null) {
+            reversedHead = reverseList(currentNode.next, currentNode);
+        } else {
+            reversedHead = currentNode;
+        }
+        currentNode.next = porerNode;
+        return reversedHead;
+    }
+
 }
