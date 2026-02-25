@@ -1,0 +1,7 @@
+make me a cool minimal starship prompt
+It will show my username with logo of the distro or os I am on, the full current
+directory ( It will go to new lines if needed ) git status, current date in this
+form "7th FEB" and the current time, current battery level with icons only,
+current free ram only, the time each command took with nerdfont
+use the starship prompt file here for inpiration.
+icons for styling and icons and stuff

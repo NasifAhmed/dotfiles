@@ -1,0 +1,118 @@
+# Minimal Starship Prompt Configuration
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+# Use palettes from inspiration
+palette = 'default'
+
+[palettes.default]
+color_os = 'red'
+color_username = 'red'
+color_directory = 'yellow'
+color_git = 'cyan'
+color_time = 'bright-white'
+color_duration = 'bright-yellow'
+
+format = """
+$os$username$custom.date $time $battery$memory_usage$line_break\
+$directory$line_break\
+$git_branch$git_status$cmd_duration$line_break\
+$character """
+
+[os]
+disabled = false
+style = "fg:color_os"
+format = "[$symbol]($style)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "fg:color_username"
+format = "[$user]($style) "
+
+[custom.date]
+command = "d=$(date +%-d); case $d in 1|21|31) s=st;; 2|22) s=nd;; 3|23) s=rd;; *) s=th;; esac; echo \"${d}${s} $(date +%b | tr '[:lower:]' '[:upper:]')\""
+when = "true"
+style = "fg:color_time"
+format = "[$output]($style) "
+
+[time]
+disabled = false
+time_format = "%I:%M%p"
+style = "fg:color_time"
+format = "at [$time]($style) "
+
+[battery]
+full_symbol = "󰁹"
+charging_symbol = "󰂄"
+discharging_symbol = "󰂃"
+unknown_symbol = "󰂑"
+empty_symbol = "󰂎"
+format = "[$symbol]($style) "
+disabled = false
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "fg:color_time"
+
+[memory_usage]
+symbol = "󰍛 "
+style = "fg:color_time"
+format = "[$symbol${ram_free}]($style) "
+disabled = false
+threshold = 0
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+style = "fg:color_directory"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = " "
+style = "fg:color_git"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "fg:color_git"
+format = "([$all_status$ahead_behind]($style) )"
+
+[cmd_duration]
+min_time = 0
+style = "fg:color_duration"
+format = "took [󱫑 $duration]($style) "
+
+[character]
+success_symbol = "[❯❯❯](bold green) "
+error_symbol = "[❯❯❯](bold red) "

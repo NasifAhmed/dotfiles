@@ -1,0 +1,34 @@
+#!/bin/bash
+
+DAY=$(date +%a)
+DATE=$(date +%Y%m%d)
+SUBJECT="${DATE} (${DAY}) T Nasif Ahmed"
+
+TEMPLATE="［Tasks Performed］
+-
+-
+
+［Remarks］
+No remarks
+"
+
+REPORT_FILE=$(mktemp /tmp/daily_report_XXXXXX.md)
+
+echo -n "$SUBJECT" > "$REPORT_FILE"
+echo "" >> "$REPORT_FILE"
+echo "$TEMPLATE" >> "$REPORT_FILE"
+
+nvim -c "normal G" -c "startinsert" "$REPORT_FILE"
+
+BODY_CONTENT=$(cat "$REPORT_FILE")
+
+echo "$BODY_CONTENT" | wl-copy
+
+rm -f "$REPORT_FILE"
+
+echo "Subject: $SUBJECT"
+echo "---"
+echo "Report copied to clipboard!"
+echo ""
+echo "To: send-report-dhaka@metro-bangladesh.com"
+echo "Subject: $SUBJECT"
