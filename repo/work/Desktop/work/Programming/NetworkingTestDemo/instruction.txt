@@ -1,0 +1,8 @@
+Make a website that will demo the full networking demo with animations and step
+by step visuals.
+It will show how packets or data on internet go layer by layer. On each layer
+show what its doing and what data its getting. For example for dns show dns
+result, for arp request show the process of sending and getting and for dhcpt
+etc.....
+
+This is for students who are learning netowrking. 
