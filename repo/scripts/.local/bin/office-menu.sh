@@ -17,6 +17,12 @@ DRJAVA_PATH="$HOME/Desktop/drjava.jar" # Default fallback
 [ -f "$CODEBASE_DIR/drjava.jar" ] && DRJAVA_PATH="$CODEBASE_DIR/drjava.jar"
 
 SEARCH_ROOT_DIR="$WORK_DIR/Documents/Teach"
+STATE_FILE="/tmp/last_display_mode"
+
+# --- HARDCODED MONITOR PORTS ---
+# Change EXTERNAL to match your exact port (eDP-1 is standard for internal laptop screens)
+INTERNAL="eDP-1"
+EXTERNAL="HDMI-A-1" 
 
 # --- Main Menu Options ---
 OPT_DISPLAY="🖥️ Monitor"
@@ -30,76 +36,45 @@ case $SELECTION in
 
     # 1. Display Manager
     "$OPT_DISPLAY")
-    # Auto-detect monitors
-    INTERNAL=$(hyprctl monitors all | grep "Monitor" | awk '{print $2}' | grep "eDP" | head -n 1)
-    EXTERNAL=$(hyprctl monitors all | grep "Monitor" | awk '{print $2}' | grep -v "$INTERNAL" | head -n 1)
-    [ -z "$INTERNAL" ] && INTERNAL="eDP-1"
-
-    if [ -z "$EXTERNAL" ]; then
-        notify-send "Display Error" "No external monitor detected."
-        exit 1
-    fi
-
-    MODE=$(echo -e "Duplicate (Mirror)\nExtend (Strict WS 10)\nDisconnect Projector" | walker --dmenu --placeholder "Select Display Mode")
+    
+    MODE=$(echo -e "Mirror\nExtend\nToggle Projector" | walker --dmenu --placeholder "Select Display Mode")
 
     case $MODE in
-        "Duplicate (Mirror)")
-            # Clear workspace bindings so mirroring works normally
-            for i in {1..10}; do
-                hyprctl keyword workspace "$i, monitor:desc:bound"
-            done
-
-            hyprctl keyword monitor "$EXTERNAL, 1366x768@60, auto, 1, mirror, $INTERNAL"
-            notify-send "Display" "Mirroring to $EXTERNAL"
+        "Mirror")
+            hyprctl keyword monitor "$EXTERNAL,preferred,auto,1,mirror"
+            echo "Mirror" > "$STATE_FILE"
+            notify-send "Display Mode" "Mirrored to $EXTERNAL"
             ;; 
 
-        "Extend (Strict WS 10)")
-            notify-send "Display" "Extending... Focus will remain on Laptop."
-
-                # 1. PRE-CHECK: If we are currently ON workspace 10, leave it first.
-                CURRENT_WS=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .activeWorkspace.id')
-                if [ "$CURRENT_WS" -eq 10 ]; then
-                    hyprctl dispatch workspace 1
+        "Extend")
+            hyprctl keyword monitor "$EXTERNAL,preferred,auto,1"
+            echo "Extend" > "$STATE_FILE"
+            notify-send "Display Mode" "Extended to $EXTERNAL"
+            ;;
+            
+        "Toggle Projector")
+            # Check if the external monitor is currently active
+            if hyprctl monitors | grep -q "$EXTERNAL"; then
+                # It's on, so disable it
+                hyprctl keyword monitor "$EXTERNAL,disable"
+                notify-send "Display Mode" "Projector Off"
+            else
+                # It's off, read the last state and turn it back on
+                LAST_MODE=$(cat "$STATE_FILE" 2>/dev/null)
+                
+                if [ "$LAST_MODE" == "Extend" ]; then
+                    hyprctl keyword monitor "$EXTERNAL,preferred,auto,1"
+                    notify-send "Display Mode" "Projector Reconnected (Extend)"
+                else
+                    # Default to mirror if the state file is empty or missing
+                    hyprctl keyword monitor "$EXTERNAL,preferred,auto,1,mirror,$INTERNAL"
+                    echo "Mirror" > "$STATE_FILE" # Save state for next time
+                    notify-send "Display Mode" "Projector Reconnected (Mirror)"
                 fi
-
-                # 2. Enable the Projector
-                hyprctl keyword monitor "$EXTERNAL, 1366x768@60, auto-right, 1"
-
-                # 3. Wait for the monitor to wake up
-                sleep 2
-
-                # 4. STRICT LOCK: Force Workspace 10 to EXTERNAL (Projector)
-                hyprctl keyword workspace "10, monitor:$EXTERNAL"
-
-                # 5. STRICT LOCK: Force Workspaces 1-9 to INTERNAL (Laptop)
-                for i in {1..9}; do
-                    hyprctl keyword workspace "$i, monitor:$INTERNAL"
-                done
-
-                # 6. Push Workspace 10 to the Projector
-                hyprctl dispatch moveworkspacetomonitor 10 "$EXTERNAL"
-
-                # 7. CRITICAL: Force focus BACK to Laptop immediately
-                hyprctl dispatch focusmonitor "$INTERNAL"
-
-                notify-send "Display" "Extended. Workspace 10 is on Projector."
-                ;;
-
-            "Disconnect Projector")
-                # 1. Pull WS 10 back to internal so windows aren't lost
-                hyprctl dispatch moveworkspacetomonitor 10 "$INTERNAL"
-
-                # 2. Reset the locks (Bind everything back to Internal)
-                for i in {1..10}; do
-                    hyprctl keyword workspace "$i, monitor:$INTERNAL"
-                done
-
-                # 3. Turn off projector
-                hyprctl keyword monitor "$EXTERNAL, disable"
-                notify-send "Display" "Disconnected $EXTERNAL"
-                ;; 
-        esac
-        ;;
+            fi
+            ;;
+    esac
+    ;;
 
     # 2. DrJava
     "$OPT_JAVA")
@@ -110,8 +85,7 @@ case $SELECTION in
 
     notify-send "Java" "Launching DrJava..."
 
-        # --- NEW: Force Tiling ---
-        # Java apps often default to floating. This rule forces it to tile.
+        # Force Tiling
         hyprctl keyword windowrule "tile, title:.*DrJava.*"
 
         "$JAVA_8_PATH" -jar "$DRJAVA_PATH" &
