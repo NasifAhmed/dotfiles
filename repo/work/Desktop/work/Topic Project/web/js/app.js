@@ -18,8 +18,13 @@ const topicResultsHeader = document.getElementById('topic-results-header');
 const currentTopicName = document.getElementById('currentTopicName');
 const topicStats = document.getElementById('topic-stats');
 
+// Papers Elements
+const papersYearsContainer = document.getElementById('papers-years');
+const paperDetailContainer = document.getElementById('paper-detail');
+
 let allData = [];
 let topicsData = {};
+let papersData = [];
 let fuse;
 let debounceTimer;
 
@@ -58,6 +63,7 @@ function init() {
         }
         allData = window.SEARCH_DATA;
         topicsData = window.TOPICS_DATA || {};
+        papersData = window.PAPERS_DATA || [];
 
         // Get unique years and populate dropdowns
         const years = [...new Set(allData.map(d => d.year))].filter(y => y).sort((a, b) => a - b);
@@ -129,6 +135,7 @@ function init() {
         updateStats();
         applyFiltersAndSearch();
         renderTopics();
+        renderPapers();
 
     } catch (e) {
         if (statsDiv) statsDiv.textContent = "Error loading index. Check console.";
@@ -464,6 +471,112 @@ function getActiveFilterCount() {
     if (filters.terms.length < 2) count++;
     if (filters.types.length < 2) count++;
     return count;
+}
+
+// Papers View — Year-first navigation
+function renderPapers() {
+    if (!papersYearsContainer) return;
+    papersYearsContainer.innerHTML = '';
+    paperDetailContainer.innerHTML = '';
+
+    if (!papersData || papersData.length === 0) {
+        papersYearsContainer.innerHTML = '<div class="no-results">No papers available.</div>';
+        return;
+    }
+
+    // Group papers by year
+    const papersByYear = {};
+    papersData.forEach(p => {
+        if (!papersByYear[p.year]) papersByYear[p.year] = {};
+        papersByYear[p.year][p.term] = p;
+    });
+
+    const sortedYears = Object.keys(papersByYear).sort((a, b) => b - a);
+    let selectedYear = null;
+
+    function renderYearCards() {
+        papersYearsContainer.innerHTML = '';
+        sortedYears.forEach(year => {
+            const terms = Object.keys(papersByYear[year]);
+            const card = document.createElement('div');
+            card.className = 'paper-year-card' + (selectedYear == year ? ' active' : '');
+            card.innerHTML = `
+                <div class="paper-year-label">${year}</div>
+                <div class="paper-year-terms">${terms.join(' · ')}</div>
+            `;
+            card.onclick = () => {
+                if (selectedYear == year) {
+                    selectedYear = null;
+                    paperDetailContainer.innerHTML = '';
+                    renderYearCards();
+                } else {
+                    selectedYear = year;
+                    renderYearCards();
+                    renderYearDetail(year);
+                }
+            };
+            papersYearsContainer.appendChild(card);
+        });
+    }
+
+    function renderYearDetail(year) {
+        const pYear = papersByYear[year];
+        const termOrder = ['Autumn', 'Spring'];
+
+        let sectionsHtml = '';
+        termOrder.forEach(term => {
+            const p = pYear[term];
+            if (!p) return;
+
+            const termEmoji = term === 'Autumn' ? '🍂' : '🌸';
+
+            function btnHtml(url, label, icon, cssClass) {
+                if (!url) {
+                    return `<a class="paper-btn ${cssClass} disabled"><span class="paper-btn-icon">${icon}</span>${label}</a>`;
+                }
+                return `<a href="${url}" target="_blank" class="paper-btn ${cssClass}"><span class="paper-btn-icon">${icon}</span>${label}</a>`;
+            }
+
+            sectionsHtml += `
+                <div class="paper-term-section">
+                    <div class="paper-term-label">${termEmoji} ${term}</div>
+                    <div class="paper-exam-label">☀️ Morning</div>
+                    <div class="paper-exam-row">
+                        ${btnHtml(p.am_url, 'Questions', '📝', 'paper-btn-question')}
+                        ${btnHtml(p.am_answer_url, 'Answers', '✅', 'paper-btn-answer')}
+                    </div>
+                    <div class="paper-exam-label" style="margin-top: 8px;">🌙 Afternoon</div>
+                    <div class="paper-exam-row">
+                        ${btnHtml(p.pm_url, 'Questions', '📝', 'paper-btn-question')}
+                        ${btnHtml(p.pm_answer_url, 'Answers', '✅', 'paper-btn-answer')}
+                    </div>
+                </div>
+            `;
+        });
+
+        paperDetailContainer.innerHTML = `
+            <div class="paper-detail-panel">
+                <div class="paper-detail-header">
+                    <h3 class="paper-detail-title">📄 ${year} Exam Papers</h3>
+                    <button class="paper-detail-close" id="close-paper-detail">✕ Close</button>
+                </div>
+                <div class="paper-term-sections">
+                    ${sectionsHtml}
+                </div>
+            </div>
+        `;
+
+        document.getElementById('close-paper-detail').onclick = () => {
+            selectedYear = null;
+            paperDetailContainer.innerHTML = '';
+            renderYearCards();
+        };
+
+        // Scroll detail into view
+        paperDetailContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    renderYearCards();
 }
 
 init();

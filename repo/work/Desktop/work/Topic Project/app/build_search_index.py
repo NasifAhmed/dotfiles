@@ -207,10 +207,6 @@ def build_index(force=False):
     with open(WEB_DATA_FILE, 'w') as f:
         f.write(f"window.SEARCH_DATA = {json_str};")
         
-    # Save JSON
-    with open(BASE_DIR / "web" / "data.json", 'w') as f:
-        json.dump(output_index, f, indent=2)
-        
     # Save State
     state = {
         "processed": processed_hashes,

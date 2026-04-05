@@ -534,4 +534,251 @@ input[type="text"]:focus {
     .results-grid {
         grid-template-columns: 1fr;
     }
+
+    .papers-years-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Papers View */
+.papers-container {
+    padding: 20px 0;
+}
+
+.papers-container > h2 {
+    font-size: 1.8rem;
+    margin: 0 0 4px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.papers-years-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.paper-year-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.paper-year-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.paper-year-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+}
+
+.paper-year-card:hover::before {
+    opacity: 1;
+}
+
+.paper-year-card.active {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.paper-year-card.active::before {
+    opacity: 1;
+}
+
+.paper-year-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.paper-year-terms {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* Paper Detail Panel */
+.paper-detail-panel {
+    margin-top: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    animation: paperSlideIn 0.3s ease;
+}
+
+@keyframes paperSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.paper-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.paper-detail-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.paper-detail-close {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-muted);
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.paper-detail-close:hover {
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.paper-term-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paper-term-section {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.paper-term-label {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+}
+
+.paper-exam-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.paper-exam-row:last-child {
+    margin-bottom: 0;
+}
+
+.paper-exam-label {
+    grid-column: 1 / -1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: -4px;
+}
+
+.paper-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid var(--border);
+}
+
+.paper-btn-question {
+    background: rgba(59, 130, 246, 0.08);
+    color: #60a5fa;
+    border-color: rgba(59, 130, 246, 0.25);
+}
+
+.paper-btn-question:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: #60a5fa;
+}
+
+.paper-btn-answer {
+    background: rgba(34, 197, 94, 0.08);
+    color: #4ade80;
+    border-color: rgba(34, 197, 94, 0.25);
+}
+
+.paper-btn-answer:hover {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: #4ade80;
+}
+
+.paper-btn.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.paper-btn-icon {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .papers-years-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 10px;
+    }
+
+    .paper-year-card {
+        padding: 18px 12px;
+    }
+
+    .paper-year-label {
+        font-size: 1.2rem;
+    }
+
+    .paper-detail-panel {
+        padding: 18px;
+    }
+
+    .paper-exam-row {
+        grid-template-columns: 1fr;
+    }
 }

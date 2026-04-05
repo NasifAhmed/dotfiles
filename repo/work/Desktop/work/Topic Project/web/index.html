@@ -18,6 +18,7 @@
       <nav class="main-nav">
         <button class="nav-btn active" data-view="search-view">🔍 Search</button>
         <button class="nav-btn" data-view="topics-view">📚 Topics</button>
+        <button class="nav-btn" data-view="papers-view">📄 Papers</button>
       </nav>
 
       <header>
@@ -178,9 +179,23 @@
           </main>
         </div>
       </div>
+      <!-- Papers View -->
+      <div id="papers-view" class="view">
+        <div class="papers-container">
+          <h2>📄 Past Exam Papers</h2>
+          <p class="subtitle">Browse and download full question papers and answers by year</p>
+          <div id="papers-years" class="papers-years-grid">
+            <!-- Year cards injected here -->
+          </div>
+          <div id="paper-detail">
+            <!-- Detail panel injected here when a year is selected -->
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Load data first -->
+    <script src="papers_data.js"></script>
     <script src="data.js"></script>
     <script src="topics_data.js"></script>
     <script src="js/app.js"></script>

@@ -9,6 +9,8 @@ services:
       - ./web:/usr/share/nginx/html/web:ro
       # Mount cropped questions (read-only)
       - ./data/output/cropped_questions:/usr/share/nginx/html/cropped_questions:ro
+      # Mount past exams (read-only) for PDF display
+      - ./data/input/past_exams:/usr/share/nginx/html/past_exams:ro
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]

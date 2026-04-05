@@ -13,4 +13,5 @@ fi
 echo "Rebuilding all web data..."
 $PYTHON_BIN app/build_search_index.py
 $PYTHON_BIN app/build_web_topics.py
+$PYTHON_BIN app/build_papers_list.py
 echo "✓ Done!"
