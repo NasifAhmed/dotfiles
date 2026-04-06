@@ -93,28 +93,28 @@ def parse_folder_name(folder):
     m = re.match(r'^(\d{4})([AS])_FE$', folder)
     if m:
         year = int(m.group(1))
-        term = "Autumn" if m.group(2) == "A" else "Spring"
+        term = "October" if m.group(2) == "A" else "April"
         return year, term
 
     # Format: 2013FeApr, 2012FeOct_000
     m = re.match(r'^(\d{4})Fe(Apr|Oct)', folder, re.IGNORECASE)
     if m:
         year = int(m.group(1))
-        term = "Autumn" if m.group(2).lower() == "oct" else "Spring"
+        term = "October" if m.group(2).lower() == "oct" else "April"
         return year, term
 
     # Format: FE2012April, FE2011October
     m = re.match(r'^FE(\d{4})(April|October)', folder, re.IGNORECASE)
     if m:
         year = int(m.group(1))
-        term = "Autumn" if m.group(2).lower() == "october" else "Spring"
+        term = "October" if m.group(2).lower() == "october" else "April"
         return year, term
 
     # Format: FeApr2007, FeOct2010
     m = re.match(r'^Fe(Apr|Oct)(\d{4})$', folder, re.IGNORECASE)
     if m:
         year = int(m.group(2))
-        term = "Autumn" if m.group(1).lower() == "oct" else "Spring"
+        term = "October" if m.group(1).lower() == "oct" else "April"
         return year, term
 
     return 0, "Unknown"

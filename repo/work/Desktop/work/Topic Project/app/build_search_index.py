@@ -150,6 +150,10 @@ def build_index(force=False):
                 continue
                 
             if not needs_update:
+                # Always update metadata in case formatting changed
+                existing_index[item_id]['term'] = "April" if exam_info.session == "S" else "October"
+                existing_index[item_id]['type'] = "Morning" if exam_info.exam_type == "A" else "Afternoon"
+                existing_index[item_id]['year'] = exam_info.year
                 new_index.append(existing_index[item_id])
                 continue
                 
@@ -173,7 +177,7 @@ def build_index(force=False):
                 "id": item_id,
                 "exam_id": exam_folder,
                 "year": exam_info.year,
-                "term": "Spring" if exam_info.session == "S" else "Autumn",
+                "term": "April" if exam_info.session == "S" else "October",
                 "type": "Morning" if exam_info.exam_type == "A" else "Afternoon",
                 "q_num": q_num,
                 "img_path": f"../cropped_questions/{exam_folder}/Q{q_num:02d}.png",

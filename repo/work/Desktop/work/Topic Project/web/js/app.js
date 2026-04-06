@@ -38,7 +38,7 @@ let currentState = {
 let filters = {
     yearFrom: null,
     yearTo: null,
-    terms: ['Spring', 'Autumn'],
+    terms: ['April', 'October'],
     types: ['Morning', 'Afternoon']
 };
 
@@ -171,7 +171,7 @@ function resetFilters() {
     filters = {
         yearFrom: null,
         yearTo: null,
-        terms: ['Spring', 'Autumn'],
+        terms: ['April', 'October'],
         types: ['Morning', 'Afternoon']
     };
     searchInput.value = '';
@@ -521,14 +521,14 @@ function renderPapers() {
 
     function renderYearDetail(year) {
         const pYear = papersByYear[year];
-        const termOrder = ['Autumn', 'Spring'];
+        const termOrder = ['October', 'April'];
 
         let sectionsHtml = '';
         termOrder.forEach(term => {
             const p = pYear[term];
             if (!p) return;
 
-            const termEmoji = term === 'Autumn' ? '🍂' : '🌸';
+            const termEmoji = term === 'October' ? '🍂' : '🌸';
 
             function btnHtml(url, label, icon, cssClass) {
                 if (!url) {

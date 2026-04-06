@@ -7,14 +7,14 @@ Interactive tool for cropping individual questions from ITPEC FE exam PDFs.
 import os
 import re
 import json
-import tkinter as tk
-from tkinter import ttk, messagebox
 from pathlib import Path
 from dataclasses import dataclass, asdict
 from typing import Optional
 import pdfplumber
-from pdf2image import convert_from_path
-from PIL import Image, ImageTk
+from PIL import Image
+
+# GUI-only imports (lazy - only needed when running the cropper GUI)
+# tkinter, ImageTk, pdf2image are imported inside QuestionCropperApp
 
 # Configuration
 BASE_DIR = Path(__file__).parent.parent
@@ -383,7 +383,20 @@ def extract_text_from_crop(pdf_path: Path, crop: QuestionCrop, dpi: int = 150) -
 class QuestionCropperApp:
     """Main application for cropping questions."""
     
-    def __init__(self, root: tk.Tk):
+    def __init__(self, root):
+        # Lazy-import GUI-only dependencies into module globals
+        # so all existing tk., ttk., messagebox., ImageTk., convert_from_path references work
+        import tkinter as _tk
+        from tkinter import ttk as _ttk, messagebox as _messagebox
+        from PIL import ImageTk as _ImageTk
+        from pdf2image import convert_from_path as _cfp
+        g = globals()
+        g['tk'] = _tk
+        g['ttk'] = _ttk
+        g['messagebox'] = _messagebox
+        g['ImageTk'] = _ImageTk
+        g['convert_from_path'] = _cfp
+        
         self.root = root
         self.root.title("FE Question Cropper")
         self.root.geometry("1400x900")
@@ -1299,6 +1312,7 @@ def main():
         print(f"  - {exam.display_name}: {exam.pdf_path.name}")
     
     # Launch GUI
+    import tkinter as tk
     root = tk.Tk()
     app = QuestionCropperApp(root)
     root.mainloop()
