@@ -1,0 +1,19 @@
+{
+  "name": "evening-summarize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "highlight.js": "^11.11.1",
+    "katex": "^0.16.45",
+    "marked": "^18.0.2",
+    "marked-highlight": "^2.2.4",
+    "puppeteer-core": "^24.42.0"
+  }
+}

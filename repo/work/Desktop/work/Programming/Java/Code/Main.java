@@ -1,10 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        Rectangle f1 = new Rectangle(5,2);
-        Cuboid f2 = Cuboid(9,4,7);
 
-        f1.enlarge(f2);
-        f1.output();
-        
+        int[] a = { 12, 5, 190, 80, 70 };
+
+        int smallest = a[0];
+        for(int i=0 ; i<a.length ; i++) {
+            if(a[i] < smallest){
+                smallest = a[i];
+            }
+        }
+
+        System.out.println(smallest);
+
     }
 }

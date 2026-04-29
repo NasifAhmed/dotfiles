@@ -30,13 +30,6 @@ fi
 PYTHON_VERSION=$(python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
 echo -e "Python version: ${GREEN}$PYTHON_VERSION${NC}"
 
-# Check for pip
-if ! python3 -m pip --version &> /dev/null; then
-    echo -e "${RED}Error: pip is not installed.${NC}"
-    echo "Install with: sudo apt install python3-pip"
-    exit 1
-fi
-
 # Check system dependencies
 echo ""
 echo -e "${YELLOW}Checking system dependencies...${NC}"
@@ -52,6 +45,14 @@ else
     echo -e "  • Poppler Utils: ${GREEN}$POPPLER_VERSION${NC}"
 fi
 
+# Check for python3-venv
+if ! python3 -m venv --help &> /dev/null; then
+    MISSING_DEPS+=("python3-venv")
+    echo -e "  • python3-venv: ${RED}Not found${NC}"
+else
+    echo -e "  • python3-venv: ${GREEN}Available${NC}"
+fi
+
 # Show missing dependencies warning
 if [ ${#MISSING_DEPS[@]} -gt 0 ]; then
     echo ""
@@ -65,13 +66,28 @@ if [ ${#MISSING_DEPS[@]} -gt 0 ]; then
     echo ""
 fi
 
+# Create virtual environment if it doesn't exist
+VENV_DIR="$SCRIPT_DIR/../venv"
+if [ ! -d "$VENV_DIR" ]; then
+    echo ""
+    echo -e "${YELLOW}Creating virtual environment...${NC}"
+    python3 -m venv "$VENV_DIR"
+    echo -e "  ${GREEN}✓ Virtual environment created at venv/${NC}"
+else
+    echo -e "  ${GREEN}✓ Virtual environment already exists${NC}"
+fi
+
+# Use the venv Python/pip from here on
+VENV_PYTHON="$VENV_DIR/bin/python3"
+VENV_PIP="$VENV_DIR/bin/pip"
+
 # Install Python packages
 echo ""
-echo -e "${YELLOW}Installing Python packages...${NC}"
+echo -e "${YELLOW}Installing Python packages (in venv)...${NC}"
 echo ""
 
-python3 -m pip install --upgrade pip
-python3 -m pip install -r requirements.txt
+"$VENV_PIP" install --upgrade pip
+"$VENV_PIP" install -r requirements.txt
 
 echo ""
 echo -e "${GREEN}✓ Python dependencies installed successfully!${NC}"
@@ -79,7 +95,7 @@ echo ""
 
 # Verification
 echo -e "${YELLOW}Verifying installations...${NC}"
-python3 -c "
+"$VENV_PYTHON" -c "
 import sys
 packages = [
     ('PIL', 'Pillow'),

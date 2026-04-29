@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java ↔ Pseudocode Transpiler</title>
+  <meta name="description" content="Bidirectional transpiler between Java code and FE exam-style pseudocode. Paste code and convert instantly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-primary: #0f1117;
+      --bg-secondary: #161922;
+      --bg-tertiary: #1c1f2e;
+      --bg-editor: #12141d;
+      --surface: #1e2235;
+      --surface-hover: #252a40;
+      --border: #2a2f45;
+      --border-focus: #6c63ff;
+      --text-primary: #e4e6f0;
+      --text-secondary: #8b8fa8;
+      --text-muted: #565b75;
+      --accent: #6c63ff;
+      --accent-hover: #7f78ff;
+      --accent-glow: rgba(108, 99, 255, 0.25);
+      --accent-secondary: #ff6b9d;
+      --green: #4ade80;
+      --green-dim: rgba(74, 222, 128, 0.15);
+      --amber: #f59e0b;
+      --amber-dim: rgba(245, 158, 11, 0.15);
+      --line-number: #3a3f55;
+      --scrollbar-thumb: #2a2f45;
+      --scrollbar-track: transparent;
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { font-size: 15px; }
+
+    body {
+      font-family: var(--font-ui);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+    ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--border); }
+
+    /* Header */
+    .header {
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-secondary);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 2px 12px var(--accent-glow);
+    }
+
+    .header h1 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .header h1 span {
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .direction-toggle {
+      display: flex;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      border: 1px solid var(--border);
+    }
+
+    .direction-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .direction-btn.active {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 2px 8px var(--accent-glow);
+    }
+
+    .direction-btn:not(.active):hover {
+      color: var(--text-primary);
+      background: var(--surface-hover);
+    }
+
+    .auto-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.35rem 0.7rem;
+      background: var(--amber-dim);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-weight: 500;
+      border-radius: 20px;
+      margin-left: 0.5rem;
+    }
+
+    .auto-badge .dot {
+      width: 5px;
+      height: 5px;
+      background: var(--amber);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .spacer { flex: 1; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1rem;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      background: var(--surface-hover);
+      color: var(--text-primary);
+      border-color: var(--border-focus);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      box-shadow: 0 4px 20px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    .btn-success {
+      color: var(--green);
+      border-color: var(--green);
+      background: var(--green-dim);
+    }
+
+    /* Main Editor Area */
+    .editor-container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 0;
+    }
+
+    .editor-pane {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      position: relative;
+    }
+
+    .editor-pane:first-child {
+      border-right: 1px solid var(--border);
+    }
+
+    .pane-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.65rem 1rem;
+      background: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .pane-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .pane-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.7rem;
+      cursor: pointer;
+      font-family: var(--font-ui);
+      transition: all 0.2s;
+    }
+
+    .pane-btn:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+      border-color: var(--text-muted);
+    }
+
+    .pane-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .pane-label .icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+    }
+
+    .pane-label .icon.java {
+      background: linear-gradient(135deg, #e76f00, #f89820);
+      color: white;
+    }
+
+    .pane-label .icon.pseudo {
+      background: linear-gradient(135deg, var(--accent), #9b8cff);
+      color: white;
+    }
+
+    .pane-label .lang-tag {
+      padding: 0.15rem 0.45rem;
+      background: var(--surface);
+      border-radius: 4px;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    /* Syntax Highlighting */
+    .hl-keyword { color: #c678dd; }
+    .hl-type { color: #e5c07b; }
+    .hl-string { color: #98c379; }
+    .hl-comment, .hl-comment * { color: #5c6370 !important; font-style: italic !important; }
+    .hl-number { color: #d19a66; }
+    .hl-operator { color: #56b6c2; }
+    .hl-method { color: #61afef; }
+
+    .editor-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .editor-wrap textarea {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      background: transparent;
+      color: transparent;
+      caret-color: var(--text-primary);
+      z-index: 2;
+    }
+
+    .editor-wrap .input-highlight {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      background: var(--bg-editor);
+      color: var(--text-primary);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .editor-wrap textarea,
+    .editor-wrap .input-highlight,
+    .editor-wrap .output-display {
+      flex: 1;
+      width: 100%;
+      min-height: calc(100vh - 160px);
+      padding: 1rem;
+      border: none;
+      outline: none;
+      resize: none;
+      background: var(--bg-editor);
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      tab-size: 2;
+      white-space: pre;
+      overflow: auto;
+    }
+
+    .editor-wrap textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .editor-wrap .output-display {
+      overflow: auto;
+      cursor: text;
+    }
+
+    .output-display.empty {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Status bar */
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.4rem 2rem;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .status-bar .status-left,
+    .status-bar .status-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      padding: 0.65rem 1.2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .editor-container {
+        grid-template-columns: 1fr;
+      }
+      .editor-pane:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      .editor-wrap textarea,
+      .editor-wrap .output-display {
+        min-height: 35vh;
+      }
+      .header { padding: 1rem; }
+      .controls { padding: 0.5rem 1rem; flex-wrap: wrap; }
+    }
+
+    @media (max-width: 520px) {
+      .header h1 span { display: none; }
+      .direction-btn { padding: 0.4rem 0.6rem; font-size: 0.75rem; }
+      .btn span.label { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">⇄</div>
+      <h1>Transpiler <span>— Java ↔ Pseudocode</span></h1>
+    </div>
+  </header>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="direction-toggle" id="directionToggle">
+      <button class="direction-btn active" data-dir="java-to-pseudo" id="btnJ2P">Java → Pseudocode</button>
+      <button class="direction-btn" data-dir="pseudo-to-java" id="btnP2J">Pseudocode → Java</button>
+      <button class="direction-btn" data-dir="auto" id="btnAuto">Auto</button>
+    </div>
+    <div class="auto-badge" id="autoBadge" style="display:none;">
+      <span class="dot"></span>
+      <span id="autoLabel">Detecting…</span>
+    </div>
+    <div class="spacer"></div>
+    <button class="btn btn-primary" id="transpileBtn">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <span class="label">Transpile</span>
+    </button>
+  </div>
+
+  <!-- Editor -->
+  <main class="editor-container">
+    <!-- Input Pane -->
+    <div class="editor-pane">
+      <div class="pane-header">
+        <div class="pane-label">
+          <span class="icon java" id="inputIcon">J</span>
+          <span id="inputLabel">Input</span>
+          <span class="lang-tag" id="inputLang">Java</span>
+        </div>
+        <div class="pane-actions">
+          <button class="pane-btn" id="inputPasteBtn" title="Paste text">Paste</button>
+          <button class="pane-btn" id="inputCopyBtn" title="Copy text">Copy</button>
+          <button class="pane-btn" id="inputClearBtn" title="Clear text">Clear</button>
+        </div>
+      </div>
+      <div class="editor-wrap">
+        <div class="line-numbers" id="inputLines">1</div>
+        <div class="input-highlight" id="inputHighlight"></div>
+        <textarea id="inputEditor" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"
+          placeholder="Paste your Java code or pseudocode here…"></textarea>
+      </div>
+    </div>
+
+    <!-- Output Pane -->
+    <div class="editor-pane">
+      <div class="pane-header">
+        <div class="pane-label">
+          <span class="icon pseudo" id="outputIcon">P</span>
+          <span id="outputLabel">Output</span>
+          <span class="lang-tag" id="outputLang">Pseudocode</span>
+        </div>
+        <div class="pane-actions">
+          <button class="pane-btn" id="outputCopyBtn" title="Copy output text">Copy</button>
+        </div>
+      </div>
+      <div class="editor-wrap">
+        <div class="output-display empty" id="outputDisplay">Output will appear here…</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-left">
+      <span class="status-indicator">
+        <span class="status-dot"></span>
+        <span>Ready</span>
+      </span>
+      <span id="statusMode">Mode: Java → Pseudocode</span>
+    </div>
+    <div class="status-right">
+      <span id="inputLineCount">Lines: 0</span>
+      <span id="outputLineCount">Output: 0 lines</span>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ==================== DOM ====================
+    const inputEditor = document.getElementById('inputEditor');
+    const inputHighlight = document.getElementById('inputHighlight');
+    const outputDisplay = document.getElementById('outputDisplay');
+    const inputLines = document.getElementById('inputLines');
+    const transpileBtn = document.getElementById('transpileBtn');
+    
+    // Pane Buttons
+    const inputPasteBtn = document.getElementById('inputPasteBtn');
+    const inputCopyBtn = document.getElementById('inputCopyBtn');
+    const inputClearBtn = document.getElementById('inputClearBtn');
+    const outputCopyBtn = document.getElementById('outputCopyBtn');
+    const btnJ2P = document.getElementById('btnJ2P');
+    const btnP2J = document.getElementById('btnP2J');
+    const btnAuto = document.getElementById('btnAuto');
+    const autoBadge = document.getElementById('autoBadge');
+    const autoLabel = document.getElementById('autoLabel');
+    const inputIcon = document.getElementById('inputIcon');
+    const inputLabel = document.getElementById('inputLabel');
+    const inputLang = document.getElementById('inputLang');
+    const outputIcon = document.getElementById('outputIcon');
+    const outputLabel = document.getElementById('outputLabel');
+    const outputLang = document.getElementById('outputLang');
+    const statusMode = document.getElementById('statusMode');
+    const inputLineCount = document.getElementById('inputLineCount');
+    const outputLineCountEl = document.getElementById('outputLineCount');
+    const toast = document.getElementById('toast');
+
+    let currentDirection = 'java-to-pseudo'; // 'java-to-pseudo' | 'pseudo-to-java' | 'auto'
+    let lastOutput = '';
+
+    // ==================== Direction Toggle ====================
+    function setDirection(dir) {
+      currentDirection = dir;
+      document.querySelectorAll('.direction-btn').forEach(b => b.classList.remove('active'));
+      if (dir === 'java-to-pseudo') {
+        btnJ2P.classList.add('active');
+        setLabels('java', 'pseudo');
+        autoBadge.style.display = 'none';
+      } else if (dir === 'pseudo-to-java') {
+        btnP2J.classList.add('active');
+        setLabels('pseudo', 'java');
+        autoBadge.style.display = 'none';
+      } else {
+        btnAuto.classList.add('active');
+        autoBadge.style.display = 'inline-flex';
+        autoDetectLabels();
+      }
+    }
+
+    function setLabels(inputType, outputType) {
+      if (inputType === 'java') {
+        inputIcon.textContent = 'J';
+        inputIcon.className = 'icon java';
+        inputLang.textContent = 'Java';
+        statusMode.textContent = 'Mode: Java → Pseudocode';
+        syncHighlight();
+      } else {
+        inputIcon.textContent = 'P';
+        inputIcon.className = 'icon pseudo';
+        inputLang.textContent = 'Pseudocode';
+        statusMode.textContent = 'Mode: Pseudocode → Java';
+        syncHighlight();
+      }
+      if (outputType === 'java') {
+        outputIcon.textContent = 'J';
+        outputIcon.className = 'icon java';
+        outputLang.textContent = 'Java';
+      } else {
+        outputIcon.textContent = 'P';
+        outputIcon.className = 'icon pseudo';
+        outputLang.textContent = 'Pseudocode';
+      }
+    }
+
+    function detectDirection(code) {
+      const javaSignals = [
+        /\bpublic\b/, /\bprivate\b/, /\bclass\b/, /\bstatic\b/, /\bvoid\b/,
+        /System\.out\.print/, /\bint\b\s+\w+\s*=/, /\bString\b/, /\bnew\b\s+\w+/,
+        /\{/, /\}/, /;\s*$/, /\bimport\b/, /\bpackage\b/
+      ];
+      const pseudoSignals = [
+        /←/, /\bendfor\b/i, /\bendwhile\b/i, /\bendif\b/i, /\belseif\b/i,
+        /\binteger\b\s*:/, /\breal\b\s*:/, /\bstring\b\s*:/, /\bcharacter\b\s*:/,
+        /\bboolean\b\s*:/, /\bmod\b/, /≠/, /≤/, /≥/, /○/, /\bprocedure\b/,
+        /\boutput\b/, /\bfor\s*\(\s*(increase|decrease)\b/
+      ];
+      let jScore = 0, pScore = 0;
+      for (const r of javaSignals) if (r.test(code)) jScore++;
+      for (const r of pseudoSignals) if (r.test(code)) pScore++;
+      return pScore > jScore ? 'pseudo-to-java' : 'java-to-pseudo';
+    }
+
+    function autoDetectLabels() {
+      const code = inputEditor.value.trim();
+      if (!code) {
+        autoLabel.textContent = 'Detecting…';
+        setLabels('java', 'pseudo');
+        return;
+      }
+      const detected = detectDirection(code);
+      if (detected === 'java-to-pseudo') {
+        autoLabel.textContent = 'Detected: Java';
+        setLabels('java', 'pseudo');
+      } else {
+        autoLabel.textContent = 'Detected: Pseudocode';
+        setLabels('pseudo', 'java');
+      }
+    }
+
+    btnJ2P.addEventListener('click', () => setDirection('java-to-pseudo'));
+    btnP2J.addEventListener('click', () => setDirection('pseudo-to-java'));
+    btnAuto.addEventListener('click', () => setDirection('auto'));
+
+    // ==================== Line Numbers ====================
+    function updateLineNumbers(textarea, lineNumberEl) {
+      const text = (textarea.value || textarea.textContent || '');
+      const count = text === '' ? 1 : text.split('\n').length;
+      lineNumberEl.innerHTML = Array.from({ length: count }, (_, i) => i + 1).join('<br>');
+      return count;
+    }
+
+    // ==================== SYNTAX HIGHLIGHTER ====================
+    const escapeHtml = (unsafe) => {
+      return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    };
+
+    function highlightCode(code, type) {
+      if (!code) return '';
+      let html = escapeHtml(code);
+
+      // Method calls (word followed by parenthesis)
+      // Done first so it doesn't match inside tags.
+      html = html.replace(/(\b\w+)(?=\()/g, '<span class="hl-method">$1</span>');
+
+      // Common
+      html = html.replace(/\b(\d+(?:\.\d+)?)\b/g, '<span class="hl-number">$1</span>');
+      html = html.replace(/(&quot;.*?&quot;|&#039;.*?&#039;)/g, '<span class="hl-string">$1</span>');
+
+      if (type === 'java') {
+        const keywords = ['public','private','protected','class','static','void','if','else','for','while','do','break','continue','return','new','try','catch','import','package','true','false','null'];
+        const types = ['int','long','short','byte','float','double','char','boolean','String'];
+        
+        html = html.replace(new RegExp(`\\b(${keywords.join('|')})\\b(?![^<]*>)`, 'g'), '<span class="hl-keyword">$1</span>');
+        html = html.replace(new RegExp(`\\b(${types.join('|')})\\b(?![^<]*>)`, 'g'), '<span class="hl-type">$1</span>');
+      } else {
+        const keywords = ['if','elseif','else','endif','for','increase','decrease','from','to','by','endfor','while','endwhile','do','exit the for block','exit the while block','exit the do-while block','exit the loop','continue','return','procedure','output','undefined','true','false'];
+        const types = ['integer','real','character','string','boolean'];
+        
+        html = html.replace(/(○)(?![^<]*>)/g, '<span class="hl-keyword">$1</span>');
+        html = html.replace(/(←|≠|≤|≥|×|÷|=)(?![^<]*>)/g, '<span class="hl-operator">$1</span>');
+        html = html.replace(new RegExp(`\\b(mod|and|or|not|integer part of)\\b(?![^<]*>)`, 'g'), '<span class="hl-operator">$1</span>');
+        html = html.replace(new RegExp(`\\b(${keywords.join('|')})\\b(?![^<]*>)`, 'g'), '<span class="hl-keyword">$1</span>');
+        html = html.replace(new RegExp(`\\b(${types.join('|')})\\b(?![^<]*>)`, 'g'), '<span class="hl-type">$1</span>');
+      }
+
+      // Comments (must be last to not highlight inside them)
+      html = html.replace(/(\/\/.*)$/gm, '<span class="hl-comment">$1</span>');
+      html = html.replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="hl-comment">$1</span>');
+
+      // Add a newline space for trailing newlines if needed for textarea cursor sizing
+      if (html.endsWith('\\n')) html += ' ';
+      return html;
+    }
+
+    function syncHighlight() {
+      const type = inputLang.textContent.toLowerCase() === 'java' ? 'java' : 'pseudo';
+      inputHighlight.innerHTML = highlightCode(inputEditor.value, type);
+    }
+
+    inputEditor.addEventListener('input', () => {
+      const c = updateLineNumbers(inputEditor, inputLines);
+      inputLineCount.textContent = `Lines: ${c}`;
+      if (currentDirection === 'auto') autoDetectLabels();
+      syncHighlight();
+    });
+
+    inputEditor.addEventListener('scroll', () => {
+      inputLines.scrollTop = inputEditor.scrollTop;
+      inputHighlight.scrollTop = inputEditor.scrollTop;
+      inputHighlight.scrollLeft = inputEditor.scrollLeft;
+    });
+
+    // ==================== TYPE MAPS ====================
+    const javaTypeToPs = {
+      'int': 'integer', 'long': 'integer', 'short': 'integer', 'byte': 'integer',
+      'float': 'real', 'double': 'real',
+      'char': 'character',
+      'boolean': 'boolean',
+      'String': 'string',
+      'void': 'void'
+    };
+
+    const psTypeToJava = {};
+    for (const [k, v] of Object.entries(javaTypeToPs)) {
+      if (!psTypeToJava[v]) psTypeToJava[v] = k;
+    }
+    psTypeToJava['integer'] = 'int';
+    psTypeToJava['real'] = 'double';
+    psTypeToJava['character'] = 'char';
+    psTypeToJava['string'] = 'String';
+    psTypeToJava['boolean'] = 'boolean';
+
+    // ==================== JAVA → PSEUDOCODE ====================
+    function javaToPseudo(javaCode) {
+      const lines = javaCode.split('\n');
+      const output = [];
+      const blockStack = []; // track what each '}' closes
+      let indentLevel = 0;
+
+      function indent() { return '  '.repeat(indentLevel); }
+
+      function mapType(t) {
+        if (!t) return t;
+        // Handle arrays
+        let arrSuffix = '';
+        const arrMatch = t.match(/^(\w+)(\[\]\[\]|\[\])$/);
+        if (arrMatch) {
+          const baseType = arrMatch[1];
+          const brackets = arrMatch[2];
+          const psBase = javaTypeToPs[baseType] || baseType.toLowerCase();
+          if (brackets === '[][]') return psBase + '[,]';
+          return psBase + '[]';
+        }
+        return javaTypeToPs[t] || t.toLowerCase();
+      }
+
+      function replaceOperators(expr) {
+        // Order matters: do multi-char first
+        // Handle (int)(expr) → integer part of (expr) with ÷
+        expr = expr.replace(/\(int\)\s*\(([^)]+)\)/g, (_, inner) => {
+          const converted = inner.replace(/\//g, '÷');
+          return `integer part of (${converted})`;
+        });
+        expr = expr.replace(/!=/g, '≠');
+        expr = expr.replace(/==/g, '=');
+        expr = expr.replace(/<=/g, '≤');
+        expr = expr.replace(/>=/g, '≥');
+        expr = expr.replace(/&&/g, 'and');
+        expr = expr.replace(/\|\|/g, 'or');
+        expr = expr.replace(/(?<!=)!(?!=)/g, 'not ');
+        expr = expr.replace(/\s*%\s*/g, ' mod ');
+        expr = expr.replace(/(?<![÷])\//g, '÷');
+        expr = expr.replace(/\*/g, '×');
+        expr = expr.replace(/\bnull\b/g, 'undefined');
+        expr = expr.replace(/\btrue\b/g, 'true');
+        expr = expr.replace(/\bfalse\b/g, 'false');
+        return expr;
+      }
+
+      function replaceAssignment(expr) {
+        // x = value  →  x ← value  (but not == which is already replaced)
+        return expr.replace(/(?<![=!<>])=(?!=)/g, '←');
+      }
+
+      for (let i = 0; i < lines.length; i++) {
+        let line = lines[i];
+        let trimmed = line.trim();
+
+        // Skip empty lines - preserve them
+        if (trimmed === '') { output.push(''); continue; }
+
+        // Skip package, import, class declarations
+        if (/^\s*(package|import)\s/.test(trimmed)) continue;
+        if (/^\s*(public|private|protected)?\s*(abstract\s+)?class\s+/.test(trimmed)) continue;
+
+        // Skip lone opening braces
+        if (trimmed === '{') continue;
+
+        // Handle closing braces
+        if (trimmed === '}' || trimmed === '};') {
+          const block = blockStack.pop();
+          if (block) {
+            indentLevel = Math.max(0, indentLevel - 1);
+            if (block === 'if' || block === 'else' || block === 'elseif') {
+              // Only output endif if the next meaningful line is not else/else if
+              const nextMeaningful = findNextMeaningful(lines, i + 1);
+              if (nextMeaningful && /^\s*(else\s+if|else|}\s*else)/.test(nextMeaningful)) {
+                // Don't output endif yet, the else/elseif will handle it
+              } else {
+                output.push(indent() + 'endif');
+              }
+            } else if (block === 'for') {
+              output.push(indent() + 'endfor');
+            } else if (block === 'while') {
+              output.push(indent() + 'endwhile');
+            } else if (block === 'do') {
+              // do-while: the while line comes after
+              // handled by while detection
+            } else if (block === 'method') {
+              // end of method, output blank line
+              output.push('');
+            }
+          }
+          continue;
+        }
+
+        // Handle } else { or } else if
+        if (/^\}\s*else\s+if\s*\(/.test(trimmed)) {
+          blockStack.pop(); // pop the if/elseif
+          indentLevel = Math.max(0, indentLevel - 1);
+          const condMatch = trimmed.match(/else\s+if\s*\((.+)\)\s*\{?/);
+          const cond = condMatch ? replaceOperators(condMatch[1].trim()) : '';
+          output.push(indent() + `elseif (${cond})`);
+          blockStack.push('elseif');
+          indentLevel++;
+          continue;
+        }
+
+        if (/^\}\s*else\s*\{?\s*$/.test(trimmed)) {
+          blockStack.pop(); // pop the if/elseif
+          indentLevel = Math.max(0, indentLevel - 1);
+          output.push(indent() + 'else');
+          blockStack.push('else');
+          indentLevel++;
+          continue;
+        }
+
+        // Method declarations
+        const methodMatch = trimmed.match(
+          /^(public|private|protected)?\s*(static)?\s*(\w+(?:\[\])*)\s+(\w+)\s*\(([^)]*)\)\s*\{?\s*$/
+        );
+        if (methodMatch && !['if', 'else', 'for', 'while', 'do', 'switch', 'try', 'catch'].includes(methodMatch[4])) {
+          const retType = methodMatch[3];
+          const name = methodMatch[4];
+          const params = methodMatch[5];
+          const psParams = convertParams(params);
+
+          if (retType === 'void') {
+            output.push(indent() + `○ ${name}(${psParams})`);
+          } else {
+            output.push(indent() + `○ ${mapType(retType)}: ${name}(${psParams})`);
+          }
+          blockStack.push('method');
+          indentLevel++;
+          continue;
+        }
+
+        // Constructor declarations
+        const ctorMatch = trimmed.match(
+          /^(public|private|protected)?\s*([A-Z]\w*)\s*\(([^)]*)\)\s*\{?\s*$/
+        );
+        if (ctorMatch && !methodMatch) {
+          const name = ctorMatch[2];
+          const params = ctorMatch[3];
+          const psParams = convertParams(params);
+          output.push(indent() + `○ ${name}(${psParams})`);
+          blockStack.push('method');
+          indentLevel++;
+          continue;
+        }
+
+        // For loops
+        const forMatch = trimmed.match(
+          /^for\s*\(\s*(?:int\s+)?(\w+)\s*=\s*(.+?);\s*\1\s*([<>]=?)\s*(.+?);\s*\1(\+\+|--|\s*[+\-]=\s*\d+)\s*\)\s*\{?\s*$/
+        );
+        if (forMatch) {
+          const varName = forMatch[1];
+          let start = replaceOperators(forMatch[2].trim());
+          const op = forMatch[3];
+          let end = replaceOperators(forMatch[4].trim());
+          const update = forMatch[5].trim();
+
+          let direction = 'increase';
+          let step = '1';
+
+          if (update === '--' || update.includes('-=')) {
+            direction = 'decrease';
+            if (update.includes('-=')) {
+              step = update.replace(/\s*-=\s*/, '');
+            }
+          } else if (update === '++') {
+            direction = 'increase';
+            step = '1';
+          } else if (update.includes('+=')) {
+            step = update.replace(/\s*\+=\s*/, '');
+          }
+
+          // Adjust end for < and > to be inclusive
+          if (op === '<') {
+            end = end + ' - 1';
+          } else if (op === '>') {
+            end = end + ' + 1';
+          }
+
+          output.push(indent() + `for (${direction} ${varName} from ${start} to ${end} by ${step})`);
+          blockStack.push('for');
+          indentLevel++;
+          continue;
+        }
+
+        // While loops (but not do-while ending)
+        const whileMatch = trimmed.match(/^while\s*\((.+)\)\s*\{?\s*$/);
+        if (whileMatch) {
+          // Check if this is a do-while ending
+          if (blockStack.length > 0 && blockStack[blockStack.length - 1] === 'do') {
+            blockStack.pop();
+            indentLevel = Math.max(0, indentLevel - 1);
+            const cond = replaceOperators(whileMatch[1].trim());
+            output.push(indent() + `while (${cond})`);
+          } else {
+            const cond = replaceOperators(whileMatch[1].trim());
+            output.push(indent() + `while (${cond})`);
+            blockStack.push('while');
+            indentLevel++;
+          }
+          continue;
+        }
+
+        // do { 
+        if (/^do\s*\{?\s*$/.test(trimmed)) {
+          output.push(indent() + 'do');
+          blockStack.push('do');
+          indentLevel++;
+          continue;
+        }
+
+        // } while(cond);
+        const doWhileEnd = trimmed.match(/^\}\s*while\s*\((.+)\)\s*;?\s*$/);
+        if (doWhileEnd) {
+          blockStack.pop();
+          indentLevel = Math.max(0, indentLevel - 1);
+          const cond = replaceOperators(doWhileEnd[1].trim());
+          output.push(indent() + `while (${cond})`);
+          continue;
+        }
+
+        // If statements
+        const ifMatch = trimmed.match(/^if\s*\((.+)\)\s*\{?\s*$/);
+        if (ifMatch) {
+          const cond = replaceOperators(ifMatch[1].trim());
+          output.push(indent() + `if (${cond})`);
+          blockStack.push('if');
+          indentLevel++;
+          continue;
+        }
+
+        // else if
+        const elseifMatch = trimmed.match(/^else\s+if\s*\((.+)\)\s*\{?\s*$/);
+        if (elseifMatch) {
+          indentLevel = Math.max(0, indentLevel - 1);
+          blockStack.pop();
+          const cond = replaceOperators(elseifMatch[1].trim());
+          output.push(indent() + `elseif (${cond})`);
+          blockStack.push('elseif');
+          indentLevel++;
+          continue;
+        }
+
+        // else
+        if (/^else\s*\{?\s*$/.test(trimmed)) {
+          indentLevel = Math.max(0, indentLevel - 1);
+          blockStack.pop();
+          output.push(indent() + 'else');
+          blockStack.push('else');
+          indentLevel++;
+          continue;
+        }
+
+        // System.out.print* 
+        const printMatch = trimmed.match(/^System\.out\.print(?:ln)?\s*\((.+)\)\s*;\s*$/);
+        if (printMatch) {
+          let arg = replaceOperators(printMatch[1].trim());
+          output.push(indent() + `output ${arg}`);
+          continue;
+        }
+
+        // Return statement
+        const retMatch = trimmed.match(/^return\s*(.*?)\s*;\s*$/);
+        if (retMatch) {
+          let val = replaceOperators(retMatch[1].trim());
+          if (val) {
+            output.push(indent() + `return ${val}`);
+          } else {
+            output.push(indent() + 'return');
+          }
+          continue;
+        }
+
+        // Break
+        if (/^break\s*;\s*$/.test(trimmed)) {
+          // Find nearest loop
+          let loopType = 'loop';
+          for (let j = blockStack.length - 1; j >= 0; j--) {
+            if (['for', 'while', 'do'].includes(blockStack[j])) {
+              loopType = blockStack[j] === 'do' ? 'do-while' : blockStack[j];
+              break;
+            }
+          }
+          output.push(indent() + `exit the ${loopType} block`);
+          continue;
+        }
+
+        // Continue
+        if (/^continue\s*;\s*$/.test(trimmed)) {
+          output.push(indent() + 'continue');
+          continue;
+        }
+
+        // Variable declarations with initialization
+        const varDeclInit = trimmed.match(
+          /^(int|long|short|byte|float|double|char|boolean|String)(\[\](?:\[\])?)\s+(\w+)\s*=\s*(.+?)\s*;\s*$/
+        );
+        if (varDeclInit) {
+          const baseType = varDeclInit[1];
+          const brackets = varDeclInit[2];
+          const varName = varDeclInit[3];
+          let val = replaceOperators(varDeclInit[4]).trim();
+          val = val.replace(/^new\s+\w+\s*(\[\]\s*)?\{/, '{').replace(/^new\s+\w+\[\d+\]/, '');
+          val = val.replace(/\{/g, '{').replace(/\}/g, '}');
+          const psType = mapType(baseType + brackets);
+          output.push(indent() + `${psType}: ${varName}`);
+          if (val) output.push(indent() + `${varName} ← ${val}`);
+          continue;
+        }
+
+        const varDeclInit2 = trimmed.match(
+          /^(int|long|short|byte|float|double|char|boolean|String)\s+(\w+)\s*=\s*(.+?)\s*;\s*$/
+        );
+        if (varDeclInit2) {
+          const type = varDeclInit2[1];
+          const varName = varDeclInit2[2];
+          let val = replaceOperators(varDeclInit2[3]).trim();
+          val = val.replace(/\bnew\s+\w+\(.*?\)/, val);
+          const psType = mapType(type);
+          output.push(indent() + `${psType}: ${varName} ← ${val}`);
+          continue;
+        }
+
+        // Variable declarations without initialization
+        const varDecl = trimmed.match(
+          /^(int|long|short|byte|float|double|char|boolean|String)(\[\](?:\[\])?)?\s+([\w,\s]+)\s*;\s*$/
+        );
+        if (varDecl) {
+          const baseType = varDecl[1];
+          const brackets = varDecl[2] || '';
+          const names = varDecl[3].split(',').map(n => n.trim());
+          const psType = mapType(baseType + brackets);
+          output.push(indent() + `${psType}: ${names.join(', ')}`);
+          continue;
+        }
+
+        // Custom type declarations
+        const customVarDecl = trimmed.match(/^([A-Z]\w*)\s+(\w+)\s*;\s*$/);
+        if (customVarDecl) {
+          output.push(indent() + `${customVarDecl[1]}: ${customVarDecl[2]}`);
+          continue;
+        }
+
+        const customVarDeclInit = trimmed.match(/^([A-Z]\w*)\s+(\w+)\s*=\s*(.+?)\s*;\s*$/);
+        if (customVarDeclInit) {
+          let val = replaceOperators(customVarDeclInit[3]).trim();
+          output.push(indent() + `${customVarDeclInit[1]}: ${customVarDeclInit[2]} ← ${val}`);
+          continue;
+        }
+
+        // Standalone assignments: x = expr;
+        const assignMatch = trimmed.match(/^(\w+(?:\[.*?\])?(?:\.\w+)*)\s*([+\-*/]?)=\s*(.+?)\s*;\s*$/);
+        if (assignMatch && !trimmed.startsWith('if') && !trimmed.startsWith('for') && !trimmed.startsWith('while')) {
+          const lhs = replaceOperators(assignMatch[1]);
+          const op = assignMatch[2];
+          let rhs = replaceOperators(assignMatch[3]);
+          if (op) {
+            rhs = `${lhs} ${op} ${rhs}`;
+          }
+          output.push(indent() + `${lhs} ← ${rhs}`);
+          continue;
+        }
+
+        // Increment/decrement
+        const incMatch = trimmed.match(/^(\w+)\s*(\+\+|--)\s*;\s*$/);
+        if (incMatch) {
+          const v = incMatch[1];
+          const op = incMatch[2] === '++' ? '+' : '-';
+          output.push(indent() + `${v} ← ${v} ${op} 1`);
+          continue;
+        }
+
+        // Generic method call: something(args);
+        const callMatch = trimmed.match(/^([\w.]+)\s*\((.*)?\)\s*;\s*$/);
+        if (callMatch) {
+          let call = replaceOperators(callMatch[1]);
+          let args = callMatch[2] ? replaceOperators(callMatch[2]) : '';
+          output.push(indent() + `${call}(${args})`);
+          continue;
+        }
+
+        // Comments
+        if (trimmed.startsWith('//')) {
+          output.push(indent() + trimmed);
+          continue;
+        }
+        if (trimmed.startsWith('/*') || trimmed.startsWith('*') || trimmed.startsWith('*/')) {
+          output.push(indent() + trimmed);
+          continue;
+        }
+
+        // Fallback: operator replacement on the entire line
+        let processed = replaceOperators(trimmed);
+        processed = processed.replace(/;\s*$/, '');
+        processed = replaceAssignment(processed);
+        output.push(indent() + processed);
+      }
+
+      // Clean up trailing empty lines
+      while (output.length > 0 && output[output.length - 1].trim() === '') output.pop();
+
+      return output.join('\n');
+    }
+
+    function findNextMeaningful(lines, startIdx) {
+      for (let i = startIdx; i < lines.length; i++) {
+        const t = lines[i].trim();
+        if (t !== '') return t;
+      }
+      return null;
+    }
+
+    function convertParams(paramStr) {
+      if (!paramStr || !paramStr.trim()) return '';
+      return paramStr.split(',').map(p => {
+        p = p.trim();
+        const parts = p.split(/\s+/);
+        if (parts.length >= 2) {
+          const type = parts[0];
+          const name = parts[1];
+          const psType = javaTypeToPs[type.replace(/\[\]/g, '')] || type.replace(/\[\]/g, '').toLowerCase();
+          const brackets = (type.match(/\[\]/g) || []).join('').replace(/\[\]\[\]/g, '[,]');
+          return `${psType}${brackets}: ${name}`;
+        }
+        return p;
+      }).join(', ');
+    }
+
+    // ==================== PSEUDOCODE → JAVA ====================
+    function pseudoToJava(pseudoCode) {
+      const lines = pseudoCode.split('\n');
+      const output = [];
+      let indentLevel = 1; // Start inside class
+      let inMethod = false;
+      let needsClassWrapper = true;
+
+      function indent() { return '    '.repeat(indentLevel); }
+
+      function reverseType(t) {
+        if (!t) return t;
+        t = t.trim();
+        // Handle arrays
+        const arrMatch = t.match(/^(\w+)\s*\[\s*,?\s*\]$/);
+        if (arrMatch) {
+          const hasComma = t.includes(',');
+          const base = psTypeToJava[arrMatch[1]] || arrMatch[1];
+          return hasComma ? base + '[][]' : base + '[]';
+        }
+        return psTypeToJava[t] || t;
+      }
+
+      function reverseOperators(expr) {
+        // Handle 'integer part of (X ÷ Y)' → '(int)(X / Y)'
+        expr = expr.replace(/integer\s+part\s+of\s+\(([^)]+)\)/g, (_, inner) => {
+          const converted = inner.replace(/÷/g, '/');
+          return `(int)(${converted})`;
+        });
+        // Unicode minus (U+2212) → hyphen-minus
+        expr = expr.replace(/\u2212/g, '-');
+        expr = expr.replace(/←/g, '=');
+        expr = expr.replace(/\bmod\b/g, '%');
+        expr = expr.replace(/≠/g, '!=');
+        expr = expr.replace(/≤/g, '<=');
+        expr = expr.replace(/≥/g, '>=');
+        expr = expr.replace(/×/g, '*');
+        expr = expr.replace(/÷/g, '/');
+        expr = expr.replace(/\band\b/g, '&&');
+        expr = expr.replace(/\bor\b/g, '||');
+        expr = expr.replace(/\bnot\s+/g, '!');
+        expr = expr.replace(/\bundefined\b/g, 'null');
+        return expr;
+      }
+
+      function reverseConditionOps(expr) {
+        // In conditions, single = means ==
+        let result = reverseOperators(expr);
+        // Replace single = with == in conditions (careful not to hit !=, <=, >=)
+        result = result.replace(/(?<![!<>=])=(?!=)/g, '==');
+        return result;
+      }
+
+      function reverseParams(paramStr) {
+        if (!paramStr || !paramStr.trim()) return '';
+        return paramStr.split(',').map(p => {
+          p = p.trim();
+          // Allow optional spaces before brackets: "integer []:" or "integer[]:"
+          const match = p.match(/^(\w+(?:\s*\[\s*,?\s*\])?)\s*:\s*(\w+)$/);
+          if (match) {
+            return `${reverseType(match[1])} ${match[2]}`;
+          }
+          return p;
+        }).join(', ');
+      }
+
+      // Check if we need a class wrapper
+      const hasFunction = lines.some(l => /^\s*○/.test(l));
+
+      if (needsClassWrapper) {
+        output.push('public class Program {');
+      }
+
+      for (let i = 0; i < lines.length; i++) {
+        let line = lines[i];
+        let trimmed = line.trim();
+
+        // Skip empty lines
+        if (trimmed === '') {
+          output.push('');
+          continue;
+        }
+
+        // Multi-line function header: if line starts with ○ but has no closing ')'
+        if (trimmed.startsWith('○') && !trimmed.includes(')')) {
+          let fullHeader = trimmed;
+          while (i + 1 < lines.length && !fullHeader.includes(')')) {
+            i++;
+            fullHeader += ' ' + lines[i].trim();
+          }
+          trimmed = fullHeader;
+        }
+
+        // Function/Procedure declarations: ○ type: name(params) or ○ name(params)
+        const funcMatch = trimmed.match(/^○\s+(\w+(?:\[\s*,?\s*\])?)\s*:\s*(\w+)\s*\(([^)]*)\)\s*$/);
+        if (funcMatch) {
+          const retType = reverseType(funcMatch[1]);
+          const name = funcMatch[2];
+          const params = reverseParams(funcMatch[3]);
+          if (inMethod) {
+            indentLevel--;
+            output.push(indent() + '}');
+            output.push('');
+          }
+          output.push(indent() + `public static ${retType} ${name}(${params}) {`);
+          indentLevel++;
+          inMethod = true;
+          continue;
+        }
+
+        // Procedure (no return type): ○ name(params) or ○ procedure name(params)
+        const procMatch = trimmed.match(/^○\s+(?:procedure\s+)?(\w+)\s*\(([^)]*)\)\s*$/);
+        if (procMatch) {
+          const name = procMatch[1];
+          const params = reverseParams(procMatch[2]);
+          if (inMethod) {
+            indentLevel--;
+            output.push(indent() + '}');
+            output.push('');
+          }
+          output.push(indent() + `public static void ${name}(${params}) {`);
+          indentLevel++;
+          inMethod = true;
+          continue;
+        }
+
+        // For loops: for (increase/decrease var from start to end by step)
+        const forMatch = trimmed.match(
+          /^for\s*\(\s*(increase|decrease)\s+(\w+)\s+from\s+(.+?)\s+to\s+(.+?)\s+by\s+(\d+)\s*\)\s*$/
+        );
+        if (forMatch) {
+          const dir = forMatch[1];
+          const varName = forMatch[2];
+          let start = reverseOperators(forMatch[3]);
+          let end = reverseOperators(forMatch[4]);
+          const step = forMatch[5];
+
+          if (dir === 'increase') {
+            const updateExpr = step === '1' ? `${varName}++` : `${varName} += ${step}`;
+            output.push(indent() + `for (int ${varName} = ${start}; ${varName} <= ${end}; ${updateExpr}) {`);
+          } else {
+            const updateExpr = step === '1' ? `${varName}--` : `${varName} -= ${step}`;
+            output.push(indent() + `for (int ${varName} = ${start}; ${varName} >= ${end}; ${updateExpr}) {`);
+          }
+          indentLevel++;
+          continue;
+        }
+
+        // endfor
+        if (/^endfor\s*$/.test(trimmed)) {
+          indentLevel = Math.max(1, indentLevel - 1);
+          output.push(indent() + '}');
+          continue;
+        }
+
+        // while (cond)
+        const whileMatch = trimmed.match(/^while\s*\((.+)\)\s*$/);
+        if (whileMatch) {
+          const cond = reverseConditionOps(whileMatch[1].trim());
+          output.push(indent() + `while (${cond}) {`);
+          indentLevel++;
+          continue;
+        }
+
+        // endwhile
+        if (/^endwhile\s*$/.test(trimmed)) {
+          indentLevel = Math.max(1, indentLevel - 1);
+          output.push(indent() + '}');
+          continue;
+        }
+
+        // do
+        if (/^do\s*$/.test(trimmed)) {
+          output.push(indent() + 'do {');
+          indentLevel++;
+          continue;
+        }
+
+        // if (cond)
+        const ifMatch = trimmed.match(/^if\s*\((.+)\)\s*$/);
+        if (ifMatch) {
+          const cond = reverseConditionOps(ifMatch[1].trim());
+          output.push(indent() + `if (${cond}) {`);
+          indentLevel++;
+          continue;
+        }
+
+        // elseif (cond)
+        const elseifMatch = trimmed.match(/^elseif\s*\((.+)\)\s*$/);
+        if (elseifMatch) {
+          indentLevel = Math.max(1, indentLevel - 1);
+          const cond = reverseConditionOps(elseifMatch[1].trim());
+          output.push(indent() + `} else if (${cond}) {`);
+          indentLevel++;
+          continue;
+        }
+
+        // else
+        if (/^else\s*$/.test(trimmed)) {
+          indentLevel = Math.max(1, indentLevel - 1);
+          output.push(indent() + '} else {');
+          indentLevel++;
+          continue;
+        }
+
+        // endif
+        if (/^endif\s*$/.test(trimmed)) {
+          indentLevel = Math.max(1, indentLevel - 1);
+          output.push(indent() + '}');
+          continue;
+        }
+
+        // output statement
+        const outMatch = trimmed.match(/^output\s+(.+)$/);
+        if (outMatch) {
+          let arg = reverseOperators(outMatch[1].trim());
+          output.push(indent() + `System.out.println(${arg});`);
+          continue;
+        }
+
+        // return
+        const retMatch = trimmed.match(/^return\s*(.*)$/);
+        if (retMatch) {
+          const val = reverseOperators(retMatch[1].trim());
+          if (val) {
+            output.push(indent() + `return ${val};`);
+          } else {
+            output.push(indent() + 'return;');
+          }
+          continue;
+        }
+
+        // exit the X block
+        if (/^exit the\s+/.test(trimmed)) {
+          output.push(indent() + 'break;');
+          continue;
+        }
+
+        // continue
+        if (/^continue\s*$/.test(trimmed)) {
+          output.push(indent() + 'continue;');
+          continue;
+        }
+
+        // Variable declarations: type: name or type: name ← value
+        const declMatch = trimmed.match(/^(\w+(?:\[\s*,?\s*\])?)\s*:\s*([\w,\s]+?)(?:\s*←\s*(.+))?$/);
+        if (declMatch) {
+          const psType = declMatch[1].trim();
+          const names = declMatch[2].trim();
+          const val = declMatch[3] ? reverseOperators(declMatch[3].trim()) : null;
+          const jType = reverseType(psType);
+
+          if (val) {
+            output.push(indent() + `${jType} ${names} = ${val};`);
+          } else {
+            output.push(indent() + `${jType} ${names};`);
+          }
+          continue;
+        }
+
+        // Assignment: x ← expr
+        const assignMatch = trimmed.match(/^([\w\[\].\s]+?)\s*←\s*(.+)$/);
+        if (assignMatch) {
+          const lhs = reverseOperators(assignMatch[1].trim());
+          const rhs = reverseOperators(assignMatch[2].trim());
+          output.push(indent() + `${lhs} = ${rhs};`);
+          continue;
+        }
+
+        // Comments
+        if (trimmed.startsWith('//') || trimmed.startsWith('/*') || trimmed.startsWith('*')) {
+          output.push(indent() + trimmed);
+          continue;
+        }
+
+        // Generic function call
+        const callMatch = trimmed.match(/^([\w.]+)\s*\((.*)?\)\s*$/);
+        if (callMatch) {
+          let call = reverseOperators(callMatch[1]);
+          let args = callMatch[2] ? reverseOperators(callMatch[2]) : '';
+          output.push(indent() + `${call}(${args});`);
+          continue;
+        }
+
+        // Fallback
+        let processed = reverseOperators(trimmed);
+        if (!processed.endsWith(';') && !processed.endsWith('{') && !processed.endsWith('}')) {
+          processed += ';';
+        }
+        output.push(indent() + processed);
+      }
+
+      // Close method and class
+      if (inMethod) {
+        indentLevel--;
+        output.push(indent() + '}');
+      }
+      if (needsClassWrapper) {
+        output.push('}');
+      }
+
+      return output.join('\n');
+    }
+
+    // ==================== TRANSPILE ====================
+    function transpile() {
+      const code = inputEditor.value.trim();
+      if (!code) {
+        outputDisplay.textContent = 'Output will appear here…';
+        outputDisplay.classList.add('empty');
+        updateLineNumbers({ textContent: '' }, outputLines);
+        outputLineCountEl.textContent = 'Output: 0 lines';
+        return;
+      }
+
+      let dir = currentDirection;
+      if (dir === 'auto') dir = detectDirection(code);
+
+      let result;
+      try {
+        if (dir === 'java-to-pseudo') {
+          result = javaToPseudo(code);
+        } else {
+          result = pseudoToJava(code);
+        }
+      } catch (e) {
+        result = '// Error during transpilation:\n// ' + e.message;
+      }
+
+      lastOutput = result;
+      outputDisplay.innerHTML = highlightCode(result, dir === 'java-to-pseudo' ? 'pseudo' : 'java');
+      outputDisplay.classList.remove('empty');
+      const count = result === '' ? 0 : result.split('\\n').length;
+      outputLineCountEl.textContent = `Output: ${count} lines`;
+
+      // Flash the transpile button
+      transpileBtn.style.transform = 'scale(0.95)';
+      setTimeout(() => { transpileBtn.style.transform = ''; }, 150);
+    }
+
+    // ==================== EVENTS ====================
+    transpileBtn.addEventListener('click', transpile);
+
+    // Ctrl+Enter to transpile
+    inputEditor.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        transpile();
+      }
+      // Tab support
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        const start = inputEditor.selectionStart;
+        const end = inputEditor.selectionEnd;
+        inputEditor.value = inputEditor.value.substring(0, start) + '  ' + inputEditor.value.substring(end);
+        inputEditor.selectionStart = inputEditor.selectionEnd = start + 2;
+        updateLineNumbers(inputEditor, inputLines);
+      }
+    });
+
+    inputPasteBtn.addEventListener('click', async () => {
+      try {
+        const text = await navigator.clipboard.readText();
+        inputEditor.value = text;
+        const c = updateLineNumbers(inputEditor, inputLines);
+        inputLineCount.textContent = `Lines: ${c}`;
+        if (currentDirection === 'auto') autoDetectLabels();
+        syncHighlight();
+      } catch (err) {
+        showToast('Failed to paste from clipboard');
+      }
+    });
+
+    inputCopyBtn.addEventListener('click', () => {
+      if (!inputEditor.value.trim()) return;
+      navigator.clipboard.writeText(inputEditor.value).then(() => {
+        showToast('Input Copied!');
+      });
+    });
+
+    inputClearBtn.addEventListener('click', () => {
+      inputEditor.value = '';
+      outputDisplay.innerHTML = 'Output will appear here…';
+      outputDisplay.classList.add('empty');
+      lastOutput = '';
+      const c = updateLineNumbers(inputEditor, inputLines);
+      inputLineCount.textContent = `Lines: ${c}`;
+      outputLineCountEl.textContent = 'Output: 0 lines';
+      syncHighlight();
+      inputEditor.focus();
+    });
+
+    outputCopyBtn.addEventListener('click', () => {
+      if (!lastOutput || lastOutput.trim() === '') {
+        showToast('Nothing to copy!');
+        return;
+      }
+      navigator.clipboard.writeText(lastOutput).then(() => {
+        showToast('Output Copied!');
+      });
+    });
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    // Init
+    updateLineNumbers(inputEditor, inputLines);
+    syncHighlight();
+  </script>
+</body>
+</html>

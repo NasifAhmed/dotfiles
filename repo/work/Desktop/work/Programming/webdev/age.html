@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+
+    <style>
+        .title {
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: large;
+            text-align: center;
+        }
+
+        #inputfield {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input {
+            text-align: center;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Age Calculator</h1>
+    </div>
+    <div class="subtitle">
+        <h3>Enter your birth year below:</h3>
+    </div>
+    
+    <div id="inputfield">
+        <input type="date" name="DOB" id="dob">
+        <br>
+        <input type="button" value="Calculate" onclick="calculateAge()">
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateAge() {
+            const dobInput = document.getElementById('dob').value;
+            const resultDiv = document.getElementById('result');
+
+            if (!dobInput) {
+                resultDiv.innerText = "Please select a date!";
+                return;
+            }
+
+            const birthDate = new Date(dobInput);
+            const today = new Date();
+
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            if (age < 0) {
+                resultDiv.innerText = "You haven't been born yet!";
+            } else {
+                resultDiv.innerText = "You are " + age + " years old!";
+            }
+        }
+    </script>
+</body>
+
+</html>

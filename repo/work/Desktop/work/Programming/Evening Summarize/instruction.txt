@@ -1,0 +1,9 @@
+Here is the collection of last 4 year's FE evening exam question's pseudocodes collection. Students will use it to prepare for the next FE exam.
+
+Now you have these work to do 
+- Make the explanation of each topic more robust, easy to understand and read and with analogy and examples where needed so students can easily get the idea what the code is doing exactly
+- Make the whole markdown file good consistant format and easy to read 
+- Organize the whole markdown file with good easy topic flow and good fitting category for students
+- There are three types of questions Level 1, Level 2, Level 3.
+- Start with level 1 then 2 then 3 etc....
+- Level 1 is simple easy code, Level 2 is slightly harder code and Level 3 is very hard to grasp concepts with code implementation
